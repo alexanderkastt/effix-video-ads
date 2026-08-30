@@ -16,8 +16,11 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ))
 
+from src.consola import usar_utf8             # noqa: E402
 from src.narracion_effix import CTA_POR_PASE  # noqa: E402
 from src.parrilla import ROLES, construir_parrilla, verificar  # noqa: E402
+
+usar_utf8()
 
 SALIDA = RAIZ / "outputs" / "GUIONES-EFFIX.md"
 
