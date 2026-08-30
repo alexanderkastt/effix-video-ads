@@ -20,6 +20,7 @@ import fal_client
 import requests
 
 from .paths import CLIPS_DIR, env, env_int
+from .personaje import MODELO_ESCENA, Personaje, prompt_de_escena
 
 
 @dataclass
@@ -54,17 +55,41 @@ def _url_de(salida: dict[str, Any], *claves: str) -> str:
     raise KeyError(f"La respuesta de fal no trae URL en {claves}: {list(salida)}")
 
 
-def generar_imagen_base(beat: dict[str, Any], destino: Path) -> tuple[Path, float]:
-    """Primer paso: el fotograma que el modelo de video va a animar."""
+def generar_imagen_base(
+    beat: dict[str, Any],
+    destino: Path,
+    *,
+    personaje: Personaje | None = None,
+) -> tuple[Path, float]:
+    """Primer paso: el fotograma que el modelo de video va a animar.
+
+    Con `personaje`, la escena se genera por edición sobre la hoja de
+    referencia y sale la misma protagonista de siempre. Sin él, cada
+    escena inventa a alguien nuevo — que es lo que hacía antes.
+    """
     inicio = time.monotonic()
-    salida = fal_client.subscribe(
-        env("FAL_MODEL_IMAGE", "fal-ai/flux/schnell"),
-        {
-            "prompt": beat["prompt_imagen_base"],
-            "image_size": {"width": 720, "height": 1280},  # 9:16 vertical
-            "num_images": 1,
-        },
-    )
+
+    if personaje is not None:
+        salida = fal_client.subscribe(
+            MODELO_ESCENA,
+            {
+                "prompt": prompt_de_escena(beat, personaje),
+                "image_urls": [personaje.url_referencia],
+                "aspect_ratio": env("FAL_ASPECT_RATIO", "9:16"),
+                "resolution": "1K",
+                "num_images": 1,
+            },
+        )
+    else:
+        salida = fal_client.subscribe(
+            env("FAL_MODEL_IMAGE", "fal-ai/flux/schnell"),
+            {
+                "prompt": beat["prompt_imagen_base"],
+                "image_size": {"width": 720, "height": 1280},  # 9:16 vertical
+                "num_images": 1,
+            },
+        )
+
     ruta = _descargar(_url_de(salida, "images", "image"), destino)
     return ruta, round(time.monotonic() - inicio, 1)
 
@@ -78,6 +103,7 @@ def generar_clip(
     carpeta: Path | None = None,
     job_id: str = "sin-job",
     etiqueta: str = "beat",
+    personaje: Personaje | None = None,
 ) -> Clip:
     """Anima la imagen base y devuelve el clip descargado.
 
@@ -95,7 +121,9 @@ def generar_clip(
     n = beat["beat"]
 
     if imagen is None:
-        imagen, _ = generar_imagen_base(beat, carpeta / f"{etiqueta}_{n:02d}_base.png")
+        imagen, _ = generar_imagen_base(
+            beat, carpeta / f"{etiqueta}_{n:02d}_base.png", personaje=personaje
+        )
 
     # Kling cobra por tramos de 5 o 10 segundos: pedir 4.4 no ahorra nada y
     # quedarse corto obliga a repetir el clip entero.

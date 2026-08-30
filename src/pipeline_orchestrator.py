@@ -19,6 +19,7 @@ from pathlib import Path
 from typing import Any
 
 from .paths import AUDIO_DIR, CLIPS_DIR, env_int
+from .personaje import Personaje, crear_personaje
 from .plan_clips import planificar_desde_audio
 from .video_generator import Clip, generar_clip, generar_imagen_base
 from .voice_generator import Locucion, duracion_de, generar_locucion
@@ -33,6 +34,7 @@ class Resultado:
     plan: dict[str, Any]
     clips: list[dict[str, Any]] = field(default_factory=list)
     ventanas: list[dict[str, Any]] = field(default_factory=list)
+    personaje: str | None = None
     fallos: list[dict[str, str]] = field(default_factory=list)
     segundos_totales: float = 0.0
 
@@ -94,6 +96,8 @@ def producir(
     solo_beats: list[int] | None = None,
     reusar_voz: bool = True,
     concurrencia: int | None = None,
+    personaje: str | None = None,
+    estilo_en: str = "Pixar-style 3D animation, soft global illumination",
 ) -> Resultado:
     """Genera la locución y los clips del guión aprobado.
 
@@ -122,7 +126,14 @@ def producir(
     # ── 2. Plan sobre el audio real ───────────────────────────────────────
     plan = planificar_desde_audio(guion["beats"], duraciones=medidas)
 
-    # ── 3. Clips ──────────────────────────────────────────────────────────
+    # ── 3. El personaje, uno solo para todo el video ──────────────────────
+    protagonista: Personaje | None = None
+    if personaje:
+        protagonista = crear_personaje(
+            personaje, estilo_en=estilo_en, job_id=job_id, carpeta=carpeta_clips
+        )
+
+    # ── 4. Clips ──────────────────────────────────────────────────────────
     ventanas = asignar_clips(plan, guion["beats"])
     pendientes = [
         v for v in ventanas
@@ -150,6 +161,7 @@ def producir(
             carpeta=carpeta_clips,
             job_id=job_id,
             etiqueta="clip",
+            personaje=protagonista,
         )
 
     with ThreadPoolExecutor(max_workers=maximo) as pool:
@@ -175,6 +187,7 @@ def producir(
             "duracion_total_s": round(sum(medidas.values()), 2),
         },
         plan=plan,
+        personaje=protagonista.nombre if protagonista else None,
         clips=sorted(
             [{"clip": c.beat, "video": str(c.video), "espera_s": c.segundos_de_espera,
               "duracion_pedida_s": c.duracion_s} for c in clips],
