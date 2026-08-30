@@ -77,11 +77,17 @@ def generar_clip(
     modelo: str | None = None,
     carpeta: Path | None = None,
     job_id: str = "sin-job",
+    etiqueta: str = "beat",
 ) -> Clip:
     """Anima la imagen base y devuelve el clip descargado.
 
     `duracion_s` sale de la locución medida, no del presupuesto teórico: si
     la voz de ese beat dura 4.46s, el clip tiene que cubrirlos.
+
+    `etiqueta` nombra los archivos. El orquestador pasa "clip" porque los
+    clips son ventanas de 4s y no coinciden uno a uno con los beats; dejar
+    el nombre en manos del llamador evita que el montaje después no los
+    encuentre.
     """
     modelo = modelo or env("FAL_MODEL_VIDEO", "fal-ai/kling-video/v2.1/standard/image-to-video")
     carpeta = carpeta or (CLIPS_DIR / job_id)
@@ -89,7 +95,7 @@ def generar_clip(
     n = beat["beat"]
 
     if imagen is None:
-        imagen, _ = generar_imagen_base(beat, carpeta / f"beat_{n:02d}_base.png")
+        imagen, _ = generar_imagen_base(beat, carpeta / f"{etiqueta}_{n:02d}_base.png")
 
     # Kling cobra por tramos de 5 o 10 segundos: pedir 4.4 no ahorra nada y
     # quedarse corto obliga a repetir el clip entero.
@@ -110,7 +116,7 @@ def generar_clip(
         },
     )
     espera = round(time.monotonic() - inicio, 1)
-    ruta = _descargar(_url_de(salida, "video"), carpeta / f"beat_{n:02d}.mp4")
+    ruta = _descargar(_url_de(salida, "video"), carpeta / f"{etiqueta}_{n:02d}.mp4")
 
     return Clip(
         beat=n,
