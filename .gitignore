@@ -39,3 +39,6 @@ scripts/guiones/*.json
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Clon accidental: el repo no se anida dentro de si mismo
+skills-video-ads/
