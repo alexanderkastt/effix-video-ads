@@ -1,0 +1,30 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Montserrat,84,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,7,0,2,80,80,300,1
+Style: Pop,Montserrat,104,&H0000E5FF,&H00FFFFFF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,8,0,2,80,80,300,1
+Style: Cta,Montserrat,92,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,1,0,0,0,100,100,2,0,1,8,0,2,70,70,340,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.40,0:00:01.70,Main,,0,0,0,,{\fad(120,100)\t(0,220,\fscx104\fscy104)}Tienes el producto listo
+Dialogue: 0,0:00:01.75,0:00:03.90,Pop,,0,0,0,,{\fad(80,120)\t(0,180,\fscx112\fscy112)\t(180,400,\fscx100\fscy100)}Y ni una venta
+Dialogue: 0,0:00:05.20,0:00:06.40,Main,,0,0,0,,{\fad(120,100)\t(0,200,\fscx104\fscy104)}Lo intentaste sola
+Dialogue: 0,0:00:06.45,0:00:07.90,Pop,,0,0,0,,{\fad(80,120)\t(0,180,\fscx114\fscy114)\t(180,380,\fscx100\fscy100)}Nada funcionó
+Dialogue: 0,0:00:10.30,0:00:11.90,Main,,0,0,0,,{\fad(120,100)\t(0,200,\fscx104\fscy104)}No es que no sirvas
+Dialogue: 0,0:00:11.95,0:00:13.90,Pop,,0,0,0,,{\fad(80,140)\t(0,200,\fscx110\fscy110)\t(200,420,\fscx100\fscy100)}Nadie te mostró el camino
+Dialogue: 0,0:00:16.10,0:00:17.60,Pop,,0,0,0,,{\fad(70,90)\t(0,170,\fscx116\fscy116)\t(170,360,\fscx100\fscy100)}200 conferencias
+Dialogue: 0,0:00:17.65,0:00:19.20,Pop,,0,0,0,,{\fad(70,90)\t(0,170,\fscx116\fscy116)\t(170,360,\fscx100\fscy100)}350 stands
+Dialogue: 0,0:00:19.25,0:00:21.10,Main,,0,0,0,,{\fad(90,120)\t(0,200,\fscx106\fscy106)}Gente que ya lo logró
+Dialogue: 0,0:00:22.00,0:00:24.30,Main,,0,0,0,,{\fad(120,110)\t(0,240,\fscx104\fscy104)}La feria de ecommerce\Nmás grande del mundo
+Dialogue: 0,0:00:24.40,0:00:26.90,Pop,,0,0,0,,{\fad(80,130)\t(0,200,\fscx112\fscy112)\t(200,430,\fscx100\fscy100)}15 al 19 de octubre\NMedellín
+Dialogue: 0,0:00:27.60,0:00:29.30,Main,,0,0,0,,{\fad(110,100)\t(0,220,\fscx105\fscy105)}Da el primer paso
+Dialogue: 0,0:00:29.35,0:00:31.60,Pop,,0,0,0,,{\fad(90,140)\t(0,200,\fscx113\fscy113)\t(200,440,\fscx100\fscy100)}El resto aparece
+Dialogue: 0,0:00:33.00,0:00:35.10,Cta,,0,0,0,,{\fad(150,120)\t(0,280,\fscx106\fscy106)}FERIA EFFIX 2026
+Dialogue: 0,0:00:35.15,0:00:36.90,Cta,,0,0,0,,{\fad(100,200)\t(0,240,\fscx108\fscy108)\t(240,500,\fscx100\fscy100)}feriaeffix.com

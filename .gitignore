@@ -1,0 +1,41 @@
+# ── Secretos ─────────────────────────────────────────────
+# El .env lleva las claves de fal.ai, ElevenLabs y Suno. Nunca se sube.
+.env
+.env.local
+*.key
+*.pem
+
+# ── Entorno Python ───────────────────────────────────────
+# Un venv de Windows no es portable: los .exe de Scripts/ llevan rutas
+# absolutas. En el otro equipo se recrea con `python -m venv venv`.
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# ── Video: pesa 554 MB y GitHub no es para eso ───────────
+# Los entregables finales viven en Drive o Bunny CDN, no en el repo.
+*.mp4
+*.mov
+*.avi
+*.webm
+*.mp3
+*.wav
+*.m4a
+
+# ── Material intermedio del pipeline ─────────────────────
+assets/clips/
+assets/renders/
+assets/audio/
+
+# ── Salidas generadas ────────────────────────────────────
+# Los HTML de documentos SÍ se versionan (son el entregable del equipo);
+# los storyboards y guiones de prueba se regeneran con los scripts.
+scripts/storyboards/*.html
+scripts/guiones/*.json
+
+# ── Sistema ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,32 @@
+{
+  "effix": {
+    "nombre": "Feria Effix 2026",
+    "colores": {
+      "primario": "#E31B23",
+      "secundario": "#1A1A2E",
+      "acento": "#FFD700",
+      "texto": "#FFFFFF"
+    },
+    "fuentes": {
+      "titulo": "Montserrat Bold",
+      "cuerpo": "Inter"
+    },
+    "hashtags": ["#FeriaEffix", "#Effix2026", "#EcommerceLatam", "#Ecommerce"],
+    "cta_principal": "EFFIX20 — 20% de descuento",
+    "tono": "energético, emprendedor, LATAM, directo",
+    "estilos_disponibles": [
+      "ugc_realista",
+      "pixar_animado",
+      "cyberpunk",
+      "anime",
+      "cinematic",
+      "claymation",
+      "musical_sync"
+    ]
+  },
+  "alexander": {
+    "handle": "@alexemprendee",
+    "rol_en_evento": "Community Lead Grupo Effi",
+    "paises_activos": ["Colombia", "Ecuador", "República Dominicana", "Costa Rica", "Guatemala"]
+  }
+}

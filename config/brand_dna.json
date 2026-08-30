@@ -1,0 +1,232 @@
+{
+  "effix": {
+    "nombre_completo": "Feria Effix 2026",
+    "evento": {
+      "fechas": "15 al 19 de octubre 2026",
+      "lugar": "Plaza Mayor, Medellín, Colombia",
+      "ediciones_previas": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "recinto": {
+        "pabellones": 5,
+        "auditorios_simultaneos": 13,
+        "espacios": [
+          "Pabellón Blanco",
+          "Pabellón Verde",
+          "Pabellón Azul",
+          "Pabellón Amarillo",
+          "Pabellón Rojo",
+          "Gran Salón",
+          "Caja de Madera",
+          "Plazoleta Interamericana"
+        ]
+      },
+      "cifras": {
+        "empresas_y_marcas": "+350",
+        "ponentes": "+200",
+        "conferencias_y_talleres": "+200"
+      },
+      "frecuencia": "una vez al año"
+    },
+    "avatar_principal": {
+      "descripcion": "Emprendedor de ecommerce o dropshipping LATAM, 25-40 años, factura entre $1.000 y $5.000/mes y quiere escalar pero siente que le falta algo — metodología, red, herramientas o mentalidad",
+      "dolor_primario": "Trabaja solo, sin comunidad, sin referentes cercanos, sin acceso a estrategias actualizadas",
+      "deseo": "Llegar a 5 cifras mensuales, tener libertad financiera, ser reconocido como referente en su país",
+      "objeciones": [
+        "No sé si vale la pena ir presencialmente",
+        "¿Qué diferencia a Effix de un curso online?",
+        "No tengo con quién ir",
+        "¿Es solo para colombianos?"
+      ],
+      "paises_activos": [
+        "Colombia",
+        "Ecuador",
+        "República Dominicana",
+        "Costa Rica",
+        "Guatemala"
+      ]
+    },
+    "propuesta_de_valor": "En cinco días encuentras todo lo que tu negocio necesita para vender más por internet: los proveedores, los expertos y los aliados, juntos en un mismo lugar.",
+    "tono": "Energético, directo, emprendedor, paisa sin vulgaridades, real — no corporativo",
+    "cta_primario": "Usa el código EFFIX20 y ahorra 20% en tu entrada",
+    "link_referido": "https://feriaeffix.com/?ref=alexander",
+    "rol_alexander": "Community Lead Grupo Effi — no founder, sí referente y evangelizador",
+    "angulos_de_contenido": [
+      "La comunidad que no tienes como emprendedor solo",
+      "Lo que pasa en Effix que no encuentras en ningún curso online",
+      "Los 5 países que ya están en Effix — por qué LATAM va unido",
+      "Qué pasa si no vas y tu competencia sí va",
+      "Los proveedores que conocerás en un solo lugar",
+      "Las herramientas que están cambiando el ecommerce LATAM ahora mismo",
+      "De 0 a referente: las historias que se cuentan en Effix",
+      "Por qué octubre 2026 es el momento"
+    ],
+    "emociones_objetivo": {
+      "hook": [
+        "curiosidad",
+        "interrupcion_patron",
+        "auto_relevancia"
+      ],
+      "cuerpo": [
+        "identificacion",
+        "aspiracion",
+        "urgencia"
+      ],
+      "cta": [
+        "pertenencia",
+        "oportunidad",
+        "FOMO"
+      ]
+    },
+    "palabras_prohibidas": [
+      "descubre",
+      "potencia",
+      "revoluciona",
+      "sumérgete",
+      "increíble",
+      "espectacular",
+      "innovador",
+      "transformador",
+      "únete",
+      "aprovecha esta oportunidad"
+    ],
+    "palabras_clave_latam": [
+      "parce",
+      "bacano",
+      "hagámosle",
+      "mira",
+      "o sea",
+      "la verdad",
+      "en serio",
+      "te lo juro",
+      "fíjate"
+    ],
+    "objetivo_comercial": {
+      "que_se_vende": "boleteria de Feria Effix 2026",
+      "_nota": "TODO lo que produce este proyecto existe para vender boleteria. Cada guion cierra en la compra de un pase, no en 'conocer el evento'.",
+      "productos": [
+        {
+          "id": "pase_3_dias",
+          "nombre": "Pasaporte 3 días",
+          "dias_de_acceso": 3,
+          "es_principal": true,
+          "precio": 201300,
+          "moneda": "COP",
+          "iva_incluido": true,
+          "fechas": "viernes 16, sábado 17 y domingo 18 de octubre",
+          "es_fin_de_semana": true,
+          "comparacion_de_precio": "menos de lo que cuesta una hora de consultoría",
+          "incluye": [
+            "Acceso a los 3 días generales",
+            "+350 empresas y marcas",
+            "+200 conferencias, paneles y talleres",
+            "+200 ponentes",
+            "Networking y alianzas estratégicas",
+            "Taller Master Claude de IA, 4 horas (3 de septiembre)"
+          ]
+        },
+        {
+          "id": "vip_5_dias",
+          "nombre": "Entrada VIP",
+          "dias_de_acceso": 5,
+          "es_principal": false,
+          "es_recomendada_por_effix": true,
+          "precio": 1155000,
+          "moneda": "COP",
+          "iva_incluido": true,
+          "fechas": "jueves 15 al lunes 19 de octubre",
+          "incluye": [
+            "Acceso completo a los 5 días",
+            "Escarapela VIP · entrada y salida ilimitada",
+            "Ingreso sin filas",
+            "Inauguración privada el jueves 15",
+            "Clausura exclusiva el lunes 19",
+            "Zona VIP con hidratación",
+            "Áreas reservadas en auditorios",
+            "Zonas de creación de contenido"
+          ],
+          "gatillo_dominante": "ego / estatus"
+        },
+        {
+          "id": "black",
+          "nombre": "Entrada Black",
+          "dias_de_acceso": 5,
+          "es_principal": false,
+          "precio": 3997000,
+          "moneda": "COP",
+          "iva_incluido": true,
+          "cupos": 400,
+          "cupos_alcance": "en todo el mundo",
+          "pago_en_cuotas": "4 cuotas o pago único",
+          "incluye": [
+            "Todo lo del VIP",
+            "9 mentorías con ponentes premium",
+            "Desayuno, almuerzo y cena 3 días",
+            "Zona Black exclusiva",
+            "Networking de máximo nivel (400 personas)",
+            "Descuentos en hotelería",
+            "Foto y video profesional",
+            "Línea Black dedicada todo el año"
+          ],
+          "gatillo_dominante": "escasez real (400 cupos) + ego"
+        },
+        {
+          "id": "empresarial",
+          "nombre": "Entrada empresarial",
+          "dias_de_acceso": null,
+          "precio": null,
+          "desde_entradas": 5,
+          "incluye": [
+            "Descuento por volumen",
+            "Factura a nombre de la empresa",
+            "Asesor acompaña la compra",
+            "El taller de IA va para cada persona del equipo"
+          ]
+        }
+      ],
+      "duracion_del_evento_dias": 5,
+      "regla_critica": "El EVENTO dura cinco dias (15 al 19 de octubre). El PASE PRINCIPAL da acceso a TRES. Prometer 'cinco dias' en un creativo que vende el pase de 3 es prometer algo que el producto no entrega: problema comercial, de confianza y legal (Ley 1480 de 2011, la publicidad obliga al anunciante). Describir la duracion del evento esta bien; prometerle al espectador que va a estar los cinco dias, no.",
+      "codigo_descuento": "EFFIX20",
+      "descuento": "20%",
+      "cifras_oficiales": {
+        "empresas_y_marcas": "+350",
+        "conferencias_paneles_talleres": "+200",
+        "ponentes": "+200",
+        "_uso": "Estas SÍ son oficiales. Usarlas en los beats de prueba social en lugar de cifras estimadas. Reemplazan a 'las 500 personas que mueven el ecommerce LATAM', que nunca estuvo verificada."
+      },
+      "deadline_real": {
+        "que": "Taller Master Claude — automatizar el negocio con IA",
+        "formato": "4 horas en vivo, se arranca desde cero",
+        "cuando": "jueves 3 de septiembre",
+        "condicion": "exclusivo para quien compre su entrada antes del 3 de septiembre",
+        "incluido_en": [
+          "pase_3_dias",
+          "vip_5_dias",
+          "black",
+          "empresarial"
+        ]
+      },
+      "ratio_precio": 5.7
+    },
+    "posicionamiento": "El evento de ecommerce más grande del mundo",
+    "restricciones_de_comunicacion": {
+      "prohibido": [
+        "Ofrecer descuentos",
+        "Ofrecer ofertas o promociones de precio",
+        "Mencionar códigos de descuento"
+      ],
+      "_por_que": "Decisión de Alexander. El precio no se negocia en el creativo: el valor se argumenta con lo que incluye, no rebajándolo.",
+      "gatillos_permitidos": {
+        "escasez": "Se llena. La Black tiene 400 cupos en todo el mundo. Pasa una vez al año.",
+        "inclusion": "Todo el ecosistema en un lugar. La gente que va una vez, vuelve.",
+        "ego": "Escarapela VIP/Black, zona exclusiva, mentorías premium, línea dedicada.",
+        "aprendizaje": "+200 conferencias, +200 ponentes, taller Master Claude desde cero.",
+        "dejar_de_ganar": "Cada día sin las conexiones correctas es un día que la competencia sí está creciendo. Aversión a la pérdida, no promesa de ganancia."
+      }
+    }
+  }
+}

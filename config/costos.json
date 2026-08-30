@@ -1,0 +1,21 @@
+{
+  "_nota": "Precios de referencia para estimar antes de producir. NO están verificados contra la factura real de cada proveedor: hay que medirlos una vez y actualizar 'verificado' a true. MASTER_CONTEXT.md ya documenta que un preflight con parámetros equivocados subestimó el costo real en más del doble.",
+  "verificado": false,
+  "moneda": "USD",
+  "fal_ai": {
+    "_unidad": "USD por segundo de video generado",
+    "fal-ai/kling-video/v2.1/standard/image-to-video": 0.0,
+    "fal-ai/kling-video/v2.1/pro/image-to-video": 0.0,
+    "fal-ai/hailuo-ai/i2v-01": 0.0,
+    "fal-ai/flux/schnell": 0.0
+  },
+  "elevenlabs": {
+    "_unidad": "USD por cada 1000 caracteres",
+    "eleven_multilingual_v2": 0.0,
+    "eleven_turbo_v2_5": 0.0
+  },
+  "suno": {
+    "_unidad": "USD por canción generada",
+    "cancion": 0.0
+  }
+}
