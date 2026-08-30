@@ -1,5 +1,4 @@
 """Prueba de extremo a extremo SIN gastar un peso.
-
 Recorre toda la capa creativa con datos reales del proyecto y verifica cada
 eslabón. No hace ni una llamada a fal.ai, ElevenLabs o Suno.
 
@@ -14,12 +13,16 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from src.consola import usar_utf8                  # noqa: E402
 from src import cost_estimator                     # noqa: E402
 from src.music_engine import MusicEngine           # noqa: E402
 from src.paths import BRAND_DNA_JSON, ensure_dirs  # noqa: E402
 from src.scene_builder import SceneBuilder         # noqa: E402
 from src.script_engine import ScriptEngine         # noqa: E402
 from src.storyboard_builder import StoryboardBuilder  # noqa: E402
+
+
+usar_utf8()
 
 CONCEPTO = "Por qué todo emprendedor de ecommerce LATAM debe estar en Feria Effix 2026"
 ESTILO = "ugc_realista"

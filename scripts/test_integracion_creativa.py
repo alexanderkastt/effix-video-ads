@@ -1,5 +1,4 @@
 """Prueba de integración de la capa creativa avanzada — sin gastar un peso.
-
 Recorre micro-situaciones → hooks → beats → storyboard dirigido, y valida que
 los prompts de cada estilo lleven sus elementos obligatorios.
 
@@ -13,6 +12,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from src.consola import usar_utf8     # noqa: E402
 from src.estilos_especiales import (  # noqa: E402
     CROCHET, SKELETON, ZACK_FILMS, estilos_especiales_disponibles,
 )
@@ -28,6 +28,9 @@ from src.ganchos import (  # noqa: E402
 )
 from src.plan_clips import planificar  # noqa: E402
 from src.storyboard_director import StoryboardDirector  # noqa: E402
+
+
+usar_utf8()
 
 fallos: list[str] = []
 

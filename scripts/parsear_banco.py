@@ -16,6 +16,12 @@ from collections import Counter
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(RAIZ))
+
+from src.consola import usar_utf8  # noqa: E402
+
+usar_utf8()
+
 MD = RAIZ / ".claude" / "skills" / "ganchos-y-retencion" / "references" / "banco-320.md"
 OUT = RAIZ / "config" / "banco_ganchos.json"
 

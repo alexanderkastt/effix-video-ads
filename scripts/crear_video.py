@@ -1,5 +1,4 @@
 """CLI de producción — el comando del día a día.
-
 Genera el guión, la escenografía, el brief de música y el storyboard, y PARA
 para que un humano apruebe antes de gastar un peso en APIs.
 
@@ -25,12 +24,16 @@ from pathlib import Path
 # Permite ejecutar el script directamente sin instalar el paquete
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from src.consola import usar_utf8                  # noqa: E402
 from src import cost_estimator                     # noqa: E402
 from src.music_engine import MusicEngine           # noqa: E402
 from src.paths import ensure_dirs                  # noqa: E402
 from src.scene_builder import SceneBuilder, estilos_disponibles  # noqa: E402
 from src.script_engine import ANGULOS, ScriptEngine              # noqa: E402
 from src.storyboard_builder import StoryboardBuilder             # noqa: E402
+
+
+usar_utf8()
 
 
 def construir_parser() -> argparse.ArgumentParser:
