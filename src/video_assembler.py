@@ -25,6 +25,74 @@ class Render:
     clips: int
 
 
+# Segoe UI Black existe en cualquier Windows; Arial Bold es el respaldo.
+FUENTES = [
+    Path("C:/Windows/Fonts/seguibl.ttf"),
+    Path("C:/Windows/Fonts/arialbd.ttf"),
+    Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"),
+]
+
+
+def _fuente() -> str:
+    """Ruta de fuente escapada como la quiere el filtro de ffmpeg."""
+    for f in FUENTES:
+        if f.exists():
+            # En un filtro, los dos puntos de "C:/" separan argumentos.
+            return str(f).replace("\\", "/").replace(":", r"\:")
+    raise RuntimeError(f"No encontré ninguna fuente para los overlays: {FUENTES}")
+
+
+def _en_lineas(texto: str, ancho: int = 34) -> str:
+    """Parte el overlay en líneas cortas.
+
+    Siete palabras no caben en 720px de ancho a cuerpo grande, y ffmpeg no
+    hace saltos de línea solo: el texto se sale del cuadro por los dos lados.
+    """
+    lineas: list[str] = []
+    actual = ""
+    for palabra in texto.split():
+        if actual and len(actual) + 1 + len(palabra) > ancho:
+            lineas.append(actual)
+            actual = palabra
+        else:
+            actual = f"{actual} {palabra}".strip()
+    if actual:
+        lineas.append(actual)
+    return "\n".join(lineas)
+
+
+def _filtros_overlay(
+    guion: dict[str, Any], plan: dict[str, Any], carpeta: Path
+) -> list[str]:
+    """Un drawtext por beat, encendido sólo durante su tramo de locución.
+
+    El texto va en archivo y no en el filtro: los overlays llevan tildes,
+    signos de apertura y separadores, y escaparlos dentro de la cadena de
+    filtros es una fuente de errores que no vale la pena.
+    """
+    fuente = _fuente()
+    textos = carpeta / "overlays"
+    textos.mkdir(parents=True, exist_ok=True)
+    por_beat = {b["beat"]: b.get("texto_pantalla", "") for b in guion["beats"]}
+
+    filtros: list[str] = []
+    for tramo in plan["reparto"]:
+        texto = por_beat.get(tramo["beat"], "").strip()
+        if not texto:
+            continue
+        archivo = textos / f"beat_{tramo['beat']:02d}.txt"
+        archivo.write_text(_en_lineas(texto), encoding="utf-8")
+        ruta = str(archivo).replace("\\", "/").replace(":", r"\:")
+        filtros.append(
+            f"drawtext=textfile='{ruta}':fontfile='{fuente}'"
+            f":fontsize=38:fontcolor=white:line_spacing=-6"
+            f":box=1:boxcolor=black@0.62:boxborderw=13"
+            f":x=(w-text_w)/2:y=h*0.70"
+            f":enable='between(t,{tramo['t_inicio_s']},{tramo['t_fin_s']})'"
+        )
+    return filtros
+
+
 def _ffmpeg(args: list[str]) -> None:
     """Corre ffmpeg y, si falla, muestra su queja en vez de un exit code pelado."""
     proceso = subprocess.run(
@@ -61,6 +129,7 @@ def ensamblar(
     *,
     musica: Path | None = None,
     destino: Path | None = None,
+    overlays: bool = True,
 ) -> Render:
     """Monta el video final: clips recortados + voz + música opcional."""
     job_id = str(guion.get("job_id") or "sin-job")
@@ -88,7 +157,14 @@ def ensamblar(
             f"crop=720:1280,fps=24[v{i}]"
         )
     cadena = "".join(f"[v{i}]" for i in range(len(clips)))
-    filtros.append(f"{cadena}concat=n={len(clips)}:v=1:a=0[vid]")
+    dibujos = _filtros_overlay(guion, plan, carpeta) if overlays else []
+    if dibujos:
+        # El texto va encima del video ya concatenado, no clip por clip: un
+        # beat puede cruzar dos clips y su overlay no debe cortarse ahi.
+        filtros.append(f"{cadena}concat=n={len(clips)}:v=1:a=0[crudo]")
+        filtros.append("[crudo]" + ",".join(dibujos) + "[vid]")
+    else:
+        filtros.append(f"{cadena}concat=n={len(clips)}:v=1:a=0[vid]")
 
     n_voz = len(clips)
     entradas += ["-i", str(voz)]
