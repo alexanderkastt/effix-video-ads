@@ -123,6 +123,23 @@ def unir_locucion(job_id: str, destino: Path | None = None) -> Path:
     return salida
 
 
+def _clips_de(carpeta: Path) -> list[Path]:
+    """Los clips en orden, prefiriendo la versión con lip-sync.
+
+    El glob de clip_*.mp4 tambien atrapa los clip_NN_sync.mp4, y montarlos
+    todos duplicaria cada plano sincronizado. Se listan los originales y por
+    cada uno se elige su version sincronizada si existe.
+    """
+    originales = sorted(
+        c for c in carpeta.glob("clip_*.mp4") if not c.stem.endswith("_sync")
+    )
+    return [
+        c.with_name(f"{c.stem}_sync.mp4")
+        if c.with_name(f"{c.stem}_sync.mp4").exists() else c
+        for c in originales
+    ]
+
+
 def ensamblar(
     guion: dict[str, Any],
     plan: dict[str, Any],
@@ -134,7 +151,7 @@ def ensamblar(
     """Monta el video final: clips recortados + voz + música opcional."""
     job_id = str(guion.get("job_id") or "sin-job")
     carpeta = CLIPS_DIR / job_id
-    clips = sorted(carpeta.glob("clip_*.mp4"))
+    clips = _clips_de(carpeta)
     if not clips:
         raise FileNotFoundError(f"No hay clips en {carpeta}")
 
