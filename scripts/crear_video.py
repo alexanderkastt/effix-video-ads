@@ -24,7 +24,8 @@ from pathlib import Path
 # Permite ejecutar el script directamente sin instalar el paquete
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from src.consola import usar_utf8                  # noqa: E402
+from src.consola import usar_utf8
+from src.narracion_effix import CTA_POR_PASE, PASE_POR_DEFECTO                  # noqa: E402
 from src import cost_estimator                     # noqa: E402
 from src.music_engine import MusicEngine           # noqa: E402
 from src.paths import ensure_dirs                  # noqa: E402
@@ -57,6 +58,10 @@ def construir_parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--voz", default="alexander", help="Perfil de voz para ElevenLabs.")
     p.add_argument("--hook", default="A", choices=["A", "B", "C"], help="Variante de hook.")
+    p.add_argument(
+        "--pase", default=PASE_POR_DEFECTO, choices=list(CTA_POR_PASE),
+        help="Pase que vende el CTA. Define tambien las fechas del beat 09.",
+    )
     p.add_argument("--solo-musica", action="store_true", help="Sólo el brief de música.")
     p.add_argument("--solo-guion", action="store_true", help="Sólo el guión, sin storyboard.")
     p.add_argument("--musical", action="store_true", help="Activa la canción sincronizada.")
@@ -88,6 +93,7 @@ def flujo_creativo(args) -> int:
         estilo=args.estilo,
         angulo=args.angulo,
         hook_variante=args.hook,
+        pase=args.pase,
     )
     print(f"   Ángulo: {script['angulo_etiqueta']}")
 
@@ -206,7 +212,9 @@ def flujo_solo_musica(args) -> int:
     engine = ScriptEngine(marca=args.marca)
 
     if args.estilo == "musical_sync" and args.concepto:
-        script = engine.generate_script(args.concepto, args.estilo, args.angulo)
+        script = engine.generate_script(
+            args.concepto, args.estilo, args.angulo, pase=args.pase
+        )
         brief = music.generate_music_video_song(script["beats"], marca=args.marca)
     else:
         brief = music.generate_background_brief(

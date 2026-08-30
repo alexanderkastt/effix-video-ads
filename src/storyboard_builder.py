@@ -270,6 +270,7 @@ class StoryboardBuilder:
             "estilo": script.get("estilo", ""),
             "marca": self.marca,
             "angulo": script.get("angulo", ""),
+            "pase": script.get("pase", ""),
             "estado": "pendiente_aprobacion",
             "beats": script.get("beats", []),
             "musica": musica or {},

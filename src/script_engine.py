@@ -19,6 +19,9 @@ import unicodedata
 from datetime import datetime
 from typing import Any
 
+from .narracion_effix import (
+    CTA_POR_PASE, PASE_POR_DEFECTO, PALABRAS_DE_DESCUENTO,
+)
 from .paths import env_int, load_brand_dna
 
 # ---------------------------------------------------------------------------
@@ -55,11 +58,17 @@ ANGULOS: dict[str, dict[str, str]] = {
         "etiqueta": "La comunidad que no tienes como emprendedor solo",
         "ancla": "solo",
         "dolor": "Llevas meses vendiendo solo, sin nadie que entienda.",
-        "amplificacion": "Y así, cada error lo pagas dos veces.",
+        "amplificacion": "Y solo, cada error lo pagas dos veces.",
         "promesa": "En Effix te sientas con gente que ya pasó por ahí.",
         "mecanismo": "Cinco días, mesas de trabajo, y gente que responde.",
         "visual_clave": "una mesa larga con emprendedores hablando entre ellos",
         "overlay_dolor": "Vendiendo solo hace meses",
+        "overlay_hook": "¿Vendiendo solo?",
+        "overlay_amplificacion": "Cada error se paga doble",
+        "overlay_mecanismo": "Mesas de trabajo, gente que responde",
+        "visualizacion": "Imagínate saliendo de ahí con tu agenda llena.",
+        "overlay_visualizacion": "Sales con la agenda llena",
+        "overlay_cierre": "Nunca más solo",
         "visual_clave_en": "a long table of entrepreneurs talking to each other",
         "cierre": "Y dejas de vender solo. Ese es el punto.",
         "hooks": [
@@ -72,11 +81,17 @@ ANGULOS: dict[str, dict[str, str]] = {
         "etiqueta": "Lo que pasa en Effix que no encuentras en ningún curso online",
         "ancla": "curso",
         "dolor": "Ya viste el curso. Ya tomaste notas. Sigues igual.",
-        "amplificacion": "El problema nunca fue la información, parce.",
+        "amplificacion": "Y el siguiente curso te va a dejar igual.",
         "promesa": "Effix te pone la conversación que ningún video te da.",
         "mecanismo": "Preguntas en vivo, casos reales, respuestas de una.",
         "visual_clave": "alguien cerrando el portátil y saliendo de casa",
         "overlay_dolor": "Otro curso más, mismo resultado",
+        "overlay_hook": "¿Otro curso más?",
+        "overlay_amplificacion": "Nunca fue la información",
+        "overlay_mecanismo": "Preguntas en vivo, casos reales",
+        "visualizacion": "Imagínate resolviendo en un día lo del semestre.",
+        "overlay_visualizacion": "Un día vale por el semestre",
+        "overlay_cierre": "Por eso es presencial",
         "visual_clave_en": "someone closing a laptop and stepping out of the house",
         "cierre": "Ningún curso te da eso. Por eso es presencial.",
         "hooks": [
@@ -89,11 +104,17 @@ ANGULOS: dict[str, dict[str, str]] = {
         "etiqueta": "Los 5 países que ya están en Effix — por qué LATAM va unido",
         "ancla": "frontera",
         "dolor": "Tu mercado se acaba en la frontera de tu país.",
-        "amplificacion": "Mientras tanto, el vecino ya vende afuera.",
+        "amplificacion": "Y esa frontera te la pusiste tú, no el mercado.",
         "promesa": "Effix junta cinco países en el mismo salón.",
         "mecanismo": "Colombia, Ecuador, República Dominicana, Costa Rica y Guatemala.",
         "visual_clave": "banderas o mapa de los cinco países activos",
         "overlay_dolor": "Tu mercado para en la frontera",
+        "overlay_hook": "¿Tu mercado para en la frontera?",
+        "overlay_amplificacion": "El vecino ya vende afuera",
+        "overlay_mecanismo": "Cinco países, el mismo salón",
+        "visualizacion": "Imagínate vendiendo en tres países el año entrante.",
+        "overlay_visualizacion": "Vendiendo en tres países",
+        "overlay_cierre": "La frontera deja de ser techo",
         "visual_clave_en": "flags or a map of the five active countries",
         "cierre": "La frontera deja de ser tu techo. Ese es el punto.",
         "hooks": [
@@ -106,11 +127,17 @@ ANGULOS: dict[str, dict[str, str]] = {
         "etiqueta": "Qué pasa si no vas y tu competencia sí va",
         "ancla": "competencia",
         "dolor": "Tu competencia ya reservó. Tú lo estás pensando.",
-        "amplificacion": "En octubre él sale con red y tú con dudas.",
+        "amplificacion": "En octubre tu competencia sale con red; tú con dudas.",
         "promesa": "Effix es donde se reparten los contactos del año.",
         "mecanismo": "Proveedores, herramientas y aliados, en el mismo lugar.",
         "visual_clave": "dos caminos: uno lleno de gente, otro vacío",
         "overlay_dolor": "Tu competencia ya reservó",
+        "overlay_hook": "Tu competencia ya reservó",
+        "overlay_amplificacion": "Él con red, tú con dudas",
+        "overlay_mecanismo": "Proveedores, herramientas y aliados",
+        "visualizacion": "Imagínate llegando a enero con la red armada.",
+        "overlay_visualizacion": "Enero con la red armada",
+        "overlay_cierre": "Que no sea el único que fue",
         "visual_clave_en": "two paths: one crowded with people, one empty",
         "cierre": "Que tu competencia no sea la única que fue.",
         "hooks": [
@@ -128,6 +155,12 @@ ANGULOS: dict[str, dict[str, str]] = {
         "mecanismo": "Stands, muestras físicas y trato directo, sin intermediarios.",
         "visual_clave": "manos revisando producto físico en un stand",
         "overlay_dolor": "Proveedor por internet: lotería",
+        "overlay_hook": "¿Cuántos proveedores te han fallado?",
+        "overlay_amplificacion": "Un mal proveedor tumba el mes",
+        "overlay_mecanismo": "Stands y muestras físicas",
+        "visualizacion": "Imagínate cerrando con el producto en la mano.",
+        "overlay_visualizacion": "Cerrando con el producto en mano",
+        "overlay_cierre": "Míralo a la cara",
         "visual_clave_en": "hands inspecting a physical product at a trade stand",
         "cierre": "Y tu próximo proveedor lo eliges mirándolo a la cara.",
         "hooks": [
@@ -140,11 +173,17 @@ ANGULOS: dict[str, dict[str, str]] = {
         "etiqueta": "Las herramientas que están cambiando el ecommerce LATAM ahora mismo",
         "ancla": "herramienta",
         "dolor": "Sigues operando con las mismas herramientas del año pasado.",
-        "amplificacion": "Y cada mes que pasa, operas más caro.",
+        "amplificacion": "Y cada mes con esa herramienta operas más caro.",
         "promesa": "Effix te muestra lo que ya está funcionando hoy.",
         "mecanismo": "Demos en vivo, no promesas de landing page.",
         "visual_clave": "pantalla con un panel de métricas subiendo",
         "overlay_dolor": "Mismas herramientas del año pasado",
+        "overlay_hook": "¿Sigues con las de siempre?",
+        "overlay_amplificacion": "Cada mes operas más caro",
+        "overlay_mecanismo": "Demos en vivo, no landings",
+        "visualizacion": "Imagínate operando en noviembre a mitad de costo.",
+        "overlay_visualizacion": "Noviembre a mitad de costo",
+        "overlay_cierre": "Cambia antes que la temporada",
         "visual_clave_en": "a screen showing a metrics dashboard trending up",
         "cierre": "Y cambias la herramienta antes que la temporada.",
         "hooks": [
@@ -157,11 +196,17 @@ ANGULOS: dict[str, dict[str, str]] = {
         "etiqueta": "De 0 a referente: las historias que se cuentan en Effix",
         "ancla": "historia",
         "dolor": "Nadie en tu casa entiende de qué vives.",
-        "amplificacion": "Y sin referentes cerca, el techo te lo pones tú.",
+        "amplificacion": "Y sin esa historia cerca, el techo te lo pones tú.",
         "promesa": "En Effix escuchas a los que ya rompieron ese techo.",
         "mecanismo": "Historias contadas de frente, con números encima de la mesa.",
         "visual_clave": "alguien en tarima contando su caso, público atento",
         "overlay_dolor": "Nadie en casa entiende de qué vives",
+        "overlay_hook": "¿Nadie entiende de qué vives?",
+        "overlay_amplificacion": "El techo te lo pones tú",
+        "overlay_mecanismo": "Números encima de la mesa",
+        "visualizacion": "Imagínate contando tu caso el año entrante.",
+        "overlay_visualizacion": "Tu caso, el año entrante",
+        "overlay_cierre": "La próxima historia es la tuya",
         "visual_clave_en": "someone on stage telling their case to an attentive audience",
         "cierre": "La próxima historia contada ahí puede ser la tuya.",
         "hooks": [
@@ -179,6 +224,12 @@ ANGULOS: dict[str, dict[str, str]] = {
         "mecanismo": "Del quince al diecinueve, en Plaza Mayor, Medellín.",
         "visual_clave": "calendario marcado en octubre, temporada alta cerca",
         "overlay_dolor": "Todo el año diciendo el otro mes",
+        "overlay_hook": "¿El otro mes arrancas?",
+        "overlay_amplificacion": "El cuarto trimestre encima",
+        "overlay_mecanismo": "Plaza Mayor, Medellín",
+        "visualizacion": "Imagínate entrando a temporada alta ya conectado.",
+        "overlay_visualizacion": "Temporada alta, ya conectado",
+        "overlay_cierre": "Octubre, con boleta en mano",
         "visual_clave_en": "a calendar marked in October, high season approaching",
         "cierre": "Octubre otra vez. Esta vez con boleta en mano.",
         "hooks": [
@@ -278,11 +329,25 @@ class ScriptEngine:
 
     # -- narraciones --------------------------------------------------------
 
-    def _narraciones(self, hook: str, ang: dict[str, str]) -> list[str]:
+    # El pase manda las fechas: el Pasaporte es de viernes a domingo, y
+    # prometer "quince al diecinueve" mientras se cobra un pase de 3 dias
+    # es vender un rango que la boleta no da.
+    FECHAS_POR_PASE = {
+        "3": ("Viernes dieciséis a domingo dieciocho de octubre.",
+              "16–18 oct · Plaza Mayor"),
+        "5": ("Del quince al diecinueve de octubre. Plaza Mayor.",
+              "15–19 oct · Plaza Mayor"),
+    }
+
+    def _fechas(self, pase: str) -> tuple[str, str]:
+        """Narracion y overlay del beat 09, segun los dias que da el pase."""
+        dias = CTA_POR_PASE[pase].get("dias") or "5"
+        return self.FECHAS_POR_PASE.get(dias, self.FECHAS_POR_PASE["5"])
+
+    def _narraciones(self, hook: str, ang: dict[str, str], pase: str) -> list[str]:
         """Compone las 11 narraciones. Cada una entre 7 y 11 palabras."""
         avatar_rango = "mil y cinco mil"
         paises = self.avatar["paises_activos"]
-        codigo = "EFFIX20"
 
         return [
             hook,                                                   # 01 HOOK
@@ -292,9 +357,10 @@ class ScriptEngine:
             ang["promesa"],                                         # 05 PROMESA
             f"{self._en_letras(len(paises))} países ya confirmaron. Empezando por {paises[0]}.",  # 06 PRUEBA
             ang["mecanismo"],                                       # 07 MECANISMO
-            "Imagínate saliendo de ahí con tu agenda llena.",       # 08 VISUALIZACIÓN
-            "Del quince al diecinueve de octubre. Plaza Mayor.",    # 09 URGENCIA
-            f"Con el código {codigo} te queda veinte por ciento menos.",  # 10 CTA
+            ang.get("visualizacion",
+                    "Imagínate saliendo de ahí con tu agenda llena."),  # 08 VISUALIZACIÓN
+            self._fechas(pase)[0],                                  # 09 URGENCIA
+            CTA_POR_PASE[pase]["hablado"],                          # 10 CTA
             ang["cierre"],                                               # 11 LOOP
         ]
 
@@ -317,21 +383,26 @@ class ScriptEngine:
         palabras = [p for p in re.split(r"\s+", texto.strip()) if p]
         return " ".join(palabras[:maximo]).rstrip(",;:")
 
-    def _textos_pantalla(self, ang: dict[str, str]) -> list[str]:
-        """Overlays de máximo 7 palabras. El video tiene que funcionar sin sonido."""
+    def _textos_pantalla(self, ang: dict[str, str], pase: str) -> list[str]:
+        """Overlays de máximo 7 palabras. El video tiene que funcionar sin sonido.
+
+        Cinco de estos estaban clavados al ángulo "comunidad": un guión de
+        proveedores abría con "¿Vendiendo solo?" y cerraba con "Nunca más
+        solo", contradiciendo su propia locución. Ahora los pone el ángulo.
+        """
         paises = len(self.avatar["paises_activos"])
         return [
-            "¿Vendiendo solo?",
+            ang.get("overlay_hook", "¿Vendiendo solo?"),
             "Si facturas 1K–5K al mes",
             ang["overlay_dolor"],
-            "Cada error se paga doble",
+            ang.get("overlay_amplificacion", "Cada error se paga doble"),
             "Feria Effix 2026",
             f"{paises} países confirmados",
-            "5 días. Todo en un lugar",
-            "Sales con la agenda llena",
-            "15–19 octubre · Plaza Mayor",
-            "Código EFFIX20 · 20% menos",
-            "Nunca más solo",
+            ang.get("overlay_mecanismo", "Todo en un lugar"),
+            ang.get("overlay_visualizacion", "Sales con la agenda llena"),
+            self._fechas(pase)[1],
+            CTA_POR_PASE[pase]["overlay"],
+            ang.get("overlay_cierre", "Nunca más solo"),
         ]
 
     # -- guión completo -----------------------------------------------------
@@ -343,6 +414,7 @@ class ScriptEngine:
         angulo: str | None = None,
         duracion_beats: int = 11,
         hook_variante: str = "A",
+        pase: str = PASE_POR_DEFECTO,
     ) -> dict[str, Any]:
         """Construye el guión completo con la secuencia emocional de 11 beats.
 
@@ -354,8 +426,11 @@ class ScriptEngine:
         hooks = self.generate_hooks(concepto, slug_angulo, n=3)
         elegido = next((h for h in hooks if h["variante"] == hook_variante), hooks[0])
 
-        narraciones = self._narraciones(elegido["texto"], ang)
-        overlays = self._textos_pantalla(ang)
+        if pase not in CTA_POR_PASE:
+            raise KeyError(f"Pase '{pase}' no existe. Hay: {', '.join(CTA_POR_PASE)}")
+
+        narraciones = self._narraciones(elegido["texto"], ang, pase)
+        overlays = self._textos_pantalla(ang, pase)
 
         total = min(duracion_beats, len(BEAT_SEQUENCE))
         beats: list[dict[str, Any]] = []
@@ -393,6 +468,7 @@ class ScriptEngine:
             "visual_clave_en": ang["visual_clave_en"],
             "hooks_alternativos": hooks,
             "hook_elegido": elegido["variante"],
+            "pase": pase,
             "generado_en": datetime.now().isoformat(timespec="seconds"),
             "duracion_total_s": total * self.duracion_beat,
             "beats": beats,
@@ -448,6 +524,40 @@ class ScriptEngine:
             if ancla and ancla.lower() not in apertura:
                 errores.append(
                     f"Beat 01: el hook no contiene el ancla '{ancla}' que el beat 11 retoma."
+                )
+
+        # Politica de marca: no ofrecemos descuentos. Vivia escrita en
+        # narracion_effix.py pero nadie la ejecutaba, y por eso un codigo de
+        # descuento se colo hasta el guion aprobado.
+        for beat in beats:
+            n = beat["beat"]
+            texto = f"{beat.get('narracion','')} {beat.get('texto_pantalla','')}".lower()
+            for palabra in PALABRAS_DE_DESCUENTO:
+                patron = r"\b" + re.escape(palabra.lower()) + r"\b"
+                if re.search(patron, texto):
+                    errores.append(
+                        f"Beat {n:02d}: menciona '{palabra}' — no ofrecemos descuentos."
+                    )
+
+        # La micro-situacion se martilla: el mismo detalle concreto vuelve
+        # entre tres y cuatro veces en 44s. Menos, y el guion no ancla en un
+        # momento reconocible; mas, y satura.
+        ancla = (script_json.get("ancla_narrativa") or "").lower()
+        if ancla and len(beats) >= 11:
+            patron = r"\b" + re.escape(ancla)
+            menciones = [
+                b["beat"] for b in beats
+                if re.search(patron, b.get("narracion", "").lower())
+            ]
+            if len(menciones) < 3:
+                errores.append(
+                    f"La micro-situacion '{ancla}' suena {len(menciones)} vez/veces "
+                    f"(beats {menciones}); el minimo son 3."
+                )
+            elif len(menciones) > 4:
+                errores.append(
+                    f"La micro-situacion '{ancla}' suena {len(menciones)} veces "
+                    f"(beats {menciones}); el tope son 4."
                 )
 
         # Prueba concreta en el tramo 05-07

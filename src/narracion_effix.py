@@ -196,36 +196,36 @@ CTA_POR_PASE: dict[str, dict[str, str]] = {
     # Producto principal. El fin de semana responde la objeción de "no puedo
     # dejar el trabajo", que es la que más frena a este avatar.
     "pase_3_dias": {
-        "hablado": "Viernes a domingo. Ni pides permiso.",
-        "overlay": "16–18 oct · Pasaporte",
+        "hablado": "Compra tu pasaporte a la Feria Effix. Clic en el enlace.",
+        "overlay": "Compra tu pasaporte · clic aquí",
         "dias": "3",
         "gatillo": "inclusion",
     },
     # Mismo producto, gatillo de escasez: pasa una vez al año y se llena.
     "pase_3_dias_escasez": {
-        "hablado": "Es una vez al año. Y se llena.",
-        "overlay": "Una vez al año",
+        "hablado": "Compra tu boleta antes de que se llene. Clic aquí.",
+        "overlay": "Cómprala antes de que se llene",
         "dias": "3",
         "gatillo": "escasez",
     },
     # VIP: se vende por estatus y acceso, nunca por duración.
     "vip_5_dias": {
-        "hablado": "VIP: sin filas y los días exclusivos.",
-        "overlay": "VIP · 15–19 oct",
+        "hablado": "Compra tu boleta VIP. Da clic en el enlace.",
+        "overlay": "Compra tu boleta VIP · clic aquí",
         "dias": "5",
         "gatillo": "ego",
     },
     # Black: escasez verificable. Cuatrocientos cupos en todo el mundo.
     "black": {
-        "hablado": "Cuatrocientos cupos Black en todo el mundo.",
-        "overlay": "Black · 400 cupos",
+        "hablado": "Compra tu Black: son cuatrocientos cupos. Clic aquí.",
+        "overlay": "Black · 400 cupos · clic aquí",
         "dias": "5",
         "gatillo": "escasez + ego",
     },
     # Genérico: aversión a la pérdida, sin nombrar producto.
     "generico": {
-        "hablado": "Quince al diecinueve de octubre. Plaza Mayor.",
-        "overlay": "15–19 oct · Plaza Mayor",
+        "hablado": "Compra tu boleta para la Feria Effix. Clic en el enlace.",
+        "overlay": "Compra tu boleta · clic aquí",
         "dias": "",
         "gatillo": "dejar_de_ganar",
     },
