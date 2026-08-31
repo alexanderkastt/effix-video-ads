@@ -151,6 +151,55 @@ def componer_musica(
     return _bajar(salida, ruta)
 
 
+
+# Canción cantada: la letra ES el guión. Stable Audio no canta, así que el
+# modo musical_sync va por MiniMax Music 2.6 ($0.15 la pista, con voz y
+# arreglos a partir de la letra y una descripción de estilo).
+MODELO_CANCION = "fal-ai/minimax-music/v2.6"
+
+# MiniMax lee etiquetas de estructura en inglés. La letra sigue en español;
+# lo único que se traduce es el marcador de sección.
+SECCIONES = {
+    "[Verso 1]": "[Verse]", "[Verso 2]": "[Verse]", "[Verso 3]": "[Verse]",
+    "[Verso]": "[Verse]", "[Pre-coro]": "[Pre Chorus]", "[Coro]": "[Chorus]",
+    "[Puente]": "[Bridge]", "[Intro]": "[Intro]", "[Outro]": "[Outro]",
+}
+
+
+def _letra_para_minimax(letra: str) -> str:
+    for es, en in SECCIONES.items():
+        letra = letra.replace(es, en)
+    return letra
+
+
+def componer_cancion(
+    brief: dict[str, Any],
+    *,
+    job_id: str,
+    destino: Path | None = None,
+) -> Path:
+    """Compone la canción cantada del modo sincronizado.
+
+    Al revés que `componer_musica`, aquí la voz SÍ va en la pista: no hay
+    locución debajo con la que pelear, la letra es lo que se entiende.
+    """
+    letra = _letra_para_minimax(brief["suno_custom_lyrics"])
+    if len(letra) > 3500:
+        raise ValueError(f"La letra tiene {len(letra)} caracteres; el tope es 3500.")
+
+    tags = ", ".join(brief.get("suno_style_tags", []))
+    bpm = brief.get("bpm_recomendado")
+    prompt = f"{tags}. Colombian Spanish vocals, clear diction, radio-ready ad jingle"
+    if bpm:
+        prompt += f", around {bpm} BPM"
+
+    salida = fal_client.subscribe(
+        env("FAL_MODEL_CANCION", MODELO_CANCION),
+        {"prompt": prompt, "lyrics": letra, "is_instrumental": False},
+    )
+    ruta = destino or (AUDIO_DIR / job_id / "cancion.mp3")
+    return _bajar(salida, ruta)
+
 def efecto(
     descripcion: str,
     duracion_s: float,
