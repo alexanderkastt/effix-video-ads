@@ -22,7 +22,9 @@ import requests
 
 from .paths import AUDIO_DIR, CLIPS_DIR, env
 
-MODELO = "fal-ai/sync-lipsync"
+# El modelo sale del .env, como los de imagen y video. El default es el
+# barato: sync-lipsync cuesta 0.70 USD/min, sync-3 son 8 y react-1 son 10.
+MODELO_POR_DEFECTO = "fal-ai/sync-lipsync"
 
 
 @dataclass
@@ -48,15 +50,39 @@ def _recorte_de_audio(
     return destino
 
 
+def _payload(modelo: str, url_video: str, url_audio: str) -> dict[str, Any]:
+    """Arma el input del modelo, que no es el mismo en toda la familia sync.
+
+    sync-lipsync y sync-3 comparten `sync_mode`. react-1 lo llama
+    `lipsync_mode`, exige una emocion y decide con `model_mode` cuanto de la
+    cara mueve. Sin esta traduccion, cambiar el modelo en el .env manda un
+    payload que el endpoint rechaza.
+
+    En los tres casos se corta al terminar el audio: el video dura lo que
+    dura, y si el audio se queda corto es mejor cortar ahi que estirar la
+    boca hasta el final del plano.
+    """
+    base = {"video_url": url_video, "audio_url": url_audio}
+    if "react-1" in modelo:
+        return base | {
+            "lipsync_mode": "cut_off",
+            "emotion": env("FAL_LIPSYNC_EMOTION", "neutral"),
+            "model_mode": env("FAL_LIPSYNC_MODE", "face"),
+        }
+    return base | {"sync_mode": "cut_off"}
+
+
 def sincronizar_clip(
     clip: Path,
     audio: Path,
     *,
     destino: Path | None = None,
+    modelo: str | None = None,
 ) -> Sincronizado:
     """Manda un clip y su audio al modelo de lip-sync y baja el resultado."""
     import time
 
+    modelo = modelo or env("FAL_MODEL_LIPSYNC", MODELO_POR_DEFECTO)
     numero = int(clip.stem.split("_")[-1])
     inicio = time.monotonic()
 
@@ -65,16 +91,7 @@ def sincronizar_clip(
     with open(audio, "rb") as fh:
         url_audio = fal_client.upload(fh.read(), "audio/mpeg")
 
-    salida = fal_client.subscribe(
-        MODELO,
-        {
-            "video_url": url_video,
-            "audio_url": url_audio,
-            # El video dura lo que dura; si el audio se queda corto, se corta
-            # ahí en vez de estirar la boca hasta el final del plano.
-            "sync_mode": "cut_off",
-        },
-    )
+    salida = fal_client.subscribe(modelo, _payload(modelo, url_video, url_audio))
     url = salida["video"]["url"] if isinstance(salida.get("video"), dict) else salida["video"]
 
     ruta = destino or clip.with_name(f"{clip.stem}_sync.mp4")
@@ -104,7 +121,10 @@ def sincronizar(
     carpeta = CLIPS_DIR / job_id
     voz = AUDIO_DIR / job_id / "locucion_completa.mp3"
     if not voz.exists():
-        raise FileNotFoundError(f"Falta la pista de voz completa en {voz}")
+        # La pista unida la creaba el montaje, asi que sincronizar antes de
+        # montar fallaba por un orden implicito que nadie habia escrito.
+        from .video_assembler import unir_locucion
+        voz = unir_locucion(job_id)
 
     dur = plan["duracion_clip_s"]
     hechos: list[Sincronizado] = []

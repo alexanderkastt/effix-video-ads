@@ -15,7 +15,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from .paths import AUDIO_DIR, CLIPS_DIR, RENDERS_DIR, env, env_float
+from .paths import AUDIO_DIR, CLIPS_DIR, RENDERS_DIR, ROOT, env, env_float
 
 
 @dataclass
@@ -25,8 +25,13 @@ class Render:
     clips: int
 
 
-# Segoe UI Black existe en cualquier Windows; Arial Bold es el respaldo.
+# La marca pide Montserrat 900 para los titulares — BRANDING-EFFIX.md dice
+# textualmente que los textos van en post con esa fuente. El repo trae la
+# variable; Montserrat-Black.ttf es su instancia de peso 900. Las de sistema
+# quedan como respaldo para no dejar el montaje sin overlays.
 FUENTES = [
+    Path("referencias/esteticas/fuentes/Montserrat-Black.ttf"),
+    Path("referencias/esteticas/fuentes/Montserrat.ttf"),
     Path("C:/Windows/Fonts/seguibl.ttf"),
     Path("C:/Windows/Fonts/arialbd.ttf"),
     Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"),
@@ -36,6 +41,7 @@ FUENTES = [
 def _fuente() -> str:
     """Ruta de fuente escapada como la quiere el filtro de ffmpeg."""
     for f in FUENTES:
+        f = f if f.is_absolute() else (ROOT / f)
         if f.exists():
             # En un filtro, los dos puntos de "C:/" separan argumentos.
             return str(f).replace("\\", "/").replace(":", r"\:")

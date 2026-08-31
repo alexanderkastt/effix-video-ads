@@ -42,11 +42,33 @@ class Personaje:
         return Path(self.imagen)
 
 
+# Hojas de personaje que ya existen en el repo. Cuando hay una, se usa como
+# referencia en vez de generar una nueva: Effi es la mascota de la marca y
+# tiene turnaround y expresiones dibujadas, así que inventarle una cara
+# nueva cada vez sería empezar de cero teniendo el trabajo hecho.
+HOJAS_EN_REPO: dict[str, str] = {
+    "effi": "referencias/personajes/character-sheet-effi.png",
+    "lana": "referencias/personajes/lana-sheet-v2.jpg",
+}
+
+
 # Personajes de la casa. La descripción es en inglés porque es lo que leen
 # los modelos, y es deliberadamente específica: los rasgos que se repiten
 # (color de blusa, aretes, peinado) son lo que hace reconocible a alguien
 # de un plano a otro.
 CATALOGO: dict[str, str] = {
+    "effi": (
+        "Effi, the Feria Effix mascot: a friendly anthropomorphic cardboard "
+        "shipping box character with a tall rectangular body, packing tape "
+        "across the top of the head, large expressive cartoon eyes with thick "
+        "eyebrows, a cream canvas apron with a front pocket, stubby cylindrical "
+        "arms and legs, and a small floating white spherical drone companion "
+        "with a glowing cyan eye"
+    ),
+    "lana": (
+        "Lana, a crocheted amigurumi character made of visible yarn fibre, "
+        "hand-stitched features, soft wool texture"
+    ),
     "camila": (
         "a Latin American woman in her early thirties, warm brown eyes, dark wavy "
         "shoulder-length hair loosely tied back, small silver hoop earrings, a "
@@ -99,6 +121,25 @@ def crear_personaje(
     if not descripcion:
         disponibles = ", ".join(CATALOGO)
         raise KeyError(f"No conozco al personaje '{clave}'. Hay: {disponibles}")
+
+    # Si el repo ya trae su hoja, esa manda: es la version aprobada del
+    # personaje, no una interpretacion nueva del modelo.
+    from .paths import ROOT
+    hoja = ROOT / HOJAS_EN_REPO.get(clave, "")
+    if clave in HOJAS_EN_REPO and hoja.exists():
+        import shutil
+        imagen = carpeta / "personaje.png"
+        shutil.copy2(hoja, imagen)
+        with open(imagen, "rb") as fh:
+            url_referencia = fal_client.upload(fh.read(), "image/png")
+        personaje = Personaje(
+            nombre=clave, descripcion_en=descripcion, imagen=str(imagen),
+            url_referencia=url_referencia, estilo=estilo_en,
+        )
+        ficha.write_text(
+            json.dumps(asdict(personaje), ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        return personaje
 
     salida = fal_client.subscribe(
         MODELO_PERSONAJE,
