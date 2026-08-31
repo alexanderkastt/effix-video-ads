@@ -28,7 +28,9 @@
       "cifras": {
         "empresas_y_marcas": "+350",
         "ponentes": "+200",
-        "conferencias_y_talleres": "+200"
+        "conferencias_y_talleres": "+200",
+        "asistentes_confirmados": "miles",
+        "paises_de_ponentes": "+20"
       },
       "frecuencia": "una vez al año"
     },
@@ -196,7 +198,9 @@
         "empresas_y_marcas": "+350",
         "conferencias_paneles_talleres": "+200",
         "ponentes": "+200",
-        "_uso": "Estas SÍ son oficiales. Usarlas en los beats de prueba social en lugar de cifras estimadas. Reemplazan a 'las 500 personas que mueven el ecommerce LATAM', que nunca estuvo verificada."
+        "_uso": "Estas SÍ son oficiales. Usarlas en los beats de prueba social en lugar de cifras estimadas. Reemplazan a 'las 500 personas que mueven el ecommerce LATAM', que nunca estuvo verificada.",
+        "asistentes_confirmados": "miles",
+        "paises_de_ponentes": "+20"
       },
       "deadline_real": {
         "que": "Taller Master Claude — automatizar el negocio con IA",

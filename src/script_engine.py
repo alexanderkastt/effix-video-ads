@@ -29,17 +29,17 @@ from .paths import env_int, load_brand_dna
 # ---------------------------------------------------------------------------
 
 BEAT_SEQUENCE: list[dict[str, str]] = [
-    {"n": 1,  "nombre": "HOOK",           "emocion": "interrupcion_patron", "emoji": "🪝"},
-    {"n": 2,  "nombre": "AUTO-RELEVANCIA", "emocion": "auto_relevancia",    "emoji": "🫵"},
-    {"n": 3,  "nombre": "DOLOR",          "emocion": "identificacion",      "emoji": "😔"},
-    {"n": 4,  "nombre": "AMPLIFICACIÓN",  "emocion": "tension",             "emoji": "📉"},
-    {"n": 5,  "nombre": "PROMESA",        "emocion": "aspiracion",          "emoji": "✨"},
-    {"n": 6,  "nombre": "PRUEBA SOCIAL",  "emocion": "confianza",           "emoji": "🤝"},
-    {"n": 7,  "nombre": "MECANISMO",      "emocion": "claridad",            "emoji": "⚙️"},
-    {"n": 8,  "nombre": "VISUALIZACIÓN",  "emocion": "aspiracion",          "emoji": "🎬"},
-    {"n": 9,  "nombre": "URGENCIA",       "emocion": "urgencia",            "emoji": "⏳"},
-    {"n": 10, "nombre": "CTA SUAVE",      "emocion": "oportunidad",         "emoji": "🎟️"},
-    {"n": 11, "nombre": "LOOP",           "emocion": "pertenencia",         "emoji": "🔁"},
+    {"n": 1,  "nombre": "HOOK",           "emocion": "interrupcion_patron", "emoji": "🪝", "aida": "atencion"},
+    {"n": 2,  "nombre": "AUTO-RELEVANCIA", "emocion": "auto_relevancia",    "emoji": "🫵", "aida": "atencion"},
+    {"n": 3,  "nombre": "DOLOR",          "emocion": "identificacion",      "emoji": "😔", "aida": "interes"},
+    {"n": 4,  "nombre": "AMPLIFICACIÓN",  "emocion": "tension",             "emoji": "📉", "aida": "interes"},
+    {"n": 5,  "nombre": "PROMESA",        "emocion": "aspiracion",          "emoji": "✨", "aida": "interes"},
+    {"n": 6,  "nombre": "PRUEBA SOCIAL",  "emocion": "confianza",           "emoji": "🤝", "aida": "deseo"},
+    {"n": 7,  "nombre": "MECANISMO",      "emocion": "claridad",            "emoji": "⚙️", "aida": "deseo"},
+    {"n": 8,  "nombre": "VISUALIZACIÓN",  "emocion": "aspiracion",          "emoji": "🎬", "aida": "deseo"},
+    {"n": 9,  "nombre": "URGENCIA",       "emocion": "urgencia",            "emoji": "⏳", "aida": "accion"},
+    {"n": 10, "nombre": "CTA SUAVE",      "emocion": "oportunidad",         "emoji": "🎟️", "aida": "accion"},
+    {"n": 11, "nombre": "LOOP",           "emocion": "pertenencia",         "emoji": "🔁", "aida": "accion"},
 ]
 
 # Movimiento de cámara sugerido por beat. El SceneBuilder puede sobrescribirlo
@@ -355,7 +355,7 @@ class ScriptEngine:
             ang["dolor"],                                           # 03 DOLOR
             ang["amplificacion"],                                   # 04 AMPLIFICACIÓN
             ang["promesa"],                                         # 05 PROMESA
-            f"{self._en_letras(len(paises))} países ya confirmaron. Empezando por {paises[0]}.",  # 06 PRUEBA
+            "Miles de asistentes confirmados y ponentes de veinte países.",  # 06 PRUEBA
             ang["mecanismo"],                                       # 07 MECANISMO
             ang.get("visualizacion",
                     "Imagínate saliendo de ahí con tu agenda llena."),  # 08 VISUALIZACIÓN
@@ -397,7 +397,7 @@ class ScriptEngine:
             ang["overlay_dolor"],
             ang.get("overlay_amplificacion", "Cada error se paga doble"),
             "Feria Effix 2026",
-            f"{paises} países confirmados",
+            "Miles confirmados · +20 países",
             ang.get("overlay_mecanismo", "Todo en un lugar"),
             ang.get("overlay_visualizacion", "Sales con la agenda llena"),
             self._fechas(pase)[1],
@@ -444,6 +444,7 @@ class ScriptEngine:
                     "duracion_s": self.duracion_beat,
                     "nombre": meta["nombre"],
                     "emocion": meta["emocion"],
+                    "aida": meta.get("aida", ""),
                     "emoji": meta["emoji"],
                     "narracion": narracion,
                     "palabras_narracion": _contar_palabras(narracion),
@@ -558,6 +559,16 @@ class ScriptEngine:
                 errores.append(
                     f"La micro-situacion '{ancla}' suena {len(menciones)} veces "
                     f"(beats {menciones}); el tope son 4."
+                )
+
+        # AIDA completo. Un creativo puede quedar bonito con atencion,
+        # interes y deseo, y no pedir nada — y entonces no es un anuncio.
+        fases = {b.get("aida") for b in beats if b.get("aida")}
+        if fases:
+            faltan = {"atencion", "interes", "deseo", "accion"} - fases
+            if faltan:
+                errores.append(
+                    "Al guion le faltan fases de AIDA: " + ", ".join(sorted(faltan))
                 )
 
         # Prueba concreta en el tramo 05-07
