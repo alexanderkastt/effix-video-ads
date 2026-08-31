@@ -49,6 +49,18 @@ class Personaje:
 HOJAS_EN_REPO: dict[str, str] = {
     "effi": "referencias/personajes/character-sheet-effi.png",
     "lana": "referencias/personajes/lana-sheet-v2.jpg",
+    # La familia por nicho, ya generada en Pixar. Las de otros formatos se
+    # crean bajo demanda y quedan al lado con el nombre de hoja_de().
+    "dropshipping": "referencias/personajes/familia/effi_pixar.png",
+    "ia": "referencias/personajes/familia/bit_pixar.png",
+    "contadores": "referencias/personajes/familia/cifra_pixar.png",
+    "abogados": "referencias/personajes/familia/lex_pixar.png",
+    "agencias_contenido": "referencias/personajes/familia/clap_pixar.png",
+    "agencias_pauta": "referencias/personajes/familia/panel_pixar.png",
+    "ecommerce": "referencias/personajes/familia/carri_pixar.png",
+    "importadores": "referencias/personajes/familia/conte_pixar.png",
+    "laboratorios": "referencias/personajes/familia/matra_pixar.png",
+    "logistica": "referencias/personajes/familia/vani_pixar.png",
 }
 
 
@@ -63,39 +75,37 @@ POR_NICHO: dict[str, str] = {
     "abogados": (
         "LEX: an anthropomorphic legal case folder character, thick manila file "
         "with a bulldog clip on top, two expressive eyes on the front cover, "
-        "short stubby paper arms, wearing a canvas work apron with a single "
-        "chest pocket, a red ribbon bookmark hanging from one side like a tie"
+        "short stubby paper arms "
+        "wearing a small dark barrister's robe with a white collar tab, a red ribbon bookmark hanging from one side like a tie"
     ),
     "agencias_contenido": (
         "CLAP: an anthropomorphic film clapperboard character, hinged top slate "
         "that opens like a mouth, two expressive eyes on the black slate face, "
-        "short stubby arms, wearing a canvas work apron with a single chest "
-        "pocket, chalk marks half-erased across its front"
+        "short stubby arms "
+        "wearing a backwards director's cap and headphones slung around its neck, chalk marks half-erased across its front"
     ),
     "agencias_pauta": (
         "PANEL: an anthropomorphic billboard character, small rectangular sign "
         "body on two stubby legs, two expressive eyes on the display face, short "
-        "stubby arms, wearing a canvas work apron with a single chest pocket, a "
-        "bent corner on the frame from use"
+        "stubby arms "
+        "wearing a bomber jacket and a lanyard with a blank pass, a bent corner on the frame from use"
     ),
     "contadores": (
         "CIFRA: an anthropomorphic pocket calculator character, rounded plastic "
         "body, two expressive eyes above a small numeric display that works as a "
         "mouth, rows of chunky buttons across the belly, short stubby arms, "
-        "wearing a canvas work apron with a single chest pocket, one button worn "
-        "blank from being pressed too much"
+        "wearing a knitted sweater vest, a green accountant's visor and cloth sleeve garters, one button worn blank from being pressed too much"
     ),
     "dropshipping": (
         "EFFI: an anthropomorphic corrugated cardboard shipping box character, "
         "rounded corners, two expressive eyes on the front panel, short stubby "
-        "cardboard arms, wearing a canvas work apron with a single chest pocket, "
-        "packing tape strip across one corner like a scar"
+        "cardboard arms "
+        "wearing a canvas work apron with a single chest pocket, packing tape strip across one corner like a scar"
     ),
     "ecommerce": (
         "CARRI: an anthropomorphic shopping cart character, chrome wire basket "
         "body, two expressive eyes on the front grille, short stubby arms, "
-        "wearing a canvas work apron with a single chest pocket, one wheel "
-        "slightly crooked so it always leans a little"
+        "wearing a shop assistant's half-apron and a price tag dangling from one side, one wheel slightly crooked so it always leans a little"
     ),
     "ia": (
         "BIT: a small floating spherical assistant, matte white shell, single "
@@ -104,20 +114,19 @@ POR_NICHO: dict[str, str] = {
     "importadores": (
         "CONTE: an anthropomorphic shipping container character, corrugated steel "
         "body with rounded corners, two expressive eyes above the door latches, "
-        "short stubby arms, wearing a canvas work apron with a single chest "
-        "pocket, faded stencilled marks and rust spots along one side"
+        "short stubby arms "
+        "wearing a hard hat and a hi-vis safety vest, faded stencilled marks and rust spots along one side"
     ),
     "laboratorios": (
         "MATRA: an anthropomorphic laboratory flask character, rounded glass body "
         "with a narrow neck, two expressive eyes on the glass, gentle liquid "
-        "sloshing inside, short stubby arms, wearing a canvas work apron with a "
-        "single chest pocket, a cork stopper tilted on its head"
+        "sloshing inside, short stubby arms "
+        "wearing a white lab coat and safety goggles pushed up on its head, a cork stopper tilted on top"
     ),
     "logistica": (
         "VANI: an anthropomorphic delivery van character, small rounded van body, "
         "two expressive eyes in place of the windshield, short stubby arms, "
-        "wearing a canvas work apron with a single chest pocket, one headlight "
-        "slightly dimmer than the other"
+        "wearing a delivery driver's cap and a hi-vis vest, one headlight slightly dimmer than the other"
     ),
 }
 
