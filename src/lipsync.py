@@ -88,12 +88,18 @@ def sincronizar(
     guion: dict[str, Any],
     plan: dict[str, Any],
     clips_a_camara: list[int],
+    fallos: list[dict[str, Any]] | None = None,
 ) -> list[Sincronizado]:
     """Sincroniza los clips indicados y deja el resto intacto.
 
     `clips_a_camara` son los números de clip donde el personaje mira al lente.
     Los demás se quedan como están: ahí la voz es narración, no diálogo.
+
+    Los fallos se acumulan en `fallos` en vez de cortar la corrida: un 404 de
+    la cola de fal no es motivo para dejar sin sincronizar los clips que
+    venían detrás.
     """
+    fallos = [] if fallos is None else fallos
     job_id = str(guion.get("job_id") or "sin-job")
     carpeta = CLIPS_DIR / job_id
     voz = AUDIO_DIR / job_id / "locucion_completa.mp3"
@@ -107,11 +113,23 @@ def sincronizar(
         clip = carpeta / f"clip_{n:02d}.mp4"
         if not clip.exists():
             raise FileNotFoundError(f"No existe {clip}")
+        if clip.with_name(f"{clip.stem}_sync.mp4").exists():
+            continue  # ya sincronizado: no se vuelve a pagar
         inicio, fin = (n - 1) * dur, min(n * dur, plan["audio_total_s"])
         if fin <= inicio:
             continue  # ventana sin voz: no hay nada que sincronizar
         audio = _recorte_de_audio(
             voz, inicio, fin, carpeta / "audio_por_clip" / f"clip_{n:02d}.mp3"
         )
-        hechos.append(sincronizar_clip(clip, audio))
+        # La cola de fal a veces pierde una peticion y devuelve 404 al
+        # recogerla. Sin aislar el fallo, ese 404 se llevaba por delante los
+        # clips que venian despues, que no tenian nada de malo.
+        for intento in (1, 2):
+            try:
+                hechos.append(sincronizar_clip(clip, audio))
+                break
+            except Exception as error:
+                if intento == 2:
+                    fallos.append({"clip": n, "error": f"{type(error).__name__}: {error}"})
+                    break
     return hechos
