@@ -81,6 +81,7 @@ def generar_locucion(
     guion: dict[str, Any],
     *,
     voice_id: str | None = None,
+    perfil: str | None = None,
     dry_run: bool = False,
     destino: Path | None = None,
 ) -> Locucion:
@@ -99,9 +100,16 @@ def generar_locucion(
     if dry_run:
         return Locucion(beats=[], caracteres=caracteres, duraciones_s=[])
 
+    if voice_id is None and perfil:
+        # El perfil manda sobre el .env: el guion sabe con que tono se cuenta.
+        from .audio_extra import voz_para
+        voice_id, _ = voz_para(perfil)
     voice_id = voice_id or env("ELEVENLABS_VOICE_ID")
     if not voice_id:
-        raise RuntimeError("Falta ELEVENLABS_VOICE_ID en el .env.")
+        raise RuntimeError(
+            "No hay voz: pasa `perfil` (ver audio_extra.VOCES) o "
+            "define ELEVENLABS_VOICE_ID en el .env."
+        )
 
     carpeta = destino or (AUDIO_DIR / str(guion.get("job_id", "sin-job")))
     carpeta.mkdir(parents=True, exist_ok=True)
