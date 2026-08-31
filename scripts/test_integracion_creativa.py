@@ -26,7 +26,7 @@ from src.narracion_hablada import (  # noqa: E402
 from src.ganchos import (  # noqa: E402
     auditar_guion, candidatos, cargar_banco, categorias_para,
 )
-from src.plan_clips import planificar  # noqa: E402
+from src.plan_clips import DURACION_CLIP_S, planificar  # noqa: E402
 from src.storyboard_director import StoryboardDirector  # noqa: E402
 
 
@@ -194,11 +194,13 @@ def main() -> int:
 
     # 12 ── cada clip dura exactamente 4s y las escenas van encadenadas
     clips = sb["beats"]
-    tiempos_ok = all(c["duracion_s"] == 4 for c in clips) and all(
+    # La ventana sale del .env (DURACION_CLIP_S): lo que se comprueba es que
+    # TODOS los clips midan lo mismo y encadenen, no que midan cuatro segundos.
+    tiempos_ok = all(c["duracion_s"] == DURACION_CLIP_S for c in clips) and all(
         clips[i]["t_fin_s"] == clips[i + 1]["t_inicio_s"] for i in range(len(clips) - 1)
     )
     check(
-        "Todos los clips duran 4s y los tiempos encadenan sin huecos", tiempos_ok,
+        f"Todos los clips duran {DURACION_CLIP_S}s y los tiempos encadenan sin huecos", tiempos_ok,
         f"{len(clips)} clips · de 0s a {clips[-1]['t_fin_s']}s"
         if tiempos_ok else "hay clips de otra duración o huecos entre ellos",
     )

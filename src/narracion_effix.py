@@ -29,7 +29,7 @@ from __future__ import annotations
 BEATS_CON_AIRE = (1, 6, 7)
 MAX_PALABRAS_1_CLIP = 8
 MAX_PALABRAS_2_CLIPS = 17
-PALABRAS_POR_SEGUNDO = 2.2
+PALABRAS_POR_SEGUNDO = 2.96  # medido, ver plan_clips.py
 
 # Orden: momento · síntoma · reacción · explicación fallida · patrón ·
 #        causa raíz · mecanismo · prueba social · visualización ·
@@ -81,6 +81,24 @@ HABLADO: dict[str, list[str]] = {
         "Viernes a domingo. Ni pides permiso.",
         "No todos sirven. Pero los ves todos.",
         "Y el próximo martes ya sabes quién contesta.",
+    ],
+
+    # Territorio del ad de LANA, ángulo distinto: escalada temporal en segunda
+    # persona en vez de la narración emocional que ya se grabó. Ni una línea
+    # se repite entre los dos guiones.
+    "sin_arrancar": [
+        "Tu tienda lleva noventa días abierta y el único pedido lo hizo tu prima.",
+        "Publicas todos los días. Cero ventas.",
+        "Y ya no sabes si es el producto.",
+        "Entonces dices que te falta pauta.",
+        "Pusiste pauta. Y el pedido, otra vez familiar.",
+        "No te falta producto ni plata: te falta que alguien que ya vendió te vea el negocio.",
+        "En Effix hay trescientas cincuenta empresas y doscientos ponentes que viven de vender por internet.",
+        "Cinco ediciones. Quien va una vez, vuelve.",
+        "Imagínate un pedido de alguien que no conoces.",
+        "Viernes a domingo. Ni pides permiso.",
+        "No salen ventas de una. Salen contactos.",
+        "El próximo pedido no es de tu prima.",
     ],
 
     "contadores": [

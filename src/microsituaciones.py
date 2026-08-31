@@ -57,7 +57,7 @@ MAPEO_BEATS: list[dict[str, str]] = [
 ]
 
 # Ritmo de locución en español medido en MASTER_CONTEXT.md
-PALABRAS_POR_SEGUNDO = 2.2
+PALABRAS_POR_SEGUNDO = 2.96  # medido, ver plan_clips.py
 
 MOVIMIENTO_POR_BEAT = {
     1: "closeup", 2: "handheld", 3: "static", 4: "handheld", 5: "dolly-in",

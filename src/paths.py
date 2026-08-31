@@ -32,6 +32,12 @@ BRAND_DNA_JSON = CONFIG_DIR / "brand_dna.json"
 # Carga el .env una sola vez al importar
 load_dotenv(ROOT / ".env")
 
+# fal_client sólo mira FAL_KEY; en este proyecto la clave se llama FAL_API_KEY
+# desde el principio. Sin este puente, cualquier módulo que hable con fal muere
+# con MissingCredentialsError aunque la clave esté puesta en el .env.
+if not os.getenv("FAL_KEY") and os.getenv("FAL_API_KEY"):
+    os.environ["FAL_KEY"] = os.environ["FAL_API_KEY"]
+
 
 def env(key: str, default: str | None = None) -> str | None:
     """Lee una variable del .env con valor por defecto."""

@@ -133,12 +133,44 @@ ESTILOS: dict[str, dict[str, Any]] = {
         # filtra marcas registradas — el clip rechazado se paga igual.
         "prefijo_prompt": "epic superhero cinematic scene, dramatic backlight, high-end VFX,",
         "sufijo_prompt": "blockbuster visual quality, lens flares, epic scale, IMAX cinematic, dynamic hero pose",
-        "negative": "mundane setting, casual clothes, no powers visible, static camera, boring, trademarked costume, comic-book logo",
+        "negative": "static camera, boring, trademarked costume, comic-book logo, hugging, embracing, emotional reunion, hotel lobby, empty bare room, funeral",
         "modelo_fal": "fal-ai/kling-video/v2.5-turbo/pro/image-to-video",
         "fps": 24,
         "escena_en": "an epic city skyline under a churning storm sky, debris suspended in the air",
         "luz_en": "hard dramatic backlight, explosions acting as practical light sources, lightning",
         "sujeto_en": "a heroic figure in armored suit, cape catching the wind, grounded stance",
+        # El escenario evoluciona con el guión. Repetir la misma ciudad en
+        # llamas en los diez clips es pagar diez veces el mismo plano, y en un
+        # ad de feria significa que la feria no aparece nunca.
+        "actos": {
+            (1, 5): {  # solo, y perdiendo. Todavía no hay épica: hay vacío
+                "escena_en": "a vast empty concrete loading bay at dusk, one lone figure, "
+                             "storm clouds gathering outside but nothing broken yet",
+                "luz_en": "flat cold overcast light, long shadows, desaturated palette, no explosions",
+            },
+            (6, 6): {  # la causa raíz: entra la luz
+                "escena_en": "a heavy door cracking open at the end of the bay, warm light "
+                             "cutting a hard line across the concrete floor",
+                "luz_en": "a single warm shaft breaking the cold palette, dust visible in the beam",
+            },
+            (7, 9): {  # el equipo se arma, y la feria por fin se ve
+                "escena_en": "a vast bright exhibition hall, rows of trade booths with physical "
+                             "product on display, allied figures stepping into frame one by one",
+                "luz_en": "warm high-key light, rim light catching each figure as they arrive, lens flares",
+            },
+            (10, 12): {  # cierre: el grupo ya formado, PERO dentro de la feria
+                # "the assembled group" a secas daba un lobby al atardecer con
+                # gente abrazándose: leía como reencuentro emotivo, no como
+                # feria de negocios. El escenario tiene que decir stands,
+                # producto y escarapelas o el modelo inventa otra cosa.
+                "escena_en": "a busy trade-fair floor, numbered exhibitor booths with product "
+                             "samples laid out on counters, roll-up banners and hanging aisle "
+                             "signage, attendees wearing lanyards shaking hands over a stand, "
+                             "a city skyline through tall glass at golden hour",
+                "luz_en": "golden hero light through the glass, soft atmospheric haze, "
+                          "high-contrast rim lighting on the exhibitors",
+            },
+        },
     },
     "musical_sync": {
         "ambiente": "visual que cambia con el beat — puede usar cualquier estilo base como layer visual",
@@ -263,6 +295,7 @@ class SceneBuilder:
         tpl = ESTILOS[estilo] if estilo and estilo in ESTILOS else self.tpl
         n = beat_dict["beat"]
         visual = BEAT_VISUALS[n]
+        acto = self._acto(tpl, n)
         movimiento = beat_dict.get("movimiento_camara", "handheld")
         movimiento_en = MOVIMIENTO_EN.get(movimiento, MOVIMIENTO_EN["handheld"])
 
@@ -277,8 +310,8 @@ class SceneBuilder:
             f"Shot: {movimiento_en}, vertical 9:16 framing.",
             f"Subject: {tpl['sujeto_en']}.",
             f"Action: {visual['accion_en']}.",
-            f"Setting: {tpl['escena_en']}.{contexto}",
-            f"Lighting: {visual.get('luz_en') or tpl['luz_en']}.",
+            f"Setting: {acto['escena_en']}.{contexto}",
+            f"Lighting: {visual.get('luz_en') or acto['luz_en']}.",
             f"Emotional read: {visual['lectura_en']}, shown through body language only.",
             "Audio: ambient room tone and natural background texture, "
             "no music, no discernible speech.",
@@ -299,13 +332,25 @@ class SceneBuilder:
 
         return {
             "prompt_video": prompt,
-            "prompt_imagen_base": self._prompt_imagen(tpl, visual, movimiento_en),
+            "prompt_imagen_base": self._prompt_imagen(tpl, visual, movimiento_en, acto),
             "negative_prompt": tpl["negative"],
             "escenografia": escenografia,
             "descripcion_visual": visual["es"],
             "notas_produccion": self._notas(n, tpl),
             "palabras_prompt": len(prompt.split()),
         }
+
+    @staticmethod
+    def _acto(tpl: dict[str, Any], n: int) -> dict[str, str]:
+        """El escenario y la luz que le tocan a este beat.
+
+        Un estilo sin `actos` se comporta como antes: mismo decorado en todos
+        los beats. Con actos, el escenario acompaña al guión.
+        """
+        for (inicio, fin), acto in tpl.get("actos", {}).items():
+            if inicio <= n <= fin:
+                return acto
+        return {"escena_en": tpl["escena_en"], "luz_en": tpl["luz_en"]}
 
     def apply_to_script(self, script_json: dict[str, Any]) -> dict[str, Any]:
         """Rellena todos los beats de un guión con su escenografía. Muta y devuelve."""
@@ -400,12 +445,16 @@ class SceneBuilder:
         return prompt.strip()
 
     @staticmethod
-    def _prompt_imagen(tpl: dict[str, Any], visual: dict[str, str], movimiento_en: str) -> str:
+    def _prompt_imagen(
+        tpl: dict[str, Any], visual: dict[str, str], movimiento_en: str,
+        acto: dict[str, str] | None = None,
+    ) -> str:
         """Prompt del frame inicial. Es una foto fija: describe estado, no acción."""
+        acto = acto or tpl
         return (
             f"{tpl['prefijo_prompt']} still frame, vertical 9:16. "
             f"{tpl['sujeto_en']}, mid-action: {visual['accion_en']}. "
-            f"Setting: {tpl['escena_en']}. Lighting: {tpl['luz_en']}. "
+            f"Setting: {acto['escena_en']}. Lighting: {acto['luz_en']}. "
             f"Composition matches a {movimiento_en}. {tpl['sufijo_prompt']}."
         )
 

@@ -140,7 +140,7 @@ NICHOS: dict[str, dict[str, Any]] = {
             "Dedos cruzados",
             "“Me tocó uno malo”",
             "El cuarto del año",
-            "Lo eliges por foto",
+            "Lo elegiste por foto",
             "Stand y muestra física",
             "350 empresas",
             "Producto en la mano",
@@ -148,10 +148,80 @@ NICHOS: dict[str, dict[str, Any]] = {
             "No todos sirven",
             "Ya sabes quién",
         ],
+        # Uno por categoría del método de ganchos, no tres versiones del mismo
+        # dolor: el flujo de la skill pide 3-5 ganchos DISTINTOS por creativo.
+        # A y B son los que sirven en conversión (nivel problem); el contrarian
+        # gana alcance pero castiga confianza, por eso va de cuarto y no de hook
+        # en el ad de venta — vive dentro del guión, en la causa raíz.
         "hooks": [
-            {"hablado": "¿Le escribes el martes y te contesta el viernes?", "gatillos": ["auto_relevancia", "activacion_emocional"], "overlay": "Contestó el viernes"},
-            {"hablado": "Estás eligiendo proveedor por foto. Como comprando a ciegas.", "gatillos": ["interrupcion_patron", "auto_relevancia"], "overlay": "Lo eliges por foto"},
-            {"hablado": "Es el cuarto proveedor del año. Y el mismo ciclo.", "gatillos": ["auto_relevancia", "dejar_de_ganar"], "overlay": "El cuarto del año"},
+            {"hablado": "Martes, tres de la tarde. El proveedor te deja en visto. Ya le cobraste a la gente.",
+             "categoria": "dolor_nombrado", "gatillos": ["auto_relevancia", "activacion_emocional"], "overlay": "En visto. Un martes."},
+            {"hablado": "Vendes sin bodega y dependes de que alguien conteste el WhatsApp: treinta segundos.",
+             "categoria": "callout", "gatillos": ["auto_relevancia"], "overlay": "Si vendes sin bodega"},
+            {"hablado": "Cuatro proveedores este año. Los cuatro, en visto un martes.",
+             "categoria": "especificidad", "gatillos": ["auto_relevancia", "dejar_de_ganar"], "overlay": "El cuarto del año"},
+            {"hablado": "No te falló el proveedor. Lo elegiste por una foto.",
+             "categoria": "contrarian", "gatillos": ["interrupcion_patron"], "overlay": "Lo elegiste por foto"},
+            {"hablado": "Tres días en Plaza Mayor y sales con proveedor visto en persona. Sin rogarle a nadie.",
+             "categoria": "promesa_con_plazo", "gatillos": ["dejar_de_ganar"], "overlay": "Sin rogarle a nadie"},
+        ],
+    },
+
+    # El único pedido en noventa días, y era de la familia. El ancla vuelve
+    # cuatro veces: abre (1), se multiplica pese a la pauta (5), se invierte en
+    # la visualización (9) y cierra el loop (12). Territorio compartido con el
+    # ad de LANA, pero otro ángulo: allá era emocional, aquí es una escalada
+    # temporal en segunda persona.
+    "sin_arrancar": {
+        "etiqueta": "Sin arrancar — el que lo intentó todo y no ha vendido",
+        "audiencia": "Emprendedor con tienda publicada y sin una sola venta a un desconocido",
+        "ancla": "primera_venta",
+        "gatillo_principal": "auto_relevancia",
+        "momento": "Tu tienda lleva noventa días abierta y el único pedido lo hizo tu prima.",
+        "sintoma": "Publicas todos los días, revisas el panel, y el contador de ventas no se mueve.",
+        "reaccion_interna": "Y ya empezaste a dudar de si el problema es el producto o eres tú.",
+        "explicacion_fallida": "Te dices que lo que falta es pauta, que con presupuesto sí arranca.",
+        "patron": "Pusiste la pauta. Y el único pedido volvió a ser de la familia.",
+        "causa_raiz": "No te falta producto ni presupuesto: te falta que alguien que ya vende te vea el negocio por dentro.",
+        "mecanismo": "Trescientas cincuenta empresas y doscientos ponentes que viven de vender por internet, en un solo recinto.",
+        "prueba_social": "Cinco ediciones. La gente que va una vez, vuelve.",
+        "visualizacion": "Imagínate el primer pedido de alguien que no sabe tu apellido.",
+        "urgencia_cta": "Del dieciséis al dieciocho de octubre, en Plaza Mayor.",
+        "defecto_admitido": "No sales de ahí con ventas. Sales con las conversaciones que las producen.",
+        "loop_rewatch": "Y el próximo pedido ya no es de tu prima.",
+        "overlay_dolor": "Un pedido. Y era tu prima",
+        "visual_clave": "un panel de ventas en cero con una sola notificación",
+        "visual_clave_en": "a sales dashboard at zero with a single lonely order notification",
+        "overlays": [
+            "Y era tu prima",
+            "Publicas y nada",
+            "¿Será el producto?",
+            "«Me falta pauta»",
+            "Pusiste pauta. Igual",
+            "No es el producto",
+            "350 empresas · 200 ponentes",
+            "Quien va, vuelve",
+            "Un pedido de un desconocido",
+            "16–18 oct",
+            "Sales con contactos",
+            "Ya no es tu prima",
+        ],
+        "hooks": [
+            {
+                "hablado": "Tu tienda lleva noventa días abierta y el único pedido lo hizo tu prima.",
+                "gatillos": ["auto_relevancia", "interrupcion_patron"],
+                "overlay": "Y era tu prima",
+            },
+            {
+                "hablado": "Noventa días de tienda abierta. Un pedido. Y era de la familia.",
+                "gatillos": ["interrupcion_patron", "activacion_emocional"],
+                "overlay": "Un pedido en 90 días",
+            },
+            {
+                "hablado": "Probaste tienda, redes y pauta. Y sigues esperando al primer desconocido.",
+                "gatillos": ["auto_relevancia", "dejar_de_ganar"],
+                "overlay": "Falta el primer desconocido",
+            },
         ],
     },
 

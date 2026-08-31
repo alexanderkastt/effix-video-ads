@@ -16,7 +16,7 @@ from .narracion_effix import (
 )
 from .nichos_effix import NICHOS, nichos_disponibles, obtener
 
-DURACION_CLIP_S = 4
+from .plan_clips import DURACION_CLIP_S  # la ventana la fija el .env
 MIN_VIDEO_S = 30
 MAX_VIDEO_S = 60
 

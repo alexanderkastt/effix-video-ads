@@ -145,6 +145,12 @@ def producir(
         if not (carpeta_clips / f"clip_{v['clip']:02d}.mp4").exists()
     ]
 
+    # El estilo elige el modelo de video (SceneBuilder lo escribe en el guion);
+    # el .env solo pone el default para guiones que no traigan uno. Antes el
+    # guion anunciaba un modelo y se generaba con otro, y el costo estimado no
+    # correspondia a lo que se pagaba.
+    modelo_video = guion.get("modelo_fal") or None
+
     maximo = concurrencia or env_int("MAX_CONCURRENT_CLIPS", 3)
     clips: list[Clip] = []
     fallos: list[dict[str, str]] = []
@@ -158,6 +164,7 @@ def producir(
             escena,
             imagen=imagen,
             duracion_s=plan["duracion_clip_s"],
+            modelo=modelo_video,
             carpeta=carpeta_clips,
             job_id=job_id,
             etiqueta="clip",

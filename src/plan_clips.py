@@ -37,10 +37,21 @@ import subprocess
 from pathlib import Path
 from typing import Any
 
-DURACION_CLIP_S = 4
+from .paths import env_int
+
+# Kling no vende segundos sueltos: cobra tramos de 5 o de 10. Con la ventana
+# en 4s cada clip paga cinco segundos y usa cuatro — un 20% del gasto de video
+# que nadie ve. En 5s se paga lo mismo por clip y hacen falta menos clips para
+# cubrir el mismo audio. Se deja en el .env porque el ritmo de corte es
+# decisión de estilo: 4s va mejor en UGC, 5s en lo cinematográfico.
+DURACION_CLIP_S = env_int("DURACION_CLIP_S", 4)
 MIN_VIDEO_S = 30
 MAX_VIDEO_S = 60
-PALABRAS_POR_SEGUNDO = 2.2
+# Medido el 2026-08-30 sobre la locucion real del ad de dropshipping: 107
+# palabras en 36,13s con la voz "Medellin - Conversational and Intense" y
+# ELEVENLABS_SPEED=0.83. El 2.2 anterior era una estimacion de escritorio y
+# sobredimensionaba la locucion en un 34%, que se traducia en clips de mas.
+PALABRAS_POR_SEGUNDO = 2.96
 
 # Cola después de que termina la voz: el video no corta en seco sobre la
 # última sílaba, pero tampoco sigue corriendo en silencio.

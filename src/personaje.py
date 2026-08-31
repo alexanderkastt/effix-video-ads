@@ -131,6 +131,16 @@ POR_NICHO: dict[str, str] = {
 }
 
 
+# El género de cada quien, para que la voz no contradiga lo que se ve en
+# pantalla. Lo consume audio_extra.verificar_genero().
+GENEROS: dict[str, str] = {"camila": "f", "andres": "m"}
+
+
+def genero_de(clave: str) -> str | None:
+    """'f', 'm' o None si el personaje no está declarado."""
+    return GENEROS.get(clave)
+
+
 # Personajes de la casa. La descripción es en inglés porque es lo que leen
 # los modelos, y es deliberadamente específica: los rasgos que se repiten
 # (color de blusa, aretes, peinado) son lo que hace reconocible a alguien
@@ -340,8 +350,12 @@ def prompt_de_escena(beat: dict[str, Any], personaje: Personaje) -> str:
     texto pide una persona y la referencia muestra otra.
     """
     base = beat.get("prompt_imagen_base", "")
+    # El pronombre estaba quemado en "her". Con un personaje masculino el
+    # prompt le pedía al modelo una mujer mientras la referencia mostraba un
+    # hombre: dos instrucciones que se contradicen y degradan la imagen.
+    pronombre = {"f": "her", "m": "him"}.get(genero_de(personaje.nombre), "them")
     return (
         f"Keep the exact same character from the reference image — same face, "
         f"same hair, same outfit. {personaje.descripcion_en}. "
-        f"Place her in this scene: {base}"
+        f"Place {pronombre} in this scene: {base}"
     )

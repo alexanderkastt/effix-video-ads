@@ -82,6 +82,7 @@ def generar_locucion(
     *,
     voice_id: str | None = None,
     perfil: str | None = None,
+    personaje: str | None = None,
     dry_run: bool = False,
     destino: Path | None = None,
 ) -> Locucion:
@@ -102,8 +103,11 @@ def generar_locucion(
 
     if voice_id is None and perfil:
         # El perfil manda sobre el .env: el guion sabe con que tono se cuenta.
+        # `personaje` es el guardarrail de genero, y va aqui porque este es el
+        # punto donde se factura: una voz que contradice al personaje se
+        # descubre viendo el video, con la locucion y el lip-sync ya pagados.
         from .audio_extra import voz_para
-        voice_id, _ = voz_para(perfil)
+        voice_id, _ = voz_para(perfil, personaje=personaje)
     voice_id = voice_id or env("ELEVENLABS_VOICE_ID")
     if not voice_id:
         raise RuntimeError(

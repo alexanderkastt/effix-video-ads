@@ -133,16 +133,19 @@ def generar_clip(
     with open(imagen, "rb") as fh:
         url_imagen = fal_client.upload(fh.read(), "image/png")
 
-    salida = fal_client.subscribe(
-        modelo,
-        {
-            "prompt": beat["prompt_video"],
-            "image_url": url_imagen,
-            "duration": pedido,
-            "negative_prompt": beat.get("negative_prompt", ""),
-            "aspect_ratio": env("FAL_ASPECT_RATIO", "9:16"),
-        },
-    )
+    payload = {
+        "prompt": beat["prompt_video"],
+        "image_url": url_imagen,
+        "duration": pedido,
+        "negative_prompt": beat.get("negative_prompt", ""),
+    }
+    # Kling 2.5 turbo no declara `aspect_ratio`: hereda el encuadre de la
+    # imagen base, que ya sale 9:16. Mandarselo arriesga un rechazo de
+    # validacion, y un clip rechazado tarde se paga igual que uno bueno.
+    if "v2.5-turbo" not in modelo:
+        payload["aspect_ratio"] = env("FAL_ASPECT_RATIO", "9:16")
+
+    salida = fal_client.subscribe(modelo, payload)
     espera = round(time.monotonic() - inicio, 1)
     ruta = _descargar(_url_de(salida, "video"), carpeta / f"{etiqueta}_{n:02d}.mp4")
 
