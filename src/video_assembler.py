@@ -180,7 +180,18 @@ def ensamblar(
             f"crop=720:1280,fps=24[v{i}]"
         )
     cadena = "".join(f"[v{i}]" for i in range(len(clips)))
-    dibujos = _filtros_overlay(guion, plan, carpeta) if overlays else []
+    if overlays:
+        # La capa de texto vive en postproduccion.py: decide cuerpo y
+        # animacion, y sabe cuando un overlay no cabe en una linea.
+        from .postproduccion import filtros as filtros_texto, resolver
+        resueltos = resolver(guion, plan)
+        largos = [o.texto for o in resueltos if not o.cabe]
+        if largos:
+            print(f"   aviso: {len(largos)} overlay(s) no caben en una linea "
+                  f"y salen al minimo legible: {', '.join(largos[:3])}")
+        dibujos = filtros_texto(resueltos, carpeta)
+    else:
+        dibujos = []
     if dibujos:
         # El texto va encima del video ya concatenado, no clip por clip: un
         # beat puede cruzar dos clips y su overlay no debe cortarse ahi.

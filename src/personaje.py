@@ -57,13 +57,15 @@ HOJAS_EN_REPO: dict[str, str] = {
 # (color de blusa, aretes, peinado) son lo que hace reconocible a alguien
 # de un plano a otro.
 CATALOGO: dict[str, str] = {
+    # Texto oficial de prompts-listos/pixar/effix-2026-ia-45s.md. La primera
+    # version la escribi mirando la imagen y se me escapo que el dron se
+    # llama BIT y que la paleta esta bloqueada — dos cosas que la familia
+    # entera tiene que respetar.
     "effi": (
-        "Effi, the Feria Effix mascot: a friendly anthropomorphic cardboard "
-        "shipping box character with a tall rectangular body, packing tape "
-        "across the top of the head, large expressive cartoon eyes with thick "
-        "eyebrows, a cream canvas apron with a front pocket, stubby cylindrical "
-        "arms and legs, and a small floating white spherical drone companion "
-        "with a glowing cyan eye"
+        "EFFI: an anthropomorphic corrugated cardboard shipping box character, "
+        "rounded corners, two expressive eyes on the front panel, short stubby "
+        "cardboard arms, wearing a canvas work apron with a single chest pocket, "
+        "packing tape strip across one corner like a scar"
     ),
     "lana": (
         "Lana, a crocheted amigurumi character made of visible yarn fibre, "
@@ -81,6 +83,41 @@ CATALOGO: dict[str, str] = {
         "calm and focused expression"
     ),
 }
+
+
+# Compañero fijo de la familia y paleta cerrada: los dos vienen del prompt
+# oficial de Effi y son lo que hace que diez objetos distintos se lean como
+# un mismo universo y no como diez mascotas sueltas.
+BIT = (
+    "Beside the character at correct relative scale: BIT, a small floating "
+    "spherical assistant, matte white shell, single soft cyan light-ring for a "
+    "face, sized to hover at shoulder height."
+)
+
+PALETA = (
+    "Palette locked to amber #F4A300, deep blue #1B2A4A, cardboard brown "
+    "#C9772F, cream #E8E2D5, and cyan #3DD6C4 on BIT's ring only."
+)
+
+
+def prompt_hoja_familia(descripcion: str) -> str:
+    """Model sheet de un personaje de la familia Effi.
+
+    Las dos cabezas —boca abierta y boca cerrada— no son decorativas: son lo
+    que permite el lip-sync después. El prompt oficial de Effi lo dice y por
+    eso se repiten aquí para cada miembro de la familia.
+    """
+    return (
+        "Character model sheet on a plain flat neutral grey background. "
+        "Pixar-grade 3D animation render.\n\n"
+        f"{descripcion}\n\n"
+        "Layout: full-body front view, full-body three-quarter view, full-body "
+        "side view, plus two head close-ups side by side — one with the mouth "
+        "open mid-speech, one with the mouth closed neutral.\n\n"
+        f"{BIT}\n\n"
+        f"{PALETA} Even flat studio lighting, sharp focus throughout, deep "
+        "depth of field, no cast shadows on the background."
+    )
 
 
 def _prompt_hoja(descripcion: str, estilo_en: str) -> str:

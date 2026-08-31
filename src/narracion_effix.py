@@ -66,18 +66,20 @@ HABLADO: dict[str, list[str]] = {
         "Y el próximo cierre ya no se repite.",
     ],
 
+    # El martes en visto vuelve cuatro veces: abre (1), se paga (2), se
+    # multiplica (5) y cierra el loop (12). Es lo que produce el "ese soy yo".
     "dropshipping": [
-        "Le escribes al proveedor un martes para confirmar stock, y te contesta el viernes.",
-        "Y se te cayó la campaña del finde.",
-        "Así cada lanzamiento va con los dedos cruzados.",
-        "Entonces te dices que te tocó uno malo.",
-        "Pero es el cuarto del año. Mismo ciclo.",
-        "Y es que los estás eligiendo por foto y por WhatsApp: nunca les has visto la cara.",
-        "En la feria están con stand y muestra física, y les preguntas de frente lo que quieras.",
+        "Martes, tres de la tarde. El proveedor te deja en visto. Ya le cobraste a la gente.",
+        "Aparece el viernes, pero la campaña ya cayó.",
+        "Ahora lanzas con los dedos cruzados.",
+        "Te dices que te tocó uno malo.",
+        "Cuatro este año. Todos, en visto un martes.",
+        "No te falló el proveedor. Lo elegiste por una foto.",
+        "En Effix está con stand y muestra física. Le preguntas de frente.",
         "Trescientas cincuenta empresas en un recinto.",
-        "Imagínate cerrando con el producto en la mano.",
+        "Cierras con el producto en la mano.",
         "Viernes a domingo. Ni pides permiso.",
-        "No todos los stands sirven. Pero los ves.",
+        "No todos sirven. Pero los ves todos.",
         "Y el próximo martes ya sabes quién contesta.",
     ],
 
@@ -197,35 +199,35 @@ CTA_POR_PASE: dict[str, dict[str, str]] = {
     # dejar el trabajo", que es la que más frena a este avatar.
     "pase_3_dias": {
         "hablado": "Compra tu pasaporte a la Feria Effix. Clic en el enlace.",
-        "overlay": "Compra tu pasaporte · clic aquí",
+        "overlay": "Clic en el enlace",
         "dias": "3",
         "gatillo": "inclusion",
     },
     # Mismo producto, gatillo de escasez: pasa una vez al año y se llena.
     "pase_3_dias_escasez": {
         "hablado": "Compra tu boleta antes de que se llene. Clic aquí.",
-        "overlay": "Cómprala antes de que se llene",
+        "overlay": "Antes de que llene",
         "dias": "3",
         "gatillo": "escasez",
     },
     # VIP: se vende por estatus y acceso, nunca por duración.
     "vip_5_dias": {
         "hablado": "Compra tu boleta VIP. Da clic en el enlace.",
-        "overlay": "Compra tu boleta VIP · clic aquí",
+        "overlay": "Boleta VIP",
         "dias": "5",
         "gatillo": "ego",
     },
     # Black: escasez verificable. Cuatrocientos cupos en todo el mundo.
     "black": {
         "hablado": "Compra tu Black: son cuatrocientos cupos. Clic aquí.",
-        "overlay": "Black · 400 cupos · clic aquí",
+        "overlay": "Solo 400 cupos",
         "dias": "5",
         "gatillo": "escasez + ego",
     },
     # Genérico: aversión a la pérdida, sin nombrar producto.
     "generico": {
         "hablado": "Compra tu boleta para la Feria Effix. Clic en el enlace.",
-        "overlay": "Compra tu boleta · clic aquí",
+        "overlay": "Clic en el enlace",
         "dias": "",
         "gatillo": "dejar_de_ganar",
     },
