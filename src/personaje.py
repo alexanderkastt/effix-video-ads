@@ -52,11 +52,82 @@ HOJAS_EN_REPO: dict[str, str] = {
 }
 
 
+
+# La familia por nicho. Cada oficio tiene su objeto, con el mismo lenguaje
+# que Effi: cuerpo de objeto real, dos ojos expresivos en la cara frontal,
+# brazos cortos, delantal de lona, y una marca de uso que le da carácter
+# (la cinta de embalar de Effi es "como una cicatriz"). BIT los acompaña a
+# todos, y la paleta es la misma: son diez miembros de un universo, no diez
+# mascotas sueltas.
+POR_NICHO: dict[str, str] = {
+    "abogados": (
+        "LEX: an anthropomorphic legal case folder character, thick manila file "
+        "with a bulldog clip on top, two expressive eyes on the front cover, "
+        "short stubby paper arms, wearing a canvas work apron with a single "
+        "chest pocket, a red ribbon bookmark hanging from one side like a tie"
+    ),
+    "agencias_contenido": (
+        "CLAP: an anthropomorphic film clapperboard character, hinged top slate "
+        "that opens like a mouth, two expressive eyes on the black slate face, "
+        "short stubby arms, wearing a canvas work apron with a single chest "
+        "pocket, chalk marks half-erased across its front"
+    ),
+    "agencias_pauta": (
+        "PANEL: an anthropomorphic billboard character, small rectangular sign "
+        "body on two stubby legs, two expressive eyes on the display face, short "
+        "stubby arms, wearing a canvas work apron with a single chest pocket, a "
+        "bent corner on the frame from use"
+    ),
+    "contadores": (
+        "CIFRA: an anthropomorphic pocket calculator character, rounded plastic "
+        "body, two expressive eyes above a small numeric display that works as a "
+        "mouth, rows of chunky buttons across the belly, short stubby arms, "
+        "wearing a canvas work apron with a single chest pocket, one button worn "
+        "blank from being pressed too much"
+    ),
+    "dropshipping": (
+        "EFFI: an anthropomorphic corrugated cardboard shipping box character, "
+        "rounded corners, two expressive eyes on the front panel, short stubby "
+        "cardboard arms, wearing a canvas work apron with a single chest pocket, "
+        "packing tape strip across one corner like a scar"
+    ),
+    "ecommerce": (
+        "CARRI: an anthropomorphic shopping cart character, chrome wire basket "
+        "body, two expressive eyes on the front grille, short stubby arms, "
+        "wearing a canvas work apron with a single chest pocket, one wheel "
+        "slightly crooked so it always leans a little"
+    ),
+    "ia": (
+        "BIT: a small floating spherical assistant, matte white shell, single "
+        "soft cyan light-ring for a face, no arms, hovering"
+    ),
+    "importadores": (
+        "CONTE: an anthropomorphic shipping container character, corrugated steel "
+        "body with rounded corners, two expressive eyes above the door latches, "
+        "short stubby arms, wearing a canvas work apron with a single chest "
+        "pocket, faded stencilled marks and rust spots along one side"
+    ),
+    "laboratorios": (
+        "MATRA: an anthropomorphic laboratory flask character, rounded glass body "
+        "with a narrow neck, two expressive eyes on the glass, gentle liquid "
+        "sloshing inside, short stubby arms, wearing a canvas work apron with a "
+        "single chest pocket, a cork stopper tilted on its head"
+    ),
+    "logistica": (
+        "VANI: an anthropomorphic delivery van character, small rounded van body, "
+        "two expressive eyes in place of the windshield, short stubby arms, "
+        "wearing a canvas work apron with a single chest pocket, one headlight "
+        "slightly dimmer than the other"
+    ),
+}
+
+
 # Personajes de la casa. La descripción es en inglés porque es lo que leen
 # los modelos, y es deliberadamente específica: los rasgos que se repiten
 # (color de blusa, aretes, peinado) son lo que hace reconocible a alguien
 # de un plano a otro.
 CATALOGO: dict[str, str] = {
+    **POR_NICHO,
     # Texto oficial de prompts-listos/pixar/effix-2026-ia-45s.md. La primera
     # version la escribi mirando la imagen y se me escapo que el dron se
     # llama BIT y que la paleta esta bloqueada — dos cosas que la familia
@@ -134,10 +205,47 @@ def _prompt_hoja(descripcion: str, estilo_en: str) -> str:
     )
 
 
+def estilo_de_formato(formato: str) -> str:
+    """El prefijo visual que usa ese formato, tal como lo define el proyecto.
+
+    El personaje tiene que existir en el estilo del video: la calculadora de
+    los contadores no se ve igual en Pixar que en crochet o en Minecraft.
+    En vez de escribir el estilo a mano en cada llamada, se toma del mismo
+    sitio del que salen los prompts de escena, para que no se separen.
+    """
+    from .scene_builder import ESTILOS
+    if formato in ESTILOS:
+        return ESTILOS[formato]["prefijo_prompt"].rstrip(", ")
+    # Los estilos especiales no tienen prefijo: su look vive en
+    # `universal_positivo`, que es el bloque que va en todos sus prompts.
+    from .estilos_especiales import ESTILOS_ESPECIALES
+    especial = ESTILOS_ESPECIALES.get(formato)
+    if especial:
+        # crochet lleva su look en `universal_positivo`; los demas solo
+        # tienen `descripcion`, que describe el formato entero y no el
+        # aspecto. Se usa lo que haya y se recorta, porque una hoja de
+        # personaje no necesita las reglas de montaje del estilo.
+        texto = especial.get("universal_positivo") or especial.get("descripcion") or formato
+        return str(texto).split(".")[0].rstrip(", ")
+    return formato
+
+
+def hoja_de(clave: str, formato: str, carpeta: Path) -> Path:
+    """Dónde vive la hoja de un personaje en un formato dado.
+
+    Una hoja por par personaje+formato: diez personajes en catorce formatos
+    son ciento cuarenta, y pre-generarlas todas seria pagar por combinaciones
+    que quiza no se usen nunca. Se genera la primera vez que hace falta y se
+    reutiliza siempre.
+    """
+    return carpeta / f"hoja_{clave}_{formato}.png"
+
+
 def crear_personaje(
     clave: str,
     *,
-    estilo_en: str,
+    estilo_en: str | None = None,
+    formato: str | None = None,
     job_id: str,
     carpeta: Path | None = None,
     descripcion: str | None = None,
@@ -150,6 +258,11 @@ def crear_personaje(
     carpeta = carpeta or (CLIPS_DIR / job_id)
     carpeta.mkdir(parents=True, exist_ok=True)
     ficha = carpeta / "personaje.json"
+
+    if estilo_en is None:
+        if not formato:
+            raise ValueError("Hace falta `formato` o `estilo_en` para saber cómo dibujarlo.")
+        estilo_en = estilo_de_formato(formato)
 
     if ficha.exists():
         return Personaje(**json.loads(ficha.read_text(encoding="utf-8")))
