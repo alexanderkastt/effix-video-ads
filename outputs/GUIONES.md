@@ -384,3 +384,107 @@ ojos haciendo la actuación.
 3. `test_integracion_creativa.py` imprime "12 clips × 4s = 60s" y en la línea
    siguiente "todos los clips duran 5s": está leyendo dos constantes distintas
    y se contradice solo.
+
+---
+
+## 2026-08-31 — `tienda_ropa` · Los tres estilos: skeleton · pixar · animado 2D
+
+Tres guiones distintos, uno por estilo. **No es el mismo guión en tres estilos**:
+cada uno tiene su estructura, su personaje y su arco. El de Pixar es el de la
+tanda anterior (Doña Clara, micro-situación de 12 beats); los otros dos son
+nuevos. Ninguno comparte una línea con otro.
+
+| Estilo | Estructura | Personaje | Dur |
+|---|---|---|---|
+| Skeleton | Escalada temporal (Día 1 → Día 365) | El esqueleto comerciante | 40s |
+| Pixar 3D | Micro-situación de 12 beats | Doña Clara, la dueña | 60s |
+| Animado 2D | Diálogo a dos voces en la acera | Rosa y Marce, vecinas de local | 38s |
+
+---
+
+## ESTILO SKELETON — "Un año en la vitrina" · 40s
+
+**Formato:** skeleton ad (skill `skeleton-ads`) · narración en segunda persona
+**Ángulo:** costo de la inacción + escalada de tiempo. El producto no se usa: se
+deja de usar, y el precio de eso se ve crecer día a día.
+**Loop de curiosidad:** ¿qué le pasa a la ropa que nunca sale de la vitrina?
+**El turn:** beat 6, cuando se sube al bus. Antes de eso, solo se acumula el costo.
+**Personaje:** el esqueleto comerciante, Bare-Bones Cinematic. Va **sin ropa**
+rodeado de ropa que nadie compra — la ironía es el concepto: tiene el producto
+encima y no le sirve de nada mientras dependa de quien pase por el frente.
+**Character Bible:** el bloque Bare-Bones Cinematic, verbatim en los 8 prompts,
+con `[THEME]` = almacén de ropa de barrio colombiano y palette cálida desaturada.
+
+| # | VO | Escena |
+|---|---|---|
+| 1 | ¿Qué pasa si tu ropa nunca sale de la vitrina? | Wide del local desde la acera, el esqueleto acomodando un maniquí |
+| 2 | Día uno. Cuelgas la colección nueva. Se ve hermosa. La ve el que pasa por el frente. | Medium, orgulloso, colgando ropa nueva |
+| 3 | Día treinta. Llovió tres sábados. La colección sigue completa. | El esqueleto mirando la lluvia por el vidrio, brazos cruzados |
+| 4 | Día noventa. Bajas los precios. Ahora la ve el que pasa por el frente, más barata. | Close-up de manos huesudas escribiendo un cartel de rebaja |
+| 5 | Día trescientos sesenta y cinco. La misma ropa. Un año de arriendo. El mismo andén. | Wide, el local intacto, el esqueleto sentado en el mostrador |
+| 6 | Hasta que un octubre te montas en un bus para Medellín. | Contrapicado, el esqueleto subiendo al bus con una maleta |
+| 7 | Feria Effix. Trescientas cincuenta empresas y doscientos ponentes que viven de vender por internet. | Establishing del recinto, el esqueleto pequeño entre stands |
+| 8 | Vuelves con la tienda montada y con quién te despache. Compra tu pasaporte en feriaeffix punto com. | Hero shot: el esqueleto entregando cajas rotuladas a un mensajero |
+
+Texto corrido para ElevenLabs:
+
+```
+¿Qué pasa si tu ropa nunca sale de la vitrina? Día uno. Cuelgas la colección nueva. Se ve hermosa. La ve el que pasa por el frente. Día treinta. Llovió tres sábados. La colección sigue completa. Día noventa. Bajas los precios. Ahora la ve el que pasa por el frente, más barata. Día trescientos sesenta y cinco. La misma ropa. Un año de arriendo. El mismo andén. Hasta que un octubre te montas en un bus para Medellín. Feria Effix. Trescientas cincuenta empresas y doscientos ponentes que viven de vender por internet. Vuelves con la tienda montada y con quién te despache. Compra tu pasaporte en feriaeffix punto com.
+```
+
+**Producción:** imagen HÉROE primero; las otras siete referencian la héroe,
+nunca la anterior. Cero texto en la generación — los overlays se ponen en
+edición. Kling 2.1, un clip por línea, 5s.
+**Costo estimado:** ~$2,90 (8 clips $2,24 · imágenes $0,64)
+
+---
+
+## ESTILO PIXAR 3D — "Doña Clara" · 60s
+
+Sin cambios: es el guión registrado más arriba en esta misma fecha (micro-
+situación de 12 beats, hook A del banco, `codas` de callout y fechas). Se
+mantiene como el guión Pixar de este nicho.
+
+Resumen: `Llovió el sábado, no entró nadie, y el mes se te cayó.` → callout →
+síntoma → reacción → explicación fallida → **pero** → causa raíz → mecanismo →
+fechas → prueba → visualización → CTA → defecto → `Porque la próxima venta no la
+va a hacer la vitrina.`
+
+---
+
+## ESTILO ANIMADO 2D — "La acera" · 38s
+
+**Formato:** diálogo a dos voces, cartoon 2D plano, línea gruesa y color plano
+**Estructura:** una sola escena continua en la acera entre dos locales vecinos.
+No hay narrador: la venta la hace el diálogo. El espectador se reconoce en Rosa.
+**Personajes:**
+- **ROSA**, cincuenta y tantos, dueña del almacén de ropa. Vende bien, de mostrador.
+- **MARCE**, cuarenta y tantos, la vecina de local. Vende lo mismo y despacha a
+  todo el país. No es una gurú: es la de al lado.
+
+| # | Quién | Línea | Escena |
+|---|---|---|---|
+| 1 | Rosa | Llovió otra vez. Hoy no entró nadie. | Rosa en la puerta, mirando la acera mojada |
+| 2 | Marce | A mí tampoco entró nadie. Y despaché dieciocho. | Marce apilando cajas en el andén |
+| 3 | Rosa | ¿Dieciocho? ¿A quién? | Rosa se acerca, cambia la postura |
+| 4 | Marce | A gente que no conozco. De Pereira, de Cúcuta, de Neiva. | Insert: tres cajas con tres direcciones distintas |
+| 5 | Rosa | Y eso cómo se hace. | Close-up de Rosa, la pregunta que abre todo |
+| 6 | Marce | Yo tampoco sabía. Lo aprendí en la feria. | Marce se encoge de hombros, sin pose de experta |
+| 7 | Marce | Feria Effix, dieciséis al dieciocho de octubre, Plaza Mayor. Trescientas cincuenta empresas. | Corte al recinto, dos segundos, y vuelta a la acera |
+| 8 | Rosa | ¿Y sirve para ropa? | Rosa mira su propia vitrina |
+| 9 | Marce | Sirve para lo que vendas. | Marce cerrando su camión |
+| 10 | Voz | Compra tu pasaporte en feriaeffix punto com. Te toma un minuto. | Cierre de marca sobre la acera |
+| 11 | Rosa | Mañana no espero a que llueva. | Rosa entra a su local, mira la ropa distinto |
+
+**Producción:** dos hojas de personaje (Rosa y Marce) más una del local. Estilo
+2D plano: contorno grueso, sombras de dos tonos, fondo con textura de papel.
+El diálogo se graba con **dos voces distintas** de ElevenLabs, no una.
+**Costo estimado:** ~$3,60 (11 clips $3,08 · hojas de personaje $0,24 · dos
+voces $0,20)
+**Riesgo:** el 2D plano con Kling tiende a "engordar" el trazo entre clips. Se
+mitiga con la hoja de personaje como referencia en los once y trazo declarado
+en el prompt (grosor constante, sin degradados).
+
+---
+
+Los tres siguen en borrador. Ninguno producido.
