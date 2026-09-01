@@ -406,7 +406,7 @@ nuevos. Ninguno comparte una línea con otro.
 
 ---
 
-## ESTILO SKELETON — "Un año en la vitrina" · 40s
+## ESTILO SKELETON — "Un año en la vitrina" · 44s  ✅ PRODUCIDO (2026-09-01)
 
 **Formato:** skeleton ad (skill `skeleton-ads`) · narración en segunda persona
 **Ángulo:** costo de la inacción + escalada de tiempo. El producto no se usa: se
@@ -416,30 +416,40 @@ deja de usar, y el precio de eso se ve crecer día a día.
 **Personaje:** el esqueleto comerciante, Bare-Bones Cinematic. Va **sin ropa**
 rodeado de ropa que nadie compra — la ironía es el concepto: tiene el producto
 encima y no le sirve de nada mientras dependa de quien pase por el frente.
-**Character Bible:** el bloque Bare-Bones Cinematic, verbatim en los 8 prompts,
+**Character Bible:** el bloque Bare-Bones Cinematic, verbatim en los 9 prompts,
 con `[THEME]` = almacén de ropa de barrio colombiano y palette cálida desaturada.
+**Registro:** voseo paisa — es el cambio que aprobó Alexander sobre el borrador
+en tuteo: `colgás`, `le bajás`, `te montás`, `volvés`, `comprá`, `completica`.
 
-| # | VO | Escena |
-|---|---|---|
-| 1 | ¿Qué pasa si tu ropa nunca sale de la vitrina? | Wide del local desde la acera, el esqueleto acomodando un maniquí |
-| 2 | Día uno. Cuelgas la colección nueva. Se ve hermosa. La ve el que pasa por el frente. | Medium, orgulloso, colgando ropa nueva |
-| 3 | Día treinta. Llovió tres sábados. La colección sigue completa. | El esqueleto mirando la lluvia por el vidrio, brazos cruzados |
-| 4 | Día noventa. Bajas los precios. Ahora la ve el que pasa por el frente, más barata. | Close-up de manos huesudas escribiendo un cartel de rebaja |
-| 5 | Día trescientos sesenta y cinco. La misma ropa. Un año de arriendo. El mismo andén. | Wide, el local intacto, el esqueleto sentado en el mostrador |
-| 6 | Hasta que un octubre te montas en un bus para Medellín. | Contrapicado, el esqueleto subiendo al bus con una maleta |
-| 7 | Feria Effix. Trescientas cincuenta empresas y doscientos ponentes que viven de vender por internet. | Establishing del recinto, el esqueleto pequeño entre stands |
-| 8 | Vuelves con la tienda montada y con quién te despache. Compra tu pasaporte en feriaeffix punto com. | Hero shot: el esqueleto entregando cajas rotuladas a un mensajero |
+| # | VO | Escena | Overlay |
+|---|---|---|---|
+| 1 | ¿Y si tu ropa nunca sale de esa vitrina, qué? | Wide del local desde la acera, el esqueleto acomodando un maniquí | ¿Y si nunca sale de ahí? |
+| 2 | Día uno: colgás la colección nueva. Quedó divina. La ve… el que pasa por el frente. | Medium, orgulloso, colgando ropa nueva → el rack lleno y él mirando la puerta vacía | Día 1 |
+| 3 | Día treinta: llovió tres sábados seguidos. La colección sigue completica. | El esqueleto mirando la lluvia por el vidrio, brazos cruzados | Día 30 |
+| 4 | Día noventa: le bajás el precio. Ahora la ve el mismo que pasa por el frente, pero más barata. | Close-up de manos huesudas amarrando una etiqueta roja → el rack entero con etiquetas | Día 90 |
+| 5 | Día trescientos sesenta y cinco: la misma ropa, un año de arriendo, el mismo andén. | Wide, el local intacto, el esqueleto sentado en el mostrador | Día 365 |
+| 6 | Hasta que un octubre te montás en un bus pa' Medellín. | Contrapicado subiendo al bus → el bus en la carretera de montaña al amanecer | Un octubre |
+| 7 | Feria Effix. Trescientas cincuenta empresas y doscientos ponentes que viven de vender por internet. | Establishing del recinto, el esqueleto pequeño entre stands | FERIA EFFIX · 350 empresas |
+| 8 | Y volvés con la tienda montada y con quién te la despache. | Entregando cajas a un mensajero → el mensajero arrancando en la moto | Con quién te la despache |
+| 9 | Comprá tu pasaporte en feriaeffix punto com. | Hero final: el esqueleto tras el mostrador con el celular y las cajas listas | feriaeffix.com |
 
 Texto corrido para ElevenLabs:
 
 ```
-¿Qué pasa si tu ropa nunca sale de la vitrina? Día uno. Cuelgas la colección nueva. Se ve hermosa. La ve el que pasa por el frente. Día treinta. Llovió tres sábados. La colección sigue completa. Día noventa. Bajas los precios. Ahora la ve el que pasa por el frente, más barata. Día trescientos sesenta y cinco. La misma ropa. Un año de arriendo. El mismo andén. Hasta que un octubre te montas en un bus para Medellín. Feria Effix. Trescientas cincuenta empresas y doscientos ponentes que viven de vender por internet. Vuelves con la tienda montada y con quién te despache. Compra tu pasaporte en feriaeffix punto com.
+¿Y si tu ropa nunca sale de esa vitrina, qué? Día uno: colgás la colección nueva. Quedó divina. La ve… el que pasa por el frente. Día treinta: llovió tres sábados seguidos. La colección sigue completica. Día noventa: le bajás el precio. Ahora la ve el mismo que pasa por el frente, pero más barata. Día trescientos sesenta y cinco: la misma ropa, un año de arriendo, el mismo andén. Hasta que un octubre te montás en un bus pa' Medellín. Feria Effix. Trescientas cincuenta empresas y doscientos ponentes que viven de vender por internet. Y volvés con la tienda montada y con quién te la despache. Comprá tu pasaporte en feriaeffix punto com.
 ```
 
-**Producción:** imagen HÉROE primero; las otras siete referencian la héroe,
-nunca la anterior. Cero texto en la generación — los overlays se ponen en
-edición. Kling 2.1, un clip por línea, 5s.
-**Costo estimado:** ~$2,90 (8 clips $2,24 · imágenes $0,64)
+**Producción:** audio primero — la locución real (41,0s en 9 mp3, voz *Medellin ·
+Conversational and Intense*) fijó la duración de cada clip. Imagen HÉROE
+primero; las otras trece referencian la héroe, nunca la anterior. Cuatro beats
+(2, 4, 6, 8) llevan frame inicial **y** final porque cambian de estado dentro
+del plano. Cero texto en la generación: los nueve overlays se ponen en montaje.
+Kling o1 standard, un clip por beat, de 3 a 7s según su frase.
+**Archivos:** guión `scripts/guiones/effix_skeleton_tienda-ropa-un-ano-en-la-vitrina_20260901_aprobado.json`
+· corrida `scripts/_producir_skeleton_vitrina.py` · render
+`assets/renders/EFFIX-tienda-ropa-skeleton-Un-ano-en-la-vitrina.mp4`
+**Costo real:** ~$5,20 (9 clips Kling o1 ~$3,80 · 14 imágenes $1,12 · música
+$0,20 · locución ~$0,10)
 
 ---
 
@@ -551,3 +561,84 @@ Los hooks se citaban como "#39", "#33", "#11". El `n` del banco **no es único**
 se repite en cada categoría (320 ganchos, 45 valores de `n`), así que un número
 suelto identifica siete ganchos distintos. Corregido a `categoría#n` acá y en el
 campo `banco` de `nichos_effix.py`.
+
+---
+
+## 2026-09-01 — ✅ PRODUCIDO · `tienda_ropa` · Pixar "La venta que no fue" · 46s
+
+**Entregable:** `assets/renders/EFFIX-tienda-ropa-pixar-La-venta-que-no-fue.mp4`
+45,98s · 1080x1920 · 30 MB · h264 + aac
+**Guión:** `scripts/guiones/effix_tienda-ropa_pixar-v2_APROBADO.json`
+**Script de corrida:** `scripts/_producir_tienda_ropa_pixar.py` (hero · escenas · clips · montaje)
+
+Registro tuteo colombiano, sin voseo y sin "parce" — Alexander editó el guión y
+pidió quitarlo. Fechas: 16 al 18 de octubre.
+
+### El audio mandó, y cambió el plan
+La estimación de escritorio daba 52,4s de locución; el mp3 real dio **43,3s**.
+Un 21% de diferencia, porque las 2,96 palabras/segundo del motor se midieron con
+`ELEVENLABS_SPEED=0.83` y el `.env` está en 1.1. Con la estimación se habrían
+comprado once clips de 5s (55s) para 43s de voz: doce segundos pagados y tirados.
+
+### Keyframes y el modelo
+Kling 2.1 standard **no acepta frame final** (su schema solo tiene `image_url`).
+Se cambió a **`fal-ai/kling-video/o1/standard/image-to-video`**, que admite
+`start_image_url` + `end_image_url` y duraciones enteras de 3 a 10s.
+
+⚠️ **Con solo frame inicial, Kling O1 acepta únicamente 5 o 10 segundos.** Las
+escenas 7, 8 y 9 (4s, 3s, 4s, sin end) fallaron con
+`Duration only support 5 or 10 seconds when no refer image`. Se piden de 5s y el
+montaje las recorta con `-t` a su duración real.
+
+Siete de las diez escenas van encadenadas: el frame final de una es el inicial de
+la siguiente dentro de cada bloque (Neiva 1→2→3, el almacén 4→5, la feria 6, el
+cierre 10). Por eso son 15 imágenes y no 20.
+
+### Los dos errores de continuidad que hubo que pagar dos veces
+1. **La cara que no debía verse.** La 07 salió con el rostro de la dueña en el
+   cuadro. El guión dice que nunca se le ve: el ad no la muestra porque la dueña
+   es quien está viendo el ad. Se regeneró pidiendo el recorte explícito a la
+   altura de las muñecas.
+2. **Milena dentro de la feria.** La 10 la puso en primer plano en el pabellón.
+   Ella es la clienta de Neiva y no va a la feria — rompía la narrativa entera.
+   Causa: el prompt de `/edit` pedía "la misma mujer donde aparezca", y el modelo
+   la metió donde no debía. Se resolvió diciendo explícitamente que NO aparece.
+3. **El morphing del cierre.** La escena 10 tenía frame inicial con Milena
+   arrodillada y blusa coral, y final de pie con la blusa mostaza puesta. Kling no
+   puede interpolar un cambio de vestuario: salió un morphing incómodo y, encima,
+   con cara triste en el momento de recompensa del ad. Se rehízo con la misma
+   postura y la misma ropa — solo levanta la blusa y se ríe.
+
+**Regla que queda:** entre dos keyframes el personaje puede moverse, no cambiarse
+de ropa. Si cambia el vestuario, son dos escenas distintas.
+
+### Costo real: $6,32
+
+| Concepto | USD |
+|---|---|
+| Voz ElevenLabs (14 tomas, 794 caracteres) | 0,08 |
+| Música Stable Audio 3 small (48s instrumental) | 0,02 |
+| 20 imágenes nano-banana-2 (15 + 5 regeneradas) | 1,60 |
+| 55s de video Kling O1 (46s usados) | 4,62 |
+| **Total** | **6,32** |
+
+Presupuestado: $5,26. El sobrecosto de $1,06 es enteramente de las cinco
+regeneraciones y de los nueve segundos de clip que Kling obliga a comprar cuando
+no hay frame final. Los tres clips que fallaron por duración inválida no se
+cobraron.
+
+La música salió por **$0,02** con Stable Audio 3 small, no los $0,20
+presupuestados con MiniMax: para una cama instrumental de fondo no hace falta un
+modelo de canción.
+
+### Overlays
+Uno por escena, Montserrat Black con contorno, quemados en el montaje (nunca en
+la generación). La marca aparece completa —"FERIA EFFIX"— en el cierre, y
+"16-18 oct · Plaza Mayor" y "feriaeffix.com" en los beats de logística.
+
+### Pendiente
+- Las fotos reales de la 5ª edición (`referencias/esteticas/feria-real/`) no se
+  usaron: los escenarios de feria se generaron en Pixar. Sigue abierto el permiso
+  de imagen para usarlas en pauta.
+- Faltan por producir los otros dos guiones de la tanda: el skeleton y el
+  animado 2D.
