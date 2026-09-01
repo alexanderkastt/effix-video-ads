@@ -406,7 +406,7 @@ nuevos. Ninguno comparte una línea con otro.
 
 ---
 
-## ESTILO SKELETON — "Un año en la vitrina" · 44s  ✅ PRODUCIDO (2026-09-01)
+## ESTILO SKELETON — "Un año en la vitrina" · 47s  ✅ PRODUCIDO (2026-09-01)
 
 **Formato:** skeleton ad (skill `skeleton-ads`) · narración en segunda persona
 **Ángulo:** costo de la inacción + escalada de tiempo. El producto no se usa: se
@@ -439,17 +439,23 @@ Texto corrido para ElevenLabs:
 ¿Y si tu ropa nunca sale de esa vitrina, qué? Día uno: colgás la colección nueva. Quedó divina. La ve… el que pasa por el frente. Día treinta: llovió tres sábados seguidos. La colección sigue completica. Día noventa: le bajás el precio. Ahora la ve el mismo que pasa por el frente, pero más barata. Día trescientos sesenta y cinco: la misma ropa, un año de arriendo, el mismo andén. Hasta que un octubre te montás en un bus pa' Medellín. Feria Effix. Trescientas cincuenta empresas y doscientos ponentes que viven de vender por internet. Y volvés con la tienda montada y con quién te la despache. Comprá tu pasaporte en feriaeffix punto com.
 ```
 
-**Producción:** audio primero — la locución real (41,0s en 9 mp3, voz *Medellin ·
-Conversational and Intense*) fijó la duración de cada clip. Imagen HÉROE
-primero; las otras trece referencian la héroe, nunca la anterior. Cuatro beats
-(2, 4, 6, 8) llevan frame inicial **y** final porque cambian de estado dentro
-del plano. Cero texto en la generación: los nueve overlays se ponen en montaje.
-Kling o1 standard, un clip por beat, de 3 a 7s según su frase.
+**Producción:** audio primero — la locución real (44,1s en 9 mp3, voz masculina
+*Carlos Aguilar*) fijó la duración de cada clip. Imagen HÉROE primero; las
+otras dieciséis referencian la héroe, nunca la anterior. Siete de los nueve
+beats llevan frame inicial **y** final: los cuatro que cambian de estado dentro
+del plano (2, 4, 6, 8) y otros tres por una restricción del modelo — **Kling o1
+sólo acepta 5 o 10 segundos cuando el clip no lleva frame final**, así que la
+frase que no cabe en cinco segundos necesita keyframe, no un clip de diez
+pagado a medias. Cero texto en la generación: los nueve overlays van en montaje.
+**Voz:** el primer corte salió con voz femenina y Alexander la pidió masculina.
+Rehacer la locución movió las duraciones, y por eso el montaje ahora estira un
+plano hasta un 12% si la frase creció — por debajo de eso no se nota y evita
+repagar el clip.
 **Archivos:** guión `scripts/guiones/effix_skeleton_tienda-ropa-un-ano-en-la-vitrina_20260901_aprobado.json`
 · corrida `scripts/_producir_skeleton_vitrina.py` · render
 `assets/renders/EFFIX-tienda-ropa-skeleton-Un-ano-en-la-vitrina.mp4`
-**Costo real:** ~$5,20 (9 clips Kling o1 ~$3,80 · 14 imágenes $1,12 · música
-$0,20 · locución ~$0,10)
+**Costo real:** ~$6,30 (9 clips Kling o1, 54s, ~$4,54 · 17 imágenes $1,36 ·
+música $0,20 · locución ~$0,20 en dos corridas)
 
 ---
 
@@ -501,7 +507,7 @@ en el prompt (grosor constante, sin degradados).
 
 ---
 
-Los tres siguen en borrador. Ninguno producido.
+El skeleton y el Pixar siguen en borrador. **El animado 2D se produjo el 2026-09-01** — ver el registro al final del documento.
 
 ---
 
@@ -642,3 +648,98 @@ la generación). La marca aparece completa —"FERIA EFFIX"— en el cierre, y
   de imagen para usarlas en pauta.
 - Faltan por producir los otros dos guiones de la tanda: el skeleton y el
   animado 2D.
+
+---
+
+## 2026-09-01 — `tienda_ropa` · ANIMADO 2D — "La acera" · **PRODUCIDO** · 36s
+
+`assets/renders/tienda-ropa-2d-la-acera.mp4` · 1080×1920 · 24 fps · 35,96s
+Guion: `scripts/guiones/effix_animado2d_tienda-ropa-la-acera_20260901_aprobado.json`
+Corrida: `scripts/_producir_animado2d_la_acera.py` (`voz · hojas · escenas · clips · lipsync · montaje`)
+
+Diálogo a dos voces, sin narrador. Rosa vende de mostrador; Marce, la vecina de
+local, despacha a todo el país. Quien convence no es un gurú: es la de al lado.
+
+| # | t | Quién | Voz | Línea |
+|---|---|---|---|---|
+| 1 | 0,0 | ROSA | Medellín | Otra vez llovió. Hoy no me entró ni un alma. |
+| 2 | 2,7 | MARCE | Valentina | A mí tampoco me entró nadie… y despaché dieciocho blusas. |
+| 3 | 6,8 | ROSA | Medellín | ¿Cómo así que dieciocho? ¿A quién? |
+| 4 | 9,3 | MARCE | Valentina | A gente que ni conozco. De Pereira, de Cúcuta, de Neiva. |
+| 5 | 14,5 | ROSA | Medellín | ¿Y eso cómo se hace? |
+| 6 | 16,2 | MARCE | Valentina | Yo tampoco sabía. Lo aprendí en la feria. |
+| 7 | 20,1 | ROSA | Medellín | ¿Cuál feria? |
+| 8 | 21,1 | MARCE (off) | Valentina | Feria Effix, del dieciséis al dieciocho de octubre, en Plaza Mayor. |
+| 9 | 25,7 | ROSA | Medellín | ¿Y eso sirve pa ropa? |
+| 10 | 27,5 | MARCE | Valentina | Eso sirve pa lo que vos vendás. |
+| 11 | 29,5 | VOZ MARCA | Effi | Compra tu pasaporte en feriaeffix punto com. Te toma un minuto. |
+| 12 | 33,3 | ROSA | Medellín | Mañana no me quedo esperando a que escampe. |
+
+**Reparto de voces:** Rosa con `cercana_medellin`, Marce con `amiga`, el CTA con
+`marca_femenina`. El contexto de ElevenLabs (`previous_text`/`next_text`) se pasa
+sólo entre líneas del mismo hablante: darle a Rosa la frase de Marce la hace
+imitar su entonación y el diálogo deja de sonar a dos personas.
+
+**Dirección:** planos alternados, un hablante por clip — es lo único que el
+lip-sync sincroniza bien, porque los modelos mueven una sola cara por video. El
+beat 8 corta al recinto de la feria y la línea va en off; el 11 es un plano
+abierto de los dos locales, con aire arriba para el logo.
+
+### Lo que este ad le enseñó al motor
+
+- **Kling o1 no acepta cualquier duración.** El schema dice 3–10s, pero el
+  endpoint responde `Duration only support 5 or 10 seconds when no refer image`.
+  Con frame de referencia sí acepta los enteros intermedios, así que en un plano
+  de diálogo **el frame final es el mismo inicial**: la cara actúa y vuelve al
+  encuadre. Eso desbloquea clips de 3s (una línea de 0,74s no paga 5s), no cuesta
+  una imagen extra y de paso impide que el plano derive.
+- **`sync_mode=cut_off` devuelve el clip cortado a la voz.** Pedirle después un
+  cuarto de segundo más de video deja el video más corto que su audio y el
+  diálogo se desfasa. El aire entre réplicas se saca con `tpad=stop_mode=clone`:
+  la cara sostiene el gesto, que es lo que hace en una conversación real.
+- **La bible con escenario adentro contamina los planos que no son de ese
+  escenario.** La primera feria salió con las fachadas de la acera pegadas en el
+  tercio inferior. Para los planos sin personaje viaja sólo la mitad de estilo
+  de la bible, cortada en `Setting:`.
+- **Verificar la locución con whisper antes de animar.** Dos defectos que no se
+  ven en el texto: la línea 8 dijo "Plaza **Mayores**" y la 12 salió con un
+  tartamudeo ("a que **la que** escampe"). Las dos se regeneraron con la misma
+  ortografía —nunca deformando la marca— y se comprobaron transcribiendo. Cuesta
+  centavos y evita descubrirlo con el clip y el lip-sync ya pagados.
+
+**Costo real:** ~$5,4 · voz $0,06 · 16 imágenes $0,62 · 53s de clips $4,45 ·
+lip-sync 13 pasadas $0,25 · whisper $0,04
+
+### 2026-09-01 · Cambio de voz — "Medellin" reemplaza a Sara Montoya
+
+Alexander descartó la voz con la que se locutó la primera versión: era
+`Sara Montoya - clonación #5`, la clonada que estaba fijada en
+`ELEVENLABS_VOICE_ID` del `.env`. El script cayó ahí por no pasarle `perfil`.
+
+Se probaron seis voces profesionales del catálogo con la misma frase
+(`assets/audio/pruebas-voz/`, $0,09) y quedó **"Medellin - Conversational and
+Intense"**, latina y conversacional en vez de locutora. "Malena M" está
+deshabilitada por su dueño y "Valentina" arrastra el acento español que ya se
+había detectado en el ad de LANA.
+
+También cambiaron los ajustes: `stability` de 0.28 a **0.45** y `speed` de 1.1 a
+**1.0**. Esa combinación vieja atropellaba la frase y era la mitad de la
+sensación robótica.
+
+**La locución pasó de 43,3s a 53,9s** — casi diez segundos más, por la velocidad
+y por la voz. Como los clips ya estaban comprados para 46s, el montaje los
+ralentiza un **x1,179** con `setpts` en vez de regenerar video: en planos de
+push-in lento no se nota, y regenerar habría costado otros $3,80. Es la misma
+maniobra que en el ad de LANA, al revés (allá se aceleró 1.4x).
+
+El montaje también cambió de criterio: antes alineaba cada frase al arranque de
+su escena y rellenaba con silencio; ahora la voz corre de largo con respiros de
+0,12s y la imagen corta por debajo. La frase ya no se parte donde corta el video.
+
+⚠️ Detalle de ffmpeg que costó dos montajes: **`-t` va antes del `-i`**. Después
+del `-i` recorta la salida ya ralentizada y anula el estirado — el video seguía
+saliendo de 46s.
+
+**Entregable final:** 53,85s · 1080x1920 · 33 MB
+**Costo acumulado del ad: $6,49** (los $6,32 de producción más $0,17 de las
+pruebas de voz y la relocución).

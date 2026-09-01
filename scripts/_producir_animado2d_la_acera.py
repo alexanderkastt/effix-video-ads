@@ -166,6 +166,19 @@ def _escena(linea: dict, sufijo: str = "base", prompt_key: str = "prompt_imagen"
     destino = CARPETA / f"clip_{n:02d}_{sufijo}.png"
     if destino.exists():
         return destino
+    # El plano del recinto no lleva a Rosa ni a Marce: pasarle las hojas de
+    # personaje como referencia mete a las dos vecinas dentro de la feria.
+    if linea.get("sin_refs"):
+        # …y la bible describe la acera como escenario, así que entera mete los
+        # locales dentro del recinto. Sólo viaja la mitad de estilo.
+        estilo = G["bible"].split("Setting:")[0].strip() + " Vertical 9:16 composition."
+        salida = fal_client.subscribe(
+            MODELO_IMG,
+            {"prompt": f"{estilo} {linea[prompt_key]}{SIN_TEXTO}",
+             "aspect_ratio": "9:16", "resolution": "1K", "num_images": 1},
+        )
+        return _descargar(_url_de(salida, "images", "image"), destino)
+
     prompt = (
         "Keep the exact same character(s) from the reference image(s) — identical "
         "face, hair, clothing and line weight. "
@@ -294,8 +307,14 @@ def fase_montaje() -> Path:
         dur = duraciones[n] + 0.25  # el aire mínimo entre réplicas
         entradas += ["-i", str(video), "-i", str(VOZ_DIR / f"linea_{n:02d}.mp3")]
         vi, ai = i * 2, i * 2 + 1
+        # El lip-sync devuelve el clip cortado a la voz (`sync_mode=cut_off`),
+        # así que pedirle un cuarto de segundo más deja el video más corto que
+        # su audio y el diálogo se desfasa. `tpad` clona el último frame: el
+        # aire entre réplicas es la cara sosteniendo el gesto, que es lo que
+        # hace en una conversación real.
         filtros.append(
-            f"[{vi}:v]trim=0:{dur:.2f},setpts=PTS-STARTPTS,"
+            f"[{vi}:v]tpad=stop_mode=clone:stop_duration=2,"
+            f"trim=0:{dur:.2f},setpts=PTS-STARTPTS,"
             f"scale=1080:1920:force_original_aspect_ratio=increase,"
             f"crop=1080:1920,fps=24[v{i}]")
         filtros.append(f"[{ai}:a]apad=whole_dur={dur:.2f},atrim=0:{dur:.2f},"

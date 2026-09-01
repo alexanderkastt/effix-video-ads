@@ -8,7 +8,7 @@ Fases, en este orden y por separado, porque cada una cuesta:
     python scripts/_producir_tienda_ropa_pixar.py montaje   # gratis
 
 El audio ya está hecho: `assets/audio/tienda-ropa-pixar-v2/`. Su duración real
-(43,3s) es la que fijó las diez escenas del guión aprobado.
+(53,9s con la voz Medellin) es la que fija el ritmo del montaje.
 """
 import sys, io, json
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
@@ -271,25 +271,39 @@ def fase_montaje():
     salida = Path("assets/renders"); salida.mkdir(parents=True, exist_ok=True)
     tmp = CARPETA / "montaje"; tmp.mkdir(exist_ok=True)
 
-    # 1. Voz alineada: cada escena arranca con su frase y el resto es silencio,
-    #    para que la imagen y la palabra caigan juntas.
-    pistas = []
-    for e in g["escenas"]:
-        n, dur = e["escena"], e["duracion_s"]
-        trozos = [str(AUDIO / f"beat_{i:02d}.mp3") for i in e["frases"]]
-        lista = tmp / f"voz_{n:02d}.txt"
-        lista.write_text("".join(f"file '{Path(t).resolve().as_posix()}'\n" for t in trozos),
-                         encoding="utf-8")
-        pista = tmp / f"voz_{n:02d}.wav"
-        _ff("-f", "concat", "-safe", "0", "-i", str(lista),
-            "-af", f"apad=whole_dur={dur}", "-t", str(dur), "-ar", "44100", "-ac", "2", str(pista))
-        pistas.append(pista)
+    # 1. Voz corrida: las catorce frases una tras otra con una respiración corta
+    #    entre ellas. No se alinea frase a escena a propósito — la imagen corta
+    #    cada pocos segundos, la frase no, y eso es lo que suena a persona.
+    RESPIRO = 0.12
+    silencio = tmp / "respiro.wav"
+    _ff("-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-t", str(RESPIRO), str(silencio))
+
+    total_frases = sum(len(e["frases"]) for e in g["escenas"])
+    trozos = []
+    for i in range(1, total_frases + 1):
+        wav = tmp / f"f_{i:02d}.wav"
+        _ff("-i", str(AUDIO / f"beat_{i:02d}.mp3"), "-ar", "44100", "-ac", "2", str(wav))
+        trozos.append(wav)
+        if i < total_frases:
+            trozos.append(silencio)
 
     lista_voz = tmp / "voz.txt"
-    lista_voz.write_text("".join(f"file '{p.resolve().as_posix()}'\n" for p in pistas),
+    lista_voz.write_text("".join(f"file '{t.resolve().as_posix()}'\n" for t in trozos),
                          encoding="utf-8")
     voz = tmp / "voz_completa.wav"
     _ff("-f", "concat", "-safe", "0", "-i", str(lista_voz), "-c", "copy", str(voz))
+
+    # 2. El ritmo sale de comparar la voz real con el video ya comprado: los
+    #    clips se estiran lo justo para que la locución quepa entera. Regenerar
+    #    video cuesta dólares; ralentizar cuesta cero y en planos de push-in
+    #    lento no se nota.
+    dur_voz = float(subprocess.run(
+        ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+         "-of", "csv=p=0", str(voz)],
+        capture_output=True, text=True, check=True).stdout.strip())
+    dur_video = sum(e["duracion_s"] for e in g["escenas"])
+    factor = max(1.0, (dur_voz + 0.4) / dur_video)
+    print(f"voz {dur_voz:.1f}s · video {dur_video}s · ritmo x{factor:.3f}")
 
     # 2. Video: los clips en orden, normalizados al mismo formato
     normalizados = []
@@ -300,12 +314,15 @@ def fase_montaje():
             sys.exit(f"Falta {origen}. Corre la fase `clips`.")
         destino = tmp / f"norm_{n:02d}.mp4"
         texto = OVERLAYS[n].replace("'", "").replace(":", r"\:")
+        estirado = e["duracion_s"] * factor
         drawtext = (f"drawtext=fontfile='{FUENTE}':text='{texto}':"
                     f"fontcolor=white:fontsize=52:borderw=6:bordercolor=black@0.85:"
-                    f"x=(w-text_w)/2:y=h-320:enable='between(t,0.4,{e['duracion_s']-0.3})'")
-        _ff("-i", str(origen), "-t", str(e["duracion_s"]),
+                    f"x=(w-text_w)/2:y=h-320:enable='between(t,0.4,{estirado - 0.3:.2f})'")
+        # El -t va ANTES del -i: recorta el clip de origen. Después del -i
+        # recortaría la salida ya ralentizada y anularía el estirado.
+        _ff("-t", str(e["duracion_s"]), "-i", str(origen),
             "-vf", f"scale=1080:1920:force_original_aspect_ratio=increase,"
-            f"crop=1080:1920,{drawtext},fps=24",
+            f"crop=1080:1920,setpts={factor:.4f}*PTS,{drawtext},fps=24",
             "-an", "-c:v", "libx264", "-preset", "medium", "-crf", "20", str(destino))
         normalizados.append(destino)
 
@@ -321,7 +338,7 @@ def fase_montaje():
     if musica.exists():
         _ff("-i", str(mudo), "-i", str(voz), "-i", str(musica),
             "-filter_complex",
-            "[2:a]volume=0.13,afade=t=out:st=42:d=4[m];[1:a][m]amix=inputs=2:duration=first[a]",
+            "[2:a]volume=0.13,afade=t=out:st=48:d=4[m];[1:a][m]amix=inputs=2:duration=first[a]",
             "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
             "-shortest", str(final))
     else:

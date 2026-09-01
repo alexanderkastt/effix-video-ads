@@ -8,7 +8,8 @@
     "fal-ai/kling-video/v2.1/pro/image-to-video": 0.098,
     "fal-ai/kling-video/v2.5-turbo/pro/image-to-video": 0.07,
     "fal-ai/hailuo-ai/i2v-01": 0.0,
-    "fal-ai/flux/schnell": 0.0
+    "fal-ai/flux/schnell": 0.0,
+    "fal-ai/kling-video/o1/standard/image-to-video": 0.084
   },
   "elevenlabs": {
     "_unidad": "USD por cada 1000 caracteres — tarifa vía fal, no la del plan propio",
@@ -19,7 +20,7 @@
     "_unidad": "USD por canción generada — reemplazado por stable-audio-25",
     "cancion": 0.2
   },
-  "verificado_el": "2026-08-30",
+  "verificado_el": "2026-09-01",
   "fal_ai_por_unidad": {
     "_unidad": "cada uno con su propia unidad, ver sufijo",
     "fal-ai/nano-banana-2__por_imagen": 0.08,
@@ -30,5 +31,18 @@
     "fal-ai/stable-audio-25/text-to-audio__por_pista": 0.2,
     "fal-ai/elevenlabs/music__por_minuto": 0.6,
     "fal-ai/elevenlabs/sound-effects/v2__por_segundo": 0.002
+  },
+  "presupuesto": {
+    "_unidad": "USD por video terminado, todo incluido (video, imágenes, voz, música)",
+    "objetivo_promedio": 5.0,
+    "tope_por_video": 6.0,
+    "regla": "Cada ad se planifica para caber en 5 USD en promedio. Un video puede llegar a 6 si el guión lo justifica, siempre que otro quede por debajo. Por encima del tope hay que avisar y proponer el recorte ANTES de producir: menos clips, clips más cortos o menos keyframes.",
+    "palancas": [
+      "menos clips: cada segundo de Kling o1 standard cuesta 0.084 USD",
+      "sin frame final Kling sólo vende 5 o 10s — una frase de 6s sin keyframe se factura como 10s; con keyframe se paga a su medida",
+      "las imágenes son baratas (0.08 c/u): un keyframe final cuesta menos que los segundos que ahorra",
+      "la música son 0.20 fijos por pista, no por minuto"
+    ],
+    "fijado_el": "2026-09-01"
   }
 }

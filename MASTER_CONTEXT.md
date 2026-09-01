@@ -50,6 +50,34 @@ Tiempo estimado por ad: 45-90 minutos
 4. Agrega audio con ElevenLabs
 5. Captions con CapCut / HyperFrames
 
+## 💵 Presupuesto por video — regla fija (2026-09-01)
+
+**Cada ad se planifica para caber en 5 USD en promedio.** Todo incluido: video,
+imágenes, locución y música. Tope por video: **6 USD**, y sólo si el guión lo
+justifica y otro ad de la tanda queda por debajo. Por encima del tope se avisa
+y se propone el recorte **antes** de gastar, nunca después.
+
+El objetivo vive en `config/costos.json` → `presupuesto`, y `cost_estimator.py`
+lo aplica: `estimar()` devuelve el veredicto y `formatear()` lo imprime con ✅,
+⚠️ o 🛑. No bloquea la corrida — el que decide si un ad vale seis dólares es
+Alexander; lo que no puede pasar es que se entere cuando ya está pagado.
+
+Las imágenes **cuentan**: un ad de nueve planos con keyframes lleva diecisiete,
+y son 1,36 USD — la quinta parte del presupuesto. Pasar `n_imagenes` al estimar.
+
+**Palancas para bajar, en orden de rendimiento:**
+1. Menos segundos de video: es el 70% del costo (Kling o1 standard, 0,084 USD/s).
+2. Keyframe final donde la frase no cabe en 5s: **sin frame final Kling sólo
+   vende 5 o 10 segundos**, así que una línea de 6s sin keyframe se factura como
+   10s. La imagen extra cuesta 0,08 y ahorra cuatro segundos (0,34).
+3. Las imágenes son baratas frente al video: preferir un plano más corto y bien
+   encuadrado antes que un clip largo.
+4. La música son 0,20 fijos por pista, no por minuto: no se recorta por ahí.
+
+**Referencia real:** el skeleton "Un año en la vitrina" (47s, 9 clips, 17
+imágenes) costó 6,30 USD — se pasó del tope. Un ad de 6 clips de 5s con 8
+imágenes sale en 3,43.
+
 ## ⭐ MODELO MÁS ECONÓMICO: Kling 2.5 (medido 2026-08-28 en Magnific)
 
 Mismo trabajo — clip 9:16 con keyframes start+end encadenados:

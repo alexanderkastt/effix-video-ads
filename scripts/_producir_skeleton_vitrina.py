@@ -220,10 +220,14 @@ def fase_escenas() -> None:
 
 # ─────────────────────────────── clips ──────────────────────────────
 
-def _segundos(dur_audio: float) -> str:
-    """Kling o1 acepta 3..10 enteros. Medio segundo de aire para que el corte
-    no caiga encima de la última sílaba."""
-    return str(min(10, max(3, math.ceil(dur_audio + 0.5))))
+def _segundos(dur_audio: float, con_keyframe: bool) -> str:
+    """Con frame final Kling o1 acepta 3..10 enteros y el clip se paga a su
+    medida; sin él solo admite 5 o 10, así que la frase que no cabe en cinco
+    segundos necesita keyframe final — no un clip de diez pagado a medias."""
+    justo = math.ceil(dur_audio + 0.5)
+    if con_keyframe:
+        return str(min(10, max(3, justo)))
+    return "5" if justo <= 5 else "10"
 
 
 def _clip(beat: dict, duracion: float) -> tuple[int, str]:
@@ -232,12 +236,12 @@ def _clip(beat: dict, duracion: float) -> tuple[int, str]:
     if destino.exists():
         return n, "ya existía"
 
+    fin = CARPETA / f"clip_{n:02d}_fin.png"
     payload = {
         "start_image_url": _subir(CARPETA / f"clip_{n:02d}_base.png"),
         "prompt": beat["prompt_video"],
-        "duration": _segundos(duracion),
+        "duration": _segundos(duracion, fin.exists()),
     }
-    fin = CARPETA / f"clip_{n:02d}_fin.png"
     if fin.exists():
         payload["end_image_url"] = _subir(fin)
         payload["prompt"] = f"Animate the transition from @Image1 to @Image2. {beat['prompt_video']}"
@@ -297,6 +301,16 @@ def fase_montaje() -> Path:
         if not video.exists():
             sys.exit(f"Falta {video}. Corre la fase `clips`.")
         dur = duraciones[n] + 0.35  # el aire entre frases
+        # Si la frase quedó más larga que el clip pagado, se estira el plano en
+        # vez de regenerarlo: por debajo del 10% no se nota y no cuesta nada.
+        real = _duracion(video)
+        estirar = ""
+        if dur > real:
+            factor = dur / real
+            if factor > 1.12:
+                sys.exit(f"El clip {n:02d} dura {real}s y la frase pide {dur:.2f}s. "
+                         f"Estirarlo un {factor:.0%} se vería: regenéralo con más segundos.")
+            estirar = f"setpts=PTS*{factor:.4f},"
         texto = beat["overlay"].replace("'", "").replace(":", r"\:")
         drawtext = (f"drawtext=fontfile='{FUENTE}':text='{texto}':"
                     f"fontcolor=white:fontsize=58:borderw=6:bordercolor=black@0.85:"
@@ -304,7 +318,7 @@ def fase_montaje() -> Path:
         entradas += ["-i", str(video), "-i", str(AUDIO / f"beat_{n:02d}.mp3")]
         vi, ai = i * 2, i * 2 + 1
         filtros.append(
-            f"[{vi}:v]trim=0:{dur:.2f},setpts=PTS-STARTPTS,"
+            f"[{vi}:v]{estirar}trim=0:{dur:.2f},setpts=PTS-STARTPTS,"
             f"scale=1080:1920:force_original_aspect_ratio=increase,"
             f"crop=1080:1920,{drawtext},fps=24[v{i}]")
         filtros.append(f"[{ai}:a]apad=whole_dur={dur:.2f},atrim=0:{dur:.2f},"
