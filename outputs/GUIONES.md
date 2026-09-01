@@ -248,11 +248,15 @@ lo pone la geografía.
 
 ### Hooks — del banco de 320, filtrados por (problem, conversión)
 
+Se citan como `categoría#n`: el `n` del banco no es único, se repite en cada
+categoría (320 ganchos, 45 valores de `n`), así que el número solo no identifica
+un gancho.
+
 | Var | Banco | Hook |
 |---|---|---|
-| A | #39 `dolor_nombrado` | Llovió el sábado, no entró nadie, y el mes se te cayó. |
-| B | #33 `callout` | Si vives de que la gente pase por el frente de tu almacén, quédate. |
-| C | #11 `callout` | Tu ropa se vende bien. Pero solo a diez cuadras a la redonda. |
+| A | `dolor_nombrado#39` | Llovió el sábado, no entró nadie, y el mes se te cayó. |
+| B | `callout#33` | Si vives de que la gente pase por el frente de tu almacén, quédate. |
+| C | `callout#11` | Tu ropa se vende bien. Pero solo a diez cuadras a la redonda. |
 
 Los tres atacan el mismo techo desde ángulos distintos. El dolor del hook A se
 puede filmar —lluvia en el vidrio, acera vacía, ropa impecable que nadie vio—,
@@ -439,7 +443,7 @@ edición. Kling 2.1, un clip por línea, 5s.
 
 ---
 
-## ESTILO PIXAR 3D — "Doña Clara" · 60s
+## ESTILO PIXAR 3D — "Doña Clara" · 60s  ⚠️ REEMPLAZADO (ver 2026-09-01)
 
 Sin cambios: es el guión registrado más arriba en esta misma fecha (micro-
 situación de 12 beats, hook A del banco, `codas` de callout y fechas). Se
@@ -488,3 +492,62 @@ en el prompt (grosor constante, sin degradados).
 ---
 
 Los tres siguen en borrador. Ninguno producido.
+
+---
+
+## 2026-09-01 — `tienda_ropa` · ESTILO PIXAR v2 — "La venta que no fue" · 43s
+
+**Reemplaza a Doña Clara** como el guión Pixar de este nicho. Doña Clara queda
+archivada más arriba, sin producir: sirve como alternativa si se quiere el
+formato de micro-situación clásica.
+
+**Gancho base:** `dolor_nombrado#34` — "El cliente pregunta cuánto vale, le
+respondés, y no vuelve a escribir." Adaptado a la venta que se pierde por no
+tener canal.
+**Estructura:** tres actos, no doce beats. Acto 1 cuenta una venta real desde
+**la clienta**; el acto 2 la voltea contra el espectador; el acto 3 es el puente.
+**Personaje:** **MILENA**, treinta y cuatro, en Neiva, a diez horas de bus de la
+tienda. Pixar 3D, cálida, con el celular en la mano.
+
+**Decisión de dirección:** a la dueña del almacén **nunca se le ve la cara**. Se
+la ve de espaldas, fuera de foco, o solo las manos. El ad no muestra a la dueña
+porque la dueña es quien está viendo el ad.
+
+| # | t | Acto | Voz | Escena |
+|---|---|---|---|---|
+| 1 | 0–5 | Venta | Una mujer en Neiva vio tu blusa un martes, en una foto que le reenviaron. | Milena en su sala, la foto reenviada en el celular |
+| 2 | 5–8 | Venta | Le escribió a la tienda: ¿hacen envíos? | Close-up del mensaje escribiéndose |
+| 3 | 8–11 | Venta | Y ahí se acabó la conversación. | El chat sin respuesta, la luz del cuarto baja |
+| 4 | 11–16 | Venta | No porque no quisiera comprarla. Sino porque nadie le supo responder. | Milena deja el celular boca abajo |
+| 5 | 16–19 | Giro | Esa venta existió. **Pero** no fue tuya. | Corte seco al almacén, de noche, la vitrina encendida |
+| 6 | 19–25 | Giro | Y pasa todos los días, a diez cuadras de tu vitrina y a diez horas de bus. | Cámara sale del local hacia la calle, la ciudad detrás |
+| 7 | 25–30 | Puente | No te falta ropa ni clientas: te falta el camino entre las dos. | Manos de la dueña (sin rostro) doblando una blusa |
+| 8 | 30–35 | Puente | Ese camino lo arman las trescientas cincuenta empresas que van a la feria. | Establishing del recinto, pasillos llenos |
+| 9 | 35–39 | Puente | Feria Effix, dieciséis al dieciocho de octubre, en Plaza Mayor. | Fachada de Plaza Mayor |
+| 10 | 39–42 | Puente | Y doscientos ponentes que ya lo recorrieron. | Auditorio, gente tomando nota |
+| 11 | 42–47 | CTA | Compra tu pasaporte en feriaeffix punto com. Te toma un minuto. | Cierre de marca |
+| 12 | 47–52 | Loop | Y la próxima vez que alguien pregunte si haces envíos, tienes qué responder. | Milena abre una caja en Neiva. Sonríe |
+
+Texto corrido para ElevenLabs (126 palabras · 42,6s de locución):
+
+```
+Una mujer en Neiva vio tu blusa un martes, en una foto que le reenviaron. Le escribió a la tienda: ¿hacen envíos? Y ahí se acabó la conversación. No porque no quisiera comprarla. Sino porque nadie le supo responder. Esa venta existió. Pero no fue tuya. Y pasa todos los días, a diez cuadras de tu vitrina y a diez horas de bus. No te falta ropa ni clientas: te falta el camino entre las dos. Ese camino lo arman las trescientas cincuenta empresas que van a la feria. Feria Effix, dieciséis al dieciocho de octubre, en Plaza Mayor. Y doscientos ponentes que ya lo recorrieron. Compra tu pasaporte en feriaeffix punto com. Te toma un minuto. Y la próxima vez que alguien pregunte si haces envíos, tienes qué responder.
+```
+
+**Por qué es mejor que Doña Clara:** el dolor no se enumera, se **dramatiza**.
+El espectador ve la venta perdida antes de saber que era suya, así que la frase
+"pero no fue tuya" cae sobre una escena que ya vio, no sobre una afirmación. Y
+el loop cierra con la misma pregunta que lo abrió — "¿hacen envíos?" — que es
+literalmente la frase que el nicho recibe y no puede responder.
+
+**Producción:** dos hojas de personaje (Milena y las manos de la dueña) más el
+local y el recinto. Kling 2.1 std, 12 clips. La escena 12 usa a Milena de la
+hoja 1 para cerrar el círculo visual.
+**Costo estimado:** ~$4,20 (12 clips $3,36 · imágenes $0,72 · voz $0,10)
+
+### Corrección de registro
+
+Los hooks se citaban como "#39", "#33", "#11". El `n` del banco **no es único**:
+se repite en cada categoría (320 ganchos, 45 valores de `n`), así que un número
+suelto identifica siete ganchos distintos. Corregido a `categoría#n` acá y en el
+campo `banco` de `nichos_effix.py`.

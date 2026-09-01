@@ -283,8 +283,9 @@ NICHOS: dict[str, dict[str, Any]] = {
             "Sales sabiendo qué te falta",
             "La vitrina ya no vende sola",
         ],
-        # Los tres salen del banco de 320, filtrado por (problem, conversión):
-        # el 39 de dolor_nombrado y el 33 y el 11 de callout. Se pasaron de
+        # Los tres salen del banco de 320, filtrado por (problem, conversión).
+        # Se citan como categoría#n porque el `n` del banco NO es único: se
+        # repite en cada categoría (320 ganchos, 45 valores de n). Se pasaron de
         # voseo a colombiano y los corchetes se rellenaron con el hecho real
         # del micronicho: su facturación depende del clima y del andén.
         # Son tres dolores distintos del mismo techo, no tres versiones de uno.
@@ -292,19 +293,19 @@ NICHOS: dict[str, dict[str, Any]] = {
             {
                 "hablado": "Llovió el sábado, no entró nadie, y el mes se te cayó.",
                 "gatillos": ["dolor_nombrado", "auto_relevancia"],
-                "banco": 39,
+                "banco": "dolor_nombrado#39",
                 "overlay": "Llovió. Y no entró nadie",
             },
             {
                 "hablado": "Si vives de que la gente pase por el frente de tu almacén, quédate.",
                 "gatillos": ["callout", "auto_relevancia"],
-                "banco": 33,
+                "banco": "callout#33",
                 "overlay": "¿Vives del que pasa?",
             },
             {
                 "hablado": "Tu ropa se vende bien. Pero solo a diez cuadras a la redonda.",
                 "gatillos": ["interrupcion_patron", "dejar_de_ganar"],
-                "banco": 11,
+                "banco": "callout#11",
                 "overlay": "Vendes a diez cuadras",
             },
         ],
