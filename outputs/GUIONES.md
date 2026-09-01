@@ -163,3 +163,73 @@ Guion locutado v2 (56 palabras, 6 líneas):
 | 6 | 27.6s | Da el primer paso. El resto aparece. |
 
 Costo v2: **37 créditos** (solo la voz). Todo lo demás reutilizado o hecho con ffmpeg.
+
+---
+
+## 2026-08-30 — Feria Effix 2026 · Skeleton musical sync · Nicho `sin_arrancar` · 56s
+
+**Entregable:** `assets/renders/EFFIX-SKELETON-sin-arrancar-musical.mp4` — 56.2s · 720x1280 · 16 MB
+**Guión:** `scripts/guiones/effix_skeleton_sin-arrancar-v2-musical_20260830_215911_director.json`
+**Nicho nuevo:** `sin_arrancar` — el que lo intentó todo y no ha vendido (en `nichos_effix.py` + `narracion_effix.py`)
+**Ancla:** noventa días de tienda abierta y el único pedido lo hizo tu prima (vuelve 5 veces)
+
+### Por qué no repite al ad de LANA
+Mismo territorio (no logra vender online), **otro ángulo**: allá era narración
+emocional en plano-secuencia de crochet; aquí es una canción con progresión
+escalada en segunda persona sobre el arco cuarto cerrado → umbral → feria. Ni
+una línea de narración coincide.
+
+### Letra (MiniMax Music 2.6 · latin urban pop · 96 BPM)
+
+| Sección | Línea |
+|---|---|
+| Verso 1 | Tu tienda lleva noventa días abierta / Y el único pedido lo hizo tu prima |
+| Callout | Si vendes por internet y aún no llega un desconocido / Esto es para ti, treinta segundos |
+| Verso 2 | Publicas todos los días, cero ventas / Entonces dices que te falta pauta / Pusiste pauta, y el pedido, otra vez familiar |
+| Pre-coro | No te falta producto ni plata / Te falta que alguien que ya vendió te vea el negocio |
+| Coro | Feria Effix, dieciséis al dieciocho / Plaza Mayor, Medellín / Trescientas cincuenta empresas / Y el próximo pedido no es de tu prima |
+| Verso 3 | Doscientos ponentes que viven de vender por internet / Cinco ediciones, quien va una vez, vuelve |
+| Outro | Compra tu pasaporte, clic en el enlace / El próximo pedido no es de tu prima |
+
+El beat de **CALLOUT** entre MOMENTO y SÍNTOMA es nuevo: la estructura de 12
+beats de `guiones_effix.py` no lo trae y el ad tiene que nombrar a su audiencia
+en los primeros segundos.
+
+### Producción
+- **Canción:** `fal-ai/minimax-music/v2.6` ($0.15). Devuelve ~100s con intro larga;
+  el tramo cantado útil es 21.66→77.86 y es lo que se monta.
+- **Imágenes:** `fal-ai/nano-banana-2` (héroe) + `/edit` con la héroe como referencia
+  en las 13 escenas. Character Bible Bare-Bones Cinematic verbatim en todas.
+- **Video:** `fal-ai/kling-video/v2.1/standard/image-to-video`, 13 clips de 5s.
+- **Cortes:** `librosa.beat.beat_track` sobre la canción recortada; cada corte cae
+  en el golpe más cercano al reparto teórico si está a menos de 0.6s.
+- **Overlays:** Montserrat Black, contorno sticker, pegados a las líneas reales
+  de la letra (timestamps de `fal-ai/whisper`). La marca aparece escrita completa
+  dos veces: en el coro (`Feria Effix · 16–18 oct`) y como cierre de marca en los
+  últimos 2.4s.
+
+### Aprendizajes
+- **El director de skeleton genera prompts casi idénticos** para los 13 beats:
+  solo cambia el marcador de escalada. Salieron 13 planos iguales. Hubo que
+  escribir los encuadres a mano (wide → close → cenital → umbral → establishing →
+  two-shot → hero) y regenerar. Costó $1.04 de imágenes tiradas.
+- **MiniMax no acepta duración:** siempre devuelve ~100s con intro instrumental
+  larga (21s en la v2). Hay que transcribir para saber dónde entra la voz.
+- **La marca canta mal:** whisper transcribió "feria fix" y "serie fix". Escribir
+  La marca se escribe SIEMPRE "Feria Effix", completa: nada de grafías
+  fonéticas para ayudarle al modelo. Si canta mal, se regenera.
+- El negativo de texto no siempre basta: una escena metió "New Order" en la
+  pantalla de un teléfono. Se resuelve pidiendo explícitamente iconos sin texto.
+
+### Costo real
+| Concepto | USD |
+|---|---|
+| Canción v1 (descartada, sin callout) | 0.15 |
+| Canción v3 (descartada, 40s de intro «la-la-la») | 0.15 |
+| Canción v2 | 0.15 |
+| Whisper ×2 | ~0.02 |
+| Imagen héroe | 0.08 |
+| Escenas v1 (descartadas, planos repetidos) | 1.04 |
+| Escenas v2 + regeneración de la 11 | 1.12 |
+| 13 clips Kling 2.1 std (5s c/u) | 3.64 |
+| **Total** | **≈ 6.36** |

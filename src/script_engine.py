@@ -164,7 +164,7 @@ ANGULOS: dict[str, dict[str, str]] = {
         "visual_clave_en": "hands inspecting a physical product at a trade stand",
         "cierre": "Y tu próximo proveedor lo eliges mirándolo a la cara.",
         "hooks": [
-            {"texto": "¿Cuántas veces te ha fallado un proveedor de internet?", "gatillos": ['auto_relevancia', 'curiosidad']},
+            {"texto": "¿Cuántas veces te ha fallado un proveedor de dropshipping?", "gatillos": ['auto_relevancia', 'curiosidad']},
             {"texto": "Un mal proveedor no te cuesta plata. Te cuesta meses.", "gatillos": ['interrupcion_patron', 'auto_relevancia']},
             {"texto": "Elegir proveedor a ciegas es una lotería. ¿Seguimos así?", "gatillos": ['curiosidad', 'interrupcion_patron']}
         ],
