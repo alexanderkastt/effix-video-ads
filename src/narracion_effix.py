@@ -9,9 +9,10 @@ FLUIDEZ — por qué las líneas encadenan
     El montaje y la voz van en capas distintas: la imagen corta, la frase no.
 
 PRESUPUESTO
-    beats 1, 6 y 7 (momento · causa raíz · mecanismo) → 2 clips, ≤17 palabras
-    los otros nueve                                    → 1 clip,  ≤8 palabras
-    total: 15 clips × 4s = 60s
+    El techo lo calcula `techo_de_palabras()` desde la ventana del clip que
+    fija el .env, no una constante escrita a mano. Con ventana de 5s son 17
+    palabras por clip y 34 en los beats con aire (1, 6 y 7); con ventana de
+    4s, 13 y 27. Total: 15 clips.
 
 REGISTRO
     Tuteo colombiano, como el sitio de Effix ("Ves que otros venden", "Has
@@ -25,11 +26,34 @@ SIN DESCUENTOS Y SIN EL TALLER
 
 from __future__ import annotations
 
+from .plan_clips import DURACION_CLIP_S
+
 # Beats que ocupan dos clips: son los que llevan el peso narrativo
 BEATS_CON_AIRE = (1, 6, 7)
-MAX_PALABRAS_1_CLIP = 8
-MAX_PALABRAS_2_CLIPS = 17
 PALABRAS_POR_SEGUNDO = 2.96  # medido, ver plan_clips.py
+
+# El techo de palabras sale de la ventana del clip, no de un número fijo.
+#
+# Estaba en 8 palabras, calibrado cuando el motor asumía 2,2 palabras por
+# segundo. El 2026-08-30 se midió la locución real en 2,96 y se corrigió la
+# constante, pero el techo se quedó donde estaba: cada línea ocupaba 2,7s de
+# un clip de 4s y dejaba 1,3s de silencio. Eso es lo que hacía sonar los
+# guiones a telegrama — no la redacción, el presupuesto.
+#
+# FACTOR_DESBORDE deja que la voz cruce un poco el corte visual. Es
+# deliberado: la imagen corta cada 4 o 5 segundos, la frase no. Una locución
+# que respeta el corte al milímetro suena a lista de viñetas leída en voz
+# alta; una que lo cruza suena a persona hablando.
+FACTOR_DESBORDE = 1.15
+
+
+def techo_de_palabras(clips: int = 1) -> int:
+    """Cuántas palabras admite un beat de N clips en la ventana actual."""
+    return int(clips * DURACION_CLIP_S * PALABRAS_POR_SEGUNDO * FACTOR_DESBORDE)
+
+
+MAX_PALABRAS_1_CLIP = techo_de_palabras(1)
+MAX_PALABRAS_2_CLIPS = techo_de_palabras(2)
 
 # Orden: momento · síntoma · reacción · explicación fallida · patrón ·
 #        causa raíz · mecanismo · prueba social · visualización ·
@@ -99,6 +123,23 @@ HABLADO: dict[str, list[str]] = {
         "Viernes a domingo. Ni pides permiso.",
         "No salen ventas de una. Salen contactos.",
         "El próximo pedido no es de tu prima.",
+    ],
+
+    # La vitrina vuelve seis veces: abre (1), se paga (2), se acepta (3), se
+    # contrasta (5), se invierte (9) y cierra el loop (12).
+    "tienda_ropa": [
+        "Llovió el sábado, no entró nadie, y el mes se te cayó.",
+        "Mandas la foto al grupo de siempre, y contesta la de siempre.",
+        "Y ya te acostumbraste: tu almacén vende hasta la esquina.",
+        "Total, tú dices que tu ropa se vende es viéndola.",
+        "Pero la del local de al lado ya despacha para otra ciudad.",
+        "Así que no es que tu ropa no sirva para internet: es que nadie te ha mostrado cómo.",
+        "En la feria está quien te monta la tienda y quien despacha.",
+        "Doscientos ponentes que viven de vender por internet.",
+        "Imagínate empacando un pedido para alguien de otra ciudad.",
+        "Dieciséis al dieciocho, en Plaza Mayor.",
+        "No sales con la tienda montada: sales sabiendo qué te falta.",
+        "Porque la próxima venta no la va a hacer la vitrina.",
     ],
 
     "contadores": [
@@ -213,39 +254,41 @@ HABLADO: dict[str, list[str]] = {
 # ---------------------------------------------------------------------------
 
 CTA_POR_PASE: dict[str, dict[str, str]] = {
-    # Producto principal. El fin de semana responde la objeción de "no puedo
-    # dejar el trabajo", que es la que más frena a este avatar.
+    # Producto principal. Cierra donde se compra y con cuánto cuesta hacerlo:
+    # el "clic en el enlace" de antes pedía un gesto, no una compra, y no
+    # decía dónde. "Te toma un minuto" es el sacrificio negado — el componente
+    # que más levanta conversión y el que casi todos omiten.
     "pase_3_dias": {
-        "hablado": "Compra tu pasaporte a la Feria Effix. Clic en el enlace.",
-        "overlay": "Clic en el enlace",
+        "hablado": "Compra tu pasaporte a la Feria Effix en feriaeffix punto com. Te toma un minuto.",
+        "overlay": "Compra en feriaeffix.com",
         "dias": "3",
         "gatillo": "inclusion",
     },
     # Mismo producto, gatillo de escasez: pasa una vez al año y se llena.
     "pase_3_dias_escasez": {
-        "hablado": "Compra tu boleta antes de que se llene. Clic aquí.",
-        "overlay": "Antes de que llene",
+        "hablado": "Compra hoy tu boleta para la Feria Effix: es una vez al año y se llena.",
+        "overlay": "Se llena. Compra hoy",
         "dias": "3",
         "gatillo": "escasez",
     },
     # VIP: se vende por estatus y acceso, nunca por duración.
     "vip_5_dias": {
-        "hablado": "Compra tu boleta VIP. Da clic en el enlace.",
-        "overlay": "Boleta VIP",
+        "hablado": "Compra tu boleta VIP de la Feria Effix y entras los cinco días completos.",
+        "overlay": "VIP · los cinco días",
         "dias": "5",
         "gatillo": "ego",
     },
     # Black: escasez verificable. Cuatrocientos cupos en todo el mundo.
     "black": {
-        "hablado": "Compra tu Black: son cuatrocientos cupos. Clic aquí.",
-        "overlay": "Solo 400 cupos",
+        "hablado": "Compra tu Black de la Feria Effix: cuatrocientos cupos en todo el mundo.",
+        "overlay": "Black · 400 cupos",
         "dias": "5",
         "gatillo": "escasez + ego",
     },
     # Genérico: aversión a la pérdida, sin nombrar producto.
     "generico": {
-        "hablado": "Compra tu boleta para la Feria Effix. Clic en el enlace.",
-        "overlay": "Clic en el enlace",
+        "hablado": "Compra tu boleta para la Feria Effix en feriaeffix punto com.",
+        "overlay": "Compra tu boleta",
         "dias": "",
         "gatillo": "dejar_de_ganar",
     },

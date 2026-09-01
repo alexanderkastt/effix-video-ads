@@ -95,6 +95,18 @@ def construir_beats(
                 "tipo_clip": TIPO_CLIP[n],
             }
         )
+
+    # Codas: los beats con aire ocupan dos clips y el segundo venía sosteniendo
+    # la imagen en silencio. Una coda le pone voz a ese segundo clip sin
+    # alargar el video ni robarle fuerza al beat. Se usan para lo que la
+    # estructura de doce beats no tiene sitio propio: el callout de identidad
+    # (beat 1, entre el MOMENTO y el SÍNTOMA) y las fechas del evento (beat 7,
+    # que el CTA del pase no dice). Los nichos que no las definen quedan igual.
+    for numero, coda in (datos.get("codas") or {}).items():
+        beat = beats[numero - 1]
+        if beat["clips"] >= 2:
+            beat["coda"] = coda
+
     return beats
 
 
@@ -125,6 +137,18 @@ def expandir_a_clips(beats: list[dict[str, Any]]) -> list[dict[str, Any]]:
             })
             if i > 0:
                 clip["movimiento_camara"] = alterno.get(beat["movimiento_camara"], "handheld")
+            if i == 1 and beat.get("coda"):
+                coda = beat["coda"]
+                clip.update({
+                    "nombre": coda.get("nombre", beat["nombre"]),
+                    "emoji": coda.get("emoji", beat["emoji"]),
+                    "emocion": coda.get("emocion", beat["emocion"]),
+                    "componente_microsituacion": "coda",
+                    "narracion": coda["hablado"],
+                    "palabras_narracion": len(coda["hablado"].split()),
+                    "texto_pantalla": coda["overlay"],
+                    "lleva_narracion": True,
+                })
             clips.append(clip)
             numero += 1
 
@@ -135,6 +159,9 @@ def resumen_de(beats: list[dict[str, Any]]) -> dict[str, Any]:
     """Duración, clips y holgura de un guión."""
     clips = sum(b["clips"] for b in beats)
     palabras = sum(b["palabras_narracion"] for b in beats)
+    palabras += sum(
+        len(b["coda"]["hablado"].split()) for b in beats if b.get("coda")
+    )
     locucion = round(palabras / PALABRAS_POR_SEGUNDO, 1)
     video = clips * DURACION_CLIP_S
 

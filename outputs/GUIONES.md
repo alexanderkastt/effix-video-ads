@@ -233,3 +233,154 @@ en los primeros segundos.
 | Escenas v2 + regeneración de la 11 | 1.12 |
 | 13 clips Kling 2.1 std (5s c/u) | 3.64 |
 | **Total** | **≈ 6.36** |
+
+---
+
+## 2026-08-31 — Feria Effix 2026 · Nicho `tienda_ropa` · TRES VARIACIONES
+
+**Nicho nuevo:** `tienda_ropa` — el almacén de ropa con local que vende por
+mostrador y WhatsApp y nunca ha vendido por internet. No es `sin_arrancar` (ese
+lo intentó online y no vendió): este **nunca empezó**. Vende bien, pero su techo
+lo pone la geografía.
+
+**Ancla:** la vitrina. Su facturación depende del clima y del andén.
+**Estado:** ⏸️ BORRADOR — las tres esperan aprobación. Nada producido.
+
+### Hooks — del banco de 320, filtrados por (problem, conversión)
+
+| Var | Banco | Hook |
+|---|---|---|
+| A | #39 `dolor_nombrado` | Llovió el sábado, no entró nadie, y el mes se te cayó. |
+| B | #33 `callout` | Si vives de que la gente pase por el frente de tu almacén, quédate. |
+| C | #11 `callout` | Tu ropa se vende bien. Pero solo a diez cuadras a la redonda. |
+
+Los tres atacan el mismo techo desde ángulos distintos. El dolor del hook A se
+puede filmar —lluvia en el vidrio, acera vacía, ropa impecable que nadie vio—,
+que es el test de Caples. "Las blusas siguen colgadas", el hook que se escribió
+primero a mano, se descartó: es una tarde floja que le pasa a cualquier comercio,
+no el techo de este micronicho.
+
+---
+
+## VARIACIÓN 1 — Narrada · Pixar 3D · DOÑA CLARA · 60s
+
+**Formato:** micro-situación de 12 beats (`guiones_effix.py`) + voz en off
+**Estructura:** los siete pasos del framework más los cinco de venta
+**Personaje:** Doña Clara, dueña del almacén, cincuenta y pico, delantal sobre la
+ropa que ella misma vende. Personaje Pixar de rasgos cálidos y manos ocupadas.
+**Motor:** `NICHOS["tienda_ropa"]` · hook A · pase 3 días
+
+| Clip | t | Beat | Voz | Overlay |
+|---|---|---|---|---|
+| 01 | 0–4 | MOMENTO | Llovió el sábado, no entró nadie, y el mes se te cayó. | Llovió. Y no entró nadie |
+| 02 | 4–8 | CALLOUT | Tienes almacén de ropa y no vendes por internet: esto es para ti. | ¿Almacén de ropa? |
+| 03 | 8–12 | SÍNTOMA | Mandas la foto al grupo de siempre, y contesta la de siempre. | Las mismas clientas de siempre |
+| 04 | 12–16 | REACCIÓN | Y ya te acostumbraste: tu almacén vende hasta la esquina. | Vendes hasta la esquina |
+| 05 | 16–20 | EXPL. FALLIDA | Total, tú dices que tu ropa se vende es viéndola. | «Se vende es viéndola» |
+| 06 | 20–24 | PATRÓN | **Pero** la del local de al lado ya despacha para otra ciudad. | La del lado vende en otra ciudad |
+| 07 | 24–32 | CAUSA RAÍZ | Así que no es que tu ropa no sirva para internet: es que nadie te ha mostrado cómo. | No es tu ropa |
+| 09 | 32–36 | MECANISMO | En la feria está quien te monta la tienda y quien despacha. | 350 empresas en un recinto |
+| 10 | 36–40 | FECHAS | Dieciséis al dieciocho de octubre, en Plaza Mayor. | 16–18 oct · Plaza Mayor |
+| 11 | 40–44 | PRUEBA | Doscientos ponentes que viven de vender por internet. | 200 ponentes que ya venden |
+| 12 | 44–48 | VISUALIZACIÓN | Imagínate empacando un pedido para alguien de otra ciudad. | Un pedido de otra ciudad |
+| 13 | 48–52 | CTA | Compra tu pasaporte a la Feria Effix en feriaeffix punto com. Te toma un minuto. | Compra en feriaeffix.com |
+| 14 | 52–56 | DEFECTO | No sales con la tienda montada: sales sabiendo qué te falta. | Sales sabiendo qué te falta |
+| 15 | 56–60 | LOOP | Porque la próxima venta no la va a hacer la vitrina. | La vitrina ya no vende sola |
+
+Texto corrido para ElevenLabs (161 palabras · 54,4s):
+
+```
+Llovió el sábado, no entró nadie, y el mes se te cayó. Tienes almacén de ropa y no vendes por internet: esto es para ti. Mandas la foto al grupo de siempre, y contesta la de siempre. Y ya te acostumbraste: tu almacén vende hasta la esquina. Total, tú dices que tu ropa se vende es viéndola. Pero la del local de al lado ya despacha para otra ciudad. Así que no es que tu ropa no sirva para internet: es que nadie te ha mostrado cómo. En la feria está quien te monta la tienda y quien despacha. Dieciséis al dieciocho de octubre, en Plaza Mayor. Doscientos ponentes que viven de vender por internet. Imagínate empacando un pedido para alguien de otra ciudad. Compra tu pasaporte a la Feria Effix en feriaeffix punto com. Te toma un minuto. No sales con la tienda montada: sales sabiendo qué te falta. Porque la próxima venta no la va a hacer la vitrina.
+```
+
+**Pipeline:** nano-banana-2 (héroe + 15 escenas con la héroe de referencia) →
+Kling 2.1 std → voz ElevenLabs → overlays Montserrat Black.
+**Costo estimado:** ~$5,60 (15 clips $4,20 · imágenes $1,28 · voz $0,10)
+**Requiere:** `DURACION_CLIP_S=4` en el `.env` (con 5s el video se va a 75s).
+
+---
+
+## VARIACIÓN 2 — Cantada · Stop-motion de tela · KEILA · 55s
+
+**Formato:** canción sincronizada a los golpes (MiniMax Music 2.6)
+**Estructura:** letra de canción (verso · callout · pre-coro · coro · verso ·
+puente · outro), no los 12 beats. El coro carga la marca y las fechas.
+**Personaje:** Keila, veintidós años, la hija que atiende el almacén los sábados
+y ve el techo antes que su mamá. No es la que decide: es la que empuja.
+**Estilo visual:** stop-motion de tela y fieltro — el almacén, la calle y el
+recinto construidos con retazos. Distinto del Pixar de la V1 a propósito.
+
+| Sección | Letra |
+|---|---|
+| Verso 1 | Llovió todo el sábado y no entró nadie / Mi mamá acomoda las blusas otra vez |
+| Callout | Si tu negocio vive del que pasa por el frente / Esto es para ti, treinta segundos |
+| Verso 2 | La ropa está buena, el precio está bueno / Pero el mundo entero pasa de largo / Y solo compran las de siempre |
+| Pre-coro | No es la ropa, no es el precio / Es que tu tienda no existe en el celular de nadie |
+| Coro | Feria Effix, dieciséis al dieciocho / Plaza Mayor, Medellín / Trescientas cincuenta empresas / Y tu ropa saliendo de la ciudad |
+| Verso 3 | Doscientos ponentes que viven de vender por internet / Cinco ediciones, quien va una vez, vuelve |
+| Puente | Imagínate la caja con una dirección que no conoces |
+| Outro | Compra tu pasaporte en feriaeffix punto com / Que la próxima venta no la haga la vitrina |
+
+**Pipeline:** MiniMax Music 2.6 → whisper para los tiempos reales de la voz →
+`librosa.beat_track` para cortar en el golpe → 12 clips Kling 2.1 → overlays
+pegados a las líneas cantadas. Mismo camino que el ad de `sin_arrancar`.
+**Costo estimado:** ~$4,80 (canción $0,15 más reintentos · whisper $0,02 ·
+imágenes $1,04 · 12 clips $3,36)
+**Riesgo conocido:** MiniMax devuelve ~100s con intro instrumental larga y a
+veces canta mal la marca. Si canta "feria fix", se regenera — la marca se
+escribe siempre "Feria Effix" completa, nunca fonética.
+
+---
+
+## VARIACIÓN 3 — Object talk · Pixar · EL MANIQUÍ · 25s
+
+**Formato:** monólogo en primera persona del objeto (skill `object-talk`)
+**Estructura:** declaración de apertura → mensaje central → dato → cierre. Cuatro
+tomas, no doce beats. El más corto y el más raro de los tres.
+**Personaje:** el maniquí de la vitrina. Cuatro años parado en el mismo metro
+cuadrado viendo pasar gente que no entra. Orgulloso de la ropa que le ponen,
+resignado a que solo lo vea el que pasa por el frente. Ojos grandes y cansados,
+hombros de plástico levemente caídos, una mano que señala la calle.
+
+| Toma | t | Voz del maniquí | Cámara |
+|---|---|---|---|
+| 1 | 0–7 | Llevo cuatro años parado en esta vitrina. Y solo me ve el que pasa por el frente. | Medium estático, lluvia en el vidrio |
+| 2 | 7–14 | La ropa que me ponen es buena. Buenísima. Pero yo no puedo salir a buscar a nadie. | Close-up, push-in lento |
+| 3 | 14–20 | Tú sí. Feria Effix, dieciséis al dieciocho de octubre, Plaza Mayor. | Contrapicado, la calle detrás |
+| 4 | 20–25 | Compra tu pasaporte en feriaeffix punto com. Y sácame de esta vitrina. | Medium, mirada a cámara |
+
+**Voz:** masculina, madura, con textura, resignada pero cálida. Colombiano
+neutro, ritmo pausado. Nada de energía de locutor.
+**Lipsync:** se aplica DESPUÉS de generar el clip, nunca pidiendo movimiento de
+boca dentro del prompt. En un maniquí puede fallar (los modelos están entrenados
+en caras humanas): plan B, la boca no se mueve y la línea queda en off, con los
+ojos haciendo la actuación.
+**Costo estimado:** ~$1,60 (4 clips $1,12 · imágenes $0,32 · voz $0,05)
+
+---
+
+### Cambios de motor que trajo esta tanda
+
+- **`codas`** (`guiones_effix.py`) — beat opcional que le pone voz al segundo
+  clip de los beats con aire, que antes quedaba mudo. Resuelve el callout de
+  identidad (que la estructura de 12 beats no traía) y las fechas del evento
+  (que el CTA del pase no decía). Los otros diez nichos quedan idénticos.
+- **`techo_de_palabras()`** (`narracion_effix.py`) — el techo de palabras por
+  clip se calcula desde la ventana del `.env` en vez de estar escrito a mano.
+  Estaba en 8, calibrado para 2,2 palabras por segundo, cuando la locución real
+  medida es 2,96: cada línea llenaba 2,7s de un clip de 4s y dejaba 1,3s de
+  silencio. **Eso era lo que hacía sonar los guiones a telegrama** — el motor,
+  no la redacción. `FACTOR_DESBORDE` deja que la voz cruce el corte a propósito.
+- **CTA de compra** — los cinco pases decían "clic en el enlace", que pide un
+  gesto y no dice dónde. Ahora dicen qué se compra, dónde (feriaeffix punto com)
+  y con qué esfuerzo ("te toma un minuto", el sacrificio negado). Aplica a los
+  once nichos.
+
+### Pendiente antes de producir cualquiera de las tres
+
+1. **Fechas.** `config/brand_dna.json` dice 15 al 19 de octubre; los nichos y
+   todo lo publicado dicen 16 al 18. Confirmar cuál es la buena y unificar.
+2. **`DURACION_CLIP_S`.** La V1 necesita 4s. Con 5s el video se va a 75s.
+3. `test_integracion_creativa.py` imprime "12 clips × 4s = 60s" y en la línea
+   siguiente "todos los clips duran 5s": está leyendo dos constantes distintas
+   y se contradice solo.

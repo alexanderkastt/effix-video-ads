@@ -225,6 +225,91 @@ NICHOS: dict[str, dict[str, Any]] = {
         ],
     },
 
+    # ------------------------------------------------------------------
+    # Negocio tradicional de ropa: vende bien, pero solo a quien pasa por el
+    # frente. No fracasó vendiendo online — nunca empezó. El ancla es la
+    # vitrina, y vuelve seis veces a lo largo del guión.
+    # ------------------------------------------------------------------
+    "tienda_ropa": {
+        "etiqueta": "Tienda de ropa física — el que vende por vitrina y no por internet",
+        "audiencia": "Dueño de almacén de ropa con local, que vende de mostrador y WhatsApp y no tiene canal online",
+        "ancla": "vitrina",
+        "gatillo_principal": "dejar_de_ganar",
+        "momento": "Llovió todo el sábado, no entró nadie, y ahí caes en cuenta de que tu mes depende del clima y del andén.",
+        "sintoma": "Le mandas la foto por WhatsApp a las mismas clientas de siempre, y ya sabes cuáles te van a contestar.",
+        "reaccion_interna": "Y por dentro ya lo aceptaste: tu almacén vende hasta donde llega la gente que pasa por el frente.",
+        "explicacion_fallida": "Te dices que tu ropa se vende es viéndola, tocándola, midiéndosela.",
+        "patron": "Pero la marca del local de al lado ya la están comprando en otra ciudad. Misma ropa, mismo precio.",
+        "causa_raiz": "No es que tu ropa no sirva para internet. Es que nadie te ha mostrado cómo se vende ropa por internet.",
+        "mecanismo": "En la feria están las plataformas, las pasarelas de pago, la logística y las agencias que ya visten a las tiendas que sí venden online.",
+        "prueba_social": "Doscientos ponentes que viven de vender por internet. Cinco ediciones, y quien va una vez, vuelve.",
+        "visualizacion": "Imagínate empacando un pedido para alguien de otra ciudad que nunca ha entrado a tu local.",
+        "urgencia_cta": "Del dieciséis al dieciocho de octubre, en Plaza Mayor.",
+        "defecto_admitido": "No sales de ahí con la tienda montada. Sales sabiendo qué te falta y quién te lo hace.",
+        "loop_rewatch": "Y la próxima venta ya no la hace la vitrina.",
+        "overlay_dolor": "Llovió. Y no entró nadie",
+        "visual_clave": "una vitrina de ropa vista desde adentro, con lluvia en el vidrio y la acera vacía",
+        "visual_clave_en": "a clothing shop window seen from inside, rain on the glass and an empty sidewalk",
+        # Segmentación de identidad: entra en el segundo clip del beat 1, entre
+        # el MOMENTO y el SÍNTOMA, para que en pauta fría el nicho se reconozca
+        # antes del segundo corte.
+        "codas": {
+            1: {
+                "nombre": "CALLOUT",
+                "emoji": "📣",
+                "emocion": "auto_relevancia",
+                "hablado": "Tienes almacén de ropa y no vendes por internet: esto es para ti.",
+                "overlay": "¿Almacén de ropa?",
+            },
+            7: {
+                "nombre": "FECHAS",
+                "emoji": "📍",
+                "emocion": "oportunidad",
+                "hablado": "Dieciséis al dieciocho de octubre, en Plaza Mayor.",
+                "overlay": "16–18 oct · Plaza Mayor",
+            },
+        },
+        "overlays": [
+            "Llovió. Y no entró nadie",
+            "Las mismas clientas de siempre",
+            "Vendes hasta la esquina",
+            "«Se vende es viéndola»",
+            "La del lado vende en otra ciudad",
+            "No es tu ropa",
+            "350 empresas en un recinto",
+            "200 ponentes que ya venden",
+            "Un pedido de otra ciudad",
+            "16–18 oct · Plaza Mayor",
+            "Sales sabiendo qué te falta",
+            "La vitrina ya no vende sola",
+        ],
+        # Los tres salen del banco de 320, filtrado por (problem, conversión):
+        # el 39 de dolor_nombrado y el 33 y el 11 de callout. Se pasaron de
+        # voseo a colombiano y los corchetes se rellenaron con el hecho real
+        # del micronicho: su facturación depende del clima y del andén.
+        # Son tres dolores distintos del mismo techo, no tres versiones de uno.
+        "hooks": [
+            {
+                "hablado": "Llovió el sábado, no entró nadie, y el mes se te cayó.",
+                "gatillos": ["dolor_nombrado", "auto_relevancia"],
+                "banco": 39,
+                "overlay": "Llovió. Y no entró nadie",
+            },
+            {
+                "hablado": "Si vives de que la gente pase por el frente de tu almacén, quédate.",
+                "gatillos": ["callout", "auto_relevancia"],
+                "banco": 33,
+                "overlay": "¿Vives del que pasa?",
+            },
+            {
+                "hablado": "Tu ropa se vende bien. Pero solo a diez cuadras a la redonda.",
+                "gatillos": ["interrupcion_patron", "dejar_de_ganar"],
+                "banco": 11,
+                "overlay": "Vendes a diez cuadras",
+            },
+        ],
+    },
+
     "contadores": {
         "etiqueta": "Contadores — el que ve pasar los clientes de ecommerce sin poder atenderlos",
         "audiencia": "Contador que quiere entrar al nicho digital y no sabe dónde están esos clientes",
