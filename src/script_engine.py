@@ -505,8 +505,14 @@ class ScriptEngine:
                     f"Beat {n:02d}: texto_pantalla tiene {n_palabras} palabras (máximo 7)."
                 )
 
-            # Presupuesto de locución: 4s ~ 11 palabras como techo
-            techo = int(beat.get("duracion_s", 4) * 2.75)
+            # Presupuesto de locución, medido sobre la voz real. El 2.75 que
+            # había aquí era un cuarto número distinto —convivía con el 2.2 del
+            # encabezado y el 2.96 de plan_clips— y con la voz a speed 1.15
+            # rechazaba frases que sí caben.
+            from .plan_clips import FACTOR_DESBORDE, PALABRAS_POR_SEGUNDO
+            techo = int(
+                beat.get("duracion_s", 4) * PALABRAS_POR_SEGUNDO * FACTOR_DESBORDE
+            )
             if _contar_palabras(narracion) > techo:
                 errores.append(
                     f"Beat {n:02d}: narración de {_contar_palabras(narracion)} palabras "

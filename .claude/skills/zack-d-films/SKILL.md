@@ -224,3 +224,20 @@ profile for next time.
 - [ ] ≥1 macro eye/detail shot; ≥1 gag beat; kicker closes the loop.
 - [ ] Zoom-ins on reveals; shakes on impacts/boundaries.
 - [ ] No brand/IP names; characters never lip-sync.
+
+
+---
+
+## Pacing, cutting and sound — governed by `ritmo-y-montaje`
+
+This file decides **what you see**. The cross-cutting `ritmo-y-montaje` skill
+decides **how often it changes and how it sounds**, for every ad regardless of
+style:
+
+- The visual cut lands every **1.5-2.5s**, and extra shots are pulled from the
+  same clip by reframing — never generate new clips just to get more cuts.
+- The pause between lines is **0.12s**; the voice runs at `speed 1.15`.
+- **Every ad carries background music**, from the repo library, with real
+  sidechain ducking and the master at -14 LUFS.
+
+Implementation: `src/ritmo.py` and `src/mezcla.py`.

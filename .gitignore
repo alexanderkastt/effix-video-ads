@@ -27,7 +27,17 @@ __pycache__/
 # ── Material intermedio del pipeline ─────────────────────
 assets/clips/
 assets/renders/
-assets/audio/
+# Con barra al final git ni entra a mirar dentro, y entonces no se puede
+# reincluir nada: por eso va `/*` y no `/`.
+assets/audio/*
+
+# La librería de música SÍ se versiona: son seis pistas que se pagaron una vez
+# (0.20 USD c/u) y que todos los ads reusan. Perderlas obliga a repagarlas, y a
+# 192k pesan 11 MB en total. El resto de assets/audio/ es material de un job
+# concreto y se regenera.
+!assets/audio/soundtracks/
+# Y otra vez los mp3, porque `*.mp3` de más arriba también los atrapa.
+!assets/audio/soundtracks/*.mp3
 
 # ── Salidas generadas ────────────────────────────────────
 # Los HTML de documentos SÍ se versionan (son el entregable del equipo);

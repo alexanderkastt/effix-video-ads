@@ -26,11 +26,14 @@ SIN DESCUENTOS Y SIN EL TALLER
 
 from __future__ import annotations
 
-from .plan_clips import DURACION_CLIP_S
+from .plan_clips import DURACION_CLIP_S, FACTOR_DESBORDE, PALABRAS_POR_SEGUNDO as _PPS
 
 # Beats que ocupan dos clips: son los que llevan el peso narrativo
 BEATS_CON_AIRE = (1, 6, 7)
-PALABRAS_POR_SEGUNDO = 2.96  # medido, ver plan_clips.py
+# Sale del .env vía plan_clips: era una copia con 2.96 escrito a mano, y al
+# subir el speed a 1.15 los presupuestos de palabras habrían quedado calculados
+# sobre una voz que ya no existe.
+PALABRAS_POR_SEGUNDO = _PPS
 
 # El techo de palabras sale de la ventana del clip, no de un número fijo.
 #
@@ -41,10 +44,10 @@ PALABRAS_POR_SEGUNDO = 2.96  # medido, ver plan_clips.py
 # guiones a telegrama — no la redacción, el presupuesto.
 #
 # FACTOR_DESBORDE deja que la voz cruce un poco el corte visual. Es
-# deliberado: la imagen corta cada 4 o 5 segundos, la frase no. Una locución
-# que respeta el corte al milímetro suena a lista de viñetas leída en voz
-# alta; una que lo cruza suena a persona hablando.
-FACTOR_DESBORDE = 1.15
+# deliberado: la imagen corta y la frase no. Una locución que respeta el corte
+# al milímetro suena a lista de viñetas leída en voz alta; una que lo cruza
+# suena a persona hablando. Vive en plan_clips para que el validador de
+# script_engine use exactamente el mismo número que este generador.
 
 
 def techo_de_palabras(clips: int = 1) -> int:

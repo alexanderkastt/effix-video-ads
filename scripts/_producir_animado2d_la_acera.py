@@ -26,11 +26,15 @@ sys.path.insert(0, ".")
 
 import fal_client
 
+from src import mezcla, ritmo
 from src.audio_extra import voz_para
 from src.lipsync import sincronizar_clip
+from src.music_engine import pista_de_libreria
 from src.paths import AUDIO_DIR, CLIPS_DIR, RENDERS_DIR, env
 from src.video_generator import _descargar, _url_de
-from src.voice_generator import _cliente as cliente_voz, _settings, FORMATO
+from src.voice_generator import (
+    _cliente as cliente_voz, _settings, FORMATO, respiro_s,
+)
 
 MODELO_VIDEO = "fal-ai/kling-video/o1/standard/image-to-video"  # 3-10s + frame final
 MODELO_IMG = "fal-ai/nano-banana-2"
@@ -286,46 +290,112 @@ def fase_lipsync() -> None:
 
 # ──────────────────────────── montaje ───────────────────────────────
 
-def fase_montaje() -> Path:
-    """Cada clip se corta a la duración exacta de su línea y lleva su audio.
+def _overlays(duraciones: dict[int, float]) -> list[str]:
+    """Los `texto_pantalla` del guión, ubicados sobre la línea de tiempo real.
+
+    `postproduccion.resolver()` espera beats y un plan de reparto, que este ad
+    no tiene: aquí cada overlay vive el tramo de su línea. El cuerpo se calcula
+    sobre 720px —el ancho con el que está calibrada la marca— y se escala a los
+    1080 del render, para que el texto se vea del mismo tamaño relativo que en
+    los otros ads y no más chico.
+    """
+    from src.postproduccion import Overlay, cuerpo_para, filtros as dibujar
+
+    ESCALA = 1080 / 720
+    MARGEN = 0.12  # el overlay entra un pelo después de la voz y sale antes
+
+    overlays: list[Overlay] = []
+    t = 0.0
+    for linea in G["lineas"]:
+        dur = duraciones[linea["n"]] + respiro_s()
+        textos = linea.get("texto_pantalla")
+        if textos:
+            textos = textos if isinstance(textos, list) else [textos]
+            tramo = (dur - 2 * MARGEN) / len(textos)
+            for i, texto in enumerate(textos):
+                cuerpo, cabe = cuerpo_para(texto, 720)
+                if not cabe:
+                    print(f"  ⚠ overlay largo, se lee chico: {texto!r}")
+                inicio = t + MARGEN + i * tramo
+                overlays.append(Overlay(
+                    texto=texto.upper(), inicio=round(inicio, 2),
+                    fin=round(inicio + tramo, 2),
+                    cuerpo=int(cuerpo * ESCALA), cabe=cabe))
+        t += dur
+
+    for o in overlays:
+        print(f"  overlay {o.inicio:>5.2f}–{o.fin:<5.2f} {o.cuerpo}px  {o.texto}")
+    return dibujar(overlays, CARPETA, alto=1920)
+
+
+def fase_montaje(destino: Path | None = None) -> Path:
+    """Cada línea se corta a su duración exacta y se parte en planos cortos.
 
     El video se corta al audio y no al revés: la conversación manda el ritmo, y
     un clip que dura medio segundo más que su frase mete un silencio que en un
     diálogo se oye como error.
+
+    Y dentro de esa duración el clip ya no es un plano solo: `ritmo.py` lo parte
+    en tomas de 1.5–2.5s reencuadradas. La réplica de cinco segundos deja de ser
+    cinco segundos de la misma cámara, sin generar un clip más.
     """
     duraciones = _duraciones()
     RENDERS_DIR.mkdir(parents=True, exist_ok=True)
-    salida = RENDERS_DIR / f"{JOB}.mp4"
+    salida = destino or (RENDERS_DIR / f"{JOB}.mp4")
+
+    respiro = respiro_s()
+    largos = [duraciones[l["n"]] + respiro for l in G["lineas"]]
+    grupos = ritmo.repartir(largos)
+    print(f"  ritmo: {ritmo.resumen(grupos)}")
 
     entradas, filtros, etiquetas = [], [], []
-    for i, linea in enumerate(G["lineas"]):
+    for i, (linea, planos) in enumerate(zip(G["lineas"], grupos)):
         n = linea["n"]
         sync = CARPETA / f"clip_{n:02d}_sync.mp4"
         video = sync if sync.exists() else CARPETA / f"clip_{n:02d}.mp4"
         if not video.exists():
             raise FileNotFoundError(f"Falta el clip {n:02d} en {CARPETA}")
-        dur = duraciones[n] + 0.25  # el aire mínimo entre réplicas
         entradas += ["-i", str(video), "-i", str(VOZ_DIR / f"linea_{n:02d}.mp3")]
         vi, ai = i * 2, i * 2 + 1
-        # El lip-sync devuelve el clip cortado a la voz (`sync_mode=cut_off`),
-        # así que pedirle un cuarto de segundo más deja el video más corto que
-        # su audio y el diálogo se desfasa. `tpad` clona el último frame: el
-        # aire entre réplicas es la cara sosteniendo el gesto, que es lo que
-        # hace en una conversación real.
-        filtros.append(
-            f"[{vi}:v]tpad=stop_mode=clone:stop_duration=2,"
-            f"trim=0:{dur:.2f},setpts=PTS-STARTPTS,"
-            f"scale=1080:1920:force_original_aspect_ratio=increase,"
-            f"crop=1080:1920,fps=24[v{i}]")
-        filtros.append(f"[{ai}:a]apad=whole_dur={dur:.2f},atrim=0:{dur:.2f},"
-                       f"asetpts=PTS-STARTPTS[a{i}]")
-        etiquetas.append(f"[v{i}][a{i}]")
+        for j, plano in enumerate(planos):
+            # El lip-sync devuelve el clip cortado a la voz
+            # (`sync_mode=cut_off`), así que el último plano de la línea pide
+            # más de lo que dura el clip: `tpad` —dentro de filtro_video—
+            # clona el último frame. El aire entre réplicas es la cara
+            # sosteniendo el gesto, que es lo que hace en una conversación.
+            filtros.append(ritmo.filtro_video(plano, f"{vi}:v", f"v{i}_{j}"))
+            filtros.append(ritmo.filtro_audio(plano, f"{ai}:a", f"a{i}_{j}"))
+            etiquetas.append(f"[v{i}_{j}][a{i}_{j}]")
 
-    filtros.append("".join(etiquetas) + f"concat=n={len(G['lineas'])}:v=1:a=1[vid][aud]")
+    n_planos = len(etiquetas)
+    cadena = "".join(etiquetas) + f"concat=n={n_planos}:v=1:a=1"
+    dibujos = _overlays(duraciones)
+    if dibujos:
+        filtros.append(cadena + "[crudo][voz]")
+        filtros.append("[crudo]" + ",".join(dibujos) + "[vid]")
+    else:
+        filtros.append(cadena + "[vid][voz]")
+
+    # La música ya no es opcional: sale de la librería según el estilo del ad.
+    total = round(sum(largos), 2)
+    pista = pista_de_libreria(G.get("estilo") or "", G.get("tono") or "")
+    if pista:
+        print(f"  música: {pista.name} ({total:.1f}s de video)")
+        # Cada línea aportó dos entradas (video y voz); la música va después.
+        i_musica = len(G["lineas"]) * 2
+        entradas += ["-stream_loop", "-1", "-i", str(pista)]
+        filtros.append(mezcla.cadena_audio(
+            "voz", f"{i_musica}:a", "aud", duracion_s=total))
+        mapa_audio = "[aud]"
+    else:
+        print("  aviso: sin pista en la librería. "
+              "Corre `python scripts/generar_soundtracks.py`.")
+        mapa_audio = "[voz]"
+
     subprocess.run(
         [env("FFMPEG_BIN", "ffmpeg"), "-y", "-hide_banner", "-loglevel", "error",
          *entradas, "-filter_complex", ";".join(filtros),
-         "-map", "[vid]", "-map", "[aud]",
+         "-map", "[vid]", "-map", mapa_audio,
          "-c:v", "libx264", "-preset", "medium", "-crf", "20",
          "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k",
          "-movflags", "+faststart", str(salida)],
@@ -338,7 +408,10 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("fase", choices=["voz", "hojas", "escenas", "clips",
                                      "lipsync", "montaje", "todo"])
-    fase = ap.parse_args().fase
+    # Para probar un montaje sin pisar el render ya entregado.
+    ap.add_argument("--salida", type=Path, default=None)
+    args = ap.parse_args()
+    fase = args.fase
     print(f"{G['titulo']} · {G['estilo']} · {G['nicho']} · "
           f"{len(G['lineas'])} líneas · job {JOB}\n")
     if fase in ("voz", "todo"):
@@ -352,4 +425,4 @@ if __name__ == "__main__":
     if fase in ("lipsync", "todo"):
         fase_lipsync()
     if fase in ("montaje", "todo"):
-        fase_montaje()
+        fase_montaje(args.salida)

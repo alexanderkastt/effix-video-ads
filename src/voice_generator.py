@@ -25,6 +25,17 @@ from .paths import AUDIO_DIR, env, env_float
 FORMATO = "mp3_44100_128"
 
 
+def respiro_s() -> float:
+    """El aire que se le deja a cada réplica después de la última sílaba.
+
+    Vivía hardcodeado y distinto en cada script de montaje —0.25, 0.35 y 0.12—,
+    así que el mismo guión respiraba distinto según por dónde se montara. Es lo
+    único que separa una frase de la siguiente: cada centésima de más es un
+    hueco que en el video se oye como duda.
+    """
+    return env_float("RESPIRO_S", 0.12)
+
+
 @dataclass
 class Locucion:
     """Lo que queda después de hablar: los archivos y lo que costó."""
@@ -48,12 +59,18 @@ def _cliente() -> ElevenLabs:
 
 
 def _settings() -> VoiceSettings:
-    """Los valores validados del .env, no los que trae el SDK por defecto."""
+    """Los valores validados del .env, no los que trae el SDK por defecto.
+
+    Los defaults de aquí son los mismos del .env a propósito: cuando eran
+    0.28/0.83 y el .env real corría 0.45/1.15, un entorno recién clonado
+    locutaba más lento y descuadraba la duración de todos los clips —el
+    pipeline entero se recalcula sobre los segundos que tarda la voz.
+    """
     return VoiceSettings(
-        stability=env_float("ELEVENLABS_STABILITY", 0.28),
+        stability=env_float("ELEVENLABS_STABILITY", 0.45),
         similarity_boost=env_float("ELEVENLABS_SIMILARITY", 0.83),
         style=env_float("ELEVENLABS_STYLE", 0.12),
-        speed=env_float("ELEVENLABS_SPEED", 0.83),
+        speed=env_float("ELEVENLABS_SPEED", 1.15),
         use_speaker_boost=str(env("ELEVENLABS_SPEAKER_BOOST", "true")).lower() == "true",
     )
 

@@ -1,6 +1,18 @@
 ---
 name: skeleton-ads
-description: Turn any B2B product, service, or offer into a viral "skeleton ad" — a narrated, escalating-progression video (a literal 3D cartoon skeleton goes through a journey: "What happens if you ___? Day 1… Day 30… Day 365…") modeled on proven viral scripts. Walks the user through ONE chat in four stages: (1) write the script, (2) build a visual concept board, (3) generate image prompts with character consistency, (4) generate line-by-line video prompts synced to the voiceover. Trigger on phrases like "skeleton ad", "skeleton script", "skeleton format ad", "make a skeleton ad", "turn my product into a skeleton ad", "What happens if you ad", "progression ad", "escalation ad", "Day 1 Day 30 ad", "raised by ad", or when the user pastes a product website/research/notes and wants this format. Also trigger on the hand-offs: when the user pastes back an approved skeleton script (go to Stage 2), picks favorite visual concepts (Stage 3), or says their images are done / uploads stills (Stage 4).
+description: >-
+  Turn any B2B product, service, or offer into a viral "skeleton ad" — a narrated,
+  escalating-progression video (a literal 3D cartoon skeleton goes through a journey: "What
+  happens if you ___? Day 1… Day 30… Day 365…") modeled on proven viral scripts. Walks the
+  user through ONE chat in four stages: (1) write the script, (2) build a visual concept
+  board, (3) generate image prompts with character consistency, (4) generate line-by-line
+  video prompts synced to the voiceover. Trigger on phrases like "skeleton ad", "skeleton
+  script", "skeleton format ad", "make a skeleton ad", "turn my product into a skeleton ad",
+  "What happens if you ad", "progression ad", "escalation ad", "Day 1 Day 30 ad", "raised by
+  ad", or when the user pastes a product website/research/notes and wants this format. Also
+  trigger on the hand-offs: when the user pastes back an approved skeleton script (go to
+  Stage 2), picks favorite visual concepts (Stage 3), or says their images are done /
+  uploads stills (Stage 4).
 ---
 
 # Skeleton Ad Director
@@ -320,3 +332,20 @@ Real high-performing scripts. Notice: every one opens with a curiosity-gap quest
 - *Rarest DNA Sequence* — "Level one psychopathy 1 in 100… the ultimate rare, polymelia, 1 in 3.5 billion."
 
 Hook templates seen across the file: *"What would happen if you ___?"* · *"What happens if you ___ every day?"* · *"How long can you ___?"* · *"How many ___ does it take to ___?"* · *"What if you NEVER ___?"* · *"Do you possess ___?"*
+
+
+---
+
+## Pacing, cutting and sound — governed by `ritmo-y-montaje`
+
+This file decides **what you see**. The cross-cutting `ritmo-y-montaje` skill
+decides **how often it changes and how it sounds**, for every ad regardless of
+style:
+
+- The visual cut lands every **1.5-2.5s**, and extra shots are pulled from the
+  same clip by reframing — never generate new clips just to get more cuts.
+- The pause between lines is **0.12s**; the voice runs at `speed 1.15`.
+- **Every ad carries background music**, from the repo library, with real
+  sidechain ducking and the master at -14 LUFS.
+
+Implementation: `src/ritmo.py` and `src/mezcla.py`.

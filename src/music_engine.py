@@ -1,14 +1,20 @@
-"""Sistema de música — briefs para Suno y detección de beats con librosa.
+"""Sistema de música — la librería del repo, briefs y detección de beats.
 
-Tres modos:
+Cuatro caminos, y el primero es el que se usa casi siempre:
 
-1. Fondo: música que acompaña sin protagonizar, al 25% del mix.
+0. Librería: `pista_de_libreria()` devuelve el mp3 que le toca al estilo, de
+   `assets/audio/soundtracks/`. Gratis, porque ya se pagó una vez.
+1. Fondo: brief para componer una pista nueva, cuando el catálogo no tiene el
+   mood que el ad pide.
 2. Sincronizada (`musical_sync`): la canción ES el video, el guión es la letra.
 3. Detección de beats: librosa lee una canción ya generada y devuelve los
    timestamps reales, para cortar los clips donde de verdad cae el golpe.
 
-Este módulo NO llama a la API de Suno: sólo construye el brief que se le manda.
-La llamada de pago vive en el pipeline de generación.
+Este módulo no llama a ninguna API: sólo construye el brief. La llamada de pago
+vive en `src/audio_extra.py`, y la mezcla en `src/mezcla.py`.
+
+Las claves del brief conservan el prefijo `suno_` por compatibilidad con los 21
+guiones JSON ya escritos; Suno quedó reemplazado por stable-audio-25.
 """
 
 from __future__ import annotations
@@ -17,7 +23,43 @@ import re
 from pathlib import Path
 from typing import Any
 
-from .paths import env_int, load_brand_dna
+from .paths import ASSETS_DIR, CONFIG_DIR, env_float, env_int, load_brand_dna
+
+# La librería vive en el repo: las pistas se generan una vez y se reusan. Un ad
+# no necesita estrenar música — necesita música que no pelee con la voz, y eso
+# ya está resuelto en las seis pistas del catálogo.
+SOUNDTRACKS_JSON = CONFIG_DIR / "soundtracks.json"
+SOUNDTRACKS_DIR = ASSETS_DIR / "audio" / "soundtracks"
+
+# Qué mood le toca a cada estilo cuando el guión no dice otra cosa. Es la misma
+# lógica de FALLBACK_POR_ESTILO, pero apuntando a la librería en vez de a un
+# prompt para generar.
+MOOD_POR_ESTILO: dict[str, str] = {
+    "ugc_realista": "energetico",
+    "testimonial": "energetico",
+    "skeleton": "tenso",
+    "cinematic": "aspiracional",
+    "zack_films": "aspiracional",
+    "pixar_animado": "alegre",
+    "claymation": "alegre",
+    "animado_2d": "alegre",
+    "object_talk": "alegre",
+    "crochet": "alegre",
+    "cyberpunk": "tenso",
+    "minecraft": "alegre",
+    "anime": "epico",
+    "avengers": "epico",
+}
+
+# Y cuando el estilo tampoco está, manda la emoción del tono de marca.
+MOOD_POR_EMOCION: dict[str, str] = {
+    "energetico": "energetico",
+    "emotivo": "emotivo",
+    "aspiracional": "aspiracional",
+    "alegre": "alegre",
+    "tenso": "tenso",
+    "epico": "epico",
+}
 
 # Brief base por combinación estilo+emoción
 MUSIC_BRIEFS: dict[str, dict[str, Any]] = {
@@ -53,6 +95,47 @@ TONO_A_EMOCION = {
 }
 
 
+def emocion_desde_tono(tono: str) -> str:
+    """La emoción musical que sugiere el tono de marca."""
+    bajo = (tono or "").lower()
+    for palabra, emocion in TONO_A_EMOCION.items():
+        if palabra in bajo:
+            return emocion
+    return "energetico"
+
+
+def catalogo() -> dict[str, Any]:
+    """El índice de la librería. Vacío si todavía no se generó."""
+    if not SOUNDTRACKS_JSON.exists():
+        return {}
+    import json
+    with SOUNDTRACKS_JSON.open(encoding="utf-8") as fh:
+        return json.load(fh).get("moods", {})
+
+
+def mood_para(estilo: str, tono: str = "") -> str:
+    """Qué mood le corresponde a un ad. Nunca falla: cae a `energetico`."""
+    if estilo in MOOD_POR_ESTILO:
+        return MOOD_POR_ESTILO[estilo]
+    return MOOD_POR_EMOCION.get(emocion_desde_tono(tono), "energetico")
+
+
+def pista_de_libreria(estilo: str, tono: str = "", mood: str = "") -> Path | None:
+    """La pista que le toca a este ad, si ya está en la librería.
+
+    Devuelve None cuando el mood no existe o el mp3 todavía no se generó, para
+    que el llamador decida entre componer una nueva o montar sin música. No
+    revienta: quedarse sin música es peor que quedarse sin el mood exacto, pero
+    ninguna de las dos cosas justifica tumbar un montaje que ya costó dinero.
+    """
+    elegido = mood or mood_para(estilo, tono)
+    entrada = catalogo().get(elegido)
+    if not entrada:
+        return None
+    ruta = SOUNDTRACKS_DIR / entrada["archivo"]
+    return ruta if ruta.exists() else None
+
+
 class MusicEngine:
     """Construye briefs de música y alinea los clips con los beats reales."""
 
@@ -67,7 +150,12 @@ class MusicEngine:
     def generate_background_brief(
         self, tono: str, estilo: str, duracion_s: int | None = None
     ) -> dict[str, Any]:
-        """Brief de música de fondo — acompaña, no protagoniza (25% del mix)."""
+        """Brief de música de fondo — acompaña, no protagoniza.
+
+        El volumen sale del `.env` (`MUSICA_VOLUMEN`, 0.18) y no de aquí: el
+        que manda es el de la mezcla, y tener dos números distintos era
+        parte de por qué cada ad sonaba diferente.
+        """
         duracion_s = duracion_s or self.total_clips * self.duracion_beat
         emocion = self._emocion_desde_tono(tono)
 
@@ -86,7 +174,7 @@ class MusicEngine:
             "suno_style_tags": self._style_tags(estilo, emocion),
             "suno_lyrics": "instrumental",
             "suno_duration_s": duracion_s,
-            "volumen_relativo": 0.25,
+            "volumen_relativo": env_float("MUSICA_VOLUMEN", 0.18),
             "bpm_recomendado": bpm,
             "clave_brief": clave if clave in MUSIC_BRIEFS else f"fallback:{estilo}",
             "nota": "Instrumental. La voz en off de ElevenLabs va encima al 100%.",
@@ -182,11 +270,7 @@ class MusicEngine:
     # -- internos -----------------------------------------------------------
 
     def _emocion_desde_tono(self, tono: str) -> str:
-        bajo = (tono or "").lower()
-        for palabra, emocion in TONO_A_EMOCION.items():
-            if palabra in bajo:
-                return emocion
-        return "energetico"
+        return emocion_desde_tono(tono)
 
     @staticmethod
     def _style_tags(estilo: str, emocion: str, extra: str = "") -> list[str]:

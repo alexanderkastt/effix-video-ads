@@ -69,6 +69,10 @@ def estimar(
     modelo_fal: str,
     caracteres_voz: int,
     modelo_voz: str = "eleven_multilingual_v2",
+    # Ojo: `con_musica=True` es el caso RARO, no el normal. Todo ad lleva
+    # música, pero sale de la librería del repo y no cuesta nada. Esto solo se
+    # enciende cuando el ad pide componer una pista propia porque el catálogo
+    # no tiene su mood.
     con_musica: bool = False,
     n_imagenes: int = 0,
     modelo_imagen: str = "fal-ai/nano-banana-2",

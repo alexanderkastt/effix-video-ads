@@ -1,11 +1,13 @@
 """Montaje final con ffmpeg — clips, voz y música en un solo MP4.
 
-Cada clip se recorta a su ventana de 4s antes de encadenarlo: Kling entrega
-5 segundos mínimo y montarlos enteros correría el video 10 segundos por
-encima de la locución. El corte es el que fijó plan_clips, no uno nuevo.
+Cada clip se recorta a su ventana antes de encadenarlo: Kling entrega 5
+segundos mínimo y montarlos enteros correría el video muy por encima de la
+locución. El corte es el que fijó plan_clips, no uno nuevo.
 
-La voz manda sobre la música, que entra al volumen del brief (25% por
-defecto) y se corta con el video.
+Dentro de esa ventana el clip ya no es un solo plano: `ritmo.py` lo parte en
+tomas de 1.5–2.5s reencuadradas, para que el corte visual caiga seguido sin
+pagar video nuevo. Y la mezcla de audio la hace `mezcla.py`, con la música
+hundiéndose sola bajo la voz.
 """
 
 from __future__ import annotations
@@ -15,7 +17,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from .paths import AUDIO_DIR, CLIPS_DIR, RENDERS_DIR, ROOT, env, env_float
+from . import mezcla, ritmo
+from .paths import AUDIO_DIR, CLIPS_DIR, RENDERS_DIR, ROOT, env
 
 
 @dataclass
@@ -150,11 +153,21 @@ def ensamblar(
     guion: dict[str, Any],
     plan: dict[str, Any],
     *,
-    musica: Path | None = None,
+    musica: Path | bool | None = None,
     destino: Path | None = None,
     overlays: bool = True,
 ) -> Render:
-    """Monta el video final: clips recortados + voz + música opcional."""
+    """Monta el video final: clips partidos en planos + voz + música.
+
+    `musica` acepta tres cosas, y el default cambió: antes era None = sin
+    música, y como nadie pasaba nada, ningún ad salía con fondo.
+
+    - `None` (default): toma la pista que le toca al estilo del guión, de la
+      librería en `assets/audio/soundtracks/`. Es lo que hay que querer.
+    - una `Path`: esa pista concreta.
+    - `False`: sin música. Solo para el modo `musical_sync`, donde la canción
+      ya es la pista principal y meterle un fondo debajo sería absurdo.
+    """
     job_id = str(guion.get("job_id") or "sin-job")
     carpeta = CLIPS_DIR / job_id
     clips = _clips_de(carpeta)
@@ -165,21 +178,38 @@ def ensamblar(
     corte = plan["corte_final_s"]
     voz = unir_locucion(job_id)
 
+    if musica is None:
+        from .music_engine import pista_de_libreria
+        musica = pista_de_libreria(
+            str(guion.get("estilo", "")), str(guion.get("tono", ""))
+        )
+        if musica is None:
+            print("   aviso: no hay pista en la librería para este estilo. "
+                  "Corre `python scripts/generar_soundtracks.py`.")
+
     RENDERS_DIR.mkdir(parents=True, exist_ok=True)
     salida = destino or (RENDERS_DIR / f"{job_id}.mp4")
 
-    # Un filter_complex en vez de archivos intermedios: cada clip se recorta a
-    # su ventana, se normaliza el timestamp y se concatena de una sola pasada.
+    # Un filter_complex en vez de archivos intermedios: cada clip se parte en
+    # sus planos, se normaliza el timestamp y se concatena de una sola pasada.
+    grupos = ritmo.repartir([float(dur_clip)] * len(clips))
+    print(f"   ritmo: {ritmo.resumen(grupos)}")
+
     entradas: list[str] = []
     filtros: list[str] = []
-    for i, clip in enumerate(clips):
+    etiquetas: list[str] = []
+    for i, (clip, planos) in enumerate(zip(clips, grupos)):
         entradas += ["-i", str(clip)]
-        filtros.append(
-            f"[{i}:v]trim=0:{dur_clip},setpts=PTS-STARTPTS,"
-            f"scale=720:1280:force_original_aspect_ratio=increase,"
-            f"crop=720:1280,fps=24[v{i}]"
-        )
-    cadena = "".join(f"[v{i}]" for i in range(len(clips)))
+        for j, plano in enumerate(planos):
+            # Cada plano sale del mismo clip: distinto tramo, distinto
+            # encuadre. Dos entradas al concat donde antes había una.
+            etiqueta = f"v{i}_{j}"
+            filtros.append(
+                ritmo.filtro_video(plano, f"{i}:v", etiqueta, w=720, h=1280)
+            )
+            etiquetas.append(f"[{etiqueta}]")
+    cadena = "".join(etiquetas)
+    n_planos = len(etiquetas)
     if overlays:
         # La capa de texto vive en postproduccion.py: decide cuerpo y
         # animacion, y sabe cuando un overlay no cabe en una linea.
@@ -195,21 +225,21 @@ def ensamblar(
     if dibujos:
         # El texto va encima del video ya concatenado, no clip por clip: un
         # beat puede cruzar dos clips y su overlay no debe cortarse ahi.
-        filtros.append(f"{cadena}concat=n={len(clips)}:v=1:a=0[crudo]")
+        filtros.append(f"{cadena}concat=n={n_planos}:v=1:a=0[crudo]")
         filtros.append("[crudo]" + ",".join(dibujos) + "[vid]")
     else:
-        filtros.append(f"{cadena}concat=n={len(clips)}:v=1:a=0[vid]")
+        filtros.append(f"{cadena}concat=n={n_planos}:v=1:a=0[vid]")
 
     n_voz = len(clips)
     entradas += ["-i", str(voz)]
 
-    if musica and Path(musica).exists():
-        entradas += ["-i", str(musica)]
-        vol = env_float("MUSICA_VOLUMEN", 0.25)
-        filtros.append(
-            f"[{n_voz + 1}:a]volume={vol}[bg];"
-            f"[{n_voz}:a][bg]amix=inputs=2:duration=first:dropout_transition=0[aud]"
-        )
+    if isinstance(musica, (str, Path)) and Path(musica).exists():
+        # `-stream_loop -1`: las pistas de la librería duran 75s y hay ads más
+        # largos. Sin el loop la música se acaba a mitad del video.
+        entradas += ["-stream_loop", "-1", "-i", str(musica)]
+        filtros.append(mezcla.cadena_audio(
+            f"{n_voz}:a", f"{n_voz + 1}:a", "aud", duracion_s=float(corte)
+        ))
         mapa_audio = "[aud]"
     else:
         mapa_audio = f"{n_voz}:a"

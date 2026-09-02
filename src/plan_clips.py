@@ -37,7 +37,7 @@ import subprocess
 from pathlib import Path
 from typing import Any
 
-from .paths import env_int
+from .paths import env_float, env_int
 
 # Kling no vende segundos sueltos: cobra tramos de 5 o de 10. Con la ventana
 # en 4s cada clip paga cinco segundos y usa cuatro — un 20% del gasto de video
@@ -51,11 +51,24 @@ MAX_VIDEO_S = 60
 # palabras en 36,13s con la voz "Medellin - Conversational and Intense" y
 # ELEVENLABS_SPEED=0.83. El 2.2 anterior era una estimacion de escritorio y
 # sobredimensionaba la locucion en un 34%, que se traducia en clips de mas.
-PALABRAS_POR_SEGUNDO = 2.96
+#
+# Ahora sale del .env: el numero depende de la voz y del speed, y quedarse
+# clavado en el de una medicion vieja es lo que hace que la estimacion previa
+# no coincida con lo que despues mide ffprobe. Se remide con
+# `python scripts/calibrar_voz.py` cada vez que cambia la voz o el speed.
+PALABRAS_POR_SEGUNDO = env_float("PALABRAS_POR_SEGUNDO", 2.96)
 
 # Cola después de que termina la voz: el video no corta en seco sobre la
 # última sílaba, pero tampoco sigue corriendo en silencio.
 COLA_FINAL_S = 0.4
+
+# Cuánto puede cruzar la frase el corte visual. Vivía solo en
+# narracion_effix.py, así que el generador escribía con desborde y el validador
+# de script_engine.py rechazaba sin él: el mismo guión pasaba y no pasaba según
+# quién lo mirara. Y ahora que la imagen corta cada 1.5–2.5s, el desborde es
+# más necesario, no menos — una locución que respeta el corte al milímetro
+# suena a lista de viñetas leída en voz alta.
+FACTOR_DESBORDE = 1.15
 
 MIN_CLIPS = MIN_VIDEO_S // DURACION_CLIP_S          # 7 clips = 28s → se redondea a 8
 MAX_CLIPS = MAX_VIDEO_S // DURACION_CLIP_S          # 15 clips = 60s

@@ -29,3 +29,19 @@ Módulo: `src/estilos_especiales.py` · `obtener(estilo)`
   cambio de estado — el final es el estado ATERRIZADO, nunca a mitad de movimiento),
   **C** (inicial, movimiento mínimo). Ante la duda, A.
 - Para agregar un estilo nuevo: una entrada en `ESTILOS_ESPECIALES`. El resto lo recoge solo.
+
+
+---
+
+## Ritmo, corte y sonido — los decide `ritmo-y-montaje`
+
+Este archivo decide **qué se ve**. La skill transversal `ritmo-y-montaje` decide
+**cada cuánto cambia y cómo suena**, para todos los ads sin importar el estilo:
+
+- El corte visual cae cada **1.5–2.5s**, y los planos extra salen del mismo clip
+  por reencuadre — no se generan clips nuevos para tener más ritmo.
+- El aire entre réplicas son **0.12s**, la voz va a `speed 1.15`.
+- **Todo ad lleva música de fondo**, de la librería del repo, con ducking real y
+  el master a −14 LUFS.
+
+Implementación: `src/ritmo.py` y `src/mezcla.py`.

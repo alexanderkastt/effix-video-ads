@@ -319,16 +319,29 @@ the main character.
 
 ## Camera & framing
 
-Unless requested otherwise, keep the camera stable: static / locked-off, very
-subtle drift, or a slow push-in for emphasis. Avoid fast movement. Frame
-vertical 9:16, centered, medium shot, large readable face, visible hands,
+Keep the camera stable **inside the shot**: static / locked-off, very subtle
+drift, or a slow push-in for emphasis. Avoid fast camera movement — the stillness
+is the signature of this style and it's what makes the object read as alive.
+
+Frame vertical 9:16, centered, medium shot, large readable face, visible hands,
 comfortable headroom — optimized for mobile.
+
+**A still camera is not a still edit.** These are two different decisions and
+they used to be confused here. The shot doesn't move; the cut still lands every
+1.5–2.5s, on reframes of the same generated clip. See the `ritmo-y-montaje`
+skill — it governs the edit for every ad regardless of style.
 
 ## Audio
 
-Unless requested otherwise: no music, no sound effects, voice only. If ambient
-sound fits, keep it extremely subtle (soft wind, gym ambience, laboratory hum)
-and always keep the voice perfectly intelligible.
+**Every ad carries background music.** It comes from the repo library
+(`assets/audio/soundtracks/`, mood `alegre` for this style) and it's mixed with
+real sidechain ducking, so it sits under the voice and lifts in the pauses. This
+section used to say "no music, voice only", which contradicted the house rule and
+left these ads sounding thinner than the rest of the feed. See `ritmo-y-montaje`.
+
+No sound effects unless the beat asks for one. If ambient sound fits, keep it
+extremely subtle (soft wind, gym ambience, laboratory hum) and always keep the
+voice perfectly intelligible.
 
 ## Technical notes
 

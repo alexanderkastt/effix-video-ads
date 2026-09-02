@@ -36,10 +36,14 @@ import fal_client
 import requests
 
 import src.paths  # carga el .env y mapea FAL_API_KEY → FAL_KEY  # noqa: F401
+from src import mezcla, ritmo
 from src.audio_extra import componer_musica, voz_para
 from src.estilos_especiales import ESTILOS_ESPECIALES
+from src.music_engine import pista_de_libreria
 from src.paths import env
-from src.voice_generator import _cliente as cliente_voz, _settings, FORMATO
+from src.voice_generator import (
+    _cliente as cliente_voz, _settings, FORMATO, respiro_s,
+)
 
 GUION = Path("scripts/guiones/effix_skeleton_tienda-ropa-un-ano-en-la-vitrina_20260901_aprobado.json")
 G = json.loads(GUION.read_text(encoding="utf-8"))
@@ -142,7 +146,12 @@ def _duraciones() -> dict[int, float]:
 
 
 def fase_musica() -> None:
-    """Cama instrumental, al 13% debajo de la locución. Opcional pero barata."""
+    """Cama instrumental propia de este ad, si la de la librería no alcanza.
+
+    Ya no hace falta correrla para tener música: el montaje toma la pista del
+    estilo desde `assets/audio/soundtracks/`. Esta fase es para cuando el ad
+    pide una cama que el catálogo no tiene, y cuesta 0.20 USD.
+    """
     destino = AUDIO / "musica.mp3"
     if destino.exists():
         print(f"ya existe: {destino}")
@@ -282,25 +291,33 @@ def _ff(*args) -> None:
                     "-loglevel", "error", *args], check=True)
 
 
-def fase_montaje() -> Path:
-    """Cada clip se corta a la duración exacta de su beat y lleva su mp3.
+def fase_montaje(destino: Path | None = None) -> Path:
+    """Cada beat se corta a su duración exacta y se parte en planos cortos.
 
     El video se corta al audio y no al revés: la narración manda el ritmo, y
-    un clip que dura de más mete un silencio que se oye como error.
+    un clip que dura de más mete un silencio que se oye como error. Dentro de
+    esa duración, `ritmo.py` parte el plano en tomas de 1.5–2.5s reencuadradas.
     """
     duraciones = _duraciones()
     RENDERS.mkdir(parents=True, exist_ok=True)
     tmp = CARPETA / "montaje"
     tmp.mkdir(exist_ok=True)
-    salida = RENDERS / "EFFIX-tienda-ropa-skeleton-Un-ano-en-la-vitrina.mp4"
+    salida = destino or (
+        RENDERS / "EFFIX-tienda-ropa-skeleton-Un-ano-en-la-vitrina.mp4"
+    )
+
+    respiro = respiro_s()
+    largos = [duraciones[b["n"]] + respiro for b in G["beats"]]
+    grupos = ritmo.repartir(largos)
+    print(f"  ritmo: {ritmo.resumen(grupos)}")
 
     entradas, filtros, etiquetas = [], [], []
-    for i, beat in enumerate(G["beats"]):
+    for i, (beat, planos) in enumerate(zip(G["beats"], grupos)):
         n = beat["n"]
         video = CARPETA / f"clip_{n:02d}.mp4"
         if not video.exists():
             sys.exit(f"Falta {video}. Corre la fase `clips`.")
-        dur = duraciones[n] + 0.35  # el aire entre frases
+        dur = largos[i]
         # Si la frase quedó más larga que el clip pagado, se estira el plano en
         # vez de regenerarlo: por debajo del 10% no se nota y no cuesta nada.
         real = _duracion(video)
@@ -312,35 +329,51 @@ def fase_montaje() -> Path:
                          f"Estirarlo un {factor:.0%} se vería: regenéralo con más segundos.")
             estirar = f"setpts=PTS*{factor:.4f},"
         texto = beat["overlay"].replace("'", "").replace(":", r"\:")
-        drawtext = (f"drawtext=fontfile='{FUENTE}':text='{texto}':"
-                    f"fontcolor=white:fontsize=58:borderw=6:bordercolor=black@0.85:"
-                    f"x=(w-text_w)/2:y=h-330:enable='between(t,0.3,{dur - 0.25:.2f})'")
         entradas += ["-i", str(video), "-i", str(AUDIO / f"beat_{n:02d}.mp3")]
         vi, ai = i * 2, i * 2 + 1
+        # El beat se estira una sola vez, antes de repartirlo en planos: si el
+        # setpts fuera por plano, cada uno estiraría su tramo por separado y
+        # los cortes caerían donde no toca. El `split` es obligatorio: una
+        # etiqueta de salida de filtro solo se puede consumir una vez, y aquí
+        # la consumen todos los planos del beat.
+        ramas = "".join(f"[b{i}_{j}]" for j in range(len(planos)))
         filtros.append(
-            f"[{vi}:v]{estirar}trim=0:{dur:.2f},setpts=PTS-STARTPTS,"
-            f"scale=1080:1920:force_original_aspect_ratio=increase,"
-            f"crop=1080:1920,{drawtext},fps=24[v{i}]")
-        filtros.append(f"[{ai}:a]apad=whole_dur={dur:.2f},atrim=0:{dur:.2f},"
-                       f"asetpts=PTS-STARTPTS[a{i}]")
-        etiquetas.append(f"[v{i}][a{i}]")
+            f"[{vi}:v]{estirar}setpts=PTS-STARTPTS,split={len(planos)}{ramas}"
+        )
+        # El overlay va por beat, no por plano: el texto de una frase no debe
+        # parpadear cada vez que cambia el encuadre. Cada plano lo redibuja con
+        # su ventana corrida, porque el `trim` le reinicia el reloj a cero.
+        for j, plano in enumerate(planos):
+            crudo = f"c{i}_{j}"
+            filtros.append(ritmo.filtro_video(plano, f"b{i}_{j}", crudo))
+            drawtext = (
+                f"drawtext=fontfile='{FUENTE}':text='{texto}':"
+                f"fontcolor=white:fontsize=58:borderw=6:bordercolor=black@0.85:"
+                f"x=(w-text_w)/2:y=h-330:"
+                f"enable='between(t,{max(0.3 - plano.inicio_s, 0):.2f},"
+                f"{max(dur - 0.25 - plano.inicio_s, 0):.2f})'"
+            )
+            filtros.append(f"[{crudo}]{drawtext}[v{i}_{j}]")
+            filtros.append(ritmo.filtro_audio(plano, f"{ai}:a", f"a{i}_{j}"))
+            etiquetas.append(f"[v{i}_{j}][a{i}_{j}]")
 
-    filtros.append("".join(etiquetas) + f"concat=n={len(G['beats'])}:v=1:a=1[vid][voz]")
+    n_planos = len(etiquetas)
+    filtros.append("".join(etiquetas) + f"concat=n={n_planos}:v=1:a=1[vid][voz]")
     mudo = tmp / "sin_musica.mp4"
     _ff(*entradas, "-filter_complex", ";".join(filtros), "-map", "[vid]", "-map", "[voz]",
         "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
         "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(mudo))
 
+    total = round(sum(largos), 2)
+    # La pista propia del job manda; si no se generó, la de la librería.
     musica = AUDIO / "musica.mp3"
-    if musica.exists():
-        total = round(sum(duraciones.values()) + 0.35 * len(G["beats"]), 2)
-        _ff("-i", str(mudo), "-i", str(musica), "-filter_complex",
-            f"[1:a]volume=0.13,afade=t=out:st={max(total - 4, 0):.2f}:d=4[m];"
-            f"[0:a][m]amix=inputs=2:duration=first[a]",
-            "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
-            "-shortest", str(salida))
+    if not musica.exists():
+        musica = pista_de_libreria(G.get("estilo") or "skeleton", G.get("tono") or "")
+    if musica and Path(musica).exists():
+        print(f"  música: {Path(musica).name}")
+        mezcla.mezclar(mudo, Path(musica), salida, duracion_s=total)
     else:
-        print("  (sin música: corre la fase `musica` si la quieres)")
+        print("  (sin música: corre `python scripts/generar_soundtracks.py`)")
         _ff("-i", str(mudo), "-c", "copy", str(salida))
 
     print(f"\nLISTO: {salida}  ({salida.stat().st_size / 1024 / 1024:.1f} MB)")
@@ -350,8 +383,14 @@ def fase_montaje() -> Path:
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("fase", choices=["voz", "musica", "hero", "escenas", "clips", "montaje"])
-    fase = ap.parse_args().fase
+    # Para probar un montaje sin pisar el render ya entregado.
+    ap.add_argument("--salida", type=Path, default=None)
+    args = ap.parse_args()
+    fase = args.fase
     print(f"{G['titulo']} · {G['estilo']} · {G['nicho']} · "
           f"{len(G['beats'])} beats · job {JOB}\n")
-    {"voz": fase_voz, "musica": fase_musica, "hero": fase_hero,
-     "escenas": fase_escenas, "clips": fase_clips, "montaje": fase_montaje}[fase]()
+    if fase == "montaje":
+        fase_montaje(args.salida)
+    else:
+        {"voz": fase_voz, "musica": fase_musica, "hero": fase_hero,
+         "escenas": fase_escenas, "clips": fase_clips}[fase]()

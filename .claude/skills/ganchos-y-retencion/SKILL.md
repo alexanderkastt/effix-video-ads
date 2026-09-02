@@ -1,6 +1,16 @@
 ---
 name: ganchos-y-retencion
-description: Sistema transversal de ganchos, retención y contenido que conecta, para las tres marcas de Alexander (@alexemprendee, @militougc, @kreoon.latam), Feria Effix y clientes de agencia. Contiene las seis categorías reales de hook cruzadas de 14 taxonomías, el marco de niveles de conciencia que decide cuál usar, las reglas de calibración con evidencia medida, la mecánica de retención según la documentación oficial de cada plataforma, y los mitos verificados como falsos. Usa esta skill SIEMPRE que haya que escribir un gancho, abrir un video, diagnosticar por qué un creativo no retiene, elegir entre alcance y conversión, auditar un guion existente, o cuando alguien pida "hooks", "ganchos", "que enganche más", "por qué no retiene" o "hazlo más viral". Es la capa de método: las skills de formato la consultan antes de escribir.
+description: >-
+  Sistema transversal de ganchos, retención y contenido que conecta, para las tres marcas de
+  Alexander (@alexemprendee, @militougc, @kreoon.latam), Feria Effix y clientes de agencia.
+  Contiene las seis categorías reales de hook cruzadas de 14 taxonomías, el marco de niveles
+  de conciencia que decide cuál usar, las reglas de calibración con evidencia medida, la
+  mecánica de retención según la documentación oficial de cada plataforma, y los mitos
+  verificados como falsos. Usa esta skill SIEMPRE que haya que escribir un gancho, abrir un
+  video, diagnosticar por qué un creativo no retiene, elegir entre alcance y conversión,
+  auditar un guion existente, o cuando alguien pida "hooks", "ganchos", "que enganche más",
+  "por qué no retiene" o "hazlo más viral". Es la capa de método: las skills de formato la
+  consultan antes de escribir.
 ---
 
 # Ganchos y retención — el método

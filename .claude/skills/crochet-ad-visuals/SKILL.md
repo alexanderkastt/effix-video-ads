@@ -356,3 +356,20 @@ Visual: Character in a crocheted apartment sniffs his inner wrist and reacts in 
 ---
 
 That's the quality bar. Director's note tells the user the approach. Image prompts follow the 5-part structure with universal excerpts baked in. I2V prompts follow the 4-part structure with the closing line baked in. Model limitations are respected (character-based storytelling instead of particle evaporation, simple poses, no "knitted skin" descriptions).
+
+
+---
+
+## Pacing, cutting and sound — governed by `ritmo-y-montaje`
+
+This file decides **what you see**. The cross-cutting `ritmo-y-montaje` skill
+decides **how often it changes and how it sounds**, for every ad regardless of
+style:
+
+- The visual cut lands every **1.5-2.5s**, and extra shots are pulled from the
+  same clip by reframing — never generate new clips just to get more cuts.
+- The pause between lines is **0.12s**; the voice runs at `speed 1.15`.
+- **Every ad carries background music**, from the repo library, with real
+  sidechain ducking and the master at -14 LUFS.
+
+Implementation: `src/ritmo.py` and `src/mezcla.py`.

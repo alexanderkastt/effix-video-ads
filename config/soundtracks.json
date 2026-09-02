@@ -1,0 +1,55 @@
+{
+  "_nota": "Librería de música de fondo. Se genera una sola vez con `python scripts/generar_soundtracks.py` (0.20 USD por pista, stable-audio-25) y a partir de ahí es gratis: cada ad toma la pista de su mood en vez de componer una nueva. Solo se genera pista nueva cuando el guión pide un mood que no está aquí, y esa pista se guarda para que la próxima tampoco cueste.",
+  "_ubicacion": "assets/audio/soundtracks/<mood>.mp3",
+  "_duracion_s": 75,
+  "moods": {
+    "energetico": {
+      "archivo": "energetico.mp3",
+      "bpm": 95,
+      "prompt": "upbeat lo-fi hip hop, warm bass, positive energy, light percussion",
+      "estilos": ["ugc_realista", "testimonial", "skeleton"],
+      "para": "El ad que habla de frente a la cámara. Empuja sin robar atención."
+    },
+    "emotivo": {
+      "archivo": "emotivo.mp3",
+      "bpm": 72,
+      "prompt": "soft acoustic guitar, warm piano, intimate, gentle",
+      "estilos": ["testimonial", "documental"],
+      "para": "El cierre que aterriza, o el ad que cuenta una historia personal."
+    },
+    "aspiracional": {
+      "archivo": "aspiracional.mp3",
+      "bpm": 85,
+      "prompt": "cinematic orchestral, building strings, triumphant, hopeful swell",
+      "estilos": ["cinematic", "zack_films"],
+      "para": "El ad que promete algo grande. La cuerda que sube en el payoff."
+    },
+    "alegre": {
+      "archivo": "alegre.mp3",
+      "bpm": 110,
+      "prompt": "playful orchestral, pizzicato strings, adventurous, bouncy woodwinds",
+      "estilos": [
+        "pixar_animado",
+        "claymation",
+        "animado_2d",
+        "object_talk",
+        "crochet"
+      ],
+      "para": "Todo lo animado. El personaje que se mete en un lío y sale bien."
+    },
+    "tenso": {
+      "archivo": "tenso.mp3",
+      "bpm": 100,
+      "prompt": "curious tense underscore, muted pulse, ticking percussion, restrained",
+      "estilos": ["skeleton", "cyberpunk", "suspenso"],
+      "para": "La escalada del skeleton: aprieta durante el problema y suelta en el CTA."
+    },
+    "epico": {
+      "archivo": "epico.mp3",
+      "bpm": 130,
+      "prompt": "epic hybrid orchestral, heavy percussion, brass hits, driving",
+      "estilos": ["anime", "avengers", "epico"],
+      "para": "El ad que se toma en serio a sí mismo. Poco frecuente, pero cuando toca, toca."
+    }
+  }
+}

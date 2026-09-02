@@ -1,6 +1,9 @@
 ---
 name: storyboard-director
-description: Activa cuando el guión está aprobado y hay que producir el storyboard completo. Genera para cada beat: narración, overlay, prompt de imagen, prompt de video I2V, tipo de clip (A/B/C), notas de director y costo estimado.
+description: >-
+  Activa cuando el guión está aprobado y hay que producir el storyboard completo. Genera
+  para cada beat: narración, overlay, prompt de imagen, prompt de video I2V, tipo de clip
+  (A/B/C), notas de director y costo estimado.
 ---
 
 Output: un HTML visual + un JSON ejecutable. El HTML es para que Alexander apruebe.
@@ -27,3 +30,19 @@ Módulo: `src/storyboard_director.py` · `StoryboardDirector().generar(beats, es
 - El costo se muestra como "SIN CALCULAR" mientras `config/costos.json` tenga
   `verificado: false`. Nunca inventar una tarifa.
 - Ningún prompt lleva texto en pantalla quemado: los subtítulos van en el editor.
+
+
+---
+
+## Ritmo, corte y sonido — los decide `ritmo-y-montaje`
+
+Este archivo decide **qué se ve**. La skill transversal `ritmo-y-montaje` decide
+**cada cuánto cambia y cómo suena**, para todos los ads sin importar el estilo:
+
+- El corte visual cae cada **1.5–2.5s**, y los planos extra salen del mismo clip
+  por reencuadre — no se generan clips nuevos para tener más ritmo.
+- El aire entre réplicas son **0.12s**, la voz va a `speed 1.15`.
+- **Todo ad lleva música de fondo**, de la librería del repo, con ducking real y
+  el master a −14 LUFS.
+
+Implementación: `src/ritmo.py` y `src/mezcla.py`.

@@ -106,10 +106,16 @@ saldran con una paleta que la marca no tiene. Ademas `brand.json` pide fuente `I
 para cuerpo, pero la unica fuente descargada es `Montserrat.ttf` (y el sitio usa
 Montserrat 300 para cuerpo, no Inter).
 
-⚠️ **Conflicto de formato sin resolver:** el brief de la factory pide 11 clips
-de 4s (44s). `MASTER_CONTEXT.md` dice que Kling 2.5 es 3.4x mas barato y permite
-clips de 10s — con 10s bastan ~5 clips para 45s, con menos cortes y menos
-creditos. El `.env` quedo en 11x4s como pide el brief; decidir antes de producir.
+✅ **Conflicto de formato RESUELTO (2026-09-02).** Era: el brief pedia 11 clips
+de 4s (44s) y `MASTER_CONTEXT.md` empujaba a clips de 10s, mas baratos pero con
+menos cortes. Se resolvio separando las dos cosas que estaban peleando:
+
+- **Clip** = lo que se le paga al modelo. Conviene largo, porque sale mas barato.
+- **Plano** = la unidad de corte. Conviene corto, porque es lo que da ritmo.
+
+No hay que elegir: un clip largo se parte en varios planos por reencuadre, en
+`src/ritmo.py`, sin pagar video extra. Se gana el precio del clip de 10s y el
+ritmo del corte de 2s a la vez.
 
 ---
 
@@ -198,16 +204,21 @@ visuales por frase para que Alexander elija, cosa que el codigo no hace.
 ⚠️ `zack-d-films` depende de Higgsfield MCP y su plan cayo a free con 4 creditos.
 El skill corre, pero la generacion real esta bloqueada hasta recargar.
 
-✅ **FORMATO CERRADO — corte cada 4s, video de 30 a 60s.**
+✅ **FORMATO CERRADO — corte cada 1.5-2.5s, video de 30 a 60s.**
+*(2026-09-02: era "corte cada 4s". Ver "Ritmo, dinamica y soundtrack" al final.)*
 
-Se separaron dos unidades que estaban confundidas:
+Se separaron tres unidades que estaban confundidas:
 
 - **Beat narrativo** — uno de los once pasos de la micro-situacion.
-- **Clip** — 4 segundos exactos. Es la unidad de corte.
+- **Clip** — lo que se le paga al modelo de video. Su duracion la decide el
+  audio real, no una ventana fija.
+- **Plano** — 1.5 a 2.5 segundos. Es la unidad de corte, y no le pide permiso
+  ni al beat ni al clip.
 
-Un beat que habla mas de 4s no se vuelve un plano largo: se vuelve DOS clips,
-dos escenas distintas del mismo beat, con encuadre alterno. El corte visual
-sigue cayendo cada 4 segundos.
+Un beat que habla mas de 2.5s no se vuelve un plano largo: se vuelve DOS o TRES
+planos con encuadre alterno. Y esos planos salen del MISMO clip, reencuadrados
+— no se generan clips nuevos para tener mas cortes, porque eso multiplica el
+costo. Lo hace `src/ritmo.py`.
 
 La micro-situacion completa (76-88s) se quedo como INVESTIGACION dentro del
 beat, en el campo `investigacion`. Lo que se locuta es la version hablada de
@@ -217,6 +228,11 @@ beat, en el campo `investigacion`. Lo que se locuta es la version hablada de
 3.64s y caben en el clip. A 9 ya piden 4.09s y se llevan un clip entero de mas:
 el video salta de 44s a 48s por una sola palabra. `validar_presupuesto()` lo
 verifica en las 88 lineas.
+
+*(2026-09-02: ese techo quedo holgado. La voz real corre a 3.69 palabras/segundo
+—medido con `scripts/calibrar_voz.py`—, no a 2.2, y el plano ya no es una ventana
+fija que una palabra de mas desborde. El presupuesto sale ahora de
+`PALABRAS_POR_SEGUNDO` en el `.env`.)*
 
 Resultado medido en los 8 angulos: **11 clips x 4s = 44s**, locucion 35-39s,
 holgura 5-9s de respiracion entre frases. Los 8 dentro del rango 30-60s.
@@ -398,3 +414,48 @@ de los que da el producto. Corre en el test sobre las 16 combinaciones
 - Nunca pedir "slow" / "deliberate" en prompts de video: sale cámara lenta real.
 - Preflight de costo con los **parámetros finales** (duración, resolución, keyframes).
   Un preflight a 6s sin keyframes subestimó el costo real en más del doble.
+
+---
+
+## Ritmo, dinamica y soundtrack (2026-09-02)
+
+Alexander vio los ads de `tienda_ropa` y dijo tres cosas: la voz suena lenta, al
+video le falta dinamica, y hay que ponerle soundtrack a todos. Las tres eran el
+mismo problema de fondo — el montaje seguia el ritmo del habla en vez de imponer
+el suyo — y ninguna era del guion.
+
+**Lo que cambio:**
+
+| Antes | Ahora |
+|---|---|
+| 1 plano = 1 linea (hasta 7s de la misma camara) | Corte cada 1.5–2.5s, planos del mismo clip reencuadrados |
+| `ELEVENLABS_SPEED=1.0` | `1.15` |
+| Respiro de 0.25 / 0.35 / 0.12 segun el script | `RESPIRO_S=0.12` para todos |
+| `PALABRAS_POR_SEGUNDO` = 2.96 / 2.75 / 2.2 segun el archivo | 3.69, medido, en el `.env` |
+| Musica opcional, en 2 de 5 pipelines | Obligatoria, de libreria, en todos |
+| 3 mezclas distintas, volumen 0.13 / 0.25 | Una sola, con ducking real y −14 LUFS |
+
+**Modulos nuevos:** `src/ritmo.py` (reparto de planos y encuadres) y
+`src/mezcla.py` (ducking con sidechain, fade derivado, loudnorm).
+**Scripts nuevos:** `scripts/generar_soundtracks.py` (libreria, 1.20 USD una vez)
+y `scripts/calibrar_voz.py` (remide las palabras/segundo).
+**Skill nueva:** `.claude/skills/ritmo-y-montaje/SKILL.md`, transversal, citada
+desde las cinco skills de formato.
+
+**Medido en los dos ads existentes, re-montando sin generar video nuevo:**
+
+| Ad | Planos antes | Planos ahora | Duracion | Loudness |
+|---|---|---|---|---|
+| `tienda-ropa-2d-la-acera` | 12 | 19 (0.86–2.40s) | 35.96s → 34.4s | −15.5 LUFS |
+| `tienda-ropa-skeleton-vitrina` | 9 | 23 (1.48–2.39s) | 47.44s → 45.5s | −14.3 LUFS |
+
+Costo extra por ad: **cero**. Los planos salen del clip ya pagado y la musica de
+la libreria.
+
+⚠️ **Los ads ya entregados NO se re-produjeron** — por decision de Alexander esto
+aplica de aqui en adelante. Los numeros de arriba salen de renders de prueba que
+se borraron.
+
+⚠️ **Efecto secundario en los guiones:** a 3.69 palabras/segundo el mismo guion
+dura menos. Un guion de 110 palabras pasa de ~37s a ~30s. Los guiones nuevos
+pueden llevar mas texto, o el ad queda mas corto que antes.
