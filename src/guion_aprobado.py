@@ -352,8 +352,20 @@ def nombre_de_entrega(g: dict[str, Any]) -> str:
     vende poquito"— así que hace de resumen sin necesidad de meter el párrafo
     entero. Y cuando el guion no trae `nicho` con nombre (la serie de parrilla
     numerada), se usa `publico`, que es donde vive esa información.
+
+    Dos reglas más, que salen de la serie numerada P01–P28:
+
+    - Si el guion trae `nombre_entrega`, ése es el nombre y no se discute. Lo
+      escribe quien redactó el guion y sabe a qué público le habla.
+    - Si no lo trae pero sí trae `nicho_mapa`, el nombre se antepone con
+      `P<NN>_`. Sin el número, los 28 ads quedan ordenados por estilo en la
+      carpeta y no por público, que es como se revisan.
     """
     from datetime import date
+
+    propuesto = (g.get("nombre_entrega") or "").strip()
+    if propuesto:
+        return propuesto if propuesto.endswith(".mp4") else propuesto + ".mp4"
 
     marca = _slug(g.get("marca") or "effix", 12)
     estilo = _slug(g.get("estilo") or "sin-estilo", 16)
@@ -367,7 +379,10 @@ def nombre_de_entrega(g: dict[str, Any]) -> str:
         or g.get("dolor_frase") or "", 45)
     fecha = date.today().strftime("%Y%m%d")
     partes = [p for p in (marca, estilo, quien, micro, fecha) if p]
-    return "_".join(partes) + ".mp4"
+    nombre = "_".join(partes) + ".mp4"
+    if g.get("nicho_mapa"):
+        nombre = f"P{int(g['nicho_mapa']):02d}_" + nombre
+    return nombre
 
 
 def estimar_costo(g: dict[str, Any], *, modelo_video: str, modelo_imagen: str,

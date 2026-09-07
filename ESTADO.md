@@ -925,3 +925,76 @@ un intento gastó 13.6s en intro y salió sin puente ni CTA.
 **Pendiente de código:** techo de clips por línea en
 `plan_musical.repartir_clips()` para que una línea no absorba el tiempo de las
 que no anclaron. Sale gratis y evita repetir este gasto.
+
+---
+
+## 2026-09-07 · Ad P01 v2 pixar "Quiero vender y no sé por dónde"
+
+**Entregado:** `assets/renders/P01_effix_pixar_emprendedores-que-empiezan_quiero-vender-y-no-se-por-donde_20260907.mp4`
+51.83s · 26 planos de 1.91–2.00s · −14.3 LUFS · true peak −4.5 dBTP · **4.4569 USD reales**
+(estimado 4.0634; la diferencia son dos escenas regeneradas y el whisper).
+
+Guion `effix_pixar_p01-empezar-musical_v2_aprobado.json`, formato F6 dos voces.
+**Primer ad del lote que cae dentro del rango 30–60s** sin cortar la canción:
+la letra corta (108 palabras) y `duracion_ms` con margen hicieron el trabajo.
+
+### Cuatro prompts corregidos ANTES de gastar
+
+La validación automática pasaba limpia; los cuatro fallos los cazó la lectura
+contra las reglas escritas, y ninguno costó dinero:
+
+1. L9 traía `hundreds of colourful stands` — la frase que ya costó 0.36 USD en
+   `contadores-musical`. Reescrita a la redacción canónica de `modern convention
+   hall` con veto de mercado. **La escena 9 salió a la primera y es la mejor del ad.**
+2. L10 traía `at a fair stand`, vetado por la misma entrada.
+3. L7 hacía *volver* el color al aparecer la feria, justo al revés del corte
+   declarado para los 28.
+4. L12 seguía con el botón flotante en `prompt_video` pese a la corrección del
+   2026-09-07 que lo quitó del `prompt_imagen`: el clip lo habría dibujado igual.
+
+**Aprendizaje:** una corrección aplicada sólo al `prompt_imagen` no está
+aplicada. El clip nace de la imagen pero el movimiento lo dicta el
+`prompt_video`, y ahí seguía el botón. Revisar los dos campos siempre.
+
+### Dos escenas regeneradas en producción (0.16 USD)
+
+- **Escena 6:** nano-banana puso el logotipo de una marca real en la tapa del
+  portátil, y encima los "abstract geometric shapes" se leían como glifos. El
+  `negative_prompt` ya decía `logo` y no bastó: hizo falta pedir la tapa lisa
+  explícitamente (`plain unbranded matte laptop, completely blank smooth lid`).
+- **Escena 12:** NUBE no hizo el gesto de señalar al borde inferior. "Pointing
+  down with one hand" no basta; con `one stubby arm fully extended straight
+  downward, the whole arm visible against the body` sí salió.
+
+### La alineación salió perfecta, y por qué importa
+
+Las 12 líneas ancladas, tramos contiguos de 2.5 a 7.5s, ninguna absorbiendo a
+otra. Es lo contrario del p04, donde tres líneas se quedaron sin material y los
+primeros 24s eran el mismo plano. **El pendiente del techo de clips por línea en
+`plan_musical.repartir_clips()` sigue abierto**, pero aquí no se activó.
+
+### Abierto, decide Alexander
+
+1. **La aparición AGRAVADA de la micro-situación no está en imagen.** El guion
+   la pedía en la línea 6 (la misma tapa, otro día, la libreta el doble de
+   llena) y el reparto no le dio clip propio: su tramo dura 3.26s, por debajo
+   del clip de 4s, así que el hueco lo cubre el clip encadenado 5→7 y en el
+   segundo 19.5 se ve el pabellón con el overlay "Otro día igual". Las otras dos
+   apariciones (cruda L2, resuelta L11) sí se reconocen. Un clip propio desde la
+   escena 6 —ya pagada— cuesta 0.2333 y dejaría el ad en 4.69.
+2. **La marca suena "de fix"** otra vez (whisper oye "Feria FX"). Sexta canción
+   consecutiva; ninguna grafía lo ha arreglado con MiniMax Music 3.
+3. **L7 se canta cambiada:** "el que vende **en pesos** sin saber jamás" en vez
+   de "empezó". Es la línea de causa raíz. Regenerar la canción son 0.128 y
+   obliga a rehacer el reparto de clips.
+4. Los banners de fondo de la escena 12 tienen formas blancas que insinúan
+   letras. Están desenfocados, pero la regla dice `absolutely no letters`.
+
+### Código y documentación
+
+`guion_aprobado.nombre_de_entrega()` ahora respeta el campo `nombre_entrega` del
+guion y, si no está, antepone `P<NN>_` cuando el guion trae `nicho_mapa`. Los 28
+ads de la parrilla se revisan por público, no por estilo. Actualizados
+`CLAUDE.md` y `docs/FORMATO-GUION.md` en el mismo commit. Los dos tests de salud
+en verde después del cambio.
+

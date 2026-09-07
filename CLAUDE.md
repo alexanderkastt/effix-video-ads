@@ -112,7 +112,11 @@ Cuando Alexander diga `produce scripts/guiones/<archivo>_aprobado.json`:
 3. **Esperar el OK explícito de Alexander.** Sin OK no se llama a ninguna API.
 4. Voz por línea (`beat_NN.mp3`) → medir con ffprobe → repartir clips desde el audio.
 5. Imágenes (`@Image1`, `@Image2` si hay `prompt_keyframe_final`) → clips → `ritmo.py`
-   → `mezcla.py` → `assets/renders/<job_id>.mp4`.
+   → `mezcla.py` → render en `assets/renders/`. **El mp4 se nombra por su contenido,
+   no por el `job_id`**: manda el campo `nombre_entrega` del guion si existe, y si no
+   lo genera `guion_aprobado.nombre_de_entrega()`, que antepone `P<NN>_` cuando el
+   guion trae `nicho_mapa` (la serie de parrilla se revisa por público, no por estilo).
+   Detalle en `docs/FORMATO-GUION.md`.
 6. QA: duración, −14 LUFS, número de planos, ningún plano < 1.25s. Anotar costo real
    en `logs/` y la entrega en `ESTADO.md`.
 

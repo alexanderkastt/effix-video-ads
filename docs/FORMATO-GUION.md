@@ -138,6 +138,18 @@ resumen sin meter el párrafo entero. Cuando el guion no trae `nicho` con nombre
 —la serie de parrilla numerada— se usa `publico`. Lo genera
 `guion_aprobado.nombre_de_entrega()`.
 
+**La serie numerada va con su número delante** (2026-09-07). Los 28 ads de la
+parrilla se revisan por público, no por estilo, y sin el número la carpeta de
+renders queda ordenada por estilo:
+
+```
+P01_effix_pixar_emprendedores-que-empiezan_quiero-vender-y-no-se-por-donde_20260907.mp4
+```
+
+`nombre_de_entrega()` lo hace en dos pasos: si el guion trae `nombre_entrega`,
+ése es el nombre y no se discute —lo escribe quien redactó el guion y sabe a qué
+público le habla—; si no lo trae pero sí trae `nicho_mapa`, antepone `P<NN>_`.
+
 ### Campos que el productor añadió al esquema
 
 | Campo | Dónde | Para qué |
