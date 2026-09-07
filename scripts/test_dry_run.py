@@ -16,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from src.consola import usar_utf8                  # noqa: E402
 from src import cost_estimator                     # noqa: E402
 from src.music_engine import MusicEngine           # noqa: E402
-from src.paths import BRAND_DNA_JSON, ensure_dirs  # noqa: E402
+from src.paths import BRAND_DNA_JSON, ensure_dirs, env_float  # noqa: E402
 from src.scene_builder import SceneBuilder         # noqa: E402
 from src.script_engine import ScriptEngine         # noqa: E402
 from src.storyboard_builder import StoryboardBuilder  # noqa: E402
@@ -93,7 +93,8 @@ def main() -> int:
     musica = music.generate_background_brief(
         tono=engine.dna["tono"], estilo=ESTILO, duracion_s=script["duracion_total_s"]
     )
-    musica_ok = bool(musica.get("suno_prompt")) and musica["volumen_relativo"] == 0.25
+    volumen_esperado = env_float("MUSICA_VOLUMEN", 0.18)
+    musica_ok = bool(musica.get("suno_prompt")) and musica["volumen_relativo"] == volumen_esperado
     check(
         5, "MusicEngine genera el brief de música correcto", musica_ok,
         f"{musica['suno_prompt']} · {musica['bpm_recomendado']} BPM · "

@@ -21,7 +21,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-from .paths import GUIONES_DIR, STORYBOARDS_DIR, ensure_dirs, load_brand_tokens
+from .paths import GUIONES_DIR, STORYBOARDS_DIR, ensure_dirs, env_float, load_brand_tokens
 
 PALETA_FALLBACK = {
     "primario": "#E31B23",
@@ -127,7 +127,7 @@ class StoryboardBuilder:
       <p><strong>Prompt Suno:</strong> {e(str(musica.get('suno_prompt', musica.get('suno_title', ''))))}</p>
       <p><strong>Tags:</strong> {e(', '.join(musica.get('suno_style_tags', [])))}</p>
       <p><strong>BPM:</strong> {e(str(musica.get('bpm_recomendado', '')))} ·
-         <strong>Volumen:</strong> {int(float(musica.get('volumen_relativo', 0.25)) * 100)}%</p>
+         <strong>Volumen:</strong> {int(float(musica.get('volumen_relativo', env_float('MUSICA_VOLUMEN', 0.18))) * 100)}%</p>
     </section>"""
 
         hooks_html = "".join(

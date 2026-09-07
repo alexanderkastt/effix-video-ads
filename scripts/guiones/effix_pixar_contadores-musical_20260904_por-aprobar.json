@@ -1,0 +1,228 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "contadores-musical-pixar",
+  "titulo": "Los clientes de ecommerce necesitan contador",
+  "marca": "effix",
+  "nicho": "contadores",
+  "angulo": "principal",
+  "estilo": "pixar",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "gancho": {
+    "banco": "dolor_nombrado#33",
+    "gatillos": [
+      "dolor_nombrado",
+      "dejar_de_ganar"
+    ]
+  },
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Te llega un cliente que vende por internet, te muestra sus movimientos, y por dentro sabes que ese modelo no lo manejas todavía.",
+    "sintoma": "Lo atiendes igual, pero te queda la sensación de estar cobrando por algo que estás resolviendo sobre la marcha.",
+    "reaccion_interna": "Y lo peor: sabes que ese cliente vale más que tres de los tradicionales, y se te puede ir con alguien que sí sepa.",
+    "explicacion_fallida": "Te dices que ya vas a estudiar el tema, cuando baje la temporada.",
+    "patron": "Pero la temporada nunca baja, y cada mes entran más negocios digitales al mercado.",
+    "causa_raiz": "No te falta estudiar. Te falta estar donde están ellos, y ellos no están en tu oficina.",
+    "mecanismo": "Trescientas cincuenta empresas digitales en un solo recinto, todas necesitando quien les cuadre los números."
+  },
+  "bible": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16.",
+  "negative_prompt": "sharp edges, flat colors, 2D look, cheap animation feel, realistic human, photoreal, text, captions, letters, watermark, logo, UI, style drift, extra limbs",
+  "personajes": {
+    "calcu": {
+      "ficha": "CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot.",
+      "voz": null,
+      "quien_es": "CALCU, una calculadora de escritorio con ojos: es el contador. TIENDA, un carrito de compras con ojos: es la tienda online que necesita contador.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "suno_title": "Feria Effix — Los clientes de ecommerce necesitan contador",
+    "suno_custom_lyrics": "[Verso 1]\nEres contador, y te llega un cliente que vende por internet\nTe muestra sus ventas, y ese modelo no lo conoces\nSi eres contador y todavía no tienes clientes de ecommerce\nEste video es para ti\n\n[Verso 2]\nCada día abren más tiendas por internet\nFacturan, pagan pasarelas, envían a otros países\nY necesitan quién les cuadre los números\n\n[Pre-coro]\nEsos clientes existen\nSolo tienes que ir a donde están\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nAhí están tus próximos clientes\n\n[Verso 3]\nAhí están las tiendas que hoy no tienen contador\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nAhí están tus próximos clientes",
+    "suno_style_tags": [
+      "upbeat orchestral pop",
+      "playful pizzicato strings",
+      "bright brass hits",
+      "catchy sung hook",
+      "warm male vocal",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 104,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Eres contador, y te llega un cliente que vende por internet / Te muestra sus ventas, y ese modelo no lo conoces",
+      "texto_tts": "",
+      "texto_pantalla": "Una tienda te trae sus números",
+      "plano": "PROBLEMA · Una tienda online le trae sus ventas y él no conoce el modelo",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide establishing shot. CALCU at a tidy accounting desk; TIENDA rolls up carrying a floating stack of blank receipt shapes and drops them on the desk; CALCU's paper roll stands straight up in alarm, eyes wide. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The receipts land, CALCU's roll shoots up, his eyes dart across them, he looks at the viewer unsure. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Si eres contador y todavía no tienes clientes de ecommerce / Este video es para ti",
+      "texto_tts": "",
+      "texto_pantalla": "¿Eres contador?",
+      "plano": "A QUIÉN LE HABLA · Contadores sin clientes de ecommerce",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up. CALCU faces the camera adjusting his green visor, TIENDA waiting beside him, a wall of binders behind. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 He turns to camera, straightens the visor, small nod; TIENDA looks at camera too. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Cada día abren más tiendas por internet",
+      "texto_tts": "",
+      "texto_pantalla": "Cada día abren más tiendas",
+      "plano": "PROBLEMA · Cada día abren más tiendas online",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, close-up on hands and object. Through the office window: a city street where many small shop buildings light up one after another, each with a glowing shopping-cart sign; CALCU watching from the desk. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Shop signs light up one by one, more and more; CALCU rolls to the window edge to see. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Facturan, pagan pasarelas, envían a otros países",
+      "texto_tts": "",
+      "texto_pantalla": "Pasarelas, envíos, facturas",
+      "plano": "PROBLEMA · Facturan, pagan pasarelas, envían a otros países",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot from behind. Close-up of TIENDA on the desk showing three floating icons one after another: a coin, a card-terminal shape, a small airplane; CALCU's button-arms hover, unsure. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The three icons pop up in sequence, CALCU's arms rise and stop between them. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Y necesitan quién les cuadre los números",
+      "texto_tts": "",
+      "texto_pantalla": "Necesitan quién les cuadre los números",
+      "plano": "PROBLEMA · Casi ninguna tiene contador",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, low-angle wide. Wide: the street of lit shops seen from above, and next to almost every shop an empty desk with a small calculator-shaped icon (no accountant); only one desk is occupied. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The camera drifts over the row of empty desks, a few shop signs blink. Camera: gentle aerial drift forward. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Esos clientes existen / Solo tienes que ir a donde están",
+      "texto_tts": "",
+      "texto_pantalla": "Ve a donde están",
+      "plano": "GIRO · Esos clientes existen, hay que ir a donde están",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, extreme close-up on eyes. Extreme close-up of CALCU's display-eyes, digits fading and replaced by the reflection of a bright crowded pavilion; his roll lifts. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection sharpens in his eyes, the roll rises, a decisive blink. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve de octubre / Plaza Mayor, Medellín",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "SOLUCIÓN · Feria Effix, Plaza Mayor, 15 al 19 de octubre",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide tracking shot. CALCU rolling on a tiny suitcase into the glass entrance of a modern convention centre; a huge crowd and many TIENDA-like carts stream in with him, morning light. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 CALCU rolls in with the crowd, the doors slide open, carts roll past him. Camera: tracking from behind. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas / Más de sesenta mil asistentes / Ahí están tus próximos clientes",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "SOLUCIÓN · Más de 350 empresas y más de 60.000 asistentes",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, high-angle wide over the crowd. High-angle wide over an enormous pavilion: hundreds of colourful stands and a crowd of thousands, many TIENDA-like carts among them; CALCU small in the aisle, visor tipped back. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Aerial drift forward, the crowd moves, CALCU spins in place. Camera: gentle aerial drift forward. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Ahí están las tiendas que hoy no tienen contador",
+      "texto_tts": "",
+      "texto_pantalla": "Ahí están tus próximos clientes",
+      "plano": "SOLUCIÓN · Las tiendas sin contador están ahí y hacen fila",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, two-shot at a stand. At a stand, a line of TIENDA-like carts waits in front of CALCU; the first cart's receipts float to him, he taps a button-arm and they turn into a glowing green check mark; the cart's eyes go happy. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Receipts float over, CALCU taps, they flip into a check mark, the cart rolls off happy and the next one comes forward. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PRUEBA",
+      "quien": "CANCION",
+      "texto": "Más de doscientas ponencias para aprender de los que ya tienen resultados",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias: aprende de quien ya vende",
+      "plano": "SOLUCIÓN · Más de 200 ponencias para aprender de los que ya tienen resultados",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot, side angle. Side view of CALCU seated in a packed auditorium among anthropomorphic office objects, a speaker on a lit stage pointing at a floating abstract chart. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures at the chart, the audience leans forward, CALCU prints a tiny strip from his roll and reads it. Camera: gentle lateral drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "CTA · Compra tu ingreso dando clic en el botón",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. CALCU facing camera in the pavilion aisle, one button-arm pressing a large glowing rounded button shape floating in front of him, visor straight, confident smile. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 CALCU looks at camera, presses the floating button, it pulses, he nods. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Ahí están tus próximos clientes",
+      "texto_tts": "",
+      "texto_pantalla": "Tus clientes están en Feria Effix",
+      "plano": "CIERRE · Ahora tiene clientes de ecommerce",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide static shot, held. Back at the accounting desk: three happy TIENDA-like carts lined up, each with a green check mark, CALCU relaxed with his roll in a happy curl; a fourth cart rolls in with receipts and he waves it over. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The fourth cart rolls in, CALCU waves it over without flinching and taps once; a check mark appears. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Mismo ad para landing y WhatsApp: el CTA no nombra la URL, señala el botón del placement."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix como identidad visual desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "defecto_admitido_nota": "El formato cantado no lleva beat DEFECTO: el loop cierra. Decisión heredada del skeleton musical de sin_arrancar.",
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'más de sesenta mil asistentes' — cifra aportada por Alexander el 2026-09-04; no está en el sitio. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 (nano-banana-2/edit) + 12 clips × 5s × 0.056 (kling v2.1 std) = 4.55 USD. Regenerar la canción cuesta 0.15 más por intento (MiniMax canta mal la marca ~1 de cada 3).",
+  "notas_produccion": "Historia en una frase: un contador recibe una tienda online cuyo modelo no conoce (pasarelas, envíos, facturación); cada día abren más tiendas y casi ninguna tiene contador; en Feria Effix están esas tiendas y hacen fila en su stand. Misma estructura que #01 (mismo avatar de oficio, misma TIENDA como hilo). Pixar con objetos (age-blind). Cantado, sin voz en off. CTA botón, sin URL."
+}

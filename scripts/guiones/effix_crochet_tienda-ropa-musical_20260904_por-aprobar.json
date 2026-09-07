@@ -1,0 +1,228 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "tienda-ropa-musical-crochet",
+  "titulo": "Rosa y la vitrina mojada",
+  "marca": "effix",
+  "nicho": "tienda_ropa",
+  "angulo": "principal",
+  "estilo": "crochet",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "gancho": {
+    "banco": "dolor_nombrado#39",
+    "gatillos": [
+      "dolor_nombrado",
+      "auto_relevancia"
+    ]
+  },
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Llovió todo el sábado, no entró nadie, y ahí caes en cuenta de que tu mes depende del clima y del andén.",
+    "sintoma": "Le mandas la foto por WhatsApp a las mismas clientas de siempre, y ya sabes cuáles te van a contestar.",
+    "reaccion_interna": "Y por dentro ya lo aceptaste: tu almacén vende hasta donde llega la gente que pasa por el frente.",
+    "explicacion_fallida": "Te dices que tu ropa se vende es viéndola, tocándola, midiéndosela.",
+    "patron": "Pero la marca del local de al lado ya la están comprando en otra ciudad. Misma ropa, mismo precio.",
+    "causa_raiz": "No es que tu ropa no sirva para internet. Es que nadie te ha mostrado cómo se vende ropa por internet.",
+    "mecanismo": "En la feria están las plataformas, las pasarelas de pago, la logística y las agencias que ya visten a las tiendas que sí venden online."
+  },
+  "bible": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world.",
+  "negative_prompt": "realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+  "personajes": {
+    "rosa": {
+      "ficha": "ROSA: a crocheted amigurumi figure of a woman in her fifties, terracotta knitted floral blouse, mustard knitted skirt, tiny teal knitted glasses on a yarn chain, grey-brown yarn hair pulled back, simple stitched dot eyes, only her colours are saturated (terracotta, mustard, teal). The world stays in strict pure greyscale with zero colour information — only the main character carries colour.",
+      "voz": null,
+      "quien_es": "ROSA, versión amigurumi de la dueña del almacén de ropa (personaje del ad 2D 'La acera'). Única con color.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "suno_title": "Feria Effix — Rosa y la vitrina mojada",
+    "suno_custom_lyrics": "[Verso 1]\nLlovió todo el sábado, no entró nadie\nY tu mes depende del clima y del andén\nSi tienes almacén de ropa y no vendes por internet\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nMandas la foto al grupo de siempre y contesta la de siempre\nDices que tu ropa se vende es viéndola\nY la del local de al lado ya despacha a otra ciudad\n\n[Pre-coro]\nNo es que tu ropa no sirva para internet\nEs que nadie te ha mostrado cómo\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nY la próxima venta no la hace la vitrina\n\n[Verso 3]\nEn la feria está quien te monta la tienda y quien despacha\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nY la próxima venta no la hace la vitrina",
+    "suno_style_tags": [
+      "acoustic indie pop",
+      "ukulele and handclaps",
+      "warm and cozy",
+      "soft female vocal",
+      "catchy sung hook",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 100,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Llovió todo el sábado, no entró nadie / Y tu mes depende del clima y del andén",
+      "texto_tts": "",
+      "texto_pantalla": "Llovió. Y no entró nadie",
+      "plano": "Llovió y no entró nadie",
+      "prompt_imagen": "wide establishing shot. ROSA standing inside a greyscale crocheted clothing shop looking out through a knitted shop window with felt raindrops, the knitted sidewalk outside empty, grey knitted dresses on racks behind her. ROSA: a crocheted amigurumi figure of a woman in her fifties, terracotta knitted floral blouse, mustard knitted skirt, tiny teal knitted glasses on a yarn chain, grey-brown yarn hair pulled back, simple stitched dot eyes, only her colours are saturated (terracotta, mustard, teal). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft cool flat natural light from a window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 Felt raindrops slide down the window, ROSA leans closer to the glass, then steps back. Camera: gentle push. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Si tienes almacén de ropa y no vendes por internet / Esto es para ti, quédate un minuto",
+      "texto_tts": "",
+      "texto_pantalla": "¿Almacén de ropa sin internet?",
+      "plano": "Callout",
+      "prompt_imagen": "medium close-up. ROSA turned toward the viewer between the grey racks, glasses on their chain. ROSA: a crocheted amigurumi figure of a woman in her fifties, terracotta knitted floral blouse, mustard knitted skirt, tiny teal knitted glasses on a yarn chain, grey-brown yarn hair pulled back, simple stitched dot eyes, only her colours are saturated (terracotta, mustard, teal). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft cool flat natural light from a window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 ROSA turns to the viewer, lifts her glasses with one arm, small nod. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Mandas la foto al grupo de siempre y contesta la de siempre",
+      "texto_tts": "",
+      "texto_pantalla": "Contesta la de siempre",
+      "plano": "El grupo de siempre, la de siempre",
+      "prompt_imagen": "close-up on hands and object. Close-up of ROSA's mitten-hand holding a knitted phone showing a felt photo of a dress sent into a chat with five grey avatar circles, one circle glowing. ROSA: a crocheted amigurumi figure of a woman in her fifties, terracotta knitted floral blouse, mustard knitted skirt, tiny teal knitted glasses on a yarn chain, grey-brown yarn hair pulled back, simple stitched dot eyes, only her colours are saturated (terracotta, mustard, teal). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft cool flat natural light from a window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 One avatar circle glows in reply, the others stay grey, the hand lowers slightly. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Dices que tu ropa se vende es viéndola",
+      "texto_tts": "",
+      "texto_pantalla": "«Se vende es viéndola»",
+      "plano": "«Se vende es viéndola»",
+      "prompt_imagen": "medium shot from behind. ROSA from behind, holding a grey knitted dress up against a customer-shaped grey knitted figure, gesturing 'you have to see it on'. ROSA: a crocheted amigurumi figure of a woman in her fifties, terracotta knitted floral blouse, mustard knitted skirt, tiny teal knitted glasses on a yarn chain, grey-brown yarn hair pulled back, simple stitched dot eyes, only her colours are saturated (terracotta, mustard, teal). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft cool flat natural light from a window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 She holds the dress up, turns it, the figure nods, ROSA nods back firmly. Camera: gentle pull. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Y la del local de al lado ya despacha a otra ciudad",
+      "texto_tts": "",
+      "texto_pantalla": "La del lado ya despacha",
+      "plano": "La del lado ya despacha a otra ciudad",
+      "prompt_imagen": "low-angle wide. Low-angle wide of the knitted street: the shop next door has a grey knitted delivery truck outside being loaded with knitted parcels; ROSA small in her own doorway watching. ROSA: a crocheted amigurumi figure of a woman in her fifties, terracotta knitted floral blouse, mustard knitted skirt, tiny teal knitted glasses on a yarn chain, grey-brown yarn hair pulled back, simple stitched dot eyes, only her colours are saturated (terracotta, mustard, teal). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft cool flat natural light from a window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 Parcels go into the truck one by one, the truck rolls away, ROSA's shoulders sink a stitch. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "No es que tu ropa no sirva para internet / Es que nadie te ha mostrado cómo",
+      "texto_tts": "",
+      "texto_pantalla": "Nadie te ha mostrado cómo",
+      "plano": "El clic: nadie te ha mostrado cómo",
+      "prompt_imagen": "extreme close-up on eyes. Close-up of ROSA's stitched face reflected in the rainy knitted window, a warm knitted hall glowing far beyond the raindrops. ROSA: a crocheted amigurumi figure of a woman in her fifties, terracotta knitted floral blouse, mustard knitted skirt, tiny teal knitted glasses on a yarn chain, grey-brown yarn hair pulled back, simple stitched dot eyes, only her colours are saturated (terracotta, mustard, teal). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft cool flat natural light from a window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 ROSA lifts her head toward the glow, the raindrops slide, a gentle blink. Camera: gentle push. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve de octubre / Plaza Mayor, Medellín",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct",
+      "plano": "Llegada a Plaza Mayor",
+      "prompt_imagen": "wide tracking shot. ROSA walking down a greyscale knitted street toward a large knitted convention centre, tiny grey knitted figures streaming in. ROSA: a crocheted amigurumi figure of a woman in her fifties, terracotta knitted floral blouse, mustard knitted skirt, tiny teal knitted glasses on a yarn chain, grey-brown yarn hair pulled back, simple stitched dot eyes, only her colours are saturated (terracotta, mustard, teal). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft cool flat natural light from a window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 ROSA walks steadily toward the entrance, skirt swaying, figures move around her. Camera: tracking from behind. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas / Más de sesenta mil asistentes / Y la próxima venta no la hace la vitrina",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "Las 350 empresas",
+      "prompt_imagen": "high-angle wide over the crowd. High-angle wide over a huge knitted pavilion of grey stands and figures; ROSA the only colour, small in the aisle. ROSA: a crocheted amigurumi figure of a woman in her fifties, terracotta knitted floral blouse, mustard knitted skirt, tiny teal knitted glasses on a yarn chain, grey-brown yarn hair pulled back, simple stitched dot eyes, only her colours are saturated (terracotta, mustard, teal). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft cool flat natural light from a window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 Figures shuffle between stands, ROSA turns gently in place. Camera: gentle drift forward. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "En la feria está quien te monta la tienda y quien despacha",
+      "texto_tts": "",
+      "texto_pantalla": "Quien te monta la tienda",
+      "plano": "Quien monta la tienda y quien despacha",
+      "prompt_imagen": "two-shot at a stand. ROSA at a knitted stand between two grey knitted figures: one holding a knitted tablet showing a felt storefront shape, the other holding a knitted parcel; ROSA looking from one to the other. ROSA: a crocheted amigurumi figure of a woman in her fifties, terracotta knitted floral blouse, mustard knitted skirt, tiny teal knitted glasses on a yarn chain, grey-brown yarn hair pulled back, simple stitched dot eyes, only her colours are saturated (terracotta, mustard, teal). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft cool flat natural light from a window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 Each figure lifts its object in turn, ROSA nods to each and touches the tablet. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PRUEBA",
+      "quien": "CANCION",
+      "texto": "Más de doscientas ponencias para aprender de los que ya tienen resultados",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias: aprende de quien ya vende",
+      "plano": "200 ponentes, 5 ediciones",
+      "prompt_imagen": "medium shot, side angle. Side view of ROSA seated in a knitted auditorium among grey figures, knitted speaker under a soft knitted spotlight. ROSA: a crocheted amigurumi figure of a woman in her fifties, terracotta knitted floral blouse, mustard knitted skirt, tiny teal knitted glasses on a yarn chain, grey-brown yarn hair pulled back, simple stitched dot eyes, only her colours are saturated (terracotta, mustard, teal). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft cool flat natural light from a window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The speaker's arm rises, the audience leans forward a stitch, ROSA nods. Camera: gentle lateral drift. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "CTA cantado",
+      "prompt_imagen": "medium close-up facing camera. ROSA facing the viewer in the knitted pavilion aisle holding a small knitted phone at chest height. ROSA: a crocheted amigurumi figure of a woman in her fifties, terracotta knitted floral blouse, mustard knitted skirt, tiny teal knitted glasses on a yarn chain, grey-brown yarn hair pulled back, simple stitched dot eyes, only her colours are saturated (terracotta, mustard, teal). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft cool flat natural light from a window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 ROSA lifts the phone, taps once, looks back to the viewer. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y la próxima venta no la hace la vitrina",
+      "texto_tts": "",
+      "texto_pantalla": "La vitrina ya no vende sola",
+      "plano": "Loop: la próxima venta no la hace la vitrina",
+      "prompt_imagen": "wide static shot, held. Inside the knitted shop again, sunny: ROSA taping a knitted parcel on the counter with a small colourful label, the shop window behind her clear; a grey knitted courier waiting at the door. ROSA: a crocheted amigurumi figure of a woman in her fifties, terracotta knitted floral blouse, mustard knitted skirt, tiny teal knitted glasses on a yarn chain, grey-brown yarn hair pulled back, simple stitched dot eyes, only her colours are saturated (terracotta, mustard, teal). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft cool flat natural light from a window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 ROSA pats the parcel closed and hands it toward the courier, who takes it and turns to go. Camera: gentle push. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "emotivo",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Mismo ad para landing y WhatsApp: el CTA no nombra la URL, señala el botón del placement."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix como identidad visual desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "defecto_admitido_nota": "El formato cantado no lleva beat DEFECTO: el loop cierra. Decisión heredada del skeleton musical de sin_arrancar.",
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'más de sesenta mil asistentes' — cifra aportada por Alexander el 2026-09-04; no está en el sitio. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 (nano-banana-2/edit) + 12 clips × 5s × 0.056 (kling v2.1 std) = 4.55 USD. Regenerar la canción cuesta 0.15 más por intento (MiniMax canta mal la marca ~1 de cada 3).",
+  "notas_produccion": "Crochet B&N + ROSA en color (misma dueña del ad 2D 'La acera', en versión amigurumi). Poses simples. Sin voz en off."
+}

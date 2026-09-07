@@ -1,0 +1,230 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "aprobado",
+  "job_id": "referentes-la-tarima",
+  "titulo": "La tarima",
+  "marca": "effix",
+  "nicho": "referentes",
+  "angulo": "28.10",
+  "estilo": "cinematic",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "gancho": {
+    "banco": "dolor_nombrado#39",
+    "gatillos": [
+      "dolor_nombrado",
+      "auto_relevancia"
+    ]
+  },
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 48,
+  "microsituacion": {
+    "momento": "Ves a alguien en tarima explicando lo que tú aplicas hace años, y la sala entera tomando nota.",
+    "sintoma": "Grabas un video contando lo mismo, y lo ven los de siempre.",
+    "reaccion_interna": "Y por dentro ya lo aceptaste: saber no es lo mismo que ser reconocido.",
+    "explicacion_fallida": "Te dices que primero toca tener más resultados, y después mostrarse.",
+    "patron": "Pero el que está en tarima no sabe más que tú. Se puso donde lo vieran.",
+    "causa_raiz": "No te falta conocimiento. Te falta estar en el lugar donde están los que ya son referentes.",
+    "mecanismo": "En la feria están doscientos ponentes de más de veinte países y trescientas cincuenta marcas, en el mismo recinto."
+  },
+  "bible": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+  "negative_prompt": "text, captions, letters, watermark, logo, UI, extra fingers, deformed hands, style drift, cartoon, 3D render, flat lighting, slow motion, blurry face",
+  "personajes": {
+    "camila": {
+      "ficha": "CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach.",
+      "voz": "narrador_marca",
+      "quien_es": "Operadora de ecommerce con años de experiencia y sin visibilidad. Es la espectadora. Nunca habla en cámara: toda la voz es en off.",
+      "lipsync": false
+    }
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CAMILA",
+      "texto": "Ves a alguien en tarima explicando lo que tu aplicas hace anos, y la sala entera tomando nota.",
+      "texto_tts": "Ves a alguien en tarima explicando lo que tú aplicas hace años, y la sala entera tomando nota.",
+      "texto_pantalla": "Tú lo aplicas hace años",
+      "plano": "Desde una silla al fondo del auditorio: la tarima iluminada, un ponente gesticulando, nucas del publico en primer plano, Camila entre ellos.",
+      "prompt_imagen": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, From a seat at the back of a dark auditorium: a brightly lit conference stage far ahead with a speaker mid-gesture, the backs of dozens of heads in the foreground, CAMILA seated among them in profile, her face lit by the stage glow. CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach. professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker on stage gestures broadly, heads in the audience tilt down to take notes, CAMILA stays still watching, then slowly lowers her gaze to her own closed notebook. Natural pace, one primary motion per shot, subtle camera movement. Audio: room tone and distant crowd murmur, no discernible speech.",
+      "lipsync": false,
+      "prompt_keyframe_final": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, From the same seat at the back of the auditorium: CAMILA looking down at her closed notebook in her lap while the stage stays bright and the audience keeps writing. CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach. professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CAMILA",
+      "texto": "Sabes de ecommerce y quieres que te reconozcan por eso: esto es para ti.",
+      "texto_tts": "Sabes de ecommerce y quieres que te reconozcan por eso: esto es para ti.",
+      "texto_pantalla": "¿Quieres ser referente?",
+      "plano": "Camila gira la cabeza hacia la camara, como si la hubieran llamado por su nombre.",
+      "prompt_imagen": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, Medium close-up of CAMILA in the audience turning her head toward the lens, stage light on one side of her face, dark bokeh auditorium behind. CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach. professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 CAMILA turns her head toward the camera, holds the look for a beat, a small exhale, eyes steady. Natural pace, one primary motion per shot, subtle camera movement. Audio: room tone and distant crowd murmur, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CAMILA",
+      "texto": "Grabas un video contando lo mismo, y lo ven los de siempre.",
+      "texto_tts": "Grabas un video contando lo mismo, y lo ven los de siempre.",
+      "texto_pantalla": "Lo ven los de siempre",
+      "plano": "Camila en casa, de noche, celular en tripode frente a ella; revisa el video que acaba de grabar, poca reaccion.",
+      "prompt_imagen": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, Night interior, CAMILA seated at a small home desk with a phone on a tripod in front of her, a warm desk lamp, she reviews a just-recorded video on the phone, unimpressed expression. Phone screen shows only her blurred face, no readable text. CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach. professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 CAMILA scrolls once on the phone, glances at the tripod, sets the phone down slowly and rubs her temple. Natural pace, one primary motion per shot, subtle camera movement. Audio: room tone and distant crowd murmur, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "REACCION",
+      "quien": "CAMILA",
+      "texto": "Y ya lo aceptaste: saber no es lo mismo que ser reconocido.",
+      "texto_tts": "Y ya lo aceptaste: saber no es lo mismo que ser reconocido.",
+      "texto_pantalla": "Saber no es ser reconocido",
+      "plano": "Camila apaga la lampara del escritorio y queda su silueta contra la ventana de la ciudad.",
+      "prompt_imagen": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, Medium shot of CAMILA reaching to switch off the desk lamp, her silhouette against a window with city lights at night, the tripod dark in the foreground. CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach. professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 CAMILA switches off the lamp, the room goes dim except for the city lights, she stays seated looking at the window. Natural pace, one primary motion per shot, subtle camera movement. Audio: room tone and distant crowd murmur, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CAMILA",
+      "texto": "Total, tu dices que primero toca tener mas resultados.",
+      "texto_tts": "Total, tú dices que primero toca tener más resultados.",
+      "texto_pantalla": "«Primero más resultados»",
+      "plano": "De dia, Camila en su oficina de operaciones de ecommerce, rodeada de paquetes y pantallas con graficas, trabajando cabeza abajo.",
+      "prompt_imagen": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, Daytime, CAMILA at a busy ecommerce operations desk surrounded by shipping boxes and two monitors showing blurred rising charts (abstract shapes, no text), head down typing, sunlight from a side window. CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach. professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 CAMILA types without looking up, reaches for a box, checks a label, keeps working; the camera drifts slowly sideways. Natural pace, one primary motion per shot, subtle camera movement. Audio: room tone and distant crowd murmur, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "PATRON",
+      "quien": "CAMILA",
+      "texto": "Pero el que esta en tarima no sabe mas que tu: se puso donde lo vieran.",
+      "texto_tts": "Pero el que está en tarima no sabe más que tú: se puso donde lo vieran.",
+      "texto_pantalla": "Se puso donde lo vieran",
+      "plano": "Vuelta al auditorio: el ponente en tarima, visto de cerca desde un costado, hablando con seguridad bajo la luz.",
+      "prompt_imagen": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, Side angle medium shot of a confident male speaker on a lit conference stage, hand raised mid-point, a large backdrop behind him as a plain solid black panel with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach. professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker steps forward toward the audience, lowers his hand, the stage light follows him; the shot holds steady. Natural pace, one primary motion per shot, subtle camera movement. Audio: room tone and distant crowd murmur, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CAMILA",
+      "texto": "Asi que no te falta conocimiento: te falta estar donde estan los que ya son referentes.",
+      "texto_tts": "Así que no te falta conocimiento: te falta estar donde están los que ya son referentes.",
+      "texto_pantalla": "No te falta conocimiento",
+      "plano": "Camila se levanta de su silla al fondo del auditorio y empieza a caminar hacia adelante por el pasillo lateral.",
+      "prompt_imagen": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, Wide shot from the back of the auditorium, CAMILA standing up from her seat in the last row and stepping into the side aisle, the lit stage far ahead, audience seated. CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach. professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 CAMILA stands, adjusts her blazer, and begins walking down the side aisle toward the stage; the camera holds and lets her shrink into the frame. Natural pace, one primary motion per shot, subtle camera movement. Audio: room tone and distant crowd murmur, no discernible speech.",
+      "lipsync": false,
+      "prompt_keyframe_final": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, Wide shot from the back of the auditorium, CAMILA halfway down the side aisle, walking toward the stage, seen from behind, the stage bright ahead. CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach. professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+    },
+    {
+      "n": 8,
+      "beat": "MECANISMO",
+      "quien": "CAMILA",
+      "texto": "En la feria estan doscientos ponentes de mas de veinte paises y trescientas cincuenta marcas.",
+      "texto_tts": "En la feria están doscientos ponentes de más de veinte países y trescientas cincuenta marcas.",
+      "texto_pantalla": "200 ponentes · 20 países",
+      "plano": "Pasillo del pabellon de la feria: stands a ambos lados, gente conversando de pie, Camila caminando entre ellos, ya con escarapela.",
+      "prompt_imagen": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, Wide shot down a busy trade-fair pavilion aisle, exhibitor stands on both sides, people in small groups talking with lanyards, CAMILA walking toward camera wearing a lanyard, warm light shafts from high windows. Stand panels are plain solid black with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach. professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 CAMILA walks toward camera through the crowd, someone at a stand turns and greets her, she slows and smiles; camera pulls back gently. Natural pace, one primary motion per shot, subtle camera movement. Audio: room tone and distant crowd murmur, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "PRUEBA",
+      "quien": "CAMILA",
+      "texto": "Cinco ediciones, y quien va una vez, vuelve.",
+      "texto_tts": "Cinco ediciones, y quien va una vez, vuelve.",
+      "texto_pantalla": "5 ediciones",
+      "plano": "Plano corto de escarapelas colgadas juntas en una mesa de acreditacion, manos recogiendolas.",
+      "prompt_imagen": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, Close-up of a registration table with rows of lanyards and badges, several hands picking them up, shallow focus, warm light. Badges show only plain solid black cards with bold white abstract geometric shapes, absolutely no letters, no words, no writing anywhere. CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach. professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Hands pick up badges one after another, the rows thin out, one hand lingers and takes the last one in frame. Natural pace, one primary motion per shot, subtle camera movement. Audio: room tone and distant crowd murmur, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "VISUALIZACION",
+      "quien": "CAMILA",
+      "texto": "Imaginate grabando contenido al lado de la gente que hoy sigues desde el celular.",
+      "texto_tts": "Imagínate grabando contenido al lado de la gente que hoy sigues desde el celular.",
+      "texto_pantalla": "Contenido con los que sigues",
+      "plano": "Camila y otra persona reconocible como ponente (escarapela distinta) grabando un video juntos en un pasillo, telefono en mano, riendo.",
+      "prompt_imagen": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, Medium shot of CAMILA and a second person with a speaker-style lanyard standing together in a bright pavilion corridor, one of them holding a phone up at arm's length recording both, both laughing mid-sentence, crowd blurred behind. CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach. professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The phone is raised, both lean in toward it, CAMILA laughs and looks at the other person, the other gestures while talking; handheld drift. Natural pace, one primary motion per shot, subtle camera movement. Audio: room tone and distant crowd murmur, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "FECHAS",
+      "quien": "CAMILA",
+      "texto": "Dieciseis al dieciocho, en Plaza Mayor.",
+      "texto_tts": "Dieciséis al dieciocho, en Plaza Mayor.",
+      "texto_pantalla": "16–18 oct · Plaza Mayor",
+      "plano": "Exterior del recinto al atardecer, gente entrando, luz dorada.",
+      "prompt_imagen": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, Wide establishing shot of a large modern convention centre plaza in Medellin at golden hour, people with lanyards walking toward the entrance, hills of the city in the background. Any signage is plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach. professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 People walk toward the entrance, the camera rises slightly on a gentle crane, the golden light flares across the lens once. Natural pace, one primary motion per shot, subtle camera movement. Audio: room tone and distant crowd murmur, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "CTA",
+      "quien": "CAMILA",
+      "texto": "Compra tu pasaporte a la Feria Effix en feriaeffix punto com. Te toma un minuto.",
+      "texto_tts": "Compra tu pasaporte a la Feria Effix en feriaeffix punto com. Te toma un minuto.",
+      "texto_pantalla": "Compra en feriaeffix.com",
+      "plano": "Camila de frente a camara en el pasillo del pabellon, con escarapela, sosteniendo el celular a la altura del pecho, mirada firme.",
+      "prompt_imagen": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, Medium close-up of CAMILA facing the camera in the pavilion aisle wearing a lanyard, phone held at chest height, direct steady eye contact, crowd and stands as warm bokeh behind. CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach. professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 CAMILA looks at the lens, lifts the phone slightly, taps once with her thumb, looks back up and gives a small confident nod. Natural pace, one primary motion per shot, subtle camera movement. Audio: room tone and distant crowd murmur, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 13,
+      "beat": "DEFECTO",
+      "quien": "CAMILA",
+      "texto": "No sales siendo referente: sales conocido por los que si lo son.",
+      "texto_tts": "No sales siendo referente: sales conocido por los que sí lo son.",
+      "texto_pantalla": "Sales conocido",
+      "plano": "Camila intercambiando celulares con un ponente para guardar contactos; gesto sencillo, sin tarima, en un rincon del pasillo.",
+      "prompt_imagen": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, Medium shot of CAMILA and a person with a speaker lanyard exchanging phones to save each other's contact, standing in a quieter corner of the pavilion, soft window light, both relaxed. CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach. professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 They exchange phones, type briefly, hand them back, and shake hands; CAMILA tucks the phone into her blazer pocket. Natural pace, one primary motion per shot, subtle camera movement. Audio: room tone and distant crowd murmur, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 14,
+      "beat": "LOOP",
+      "quien": "CAMILA",
+      "texto": "Porque nadie se vuelve referente desde la silla.",
+      "texto_tts": "Porque nadie se vuelve referente desde la silla.",
+      "texto_pantalla": "Nadie es referente desde la silla",
+      "plano": "Cierre: la silla vacia al fondo del auditorio, tarima iluminada al fondo; Camila ya no esta en ella.",
+      "prompt_imagen": "cinematic 4K, anamorphic lens, shallow depth of field, film grain, golden hour light, From the back of the auditorium: one empty seat in the last row in sharp focus in the foreground, the lit stage and seated audience blurred far ahead, CAMILA no longer in the seat. CAMILA: Colombian woman in her mid-thirties, dark wavy hair tied low, minimal makeup, black turtleneck under a camel blazer, small gold earrings, attentive dark eyes, a notebook and phone always within reach. professional cinematography, bokeh background, color graded, atmospheric. Vertical 9:16 composition. No text, no letters, no logos, no UI overlays; any screens, banners or backdrops are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The shot holds on the empty seat, the stage light shifts warmer in the distance, a few heads in the audience turn toward the aisle. Natural pace, one primary motion per shot, subtle camera movement. Audio: room tone and distant crowd murmur, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "aspiracional",
+  "cta": {
+    "hablado": "Compra tu pasaporte a la Feria Effix en feriaeffix punto com. Te toma un minuto.",
+    "overlay": "Compra en feriaeffix.com"
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix como identidad visual desde el clip 01 (marca_en_pantalla), sin gastar locución",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": true,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [],
+  "costo_estimado_usd": null,
+  "notas_produccion": "Estilo cinematic (scene_builder). La tarima es el ancla: aparece en 1, 6, 7 y 14 (silla vacía). NUNCA mostrar a Camila EN la tarima ni con micrófono: el pase no promete ser ponente. Las 'zonas de creación de contenido' son del VIP: la línea 10 muestra un pasillo, no una zona oficial. Keyframe final en 1 y 7. Escenas de feria (8, 9, 10, 11, 13) reemplazables por material real 2025 si Effix confirma derechos. Música: aspiracional (sube en 7-8). Overlay en post con Montserrat."
+}

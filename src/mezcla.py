@@ -79,6 +79,29 @@ def cadena_audio(
     )
 
 
+def cadena_master(
+    entrada: str,
+    salida: str,
+    *,
+    duracion_s: float,
+    fade_out_s: float = FADE_OUT_S,
+) -> str:
+    """Master de una pista que ya viene mezclada: sólo fades y loudnorm.
+
+    El modo `musical_sync` no tiene nada que duckear — la canción ES la pista,
+    no hay locución debajo. Pero sí tiene que salir a los mismos −14 LUFS que
+    el resto de los ads: sin esto el musical suena más bajo que el narrado en
+    el mismo feed, que es exactamente el problema que `mezclar()` vino a
+    resolver para el otro modo.
+    """
+    salida_fade = max(duracion_s - fade_out_s, 0.0)
+    return (
+        f"[{entrada}]afade=t=in:st=0:d={FADE_IN_S},"
+        f"afade=t=out:st={salida_fade:.2f}:d={fade_out_s},"
+        f"loudnorm=I={LUFS_OBJETIVO}:TP={TRUE_PEAK_MAX}:LRA=11[{salida}]"
+    )
+
+
 def mezclar(
     video: Path,
     musica: Path,

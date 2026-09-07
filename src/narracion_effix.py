@@ -249,6 +249,40 @@ HABLADO: dict[str, list[str]] = {
         "Vas a competir con otros operadores ahí mismo.",
         "Y la flota deja de andar a medias.",
     ],
+
+    # 27 · El ancla es la agenda de WhatsApp: se abre (1), se acepta (3),
+    # se contrasta (5), se invierte (9) y cierra el loop (12).
+    "networking": [
+        "Necesitas un proveedor nuevo, abres el WhatsApp, y son los mismos cinco contactos de hace tres años.",
+        "Le escribes al de siempre, y te cotiza lo de siempre.",
+        "Y ya lo asumiste: tu empresa crece hasta donde llega tu agenda.",
+        "Total, tú dices que los buenos negocios salen por referidos.",
+        "Pero tu competencia ya cerró alianza con una empresa que tú ni sabías que existía.",
+        "Así que no es que te falten referidos: es que llevas años buscando en la misma agenda.",
+        "En la feria están trescientas cincuenta empresas de cinco países, buscando con quién hacer negocios.",
+        "Doscientos ponentes, cinco ediciones, y quien va una vez, vuelve.",
+        "Imagínate volviendo con tres proveedores nuevos y un socio que no estaba en tu agenda.",
+        "Dieciséis al dieciocho, en Plaza Mayor.",
+        "Nadie te va a buscar a ti: toca caminar los pabellones y presentarte.",
+        "Porque la próxima alianza no va a salir de tu WhatsApp.",
+    ],
+
+    # 28 · El ancla es la tarima, contra la silla: se ve (1), se acepta (3),
+    # se contrasta (5), se invierte (9) y cierra el loop (12).
+    "referentes": [
+        "Ves a alguien en tarima explicando lo que tú aplicas hace años, y la sala entera tomando nota.",
+        "Grabas un video contando lo mismo, y lo ven los de siempre.",
+        "Y ya lo aceptaste: saber no es lo mismo que ser reconocido.",
+        "Total, tú dices que primero toca tener más resultados.",
+        "Pero el que está en tarima no sabe más que tú: se puso donde lo vieran.",
+        "Así que no te falta conocimiento: te falta estar donde están los que ya son referentes.",
+        "En la feria están doscientos ponentes de más de veinte países y trescientas cincuenta marcas.",
+        "Cinco ediciones, y quien va una vez, vuelve.",
+        "Imagínate grabando contenido al lado de la gente que hoy sigues desde el celular.",
+        "Dieciséis al dieciocho, en Plaza Mayor.",
+        "No sales siendo referente: sales conocido por los que sí lo son.",
+        "Porque nadie se vuelve referente desde la silla.",
+    ],
 }
 
 
@@ -264,6 +298,14 @@ CTA_POR_PASE: dict[str, dict[str, str]] = {
     "pase_3_dias": {
         "hablado": "Compra tu pasaporte a la Feria Effix en feriaeffix punto com. Te toma un minuto.",
         "overlay": "Compra en feriaeffix.com",
+        "dias": "3",
+        "gatillo": "inclusion",
+    },
+    # Mismo producto, sin URL: el ad se usa igual en landing y en WhatsApp, así
+    # que el CTA señala el botón del placement, no un dominio. (Alexander, 2026-09-04)
+    "pase_3_dias_boton": {
+        "hablado": "Compra tu ingreso a la Feria Effix dando clic en el botón.",
+        "overlay": "Compra tu ingreso: clic en el botón",
         "dias": "3",
         "gatillo": "inclusion",
     },

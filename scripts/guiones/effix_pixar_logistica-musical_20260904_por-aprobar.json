@@ -1,0 +1,228 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "logistica-musical-pixar",
+  "titulo": "Ruta a media máquina",
+  "marca": "effix",
+  "nicho": "logistica",
+  "angulo": "principal",
+  "estilo": "pixar",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "gancho": {
+    "banco": "callout#36",
+    "gatillos": [
+      "callout",
+      "inclusion"
+    ]
+  },
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Tienes la flota, tienes la bodega, tienes el equipo listo. Y la operación va a media máquina.",
+    "sintoma": "Los clientes que tienes están bien, pero son pocos y crecen despacio, y la capacidad instalada te está costando igual.",
+    "reaccion_interna": "Sabes que con dos o tres tiendas grandes más el negocio cambiaría de tamaño, y no sabes cómo llegarles.",
+    "explicacion_fallida": "Te dices que en este negocio los clientes llegan por recomendación, y hay que esperar.",
+    "patron": "Pero llevas trimestres esperando mientras las tiendas que crecen ya eligieron con quién despachan.",
+    "causa_raiz": "No se trata de esperar. Se trata de estar el fin de semana donde ellas deciden.",
+    "mecanismo": "Trescientas cincuenta empresas en un recinto, casi todas despachando producto todos los días."
+  },
+  "bible": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, RUTA: an anthropomorphic small white delivery van with big expressive headlight-eyes, a friendly grille-smile, a side mirror that twitches like an ear, slightly scuffed paint. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16.",
+  "negative_prompt": "sharp edges, flat colors, 2D look, cheap animation feel, realistic human, photoreal, text, captions, letters, watermark, logo, UI, style drift, extra limbs",
+  "personajes": {
+    "ruta": {
+      "ficha": "RUTA: an anthropomorphic small white delivery van with big expressive headlight-eyes, a friendly grille-smile, a side mirror that twitches like an ear, slightly scuffed paint. Same character in every shot.",
+      "voz": null,
+      "quien_es": "Una furgoneta de reparto antropomórfica: el operador logístico.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "suno_title": "Feria Effix — Ruta a media máquina",
+    "suno_custom_lyrics": "[Verso 1]\nTienes la flota, la bodega, el equipo listo\nY la operación va a media máquina\nSi mueves paquetes y quieres mover más\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nLos clientes que tienes son pocos y crecen despacio\nDices que en esto se llega por recomendación\nY las tiendas que crecen ya eligieron con quién despachan\n\n[Pre-coro]\nNo se trata de esperar\nSe trata de estar donde ellas deciden\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nY la flota deja de andar a media máquina\n\n[Verso 3]\nTrescientas cincuenta empresas despachando producto todos los días\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nY la flota deja de andar a media máquina",
+    "suno_style_tags": [
+      "upbeat orchestral pop",
+      "playful pizzicato strings",
+      "bright brass hits",
+      "catchy sung hook",
+      "warm male vocal",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 104,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Tienes la flota, la bodega, el equipo listo / Y la operación va a media máquina",
+      "texto_tts": "",
+      "texto_pantalla": "A media máquina",
+      "plano": "La bodega lista, la operación a media máquina",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide establishing shot. RUTA parked in a huge, mostly empty warehouse at dawn, a few boxes on one shelf, other vans dark behind; headlight-eyes dim, grille-smile drooping. RUTA: an anthropomorphic small white delivery van with big expressive headlight-eyes, a friendly grille-smile, a side mirror that twitches like an ear, slightly scuffed paint. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 RUTA's headlights flicker on, he looks left and right at the empty shelves, mirror-ear droops. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Si mueves paquetes y quieres mover más / Esto es para ti, quédate un minuto",
+      "texto_tts": "",
+      "texto_pantalla": "¿Mueves paquetes?",
+      "plano": "Callout a cámara",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up. RUTA turns his headlights to camera at the loading dock, morning light behind. RUTA: an anthropomorphic small white delivery van with big expressive headlight-eyes, a friendly grille-smile, a side mirror that twitches like an ear, slightly scuffed paint. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 He turns to camera, headlights brighten, a small nod of the whole body. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Los clientes que tienes son pocos y crecen despacio",
+      "texto_tts": "",
+      "texto_pantalla": "Pocos y despacio",
+      "plano": "Pocos clientes que crecen despacio",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, close-up on hands and object. RUTA driving down a quiet suburban street with only two small parcels on his roof rack, passing closed shops. RUTA: an anthropomorphic small white delivery van with big expressive headlight-eyes, a friendly grille-smile, a side mirror that twitches like an ear, slightly scuffed paint. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 RUTA rolls gently down the street, a parcel slides on the rack, he glances at it. Camera: tracking alongside. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Dices que en esto se llega por recomendación",
+      "texto_tts": "",
+      "texto_pantalla": "«Hay que esperar»",
+      "plano": "«Se llega por recomendación»: esperando",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot from behind. RUTA parked by a phone booth-sized old telephone, looking at it expectantly, the street empty, a leaf falling. RUTA: an anthropomorphic small white delivery van with big expressive headlight-eyes, a friendly grille-smile, a side mirror that twitches like an ear, slightly scuffed paint. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 RUTA stares at the telephone, the leaf lands on his hood, nothing rings, mirror twitches. Camera: gentle pull-back. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Y las tiendas que crecen ya eligieron con quién despachan",
+      "texto_tts": "",
+      "texto_pantalla": "Ya eligieron con quién",
+      "plano": "Las tiendas ya eligieron con quién",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, low-angle wide. Low-angle wide: a highway overpass where a convoy of shiny competitor vans loaded with parcels roars past above; RUTA below on a side street watching. RUTA: an anthropomorphic small white delivery van with big expressive headlight-eyes, a friendly grille-smile, a side mirror that twitches like an ear, slightly scuffed paint. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The convoy streaks across the overpass, RUTA's headlights follow them, his suspension sinks. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "No se trata de esperar / Se trata de estar donde ellas deciden",
+      "texto_tts": "",
+      "texto_pantalla": "Estar donde deciden",
+      "plano": "El clic: estar donde deciden",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, extreme close-up on eyes. Extreme close-up of RUTA's headlight-eye reflecting a distant bright pavilion, the glass sharpening. RUTA: an anthropomorphic small white delivery van with big expressive headlight-eyes, a friendly grille-smile, a side mirror that twitches like an ear, slightly scuffed paint. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, the headlight flares slightly, engine hum rises. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve de octubre / Plaza Mayor, Medellín",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct",
+      "plano": "Llegada a Plaza Mayor",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide tracking shot. RUTA driving up the plaza toward the glass entrance of a modern convention centre, morning light, blurred figures streaming in. RUTA: an anthropomorphic small white delivery van with big expressive headlight-eyes, a friendly grille-smile, a side mirror that twitches like an ear, slightly scuffed paint. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 RUTA rolls up the plaza, slows at the doors, they slide open ahead. Camera: tracking from behind. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas / Más de sesenta mil asistentes / Y la flota deja de andar a media máquina",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "Las 350 empresas",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, high-angle wide over the crowd. High-angle wide over a vast pavilion of colourful stands; RUTA small in the wide aisle, headlights up. RUTA: an anthropomorphic small white delivery van with big expressive headlight-eyes, a friendly grille-smile, a side mirror that twitches like an ear, slightly scuffed paint. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Aerial drift forward, tiny figures move, RUTA does a gentle turn on the spot. Camera: gentle aerial drift forward. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Trescientas cincuenta empresas despachando producto todos los días",
+      "texto_tts": "",
+      "texto_pantalla": "Despachan todos los días",
+      "plano": "Tiendas que despachan todos los días",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, two-shot at a stand. RUTA at a stand with three anthropomorphic shopping-cart characters loading parcels onto his roof rack, everyone smiling. RUTA: an anthropomorphic small white delivery van with big expressive headlight-eyes, a friendly grille-smile, a side mirror that twitches like an ear, slightly scuffed paint. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The carts stack parcels on the rack, RUTA's suspension bounces happily, grille-smile widens. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PRUEBA",
+      "quien": "CANCION",
+      "texto": "Más de doscientas ponencias para aprender de los que ya tienen resultados",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias: aprende de quien ya vende",
+      "plano": "200 ponentes, 5 ediciones",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot, side angle. Side view of RUTA parked at the back of a packed auditorium among anthropomorphic objects, speaker on a lit stage ahead. RUTA: an anthropomorphic small white delivery van with big expressive headlight-eyes, a friendly grille-smile, a side mirror that twitches like an ear, slightly scuffed paint. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Audience leans in, RUTA's mirror-ear perks up, headlights track the speaker. Camera: gentle lateral drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "CTA cantado",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. RUTA facing camera in the pavilion aisle, a phone propped on his hood, headlights bright, bokeh behind. RUTA: an anthropomorphic small white delivery van with big expressive headlight-eyes, a friendly grille-smile, a side mirror that twitches like an ear, slightly scuffed paint. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 RUTA looks at camera, the phone screen lights up, he gives a body-nod. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y la flota deja de andar a media máquina",
+      "texto_tts": "",
+      "texto_pantalla": "Máquina completa",
+      "plano": "Loop: la flota a máquina completa",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide static shot, held. The warehouse at dawn again, now shelves full of parcels, other vans lit and loading, RUTA in front with a full rack, grille-smile wide. RUTA: an anthropomorphic small white delivery van with big expressive headlight-eyes, a friendly grille-smile, a side mirror that twitches like an ear, slightly scuffed paint. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Vans pull out one by one behind him, RUTA revs and rolls forward, parcels steady. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Mismo ad para landing y WhatsApp: el CTA no nombra la URL, señala el botón del placement."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix como identidad visual desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "defecto_admitido_nota": "El formato cantado no lleva beat DEFECTO: el loop cierra. Decisión heredada del skeleton musical de sin_arrancar.",
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'más de sesenta mil asistentes' — cifra aportada por Alexander el 2026-09-04; no está en el sitio. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 (nano-banana-2/edit) + 12 clips × 5s × 0.056 (kling v2.1 std) = 4.55 USD. Regenerar la canción cuesta 0.15 más por intento (MiniMax canta mal la marca ~1 de cada 3).",
+  "notas_produccion": "Pixar con vehículo antropomórfico. Héroe primero. Sin voz en off. Los carritos del stand son secundarios."
+}

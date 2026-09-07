@@ -1,0 +1,148 @@
+{
+  "nicho": "tienda_ropa",
+  "titulo": "La venta que no fue",
+  "estilo": "pixar_animado",
+  "estado": "APROBADO POR ALEXANDER — pendiente OK de costo",
+  "registro": "tuteo colombiano, sin voseo y sin 'parce'",
+  "personajes": {
+    "milena": "clienta en Neiva, 34, Pixar 3D",
+    "duena": "la dueña del almacén — NUNCA se le ve la cara"
+  },
+  "fechas": "16 al 18 de octubre",
+  "pase": "pase_3_dias",
+  "palabras": 155,
+  "locucion_s": 52.4,
+  "total_clips": 10,
+  "duracion_s": 46.0,
+  "modelo_fal": "fal-ai/kling-video/o1/standard/image-to-video",
+  "texto_corrido": "Una señora en Neiva vio tu blusa un martes. En una foto que le reenvió una amiga, ni siquiera en tu página. Le escribió a la tienda: ¿Ustedes hacen envíos? Y ahí murió la cosa. No porque no la quisiera. Es que nadie le supo contestar. Esa venta existió. Existió de verdad. Solo que no fue tuya. Y eso pasa todos los santos días: a diez cuadras de tu vitrina y a diez horas de bus. A ti no te falta ropa ni te faltan clientas. Te falta el camino. Ese camino ya se lo saben las trescientas cincuenta empresas que van a estar en la Feria Effix, del dieciséis al dieciocho de octubre en Plaza Mayor. Y los doscientos ponentes que ya lo recorrieron antes que tú. Compra tu pasaporte en feriaeffix punto com. Es un minuto. Y la próxima vez que alguien te pregunte si haces envíos, vas a tener con qué responderle.",
+  "locucion_real_s": 43.3,
+  "total_imagenes": 15,
+  "audio": "assets/audio/tienda-ropa-pixar-v2/",
+  "escenas": [
+    {
+      "escena": 1,
+      "frases": [
+        1,
+        2
+      ],
+      "duracion_s": 6,
+      "locucion_s": 5.67,
+      "bloque": "Neiva",
+      "start_image": "01 Milena en su sala de Neiva, celular en la mano, luz de tarde",
+      "end_image": "02 la pantalla llena el cuadro: la foto reenviada de la blusa",
+      "narracion": "Una señora en Neiva vio tu blusa un martes. En una foto que le reenvió una amiga, ni siquiera en tu página."
+    },
+    {
+      "escena": 2,
+      "frases": [
+        3,
+        4
+      ],
+      "duracion_s": 4,
+      "locucion_s": 3.3,
+      "bloque": "Neiva",
+      "start_image": "02 la pantalla llena el cuadro: la foto reenviada de la blusa",
+      "end_image": "03 el chat enviado, sin respuesta, el visto solo",
+      "narracion": "Le escribió a la tienda: ¿Ustedes hacen envíos? Y ahí murió la cosa."
+    },
+    {
+      "escena": 3,
+      "frases": [
+        5,
+        6
+      ],
+      "duracion_s": 5,
+      "locucion_s": 4.74,
+      "bloque": "Neiva",
+      "start_image": "03 el chat enviado, sin respuesta, el visto solo",
+      "end_image": "04 el celular boca abajo en la mesa, la ventana ya de noche",
+      "narracion": "No porque no la quisiera. Es que nadie le supo contestar. Esa venta existió. Existió de verdad."
+    },
+    {
+      "escena": 4,
+      "frases": [
+        7,
+        8
+      ],
+      "duracion_s": 6,
+      "locucion_s": 5.99,
+      "bloque": "el almacén",
+      "start_image": "05 el almacén de noche desde la acera, la vitrina encendida y sola",
+      "end_image": "06 la calle entera, el barrio dormido, el local pequeño al fondo",
+      "narracion": "Solo que no fue tuya. Y eso pasa todos los santos días: a diez cuadras de tu vitrina y a diez horas de bus."
+    },
+    {
+      "escena": 5,
+      "frases": [
+        9
+      ],
+      "duracion_s": 4,
+      "locucion_s": 3.85,
+      "bloque": "el almacén",
+      "start_image": "07 las manos de la dueña doblando una blusa. Sin rostro, nunca",
+      "end_image": "08 la blusa doblada sobre el mostrador, las manos saliendo de cuadro",
+      "narracion": "A ti no te falta ropa ni te faltan clientas. Te falta el camino."
+    },
+    {
+      "escena": 6,
+      "frases": [
+        10
+      ],
+      "duracion_s": 5,
+      "locucion_s": 4.83,
+      "bloque": "la feria",
+      "start_image": "09 la entrada del recinto, gente entrando con escarapela",
+      "end_image": "10 un pasillo de la feria lleno de stands y de gente",
+      "narracion": "Ese camino ya se lo saben las trescientas cincuenta empresas que van a estar en la Feria Effix,"
+    },
+    {
+      "escena": 7,
+      "frases": [
+        11
+      ],
+      "duracion_s": 4,
+      "locucion_s": 3.95,
+      "bloque": "la feria",
+      "start_image": "11 la fachada de Plaza Mayor, día, banderas",
+      "end_image": null,
+      "narracion": "del dieciséis al dieciocho de octubre en Plaza Mayor."
+    },
+    {
+      "escena": 8,
+      "frases": [
+        12
+      ],
+      "duracion_s": 3,
+      "locucion_s": 2.6,
+      "bloque": "la feria",
+      "start_image": "12 un auditorio lleno, alguien exponiendo, gente tomando nota",
+      "end_image": null,
+      "narracion": "Y los doscientos ponentes que ya lo recorrieron antes que tú."
+    },
+    {
+      "escena": 9,
+      "frases": [
+        13
+      ],
+      "duracion_s": 4,
+      "locucion_s": 3.67,
+      "bloque": "cierre",
+      "start_image": "13 las manos de la dueña comprando la boleta en el celular",
+      "end_image": null,
+      "narracion": "Compra tu pasaporte en feriaeffix punto com. Es un minuto."
+    },
+    {
+      "escena": 10,
+      "frases": [
+        14
+      ],
+      "duracion_s": 5,
+      "locucion_s": 4.69,
+      "bloque": "cierre",
+      "start_image": "14 Milena abre una caja en su sala de Neiva",
+      "end_image": "15 Milena con la blusa puesta, sonriendo. Cierra el círculo",
+      "narracion": "Y la próxima vez que alguien te pregunte si haces envíos, vas a tener con qué responderle."
+    }
+  ]
+}

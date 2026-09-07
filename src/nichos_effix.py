@@ -597,6 +597,169 @@ NICHOS: dict[str, dict[str, Any]] = {
             {"hablado": "Trescientas cincuenta empresas despachando todos los días.", "gatillos": ["curiosidad", "inclusion"], "overlay": "350 despachando"},
         ],
     },
+
+    # ------------------------------------------------------------------
+    # 27 · NETWORKING — el empresario cuya red es la misma de hace años.
+    # Público frío. No le falta empresa ni producto: le falta gente nueva
+    # con quién hacer negocios (socios, proveedores, clientes, distribuidores).
+    # El ancla es la agenda de WhatsApp, y vuelve cinco veces en el guión.
+    # Banco de 10 ángulos en config/nichos/27-networking-angulos.json.
+    # ------------------------------------------------------------------
+    "networking": {
+        "etiqueta": "Empresarios que buscan networking y alianzas — el que crece hasta donde llega su agenda",
+        "audiencia": "Dueño o gerente de empresa (fabricante, proveedor, servicio, comercio) que necesita socios, proveedores, clientes o distribuidores nuevos y lleva años moviéndose con los mismos contactos",
+        "ancla": "agenda",
+        "gatillo_principal": "dejar_de_ganar",
+        "momento": "Necesitas un proveedor nuevo, abres el WhatsApp, y son los mismos cinco contactos de hace tres años.",
+        "sintoma": "Le escribes al de siempre, y te cotiza lo de siempre.",
+        "reaccion_interna": "Y ya lo asumiste: tu empresa crece hasta donde llega tu agenda.",
+        "explicacion_fallida": "Te dices que los buenos negocios salen por referidos, y que eso no se fuerza.",
+        "patron": "Pero tu competencia ya cerró alianza con una empresa que tú ni sabías que existía.",
+        "causa_raiz": "No es que te falten referidos. Es que llevas años buscando en la misma agenda.",
+        "mecanismo": "En la feria están trescientas cincuenta empresas de cinco países, en el mismo recinto, buscando con quién hacer negocios.",
+        "prueba_social": "Doscientos ponentes, cinco ediciones, y quien va una vez, vuelve.",
+        "visualizacion": "Imagínate volviendo con tres proveedores nuevos y un socio que no estaba en tu agenda.",
+        "urgencia_cta": "Del dieciséis al dieciocho de octubre, en Plaza Mayor.",
+        "defecto_admitido": "Nadie te va a buscar a ti. Toca caminar los pabellones y presentarte.",
+        "loop_rewatch": "Y la próxima alianza no va a salir de tu WhatsApp.",
+        "overlay_dolor": "Los mismos cinco contactos",
+        "visual_clave": "una pantalla de WhatsApp con la misma lista corta de contactos de siempre, vista por encima del hombro en una oficina pequeña",
+        "visual_clave_en": "a WhatsApp screen showing the same short list of business contacts, seen over the shoulder in a small office",
+        "codas": {
+            1: {
+                "nombre": "CALLOUT",
+                "emoji": "📣",
+                "emocion": "auto_relevancia",
+                "hablado": "Tienes empresa y buscas aliados, proveedores o clientes nuevos: esto es para ti.",
+                "overlay": "¿Buscas aliados nuevos?",
+            },
+            7: {
+                "nombre": "FECHAS",
+                "emoji": "📍",
+                "emocion": "oportunidad",
+                "hablado": "Dieciséis al dieciocho de octubre, en Plaza Mayor.",
+                "overlay": "16–18 oct · Plaza Mayor",
+            },
+        },
+        "overlays": [
+            "Los mismos cinco contactos",
+            "Te cotiza lo de siempre",
+            "Creces hasta tu agenda",
+            "«Salen por referidos»",
+            "Tu competencia ya cerró",
+            "No te faltan referidos",
+            "350 empresas · 5 países",
+            "200 ponentes · 5 ediciones",
+            "Tres proveedores nuevos",
+            "16–18 oct · Plaza Mayor",
+            "Toca presentarte",
+            "No sale de tu WhatsApp",
+        ],
+        # Del banco de 320, filtrado por (problem, conversión), pasados a
+        # colombiano y con los corchetes rellenados con el hecho del nicho:
+        # su empresa depende de la misma agenda de contactos.
+        "hooks": [
+            {
+                "hablado": "Abres el WhatsApp a buscar proveedor y son los mismos cinco de hace tres años.",
+                "gatillos": ["dolor_nombrado", "auto_relevancia"],
+                "banco": "dolor_nombrado#33",
+                "overlay": "Los mismos cinco contactos",
+            },
+            {
+                "hablado": "Si tienes empresa y toda tu agenda depende de que te recomienden, quédate.",
+                "gatillos": ["callout", "auto_relevancia"],
+                "banco": "callout#36",
+                "overlay": "¿Dependes del referido?",
+            },
+            {
+                "hablado": "Tu red es buena. Pero es la misma desde hace tres años.",
+                "gatillos": ["interrupcion_patron", "dejar_de_ganar"],
+                "banco": "callout#6",
+                "overlay": "La misma red de siempre",
+            },
+        ],
+    },
+
+    # ------------------------------------------------------------------
+    # 28 · REFERENTES — el que sabe de ecommerce y nadie lo conoce todavía.
+    # Público frío. Tiene conocimiento y resultados; le falta visibilidad,
+    # autoridad y estar donde están los que ya son referentes. El ancla es
+    # la tarima, y el contraste es tarima vs. silla.
+    # Cuidado con Meta: se describe la situación (ver a otro en tarima),
+    # nunca a la persona ("eres tímido", "no tienes autoridad").
+    # Banco de 10 ángulos en config/nichos/28-referentes-angulos.json.
+    # ------------------------------------------------------------------
+    "referentes": {
+        "etiqueta": "Personas que quieren ser referentes del ecommerce — el que sabe y todavía no lo conocen",
+        "audiencia": "Emprendedor, operador o profesional del ecommerce con conocimiento y resultados reales que quiere marca personal, autoridad y ser reconocido en el sector",
+        "ancla": "tarima",
+        "gatillo_principal": "ego",
+        "momento": "Ves a alguien en tarima explicando lo que tú aplicas hace años, y la sala entera tomando nota.",
+        "sintoma": "Grabas un video contando lo mismo, y lo ven los de siempre.",
+        "reaccion_interna": "Y por dentro ya lo aceptaste: saber no es lo mismo que ser reconocido.",
+        "explicacion_fallida": "Te dices que primero toca tener más resultados, y después mostrarse.",
+        "patron": "Pero el que está en tarima no sabe más que tú. Se puso donde lo vieran.",
+        "causa_raiz": "No te falta conocimiento. Te falta estar en el lugar donde están los que ya son referentes.",
+        "mecanismo": "En la feria están doscientos ponentes de más de veinte países y trescientas cincuenta marcas, en el mismo recinto.",
+        "prueba_social": "Cinco ediciones, y quien va una vez, vuelve.",
+        "visualizacion": "Imagínate grabando contenido al lado de la gente que hoy sigues desde el celular.",
+        "urgencia_cta": "Del dieciséis al dieciocho de octubre, en Plaza Mayor.",
+        "defecto_admitido": "No sales siendo referente. Sales conocido por los que sí lo son.",
+        "loop_rewatch": "Porque nadie se vuelve referente desde la silla.",
+        "overlay_dolor": "Tú lo aplicas hace años",
+        "visual_clave": "una tarima iluminada vista desde una silla al fondo del auditorio, con la nuca del público en primer plano",
+        "visual_clave_en": "a lit conference stage seen from a seat at the back of the auditorium, the backs of the audience's heads in the foreground",
+        "codas": {
+            1: {
+                "nombre": "CALLOUT",
+                "emoji": "📣",
+                "emocion": "auto_relevancia",
+                "hablado": "Sabes de ecommerce y quieres que te reconozcan por eso: esto es para ti.",
+                "overlay": "¿Quieres ser referente?",
+            },
+            7: {
+                "nombre": "FECHAS",
+                "emoji": "📍",
+                "emocion": "oportunidad",
+                "hablado": "Dieciséis al dieciocho de octubre, en Plaza Mayor.",
+                "overlay": "16–18 oct · Plaza Mayor",
+            },
+        },
+        "overlays": [
+            "Tú lo aplicas hace años",
+            "Lo ven los de siempre",
+            "Saber no es ser reconocido",
+            "«Primero más resultados»",
+            "Se puso donde lo vieran",
+            "No te falta conocimiento",
+            "200 ponentes · 20 países",
+            "5 ediciones",
+            "Contenido con los que sigues",
+            "16–18 oct · Plaza Mayor",
+            "Sales conocido",
+            "Nadie es referente desde la silla",
+        ],
+        "hooks": [
+            {
+                "hablado": "Ves a alguien en tarima diciendo lo que tú aplicas hace años.",
+                "gatillos": ["dolor_nombrado", "auto_relevancia"],
+                "banco": "dolor_nombrado#39",
+                "overlay": "Tú lo aplicas hace años",
+            },
+            {
+                "hablado": "Si sabes de ecommerce y todavía nadie te conoce por eso, quédate.",
+                "gatillos": ["callout", "auto_relevancia"],
+                "banco": "callout#6",
+                "overlay": "¿Sabes y no te conocen?",
+            },
+            {
+                "hablado": "No te falta conocimiento. Te falta que te vean.",
+                "gatillos": ["interrupcion_patron", "ego"],
+                "banco": "contrarian#28",
+                "overlay": "Te falta que te vean",
+            },
+        ],
+    },
 }
 
 

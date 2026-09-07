@@ -1,0 +1,228 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "ia-musical-pixar",
+  "titulo": "Effi copia pedidos a mano",
+  "marca": "effix",
+  "nicho": "ia",
+  "angulo": "principal",
+  "estilo": "pixar",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "gancho": {
+    "banco": "dolor_nombrado#14",
+    "gatillos": [
+      "dolor_nombrado",
+      "aprendizaje"
+    ]
+  },
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Abres LinkedIn y el tercer post seguido es de alguien que automatizó algo con inteligencia artificial. Cierras la app y vuelves a copiar pedidos a mano.",
+    "sintoma": "No es que no entiendas la tecnología. Es que cada vez que te sientas a probarla no sabes por dónde empezar y terminas usándola para escribir textos.",
+    "reaccion_interna": "Te está empezando a dar la sensación de que esto se va a poner peor: mientras más esperas, más lejos queda.",
+    "explicacion_fallida": "Te dices que primero tienes que ordenar el negocio, y después sí te metes con eso.",
+    "patron": "Pero llevas todo el año diciéndolo, y en ese año salieron tres herramientas que ya usa medio mercado.",
+    "causa_raiz": "El problema no es la herramienta. Es que nadie te ha sentado cuatro horas a montarla contigo, desde cero, en tu negocio.",
+    "mecanismo": "En la feria están las agencias de inteligencia artificial que ya la aplican para vender, y te muestran cómo lo hacen."
+  },
+  "bible": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, EFFI: an anthropomorphic cardboard shipping box with a small canvas apron, big round expressive eyes, thin cardboard arms, packing-tape smile line, standing upright. BIT: a small floating spherical AI assistant glowing soft cyan, no face, gentle pulse. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16.",
+  "negative_prompt": "sharp edges, flat colors, 2D look, cheap animation feel, realistic human, photoreal, text, captions, letters, watermark, logo, UI, style drift, extra limbs",
+  "personajes": {
+    "effi": {
+      "ficha": "EFFI: an anthropomorphic cardboard shipping box with a small canvas apron, big round expressive eyes, thin cardboard arms, packing-tape smile line, standing upright. BIT: a small floating spherical AI assistant glowing soft cyan, no face, gentle pulse. Same characters in every shot.",
+      "voz": null,
+      "quien_es": "EFFI, la caja de cartón antropomórfica del ad Pixar de 2026-08-28 (continuidad de personaje). BIT, esfera de IA cyan, secundario.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "suno_title": "Feria Effix — Effi copia pedidos a mano",
+    "suno_custom_lyrics": "[Verso 1]\nAbres el celular y el tercer post es de inteligencia artificial\nLo cierras y vuelves a copiar pedidos a mano\nSi vendes por internet y la IA te está dejando atrás\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nNo es que no entiendas, es que no sabes por dónde empezar\nDices que primero ordenas el negocio\nY en ese año salieron tres herramientas que ya usa medio mercado\n\n[Pre-coro]\nEl problema no es la herramienta\nEs que nadie se ha sentado contigo a montarla\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nY el próximo post ya no te duele\n\n[Verso 3]\nLas agencias que ya venden con inteligencia artificial te muestran cómo\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nY el próximo post ya no te duele",
+    "suno_style_tags": [
+      "upbeat orchestral pop",
+      "playful pizzicato strings",
+      "bright brass hits",
+      "catchy sung hook",
+      "warm male vocal",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 104,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Abres el celular y el tercer post es de inteligencia artificial / Lo cierras y vuelves a copiar pedidos a mano",
+      "texto_tts": "",
+      "texto_pantalla": "Copiando pedidos a mano",
+      "plano": "Effi ve el post de IA y vuelve a copiar a mano",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide establishing shot. EFFI in a cramped stockroom at night, phone in one cardboard hand glowing with abstract post shapes, the other hand copying orders onto a paper list; stacks of boxes behind. EFFI: an anthropomorphic cardboard shipping box with a small canvas apron, big round expressive eyes, thin cardboard arms, packing-tape smile line, standing upright. BIT: a small floating spherical AI assistant glowing soft cyan, no face, gentle pulse. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 EFFI scrolls, stops, sighs, puts the phone face-down and keeps writing by hand. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Si vendes por internet y la IA te está dejando atrás / Esto es para ti, quédate un minuto",
+      "texto_tts": "",
+      "texto_pantalla": "¿La IA te deja atrás?",
+      "plano": "Callout a cámara",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up. EFFI looks up from the list straight to camera, tape-smile flat, pen still in hand. EFFI: an anthropomorphic cardboard shipping box with a small canvas apron, big round expressive eyes, thin cardboard arms, packing-tape smile line, standing upright. BIT: a small floating spherical AI assistant glowing soft cyan, no face, gentle pulse. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 EFFI looks up to camera, holds the gaze, small tired nod. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "No es que no entiendas, es que no sabes por dónde empezar",
+      "texto_tts": "",
+      "texto_pantalla": "¿Por dónde empezar?",
+      "plano": "No sabe por dónde empezar",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, close-up on hands and object. EFFI at a laptop, a blank glowing prompt box on screen, a cursor blinking; EFFI's hands hover over the keys, frozen, eyes darting. EFFI: an anthropomorphic cardboard shipping box with a small canvas apron, big round expressive eyes, thin cardboard arms, packing-tape smile line, standing upright. BIT: a small floating spherical AI assistant glowing soft cyan, no face, gentle pulse. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Hands hover, one finger reaches, pulls back, the cursor keeps blinking; EFFI scratches his cardboard head. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Dices que primero ordenas el negocio",
+      "texto_tts": "",
+      "texto_pantalla": "«Primero ordeno el negocio»",
+      "plano": "«Primero ordeno el negocio»",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot from behind. EFFI stacking boxes into a neat wall, back to the laptop, tape-smile determined; a calendar shape on the wall with many crossed-out days. EFFI: an anthropomorphic cardboard shipping box with a small canvas apron, big round expressive eyes, thin cardboard arms, packing-tape smile line, standing upright. BIT: a small floating spherical AI assistant glowing soft cyan, no face, gentle pulse. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 EFFI places a box, pats it, another box tumbles from the top of the wall. Camera: gentle pull-back. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Y en ese año salieron tres herramientas que ya usa medio mercado",
+      "texto_tts": "",
+      "texto_pantalla": "Tres herramientas ya",
+      "plano": "Tres herramientas que ya usa medio mercado",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, low-angle wide. Low-angle wide: three glowing abstract tool icons the size of vending machines rolling past the stockroom door, EFFI small in the doorway watching. EFFI: an anthropomorphic cardboard shipping box with a small canvas apron, big round expressive eyes, thin cardboard arms, packing-tape smile line, standing upright. BIT: a small floating spherical AI assistant glowing soft cyan, no face, gentle pulse. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The three icons roll past one after another, EFFI steps back as the third passes. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "El problema no es la herramienta / Es que nadie se ha sentado contigo a montarla",
+      "texto_tts": "",
+      "texto_pantalla": "Nadie se ha sentado contigo",
+      "plano": "El clic: nadie se ha sentado contigo",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, extreme close-up on eyes. Extreme close-up of EFFI's eyes with BIT's cyan glow appearing in the reflection for the first time. EFFI: an anthropomorphic cardboard shipping box with a small canvas apron, big round expressive eyes, thin cardboard arms, packing-tape smile line, standing upright. BIT: a small floating spherical AI assistant glowing soft cyan, no face, gentle pulse. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The cyan glow grows in the reflection, EFFI's eyes widen, a gentle blink. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve de octubre / Plaza Mayor, Medellín",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct",
+      "plano": "Llegada a Plaza Mayor",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide tracking shot. EFFI walking toward the glass entrance of a modern convention centre in morning light, BIT floating beside him, blurred figures streaming in. EFFI: an anthropomorphic cardboard shipping box with a small canvas apron, big round expressive eyes, thin cardboard arms, packing-tape smile line, standing upright. BIT: a small floating spherical AI assistant glowing soft cyan, no face, gentle pulse. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 EFFI walks, BIT bobs alongside, the doors slide open ahead. Camera: tracking from behind. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas / Más de sesenta mil asistentes / Y el próximo post ya no te duele",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "Las 350 empresas",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, high-angle wide over the crowd. High-angle wide over a vast pavilion of colourful stands; EFFI and BIT tiny in the aisle looking up. EFFI: an anthropomorphic cardboard shipping box with a small canvas apron, big round expressive eyes, thin cardboard arms, packing-tape smile line, standing upright. BIT: a small floating spherical AI assistant glowing soft cyan, no face, gentle pulse. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Aerial drift forward, tiny figures move between stands, BIT does a small excited loop. Camera: gentle aerial drift forward. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Las agencias que ya venden con inteligencia artificial te muestran cómo",
+      "texto_tts": "",
+      "texto_pantalla": "Te muestran cómo",
+      "plano": "Le muestran cómo lo hacen",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, two-shot at a stand. EFFI at a stand with BIT projecting an abstract glowing flow diagram between EFFI and a friendly anthropomorphic laptop character explaining it. EFFI: an anthropomorphic cardboard shipping box with a small canvas apron, big round expressive eyes, thin cardboard arms, packing-tape smile line, standing upright. BIT: a small floating spherical AI assistant glowing soft cyan, no face, gentle pulse. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The laptop character points at the diagram, blocks light up in sequence, EFFI's tape-smile lifts. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PRUEBA",
+      "quien": "CANCION",
+      "texto": "Más de doscientas ponencias para aprender de los que ya tienen resultados",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias: aprende de quien ya vende",
+      "plano": "200 ponentes, 5 ediciones",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot, side angle. Side view of EFFI in a packed auditorium among anthropomorphic objects, speaker on a lit stage ahead, BIT hovering low. EFFI: an anthropomorphic cardboard shipping box with a small canvas apron, big round expressive eyes, thin cardboard arms, packing-tape smile line, standing upright. BIT: a small floating spherical AI assistant glowing soft cyan, no face, gentle pulse. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Audience leans in, EFFI writes on a notepad, looks up, BIT pulses. Camera: gentle lateral drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "CTA cantado",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. EFFI facing camera in the pavilion aisle holding a phone at chest height, BIT beside him, confident tape-smile, bokeh behind. EFFI: an anthropomorphic cardboard shipping box with a small canvas apron, big round expressive eyes, thin cardboard arms, packing-tape smile line, standing upright. BIT: a small floating spherical AI assistant glowing soft cyan, no face, gentle pulse. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 EFFI looks at camera, taps the phone once, looks up and nods; BIT pulses. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y el próximo post ya no te duele",
+      "texto_tts": "",
+      "texto_pantalla": "Ya no te duele",
+      "plano": "Loop: el próximo post ya no duele",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide static shot, held. Back in the stockroom: EFFI relaxed in a chair, laptop running with glowing blocks flowing on their own, BIT beside the screen, the hand-written list in the bin; EFFI scrolls his phone calmly. EFFI: an anthropomorphic cardboard shipping box with a small canvas apron, big round expressive eyes, thin cardboard arms, packing-tape smile line, standing upright. BIT: a small floating spherical AI assistant glowing soft cyan, no face, gentle pulse. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Blocks flow on the screen, EFFI scrolls past a post, shrugs with a smile, keeps scrolling. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Mismo ad para landing y WhatsApp: el CTA no nombra la URL, señala el botón del placement."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix como identidad visual desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "defecto_admitido_nota": "El formato cantado no lleva beat DEFECTO: el loop cierra. Decisión heredada del skeleton musical de sin_arrancar.",
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'más de sesenta mil asistentes' — cifra aportada por Alexander el 2026-09-04; no está en el sitio. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 (nano-banana-2/edit) + 12 clips × 5s × 0.056 (kling v2.1 std) = 4.55 USD. Regenerar la canción cuesta 0.15 más por intento (MiniMax canta mal la marca ~1 de cada 3).",
+  "notas_produccion": "Continuidad de EFFI y BIT del ad Pixar del 2026-08-28: usar el character sheet en referencias/personajes/ como imagen héroe. Cantado, sin voz en off. El laptop del stand es el tercer personaje: límite de Seedance (3), OK en Kling."
+}

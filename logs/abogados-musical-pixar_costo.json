@@ -1,0 +1,46 @@
+{
+  "job": "abogados-musical-pixar",
+  "fecha": "2026-09-06",
+  "guion": "scripts/guiones/effix_pixar_abogados-musical_20260904_aprobado.json",
+  "estimado_usd": 4.646,
+  "real_usd": 6.886,
+  "desvio_usd": 2.24,
+  "por_concepto": {
+    "cancion": {
+      "llamadas": 1,
+      "usd": 0.15
+    },
+    "whisper": {
+      "llamadas": 1,
+      "usd": 0.096
+    },
+    "hero": {
+      "llamadas": 1,
+      "usd": 0.08
+    },
+    "escena": {
+      "llamadas": 26,
+      "usd": 2.08
+    },
+    "clip": {
+      "llamadas": 16,
+      "usd": 4.48
+    }
+  },
+  "causas_del_desvio": [
+    "Heroe duplicada en dos filas: las 12 escenas heredaron el diptico y hubo que rehacerlas. 0.96 USD tirados. Corregido en producir.py (UN_SOLO_CUADRO + system_prompt), no vuelve a pasar.",
+    "Escenas 8 y 9 con aire de plaza de mercado en vez de feria de ecommerce. Rehechas a peticion de Alexander: 0.36 USD.",
+    "Clips 12 y 4: Kling metia humanos porque el prompt pedia acciones imposibles para un libro y un carrito (\"types and hits a key\", \"lifts the papers\"). Rehechos: 0.56 USD."
+  ],
+  "render": "assets/renders/abogados-musical-pixar.mp4",
+  "qa": {
+    "duracion_s": 77.91,
+    "lufs": -14.4,
+    "true_peak": -3.9,
+    "planos": 38,
+    "plano_min_s": 1.33,
+    "plano_max_s": 2.48,
+    "promedio_s": 2.05,
+    "fuera_de_rango": "duracion 77.91s supera el techo de 60s del formato"
+  }
+}

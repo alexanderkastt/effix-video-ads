@@ -44,6 +44,14 @@ assets/audio/*
 # los storyboards y guiones de prueba se regeneran con los scripts.
 scripts/storyboards/*.html
 scripts/guiones/*.json
+# Los guiones APROBADOS sí se versionan: son la frontera entre creativo y
+# producción (docs/FORMATO-GUION.md). Los *_director.json de prueba, no.
+!scripts/guiones/*_aprobado.json
+!scripts/guiones/*_por-aprobar.json
+# ...salvo los que escupe el motor determinista en cada corrida de los tests:
+# llevan hora en el nombre (_HHMMSS_) y se regeneran solos. Un guion del formato
+# unico se nombra con fecha y sin hora.
+scripts/guiones/*_[0-9][0-9][0-9][0-9][0-9][0-9]_aprobado.json
 
 # ── Sistema ──────────────────────────────────────────────
 .DS_Store

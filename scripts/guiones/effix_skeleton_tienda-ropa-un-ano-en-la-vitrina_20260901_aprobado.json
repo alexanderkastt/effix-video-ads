@@ -1,0 +1,111 @@
+{
+  "nicho": "tienda_ropa",
+  "titulo": "Un año en la vitrina",
+  "estilo": "skeleton",
+  "job": "tienda-ropa-skeleton-vitrina",
+  "estado": "APROBADO POR ALEXANDER — texto verbatim del 2026-09-01",
+  "registro": "voseo paisa (colgás, bajás, montás, volvés, comprá), sin 'parce'",
+  "angulo": "costo de la inacción + escalada de tiempo: Día 1 → Día 365",
+  "turn": "beat 6, cuando se monta al bus",
+  "personaje": "el esqueleto comerciante, Bare-Bones Cinematic, SIN ropa rodeado de ropa que nadie compra",
+  "voz": "narrador_serio",
+  "fechas": "16 al 18 de octubre",
+  "modelo_video": "fal-ai/kling-video/o1/standard/image-to-video",
+  "modelo_imagen": "fal-ai/nano-banana-2",
+  "theme": "Colombian neighbourhood clothing store on a busy sidewalk street",
+  "palette": "warm desaturated amber and dusty teal",
+  "texto_corrido": "¿Y si tu ropa nunca sale de esa vitrina, qué? Día uno: colgás la colección nueva. Quedó divina. La ve… el que pasa por el frente. Día treinta: llovió tres sábados seguidos. La colección sigue completica. Día noventa: le bajás el precio. Ahora la ve el mismo que pasa por el frente, pero más barata. Día trescientos sesenta y cinco: la misma ropa, un año de arriendo, el mismo andén. Hasta que un octubre te montás en un bus pa' Medellín. Feria Effix. Trescientas cincuenta empresas y doscientos ponentes que viven de vender por internet. Y volvés con la tienda montada y con quién te la despache. Comprá tu pasaporte en feriaeffix punto com.",
+  "musica": {
+    "suno_prompt": "warm minimal cinematic underscore, soft felt piano and low pulse, patient and melancholic, turning hopeful in the last third",
+    "suno_style_tags": [
+      "cinematic",
+      "minimal",
+      "warm",
+      "documentary"
+    ],
+    "bpm_recomendado": 82
+  },
+  "beats": [
+    {
+      "n": 1,
+      "bloque": "hook",
+      "texto_tts": "¿Y si tu ropa nunca sale de esa vitrina, qué?",
+      "overlay": "¿Y si nunca sale de ahí?",
+      "prompt_imagen": "Wide shot from the sidewalk of a small neighbourhood clothing store at street level: the skeleton stands inside the lit shop window arranging a dressed mannequin, racks of colourful clothes behind him, metal shutter half rolled up, a parked motorbike and worn pavement in the foreground. Late afternoon warm light, reflections on the glass.",
+      "prompt_keyframe_final": null,
+      "prompt_video": "Very slow push-in from the sidewalk toward the shop window; the skeleton finishes adjusting the mannequin's sleeve and turns his skull toward the street. Pedestrians drift past in the foreground. Subtle handheld."
+    },
+    {
+      "n": 2,
+      "bloque": "dia 1",
+      "texto_tts": "Día uno: colgás la colección nueva. Quedó divina. La ve… el que pasa por el frente.",
+      "overlay": "Día 1",
+      "prompt_imagen": "Medium shot inside the shop: the skeleton proudly hanging brand-new colourful garments on a chrome rack, one hanger in each bony hand, big expressive cartoon eyes wide with pride. Folded stock in open cardboard boxes at his feet. Warm interior shop light, shallow depth of field.",
+      "prompt_keyframe_final": "The same shop from the same angle: the rack now completely full of new clothes and the skeleton one step back, bony hands on his hip bones, admiring it. The shop doorway empty behind him, the indifferent street visible through the glass.",
+      "prompt_video": "The skeleton hangs the last garment, steps back and admires the full rack; his eyes go from proud to expectant as he glances at the empty doorway. Slow push-in."
+    },
+    {
+      "n": 3,
+      "bloque": "dia 30",
+      "texto_tts": "Día treinta: llovió tres sábados seguidos. La colección sigue completica.",
+      "overlay": "Día 30",
+      "prompt_imagen": "The skeleton seen from inside the shop, standing at the window with arms crossed over his rib cage, watching heavy rain run down the glass. The street outside is empty and grey, one blurred umbrella passing. Behind him the same rack, still completely full of clothes. Cool rainy light against warm interior lamps.",
+      "prompt_keyframe_final": "The same shop window a moment later: the skeleton has turned away from the glass and looks back at the still-full rack of clothes behind him, shoulders lowered, rain still running down the window. Same cool rainy light against warm interior lamps.",
+      "prompt_video": "Rain streams down the glass and blurs the street; the skeleton shifts his weight, his shoulders drop slightly and his eyes follow a single passer-by out of frame. Static camera, very slow drift in."
+    },
+    {
+      "n": 4,
+      "bloque": "dia 90",
+      "texto_tts": "Día noventa: le bajás el precio. Ahora la ve el mismo que pasa por el frente, pero más barata.",
+      "overlay": "Día 90",
+      "prompt_imagen": "Extreme close-up of bony hands tying a blank red discount tag onto the sleeve of a hanging blouse. The frame is cropped at the forearms. Rows of the same clothes softly out of focus behind. Warm shop light, shallow depth of field. The tag is blank cardboard with no writing of any kind.",
+      "prompt_keyframe_final": "The same rack seen slightly wider: dozens of identical blank red tags now hang from every garment, swaying gently, the bony hands leaving the frame at the edge. Same warm shop light.",
+      "prompt_video": "The hands finish tying the red tag and pull away; the camera drifts back to reveal red tags on the whole rack, swaying. Slow pull-back."
+    },
+    {
+      "n": 5,
+      "bloque": "dia 365",
+      "texto_tts": "Día trescientos sesenta y cinco: la misma ropa, un año de arriendo, el mismo andén.",
+      "overlay": "Día 365",
+      "prompt_imagen": "Wide shot of the whole shop interior at dusk: the racks still full of the same clothes, the skeleton sitting on the counter with his legs hanging, slumped forward, elbows on his femurs, staring at the door. A stack of unopened boxes in the corner. Dim warm light, long shadows, dust floating in the air.",
+      "prompt_keyframe_final": "The same shop seen wider from the doorway at nightfall: the whole interior with the same full racks, the skeleton small and slumped on the counter, the street lamps outside now on. Dim warm light, deep shadows.",
+      "prompt_video": "Very slow crane up and back over the still shop; the skeleton exhales and lets his skull tilt down. Nothing else moves. Dust drifts through the light."
+    },
+    {
+      "n": 6,
+      "bloque": "el turn",
+      "texto_tts": "Hasta que un octubre te montás en un bus pa' Medellín.",
+      "overlay": "Un octubre",
+      "prompt_imagen": "Low-angle shot at dawn: the skeleton climbing the steps of an intercity bus with a worn duffel bag over his shoulder, one bony hand on the rail, looking up and forward with bright determined eyes. Bus terminal in blue-hour light, headlights and exhaust steam.",
+      "prompt_keyframe_final": "Wide shot from behind: the same bus already on a mountain highway at sunrise, small against green Andean slopes and mist, warm first light on the road toward the city in the valley.",
+      "prompt_video": "The skeleton steps up into the bus and the door closes; the motion carries into the bus pulling onto the mountain highway at sunrise. Energetic forward camera movement, the first hopeful beat of the film."
+    },
+    {
+      "n": 7,
+      "bloque": "la feria",
+      "texto_tts": "Feria Effix. Trescientas cincuenta empresas y doscientos ponentes que viven de vender por internet.",
+      "overlay": "FERIA EFFIX · 350 empresas",
+      "prompt_imagen": "Wide establishing shot inside a huge modern convention centre in Medellín: a packed trade-fair aisle with rows of exhibition booths on both sides, hundreds of Latin American entrepreneurs with lanyards walking and talking, the skeleton small in the middle of the aisle looking up and around in wonder. Bright even venue light, glass roof, strong depth. Banners show only abstract shapes and colour blocks.",
+      "prompt_keyframe_final": "The skeleton standing in front of a large exhibition booth in the same fair, looking up in wonder with his big expressive eyes, crowds of entrepreneurs moving around him, the booth structure tall above him. Bright venue light, banners with abstract shapes only.",
+      "prompt_video": "Steady forward travelling down the busy aisle past the booths, people crossing the frame; the skeleton turns his skull left and right taking it all in. Bright and alive."
+    },
+    {
+      "n": 8,
+      "bloque": "vuelta",
+      "texto_tts": "Y volvés con la tienda montada y con quién te la despache.",
+      "overlay": "Con quién te la despache",
+      "prompt_imagen": "Back at the same neighbourhood shop, now bright and busy: the skeleton handing a stack of sealed cardboard shipping boxes to a courier in a helmet standing beside a delivery motorbike at the door. Blank white shipping labels with no writing. Morning light, the street alive behind them.",
+      "prompt_keyframe_final": "The same doorway a moment later: the courier riding away with the boxes strapped to the motorbike, the skeleton in the doorway raising one bony hand goodbye, more boxes stacked ready beside him.",
+      "prompt_video": "The skeleton hands over the boxes, the courier loads them and rides off; the skeleton waves and turns back inside. Lively handheld, warm morning light."
+    },
+    {
+      "n": 9,
+      "bloque": "cta",
+      "texto_tts": "Comprá tu pasaporte en feriaeffix punto com.",
+      "overlay": "feriaeffix.com",
+      "prompt_imagen": "Hero shot inside the shop: the skeleton behind the counter holding a phone in both bony hands, big expressive eyes lit by the screen and a wide happy expression, stacks of sealed boxes ready to ship beside him, the half-empty racks behind. The lower third of the frame is clean and uncluttered. Warm amber light, cinematic shallow depth of field.",
+      "prompt_keyframe_final": null,
+      "prompt_video": "Slow push-in on the skeleton as he looks up from the phone straight toward camera and gives a small confident nod. Warm and calm."
+    }
+  ]
+}

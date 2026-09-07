@@ -1,0 +1,228 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "referentes-musical-pixar",
+  "titulo": "Tripi y la silla del fondo",
+  "marca": "effix",
+  "nicho": "referentes",
+  "angulo": "principal",
+  "estilo": "pixar",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "gancho": {
+    "banco": "dolor_nombrado#39",
+    "gatillos": [
+      "dolor_nombrado",
+      "ego"
+    ]
+  },
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Ves a alguien en tarima explicando lo que tú aplicas hace años, y la sala entera tomando nota.",
+    "sintoma": "Grabas un video contando lo mismo, y lo ven los de siempre.",
+    "reaccion_interna": "Y por dentro ya lo aceptaste: saber no es lo mismo que ser reconocido.",
+    "explicacion_fallida": "Te dices que primero toca tener más resultados, y después mostrarse.",
+    "patron": "Pero el que está en tarima no sabe más que tú. Se puso donde lo vieran.",
+    "causa_raiz": "No te falta conocimiento. Te falta estar en el lugar donde están los que ya son referentes.",
+    "mecanismo": "En la feria están doscientos ponentes de más de veinte países y trescientas cincuenta marcas, en el mismo recinto."
+  },
+  "bible": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16.",
+  "negative_prompt": "sharp edges, flat colors, 2D look, cheap animation feel, realistic human, photoreal, text, captions, letters, watermark, logo, UI, style drift, extra limbs",
+  "personajes": {
+    "tripi": {
+      "ficha": "TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot.",
+      "voz": null,
+      "quien_es": "Un celular en trípode antropomórfico: el que sabe y graba solo. NUNCA se le pone en tarima ni con micrófono.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "suno_title": "Feria Effix — Tripi y la silla del fondo",
+    "suno_custom_lyrics": "[Verso 1]\nVes a alguien en tarima diciendo lo que tú aplicas hace años\nY la sala entera tomando nota\nSi sabes de ecommerce y nadie te conoce todavía\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nGrabas un video contando lo mismo, y lo ven los de siempre\nDices que primero toca tener más resultados\nPero el de la tarima se puso donde lo vieran\n\n[Pre-coro]\nNo te falta conocimiento\nTe falta estar donde están los que ya son\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nNadie se vuelve referente desde la silla\n\n[Verso 3]\nDoscientos ponentes de veinte países y trescientas cincuenta marcas\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nNadie se vuelve referente desde la silla",
+    "suno_style_tags": [
+      "upbeat orchestral pop",
+      "playful pizzicato strings",
+      "bright brass hits",
+      "catchy sung hook",
+      "warm male vocal",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 104,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Ves a alguien en tarima diciendo lo que tú aplicas hace años / Y la sala entera tomando nota",
+      "texto_tts": "",
+      "texto_pantalla": "Tú lo aplicas hace años",
+      "plano": "Tripi en la silla del fondo",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide establishing shot. From the back row of a dark auditorium: a lit stage far ahead with a speaker mid-gesture, backs of heads in the foreground; TRIPI in the last seat, ring-light dim, watching. TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The audience heads tilt down to take notes, TRIPI's screen-eyes lower gently to his own legs. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Si sabes de ecommerce y nadie te conoce todavía / Esto es para ti, quédate un minuto",
+      "texto_tts": "",
+      "texto_pantalla": "¿Sabes y no te conocen?",
+      "plano": "Callout a cámara",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up. TRIPI turns his screen toward camera in the dark row, ring-light flickering weakly. TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 TRIPI turns to camera, the ring-light flickers, he holds the look. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Grabas un video contando lo mismo, y lo ven los de siempre",
+      "texto_tts": "",
+      "texto_pantalla": "Lo ven los de siempre",
+      "plano": "Lo ven los de siempre",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, close-up on hands and object. TRIPI alone at night in a small home office, recording himself in a mirror, a tiny abstract view-counter icon hovering with only three dots lit. TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 TRIPI finishes recording, the counter icon adds one dot, then nothing; his halo dims. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Dices que primero toca tener más resultados",
+      "texto_tts": "",
+      "texto_pantalla": "«Primero más resultados»",
+      "plano": "«Primero más resultados»",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot from behind. TRIPI at a desk stacking abstract glowing trophy-shaped blocks into a tower, ignoring a window with a bright distant stage light outside. TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 He places a block, the tower wobbles, he steadies it and turns his back further to the window. Camera: gentle pull-back. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Pero el de la tarima se puso donde lo vieran",
+      "texto_tts": "",
+      "texto_pantalla": "Se puso donde lo vieran",
+      "plano": "El de la tarima se puso donde lo vieran",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, low-angle wide. Low-angle wide: on a bright stage, a confident anthropomorphic microphone-stand character in the spotlight; TRIPI small at the foot of the stage looking up. TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The spotlight sweeps onto the mic-stand character who bows; TRIPI takes half a step back. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "No te falta conocimiento / Te falta estar donde están los que ya son",
+      "texto_tts": "",
+      "texto_pantalla": "Estar donde están",
+      "plano": "El clic: estar donde están",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, extreme close-up on eyes. Extreme close-up of TRIPI's screen-eyes, the ring-light halo starting to brighten, a reflection of a crowded hall. TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The halo brightens steadily, eyes sharpen, a decisive blink. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve de octubre / Plaza Mayor, Medellín",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct",
+      "plano": "Llegada a Plaza Mayor",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide tracking shot. TRIPI walking on tripod legs toward the glass entrance of a modern convention centre in morning light, blurred figures streaming in. TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 TRIPI walks, legs clicking, the doors slide open ahead. Camera: tracking from behind. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas / Más de sesenta mil asistentes / Nadie se vuelve referente desde la silla",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "Las 350 empresas",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, high-angle wide over the crowd. High-angle wide over a vast pavilion of colourful stands; TRIPI small in the aisle, halo bright, looking up. TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Aerial drift forward, tiny figures move, TRIPI spins on his legs. Camera: gentle aerial drift forward. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Doscientos ponentes de veinte países y trescientas cincuenta marcas",
+      "texto_tts": "",
+      "texto_pantalla": "Con los que hoy sigues",
+      "plano": "Grabando con los que sigue (pasillo, no tarima)",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, two-shot at a stand. In a pavilion corridor TRIPI stands next to the mic-stand character from the stage, both leaning into TRIPI's screen recording together, laughing. TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The mic-stand leans in, TRIPI's halo flares, both shake with laughter. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PRUEBA",
+      "quien": "CANCION",
+      "texto": "Más de doscientas ponencias para aprender de los que ya tienen resultados",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias: aprende de quien ya vende",
+      "plano": "5 ediciones",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot, side angle. Side view of TRIPI in a packed auditorium, now in a middle row among anthropomorphic objects, speaker on a lit stage ahead, halo steady. TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Audience leans in, TRIPI records a short clip and lowers, nodding. Camera: gentle lateral drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "CTA cantado",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. TRIPI facing camera in the pavilion aisle, screen bright and confident, halo full, bokeh stands behind. TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 TRIPI looks at camera, the screen flashes once like a tap, he nods. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Nadie se vuelve referente desde la silla",
+      "texto_tts": "",
+      "texto_pantalla": "Nadie es referente desde la silla",
+      "plano": "Loop: nadie es referente desde la silla",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide static shot, held. The auditorium from the back: the last-row seat is empty and in focus; far ahead TRIPI's bright halo is visible in the crowd near the front, not on stage. TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The empty seat holds, far ahead the halo pulses once, a few heads turn toward it. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Mismo ad para landing y WhatsApp: el CTA no nombra la URL, señala el botón del placement."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix como identidad visual desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "defecto_admitido_nota": "El formato cantado no lleva beat DEFECTO: el loop cierra. Decisión heredada del skeleton musical de sin_arrancar.",
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'más de sesenta mil asistentes' — cifra aportada por Alexander el 2026-09-04; no está en el sitio. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 (nano-banana-2/edit) + 12 clips × 5s × 0.056 (kling v2.1 std) = 4.55 USD. Regenerar la canción cuesta 0.15 más por intento (MiniMax canta mal la marca ~1 de cada 3).",
+  "notas_produccion": "REGLA: TRIPI nunca aparece EN tarima ni con micrófono (el pase es de asistente). En la escena 9 graba en pasillo, no en zona de contenido (eso es VIP). Pixar, cantado."
+}

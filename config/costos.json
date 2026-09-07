@@ -20,7 +20,7 @@
     "_unidad": "USD por canción generada — reemplazado por stable-audio-25",
     "cancion": 0.2
   },
-  "verificado_el": "2026-09-01",
+  "verificado_el": "2026-09-06",
   "fal_ai_por_unidad": {
     "_unidad": "cada uno con su propia unidad, ver sufijo",
     "fal-ai/nano-banana-2__por_imagen": 0.08,
@@ -30,7 +30,9 @@
     "fal-ai/sync-lipsync/react-1__por_minuto": 10.0,
     "fal-ai/stable-audio-25/text-to-audio__por_pista": 0.2,
     "fal-ai/elevenlabs/music__por_minuto": 0.6,
-    "fal-ai/elevenlabs/sound-effects/v2__por_segundo": 0.002
+    "fal-ai/elevenlabs/sound-effects/v2__por_segundo": 0.002,
+    "fal-ai/minimax-music/v2.6__por_cancion": 0.15,
+    "fal-ai/whisper__por_segundo_de_computo": 0.0008
   },
   "presupuesto": {
     "_unidad": "USD por video terminado, todo incluido (video, imágenes, voz, música)",

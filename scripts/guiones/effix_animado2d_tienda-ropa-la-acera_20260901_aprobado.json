@@ -1,0 +1,183 @@
+{
+  "job_id": "tienda-ropa-2d-la-acera",
+  "titulo": "La acera",
+  "nicho": "tienda_ropa",
+  "estilo": "animado_2d",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 38,
+  "bible": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Setting: the sidewalk between two small clothing shops in a Colombian neighborhood, wet asphalt after rain, roll-up metal shutters, clothing racks and mannequins visible through the shop glass, overcast late-afternoon light. Vertical 9:16 composition.",
+  "negative_prompt": "3D render, Pixar style, photorealistic, gradients, airbrush, glossy highlights, variable line weight, text, captions, letters, watermark, logo, UI, extra fingers, deformed hands, style drift",
+  "personajes": {
+    "rosa": {
+      "voz": "cercana_medellin",
+      "ficha": "ROSA: Colombian woman in her mid-fifties, short dyed-brown hair with grey roots pulled back, round face, reading glasses hanging from a beaded chain on her chest, floral blouse, dark skirt, a small fanny pack at her waist, warm brown skin, tired kind eyes, arms often crossed.",
+      "quien_es": "Duena del almacen de ropa. Vende bien, de mostrador. Es el espectador."
+    },
+    "marce": {
+      "voz": "amiga",
+      "ficha": "MARCE: Colombian woman in her mid-forties, black hair in a high ponytail, gold hoop earrings, plain teal t-shirt under a mustard shop apron, packing tape gun in one hand, medium brown skin, easy confident smile, sleeves pushed up.",
+      "quien_es": "La vecina de local. Vende lo mismo y despacha a todo el pais. No es una guru: es la de al lado."
+    },
+    "marca": {
+      "voz": "marca_femenina",
+      "ficha": null,
+      "quien_es": "Voz de marca. Solo el CTA. No aparece en pantalla."
+    }
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "quien": "ROSA",
+      "personaje": "rosa",
+      "perfil_voz": "cercana_medellin",
+      "lipsync": true,
+      "texto": "Otra vez llovio. Hoy no me entro ni un alma.",
+      "texto_tts": "Otra vez llovió. Hoy no me entró ni un alma.",
+      "plano": "Medium de Rosa en la puerta de su almacen, brazos cruzados, mirando la acera mojada",
+      "prompt_imagen": "Medium shot of ROSA standing in the doorway of her clothing shop, arms crossed, looking down at the wet empty sidewalk. Rain has just stopped, puddles reflecting the shop light. Her shop window with clothing racks behind her.",
+      "prompt_video": "@Image1 ROSA breathes out and shifts her weight, her crossed arms tightening slightly, eyes moving along the empty sidewalk. Very subtle camera push-in. Flat 2D cartoon animation, constant line weight, no morphing, no style drift.",
+      "texto_pantalla": "Llovió. Y no entró nadie"
+    },
+    {
+      "n": 2,
+      "quien": "MARCE",
+      "personaje": "marce",
+      "perfil_voz": "amiga",
+      "lipsync": true,
+      "texto": "A mi tampoco me entro nadie... y despache dieciocho blusas.",
+      "texto_tts": "A mí tampoco me entró nadie... y despaché dieciocho blusas.",
+      "plano": "Medium de Marce en el anden de su local, cerrando una caja con la cinta",
+      "prompt_imagen": "Medium shot of MARCE on the sidewalk in front of her own shop next door, sealing a cardboard box with a packing tape gun, three more sealed boxes stacked beside her, clothing on hangers visible inside her shop.",
+      "prompt_video": "@Image1 MARCE runs the tape gun across the box, straightens up and glances over at her neighbor with a small shrug. Flat 2D cartoon animation, constant line weight, no morphing, no style drift.",
+      "texto_pantalla": "18 blusas despachadas"
+    },
+    {
+      "n": 3,
+      "quien": "ROSA",
+      "personaje": "rosa",
+      "perfil_voz": "cercana_medellin",
+      "lipsync": true,
+      "texto": "Como asi que dieciocho? A quien?",
+      "texto_tts": "¿Cómo así que dieciocho? ¿A quién?",
+      "plano": "Close-up de Rosa girando la cabeza, la postura cambia",
+      "prompt_imagen": "Close-up of ROSA turning her head sharply toward her neighbor, eyebrows raised, arms starting to uncross, genuine surprise on her face. Blurred shop front behind her.",
+      "prompt_video": "@Image1 ROSA turns her head and leans in slightly, eyebrows lifting. Flat 2D cartoon animation, constant line weight, no morphing, no style drift."
+    },
+    {
+      "n": 4,
+      "quien": "MARCE",
+      "personaje": "marce",
+      "perfil_voz": "amiga",
+      "lipsync": true,
+      "texto": "A gente que ni conozco. De Pereira, de Cucuta, de Neiva.",
+      "texto_tts": "A gente que ni conozco. De Pereira, de Cúcuta, de Neiva.",
+      "plano": "Medium de Marce, tres cajas rotuladas a su lado",
+      "prompt_imagen": "Medium shot of MARCE resting one hand on a stack of three sealed boxes, each with a handwritten shipping label facing camera, gesturing loosely with the other hand as she talks.",
+      "prompt_video": "@Image1 MARCE taps the top box twice with her hand and gestures outward down the street. Flat 2D cartoon animation, constant line weight, no morphing, no style drift.",
+      "texto_pantalla": "Pereira · Cúcuta · Neiva"
+    },
+    {
+      "n": 5,
+      "quien": "ROSA",
+      "personaje": "rosa",
+      "perfil_voz": "cercana_medellin",
+      "lipsync": true,
+      "texto": "Y eso como se hace?",
+      "texto_tts": "¿Y eso cómo se hace?",
+      "plano": "Close-up de Rosa, se acerca un paso, baja los brazos",
+      "prompt_imagen": "Close-up of ROSA having stepped closer, arms now down at her sides, open and curious expression, her guard gone. The neighbor's boxes slightly out of focus in the foreground.",
+      "prompt_video": "@Image1 ROSA takes half a step forward, her arms dropping to her sides, head tilting slightly. Flat 2D cartoon animation, constant line weight, no morphing, no style drift."
+    },
+    {
+      "n": 6,
+      "quien": "MARCE",
+      "personaje": "marce",
+      "perfil_voz": "amiga",
+      "lipsync": true,
+      "texto": "Yo tampoco sabia. Lo aprendi en la feria.",
+      "texto_tts": "Yo tampoco sabía. Lo aprendí en la feria.",
+      "plano": "Medium de Marce encogiendose de hombros, sin pose de experta",
+      "prompt_imagen": "Medium shot of MARCE shrugging with both palms briefly up, warm unpretentious smile, tape gun hanging from one hand, no expert posture at all.",
+      "prompt_video": "@Image1 MARCE shrugs, palms turning up for a beat and then dropping. Flat 2D cartoon animation, constant line weight, no morphing, no style drift."
+    },
+    {
+      "n": 7,
+      "quien": "ROSA",
+      "personaje": "rosa",
+      "perfil_voz": "cercana_medellin",
+      "lipsync": true,
+      "texto": "Cual feria?",
+      "texto_tts": "¿Cuál feria?",
+      "plano": "Close de Rosa, la pregunta que abre todo",
+      "prompt_imagen": "Tight close-up of ROSA, head slightly tilted, asking a simple question, the wet street reflected softly behind her.",
+      "prompt_video": "@Image1 ROSA tilts her head a fraction, waiting for the answer. Flat 2D cartoon animation, constant line weight, no morphing, no style drift."
+    },
+    {
+      "n": 8,
+      "quien": "MARCE",
+      "personaje": null,
+      "perfil_voz": "amiga",
+      "lipsync": false,
+      "texto": "Feria Effix, del dieciseis al dieciocho de octubre, en Plaza Mayor.",
+      "texto_tts": "Feria Effix, del dieciséis al dieciocho de octubre, en Plaza Mayor.",
+      "plano": "Corte al recinto de la feria: pasillos de stands, gente con escarapela. Marce habla en off",
+      "prompt_imagen": "Interior of a big trade fair hall seen from the main aisle: two rows of exhibition stands with fabric banners and counters receding into the distance, visitors walking with lanyards and tote bags, a tall industrial ceiling with truss lighting, and a large round arch of colourful flowers in the Medellin silletera tradition standing beside the aisle. Busy, warm, full of people.",
+      "prompt_video": "@Image1 Slow steady camera push forward down the fair aisle, visitors walking past the stands, banners moving faintly. Flat 2D cartoon animation, constant line weight, no morphing, no style drift.",
+      "sin_refs": true,
+      "texto_pantalla": [
+        "Feria Effix",
+        "16-18 oct · Plaza Mayor"
+      ]
+    },
+    {
+      "n": 9,
+      "quien": "ROSA",
+      "personaje": "rosa",
+      "perfil_voz": "cercana_medellin",
+      "lipsync": true,
+      "texto": "Y eso sirve pa ropa?",
+      "texto_tts": "¿Y eso sirve pa ropa?",
+      "plano": "Rosa mira su propia vitrina mientras pregunta",
+      "prompt_imagen": "Medium shot of ROSA half turned toward her own shop window, looking at her own clothing display with new eyes while she asks, mannequin visible through the glass.",
+      "prompt_video": "@Image1 ROSA glances back at her own shop window, then toward her neighbor. Flat 2D cartoon animation, constant line weight, no morphing, no style drift."
+    },
+    {
+      "n": 10,
+      "quien": "MARCE",
+      "personaje": "marce",
+      "perfil_voz": "amiga",
+      "lipsync": true,
+      "texto": "Eso sirve pa lo que vos vendas.",
+      "texto_tts": "Eso sirve pa lo que vos vendás.",
+      "plano": "Close de Marce, la frase que voltea el ad",
+      "prompt_imagen": "Close-up of MARCE looking straight at her neighbor, calm and matter-of-fact, a small certain smile, boxes out of focus behind her.",
+      "prompt_video": "@Image1 MARCE holds her neighbor's gaze and gives one small nod. Flat 2D cartoon animation, constant line weight, no morphing, no style drift."
+    },
+    {
+      "n": 11,
+      "quien": "VOZ MARCA",
+      "personaje": null,
+      "perfil_voz": "marca_femenina",
+      "lipsync": false,
+      "texto": "Compra tu pasaporte en feriaeffix punto com. Te toma un minuto.",
+      "texto_tts": "Compra tu pasaporte en feriaeffix punto com. Te toma un minuto.",
+      "plano": "Plano abierto de la acera con las dos vecinas y los dos locales. Cierre de marca, logo en edicion",
+      "prompt_imagen": "Wide establishing shot of the sidewalk with both shopfronts side by side, ROSA in her doorway and MARCE beside her boxes, seen from across the wet street, clean empty sky space in the upper third of the frame.",
+      "prompt_video": "@Image1 Slow camera pull back from the two shopfronts, light reflecting on the wet asphalt, the two women small in frame. Flat 2D cartoon animation, constant line weight, no morphing, no style drift.",
+      "texto_pantalla": "feriaeffix.com"
+    },
+    {
+      "n": 12,
+      "quien": "ROSA",
+      "personaje": "rosa",
+      "perfil_voz": "cercana_medellin",
+      "lipsync": true,
+      "texto": "Manana no me quedo esperando a que escampe.",
+      "texto_tts": "Mañana no me quedo esperando a que escampe.",
+      "plano": "Rosa entra a su local y mira la ropa distinto",
+      "prompt_imagen": "Medium shot from inside the shop: ROSA stepping in through her own door, looking at her racks of clothing with new determination, the wet street behind her through the glass.",
+      "prompt_video": "@Image1 ROSA steps inside, runs a hand along a rack of clothes and looks at it differently, ending as in @Image2. Flat 2D cartoon animation, constant line weight, no morphing, no style drift.",
+      "prompt_keyframe_final": "Medium shot from inside the shop: ROSA standing among her clothing racks, one hand resting on a hanger, looking at the clothes with quiet resolve, the wet street behind her through the glass."
+    }
+  ]
+}

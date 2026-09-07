@@ -76,6 +76,12 @@ def estimar(
     con_musica: bool = False,
     n_imagenes: int = 0,
     modelo_imagen: str = "fal-ai/nano-banana-2",
+    # Modo `musical_sync`: la pista no es una cama de librería sino una canción
+    # cantada que se paga por pieza. Cuando viene, manda sobre `con_musica`.
+    modelo_cancion: str | None = None,
+    # Gastos sueltos que no encajan en ninguna de las cuatro columnas: hoy la
+    # transcripción con whisper, que cuesta centavos pero no es cero.
+    costo_extras: float = 0.0,
 ) -> dict[str, Any]:
     """Devuelve el desglose de costo estimado, si es confiable y si cabe en el
     presupuesto.
@@ -96,9 +102,13 @@ def estimar(
     segundos = n_clips * duracion_clip_s
     costo_video = segundos * precio_video_s
     costo_voz = (caracteres_voz / 1000) * precio_voz_1k
-    costo_musica = precio_cancion if con_musica else 0.0
+    if modelo_cancion:
+        costo_musica = tarifas.get("fal_ai_por_unidad", {}).get(
+            f"{modelo_cancion}__por_cancion", 0.0)
+    else:
+        costo_musica = precio_cancion if con_musica else 0.0
     costo_imagenes = n_imagenes * precio_imagen
-    total = costo_video + costo_voz + costo_musica + costo_imagenes
+    total = costo_video + costo_voz + costo_musica + costo_imagenes + costo_extras
 
     return {
         "verificado": verificado,
@@ -110,6 +120,7 @@ def estimar(
         "costo_voz": round(costo_voz, 4),
         "costo_musica": round(costo_musica, 4),
         "costo_imagenes": round(costo_imagenes, 4),
+        "costo_extras": round(costo_extras, 4),
         "total": round(total, 4),
         "presupuesto": contra_presupuesto(total),
         "aviso": (
@@ -129,10 +140,17 @@ def formatear(est: dict[str, Any]) -> str:
             f"({est['segundos_video']}s de video · {est['caracteres_voz']} caracteres de voz)\n"
             f"   ⚠️  {est['aviso']}"
         )
+    partes = [
+        f"video {est['costo_video']}",
+        f"imágenes {est.get('costo_imagenes', 0)}",
+        f"voz {est['costo_voz']}",
+        f"música {est['costo_musica']}",
+    ]
+    if est.get("costo_extras"):
+        partes.append(f"extras {est['costo_extras']}")
     linea = (
         f"💰 Costo estimado: {est['total']} {est['moneda']} "
-        f"(video {est['costo_video']} · imágenes {est.get('costo_imagenes', 0)} · "
-        f"voz {est['costo_voz']} · música {est['costo_musica']})"
+        f"({' · '.join(partes)})"
     )
     p = est.get("presupuesto", {})
     if p.get("estado") == "dentro":

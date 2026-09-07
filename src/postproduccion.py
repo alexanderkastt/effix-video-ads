@@ -30,8 +30,24 @@ CUERPO_MIN = 40
 # encima de la botonera de Reels y TikTok.
 ALTURA = 0.72
 
-DURACION_ENTRADA = 0.18
-DESPLAZAMIENTO = 28  # píxeles que sube al entrar
+DURACION_ENTRADA = 0.22
+DURACION_SALIDA = 0.18
+DESPLAZAMIENTO = 34  # píxeles que sube al entrar
+
+# Separación entre renglones, en fracción del cuerpo. El interlineado propio de
+# `drawtext` deja las mayúsculas de Montserrat Black flotando muy separadas: en
+# caja alta no hay descendentes que llenar, así que 1.0 del cuerpo ya deja el
+# aire justo y el overlay se lee como un bloque y no como dos textos sueltos.
+INTERLINEA = 1.0
+
+# El texto no se queda quieto una vez que entra: flota un par de píxeles. En un
+# feed, un overlay perfectamente inmóvil sobre imagen en movimiento se lee como
+# un pegote de render; el movimiento mínimo es lo que lo hace ver intencional.
+FLOTA_PX = 3.0
+FLOTA_PERIODO_S = 2.4
+
+# Caracteres que separan y no cierran: no pueden quedar al final de un renglón.
+_SEPARADORES = {"·", "|", "—", "–", "-", "/"}
 
 
 @dataclass
@@ -68,6 +84,58 @@ def cuerpo_para(texto: str, ancho_video: int = 720) -> tuple[int, bool]:
     return CUERPO_MIN, False
 
 
+def ajustar(
+    texto: str, ancho_video: int = 720, *, max_lineas: int = 2
+) -> tuple[str, int, bool]:
+    """Envuelve el overlay en varias líneas y devuelve el cuerpo que le sirve.
+
+    `cuerpo_para` sólo sabe medir una línea, y con eso la mayoría de los
+    overlays de siete palabras no cabía ni al piso legible: se dibujaban a 40px
+    porque no había otra, que es lo mismo que no ponerlos — un ad tiene que
+    funcionar sin sonido.
+
+    Partirlos en dos deja el mismo texto al doble de tamaño. Se prueba primero
+    en una línea (siempre se lee mejor de un vistazo) y sólo se parte si hace
+    falta, buscando el corte que deje las dos mitades más parejas: un renglón
+    largo sobre uno de dos palabras se ve como un error de maquetación.
+    """
+    cuerpo, cabe = cuerpo_para(texto, ancho_video)
+    if cabe or max_lineas < 2:
+        return texto, cuerpo, cabe
+
+    palabras = texto.split()
+    if len(palabras) < 2:
+        return texto, cuerpo, cabe
+
+    mejor: tuple[int, int, bool, str] | None = None
+    for corte in range(1, len(palabras)):
+        arriba, abajo = palabras[:corte], palabras[corte:]
+        # Un separador que cae justo en la frontera se descarta: el "·" de
+        # "FERIA EFFIX · 15–19 OCT" separa dentro de un renglón, y al partir en
+        # dos el salto de línea ya hace ese trabajo. Dejarlo colgando al final
+        # del primero se lee como un error de maquetación.
+        while arriba and arriba[-1] in _SEPARADORES:
+            arriba = arriba[:-1]
+        while abajo and abajo[0] in _SEPARADORES:
+            abajo = abajo[1:]
+        if not arriba or not abajo:
+            continue
+        filas = [" ".join(arriba), " ".join(abajo)]
+        cuerpos = [cuerpo_para(f, ancho_video) for f in filas]
+        # El cuerpo lo manda la fila más ancha: las dos se dibujan igual.
+        c = min(x for x, _ in cuerpos)
+        entra = all(ok for _, ok in cuerpos)
+        desequilibrio = abs(len(filas[0]) - len(filas[1]))
+        candidato = (c, -desequilibrio, entra, "\n".join(filas))
+        if mejor is None or candidato[:2] > mejor[:2]:
+            mejor = candidato
+    if mejor is None:
+        return texto, cuerpo, cabe
+
+    c, _, entra, envuelto = mejor
+    return envuelto, c, entra
+
+
 def resolver(guion: dict[str, Any], plan: dict[str, Any], ancho: int = 720) -> list[Overlay]:
     """Convierte los texto_pantalla del guión en overlays con tiempo y cuerpo."""
     por_beat = {b["beat"]: b.get("texto_pantalla", "").strip() for b in guion["beats"]}
@@ -89,38 +157,68 @@ def _escapar(ruta: Path) -> str:
 
 
 def filtros(overlays: list[Overlay], carpeta: Path, alto: int = 1280) -> list[str]:
-    """Un drawtext por overlay, con contorno sticker y entrada animada."""
+    """Un drawtext por RENGLÓN, con contorno sticker y entrada animada.
+
+    Por renglón y no por overlay porque `drawtext` con texto de varias líneas
+    centra el bloque entero y deja cada línea alineada a la izquierda dentro de
+    él: un overlay de dos renglones salía descuadrado, con el segundo empezando
+    donde empezaba el primero. Dibujando cada línea por separado, cada una
+    recibe su propio `x=(w-text_w)/2` y las dos quedan centradas de verdad — y
+    de paso el interlineado lo decidimos nosotros y no el filtro.
+
+    Las dos líneas comparten animación (entran y salen juntas), así que el
+    overlay se sigue leyendo como una sola pieza.
+    """
     fuente = _escapar(_fuente())
     textos = carpeta / "overlays"
     textos.mkdir(parents=True, exist_ok=True)
 
     filtros: list[str] = []
     for i, o in enumerate(overlays):
-        archivo = textos / f"overlay_{i:02d}.txt"
-        archivo.write_text(o.texto, encoding="utf-8")
+        renglones = [r for r in o.texto.split("\n") if r.strip()]
+        if not renglones:
+            continue
         t0, t1 = o.inicio, o.fin
-        entrada = DURACION_ENTRADA
+        # Entrada y salida se acortan si el overlay dura poco: una animación de
+        # 0.4s sobre un texto que vive 0.6s no llega a leerse nunca quieto.
+        entrada = min(DURACION_ENTRADA, max((t1 - t0) * 0.25, 0.08))
+        salida = min(DURACION_SALIDA, max((t1 - t0) * 0.2, 0.06))
 
-        # Opacidad: sube al entrar, baja al salir. Fuera del tramo el filtro
-        # ni se dibuja, asi que basta con cubrir el interior.
+        # Opacidad con easing: arranca rápido y frena. Un fade lineal se ve
+        # como un cross-dissolve de editor, no como un sticker que aparece.
         alpha = (
-            f"if(lt(t,{t0 + entrada:.2f}),(t-{t0:.2f})/{entrada},"
-            f"if(gt(t,{t1 - entrada:.2f}),({t1:.2f}-t)/{entrada},1))"
+            f"if(lt(t,{t0 + entrada:.3f}),"
+            f"pow((t-{t0:.3f})/{entrada:.3f},0.6),"
+            f"if(gt(t,{t1 - salida:.3f}),"
+            f"pow(({t1:.3f}-t)/{salida:.3f},0.6),1))"
         )
-        # Sube {DESPLAZAMIENTO}px mientras aparece y ahi se queda.
-        y = (
-            f"{alto * ALTURA:.0f}-th/2"
-            f"+{DESPLAZAMIENTO}*max(0\\,1-(t-{t0:.2f})/{entrada})"
+        # Movimiento: sube desde abajo frenando (ease-out cúbico), flota
+        # mientras está en pantalla, y baja al salir.
+        desplazamiento = (
+            f"if(lt(t,{t0 + entrada:.3f}),"
+            f"{DESPLAZAMIENTO}*pow(1-(t-{t0:.3f})/{entrada:.3f},3),0)"
+            f"+if(gt(t,{t1 - salida:.3f}),"
+            f"{DESPLAZAMIENTO * 0.4:.1f}*pow((t-{t1 - salida:.3f})/{salida:.3f},3),0)"
+            f"+{FLOTA_PX}*sin(2*PI*(t-{t0:.3f})/{FLOTA_PERIODO_S})"
         )
-        filtros.append(
-            f"drawtext=textfile='{_escapar(archivo)}':fontfile='{fuente}'"
-            f":fontsize={o.cuerpo}:fontcolor=white"
-            # El contorno es lo que sustituye a la caja negra: se lee sobre
-            # cualquier fondo y es el tratamiento sticker de la marca.
-            f":borderw={max(4, o.cuerpo // 12)}:bordercolor=black"
-            f":shadowx=0:shadowy={max(2, o.cuerpo // 20)}:shadowcolor=black@0.45"
-            f":x=(w-text_w)/2:y={y}"
-            f":alpha='{alpha}'"
-            f":enable='between(t,{t0},{t1})'"
-        )
+
+        paso = o.cuerpo * INTERLINEA
+        # El bloque se centra sobre la altura de siempre, así que un overlay de
+        # dos renglones no empuja el texto hacia la botonera de Reels.
+        tope = alto * ALTURA - (paso * len(renglones)) / 2
+        for j, renglon in enumerate(renglones):
+            archivo = textos / f"overlay_{i:02d}_{j}.txt"
+            archivo.write_text(renglon, encoding="utf-8")
+            centro = tope + paso * j + paso / 2
+            filtros.append(
+                f"drawtext=textfile='{_escapar(archivo)}':fontfile='{fuente}'"
+                f":fontsize={o.cuerpo}:fontcolor=white"
+                # El contorno es lo que sustituye a la caja negra: se lee sobre
+                # cualquier fondo y es el tratamiento sticker de la marca.
+                f":borderw={max(4, o.cuerpo // 12)}:bordercolor=black"
+                f":shadowx=0:shadowy={max(2, o.cuerpo // 20)}:shadowcolor=black@0.45"
+                f":x='(w-text_w)/2':y='{centro:.1f}-th/2+({desplazamiento})'"
+                f":alpha='{alpha}'"
+                f":enable='between(t,{t0},{t1})'"
+            )
     return filtros

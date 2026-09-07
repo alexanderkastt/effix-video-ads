@@ -101,6 +101,83 @@ def planos(dur: float, *, desde: int = 0) -> list[Plano]:
     ]
 
 
+def planos_en_fuente(
+    dur_destino: float, dur_fuente: float, *, desde: int = 0
+) -> list[Plano]:
+    """Planos que llenan `dur_destino` en el montaje sacándolos de un clip que
+    sólo dura `dur_fuente`.
+
+    Es el caso del ad musical: la canción manda, y el tramo que le toca a una
+    línea de la letra puede ser más largo que los cinco segundos que se le
+    pagaron a Kling. Las salidas obvias son malas — congelar el último frame se
+    ve como un cuelgue, y estirar con `setpts` es cámara lenta, que está
+    prohibida.
+
+    Lo que sí funciona: cada plano dura como mucho `PLANO_MAX_S`, así que
+    siempre cabe entero dentro del clip; lo único que cambia es DESDE DÓNDE se
+    toma. Los offsets recorren el clip de principio a fin, de modo que los
+    planos se solapan en el material pero nunca en el encuadre. Un tramo de 6.5s
+    sale de un clip de 5s como tres tomas distintas de la misma acción, sin
+    repetir cuadro ni pagar un clip más.
+    """
+    if dur_fuente <= 0:
+        raise ValueError("El clip fuente no puede durar cero.")
+    n = cuantos(dur_destino)
+    tramo = dur_destino / n
+    # Con una ventana útil corta —un clip que se estropea a mitad y del que sólo
+    # sirve el principio— el plano de reparto normal no cabe. Se parte en más
+    # planos, que es gratis, mientras ninguno baje del piso legible.
+    while tramo > dur_fuente + 0.001 and dur_destino / (n + 1) >= PLANO_PISO_S:
+        n += 1
+        tramo = dur_destino / n
+    if tramo > dur_fuente + 0.001:
+        raise ValueError(
+            f"Un plano de {tramo:.2f}s no cabe en un clip de {dur_fuente:.2f}s "
+            f"sin bajar del piso de {PLANO_PISO_S}s. Genera un clip más largo "
+            f"o amplía la ventana útil."
+        )
+    margen = max(0.0, dur_fuente - tramo)
+    return [
+        Plano(
+            inicio_s=round(0.0 if n == 1 else margen * i / (n - 1), 3),
+            fin_s=round((0.0 if n == 1 else margen * i / (n - 1)) + tramo, 3),
+            encuadre=CICLO[(desde + i) % len(CICLO)],
+        )
+        for i in range(n)
+    ]
+
+
+def imantar(
+    cortes: list[float],
+    golpes: list[float],
+    *,
+    tolerancia_s: float = 0.6,
+    piso_s: float = PLANO_PISO_S,
+) -> list[float]:
+    """Lleva cada corte al golpe de la canción más cercano, si conviene.
+
+    Dos guardas, porque imantar a lo bruto empeora el montaje:
+
+    1. Un golpe a más de `tolerancia_s` del corte teórico no es el golpe de esa
+       frase — arrastrarlo hasta allá descuadra la letra con la imagen.
+    2. Si mover el corte deja un plano por debajo del piso legible, se deja
+       donde estaba. Un corte a tiempo no vale un plano de medio segundo.
+
+    El primero y el último corte no se tocan: son el principio y el fin del ad.
+    """
+    if not golpes or len(cortes) < 3:
+        return list(cortes)
+    salida = list(cortes)
+    for i in range(1, len(salida) - 1):
+        cercano = min(golpes, key=lambda g: abs(g - cortes[i]))
+        if abs(cercano - cortes[i]) > tolerancia_s:
+            continue
+        if cercano - salida[i - 1] < piso_s or cortes[i + 1] - cercano < piso_s:
+            continue
+        salida[i] = round(cercano, 3)
+    return salida
+
+
 def repartir(duraciones: list[float]) -> list[list[Plano]]:
     """Los planos de un ad entero, con el ciclo de encuadres corrido.
 

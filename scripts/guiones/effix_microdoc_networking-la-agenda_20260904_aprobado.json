@@ -1,0 +1,230 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "aprobado",
+  "job_id": "networking-la-agenda",
+  "titulo": "La agenda",
+  "marca": "effix",
+  "nicho": "networking",
+  "angulo": "27.2",
+  "estilo": "micro_doc_ugc",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "gancho": {
+    "banco": "dolor_nombrado#33",
+    "gatillos": [
+      "dolor_nombrado",
+      "auto_relevancia"
+    ]
+  },
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 50,
+  "microsituacion": {
+    "momento": "Necesitas un proveedor nuevo, abres el WhatsApp, y son los mismos cinco contactos de hace tres años.",
+    "sintoma": "Le escribes al de siempre, y te cotiza lo de siempre.",
+    "reaccion_interna": "Y ya lo asumiste: tu empresa crece hasta donde llega tu agenda.",
+    "explicacion_fallida": "Te dices que los buenos negocios salen por referidos, y que eso no se fuerza.",
+    "patron": "Pero tu competencia ya cerró alianza con una empresa que tú ni sabías que existía.",
+    "causa_raiz": "No es que te falten referidos. Es que llevas años buscando en la misma agenda.",
+    "mecanismo": "En la feria están trescientas cincuenta empresas de cinco países, en el mismo recinto, buscando con quién hacer negocios."
+  },
+  "bible": "iPhone handheld, authentic UGC, natural window light, casual setting, real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays.",
+  "negative_prompt": "studio, professional lighting, teleprompter look, too polished, green screen, fake smile, posed to camera, presenter energy, text, captions, letters, watermark, logo, UI, extra fingers, deformed hands, style drift, slow motion",
+  "personajes": {
+    "jairo": {
+      "ficha": "JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck.",
+      "voz": "narrador_marca",
+      "quien_es": "Dueño de una pequeña empresa distribuidora. Es el espectador. Nunca habla en cámara: toda la voz es en off.",
+      "lipsync": false
+    }
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "JAIRO",
+      "texto": "Necesitas un proveedor nuevo, abres el WhatsApp, y son los mismos cinco contactos de hace tres anos.",
+      "texto_tts": "Necesitas un proveedor nuevo, abres el WhatsApp, y son los mismos cinco contactos de hace tres años.",
+      "texto_pantalla": "Los mismos cinco contactos",
+      "plano": "Jairo en su escritorio, celular en la mano, scrolleando la lista de chats; la lista es corta y se acaba enseguida.",
+      "prompt_imagen": "iPhone handheld, authentic UGC, natural window light, casual setting, Over-the-shoulder medium shot of JAIRO at his desk holding a phone, thumb scrolling a very short list of chat contacts, the list ends quickly, his face half-lit by the screen. JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck. Setting: small distribution company office in Medellin — a desk with a laptop, stacks of product samples and shipping boxes, a whiteboard with delivery routes, a window with afternoon light and the city outside. real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays.",
+      "prompt_video": "@Image1 JAIRO scrolls the short contact list with his thumb, reaches the end, scrolls back up, exhales through his nose and tilts his head slightly. Handheld micro-shake, natural pace, one primary motion. Audio: room tone, faint street ambience, no discernible speech.",
+      "lipsync": false,
+      "prompt_keyframe_final": "iPhone handheld, authentic UGC, natural window light, casual setting, Over-the-shoulder medium shot of JAIRO holding the phone still, thumb resting on the screen, eyes fixed on the same short list, jaw slightly tense. JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck. Setting: small distribution company office in Medellin — a desk with a laptop, stacks of product samples and shipping boxes, a whiteboard with delivery routes, a window with afternoon light and the city outside. real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays."
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "JAIRO",
+      "texto": "Tienes empresa y buscas aliados, proveedores o clientes nuevos: esto es para ti.",
+      "texto_tts": "Tienes empresa y buscas aliados, proveedores o clientes nuevos: esto es para ti.",
+      "texto_pantalla": "¿Buscas aliados nuevos?",
+      "plano": "Jairo levanta la mirada del celular hacia la camara, como si lo hubieran encontrado en el momento.",
+      "prompt_imagen": "iPhone handheld, authentic UGC, natural window light, casual setting, Medium close-up of JAIRO looking up from his phone directly at the lens, eyebrows slightly raised, phone still in hand, product samples blurred in the foreground. JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck. Setting: small distribution company office in Medellin — a desk with a laptop, stacks of product samples and shipping boxes, a whiteboard with delivery routes, a window with afternoon light and the city outside. real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays.",
+      "prompt_video": "@Image1 JAIRO looks up from the phone toward the camera, holds the gaze, small nod, shifts his weight in the chair. Handheld micro-shake, natural pace, one primary motion. Audio: room tone, faint street ambience, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "JAIRO",
+      "texto": "Le escribes al de siempre, y te cotiza lo de siempre.",
+      "texto_tts": "Le escribes al de siempre, y te cotiza lo de siempre.",
+      "texto_pantalla": "Te cotiza lo de siempre",
+      "plano": "Close-up del celular: llega una cotizacion en PDF de un contacto conocido; Jairo la abre sin entusiasmo.",
+      "prompt_imagen": "iPhone handheld, authentic UGC, natural window light, casual setting, Close-up of the phone screen held in JAIRO's hand, a PDF attachment arriving in a chat, his thumb tapping it open, his reflection faint on the glass. No readable text on the screen, only blurred document shapes. JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck. Setting: small distribution company office in Medellin — a desk with a laptop, stacks of product samples and shipping boxes, a whiteboard with delivery routes, a window with afternoon light and the city outside. real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays.",
+      "prompt_video": "@Image1 JAIRO taps the attachment, the document opens as blurred shapes, he scrolls once and lowers the phone a few centimeters. Handheld micro-shake, natural pace, one primary motion. Audio: room tone, faint street ambience, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "REACCION",
+      "quien": "JAIRO",
+      "texto": "Y ya lo asumiste: tu empresa crece hasta donde llega tu agenda.",
+      "texto_tts": "Y ya lo asumiste: tu empresa crece hasta donde llega tu agenda.",
+      "texto_pantalla": "Creces hasta tu agenda",
+      "plano": "Jairo se recuesta en la silla mirando la pared con las rutas de entrega; el gesto de quien ya aceptó algo.",
+      "prompt_imagen": "iPhone handheld, authentic UGC, natural window light, casual setting, Medium shot of JAIRO leaning back in his office chair, arms crossed, looking at a whiteboard with hand-drawn delivery routes, the phone face-down on the desk. JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck. Setting: small distribution company office in Medellin — a desk with a laptop, stacks of product samples and shipping boxes, a whiteboard with delivery routes, a window with afternoon light and the city outside. real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays.",
+      "prompt_video": "@Image1 JAIRO leans back, crosses his arms, his eyes move across the whiteboard, he breaks eye line and looks down at the desk. Handheld micro-shake, natural pace, one primary motion. Audio: room tone, faint street ambience, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "EXPL_FALLIDA",
+      "quien": "JAIRO",
+      "texto": "Total, tu dices que los buenos negocios salen por referidos.",
+      "texto_tts": "Total, tú dices que los buenos negocios salen por referidos.",
+      "texto_pantalla": "«Salen por referidos»",
+      "plano": "Jairo hablando con alguien fuera de cuadro, gesto de mano de 'asi es como funciona', convencido a medias.",
+      "prompt_imagen": "iPhone handheld, authentic UGC, natural window light, casual setting, Medium close-up of JAIRO mid-conversation with someone off-frame to the left, one hand open in a 'that's how it works' gesture, a half-convinced expression. JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck. Setting: small distribution company office in Medellin — a desk with a laptop, stacks of product samples and shipping boxes, a whiteboard with delivery routes, a window with afternoon light and the city outside. real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays.",
+      "prompt_video": "@Image1 JAIRO gestures with his open hand while speaking to someone off-frame, shrugs one shoulder, glances briefly toward the camera and away. Handheld micro-shake, natural pace, one primary motion. Audio: room tone, faint street ambience, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "PATRON",
+      "quien": "JAIRO",
+      "texto": "Pero tu competencia ya cerro alianza con una empresa que tu ni sabias que existia.",
+      "texto_tts": "Pero tu competencia ya cerró alianza con una empresa que tú ni sabías que existía.",
+      "texto_pantalla": "Tu competencia ya cerró",
+      "plano": "Jairo ve en el celular la publicacion de un competidor anunciando una alianza; se queda quieto.",
+      "prompt_imagen": "iPhone handheld, authentic UGC, natural window light, casual setting, Close-up of JAIRO's face lit from below by his phone, eyes reading a social post, a subtle freeze of expression, the office dim behind him. The screen shows only blurred shapes of two logos side by side, no readable text. JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck. Setting: small distribution company office in Medellin — a desk with a laptop, stacks of product samples and shipping boxes, a whiteboard with delivery routes, a window with afternoon light and the city outside. real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays.",
+      "prompt_video": "@Image1 JAIRO's eyes stop moving as he reads, his grip on the phone tightens slightly, he swallows and looks off to the side. Handheld micro-shake, natural pace, one primary motion. Audio: room tone, faint street ambience, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CAUSA_RAIZ",
+      "quien": "JAIRO",
+      "texto": "Asi que no es que te falten referidos: es que llevas anos buscando en la misma agenda.",
+      "texto_tts": "Así que no es que te falten referidos: es que llevas años buscando en la misma agenda.",
+      "texto_pantalla": "No te faltan referidos",
+      "plano": "Jairo suelta el celular sobre el escritorio y lo mira desde arriba, como si viera el problema por primera vez.",
+      "prompt_imagen": "iPhone handheld, authentic UGC, natural window light, casual setting, High-angle medium shot of JAIRO placing his phone face-up on the desk and looking down at it, both hands flat on the desk, product samples around. JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck. Setting: small distribution company office in Medellin — a desk with a laptop, stacks of product samples and shipping boxes, a whiteboard with delivery routes, a window with afternoon light and the city outside. real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays.",
+      "prompt_video": "@Image1 JAIRO sets the phone down, rests both hands on the desk, looks at the phone, then slowly lifts his head as if something clicked. Handheld micro-shake, natural pace, one primary motion. Audio: room tone, faint street ambience, no discernible speech.",
+      "lipsync": false,
+      "prompt_keyframe_final": "iPhone handheld, authentic UGC, natural window light, casual setting, High-angle medium shot of JAIRO with his head lifted, looking past the phone toward the window, hands still flat on the desk, a first hint of resolve. JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck. Setting: small distribution company office in Medellin — a desk with a laptop, stacks of product samples and shipping boxes, a whiteboard with delivery routes, a window with afternoon light and the city outside. real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays."
+    },
+    {
+      "n": 8,
+      "beat": "MECANISMO",
+      "quien": "JAIRO",
+      "texto": "En la feria estan trescientas cincuenta empresas de cinco paises, buscando con quien hacer negocios.",
+      "texto_tts": "En la feria están trescientas cincuenta empresas de cinco países, buscando con quién hacer negocios.",
+      "texto_pantalla": "350 empresas · 5 países",
+      "plano": "Corte al pabellon de la feria: pasillos llenos, stands, gente conversando de pie con escarapela; Jairo caminando entre ellos.",
+      "prompt_imagen": "iPhone handheld, authentic UGC, natural window light, casual setting, Wide handheld shot inside a large trade-fair pavilion, rows of exhibitor stands, dozens of people in business-casual clothes talking in small groups with lanyards, JAIRO walking down the aisle carrying a folder. Stand banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck. Setting: small distribution company office in Medellin — a desk with a laptop, stacks of product samples and shipping boxes, a whiteboard with delivery routes, a window with afternoon light and the city outside. real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays.",
+      "prompt_video": "@Image1 JAIRO walks down the crowded aisle, turns his head toward a stand, slows, a person at the stand extends a hand toward him. Camera follows handheld from behind. Handheld micro-shake, natural pace, one primary motion. Audio: room tone, faint street ambience, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "PRUEBA",
+      "quien": "JAIRO",
+      "texto": "Doscientos ponentes, cinco ediciones, y quien va una vez, vuelve.",
+      "texto_tts": "Doscientos ponentes, cinco ediciones, y quien va una vez, vuelve.",
+      "texto_pantalla": "200 ponentes · 5 ediciones",
+      "plano": "Auditorio lleno visto desde un costado, ponente en tarima, publico tomando nota; Jairo entre el publico.",
+      "prompt_imagen": "iPhone handheld, authentic UGC, natural window light, casual setting, Medium-wide handheld shot from the side of a packed auditorium, a speaker on a lit stage seen from an angle, audience members taking notes on phones and notebooks, JAIRO seated among them looking forward. Any screens or backdrops show plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck. Setting: small distribution company office in Medellin — a desk with a laptop, stacks of product samples and shipping boxes, a whiteboard with delivery routes, a window with afternoon light and the city outside. real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays.",
+      "prompt_video": "@Image1 The audience leans forward slightly, JAIRO writes something down and looks back up at the stage, the speaker gestures broadly. Handheld micro-shake, natural pace, one primary motion. Audio: room tone, faint street ambience, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "VISUALIZACION",
+      "quien": "JAIRO",
+      "texto": "Imaginate volviendo con tres proveedores nuevos y un socio que no estaba en tu agenda.",
+      "texto_tts": "Imagínate volviendo con tres proveedores nuevos y un socio que no estaba en tu agenda.",
+      "texto_pantalla": "Tres proveedores nuevos",
+      "plano": "De vuelta en la oficina, Jairo guarda en el celular varios contactos nuevos de tarjetas apiladas; sonrie apenas.",
+      "prompt_imagen": "iPhone handheld, authentic UGC, natural window light, casual setting, Medium close-up of JAIRO back at his office desk, a small stack of new business cards beside the phone, typing a new contact into the phone, a small satisfied half-smile. Cards show only blurred abstract shapes, no readable text. JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck. Setting: small distribution company office in Medellin — a desk with a laptop, stacks of product samples and shipping boxes, a whiteboard with delivery routes, a window with afternoon light and the city outside. real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays.",
+      "prompt_video": "@Image1 JAIRO types on the phone, picks up the next card, glances at it, nods once and keeps typing; light shifts as a cloud passes. Handheld micro-shake, natural pace, one primary motion. Audio: room tone, faint street ambience, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "FECHAS",
+      "quien": "JAIRO",
+      "texto": "Dieciseis al dieciocho, en Plaza Mayor.",
+      "texto_tts": "Dieciséis al dieciocho, en Plaza Mayor.",
+      "texto_pantalla": "16–18 oct · Plaza Mayor",
+      "plano": "Exterior del recinto de la feria con gente entrando; luz de manana.",
+      "prompt_imagen": "iPhone handheld, authentic UGC, natural window light, casual setting, Wide handheld shot of the entrance plaza of a large modern convention centre in Medellin, people with lanyards walking in, morning light, palm trees and city hills behind. No readable signage — any signs are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck. Setting: small distribution company office in Medellin — a desk with a laptop, stacks of product samples and shipping boxes, a whiteboard with delivery routes, a window with afternoon light and the city outside. real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays.",
+      "prompt_video": "@Image1 People stream toward the entrance, camera drifts forward a few steps handheld, a group ahead greets each other with handshakes. Handheld micro-shake, natural pace, one primary motion. Audio: room tone, faint street ambience, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "CTA",
+      "quien": "JAIRO",
+      "texto": "Compra tu pasaporte a la Feria Effix en feriaeffix punto com. Te toma un minuto.",
+      "texto_tts": "Compra tu pasaporte a la Feria Effix en feriaeffix punto com. Te toma un minuto.",
+      "texto_pantalla": "Compra en feriaeffix.com",
+      "plano": "Jairo, de frente a camara en la oficina, celular en mano, mirando al lente con decision.",
+      "prompt_imagen": "iPhone handheld, authentic UGC, natural window light, casual setting, Medium close-up of JAIRO standing in his office facing the camera, phone in hand at chest height, direct steady eye contact, window light on one side of his face. JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck. Setting: small distribution company office in Medellin — a desk with a laptop, stacks of product samples and shipping boxes, a whiteboard with delivery routes, a window with afternoon light and the city outside. real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays.",
+      "prompt_video": "@Image1 JAIRO looks at the camera, lifts the phone slightly, taps the screen once with his thumb and looks back up with a small decisive nod. Handheld micro-shake, natural pace, one primary motion. Audio: room tone, faint street ambience, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 13,
+      "beat": "DEFECTO",
+      "quien": "JAIRO",
+      "texto": "Nadie te va a buscar a ti: toca caminar los pabellones y presentarte.",
+      "texto_tts": "Nadie te va a buscar a ti: toca caminar los pabellones y presentarte.",
+      "texto_pantalla": "Toca presentarte",
+      "plano": "Jairo acercandose a un stand y extendiendo la mano primero, un poco fuera de su zona de confort.",
+      "prompt_imagen": "iPhone handheld, authentic UGC, natural window light, casual setting, Medium handheld shot of JAIRO approaching an exhibitor stand and extending his hand first to a person behind the counter, a slightly self-conscious but determined expression. Stand panels are plain solid black with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck. Setting: small distribution company office in Medellin — a desk with a laptop, stacks of product samples and shipping boxes, a whiteboard with delivery routes, a window with afternoon light and the city outside. real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays.",
+      "prompt_video": "@Image1 JAIRO steps forward, extends his hand, the other person turns and shakes it, JAIRO's shoulders relax, both start talking. Handheld micro-shake, natural pace, one primary motion. Audio: room tone, faint street ambience, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 14,
+      "beat": "LOOP",
+      "quien": "JAIRO",
+      "texto": "Porque la proxima alianza no va a salir de tu WhatsApp.",
+      "texto_tts": "Porque la próxima alianza no va a salir de tu WhatsApp.",
+      "texto_pantalla": "No sale de tu WhatsApp",
+      "plano": "Cierre: el celular boca abajo sobre el escritorio, y detras, desenfocado, Jairo hablando con alguien nuevo.",
+      "prompt_imagen": "iPhone handheld, authentic UGC, natural window light, casual setting, Close-up of a phone lying face-down on the office desk in the foreground, sharp; in the blurred background JAIRO stands talking and laughing with a new person holding a folder. JAIRO: Colombian man in his mid-forties, short dark hair with grey at the temples, trimmed beard, light-blue button shirt with rolled sleeves, reading glasses pushed up on his head, sturdy build, warm tired eyes, a lanyard with a company badge around his neck. Setting: small distribution company office in Medellin — a desk with a laptop, stacks of product samples and shipping boxes, a whiteboard with delivery routes, a window with afternoon light and the city outside. real person, authentic micro-expressions, no studio lighting, visible pores, slight motion blur, candid, caught mid-moment. Vertical 9:16. No text, no letters, no logos, no UI overlays.",
+      "prompt_video": "@Image1 The phone stays still in the foreground, in the background JAIRO and the visitor shake hands and gesture toward the product samples; a phone notification light blinks once and is ignored. Handheld micro-shake, natural pace, one primary motion. Audio: room tone, faint street ambience, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "energetico",
+  "cta": {
+    "hablado": "Compra tu pasaporte a la Feria Effix en feriaeffix punto com. Te toma un minuto.",
+    "overlay": "Compra en feriaeffix.com"
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix como identidad visual desde el clip 01 (marca_en_pantalla), sin gastar locución",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": true,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [],
+  "costo_estimado_usd": null,
+  "notas_produccion": "Estilo micro_doc_ugc: Jairo ACTÚA la situación, nunca la narra a cámara (la voz es en off, 'Medellin - Conversational and Intense' o la voz de marca). Prohibido cinematic/professional/8k/studio en prompts. Keyframe final en las líneas 1 y 7 (las más largas) para facturar el clip a medida. Las escenas de feria (8, 9, 11, 13) pueden reemplazarse por material real de la 5ª edición en referencias/esteticas/feria-real/ si Effix confirma derechos de imagen — sale más barato y más creíble. Overlay de texto en post con Montserrat; color pendiente de decisión (amarillo vs blanco)."
+}

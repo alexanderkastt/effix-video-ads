@@ -1,0 +1,228 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "laboratorios-musical-crochet",
+  "titulo": "Don Rubén y el precio ajeno",
+  "marca": "effix",
+  "nicho": "laboratorios",
+  "angulo": "principal",
+  "estilo": "crochet",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "gancho": {
+    "banco": "dolor_nombrado#33",
+    "gatillos": [
+      "dolor_nombrado",
+      "dejar_de_ganar"
+    ]
+  },
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Ves tu propio producto en una tienda online, a un precio que te sorprende, y esa diferencia no llega a tu cuenta.",
+    "sintoma": "Fabricas bien. Cumples. Pero el que se queda con el margen es el que sabe vender por internet, no el que hace el producto.",
+    "reaccion_interna": "Y te queda claro que sin canal propio siempre vas a depender de que otro decida cuánto te compra.",
+    "explicacion_fallida": "Te dices que lo tuyo es producir, que vender en línea es otro oficio.",
+    "patron": "Pero llevas años viendo cómo ese otro oficio se queda con la parte más grande.",
+    "causa_raiz": "No necesitas volverte experto en marketing. Necesitas a los que ya lo son, trabajando para ti.",
+    "mecanismo": "Agencias de tráfico, creadores de contenido y operadores logísticos, todos en el mismo recinto."
+  },
+  "bible": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world.",
+  "negative_prompt": "realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+  "personajes": {
+    "ruben": {
+      "ficha": "DON RUBEN: a crocheted amigurumi figure of a man in his fifties, white knitted lab coat with a mustard collar, teal knitted glasses, grey yarn moustache, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour.",
+      "voz": null,
+      "quien_es": "DON RUBÉN, amigurumi del fabricante que vende por terceros. Único con color.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "suno_title": "Feria Effix — Don Rubén y el precio ajeno",
+    "suno_custom_lyrics": "[Verso 1]\nVes tu propio producto en una tienda online\nA un precio que no llega a tu cuenta\nSi fabricas y otro se queda con el margen\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nFabricas bien, cumples, y el margen es del que vende\nDices que lo tuyo es producir, no vender en línea\nY llevas años viendo cómo ese oficio se lleva la parte grande\n\n[Pre-coro]\nNo necesitas volverte experto en marketing\nNecesitas a los que ya lo son, trabajando para ti\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nY ese precio ya no te molesta\n\n[Verso 3]\nAgencias, creadores y logística en el mismo recinto\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nY ese precio ya no te molesta",
+    "suno_style_tags": [
+      "acoustic indie pop",
+      "ukulele and handclaps",
+      "warm and cozy",
+      "soft female vocal",
+      "catchy sung hook",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 100,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Ves tu propio producto en una tienda online / A un precio que no llega a tu cuenta",
+      "texto_tts": "",
+      "texto_pantalla": "Ese precio no llega a tu cuenta",
+      "plano": "Su producto, a otro precio",
+      "prompt_imagen": "wide establishing shot. DON RUBEN in a greyscale crocheted small factory floor, holding a knitted phone showing a felt product shape with a tall felt price tag; knitted bottles of the same product lined behind him. DON RUBEN: a crocheted amigurumi figure of a man in his fifties, white knitted lab coat with a mustard collar, teal knitted glasses, grey yarn moustache, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft diffused daylight from above-left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 DON RUBEN looks at the phone, then at his own bottles, then back at the phone, moustache twitching. Camera: gentle push. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Si fabricas y otro se queda con el margen / Esto es para ti, quédate un minuto",
+      "texto_tts": "",
+      "texto_pantalla": "¿Otro se queda con tu margen?",
+      "plano": "Callout",
+      "prompt_imagen": "medium close-up. DON RUBEN turned to the viewer between the bottle rows, glasses catching the light. DON RUBEN: a crocheted amigurumi figure of a man in his fifties, white knitted lab coat with a mustard collar, teal knitted glasses, grey yarn moustache, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft diffused daylight from above-left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 He turns to the viewer, adjusts his knitted glasses with one arm, small nod. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Fabricas bien, cumples, y el margen es del que vende",
+      "texto_tts": "",
+      "texto_pantalla": "El margen es del que vende",
+      "plano": "Fabricas bien y el margen se va",
+      "prompt_imagen": "close-up on hands and object. Close-up of a knitted conveyor belt carrying grey knitted bottles into a grey knitted truck; DON RUBEN's colourful mitten-hand resting on the belt edge. DON RUBEN: a crocheted amigurumi figure of a man in his fifties, white knitted lab coat with a mustard collar, teal knitted glasses, grey yarn moustache, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft diffused daylight from above-left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The bottles roll off toward the truck one by one, the hand stays still. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Dices que lo tuyo es producir, no vender en línea",
+      "texto_tts": "",
+      "texto_pantalla": "«Lo mío es producir»",
+      "plano": "«Lo mío es producir»",
+      "prompt_imagen": "medium shot from behind. DON RUBEN from behind, shrugging at a grey knitted worker, pointing back at the machines. DON RUBEN: a crocheted amigurumi figure of a man in his fifties, white knitted lab coat with a mustard collar, teal knitted glasses, grey yarn moustache, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft diffused daylight from above-left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 He shrugs, points at the machines, the worker nods, both turn back. Camera: gentle pull. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Y llevas años viendo cómo ese oficio se lleva la parte grande",
+      "texto_tts": "",
+      "texto_pantalla": "La parte grande, ajena",
+      "plano": "Años viendo la parte grande irse",
+      "prompt_imagen": "low-angle wide. Low-angle wide: a huge greyscale knitted pie chart on the factory wall, one thin slice near DON RUBEN's colourful figure, the giant slice looming above him. DON RUBEN: a crocheted amigurumi figure of a man in his fifties, white knitted lab coat with a mustard collar, teal knitted glasses, grey yarn moustache, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft diffused daylight from above-left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The giant slice grows a stitch, the thin slice shrinks a stitch, DON RUBEN looks up. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "No necesitas volverte experto en marketing / Necesitas a los que ya lo son, trabajando para ti",
+      "texto_tts": "",
+      "texto_pantalla": "Los que ya saben vender",
+      "plano": "El clic: los que ya lo son",
+      "prompt_imagen": "extreme close-up on eyes. Close-up of DON RUBEN's stitched face, his knitted glasses reflecting a warm knitted hall far away. DON RUBEN: a crocheted amigurumi figure of a man in his fifties, white knitted lab coat with a mustard collar, teal knitted glasses, grey yarn moustache, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft diffused daylight from above-left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 He lifts his head toward the reflection, a gentle blink. Camera: gentle push. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve de octubre / Plaza Mayor, Medellín",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct",
+      "plano": "Llegada a Plaza Mayor",
+      "prompt_imagen": "wide tracking shot. DON RUBEN walking down a greyscale knitted street toward a large knitted convention centre, tiny grey figures streaming in. DON RUBEN: a crocheted amigurumi figure of a man in his fifties, white knitted lab coat with a mustard collar, teal knitted glasses, grey yarn moustache, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft diffused daylight from above-left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 He walks steadily toward the entrance, lab coat swaying, figures move around him. Camera: tracking from behind. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas / Más de sesenta mil asistentes / Y ese precio ya no te molesta",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "Las 350 empresas",
+      "prompt_imagen": "high-angle wide over the crowd. High-angle wide over a huge knitted pavilion of grey stands and figures; DON RUBEN the only colour, small in the aisle. DON RUBEN: a crocheted amigurumi figure of a man in his fifties, white knitted lab coat with a mustard collar, teal knitted glasses, grey yarn moustache, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft diffused daylight from above-left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 Figures shuffle, DON RUBEN turns gently in place. Camera: gentle drift forward. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Agencias, creadores y logística en el mismo recinto",
+      "texto_tts": "",
+      "texto_pantalla": "Agencias · creadores · logística",
+      "plano": "Agencias, creadores, logística",
+      "prompt_imagen": "two-shot at a stand. DON RUBEN at a knitted stand with three grey knitted figures: one holding a knitted megaphone (traffic agency), one a knitted camera (creator), one a knitted box (logistics), all facing him. DON RUBEN: a crocheted amigurumi figure of a man in his fifties, white knitted lab coat with a mustard collar, teal knitted glasses, grey yarn moustache, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft diffused daylight from above-left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 Each figure lifts its object in turn, DON RUBEN nods to each and sets his bottle on the counter. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PRUEBA",
+      "quien": "CANCION",
+      "texto": "Más de doscientas ponencias para aprender de los que ya tienen resultados",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias: aprende de quien ya vende",
+      "plano": "200 ponentes, 5 ediciones",
+      "prompt_imagen": "medium shot, side angle. Side view of DON RUBEN seated in a knitted auditorium among grey figures, knitted speaker under a soft knitted spotlight. DON RUBEN: a crocheted amigurumi figure of a man in his fifties, white knitted lab coat with a mustard collar, teal knitted glasses, grey yarn moustache, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft diffused daylight from above-left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The speaker's arm rises, the audience leans forward a stitch, DON RUBEN nods. Camera: gentle lateral drift. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "CTA cantado",
+      "prompt_imagen": "medium close-up facing camera. DON RUBEN facing the viewer in the knitted pavilion aisle holding a small knitted phone at chest height. DON RUBEN: a crocheted amigurumi figure of a man in his fifties, white knitted lab coat with a mustard collar, teal knitted glasses, grey yarn moustache, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft diffused daylight from above-left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 He lifts the phone, taps once, looks back to the viewer. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y ese precio ya no te molesta",
+      "texto_tts": "",
+      "texto_pantalla": "Ya no te molesta",
+      "plano": "Loop: ese precio ya no molesta",
+      "prompt_imagen": "wide static shot, held. The factory again: a knitted phone on the counter showing the same felt product with a felt price tag, DON RUBEN beside it packing his own knitted box with a small colourful label, calm. DON RUBEN: a crocheted amigurumi figure of a man in his fifties, white knitted lab coat with a mustard collar, teal knitted glasses, grey yarn moustache, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft diffused daylight from above-left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 He glances at the phone, shrugs lightly, closes the box and pats it. Camera: gentle push. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "emotivo",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Mismo ad para landing y WhatsApp: el CTA no nombra la URL, señala el botón del placement."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix como identidad visual desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "defecto_admitido_nota": "El formato cantado no lleva beat DEFECTO: el loop cierra. Decisión heredada del skeleton musical de sin_arrancar.",
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'más de sesenta mil asistentes' — cifra aportada por Alexander el 2026-09-04; no está en el sitio. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 (nano-banana-2/edit) + 12 clips × 5s × 0.056 (kling v2.1 std) = 4.55 USD. Regenerar la canción cuesta 0.15 más por intento (MiniMax canta mal la marca ~1 de cada 3).",
+  "notas_produccion": "Crochet B&N + DON RUBÉN en color. El mecanismo del nicho no es una cifra: son los tres oficios (agencia, creador, logística), por eso el stand tiene tres figuras con objeto. Sin voz en off."
+}

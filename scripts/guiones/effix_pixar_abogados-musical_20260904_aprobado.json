@@ -1,0 +1,272 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "aprobado",
+  "job_id": "abogados-musical-pixar",
+  "titulo": "Tus próximos clientes están en Feria Effix",
+  "marca": "effix",
+  "nicho": "abogados",
+  "angulo": "principal",
+  "estilo": "pixar",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "gancho": {
+    "banco": "callout#36",
+    "gatillos": [
+      "callout",
+      "dejar_de_ganar"
+    ]
+  },
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Ves una consulta sobre términos y condiciones de una tienda online, y te das cuenta de que no sabes ni por dónde cotizarla.",
+    "sintoma": "No es que no sepas derecho. Es que ese modelo tiene preguntas que en la facultad nunca aparecieron.",
+    "reaccion_interna": "Y mientras tanto ves que hay colegas que ya se especializaron y no paran de recibir clientes.",
+    "explicacion_fallida": "Te dices que es un nicho pequeño, que todavía no justifica meterse.",
+    "patron": "Pero cada año hay más tiendas, más pasarelas, más plata moviéndose sin abogado que la acompañe.",
+    "causa_raiz": "No es un nicho pequeño. Es un nicho al que no has ido a mostrarte.",
+    "mecanismo": "Trescientas cincuenta empresas digitales en un recinto, y casi ninguna tiene abogado propio."
+  },
+  "bible": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16.",
+  "negative_prompt": "sharp edges, flat colors, 2D look, cheap animation feel, realistic human, photoreal, text, captions, letters, watermark, logo, UI, style drift, extra limbs",
+  "personajes": {
+    "codigo": {
+      "ficha": "CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot.",
+      "voz": null,
+      "quien_es": "CÓDIGO, un libro de derecho con ojos: es el abogado. TIENDA, un carrito de compras con ojos: es la tienda online que necesita abogado. Objetos a propósito (regla age-blind).",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "suno_title": "Feria Effix — Tus próximos clientes están en Feria Effix",
+    "suno_custom_lyrics": "[Verso 1]\nEres abogado, y te escribe una tienda online\nNecesita contratos, y no sabes ni qué cobrarle\nSi eres abogado y todavía no tienes clientes de ecommerce\nEste video es para ti\n\n[Verso 2]\nCada día abren más tiendas por internet\nNecesitan contratos, términos y todo en regla\nY casi ninguna tiene abogado\n\n[Pre-coro]\nEsos clientes existen\nSolo tienes que ir a donde están\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nAhí están tus próximos clientes\n\n[Verso 3]\nAhí están las tiendas que hoy no tienen abogado\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nAhí están tus próximos clientes",
+    "suno_style_tags": [
+      "upbeat orchestral pop",
+      "playful pizzicato strings",
+      "bright brass hits",
+      "catchy sung hook",
+      "warm male vocal",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 104,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Eres abogado, y te escribe una tienda online / Necesita contratos, y no sabes ni qué cobrarle",
+      "texto_tts": "",
+      "texto_pantalla": "Una tienda te pide ayuda",
+      "plano": "PROBLEMA · Una tienda online le pide ayuda al abogado y él no sabe qué cobrar",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide establishing shot. CODIGO sits at a wooden desk in a law office; TIENDA rolls up to the desk with a paper-shaped speech shape floating above it (a request for help); CODIGO looks at it with wide uncertain eyes and shrugs with both page-arms. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 TIENDA's speech shape wobbles, CODIGO looks at it, looks at the viewer, and shrugs gently with both arms. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Si eres abogado y todavía no tienes clientes de ecommerce / Este video es para ti",
+      "texto_tts": "",
+      "texto_pantalla": "¿Eres abogado?",
+      "plano": "A QUIÉN LE HABLA · Abogados sin clientes de ecommerce",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up. CODIGO faces the camera at the desk, reading glasses on, TIENDA waiting beside him; a wall of law volumes behind. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 CODIGO looks straight at camera, pushes his glasses up, small nod; TIENDA looks at camera too. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Cada día abren más tiendas por internet",
+      "texto_tts": "",
+      "texto_pantalla": "Cada día abren más tiendas",
+      "plano": "PROBLEMA · Cada día abren más tiendas online",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, close-up on hands and object. Through the office window: a city street where many small shop buildings light up one after another, each with a glowing shopping-cart sign; CODIGO watching from the desk. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Shop signs light up one by one down the street, more and more; CODIGO stands on the desk to see. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Necesitan contratos, términos y todo en regla",
+      "texto_tts": "",
+      "texto_pantalla": "Necesitan contratos y términos",
+      "plano": "PROBLEMA · Necesitan contratos, términos y todo en regla",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot from behind. Close-up of TIENDA on the desk holding up three blank paper shapes (contract, terms, policy) with its cart handles, looking at CODIGO hopefully; CODIGO's page-arms hesitate. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The three paper shapes float upward one by one on their own, hovering above TIENDA; CODIGO's page-arms rise and stop halfway, unsure. Only CODIGO the book and TIENDA the cart are in the shot - no human character, no human face, no hands, no arms other than CODIGO's page-edges. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_video": "@Image1 TIENDA lifts the three papers one by one, CODIGO's arms rise and stop, unsure. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech."
+      }
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Y casi ninguna tiene abogado",
+      "texto_tts": "",
+      "texto_pantalla": "Casi ninguna tiene abogado",
+      "plano": "PROBLEMA · Casi ninguna tienda tiene abogado",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, low-angle wide. Wide: the same street of lit shops seen from above, and next to almost every shop an empty chair with a small gavel-shaped icon (no lawyer); only one chair is occupied. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The camera drifts over the row of empty chairs, a few shop signs blink. Camera: gentle aerial drift forward. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Esos clientes existen / Solo tienes que ir a donde están",
+      "texto_tts": "",
+      "texto_pantalla": "Ve a donde están",
+      "plano": "GIRO · Esos clientes existen, hay que ir a donde están",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, extreme close-up on eyes. Extreme close-up of CODIGO's eyes; in the reflection, a bright crowded pavilion appears; his glasses lift. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The pavilion reflection brightens in his eyes, pupils widen, a decisive blink. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve de octubre / Plaza Mayor, Medellín",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "SOLUCIÓN · Feria Effix, Plaza Mayor Medellín, 15 al 19 de octubre",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide tracking shot. CODIGO walking with a briefcase into the glass entrance of a modern convention centre; a huge crowd of blurred people and many TIENDA-like carts stream in with him, morning light. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 CODIGO walks in with the crowd, the glass doors slide open, carts roll past him. Camera: tracking from behind. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas / Más de sesenta mil asistentes / Ahí están tus próximos clientes",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "SOLUCIÓN · Más de 350 empresas y más de 60.000 asistentes",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, high-angle wide over the crowd. High-angle wide over an enormous modern convention hall: long carpeted aisles between rows of sleek corporate exhibition booths with backlit display walls and large glowing screens, overhead truss lighting rigs, a crowd of thousands of business visitors wearing lanyards, many TIENDA-like carts among them; CODIGO a small figure in the aisle looking up. This is a technology, marketing and ecommerce trade show, not a street market: no market stalls, no produce, no food, no fabric awnings, no tents, no wooden crates. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, CODIGO turns in place. Camera: gentle aerial drift forward. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, high-angle wide over the crowd. High-angle wide over an enormous pavilion: hundreds of colourful stands and a crowd of thousands, many TIENDA-like carts among them; CODIGO a small figure in the aisle looking up. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Ahí están las tiendas que hoy no tienen abogado",
+      "texto_tts": "",
+      "texto_pantalla": "Ahí están tus próximos clientes",
+      "plano": "SOLUCIÓN · Las tiendas que no tienen abogado están ahí, y te buscan",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, two-shot at a stand. At a sleek modern trade-show booth with a backlit display wall and a clean counter, on the carpeted aisle of a technology and ecommerce convention (not a street market stall: no produce, no food, no fabric awning, no wooden crates), a line of TIENDA-like carts waits in front of CODIGO; the first cart's speech shape floats to him, he opens his pages and the shape becomes a glowing check mark; the cart's eyes go happy. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The first cart's shape floats over, CODIGO's pages glow, the shape flips into a check mark, the cart rolls off happy and the next one comes forward. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, two-shot at a stand. At a stand, a line of TIENDA-like carts waits in front of CODIGO; the first cart's speech shape floats to him, he opens his pages and the shape becomes a glowing check mark; the cart's eyes go happy. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
+    },
+    {
+      "n": 10,
+      "beat": "PRUEBA",
+      "quien": "CANCION",
+      "texto": "Más de doscientas ponencias para aprender de los que ya tienen resultados",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias: aprende de quien ya vende",
+      "plano": "SOLUCIÓN · Más de 200 ponencias para aprender de los que ya tienen resultados",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot, side angle. Side view of CODIGO seated in a packed auditorium among anthropomorphic office objects, a speaker on a lit stage ahead pointing at a floating abstract chart. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures at the chart, the audience leans forward, CODIGO takes notes with a page-arm. Camera: gentle lateral drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "CTA · Compra tu ingreso dando clic en el botón",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. CODIGO facing camera in the pavilion aisle, one page-arm pressing a large glowing rounded button shape floating in front of him, confident smile, bokeh stands behind. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 CODIGO looks at camera, presses the floating button, it pulses, he nods. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Ahí están tus próximos clientes",
+      "texto_tts": "",
+      "texto_pantalla": "Tus clientes están en Feria Effix",
+      "plano": "CIERRE · Ahora tiene clientes de ecommerce",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide static shot, held. Back in the law office: three happy TIENDA-like carts lined up on the desk, each with a check mark, CODIGO typing a quote confidently; through the window the street of shops glows. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The three carts bounce happily in place; CODIGO leans forward and spreads both page-arms wide in a welcoming gesture; a fourth cart rolls in from the right and he waves it over with one page-arm. CODIGO remains a book at all times - no human character, no human face, no hands, no arms other than his page-edges. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_video": "@Image1 CODIGO types and hits a key with a flourish; a fourth cart rolls in and he waves it over without hesitating. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech."
+      },
+      "ventana_util_s": [
+        0.0,
+        1.6
+      ],
+      "ventana_motivo": "A partir del segundo 2 el globo de papel cobra vida y se vuelve un personaje con cara que no esta en la biblia. El primer segundo y medio esta limpio."
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Mismo ad para landing y WhatsApp: el CTA no nombra la URL, señala el botón del placement."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix como identidad visual desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "defecto_admitido_nota": "El formato cantado no lleva beat DEFECTO: el loop cierra. Decisión heredada del skeleton musical de sin_arrancar.",
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'más de sesenta mil asistentes' — cifra aportada por Alexander el 2026-09-04; no está en el sitio. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.646,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 (nano-banana-2/edit) + 12 clips × 5s × 0.056 (kling v2.1 std) = 4.55 USD. Regenerar la canción cuesta 0.15 más por intento (MiniMax canta mal la marca ~1 de cada 3).",
+  "notas_produccion": "Historia en una frase: un abogado (CÓDIGO) recibe una tienda online (TIENDA) que necesita contratos y no sabe qué cobrarle; cada día abren más tiendas y casi ninguna tiene abogado; en Feria Effix están esas tiendas, hacen fila en su stand y él aprende del gremio en las ponencias. Escenas 1-5 problema, 6 giro, 7-12 solución. TIENDA aparece en 1, 2, 4, 7, 8, 9 y 12: es el hilo. Pixar con objetos (regla age-blind). Cantado, sin voz en off. CTA botón, sin URL. Fechas: las del EVENTO (15-19 oct), factual; la letra no menciona el pase de 3 días, así no se promete duración. 'Eres abogado' es callout de oficio, permitido por Meta (la regla de no describir a la persona aplica a atributos sensibles).",
+  "aprobado_por": "Alexander",
+  "aprobado_el": "2026-09-06",
+  "correcciones": [
+    {
+      "fecha": "2026-09-06",
+      "pedido_por": "Alexander",
+      "motivo": "Las escenas 8 y 9 salieron con aire de plaza de mercado y el ad vende una feria de ecommerce, marketing e IA. En el clip 12 Kling inventaba un humano saliendo del libro: la accion pedida (\"types and hits a key\") no es ejecutable por un libro con brazos de paginas, y el modelo la resolvia dibujando una persona.",
+      "lineas": [
+        8,
+        9,
+        12
+      ],
+      "costo_usd": 1.0
+    },
+    {
+      "fecha": "2026-09-06",
+      "pedido_por": "Alexander",
+      "lineas": [
+        4
+      ],
+      "costo_usd": 0.28,
+      "motivo": "Mismo fallo que el clip 12: \"TIENDA lifts the three papers\" pide una accion que un carrito sin manos no puede hacer, y Kling la resuelve metiendo una persona en el plano. Los papeles ahora flotan solos."
+    }
+  ],
+  "costo_real_usd": 6.886,
+  "render": "assets/renders/abogados-musical-pixar.mp4",
+  "duracion_real_s": 77.91
+}

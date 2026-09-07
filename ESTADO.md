@@ -459,3 +459,222 @@ se borraron.
 ⚠️ **Efecto secundario en los guiones:** a 3.69 palabras/segundo el mismo guion
 dura menos. Un guion de 110 palabras pasa de ~37s a ~30s. Los guiones nuevos
 pueden llevar mas texto, o el ad queda mas corto que antes.
+
+---
+
+## 🧭 NICHOS 27 Y 28 + FORMATO ÚNICO DE GUION — 2026-09-04
+
+Sesión en Cowork (sin gastar). Se definió cómo se separa lo creativo de la
+producción y se abrieron dos nichos de público frío.
+
+**Formato único de guion aprobado** — `docs/FORMATO-GUION.md`. El repo tenía dos
+formatos (`beats` del motor y `lineas` de los `_producir_*.py`); los cuatro ads
+reales salieron del segundo, así que ese se formalizó. La frontera es
+`scripts/guiones/*_aprobado.json` (ahora SÍ versionado, ver `.gitignore`). En
+Claude Code se produce con una frase: `produce <archivo>`. Protocolo en
+`CLAUDE.md` §4b.
+
+**Nichos nuevos** en `src/nichos_effix.py` y `src/narracion_effix.py`:
+
+| Nicho | Ancla | Gatillo | Ángulo principal | Guion listo |
+|---|---|---|---|---|
+| `networking` (27) | la agenda de WhatsApp | dejar_de_ganar | 27.2 proveedores | `effix_microdoc_networking-la-agenda_20260904_aprobado.json` · micro_doc_ugc · 180 palabras ≈ 50s |
+| `referentes` (28) | la tarima vs. la silla | ego | 28.10 convertirse en referente | `effix_cinematic_referentes-la-tarima_20260904_aprobado.json` · cinematic · 175 palabras ≈ 49s |
+
+Bancos de 10 ángulos cada uno en `config/nichos/27-networking-angulos.json` y
+`28-referentes-angulos.json`; versión legible en `outputs/MICROSITUACIONES-27-28.md`.
+
+**Decisiones de copy:** en `referentes` nunca se muestra al personaje EN tarima ni
+se promete cupo de ponente (el pase es de asistente); las "zonas de creación de
+contenido" son del VIP y no se prometen en creativos del pase de 3. Ambos guiones
+cierran con el CTA `pase_3_dias` de `CTA_POR_PASE`, sin descuento ni taller.
+
+**⚠️ Pendiente inmediato en Claude Code:**
+1. Correr `test_dry_run.py` y `test_integracion_creativa.py` — la integración se
+   hizo fuera del venv (solo se validó sintaxis y estructura de claves). La
+   parrilla pasa de 11 a 13 nichos, así que `generar_guiones_md.py` va a
+   reportar "se esperan 10" — es el validador viejo, no un error nuevo.
+2. Construir `scripts/producir.py` genérico desde
+   `_producir_animado2d_la_acera.py` y probarlo con el guion de networking.
+3. Los archivos del repo en disco están en CRLF; los nuevos de esta sesión en LF.
+   Git en Windows lo normaliza al commit; si `git status` muestra medio `src/`
+   modificado, es eso y no cambios reales (`git diff --stat --ignore-cr-at-eol`).
+
+---
+
+## 🎵 14 GUIONES MUSICALES (guion 1 por nicho) — 2026-09-04
+
+Un guion por nicho en modo **musical sync** (canción MiniMax, sin locución),
+rotando tres formatos: **Pixar** (abogados, contadores, ia, logistica, referentes),
+**Skeleton** (agencias_contenido, dropshipping, importadores, networking) y
+**Crochet** (agencias_pauta, ecommerce, laboratorios, sin_arrancar, tienda_ropa).
+
+- Documento para aprobar: `outputs/GUIONES-MUSICALES-20260904.md` (letra, 12 escenas,
+  personaje, notas y el comando de producción de cada uno).
+- JSON listos: `scripts/guiones/effix_<estilo>_<nicho>-musical_20260904_por-aprobar.json`
+  (14). Se producen renombrando a `_aprobado.json` con `estado: aprobado` y diciendo
+  `produce <archivo>` en Claude Code.
+- Costo estimado por ad: **4,55 USD** (canción 0,15 + héroe 0,08 + 12 imágenes + 12
+  clips de 5s en Kling v2.1 std). Cada reintento de canción suma 0,15.
+- Continuidad de personajes: EFFI+BIT (ia), LANA (sin_arrancar), ROSA en amigurumi
+  (tienda_ropa). Personajes nuevos: CÓDIGO, CALCU, RUTA, TRIPI, TEO, SARA, DON RUBÉN.
+- Estructura fija: 12 escenas = MOMENTO · CALLOUT · SÍNTOMA · EXPL. FALLIDA · PATRÓN ·
+  CAUSA RAÍZ · CORO (llegada) · CORO (350 empresas) · MECANISMO · PRUEBA · CTA · LOOP.
+  Sin beat DEFECTO (decisión heredada del skeleton musical de sin_arrancar).
+- Validado: sin palabras prohibidas, sin descuento/taller, sin `slow` en video,
+  `no discernible speech` en todos, verbatim de crochet/skeleton en todos los prompts,
+  overlays ≤ 7 palabras, coro con la marca escrita completa.
+
+⚠️ El builder que generó los 14 JSON fue un script de un solo uso fuera del repo. Si
+hay que cambiar una letra o un plano, se edita el JSON directamente (o se pide en
+Cowork, que tiene el contexto).
+
+### v2 de los musicales — ajustes de Alexander (2026-09-04, misma sesión)
+
+- **Coro:** «Más de trescientas cincuenta empresas / Más de sesenta mil asistentes».
+  La cifra de asistentes la dio Alexander; se registró en `brand_dna.json`
+  (`asistentes_estimados`) con nota de "sin fuente verificada" y en
+  `datos_sin_verificar` de los 14 JSON. **Confirmar con Effix antes de pautar.**
+- **CTA:** «Compra tu ingreso dando clic en el botón», sin URL, porque el mismo ad
+  va a landing y a WhatsApp. Nueva clave `pase_3_dias_boton` en `CTA_POR_PASE`
+  (`src/narracion_effix.py`) para que el motor narrado también la tenga.
+- **#01 abogados reescrito** con estructura dolor (1–5) → giro (6) → solución en
+  Effix (7–12): la MISMA tienda-cliente (TIENDA, carrito antropomórfico) pregunta en
+  la oficina y Código no sabe; en la feria vuelve a preguntar y Código responde.
+  Es el primero que se produce; los otros 13 se afinan con lo que se aprenda.
+
+### v3 de los musicales (2026-09-04, misma sesión)
+
+- Fechas en el coro: **del quince al diecinueve de octubre** (las del evento; es
+  factual y la letra no menciona el pase, así no promete duración).
+- Línea fija en los 14: «Más de doscientas ponencias para aprender de los que ya
+  tienen resultados» (pedido de Alexander: que se sepa que hay formación).
+- **Callout de oficio directo:** «Eres abogado», «Eres contador». Decisión:
+  nombrar la profesión está permitido por Meta; la regla de "describir la
+  situación, no a la persona" aplica a atributos sensibles (salud, dinero,
+  estado emocional), no al oficio. Se había sobre-aplicado y quitaba claridad.
+- #01 abogados reescrito en lenguaje llano ("Tus próximos clientes están en
+  Feria Effix"): Alexander no entendía la versión anterior. Regla que queda:
+  **si el guion necesita explicación, no está listo.** Cada letra debe poder
+  resumirse en una frase y cada escena debe leerse sola.
+
+### Tanda 2 — #02 agencias_contenido, #03 agencias_pauta, #04 contadores (2026-09-04)
+
+Reescritos con el criterio del #01 (historia en una frase, problema 1-5 → giro 6 →
+solución 7-12, callout de oficio directo, lenguaje llano, hilo visual recurrente):
+- `agencias_contenido` (skeleton): "Tus próximos clientes no llegan por referido".
+- `agencias_pauta` (crochet, TEO): "Sabes pautar, pero nadie lo sabe"; los tres
+  "de traje" son el hilo (4, 5, 9, 12).
+- `contadores` (pixar, CALCU + TIENDA): "Los clientes de ecommerce necesitan
+  contador"; misma estructura que abogados a propósito (mismo avatar de oficio).
+Pendientes de reescribir con este criterio: los 10 restantes (llevan coro, fechas,
+ponencias y CTA nuevos, pero la letra todavía es la v1).
+
+
+---
+
+## Ad musical de abogados y el productor generico (2026-09-06)
+
+Primer ad producido con **`scripts/producir.py`**, el productor generico que
+`docs/FORMATO-GUION.md` pedia desde el 04-sep. Los `_producir_*.py` desechables
+ya no hacen falta para el modo `musical_sync`.
+
+**Entregable:** `assets/renders/abogados-musical-pixar.mp4` — 77.91s, 38 planos,
+-14.4 LUFS. Nicho abogados, estilo Pixar, dos personajes: CODIGO (un libro de
+leyes con gafas) y TIENDA (un carrito con globo de papel).
+
+### Lo que se construyo
+
+| Pieza | Que hace |
+|---|---|
+| `scripts/producir.py` | Lee el formato unico y corre por fases: `validar · costo · cancion · hero · escenas · clips · montaje · qa · todo` |
+| `src/guion_aprobado.py` | Las 6 reglas del formato, con dos varas segun el modo (locucion mide palabras, musical mide video generado) |
+| `src/transcripcion.py` | Whisper por fal + alineacion de la letra con `difflib`. Los tiempos del montaje musical ya no se escriben a mano |
+| `ritmo.planos_en_fuente()` | Llena un tramo de 8s con planos de un clip de 5s, sin congelar frame ni camara lenta |
+| `ritmo.imantar()` | Lleva los cortes al golpe de la cancion, con guardas de tolerancia y piso |
+| `mezcla.cadena_master()` | Master a -14 LUFS sin ducking, para cuando la cancion ES la pista |
+| `postproduccion.ajustar()` | Overlays en dos renglones: 9 de 12 no cabian y se dibujaban al piso de 40px |
+| `producir.py` → `ventana_util_s` | Usa solo la parte buena de un clip que se estropea a mitad. Gratis |
+
+### Costo: estimado 4.65, real 6.89 USD
+
+| Concepto | USD |
+|---|---|
+| Cancion (MiniMax) + whisper | 0.246 |
+| Heroe | 0.08 |
+| Escenas (26 llamadas, 12 utiles) | 2.08 |
+| Clips (15 llamadas, 12 utiles) | 4.20 |
+| **Total** | **6.886** |
+
+Detalle en `logs/abogados-musical-pixar_costo.json` y `_gasto.jsonl`.
+**Se paso el tope de 6 con aprobacion explicita de Alexander**, dos veces.
+
+### Los tres errores que costaron los 2.24 de desvio
+
+1. **La heroe salio duplicada en dos filas** (pedi "character sheet" y
+   nano-banana devolvio una hoja de contactos). Como cada escena se edita DESDE
+   la heroe, las 12 heredaron el diptico: 0.96 USD tirados. Corregido en el
+   codigo con `UN_SOLO_CUADRO` en el prompt y `SISTEMA_UN_CUADRO` en el
+   `system_prompt`. **No le vuelve a pasar a los otros 13 guiones musicales.**
+2. **Escenas 8 y 9 con aire de plaza de mercado.** `hundreds of colourful stands`
+   y `at a stand` se leen como puesto de mercado; el ad vende una feria de
+   ecommerce. Reescritas a `modern convention hall, corporate exhibition booths,
+   backlit display walls, carpeted aisles, lanyards` + veto de mercado: 0.36 USD.
+3. **Kling metia humanos en los clips 4 y 12.** La causa no era el modelo sino el
+   prompt: pedia acciones que los personajes no pueden hacer — `CODIGO types and
+   hits a key` y `TIENDA lifts the three papers`. Un libro no teclea y un carrito
+   no tiene manos, asi que el modelo dibuja a alguien que si. Reescritos a
+   acciones ejecutables + veto explicito de humanos: 0.56 USD.
+
+### Aprendizajes
+
+- **Nunca pedirle a un personaje-objeto una accion que necesita manos humanas.**
+  Es el error que mas caro sale en estilos con objetos animados: el modelo no
+  falla, resuelve la accion imposible metiendo una persona. Vale para
+  `object_talk`, `crochet` y `skeleton` igual que para este.
+- **"Character sheet" es una palabra peligrosa** con nano-banana: devuelve grilla.
+  Pedir "single row", "single full-frame image" y repetirlo en el `system_prompt`.
+- La heroe es el punto de control mas barato del pipeline: **mirarla antes de
+  generar las escenas** cuesta cero y se habria ahorrado 0.96 USD.
+- MiniMax no acepta duracion objetivo: **la letra decide cuanto dura**. 120
+  palabras cantadas dieron 75.41s. Para caber en 60 hay que escribir ~90.
+- Whisper transcribe "Feria Effix" como "Feria Fix" y "resultados" como
+  "bra rosados": **la transcripcion sirve para alinear, no para juzgar la
+  pronunciacion.** Eso se hace con el oido.
+
+### Pendiente de este ad
+
+- **Duracion 77.91s, fuera del rango 30-60** del formato. Alexander lo acepto
+  sabiendolo. Los otros 13 guiones musicales tienen el mismo problema de origen:
+  la letra es demasiado larga.
+- **"Mas de sesenta mil asistentes"** sigue en `datos_sin_verificar`: cifra de
+  Alexander, no esta en el sitio de Effix. Se canta y va en overlay. Confirmar
+  con Effix antes de pautar.
+- Carteles de fondo con garabatos tipo letras en los clips 3 y 5, en desenfoque.
+  No se corrigio: 0.56 USD por un defecto que a tamano de movil no se lee.
+
+### Overlays reescritos (2026-09-06, tarde)
+
+Alexander pidio tres cosas sobre los overlays y las tres estaban en
+`src/postproduccion.py`:
+
+1. **Centrados siempre.** `drawtext` con texto de varias lineas centra el BLOQUE
+   y deja cada linea alineada a la izquierda dentro de el: el segundo renglon
+   empezaba donde empezaba el primero. Ahora se dibuja **un drawtext por
+   renglon**, cada uno con su `x=(w-text_w)/2`. Las dos lineas comparten
+   animacion, asi que el overlay se sigue leyendo como una pieza.
+2. **Animados, no estaticos.** Entrada con ease-out cubico desde 34px abajo,
+   flotacion continua de 3px con periodo de 2.4s mientras esta en pantalla, y
+   salida que baja y se desvanece. El alpha tambien lleva easing (`pow(p,0.6)`):
+   un fade lineal se ve como cross-dissolve de editor, no como sticker.
+   Entrada y salida se acortan solas si el overlay dura poco.
+3. **Menos espacio entre renglones.** `INTERLINEA = 1.0` del cuerpo. En caja
+   alta no hay descendentes que llenar, asi que el interlineado propio de
+   `drawtext` dejaba las dos lineas flotando separadas.
+
+De paso: un separador (`·`, `|`, `–`) que caia en la frontera del corte quedaba
+colgando al final del primer renglon (`+350 EMPRESAS ·`). Ahora se descarta — el
+salto de linea ya separa. Vive en `_SEPARADORES`.
+
+⚠️ Los ads entregados antes de hoy **no se re-montaron**: la regla del repo es
+que las mejoras aplican de aqui en adelante.

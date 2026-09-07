@@ -1,0 +1,228 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "agencias-pauta-musical-crochet",
+  "titulo": "Sabes pautar, pero nadie lo sabe",
+  "marca": "effix",
+  "nicho": "agencias_pauta",
+  "angulo": "principal",
+  "estilo": "crochet",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "gancho": {
+    "banco": "dolor_nombrado#39",
+    "gatillos": [
+      "dolor_nombrado",
+      "ego"
+    ]
+  },
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Sacas un resultado bueno de verdad en una cuenta, lo publicas, y no pasa absolutamente nada.",
+    "sintoma": "Sabes que manejas el pauta mejor que muchos que facturan el triple, y no logras que eso se note.",
+    "reaccion_interna": "Duele un poco, porque el resultado está ahí y aun así te toca perseguir clientes por mensaje.",
+    "explicacion_fallida": "Te dices que te falta contenido, que hay que publicar más seguido.",
+    "patron": "Pero llevas meses publicando resultados y las cuentas siguen llegando de a una.",
+    "causa_raiz": "Los que reparten presupuestos grandes no te están viendo el feed. Están en otro lado.",
+    "mecanismo": "Trescientas cincuenta empresas en un recinto, muchas decidiendo con quién pautan el año que viene."
+  },
+  "bible": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world.",
+  "negative_prompt": "realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+  "personajes": {
+    "teo": {
+      "ficha": "TEO: a crocheted amigurumi figure of a young media buyer, mustard-yellow knitted hoodie, teal knitted headphones around the neck, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour.",
+      "voz": null,
+      "quien_es": "TEO, amigurumi de un trafficker que maneja pauta muy bien y no consigue clientes grandes. Único elemento con color en un mundo blanco y negro de marca.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "suno_title": "Feria Effix — Sabes pautar, pero nadie lo sabe",
+    "suno_custom_lyrics": "[Verso 1]\nEres trafficker, manejas pauta y logras resultados\nPero las cuentas grandes nunca te llaman\nSi manejas pauta y tus clientes siguen siendo pequeños\nEste video es para ti\n\n[Verso 2]\nPublicas tus resultados, y no pasa nada\nPorque los que tienen presupuesto no te ven en redes\nEstán en otro lado\n\n[Pre-coro]\nLas empresas que pautan en grande existen\nSolo tienes que estar donde ellas deciden\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nAhí están las cuentas que buscas\n\n[Verso 3]\nMás de trescientas cincuenta empresas decidiendo con quién pautan este año\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nAhí están las cuentas que buscas",
+    "suno_style_tags": [
+      "acoustic indie pop",
+      "ukulele and handclaps",
+      "warm and cozy",
+      "soft female vocal",
+      "catchy sung hook",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 100,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Eres trafficker, manejas pauta y logras resultados / Pero las cuentas grandes nunca te llaman",
+      "texto_tts": "",
+      "texto_pantalla": "Resultados sí. Cuentas grandes, no",
+      "plano": "PROBLEMA · Logra resultados y las cuentas grandes no llaman",
+      "prompt_imagen": "wide establishing shot. TEO at a tiny knitted desk in a greyscale crocheted home office, a knitted laptop showing a felt chart with a tall green bar, one arm raised in a small victory. TEO: a crocheted amigurumi figure of a young media buyer, mustard-yellow knitted hoodie, teal knitted headphones around the neck, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 TEO's raised arm lowers, he leans toward a knitted phone on the desk, nothing happens, he sits back. Camera: gentle push. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Si manejas pauta y tus clientes siguen siendo pequeños / Este video es para ti",
+      "texto_tts": "",
+      "texto_pantalla": "¿Manejas pauta?",
+      "plano": "A QUIÉN LE HABLA · Traffickers con clientes pequeños",
+      "prompt_imagen": "medium close-up. TEO turned to face the viewer at the desk, headphones around the neck, greyscale knitted room behind. TEO: a crocheted amigurumi figure of a young media buyer, mustard-yellow knitted hoodie, teal knitted headphones around the neck, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 TEO tilts his head toward the viewer and nods once. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Publicas tus resultados, y no pasa nada",
+      "texto_tts": "",
+      "texto_pantalla": "Publicas y no pasa nada",
+      "plano": "PROBLEMA · Publica sus resultados y no pasa nada",
+      "prompt_imagen": "close-up on hands and object. Close-up of TEO's mitten-hand tapping a knitted phone: a felt post with his chart appears, and beside it a knitted counter with only two small stitched hearts. TEO: a crocheted amigurumi figure of a young media buyer, mustard-yellow knitted hoodie, teal knitted headphones around the neck, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 He taps, the post appears, one heart lights up, then nothing; the hand pauses. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Porque los que tienen presupuesto no te ven en redes",
+      "texto_tts": "",
+      "texto_pantalla": "Los grandes no te ven en redes",
+      "plano": "PROBLEMA · Los que tienen presupuesto no lo ven en redes",
+      "prompt_imagen": "medium shot from behind. TEO from behind, small, looking up at a greyscale knitted skyscraper across the street; in a top-floor window, three grey knitted figures in suits sit around a table, none looking at a phone. TEO: a crocheted amigurumi figure of a young media buyer, mustard-yellow knitted hoodie, teal knitted headphones around the neck, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The suited figures talk to each other, one gestures; TEO waits below, the phone dark in his hand. Camera: gentle pull. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Están en otro lado",
+      "texto_tts": "",
+      "texto_pantalla": "Están en otro lado",
+      "plano": "PROBLEMA · Están en otro lado",
+      "prompt_imagen": "low-angle wide. Wide greyscale knitted street: the suited figures leave the skyscraper and walk together toward the horizon where a warm knitted glow rises; TEO stands still in the foreground. TEO: a crocheted amigurumi figure of a young media buyer, mustard-yellow knitted hoodie, teal knitted headphones around the neck, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The suited figures walk away toward the glow, TEO turns his head to follow them. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Las empresas que pautan en grande existen / Solo tienes que estar donde ellas deciden",
+      "texto_tts": "",
+      "texto_pantalla": "Ve a donde deciden",
+      "plano": "GIRO · Estar donde ellas deciden",
+      "prompt_imagen": "extreme close-up on eyes. Close-up of TEO's stitched face, the greyscale knitted window behind him glowing softly with the warm knitted hall far away. TEO: a crocheted amigurumi figure of a young media buyer, mustard-yellow knitted hoodie, teal knitted headphones around the neck, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 TEO lifts his head toward the glow, holds, a single blink of the stitched eyes. Camera: gentle push. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve de octubre / Plaza Mayor, Medellín",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "SOLUCIÓN · Feria Effix, Plaza Mayor, 15 al 19 de octubre",
+      "prompt_imagen": "wide tracking shot. TEO walking down a greyscale knitted street toward a large knitted convention centre with tall crocheted glass panels, a crowd of tiny grey knitted figures streaming in. TEO: a crocheted amigurumi figure of a young media buyer, mustard-yellow knitted hoodie, teal knitted headphones around the neck, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 TEO walks steadily toward the entrance, arms swinging simply, the figures move around him. Camera: tracking from behind. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas / Más de sesenta mil asistentes / Ahí están las cuentas que buscas",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "SOLUCIÓN · Más de 350 empresas y más de 60.000 asistentes",
+      "prompt_imagen": "high-angle wide over the crowd. High-angle wide over a huge knitted pavilion: rows of grey crocheted stands and a dense crowd of grey knitted figures; TEO the only colour, small in the aisle. TEO: a crocheted amigurumi figure of a young media buyer, mustard-yellow knitted hoodie, teal knitted headphones around the neck, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 Tiny figures shuffle between stands, TEO turns in place looking up. Camera: gentle drift forward. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas decidiendo con quién pautan este año",
+      "texto_tts": "",
+      "texto_pantalla": "Deciden con quién pautan. Estás ahí",
+      "plano": "SOLUCIÓN · Las empresas que deciden con quién pautan, de frente",
+      "prompt_imagen": "two-shot at a stand. TEO at a knitted stand across from the same three grey suited figures from the skyscraper, TEO holding up his felt chart; the figures lean in, one puts a grey arm on the counter. TEO: a crocheted amigurumi figure of a young media buyer, mustard-yellow knitted hoodie, teal knitted headphones around the neck, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The suited figures lean closer, TEO lifts the chart a little higher, all three nod. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PRUEBA",
+      "quien": "CANCION",
+      "texto": "Más de doscientas ponencias para aprender de los que ya tienen resultados",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias: aprende de quien ya vende",
+      "plano": "SOLUCIÓN · Más de 200 ponencias para aprender de los que ya tienen resultados",
+      "prompt_imagen": "medium shot, side angle. Side view of TEO seated in a knitted auditorium among grey figures, a grey knitted speaker on a small stage under a soft knitted spotlight pointing at a felt chart. TEO: a crocheted amigurumi figure of a young media buyer, mustard-yellow knitted hoodie, teal knitted headphones around the neck, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The speaker's arm rises toward the chart, the audience leans forward a stitch, TEO nods. Camera: gentle lateral drift. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "CTA · Compra tu ingreso dando clic en el botón",
+      "prompt_imagen": "medium close-up facing camera. TEO facing the viewer in the knitted pavilion aisle, one mitten-hand pressing a large knitted rounded button floating in front of him, grey stands behind. TEO: a crocheted amigurumi figure of a young media buyer, mustard-yellow knitted hoodie, teal knitted headphones around the neck, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 TEO presses the knitted button, it squishes and springs back, he looks to the viewer. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Ahí están las cuentas que buscas",
+      "texto_tts": "",
+      "texto_pantalla": "Tus cuentas están en Feria Effix",
+      "plano": "CIERRE · Ahora tiene las cuentas que buscaba",
+      "prompt_imagen": "wide static shot, held. TEO back at his knitted desk, laptop chart tall, the phone lit with several felt notification dots, and on the wall a knitted logo board of three suited-figure silhouettes: his new clients. TEO: a crocheted amigurumi figure of a young media buyer, mustard-yellow knitted hoodie, teal knitted headphones around the neck, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 Two more notification dots appear, TEO glances at the wall board and smiles with a stitch. Camera: gentle push. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "emotivo",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Mismo ad para landing y WhatsApp: el CTA no nombra la URL, señala el botón del placement."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix como identidad visual desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "defecto_admitido_nota": "El formato cantado no lleva beat DEFECTO: el loop cierra. Decisión heredada del skeleton musical de sin_arrancar.",
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'más de sesenta mil asistentes' — cifra aportada por Alexander el 2026-09-04; no está en el sitio. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 (nano-banana-2/edit) + 12 clips × 5s × 0.056 (kling v2.1 std) = 4.55 USD. Regenerar la canción cuesta 0.15 más por intento (MiniMax canta mal la marca ~1 de cada 3).",
+  "notas_produccion": "Historia en una frase: un trafficker logra resultados pero las cuentas grandes no lo llaman porque quien tiene presupuesto no lo ve en redes; en Feria Effix esas empresas están de frente decidiendo con quién pautan. Los tres 'de traje' son el hilo: aparecen en 4, 5, 9 y 12. Crochet: mundo diorama B&N estricto (marca), TEO única fuente de color; poses simples, sin dedos; verbatim positivo/negativo/cierre I2V. Cantado, sin voz en off. CTA botón, sin URL. 'Eres trafficker' es callout de oficio."
+}
