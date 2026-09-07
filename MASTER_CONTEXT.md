@@ -367,3 +367,46 @@ Todo vive en `skills-video-ads/`. No crear subproyectos aparte.
   guiones los ignoran porque sus fichas describen personajes nuevos. Apuntar el
   guion a una hoja existente ahorra 0.08 USD y, sobre todo, da el mismo
   personaje en todos los creativos de un nicho.
+
+### 2026-09-07 · La alineación puede regalarle media canción a un solo plano (p04 claymation)
+
+El ad `p04-whatsapp` gastó **24 de sus 62 segundos en el plano 1**: seis clips
+seguidos de la misma imagen con el mismo overlay. No fue el reparto, fue la
+alineación. `transcripcion.alinear()` empareja las líneas del guion con lo que
+whisper oyó; cuando MiniMax se come una línea (o la canta tan pegada que whisper
+la funde con la anterior), esa línea no ancla y su tiempo se lo queda la vecina
+de arriba. Aquí no ancló ninguna de las líneas 2, 3 y 4: **16 clips se
+repartieron entre 9 líneas de 12**, y la primera se llevó seis.
+
+Cuesta dinero porque el clip se paga por línea: los seis clips de la línea 1
+son 1.40 USD de material redundante, y las tres imágenes que quedaron sin clip
+ya estaban pagadas (0.24) sin llegar al render.
+
+**Lo que hay que poner en el código** (pendiente): un techo por línea en
+`plan_musical.repartir_clips()`. Ninguna línea debería quedarse con más de dos
+o tres clips seguidos cuando hay líneas del guion sin ninguno — el sobrante se
+reparte a las que no anclaron, en su orden. Es un reparto, no una llamada al
+modelo: sale gratis y se decide antes de pagar los clips.
+
+**Señal de alarma barata:** la fase `clips` ya imprime "N clips sobre M líneas".
+Si M es menor que el número de líneas del guion, la alineación falló y conviene
+pararse ahí, antes de los 3.73 USD de Seedance.
+
+### 2026-09-07 · MiniMax Music 3 no canta "Effix" con ninguna grafía
+
+Cinco intentos, 0.75 USD. `Effix`, `Éffix`, `Éfix` y `Éfics` se transcriben
+todas como "FX", "de fix" o "Fade a FX": el modelo lee la doble consonante
+final como deletreo, no como palabra. El tag de estilo
+`sing the brand name 'Feria Effix' clearly as two separate words, never as
+initials` tampoco lo evita. Si al oído la marca tiene que sonar perfecta, este
+modelo no es el camino — hay que ir a ElevenLabs Music (0.60/min) y pegarle
+acompañamiento, o cantar la marca aparte.
+
+### 2026-09-07 · La letra no cabe: `duration` es un tope, no un contrato
+
+Con ~130 palabras y `duration=62`, Music 3 nunca llegó al outro en cuatro
+intentos: la letra se corta **por el final**, que es donde está el CTA. Con 108
+palabras sí llegó. Referencia útil: el musical de abogados que funcionó tiene
+~105 palabras para 55s. Regla práctica: **no más de dos palabras por segundo
+de canción**, y el CTA nunca en la última línea — si el modelo se come una,
+que sea el remate y no la venta.

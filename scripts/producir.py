@@ -42,7 +42,7 @@ import fal_client
 
 from src import cost_estimator, guion_aprobado, mezcla, ritmo, transcripcion
 from src.descargas import recuperar_pendientes
-from src.audio_extra import (MODELO_CANCION, MODELO_CANCION_11, MODELO_CANCION_MM3,
+from src.audio_extra import (INTRO_MAXIMA_S, MODELO_CANCION, MODELO_CANCION_11, MODELO_CANCION_MM3,
                              componer_cancion, componer_cancion_elevenlabs,
                              componer_cancion_minimax3)
 from src.paths import AUDIO_DIR, CLIPS_DIR, LOGS_DIR, RENDERS_DIR, env, env_int
@@ -289,8 +289,15 @@ def fase_cancion(ad: Ad, *, forzar: bool = False) -> Path:
 
     print(f"\ntramo cantado: {inicio_s:.2f}s → {fin_s:.2f}s "
           f"({fin_s - inicio_s:.2f}s útiles de {_duracion(cruda):.2f}s)")
+    # `duration` es un tope: los segundos que el modelo gasta en intro se los
+    # quita a la letra. Recortar la intro arregla el montaje, no el mensaje
+    # perdido — por eso se avisa aquí, cuando todavía se puede regenerar.
+    if inicio_s > INTRO_MAXIMA_S:
+        print(f"⚠️  {inicio_s:.1f}s de intro instrumental (tope "
+              f"{INTRO_MAXIMA_S}s): son segundos que la letra no pudo usar. "
+              f"Si la canción se quedó corta de letra, regenera con --forzar.")
     print(f"recorte: {util.name}")
-    print(f"\nLo que se oye cantar:\n  {t.get('text', '')[:600]}")
+    print(f"\nLo que se oye cantar:\n  {t.get('text', '')}")
     print("\n👂 Escúchala antes de seguir. Revisa que cante 'Feria Effix' "
           "completo y que no se coma ninguna cifra.")
     return util

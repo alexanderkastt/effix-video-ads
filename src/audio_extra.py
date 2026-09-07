@@ -252,6 +252,21 @@ MODELO_CANCION_MM3 = "minimax/music-3"
 # feed compite con el scroll y una pista correcta pero tibia no lo gana. Se pide
 # por dos vías a la vez, porque el modelo atiende mejor a la suma: descripción
 # de energía y un empujón sobre el BPM que trae el guion.
+# Alexander (2026-09-07): "no perder mucho tiempo solo con instrumental, que
+# canten desde el inicio para aumentar el mensaje". No es estetica: `duration`
+# es un tope, y cada segundo de intro es un segundo que la letra ya no tiene.
+# El ad p04 lo pago dos veces — un intento gasto 13.6s en intro y se quedo sin
+# puente ni CTA. El recorte posterior quita la intro del montaje, pero no
+# devuelve los segundos cantados que se perdieron.
+ARRANQUE_CANTADO = (
+    "No instrumental intro: the first vocal line starts within the first second, "
+    "at most one bar of count-in. No long intro, no build-up before the vocals, "
+    "no instrumental break between sections, no outro tail after the last line"
+)
+
+# Por encima de esto la intro se comio tiempo cantable y conviene regenerar.
+INTRO_MAXIMA_S = 2.0
+
 ENERGIA = (
     "high energy, driving rhythm, strong danceable groove, punchy drums, "
     "uptempo and lively throughout, never mellow or laid back"
@@ -321,6 +336,7 @@ def caption_estructurado(brief: dict[str, Any]) -> str:
         "palm-muted guitar stabs, claps on the offbeat")
 
     return (
+        f"{ARRANQUE_CANTADO}. "
         f"Genre: {genero}. "
         f"BPM: {bpm}. Key: major, bright and confident.\n"
         f"Vocals: {voz}, SUNG with a strong memorable melody and clear diction. "
@@ -329,11 +345,11 @@ def caption_estructurado(brief: dict[str, Any]) -> str:
         f"is doubled and harmonised so it sticks after one listen.\n"
         f"Production: {ritmo}, percussion fills between lines, polished "
         f"radio-ready commercial mix.\n"
-        f"Arrangement: verses ride the groove with a melodic hook; the pre-chorus "
+        f"Arrangement: {ARRANQUE_CANTADO}. Verses ride the groove with a melodic hook; the pre-chorus "
         f"builds with a riser; the chorus explodes into the main hook with full "
         f"instrumentation; the outro repeats the hook and fades.\n"
         f"Feel: {ENERGIA}. Danceable, catchy, modern LATAM radio advertising.\n"
-        f"{TAG_PRONUNCIACION}."
+        f"{TAG_PRONUNCIACION}. {ARRANQUE_CANTADO}."
     )
 
 

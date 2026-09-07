@@ -887,3 +887,41 @@ cortar la canción — decisión de Alexander, no un descuido.
 3. Los 28 guiones de la parrilla numerada quedaron versionados hoy, en siete
    estilos. Ninguno producido salvo P01 y P02.
 4. La fase de voz del modo `locucion` sigue sin portar.
+
+## 2026-09-07 · Ad p04 claymation "Mil mensajes en WhatsApp"
+
+**Entregado:** `assets/renders/effix_claymation_vendedores-de-redes-sociales_mil-mensajes-en-whatsapp_20260907.mp4`
+62.08s · 31 planos de 2.00s · -14.8 LUFS · true peak -2.1 dBTP · **5.88 USD reales**.
+
+Guion `effix_claymation_p04-whatsapp-musical_20260904_aprobado.json` (renombrado
+desde `_por-aprobar` y marcado `estado: aprobado`).
+
+**Lo que se decidió y por qué:**
+- La letra original (170 palabras) no cabía en la canción: cuatro intentos y
+  ninguno cantó el CTA. Se bajó a 108 y entonces sí llegó.
+- Salió de la letra la cifra "sesenta mil personas": era el único dato sin
+  verificar con Effix, y el recorte lo quitó de encima. `datos_sin_verificar`
+  queda limpio.
+- Las líneas se reordenaron al orden real de la canción. El guion original
+  ponía el verso 2 antes del coro, y `alinear` empareja en secuencia: cada
+  plano caía desplazado.
+- 13 planos bajaron a 12 (se cayó el de los ojos con el reflejo de la feria).
+
+**Regla nueva en el código** (Alexander): la canción arranca cantada.
+`ARRANQUE_CANTADO` en `src/audio_extra.py` va en el Structured Caption y aplica
+a todos los ads; `producir.py` avisa si la intro pasa de `INTRO_MAXIMA_S` (2.0s).
+Motivo: `duration` es un tope y cada segundo de intro se lo quita a la letra —
+un intento gastó 13.6s en intro y salió sin puente ni CTA.
+
+**Abierto, decide Alexander:**
+1. Los primeros 24s del render son el mismo plano (fallo de alineación, ver
+   MASTER_CONTEXT). Rehacer esos clips apuntándolos a las 3 líneas que se
+   quedaron sin material cuesta ~1.17 USD y llevaría el ad a ~7.05, por encima
+   del tope de 6.
+2. La marca suena "de fix" en las cinco canciones. Ninguna grafía lo arregla
+   con MiniMax Music 3.
+3. Duración 62.08s: dos segundos por encima del rango 30-60.
+
+**Pendiente de código:** techo de clips por línea en
+`plan_musical.repartir_clips()` para que una línea no absorba el tiempo de las
+que no anclaron. Sale gratis y evita repetir este gasto.
