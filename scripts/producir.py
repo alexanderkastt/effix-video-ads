@@ -41,7 +41,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import fal_client
 
 from src import cost_estimator, guion_aprobado, mezcla, ritmo, transcripcion
-from src.audio_extra import componer_cancion
+from src.audio_extra import (MODELO_CANCION_11, MODELO_CANCION_MM3,
+                             componer_cancion, componer_cancion_elevenlabs,
+                             componer_cancion_minimax3)
 from src.paths import AUDIO_DIR, CLIPS_DIR, LOGS_DIR, RENDERS_DIR, env, env_int
 from src.video_generator import _descargar, _url_de
 
@@ -218,9 +220,27 @@ def fase_cancion(ad: Ad, *, forzar: bool = False) -> Path:
             previos = len(list(ad.audio_dir.glob("cancion_intento_*.mp3")))
             cruda.rename(ad.audio_dir / f"cancion_intento_{previos + 1:02d}.mp3")
         inicio = time.monotonic()
-        cruda = componer_cancion(ad.g["musica"], job_id=ad.job, destino=cruda)
-        ad.apuntar_gasto("cancion", 1, _tarifa(
-            f"{ad.g['musica']['modelo']}__por_cancion"))
+        musica = ad.g["musica"]
+        if musica.get("modelo") == MODELO_CANCION_MM3:
+            seg = int((musica.get("duracion_ms") or 58000) / 1000)
+            cruda = componer_cancion_minimax3(
+                musica, job_id=ad.job, destino=cruda, duracion_s=seg)
+            ad.apuntar_gasto("cancion (music3)", seg,
+                             seg * _tarifa(f"{MODELO_CANCION_MM3}__por_segundo"))
+        elif musica.get("modelo") == MODELO_CANCION_11:
+            # ElevenLabs Music cobra por minuto y acepta duración objetivo, así
+            # que es el único camino que permite encargar un ad dentro del rango
+            # de 30-60s en vez de aceptar lo que salga. Cuesta seis veces más
+            # que MiniMax: se usa cuando la dicción no es negociable.
+            ms = int(musica.get("duracion_ms") or 58000)
+            cruda = componer_cancion_elevenlabs(
+                musica, job_id=ad.job, destino=cruda, duracion_ms=ms)
+            ad.apuntar_gasto("cancion (11labs)", ms / 60000,
+                             ms / 60000 * _tarifa(f"{MODELO_CANCION_11}__por_minuto"))
+        else:
+            cruda = componer_cancion(musica, job_id=ad.job, destino=cruda)
+            ad.apuntar_gasto("cancion", 1, _tarifa(
+                f"{musica['modelo']}__por_cancion"))
         print(f"canción: {cruda.name} · {_duracion(cruda)}s "
               f"({time.monotonic() - inicio:.0f}s de espera)")
 
@@ -294,11 +314,24 @@ def fase_hero(ad: Ad) -> Path:
         print(f"hero ya existe: {destino}")
         return destino
 
-    fichas = " ".join(p["ficha"] for p in (ad.g.get("personajes") or {}).values())
-    prompt = (
-        f"{ad.g['bible']} All the characters standing together side by side in a "
-        f"single row on a plain neutral background, full body, front view, neutral "
-        f"relaxed pose, even soft lighting. {fichas}{SIN_TEXTO}{UN_SOLO_CUADRO}"
+    personajes = ad.g.get("personajes") or {}
+    fichas = " ".join(p["ficha"] for p in personajes.values())
+    # Con UN personaje, pedir "all the characters together side by side" invita
+    # al modelo a llenar la fila: la primera héroe del esqueleto salió rodeada
+    # de seis personas y con un set de feria detrás. La hoja de referencia sólo
+    # puede contener lo que va a viajar a las doce escenas.
+    if len(personajes) <= 1:
+        encuadre = ("A single hero shot of the character completely alone, "
+                    "centred, full body, front view, neutral relaxed pose")
+    else:
+        encuadre = ("All the characters of this ad standing together side by side "
+                    "in a single row, full body, front view, neutral relaxed pose")
+    prompt = componer_prompt(
+        f"{ad.g['bible']} {encuadre}, on a plain neutral seamless studio "
+        f"background, even soft lighting. {fichas} Reference sheet only: no other "
+        f"characters, no people, no human figures, no crowd, no bystanders, no "
+        f"scenery, no set, no props beyond the characters themselves.",
+        con_referencia=False,
     )
     salida = fal_client.subscribe(
         ad.modelo_img,
@@ -306,8 +339,8 @@ def fase_hero(ad: Ad) -> Path:
          "resolution": "1K", "num_images": 1,
          "system_prompt": SISTEMA_UN_CUADRO},
     )
-    _descargar(_url_de(salida, "images", "image"), destino)
     ad.apuntar_gasto("hero", 1, _tarifa(f"{ad.modelo_img}__por_imagen"))
+    _descargar(_url_de(salida, "images", "image"), destino)
     print(f"hero: {destino}")
     return destino
 
@@ -322,17 +355,50 @@ def _url_hero(ad: Ad) -> str:
     return url
 
 
+def componer_prompt(base: str, *, con_referencia: bool) -> str:
+    """Añade las guardas del productor SIN estropear el prompt del guion.
+
+    Los guiones del formato único traen el prompt ya escrito y cerrado: el
+    Character Bible verbatim de skeleton, el universal de crochet con su propio
+    bloque `Negative:` al final, el cierre de "no text" de todos. Pegarle cosas
+    a ciegas hace daño de dos formas:
+
+    1. **La guarda anti-panel caía dentro del `Negative:` de crochet.** Todo lo
+       que va detrás de esa palabra se lee como lista de lo que NO se quiere, así
+       que "Single full-frame image" pasaba a ser algo a evitar — pidiéndole al
+       modelo exactamente el díptico que la guarda venía a impedir. Por eso se
+       inserta ANTES del bloque negativo, no al final.
+    2. **Repetir lo que el prompt ya dice lo diluye.** Si el guion ya cierra con
+       "no text" o ya manda referenciar la imagen de referencia, no se repite.
+
+    Lo que nunca se toca es el texto del guion: se inserta alrededor, jamás se
+    reescribe.
+    """
+    partes = []
+    if con_referencia and "reference image" not in base.lower():
+        partes.append(
+            "Keep the exact same character(s) from the reference image — identical "
+            "design, colours and proportions. Use the reference only for the "
+            "characters; the composition and framing come from this description. "
+        )
+    cola = "" if "no text" in base.lower() else SIN_TEXTO
+
+    corte = base.find("Negative:")
+    if corte == -1:
+        partes.append(base + cola + UN_SOLO_CUADRO)
+    else:
+        # La guarda y el cierre entran en la parte positiva; el bloque negativo
+        # del guion se queda intacto y al final, que es donde tiene sentido.
+        partes.append(base[:corte].rstrip() + cola + UN_SOLO_CUADRO + " " + base[corte:])
+    return "".join(partes)
+
+
 def _escena(ad: Ad, linea: dict, sufijo: str, clave: str, url: str) -> Path:
     n = linea["n"]
     destino = ad.clips_dir / f"clip_{n:02d}_{sufijo}.png"
     if destino.exists():
         return destino
-    prompt = (
-        "Keep the exact same character(s) from the reference image — identical "
-        "design, colours and proportions. Use the reference only for the "
-        "characters; the composition and framing come from this description. "
-        f"{linea[clave]}{SIN_TEXTO}{UN_SOLO_CUADRO}"
-    )
+    prompt = componer_prompt(linea[clave], con_referencia=True)
     salida = fal_client.subscribe(
         ad.modelo_edit,
         {"prompt": prompt, "image_urls": [url],
@@ -340,10 +406,9 @@ def _escena(ad: Ad, linea: dict, sufijo: str, clave: str, url: str) -> Path:
          "resolution": "1K", "num_images": 1,
          "system_prompt": SISTEMA_UN_CUADRO},
     )
-    ruta = _descargar(_url_de(salida, "images", "image"), destino)
     ad.apuntar_gasto(f"escena_{n:02d}_{sufijo}", 1,
                      _tarifa(f"{ad.modelo_edit}__por_imagen"))
-    return ruta
+    return _descargar(_url_de(salida, "images", "image"), destino)
 
 
 def fase_escenas(ad: Ad) -> None:
@@ -400,9 +465,9 @@ def _clip(ad: Ad, linea: dict) -> Path:
     inicio = time.monotonic()
     salida = fal_client.subscribe(ad.modelo_video, payload)
     url = salida["video"]["url"] if isinstance(salida.get("video"), dict) else salida["video"]
-    _descargar(url, destino)
     ad.apuntar_gasto(f"clip_{n:02d}", ad.dur_clip,
                      ad.dur_clip * _tarifa(ad.modelo_video, "fal_ai"))
+    _descargar(url, destino)
     print(f"  clip {n:02d}: {ad.dur_clip}s ({time.monotonic() - inicio:.0f}s de espera)")
     return destino
 

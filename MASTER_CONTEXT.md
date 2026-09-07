@@ -266,3 +266,62 @@ Todo vive en `skills-video-ads/`. No crear subproyectos aparte.
   como YAML, y el indexador cae al primer título del cuerpo: la skill deja de
   dispararse por sus triggers. `ganchos-y-retencion` y `storyboard-director`
   llevaban tiempo así. Descripción larga siempre en bloque `>-`.
+- **2026-09-06 — Nunca le pidas a un personaje-objeto una acción que necesita
+  manos humanas.** `CODIGO types and hits a key` y `TIENDA lifts the papers`
+  metieron una persona real dentro de dos clips del ad de abogados: un libro no
+  teclea y un carrito no tiene manos, así que Kling resuelve la acción imposible
+  dibujando a alguien que sí puede hacerla. Costó 0.56 USD. Vale para
+  `object_talk`, `crochet`, `skeleton` y cualquier estilo con objetos animados.
+- **2026-09-06 — "Character sheet" es una palabra peligrosa con nano-banana.**
+  Devuelve una hoja de contactos con la escena apilada en dos filas. Como cada
+  escena se edita DESDE la héroe, el díptico se propagó a los doce planos: doce
+  imágenes inservibles, 0.96 USD. Pedir "single full-frame image" y repetirlo en
+  el `system_prompt`. Y con UN solo personaje, no decir "all the characters side
+  by side": el modelo llena la fila con humanos inventados.
+- **2026-09-06 — Mirar la héroe antes de generar las escenas cuesta cero.** Es
+  el punto de control más barato del pipeline: un error ahí se multiplica por
+  doce. Las dos veces que se saltó, costó 0.96 y 0.08 USD.
+- **2026-09-06 — Hay palabras que los modelos de canto no saben decir.**
+  `resultados` salió "resurodios", "bra rosados" y "jesuitos" en cinco intentos
+  repartidos en cuatro pistas; `trafficker` salió "tráfico, me encas";
+  `ecommerce`, "Kecoxie". No es la grafía: el modelo no articula el grupo
+  consonántico, o intenta leer una palabra inglesa con fonética castellana. La
+  salida barata es **cambiar la palabra** —son letras publicitarias, siempre hay
+  sinónimo— no negociar con la ortografía. Viven en
+  `audio_extra.PALABRAS_QUE_NO_CANTA` y las valida la regla 7 del productor,
+  gratis, antes de pagar la canción. Aparecen en 13 de los 14 guiones musicales.
+- **2026-09-06 — La sinalefa sí se arregla con la grafía.** "Feria Effix" se
+  cantaba "feriéffix" porque la *a* de Feria se funde con la *E* de Effix. Una
+  tilde —"Feria Éffix"— rompe la fusión y Alexander confirmó de oído que suena
+  bien. La diferencia con el caso anterior: aquí el modelo SÍ sabe decir las
+  palabras, sólo las une mal. Cuando sabe decirlas, se corrige la grafía; cuando
+  no, se cambia la palabra.
+- **2026-09-06 — Whisper no es juez de pronunciación sobre música.** Transcribió
+  "proxy play antes" donde la letra decía "el próximo cliente", y "Vería fix"
+  donde Alexander confirmó que la marca sonaba bien. Sirve para alinear tiempos
+  con la letra —para eso es exacto— no para decidir si algo se entiende. Eso lo
+  decide un oído humano, y cuatro canciones se pagaron antes de aprenderlo.
+- **2026-09-06 — Guidance alto degenera la canción.** `guidance_scale` a 2.2
+  (default 1.7) para "apretar la dicción" produjo 58 segundos de "de-de-de-de"
+  sin letra. Es el modo de fallo clásico de la difusión sobreguiada: el modelo
+  se atasca en una sílaba. A 1.8 la misma letra sale limpia.
+- **2026-09-06 — El codec AAC sube el pico 1.1 dB por encima del limitador.**
+  Medido sobre la misma pista: limitada a −1.5 dBTP el WAV sale a −1.4997 y el
+  AAC a 192k a −0.38. Son picos intersample que el codec inventa al reconstruir,
+  así que el limitador tiene que ir `MARGEN_CODEC` (1.5 dB) por debajo del techo
+  para que cumpla **el archivo entregado**. Antes de eso hubo otra trampa:
+  `alimiter` recibe amplitud **lineal** de 0.0625 a 1, no dB — escribirle
+  "-1.5dB" no da error, ffmpeg lo descarta en silencio y no limita nada.
+- **2026-09-06 — La descarga es lo frágil, la generación es lo caro.** Un
+  `Read timed out` de fal al bajar la héroe de crochet tiró trabajo ya pagado, y
+  el gasto ni se registró porque se apuntaba después de descargar. Ahora
+  `_descargar` reintenta cuatro veces con espera creciente, y el gasto se apunta
+  **cuando el modelo cobra**, no cuando el archivo llega a disco.
+- **2026-09-06 — Suno no está y no va a estar.** `SUNO_API_KEY` vacía y fal no
+  lo tiene en catálogo. Los campos `suno_*` del formato son herencia de cuando
+  el brief se pegaba a mano en suno.com. El modelo de canto del proyecto es
+  **MiniMax Music 3** (`minimax/music-3`, 0.002 USD/segundo): canta la letra
+  verbatim y acepta `duration`, que es lo único que permite encargar un ad
+  dentro del rango de 30–60s en vez de aceptar lo que salga. ElevenLabs Music
+  (0.60/min) tiene mejor dicción pero **devuelve la voz sin acompañamiento**:
+  sirve para medir, no como pista de un ad musical.

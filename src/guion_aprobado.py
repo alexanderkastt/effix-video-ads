@@ -275,10 +275,35 @@ def _regla_6(g: dict[str, Any], r: Resultado) -> None:
             f"si la canción sale más larga, sobra audio sin imagen.")
 
 
+def _regla_7_diccion(g: dict[str, Any], r: Resultado) -> None:
+    """Palabras que el modelo de canto no sabe decir.
+
+    No es una de las 6 reglas del formato: es la lección de la tanda 2, donde
+    "resultados" costó cinco intentos de canción repartidos en cuatro pistas
+    antes de que alguien se diera cuenta de que el modelo simplemente no sabe
+    articularla. Comprobarlo aquí es gratis; descubrirlo generando, no.
+
+    Va como aviso y no como error porque el que decide si una palabra se
+    sacrifica es quien escribió la letra.
+    """
+    if g.get("modo") != "musical_sync":
+        return
+    from .audio_extra import PALABRAS_QUE_NO_CANTA
+
+    letra = str((g.get("musica") or {}).get("suno_custom_lyrics") or "")
+    for palabra, sintoma in PALABRAS_QUE_NO_CANTA.items():
+        veces = len(re.findall(rf"\b{palabra}\b", letra, re.IGNORECASE))
+        if veces:
+            r.avisos.append(
+                f"7· la letra dice {palabra!r} {veces}× y el modelo la deforma: "
+                f"{sintoma}. Cámbiala antes de pagar la canción.")
+
+
 def validar(g: dict[str, Any]) -> Resultado:
     """Las 6 reglas de docs/FORMATO-GUION.md, con evidencia línea a línea."""
     r = Resultado()
-    for regla in (_regla_1, _regla_2, _regla_3, _regla_4, _regla_5, _regla_6):
+    for regla in (_regla_1, _regla_2, _regla_3, _regla_4, _regla_5, _regla_6,
+                  _regla_7_diccion):
         try:
             regla(g, r)
         except Exception as exc:  # una regla rota no puede tapar a las demás
@@ -312,5 +337,6 @@ def estimar_costo(g: dict[str, Any], *, modelo_video: str, modelo_imagen: str,
         n_imagenes=n_imagenes,
         modelo_imagen=modelo_imagen,
         modelo_cancion=(g.get("musica") or {}).get("modelo") if musical else None,
+        duracion_cancion_ms=(g.get("musica") or {}).get("duracion_ms"),
         costo_extras=costo_extras,
     )

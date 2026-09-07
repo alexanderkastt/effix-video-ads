@@ -32,7 +32,8 @@
     "fal-ai/elevenlabs/music__por_minuto": 0.6,
     "fal-ai/elevenlabs/sound-effects/v2__por_segundo": 0.002,
     "fal-ai/minimax-music/v2.6__por_cancion": 0.15,
-    "fal-ai/whisper__por_segundo_de_computo": 0.0008
+    "fal-ai/whisper__por_segundo_de_computo": 0.0008,
+    "minimax/music-3__por_segundo": 0.002
   },
   "presupuesto": {
     "_unidad": "USD por video terminado, todo incluido (video, imágenes, voz, música)",

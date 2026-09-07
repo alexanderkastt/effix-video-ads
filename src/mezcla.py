@@ -30,11 +30,43 @@ from .paths import env, env_float
 LUFS_OBJETIVO = -14.0
 TRUE_PEAK_MAX = -1.5
 
+# Cuánto sube el pico al codificar a AAC. Medido con la misma pista: limitada a
+# −1.5 el WAV sale a −1.4997 y el AAC a 192k a −0.38, es decir 1.1 dB de
+# overshoot intersample. Se limita 1.5 por debajo para tener margen y que el
+# archivo entregado cumpla de verdad, no sólo la señal antes del codec.
+MARGEN_CODEC = 1.5
+
 # Curvas de entrada y salida de la música. La entrada es corta porque el ad
 # arranca con el gancho: un fade largo se come el primer segundo, que es el
 # único que decide si alguien se queda.
 FADE_IN_S = 0.8
 FADE_OUT_S = 3.0
+
+
+def _limitador() -> str:
+    """Techo duro de true peak, detrás del loudnorm.
+
+    `loudnorm` en una sola pasada estima el pico y a veces se queda corto: una
+    canción de MiniMax Music 3, que viene masterizada caliente, salió a +0.1
+    dBTP con el objetivo puesto en −1.5. Eso es clipping, y en el feed se oye
+    como distorsión en los golpes.
+
+    `alimiter` no estima: recorta. Cuesta cero y garantiza el techo que piden
+    las plataformas, que es lo que el QA comprueba.
+
+    Ojo con la unidad: `limit` es amplitud LINEAL entre 0.0625 y 1, no dB.
+    Escribirle "-1.5dB" no da error — ffmpeg lo descarta en silencio y el
+    limitador se queda en 1.0, o sea sin limitar, que es como pasó inadvertido
+    la primera vez.
+
+    Y se limita por debajo del objetivo a propósito. Medido sobre la misma
+    pista: limitando a −1.5 el WAV sale a −1.4997, pero el mismo audio pasado a
+    AAC 192k sube a −0.38. El codec reconstruye con picos intersample que no
+    existían en la señal limitada, así que el techo hay que ponerlo
+    `MARGEN_CODEC` más abajo para que el archivo ENTREGADO cumpla.
+    """
+    lineal = 10 ** ((TRUE_PEAK_MAX - MARGEN_CODEC) / 20)
+    return f"alimiter=limit={lineal:.4f}:level=disabled"
 
 
 def _ffmpeg(args: list[str]) -> None:
@@ -75,7 +107,8 @@ def cadena_audio(
         # normalize=0 para que amix no baje los dos canales a la mitad: la voz
         # tiene que salir al mismo nivel al que entró.
         f"[vz][duck]amix=inputs=2:duration=first:normalize=0[crudo];"
-        f"[crudo]loudnorm=I={LUFS_OBJETIVO}:TP={TRUE_PEAK_MAX}:LRA=11[{salida}]"
+        f"[crudo]loudnorm=I={LUFS_OBJETIVO}:TP={TRUE_PEAK_MAX}:LRA=11,"
+        f"{_limitador()}[{salida}]"
     )
 
 
@@ -98,7 +131,8 @@ def cadena_master(
     return (
         f"[{entrada}]afade=t=in:st=0:d={FADE_IN_S},"
         f"afade=t=out:st={salida_fade:.2f}:d={fade_out_s},"
-        f"loudnorm=I={LUFS_OBJETIVO}:TP={TRUE_PEAK_MAX}:LRA=11[{salida}]"
+        f"loudnorm=I={LUFS_OBJETIVO}:TP={TRUE_PEAK_MAX}:LRA=11,"
+        f"{_limitador()}[{salida}]"
     )
 
 

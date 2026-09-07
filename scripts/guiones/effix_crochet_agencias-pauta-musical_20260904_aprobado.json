@@ -1,6 +1,6 @@
 {
   "formato": "guion-aprobado/1",
-  "estado": "por_aprobar",
+  "estado": "aprobado",
   "job_id": "agencias-pauta-musical-crochet",
   "titulo": "Sabes pautar, pero nadie lo sabe",
   "marca": "effix",
@@ -42,7 +42,7 @@
   "musica": {
     "modo": "sincronizado",
     "suno_title": "Feria Effix — Sabes pautar, pero nadie lo sabe",
-    "suno_custom_lyrics": "[Verso 1]\nEres trafficker, manejas pauta y logras resultados\nPero las cuentas grandes nunca te llaman\nSi manejas pauta y tus clientes siguen siendo pequeños\nEste video es para ti\n\n[Verso 2]\nPublicas tus resultados, y no pasa nada\nPorque los que tienen presupuesto no te ven en redes\nEstán en otro lado\n\n[Pre-coro]\nLas empresas que pautan en grande existen\nSolo tienes que estar donde ellas deciden\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nAhí están las cuentas que buscas\n\n[Verso 3]\nMás de trescientas cincuenta empresas decidiendo con quién pautan este año\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nAhí están las cuentas que buscas",
+    "suno_custom_lyrics": "[Verso 1]\nVives de la pauta, manejas campañas y te va bien\nPero las cuentas grandes nunca te llaman\nSi manejas pauta y tus clientes siguen siendo pequeños\nEste video es para ti\n\n[Verso 2]\nPublicas tus números, y no pasa nada\nPorque los que tienen presupuesto no te ven en redes\nEstán en otro lado\n\n[Pre-coro]\nLas empresas que pautan en grande existen\nSolo tienes que estar donde ellas deciden\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nAhí están las cuentas que buscas\n\n[Verso 3]\nMás de trescientas cincuenta empresas decidiendo con quién pautan este año\nMás de doscientas ponencias para aprender de los que ya están vendiendo\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nAhí están las cuentas que buscas",
     "suno_style_tags": [
       "acoustic indie pop",
       "ukulele and handclaps",
@@ -54,21 +54,26 @@
     ],
     "bpm_recomendado": 100,
     "volumen_relativo": 1.0,
-    "modelo": "fal-ai/minimax-music/v2.6",
-    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler."
+    "modelo": "minimax/music-3",
+    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler.",
+    "letra_previa": "[Verso 1]\nEres trafficker, manejas pauta y logras resultados\nPero las cuentas grandes nunca te llaman\nSi manejas pauta y tus clientes siguen siendo pequeños\nEste video es para ti\n\n[Verso 2]\nPublicas tus resultados, y no pasa nada\nPorque los que tienen presupuesto no te ven en redes\nEstán en otro lado\n\n[Pre-coro]\nLas empresas que pautan en grande existen\nSolo tienes que estar donde ellas deciden\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nAhí están las cuentas que buscas\n\n[Verso 3]\nMás de trescientas cincuenta empresas decidiendo con quién pautan este año\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nAhí están las cuentas que buscas",
+    "modelo_previo": "fal-ai/minimax-music/v2.6",
+    "duracion_ms": 58000,
+    "nota_modelo": "Music 3 desde el primer intento: canta letra verbatim, acepta duracion objetivo (el ad cabe en 30-60s) y cuesta 0.002 por segundo. La energia extra y el +12 BPM los pone src/audio_extra.py."
   },
   "lineas": [
     {
       "n": 1,
       "beat": "MOMENTO",
       "quien": "CANCION",
-      "texto": "Eres trafficker, manejas pauta y logras resultados / Pero las cuentas grandes nunca te llaman",
+      "texto": "Vives de la pauta, manejas campañas y te va bien / Pero las cuentas grandes nunca te llaman",
       "texto_tts": "",
       "texto_pantalla": "Resultados sí. Cuentas grandes, no",
       "plano": "PROBLEMA · Logra resultados y las cuentas grandes no llaman",
       "prompt_imagen": "wide establishing shot. TEO at a tiny knitted desk in a greyscale crocheted home office, a knitted laptop showing a felt chart with a tall green bar, one arm raised in a small victory. TEO: a crocheted amigurumi figure of a young media buyer, mustard-yellow knitted hoodie, teal knitted headphones around the neck, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
       "prompt_video": "@Image1 TEO's raised arm lowers, he leans toward a knitted phone on the desk, nothing happens, he sits back. Camera: gentle push. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "texto_previo": "Eres trafficker, manejas pauta y logras resultados / Pero las cuentas grandes nunca te llaman"
     },
     {
       "n": 2,
@@ -86,13 +91,14 @@
       "n": 3,
       "beat": "SINTOMA",
       "quien": "CANCION",
-      "texto": "Publicas tus resultados, y no pasa nada",
+      "texto": "Publicas tus números, y no pasa nada",
       "texto_tts": "",
       "texto_pantalla": "Publicas y no pasa nada",
       "plano": "PROBLEMA · Publica sus resultados y no pasa nada",
       "prompt_imagen": "close-up on hands and object. Close-up of TEO's mitten-hand tapping a knitted phone: a felt post with his chart appears, and beside it a knitted counter with only two small stitched hearts. TEO: a crocheted amigurumi figure of a young media buyer, mustard-yellow knitted hoodie, teal knitted headphones around the neck, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
       "prompt_video": "@Image1 He taps, the post appears, one heart lights up, then nothing; the hand pauses. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "texto_previo": "Publicas tus resultados, y no pasa nada"
     },
     {
       "n": 4,
@@ -170,13 +176,14 @@
       "n": 10,
       "beat": "PRUEBA",
       "quien": "CANCION",
-      "texto": "Más de doscientas ponencias para aprender de los que ya tienen resultados",
+      "texto": "Más de doscientas ponencias para aprender de los que ya están vendiendo",
       "texto_tts": "",
       "texto_pantalla": "+200 ponencias: aprende de quien ya vende",
       "plano": "SOLUCIÓN · Más de 200 ponencias para aprender de los que ya tienen resultados",
       "prompt_imagen": "medium shot, side angle. Side view of TEO seated in a knitted auditorium among grey figures, a grey knitted speaker on a small stage under a soft knitted spotlight pointing at a felt chart. TEO: a crocheted amigurumi figure of a young media buyer, mustard-yellow knitted hoodie, teal knitted headphones around the neck, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (mustard, teal, terracotta). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
       "prompt_video": "@Image1 The speaker's arm rises toward the chart, the audience leans forward a stitch, TEO nods. Camera: gentle lateral drift. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "texto_previo": "Más de doscientas ponencias para aprender de los que ya tienen resultados"
     },
     {
       "n": 11,
@@ -224,5 +231,26 @@
   ],
   "costo_estimado_usd": 4.55,
   "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 (nano-banana-2/edit) + 12 clips × 5s × 0.056 (kling v2.1 std) = 4.55 USD. Regenerar la canción cuesta 0.15 más por intento (MiniMax canta mal la marca ~1 de cada 3).",
-  "notas_produccion": "Historia en una frase: un trafficker logra resultados pero las cuentas grandes no lo llaman porque quien tiene presupuesto no lo ve en redes; en Feria Effix esas empresas están de frente decidiendo con quién pautan. Los tres 'de traje' son el hilo: aparecen en 4, 5, 9 y 12. Crochet: mundo diorama B&N estricto (marca), TEO única fuente de color; poses simples, sin dedos; verbatim positivo/negativo/cierre I2V. Cantado, sin voz en off. CTA botón, sin URL. 'Eres trafficker' es callout de oficio."
+  "notas_produccion": "Historia en una frase: un trafficker logra resultados pero las cuentas grandes no lo llaman porque quien tiene presupuesto no lo ve en redes; en Feria Effix esas empresas están de frente decidiendo con quién pautan. Los tres 'de traje' son el hilo: aparecen en 4, 5, 9 y 12. Crochet: mundo diorama B&N estricto (marca), TEO única fuente de color; poses simples, sin dedos; verbatim positivo/negativo/cierre I2V. Cantado, sin voz en off. CTA botón, sin URL. 'Eres trafficker' es callout de oficio.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-06",
+      "pedido_por": "Alexander",
+      "motivo": "MiniMax se come la L de \"re-SUL-ta-dos\" y canta algo como \"resurodios\". Fallo confirmado de oido por Alexander en dos canciones y tres intentos, incluido uno con coma para separar la sinalefa. Se cambia la palabra en vez de seguir negociando la grafia. El overlay de esa linea ya decia \"aprende de quien ya vende\", asi que el audio ahora dice lo mismo que la pantalla.",
+      "cambio": "\"de los que ya tienen resultados\" -> \"de los que ya están vendiendo\"",
+      "costo_usd": 0.246
+    },
+    {
+      "fecha": "2026-09-06",
+      "pedido_por": "Alexander",
+      "motivo": "Palabras que MiniMax no sabe cantar. \"resultados\" salio \"jesuitos\" y \"resurodios\"; \"trafficker\" salio \"trafico, me encas\"; \"ecommerce\" salio \"Kecoxie\". Se cambia la palabra, no la grafia: son letras publicitarias y siempre hay sinonimo. La lista vive en audio_extra.PALABRAS_QUE_NO_CANTA y ahora la valida el productor gratis, antes de pagar la cancion.",
+      "cambios": [
+        "\"Eres trafficker, manejas pauta y logras resultados\" -> \"Vives de la pauta, manejas campañas y te va bien\"",
+        "\"Publicas tus resultados, y no pasa nada\" -> \"Publicas tus números, y no pasa nada\""
+      ],
+      "costo_usd": 0.116
+    }
+  ],
+  "aprobado_por": "Alexander",
+  "aprobado_el": "2026-09-06"
 }

@@ -678,3 +678,74 @@ salto de linea ya separa. Vive en `_SEPARADORES`.
 
 ⚠️ Los ads entregados antes de hoy **no se re-montaron**: la regla del repo es
 que las mejoras aplican de aqui en adelante.
+
+---
+
+## Tanda 2 · Ad #1: agencias de contenido, estilo skeleton (2026-09-06)
+
+**Entregable:** `assets/renders/agencias-contenido-musical-skeleton.mp4` — 54.08s,
+25 planos, -14.1 LUFS, -1.9 dBTP. **El primer ad del proyecto que pasa las cinco
+comprobaciones del QA**, duracion incluida.
+
+Costo real **6.352** contra 4.646 estimado. El desvio (+1.71) es casi todo el
+precio de encontrar el modelo de cancion correcto, y no se repite: los ads que
+siguen arrancan con esa decision tomada.
+
+### La cancion: seis intentos, tres modelos
+
+| # | Modelo | Resultado |
+|---|---|---|
+| 1-2 | MiniMax 2.6 | marca deformada ("Veria fix", "Feia FX") |
+| 3 | MiniMax 2.6 | marca OK con la tilde, pero "resultados" -> "resurodios" |
+| 4 | MiniMax 2.6 | **pista degenerada**: "eh eh eh" 58s, sin letra |
+| 5 | ElevenLabs Music | diccion excelente pero **sin acompanamiento**: es voz cantada, no musica. Lo detecto Alexander de oido |
+| 6 | **MiniMax Music 3** | ✅ letra verbatim, con arreglos, 54s, 0.116 USD |
+
+**MiniMax Music 3 es el modelo de aqui en adelante.** Es la version nueva de la
+2.6 con la que empezo el proyecto y trae las dos cosas que faltaban: campo
+`duration` —encargar los segundos que caben en el formato en vez de aceptar lo
+que salga— y `guidance_scale`. Cuesta 0.002 por segundo: 0.116 el ad, contra
+0.15 de la 2.6 y 0.58 de ElevenLabs.
+
+Suno no esta disponible y no lo va a estar: `SUNO_API_KEY` vacia, y **fal no lo
+tiene en catalogo**. Los campos `suno_*` del formato son herencia de cuando el
+brief se pegaba a mano en suno.com.
+
+### Tres arreglos que valen para los diez guiones restantes
+
+1. **`guidance_scale` 2.2 -> 1.8.** Lo habia subido para apretar la diccion y fue
+   lo que degenero una cancion en "de-de-de-de" durante 58s. Guidance alto atasca
+   al modelo en una silaba: es el modo de fallo clasico de la difusion sobreguiada.
+2. **Palabras que el modelo no sabe cantar**, en
+   `audio_extra.PALABRAS_QUE_NO_CANTA` y validadas por la regla 7 del productor:
+   `resultados` (salio "resurodios", "bra rosados", "jesuitos" — cinco fallos en
+   cuatro pistas), `trafficker` ("trafico, me encas"), `ecommerce` ("Kecoxie",
+   "Conte Day"), `dropshipping`. **Aparecen en 13 de los 14 guiones musicales.**
+   La comprobacion es gratis y corre antes de pagar la cancion. La salida no es
+   pelear con la grafia sino cambiar la palabra: son letras publicitarias.
+3. **Limitador con margen de codec** en `mezcla.py`. El QA marcaba clipping y
+   hubo dos pistas falsas antes de aislarlo:
+   - `alimiter` recibe amplitud **lineal** (0.0625 a 1), no dB. Escribirle
+     "-1.5dB" no da error: ffmpeg lo descarta en silencio y no limita nada.
+   - Corregido eso, el WAV salia a -1.4997 pero el **AAC a 192k subia a -0.38**:
+     1.1 dB de overshoot intersample que el codec inventa al reconstruir. Ahora
+     se limita `MARGEN_CODEC` (1.5 dB) por debajo, para que cumpla el archivo
+     entregado y no solo la senal antes de codificar.
+
+### Lo que si funciono a la primera
+
+- La **tilde de "Feria Éffix"** rompe la sinalefa que fundia la "a" de Feria con
+  la "E" de Effix. Alexander confirmo de oido que asi suena bien. La grafia solo
+  se aplica a lo que se canta; el JSON conserva "Feria Effix", que es lo que se
+  lee y con lo que whisper alinea.
+- La **heroe de un personaje solo** (fondo neutro, veto explicito de gente y
+  escenario). El primer intento salio con seis humanos alrededor del esqueleto
+  porque el prompt generico decia "all the characters side by side".
+- Las 12 escenas y los 12 clips salieron **sin un solo fallo**: el esqueleto se
+  mantiene identico en los doce y ninguno invento un humano, que fue el problema
+  del ad de abogados.
+
+⚠️ **Whisper no es juez de pronunciacion sobre musica.** Transcribio mal frases
+que estaban bien cantadas ("proxy play antes" por "el proximo cliente") y bien
+frases que estaban mal. Sirve para alinear tiempos, no para decidir si algo suena
+bien: eso lo decide el oido de Alexander.

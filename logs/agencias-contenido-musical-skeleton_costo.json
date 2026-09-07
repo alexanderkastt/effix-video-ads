@@ -1,0 +1,47 @@
+{
+  "job": "agencias-contenido-musical-skeleton",
+  "fecha": "2026-09-06",
+  "tanda": 2,
+  "orden": 1,
+  "guion": "scripts/guiones/effix_skeleton_agencias-contenido-musical_20260904_aprobado.json",
+  "estimado_usd": 4.646,
+  "real_usd": 6.352,
+  "desvio_usd": 1.706,
+  "por_concepto": {
+    "cancion": {
+      "llamadas": 6,
+      "usd": 1.296
+    },
+    "whisper": {
+      "llamadas": 6,
+      "usd": 0.576
+    },
+    "hero": {
+      "llamadas": 2,
+      "usd": 0.16
+    },
+    "escena": {
+      "llamadas": 12,
+      "usd": 0.96
+    },
+    "clip": {
+      "llamadas": 12,
+      "usd": 3.36
+    }
+  },
+  "causas_del_desvio": [
+    "5 canciones tiradas entre 3 modelos (MiniMax 2.6 x4, ElevenLabs x1) antes de dar con MiniMax Music 3: 1.30 USD. Este ad pago el aprendizaje de toda la tanda.",
+    "Heroe fallida: el prompt generico decia \"all the characters side by side\" y con un solo personaje el modelo lleno la fila con seis humanos. 0.08 USD."
+  ],
+  "render": "assets/renders/agencias-contenido-musical-skeleton.mp4",
+  "qa": {
+    "duracion_s": 54.08,
+    "lufs": -14.1,
+    "true_peak": -1.9,
+    "planos": 25,
+    "plano_min_s": 1.75,
+    "plano_max_s": 2.38,
+    "promedio_s": 2.16,
+    "veredicto": "las 5 comprobaciones en verde"
+  }
+}

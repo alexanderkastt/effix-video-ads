@@ -79,6 +79,8 @@ def estimar(
     # Modo `musical_sync`: la pista no es una cama de librería sino una canción
     # cantada que se paga por pieza. Cuando viene, manda sobre `con_musica`.
     modelo_cancion: str | None = None,
+    # Sólo para modelos que cobran por minuto.
+    duracion_cancion_ms: int | None = None,
     # Gastos sueltos que no encajan en ninguna de las cuatro columnas: hoy la
     # transcripción con whisper, que cuesta centavos pero no es cero.
     costo_extras: float = 0.0,
@@ -103,8 +105,18 @@ def estimar(
     costo_video = segundos * precio_video_s
     costo_voz = (caracteres_voz / 1000) * precio_voz_1k
     if modelo_cancion:
-        costo_musica = tarifas.get("fal_ai_por_unidad", {}).get(
-            f"{modelo_cancion}__por_cancion", 0.0)
+        unidad = tarifas.get("fal_ai_por_unidad", {})
+        # Dos formas de cobrar una canción: por pieza (MiniMax) o por minuto
+        # (ElevenLabs Music, que a cambio acepta duración objetivo).
+        ms = duracion_cancion_ms or 58000
+        por_minuto = unidad.get(f"{modelo_cancion}__por_minuto")
+        por_segundo = unidad.get(f"{modelo_cancion}__por_segundo")
+        if por_minuto is not None:
+            costo_musica = por_minuto * ms / 60000
+        elif por_segundo is not None:
+            costo_musica = por_segundo * ms / 1000
+        else:
+            costo_musica = unidad.get(f"{modelo_cancion}__por_cancion", 0.0)
     else:
         costo_musica = precio_cancion if con_musica else 0.0
     costo_imagenes = n_imagenes * precio_imagen
