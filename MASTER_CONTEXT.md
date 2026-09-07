@@ -325,3 +325,45 @@ Todo vive en `skills-video-ads/`. No crear subproyectos aparte.
   dentro del rango de 30–60s en vez de aceptar lo que salga. ElevenLabs Music
   (0.60/min) tiene mejor dicción pero **devuelve la voz sin acompañamiento**:
   sirve para medir, no como pista de un ad musical.
+- **2026-09-07 — Hay dos formas de cortar una canción y sólo una se ve.** La
+  obvia es el recorte de duración. La otra es el **fade de salida**: estaba
+  clavado a tres segundos del final del archivo sin mirar la letra, y en dos ads
+  apagó el último verso entero — el CTA — durante casi dos segundos. Alexander lo
+  describió como "me cortas las ideas", y tenía razón dos veces seguidas mientras
+  yo daba por arreglado sólo el primer corte. `cadena_master()` recibe ahora
+  `fin_voz_s` medido con whisper y el desvanecido no puede empezar antes.
+- **2026-09-07 — `duration` es un tope, no una orden.** Pedirle a Music 3
+  exactamente 58s devuelve una canción cortada en el segundo 58. Pidiéndole 68
+  para un ad de ~58, el modelo cierra la canción él solo — y en el ad de crochet
+  hasta repitió el estribillo por su cuenta, que es lo que hace un jingle
+  comercial. El video se estira para cubrir lo que dure.
+- **2026-09-07 — El género de la música no lo decide el estilo visual.** Los
+  guiones traían `suno_style_tags` elegidos para acompañar la imagen: ukulele
+  acústico para el crochet, orquesta con pizzicato para el Pixar. Suena a demo de
+  librería, no a ad. Alexander: "la música del ad 2 es muy maluca". La música de
+  un ad no acompaña al estilo visual — acompaña al feed donde compite.
+- **2026-09-07 — El prompt de música va como Structured Caption.** Music 3 lo
+  pide en su documentación y se le estaba mandando una lista de tags sueltos.
+  Con género, BPM, detalle vocal y arreglo sección por sección aparecen adornos
+  vocales que antes no había. Nombrar el patrón rítmico concreto (dembow, o
+  four-on-the-floor) funciona mejor que nombrar el género a secas.
+- **2026-09-07 — Seedance 1.5 Pro sustituye a Kling.** A 1080p cuesta 0.29 el
+  clip de 5s contra 0.28 de Kling 2.1 standard, y a cambio da frame final
+  (`end_image_url`), duraciones de 4 a 12s y 1080p nativo en 9:16. Con el frame
+  final, el clip que cierra una línea encadena con la escena de la siguiente y
+  la transición entre ideas deja de ser un corte seco. Cobra por tokens:
+  `(alto × ancho × fps × segundos) / 1024`, 1.2 USD el millón.
+- **2026-09-07 — El clip dejó de ser "una línea".** Atar la unidad de pago a la
+  unidad de guion obligaba a estirar los clips cortos y a reencuadrar los largos
+  hasta ver el mismo material tres veces. Ahora es una rejilla de clips de 4s
+  sobre la canción (`src/plan_musical.py`): una línea larga recibe material
+  nuevo, una corta comparte el suyo con la vecina.
+- **2026-09-07 — Un catálogo de assets no se recuerda, se documenta.** Los ads
+  Pixar llevan tres protagonistas inventados (CÓDIGO el libro, CALCU la
+  calculadora, NUBE) mientras en `referencias/personajes/familia/` hay diez
+  character sheets de la familia de marca: LEX para abogados, CIFRA para
+  contadores, CARRI para ecommerce, CLAP para contenido, MATRA para
+  laboratorios, VANI para logística, BIT para IA, EFFI para la marca. Los
+  guiones los ignoran porque sus fichas describen personajes nuevos. Apuntar el
+  guion a una hoja existente ahorra 0.08 USD y, sobre todo, da el mismo
+  personaje en todos los creativos de un nicho.

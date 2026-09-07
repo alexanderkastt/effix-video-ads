@@ -63,6 +63,11 @@ def contra_presupuesto(total: float) -> dict[str, Any]:
             "exceso": round(max(0.0, total - objetivo), 2), "aviso": aviso}
 
 
+# Alto x ancho reales de cada resolucion en 9:16, para el cobro por tokens.
+_RESOLUCIONES_TOKENS = {"480p": (480, 854), "720p": (720, 1280),
+                        "1080p": (1080, 1920)}
+
+
 def estimar(
     n_clips: int,
     duracion_clip_s: int,
@@ -84,6 +89,10 @@ def estimar(
     # Gastos sueltos que no encajan en ninguna de las cuatro columnas: hoy la
     # transcripción con whisper, que cuesta centavos pero no es cero.
     costo_extras: float = 0.0,
+    # Modelos que cobran por tokens de video (Seedance) y no por segundo: el
+    # precio depende de la resolucion y los fps, no solo de la duracion.
+    resolucion: str = "1080p",
+    fps: int = 24,
 ) -> dict[str, Any]:
     """Devuelve el desglose de costo estimado, si es confiable y si cabe en el
     presupuesto.
@@ -102,7 +111,18 @@ def estimar(
         f"{modelo_imagen}__por_imagen", 0.0)
 
     segundos = n_clips * duracion_clip_s
-    costo_video = segundos * precio_video_s
+    # Seedance y compania cobran por tokens: (alto x ancho x fps x seg) / 1024,
+    # pagados por millon. Si se buscara solo la tarifa por segundo el video
+    # saldria en cero y el presupuesto entero quedaria mal medido.
+    por_millon = tarifas.get("fal_ai_por_unidad", {}).get(
+        f"{modelo_fal}__por_millon_tokens")
+    if por_millon is not None:
+        alto, ancho = _RESOLUCIONES_TOKENS.get(
+            resolucion, _RESOLUCIONES_TOKENS["1080p"])
+        tokens = (alto * ancho * fps * segundos) / 1024
+        costo_video = tokens / 1_000_000 * por_millon
+    else:
+        costo_video = segundos * precio_video_s
     costo_voz = (caracteres_voz / 1000) * precio_voz_1k
     if modelo_cancion:
         unidad = tarifas.get("fal_ai_por_unidad", {})

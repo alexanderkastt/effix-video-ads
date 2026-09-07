@@ -321,7 +321,8 @@ def validar(g: dict[str, Any]) -> Resultado:
 
 
 def estimar_costo(g: dict[str, Any], *, modelo_video: str, modelo_imagen: str,
-                  costo_extras: float = 0.0) -> dict[str, Any]:
+                  costo_extras: float = 0.0, resolucion: str = "1080p",
+                  fps: int = 24) -> dict[str, Any]:
     """Costo con los parámetros REALES del guion, no con los de ejemplo.
 
     Cuenta lo que de verdad se va a pagar: los clips a su duración final, la
@@ -348,4 +349,6 @@ def estimar_costo(g: dict[str, Any], *, modelo_video: str, modelo_imagen: str,
         modelo_cancion=(g.get("musica") or {}).get("modelo") if musical else None,
         duracion_cancion_ms=(g.get("musica") or {}).get("duracion_ms"),
         costo_extras=costo_extras,
+        resolucion=resolucion,
+        fps=fps,
     )

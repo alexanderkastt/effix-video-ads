@@ -48,8 +48,14 @@ from src.audio_extra import (MODELO_CANCION_11, MODELO_CANCION_MM3,
 from src.paths import AUDIO_DIR, CLIPS_DIR, LOGS_DIR, RENDERS_DIR, env, env_int
 from src.video_generator import _descargar, _url_de
 
+# Seedance 1.5 Pro: el modelo de video del proyecto desde el 2026-09-07. Acepta
+# frame final (continuidad entre planos), duraciones de 4 a 12s (nada de
+# redondear al tramo de 5 o 10 de Kling) y 1080p nativo en 9:16. Cobra por
+# tokens de video y no por segundo, asi que su costo se calcula aparte.
+SEEDANCE = "fal-ai/bytedance/seedance/v1.5/pro/image-to-video"
+
 # Modelos por defecto. El guion puede pisarlos con un bloque "modelos".
-MODELO_VIDEO = "fal-ai/kling-video/v2.1/standard/image-to-video"
+MODELO_VIDEO = SEEDANCE
 MODELO_IMG = "fal-ai/nano-banana-2"
 MODELO_EDIT = "fal-ai/nano-banana-2/edit"
 
@@ -62,11 +68,6 @@ _ACEPTA_KEYFRAME_FINAL = {
     "fal-ai/bytedance/seedance/v1.5/pro/image-to-video": "end_image_url",
 }
 
-# Seedance 1.5 Pro: el modelo de video del proyecto desde el 2026-09-07. Acepta
-# frame final (continuidad entre planos), duraciones de 4 a 12s (nada de
-# redondear al tramo de 5 o 10 de Kling) y 1080p nativo en 9:16. Cobra por
-# tokens de video y no por segundo, así que su costo se calcula aparte.
-SEEDANCE = "fal-ai/bytedance/seedance/v1.5/pro/image-to-video"
 RESOLUCIONES_TOKENS = {"480p": (480, 854), "720p": (720, 1280), "1080p": (1080, 1920)}
 
 
@@ -201,7 +202,7 @@ def fase_costo(ad: Ad) -> dict[str, Any]:
     extras = round(120 * _tarifa("fal-ai/whisper__por_segundo_de_computo"), 4)
     est = guion_aprobado.estimar_costo(
         ad.g, modelo_video=ad.modelo_video, modelo_imagen=ad.modelo_img,
-        costo_extras=extras,
+        costo_extras=extras, resolucion=ad.resolucion, fps=RENDER_FPS,
     )
     print(cost_estimator.formatear(est))
     print(f"   detalle: {len(ad.lineas)} clips × {ad.dur_clip}s "

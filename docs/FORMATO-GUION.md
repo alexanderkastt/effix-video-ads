@@ -127,6 +127,10 @@ planos) → anota costo real en `logs/` y `ESTADO.md`.
 |---|---|---|
 | `ventana_util_s: [desde, hasta]` | en una línea | Acota qué tramo del clip puede usar el montaje. Sirve cuando un clip sale bien los dos primeros segundos y se estropea después: recortarlo a su parte buena no cuesta nada, regenerarlo cuesta un clip. |
 | `modelos: {video, imagen, edit}` | raíz | Pisa los modelos por defecto. |
-| `duracion_clip_s` | raíz | Segundos por clip. Con Kling 2.1 standard sólo valen 5 y 10. |
+| `duracion_clip_s` | raíz | Segundos por clip. Con Seedance, de 4 a 12. **4 es el valor de casa**: más clips cortos dan más material real y mejor ritmo. |
+| `modelos.resolucion` | raíz | `480p`/`720p`/`1080p`. Por defecto 1080p. Cambia el costo: Seedance cobra por tokens y éstos escalan con el área. |
+| `musica.genero_prompt` · `ritmo_prompt` · `bpm_exacto` | raíz | Fijan el género y el tempo de la canción. Cuando están, mandan ellos; si no, se usa el default comercial (latin urban pop, +12 BPM). `bpm_exacto: true` respeta el BPM del guion tal cual. |
+| `musica.duracion_ms` | raíz | Tope de duración que se le pide al modelo, **no** la duración pedida. Se da con margen (68000 para un ad de ~58s) para que la canción cierre sola en vez de cortarse. |
+| `nicho_mapa` + `publico` | raíz | Alternativa a `nicho`: la serie de parrilla numerada (P01–P28) identifica su público así, con un índice y una descripción en texto. |
 | `correcciones[]` · `prompts_previos` | raíz / línea | Qué se cambió después de aprobar, quién lo pidió y qué costó. |
 | `costo_real_usd` · `duracion_real_s` · `render` | raíz | Los llena el productor al cerrar. |

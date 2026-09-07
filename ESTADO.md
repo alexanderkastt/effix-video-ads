@@ -839,3 +839,51 @@ que **regrabar voz**, no solo cambiar overlays. Es más barato preguntar ahora.
 2. Pasar los 28 al formato JSON de `docs/FORMATO-GUION.md` si se quieren producir con
    `scripts/producir.py` en vez de a mano. El contenido ya está; es trabajo de estructura.
 3. Los ángulos .4 a .10 (224 guiones) salen con el mismo molde cuando se apruebe este lote.
+
+---
+
+## Tanda 2 y el primer ad con Seedance (2026-09-07)
+
+Cuatro ads entregados, todos con el logo de Feria Effix y la canción sin cortar.
+
+| Ad | Estilo | Duración | Costo | Video |
+|---|---|---|---|---|
+| agencias-contenido | skeleton | 54.08s | 6.35 | Kling |
+| agencias-pauta | crochet | 68.08s | 6.89 | Kling |
+| contadores | pixar | 68.08s | 5.33 | Kling |
+| **p01 "Quiero vender y no sé por dónde"** | pixar (NUBE) | 68.08s | **5.47** | **Seedance** |
+
+QA en verde en los cuatro salvo la duración, que es consecuencia directa de no
+cortar la canción — decisión de Alexander, no un descuido.
+
+### Lo que cambió en el pipeline
+
+- **Seedance 1.5 Pro** sustituye a Kling 2.1 standard. Frame final, duraciones
+  de 4 a 12s y 1080p nativo por 0.01 USD más el clip.
+- **`src/plan_musical.py`**: el clip deja de ser "una línea" y pasa a ser un
+  hueco de una rejilla de 4s sobre la canción. El clip que cierra una línea
+  encadena con la escena de la siguiente; los intermedios van sueltos.
+- **La canción va entera**, y el fade recibe `fin_voz_s` para no apagar el
+  último verso. Dos ads lo tenían y no se veía en ninguna métrica.
+- **Logo de marca** en tres momentos deducidos del guion, uno de ellos
+  sincronizado con la palabra cantada.
+- **`src/descargas.py`**: reintentos y URL anotada antes de bajar. Nació de una
+  caída de internet que tiró cinco clips ya pagados.
+- La validación acepta la serie de parrilla numerada (`nicho_mapa` + `publico`).
+
+### Pendientes
+
+1. **La familia de personajes no se está usando.** `referencias/personajes/familia/`
+   tiene diez character sheets (LEX abogados, CIFRA contadores, CARRI ecommerce,
+   CLAP contenido, MATRA laboratorios, VANI logística, BIT ia, EFFI marca,
+   CONTE, PANEL) y los guiones Pixar inventan protagonistas nuevos porque sus
+   fichas los describen así. Falta decidir qué personaje va con cada público y
+   apuntar los guiones a la hoja: ahorra 0.08 USD por ad y da consistencia
+   entre creativos del mismo nicho.
+2. **Las letras de los 14 guiones musicales de la primera serie no son
+   cantables**: métrica de 7 a 23 sílabas, sin rima, estribillo una sola vez.
+   Los P01–P28 sí lo son (rima consonante, métrica pareja, estribillo x2) y se
+   nota al oírlos. Reescribir las primeras está propuesto y sin aprobar.
+3. Los 28 guiones de la parrilla numerada quedaron versionados hoy, en siete
+   estilos. Ninguno producido salvo P01 y P02.
+4. La fase de voz del modo `locucion` sigue sin portar.

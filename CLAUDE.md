@@ -10,7 +10,8 @@ están en `MASTER_CONTEXT.md` (reglas y costos) y `ESTADO.md` (bitácora de deci
 ## 1. Qué es este proyecto
 
 Fábrica semi-automática de ads de video en 9:16 (30–60s) para Reels/TikTok, producidos
-con modelos de IA (Kling vía fal.ai, ElevenLabs para voz, stable-audio para música,
+con modelos de IA (Seedance 1.5 Pro vía fal.ai para video, MiniMax Music 3 para
+la canción cantada, ElevenLabs para voz, stable-audio para música de librería,
 ffmpeg para montaje). Cliente actual: **Feria Effix 2026** (Medellín, Plaza Mayor,
 15–19 oct). El objetivo comercial de cada ad es **vender boletería**, no "dar a conocer
 el evento". Marcas propias que también se producen aquí: @alexemprendee, @militougc,
@@ -57,8 +58,11 @@ Los dos en verde antes y después de tocar `src/`.
    escenografía, brief de música y storyboard y **para**. La producción real solo arranca
    con `--producir` sobre un guion aprobado, o con los scripts `_producir_*.py` fase por
    fase (`hero · escenas · clips · montaje`), nunca `todo` sin que Alexander lo pida.
-4. **Kling cobra tramos de 5 o 10s.** Un clip de 6s sin keyframe final se factura como
-   10s. Un keyframe (0.08 USD) casi siempre ahorra más de lo que cuesta.
+4. **Cada modelo cobra distinto y hay que saber cómo.** Seedance cobra por
+   tokens — `(alto × ancho × fps × segundos) / 1024`, a 1.2 USD el millón: un
+   clip de 4s a 1080p son 0.2333. MiniMax Music 3 cobra por segundo de canción
+   (0.002). Kling cobraba tramos cerrados de 5 o 10s, y por eso se abandonó:
+   un clip de 6s se facturaba como 10.
 5. **Los planos extra no cuestan video.** Para dar ritmo se reencuadra el mismo clip
    (`src/ritmo.py`), no se generan clips nuevos.
 6. **La música es de librería** (`assets/audio/soundtracks/<mood>.mp3`, indexada en
@@ -168,12 +172,38 @@ el 2026-09-06 y quedaron los dos en verde.
 
 ---
 
+## 5b. Modelos en producción (2026-09-07)
+
+| Para | Modelo | Cuánto cuesta | Por qué ése |
+|---|---|---|---|
+| Video | `fal-ai/bytedance/seedance/v1.5/pro/image-to-video` | 0.2333 el clip de 4s a 1080p | Acepta frame final, duraciones de 4 a 12s y 1080p nativo en 9:16. Kling sólo vendía tramos de 5/10s y no aceptaba `end_image_url`. |
+| Canción cantada | `minimax/music-3` | 0.002 el segundo | Canta la letra verbatim y acepta `duration`, que es lo único que permite encargar un ad de una duración concreta. |
+| Imágenes | `fal-ai/nano-banana-2` y `/edit` | 0.08 c/u | La héroe se genera con el primero; las escenas se editan desde ella con el segundo. |
+| Transcripción | `fal-ai/whisper` | centavos | Alinea la letra con la canción. **No sirve para juzgar pronunciación** sobre música: eso lo decide el oído de Alexander. |
+
+Descartados con motivo: **ElevenLabs Music** (0.60/min) canta mejor pero
+devuelve la voz **sin acompañamiento**; **Seedance 2.0/2.5** cuesta 1.21 por
+clip porque incluye audio nativo que aquí no se usa; **Suno** no está en fal y
+su clave está vacía — los campos `suno_*` del formato son herencia de cuando el
+brief se pegaba a mano en la web.
+
 ## 6. Reglas de audio
 
 Tres capas siempre: **textura** (SFX/ambiente dentro del prompt de video), **voz en off**
 (ElevenLabs) y **música** (librería). El video generado nunca aporta voz.
 
 - Todo prompt de video cierra el bloque de audio con `no discernible speech`.
+- **La canción va ENTERA.** Ni se recorta la intro, ni se corta el final, ni se
+  apaga mientras todavía se canta: si falta imagen, se estira el video. El fade
+  de salida recibe `fin_voz_s` y no puede empezar antes de la última palabra —
+  estaba clavado a 3s del final y en dos ads apagó el CTA. Y `duration` se le
+  pide al modelo con margen, porque es un tope: con aire, la canción cierra
+  sola en vez de cortarse.
+- **Hay palabras que el modelo no sabe cantar** (`resultados`, `trafficker`,
+  `ecommerce`, `dropshipping`): viven en `audio_extra.PALABRAS_QUE_NO_CANTA` y
+  la regla 7 del productor las avisa gratis, antes de pagar. Cuando el modelo
+  no sabe decir una palabra, se cambia la palabra. Cuando sí sabe pero une mal
+  (la sinalefa de "Feria Effix"), se corrige la grafía: "Feria Éffix".
 - Voz **siempre latina**. Los catálogos mienten sobre el origen: probar con una frase
   corta antes de comprometer un ad. Voz paisa de Alexander ("Cristian Sanchez") vive en su
   cuenta de ElevenLabs. `eleven_turbo_v2_5` cuesta la mitad que `eleven_v3`.
@@ -229,8 +259,10 @@ Tres capas siempre: **textura** (SFX/ambiente dentro del prompt de video), **voz
 - Sin texto en imagen: `plain solid black panels with bold white abstract geometric
   shapes only, absolutely no letters, no words, no writing anywhere`. "No legible text"
   produce texto inventado igual.
-- Keyframes encadenados (end del clip N = start del N+1) dan continuidad total. En
-  Kling 2.5 el `end` keyframe está prohibido a 720p: ir a 1080p.
+- Keyframes encadenados (end del clip N = start del N+1) dan continuidad total.
+  Seedance 1.5 Pro los acepta con `end_image_url`, y `src/plan_musical.py` los
+  reparte solo: el clip que CIERRA una línea encadena con la escena de la
+  siguiente; los intermedios van sueltos, que es donde se quiere movimiento.
 - Character sheet obligatoria antes de los clips.
 
 ---
