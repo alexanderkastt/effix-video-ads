@@ -1058,3 +1058,61 @@ El precio de esa regla es la duración: el P02 pasó de 64.08s (cortado en seco,
    intro y deshizo el final.
 4. La marca sigue sonando «FX» en todas las canciones.
 
+---
+
+## 2026-09-07 · Ad P03 v2 crochet «De diez a cien»
+
+**Entregado:** `assets/renders/P03_effix_crochet_ecommerce-en-crecimiento_de-diez-a-cien_20260907.mp4`
+84.12s · 42 planos de 2.00s · −14.9 LUFS · true peak −4.1 dBTP · **6.5593 USD**
+(estimado 4.0634; **Alexander aceptó pasar el tope de 6** cuando se vio el desvío,
+antes de gastar en clips).
+
+### Por qué costó 2.5 más de lo estimado
+
+La estimación asumía la canción de 52s del guion → 12 clips. La canción salió de
+**84.1s** y el reparto pidió **21**: 4.90 USD de video en vez de 2.80. La cadena
+fue: a 100 BPM la letra ocupaba el 96% del tope, salió una pista de 90s que cantó
+sólo hasta el 66 y se saltó el coro, el puente y el CTA; a 112 BPM cantó todo,
+pero en 84s. **Estimar con la duración del guion es estimar con un número que la
+canción todavía no ha confirmado** — el costo real de un musical no se sabe hasta
+después de la canción.
+
+### Cuatro correcciones antes de gastar
+
+1. **El cierre I2V de crochet no estaba en ninguno de los 12 `prompt_video`** —
+   iban con el cierre genérico del lote. CLAUDE.md §8 lo exige verbatim, y sin él
+   Seedance suaviza la lana hacia CGI a mitad de clip. El positivo y el negativo
+   sí estaban verbatim.
+2. **L1, L10 y L12 pedían dedos y manos**, que `reglas_criticas` del template
+   prohíbe: el modelo no los renderiza en lana.
+3. **L9 y L10 volvían al mercado** (`hundreds of stands`, `at a fair stand`).
+4. **L12 dibujaba el botón falso** en imagen y en video. Era el único v2 del lote
+   sin esa corrección aplicada.
+
+### Escena 4 regenerada (0.08)
+
+Salió en plano general en vez del primer plano de la pila —rompía el mismo
+encuadre que exige la aparición agravada— y con glifos legibles en los paneles
+tejidos. Con el encuadre fijado a altura de mesa y el veto de letras reforzado
+salió bien. **Las tres apariciones se reconocen como el mismo sitio**: diez cajas
+ordenadas → las mismas diez con una reventada y el reloj en otra hora → la mesa
+desbordada.
+
+### Lo que no se corrigió, y por qué
+
+**La escena 12 no hace el gesto de señalar**: LEO sale de frente con los brazos
+caídos. No se regeneró a propósito — el template de crochet desaconseja las poses
+de brazo, así que insistir era tirar 0.08 con poca probabilidad. Lo que importaba
+de la corrección sí está (no hay botón falso) y el montaje pone las flechas
+animadas hacia abajo durante los 6s del CTA.
+
+### Abierto
+
+1. **84.12s**, muy por encima del rango 30–60. Es el precio de no cortar la
+   canción, y ya van tres ads seguidos (P02 79.6, P03 84.1).
+2. **L11 dura 1.20s** en la alineación: la línea del remate («ya perdí la cuenta»)
+   casi no tiene tiempo propio, mientras L1 se lleva 17.3s y L10 15.5s. El techo
+   de clips por línea en `plan_musical.repartir_clips()` sigue pendiente.
+3. El v1 (`effix_crochet_p03-diez-a-cien-musical_20260904_*`) volvió a
+   `por-aprobar`: se había quedado marcado `aprobado` por error y nunca se produjo.
+

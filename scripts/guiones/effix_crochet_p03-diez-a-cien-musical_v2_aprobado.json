@@ -1,0 +1,324 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "aprobado",
+  "job_id": "p03-diez-a-cien-musical-crochet-v2",
+  "titulo": "De diez a cien",
+  "marca": "effix",
+  "publico": "Empresarios de e-commerce en crecimiento",
+  "nicho_mapa": 3,
+  "angulo": "3.1",
+  "angulo_nombre": "Pasar de 10 a 100 pedidos diarios",
+  "temperatura": "calientes",
+  "estilo": "crochet",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "formato_cancion": "F7 · JINGLE-LOOP — «diez, diez, diez» vuelve como cuña de radio entre versos cortos; la tercera vez la cuña se rompe y la cuenta se pierde hacia arriba.",
+  "version_lote": "angulo1-v2",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 52,
+  "microsituacion": {
+    "momento": "Empacas diez pedidos al día, todos los días, y sabes que podrían ser cien.",
+    "sintoma": "Cada vez que intentas crecer, algo se rompe: la pauta, el proveedor, el despacho.",
+    "reaccion_interna": "Piensas que ya estás en tu techo.",
+    "explicacion_fallida": "Te dices que para crecer hay que arriesgar mucho.",
+    "patron": "Pero las tiendas que ya despachan cien no arriesgaron: copiaron un sistema.",
+    "causa_raiz": "No te faltan ganas. Te falta ver el sistema de los que ya pasaron de diez a cien.",
+    "mecanismo": "En Feria Effix están los dueños que ya lo hicieron, las agencias que escalan y la logística que despacha cien al día."
+  },
+  "microsituacion_apariciones": {
+    "cruda": "Línea 1 — la pila de exactamente diez cajas (en imagen).",
+    "agravada": "Línea 4 — la misma pila otro día, con una caja reventada al lado (en imagen, mismo encuadre).",
+    "resuelta": "Línea 11 — la misma mesa desbordada de cajas (en imagen, mismo encuadre).",
+    "en_imagen": 3
+  },
+  "dolor_frase": "me quedé en diez",
+  "dolor_menciones_en_letra": 3,
+  "bible": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour.",
+  "negative_prompt": "realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+  "personajes": {
+    "diez-a-cien": {
+      "ficha": "LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta).",
+      "voz": null,
+      "quien_es": "LEO, amigurumi del dueño de una tienda que ya vende y quiere pasar de diez a cien pedidos diarios. Único con color.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Cumbia pop",
+    "suno_title": "Feria Effix — De diez a cien",
+    "suno_custom_lyrics": "[Cuña]\nDiez, diez, diez... y otra vez diez\n\n[Verso]\nEmpaco diez pedidos y podrían ser cien\nCada vez que intento crecer se me rompe algo\n\n[Cuña]\nDiez, diez, diez... y otra vez diez\n\n[Verso]\nMe digo que crecer es arriesgar de más\nY el que despacha cien no arriesgó: copió un sistema\nNo me falta valor, me falta ver el sistema\n\n[Coro]\nFeria Effix, del quince al diecinueve\nPlaza Mayor, Medellín, la cosa se mueve\nMás de trescientas cincuenta empresas y la logística\nDe los que ya despachan cien en un día\n\n[Cuña rota]\nDiez, veinte, cincuenta... ya perdí la cuenta\n\n[Cierre]\nCompra tu ingreso, dale clic, y a crecer",
+    "suno_style_tags": [
+      "cumbia pop",
+      "accordion and guacharaca",
+      "short chanted radio-jingle hook repeated between short verses",
+      "warm and cozy",
+      "soft female vocal",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 112,
+    "volumen_relativo": 1.0,
+    "modelo": "minimax/music-3",
+    "bpm_exacto": true,
+    "duracion_ms": 64000,
+    "genero_prompt": "warm cumbia pop with a chanted jingle hook, festive and hummable",
+    "ritmo_prompt": "accordion and guacharaca, walking bass, light congas, the counting hook chanted over the groove",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. «Feria Effix» va con tilde en la letra: sin ella el modelo la canta «FX». Letra corta a propósito — el 2026-09-07 una letra con dos coros completos se quedó sin tiempo y nunca cantó el outro, que es el CTA. Si no rima al oído o canta mal la marca, regenerar (0,15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Diez, diez, diez... y otra vez diez",
+      "texto_tts": "",
+      "texto_pantalla": "Diez pedidos. Todos los días.",
+      "plano": "Primer plano de la pila de diez cajas tejidas sobre la mesa. CRUDA: este encuadre vuelve tres veces.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. tight close-up on a stack of parcels: a stack of exactly ten small knitted parcels on a greyscale crocheted worktable, LEO's mustard sleeve at the edge of frame, an empty space beside the stack where more parcels could go. LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 LEO lowers the tenth knitted parcel onto the stack with one simple arm movement and stops, his arm resting at his side. Camera: locked off. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_video": "@Image1 LEO's hand sets the tenth knitted parcel on the stack and stops, fingers resting on it. Camera: locked off. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech."
+      }
+    },
+    {
+      "n": 2,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Empaco diez pedidos y podrían ser cien",
+      "texto_tts": "",
+      "texto_pantalla": "",
+      "plano": "Plano general del taller tejido: LEO solo, único con color, con espacio de sobra alrededor.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. wide establishing shot of the knitted stockroom: a greyscale knitted stockroom, LEO the only coloured figure, shelves half empty, a knitted clock on the wall, the ten parcels tiny in the middle of a big table. LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 LEO looks around the empty shelves and back at the small stack. Camera: steady push-in. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_video": "@Image1 LEO looks around the empty shelves and back at the small stack. Camera: steady push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech."
+      }
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Cada vez que intento crecer se me rompe algo",
+      "texto_tts": "",
+      "texto_pantalla": "Algo siempre se rompe",
+      "plano": "Plano detalle: el hilo de una caja se revienta y la torre se ladea.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. macro detail of yarn and parcels: extreme detail of a woollen thread snapping on a taller stack of knitted parcels, the tower leaning, loose yarn hanging down over grey stitched wood. LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the thread snaps and the leaning tower slides, parcels tumbling out of frame. Camera: handheld drift. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_video": "@Image1 the thread snaps and the leaning tower slides, parcels tumbling out of frame. Camera: handheld drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech."
+      }
+    },
+    {
+      "n": 4,
+      "beat": "DEFECTO",
+      "quien": "CANCION",
+      "texto": "Diez, diez, diez... y otra vez diez",
+      "texto_tts": "",
+      "texto_pantalla": "",
+      "plano": "Mismo primer plano de la pila: siguen siendo diez y al lado hay una caja rota. AGRAVADA.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. extreme tight close-up on the stack of parcels, camera at table height, exactly the same framing and distance as the first shot, only the tabletop and the stack in frame, no full figure and no room visible: the same ten knitted parcels in the same framing, but now a burst parcel and loose yarn lie beside them and the knitted clock behind shows another day, the light greyer. LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere, and no shapes that resemble letters or numbers on any panel, box or label.",
+      "prompt_video": "@Image1 dust settles over the same ten parcels while the broken one sits untouched beside them. Camera: locked off, tiny drift. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_video": "@Image1 dust settles over the same ten parcels while the broken one sits untouched beside them. Camera: locked off, tiny drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+        "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. tight close-up on the stack of parcels, matching the first framing: the same ten knitted parcels in the same framing, but now a burst parcel and loose yarn lie beside them and the knitted clock behind shows another day, the light greyer. LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
+    },
+    {
+      "n": 5,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Me digo que crecer es arriesgar de más",
+      "texto_tts": "",
+      "texto_pantalla": "«Crecer es arriesgar»",
+      "plano": "Plano medio corto: LEO aprieta un ovillo de lana contra el pecho sin soltarlo.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. medium close-up: LEO holding a ball of coloured yarn tight against his chest in the greyscale stockroom, shoulders drawn in, grey shelves behind him. LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he hugs the yarn ball closer and glances at the door, not moving. Camera: static, shallow depth of field. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_video": "@Image1 he hugs the yarn ball closer and glances at the door, not moving. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech."
+      }
+    },
+    {
+      "n": 6,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Y el que despacha cien no arriesgó: copió un sistema",
+      "texto_tts": "",
+      "texto_pantalla": "Copiaron un sistema",
+      "plano": "Plano lateral: otro taller gris con una cadena de cajas que sale sola hacia la puerta.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. side profile of a second knitted workshop: a second greyscale knitted workshop seen from the side, a long orderly chain of parcels moving along a stitched conveyor toward the door, calm workers keeping the line moving. LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 parcels glide along the stitched conveyor in a steady line and out through the door. Camera: lateral dolly. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_video": "@Image1 parcels glide along the stitched conveyor in a steady line and out through the door. Camera: lateral dolly. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech."
+      }
+    },
+    {
+      "n": 7,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "No me falta valor, me falta ver el sistema",
+      "texto_tts": "",
+      "texto_pantalla": "Falta ver el sistema",
+      "plano": "Primerísimo plano de los ojos bordados de LEO reflejando la cadena de cajas.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. extreme close-up on his stitched face: extreme close-up of LEO's crocheted face with simple stitched dot eyes, the moving chain of parcels reflected as coloured yarn light on his cheek. LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 his eyes widen as the reflected line of parcels crosses his face. Camera: steady push-in. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_video": "@Image1 his eyes widen as the reflected line of parcels crosses his face. Camera: steady push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech."
+      }
+    },
+    {
+      "n": 8,
+      "beat": "FECHAS",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / Plaza Mayor, Medellín, la cosa se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "Plano general: LEO entra al pabellón tejido entre la multitud gris.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. wide tracking shot: LEO walking into a huge knitted convention hall, a crowd of greyscale crocheted visitors around him, banners as plain solid black knitted panels with white abstract shapes. LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he walks in with the grey crowd, his mustard polo the only colour moving through it. Camera: tracking alongside. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_video": "@Image1 he walks in with the grey crowd, his mustard polo the only colour moving through it. Camera: tracking alongside. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech."
+      }
+    },
+    {
+      "n": 9,
+      "beat": "PRUEBA",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas y la logística",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas",
+      "plano": "Picado sobre el pabellón tejido: hileras de stands corporativos en gris.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. high-angle wide: high angle over an enormous knitted modern convention hall: long carpeted knitted aisles between rows of sleek greyscale crocheted exhibition booths with backlit display walls, a dense knitted crowd of business visitors wearing knitted lanyards; this is a technology, marketing and ecommerce trade show, not a street market: no market stalls, no produce, no food, no fabric awnings, no tents, no wooden crates; LEO a small spot of colour in the aisle. LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the camera descends toward him as the grey crowd streams past on both sides. Camera: crane down. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. high-angle wide: high angle over an enormous knitted fair pavilion, hundreds of greyscale crocheted stands and a dense knitted crowd, LEO a small spot of colour in the aisle. LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+        "plano": "Picado sobre el pabellón tejido lleno de stands.",
+        "prompt_video": "@Image1 the camera descends toward him as the grey crowd streams past on both sides. Camera: crane down. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech."
+      }
+    },
+    {
+      "n": 10,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "De los que ya despachan cien en un día",
+      "texto_tts": "",
+      "texto_pantalla": "Los que despachan cien",
+      "plano": "Plano medio en un stand corporativo del pabellón: le muestran cómo mueven cien cajas al día.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. medium two-shot at an exhibition booth: at a sleek greyscale knitted trade-show booth with a backlit display wall and a clean counter, on the carpeted aisle of a technology and ecommerce convention (not a street market stall: no produce, no food, no fabric awning, no wooden crates), a greyscale exhibitor shows LEO a working miniature of a packing line, a hundred tiny parcels moving through it in a loop, LEO's hands on the counter. LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the miniature line runs its loop of parcels while LEO leans in and follows it with his eyes. Camera: handheld arc. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_video": "@Image1 the miniature line runs its loop of parcels while LEO leans in and follows it with his finger. Camera: handheld arc. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+        "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. medium two-shot at a fair stand: at a knitted fair stand a greyscale exhibitor shows LEO a working miniature of a packing line, a hundred tiny parcels moving through it in a loop, LEO's hands on the counter. LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+        "plano": "Plano medio en un stand: le muestran cómo mueven cien cajas al día."
+      }
+    },
+    {
+      "n": 11,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Diez, veinte, cincuenta... ya perdí la cuenta",
+      "texto_tts": "",
+      "texto_pantalla": "Ya perdí la cuenta",
+      "plano": "Mismo primer plano: la mesa desbordada de cajas, ya no caben en el encuadre. RESUELTA.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. tight close-up on the stack of parcels, matching the earlier framings: the same worktable framing, now overflowing with knitted parcels stacked past the top of the frame, the broken one gone, warm light on the mustard yarn. LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 more parcels keep landing on the pile until they push past the edges of the frame. Camera: locked off, tiny push-in. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_video": "@Image1 more parcels keep landing on the pile until they push past the edges of the frame. Camera: locked off, tiny push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech."
+      }
+    },
+    {
+      "n": 12,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Compra tu ingreso, dale clic, y a crecer",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "LEO de frente en el pasillo del pabellón, señalando hacia el borde inferior del cuadro: el botón real va debajo del video.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. medium shot facing camera: LEO facing camera in the knitted pavilion aisle one arm fully extended straight downward, unmistakably pointing at the bottom edge of the frame, the whole arm visible against his body, head tilted down following his own gesture, inviting the viewer to look below the video of him, blurred greyscale exhibition booths behind. LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he holds the downward point toward the bottom edge of the frame and nods to camera, his mustard yarn warm against the grey. Camera: static, shallow depth of field. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. medium shot facing camera: LEO facing camera in the knitted pavilion aisle pressing a large rounded crocheted button floating in front of him, blurred greyscale stands behind. LEO: a crocheted amigurumi figure of a man in his thirties, mustard knitted polo, teal knitted cap, simple stitched dot eyes, only his colours are saturated (mustard, teal, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+        "prompt_video": "@Image1 he presses the knitted button with both hands and it lights up in colour. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+        "plano": "LEO de frente en el pasillo del pabellón, presionando un botón grande de lana."
+      }
+    }
+  ],
+  "musica_mood": "emotivo",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [],
+  "costo_estimado_usd": 4.0634,
+  "costo_desglose": "Lo calcula el productor con cost_estimator y parámetros reales (Seedance 1.5 Pro 1080p, clips de 4 s, nano-banana-2).",
+  "nombre_entrega": "P03_effix_crochet_ecommerce-en-crecimiento_de-diez-a-cien_20260907.mp4",
+  "nota_entrega": "Nombre del mp4 final, ya numerado por publico de la parrilla: P<NN>_effix_<estilo>_<publico>_<micro-situacion>_<AAAAMMDD>.mp4. El numero va delante para que los 28 queden en orden en la carpeta. Este campo manda sobre guion_aprobado.nombre_de_entrega(): si la funcion no antepone el numero, hay que ajustarla en el mismo commit (CLAUDE.md: una regla sin default en el codigo no existe).",
+  "notas_produccion": "Formato F7 jingle-loop, igual que el público 02 pero con otra arquitectura: doce planos en vez de once, el estribillo de marca entra en la línea 8 (en el 02 entra en la 7) y la cuña es de tres golpes contados en vez de tres palabras. La micro-situación es la pila de diez cajas: mismo encuadre en las líneas 1, 4 y 11. Universal positivo/negativo y cierre I2V verbatim del template crochet; mundo B&N estricto, solo LEO con color; poses simples. Héroe primero. Cantado, sin voz en off. Ojo: el JSON v1 (effix_crochet_p03-diez-a-cien-musical_20260904_aprobado.json) quedó en estado aprobado y puede estar en producción con el molde viejo — si ya salió el mp4, decidir cuál se pauta antes de gastar en éste.",
+  "aprobado_por": "Alexander",
+  "aprobado_el": "2026-09-07",
+  "modelos": {
+    "video": "fal-ai/bytedance/seedance/v1.5/pro/image-to-video",
+    "resolucion": "1080p",
+    "imagen": "fal-ai/nano-banana-2",
+    "edit": "fal-ai/nano-banana-2/edit"
+  },
+  "duracion_clip_s": 4,
+  "nota_video": "Seedance 1.5 Pro a 1080p, clips de 4 s encadenados. Frame final en los clips que cierran una línea; sin frame final en los intermedios. Decisión de Alexander el 2026-09-07.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "quien": "Alexander",
+      "que": "Lote .1 v2: la micro-situación se toca tres veces con función distinta (cruda, agravada, resuelta) y cada público usa un formato de canción propio. El v1 tenía los 28 con la misma estructura y se leían como el mismo video.",
+      "costo_usd": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "quien": "Claude Code",
+      "que": "Cuatro correcciones antes de gastar. (1) El cierre I2V de crochet no estaba en ninguno de los 12 prompt_video —iban con el cierre genérico del lote— y CLAUDE.md §8 lo exige verbatim: sin él Seedance suaviza la lana hacia CGI a mitad de clip. (2) L1, L10 y L12 pedían dedos y manos, que el template de crochet prohíbe porque el modelo no los renderiza en lana. (3) L9 y L10 volvían a 'hundreds of stands' / 'at a fair stand', la frase que costó 0.36 USD en contadores. (4) L12 dibujaba el botón falso en imagen y en video, contra la corrección del 2026-09-07: el botón real va debajo del video, en Meta.",
+      "costo_usd": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "quien": "Claude Code",
+      "que": "BPM 100 -> 112, cumbia pop y letra intactas. A 100 la letra ocupaba el 96% del tope: la canción salió de 90s, cantó sólo hasta el 66 dejando 23.7s de instrumental muerto, y se saltó el coro, el puente y el CTA. Subir el tempo es lo que arregló el P02 (96->108).",
+      "costo_usd": 0.128
+    },
+    {
+      "fecha": "2026-09-07",
+      "quien": "Claude Code",
+      "pedido_por": "Alexander",
+      "que": "Escena 4 regenerada: salió en plano general en vez del primer plano de la pila —rompía el mismo encuadre que exige la aparición agravada— y con glifos legibles en los paneles tejidos. Encuadre fijado a altura de mesa y veto de letras reforzado.",
+      "costo_usd": 0.08
+    }
+  ],
+  "costo_real_usd": 6.5593,
+  "duracion_real_s": 84.12,
+  "render": "assets/renders/P03_effix_crochet_ecommerce-en-crecimiento_de-diez-a-cien_20260907.mp4"
+}
