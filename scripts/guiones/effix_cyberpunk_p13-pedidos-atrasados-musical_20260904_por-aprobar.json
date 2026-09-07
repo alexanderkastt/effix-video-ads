@@ -185,9 +185,12 @@
       "texto_tts": "",
       "texto_pantalla": "Compra tu ingreso: clic en el botón",
       "plano": "RUTA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind.",
-      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, medium close-up facing camera. RUTA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. RUTA: a young woman courier in a reflective jacket with neon trim, helmet under one arm, a delivery scanner on her wrist, riding a compact electric bike. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, medium close-up facing camera. RUTA facing camera in the pavilion aisle pointing down toward the bottom edge of the frame with one hand, inviting the viewer to look below the video, confident, bokeh stands behind. RUTA: a young woman courier in a reflective jacket with neon trim, helmet under one arm, a delivery scanner on her wrist, riding a compact electric bike. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 RUTA looks at camera, presses the floating button, it pulses, nods. Camera: locked. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, medium close-up facing camera. RUTA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. RUTA: a young woman courier in a reflective jacket with neon trim, helmet under one arm, a delivery scanner on her wrist, riding a compact electric bike. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
     },
     {
       "n": 12,
@@ -222,5 +225,12 @@
   ],
   "costo_estimado_usd": 4.55,
   "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
-  "notas_produccion": "Cyberpunk reggaetón oscuro. B2B logística. Dolor «llegó tarde» 3 veces. Sin voz en off."
+  "notas_produccion": "Cyberpunk reggaetón oscuro. B2B logística. Dolor «llegó tarde» 3 veces. Sin voz en off.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "motivo": "El CTA dibujaba un boton dentro del cuadro. El boton real esta DEBAJO del video, en el placement de Meta: uno falso compite con el de verdad y manda a tocar un pixel muerto. Ahora el personaje senala hacia el borde inferior, y el montaje anade flechas animadas hacia abajo durante el CTA."
+    }
+  ]
 }

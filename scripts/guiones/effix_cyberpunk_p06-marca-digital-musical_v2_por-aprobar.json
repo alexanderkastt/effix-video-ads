@@ -210,9 +210,12 @@
       "texto_tts": "",
       "texto_pantalla": "Compra tu ingreso: clic en el botón",
       "plano": "DON RAMÓN de frente en el pasillo del pabellón, presionando un botón grande que flota.",
-      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. medium shot facing camera: DON RAMON facing camera in the neon pavilion aisle pressing a large glowing rounded button shape floating in front of him, blurred stands behind. DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. medium shot facing camera: DON RAMON facing camera in the neon pavilion aisle pointing down toward the bottom edge of the frame with one hand, inviting the viewer to look below the video of him, blurred stands behind. DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 he presses the floating button and it lights up, straightening his tie. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. medium shot facing camera: DON RAMON facing camera in the neon pavilion aisle pressing a large glowing rounded button shape floating in front of him, blurred stands behind. DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
     }
   ],
   "musica_mood": "tenso",
@@ -252,6 +255,11 @@
       "quien": "Alexander",
       "que": "Lote .1 v2: la micro-situación se toca tres veces con función distinta (cruda, agravada, resuelta) y cada público usa un formato de canción propio. El v1 tenía los 28 con la misma estructura y se leían como el mismo video.",
       "costo_usd": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "motivo": "El CTA dibujaba un boton dentro del cuadro. El boton real esta DEBAJO del video, en el placement de Meta: uno falso compite con el de verdad y manda a tocar un pixel muerto. Ahora el personaje senala hacia el borde inferior, y el montaje anade flechas animadas hacia abajo durante el CTA."
     }
   ]
 }

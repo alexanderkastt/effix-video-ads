@@ -185,9 +185,12 @@
       "texto_tts": "",
       "texto_pantalla": "Compra tu ingreso: clic en el botón",
       "plano": "ROSA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind.",
-      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium close-up facing camera. ROSA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium close-up facing camera. ROSA facing camera in the pavilion aisle pointing down toward the bottom edge of the frame with one hand, inviting the viewer to look below the video, confident, bokeh stands behind. ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 ROSA looks at camera, presses the floating button, it pulses, nods. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium close-up facing camera. ROSA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
     },
     {
       "n": 12,
@@ -222,5 +225,12 @@
   ],
   "costo_estimado_usd": 4.55,
   "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
-  "notas_produccion": "Claymation merengue. Continuidad de ROSA (personaje 2D de 'La acera') en plastilina. Dolor «no entró nadie» 3 veces."
+  "notas_produccion": "Claymation merengue. Continuidad de ROSA (personaje 2D de 'La acera') en plastilina. Dolor «no entró nadie» 3 veces.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "motivo": "El CTA dibujaba un boton dentro del cuadro. El boton real esta DEBAJO del video, en el placement de Meta: uno falso compite con el de verdad y manda a tocar un pixel muerto. Ahora el personaje senala hacia el borde inferior, y el montaje anade flechas animadas hacia abajo durante el CTA."
+    }
+  ]
 }

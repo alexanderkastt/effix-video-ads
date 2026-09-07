@@ -198,9 +198,12 @@
       "texto_tts": "",
       "texto_pantalla": "Compra tu ingreso: clic en el botón",
       "plano": "CTA · Compra tu ingreso dando clic en el botón",
-      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. CODIGO facing camera in the pavilion aisle, one page-arm pressing a large glowing rounded button shape floating in front of him, confident smile, bokeh stands behind. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. CODIGO facing camera in the pavilion aisle, one page-arm pointing down toward the bottom edge of the frame with one hand, inviting the viewer to look below the video of him, confident smile, bokeh stands behind. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 CODIGO looks at camera, presses the floating button, it pulses, he nods. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. CODIGO facing camera in the pavilion aisle, one page-arm pressing a large glowing rounded button shape floating in front of him, confident smile, bokeh stands behind. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
     },
     {
       "n": 12,
@@ -272,6 +275,11 @@
       "fecha": "2026-09-07",
       "pedido_por": "Alexander (regla de diccion)",
       "motivo": "Palabras que los modelos de canto deforman, listadas en audio_extra.PALABRAS_QUE_NO_CANTA. Mismas sustituciones que se aprobaron para los ads de abogados, crochet y contadores."
+    },
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "motivo": "El CTA dibujaba un boton dentro del cuadro. El boton real esta DEBAJO del video, en el placement de Meta: uno falso compite con el de verdad y manda a tocar un pixel muerto. Ahora el personaje senala hacia el borde inferior, y el montaje anade flechas animadas hacia abajo durante el CTA."
     }
   ],
   "costo_real_usd": 6.886,

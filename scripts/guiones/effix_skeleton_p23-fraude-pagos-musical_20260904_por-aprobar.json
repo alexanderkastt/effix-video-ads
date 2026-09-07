@@ -185,9 +185,12 @@
       "texto_tts": "",
       "texto_pantalla": "Compra tu ingreso: clic en el botón",
       "plano": "the skeleton facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands be",
-      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM security operations centre and trade-fair environment, warm amber and cold blue color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: medium close-up facing camera. the skeleton facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM security operations centre and trade-fair environment, warm amber and cold blue color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: medium close-up facing camera. the skeleton facing camera in the pavilion aisle pointing down toward the bottom edge of the frame with one hand, inviting the viewer to look below the video, confident, bokeh stands behind. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 the skeleton looks at camera, presses the floating button, it pulses, nods. Camera: locked. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM security operations centre and trade-fair environment, warm amber and cold blue color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: medium close-up facing camera. the skeleton facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
     },
     {
       "n": 12,
@@ -222,5 +225,12 @@
   ],
   "costo_estimado_usd": 4.55,
   "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
-  "notas_produccion": "Skeleton reggaetón. B2B seguridad. Dolor «era fraude» 3 veces."
+  "notas_produccion": "Skeleton reggaetón. B2B seguridad. Dolor «era fraude» 3 veces.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "motivo": "El CTA dibujaba un boton dentro del cuadro. El boton real esta DEBAJO del video, en el placement de Meta: uno falso compite con el de verdad y manda a tocar un pixel muerto. Ahora el personaje senala hacia el borde inferior, y el montaje anade flechas animadas hacia abajo durante el CTA."
+    }
+  ]
 }

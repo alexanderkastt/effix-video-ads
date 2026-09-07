@@ -210,9 +210,12 @@
       "texto_tts": "",
       "texto_pantalla": "Compra tu ingreso: clic en el botón",
       "plano": "MIA de frente en el pasillo del pabellón, presionando un botón grande que flota.",
-      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. medium shot facing camera: MIA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front of her, blurred stands and crowd behind. MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. medium shot facing camera: MIA facing camera in the pavilion aisle pointing down toward the bottom edge of the frame with one hand, inviting the viewer to look below the video of her, blurred stands and crowd behind. MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 she presses the floating button and it lights up, a confident half-smile. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. medium shot facing camera: MIA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front of her, blurred stands and crowd behind. MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
     }
   ],
   "musica_mood": "energetico",
@@ -252,6 +255,11 @@
       "quien": "Alexander",
       "que": "Lote .1 v2: la micro-situación se toca tres veces con función distinta (cruda, agravada, resuelta) y cada público usa un formato de canción propio. El v1 tenía los 28 con la misma estructura y se leían como el mismo video.",
       "costo_usd": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "motivo": "El CTA dibujaba un boton dentro del cuadro. El boton real esta DEBAJO del video, en el placement de Meta: uno falso compite con el de verdad y manda a tocar un pixel muerto. Ahora el personaje senala hacia el borde inferior, y el montaje anade flechas animadas hacia abajo durante el CTA."
     }
   ]
 }

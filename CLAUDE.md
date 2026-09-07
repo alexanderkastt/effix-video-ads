@@ -234,6 +234,13 @@ Tres capas siempre: **textura** (SFX/ambiente dentro del prompt de video), **voz
   y arreglarlo en post cuesta calidad. El ritmo se construye en el montaje.
 - Texto en pantalla siempre en post (Montserrat, `referencias/esteticas/fuentes/`), nunca
   pidiéndoselo al modelo.
+- **Nunca dibujar un botón dentro del cuadro.** El botón que el espectador tiene
+  que pulsar está DEBAJO del video, en el placement de Meta: uno falso dentro
+  compite con el de verdad y manda a tocar un pixel muerto. Durante el CTA el
+  montaje pone flechas animadas hacia el borde inferior
+  (`postproduccion.flechas_cta()`), y el personaje señala hacia abajo en vez de
+  pulsar nada. 36 guiones traían "pressing a large glowing rounded button" y se
+  corrigieron.
 - "Le falta dinámica" casi nunca es el guion: revisar primero planos por línea, speed de
   voz y música. Skill: `ritmo-y-montaje`.
 

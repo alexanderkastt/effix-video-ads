@@ -210,9 +210,12 @@
       "texto_tts": "",
       "texto_pantalla": "Compra tu ingreso: clic en el botón",
       "plano": "Esqueleto de frente en el pasillo del pabellón, presionando un botón grande que flota.",
-      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM home studio and trade-fair environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium shot facing camera: the skeleton facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front of him, blurred stands and crowd behind. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM home studio and trade-fair environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium shot facing camera: the skeleton facing camera in the pavilion aisle pointing down toward the bottom edge of the frame with one hand, inviting the viewer to look below the video of him, blurred stands and crowd behind. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 he presses the floating button and it lights up, standing tall. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM home studio and trade-fair environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium shot facing camera: the skeleton facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front of him, blurred stands and crowd behind. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
     }
   ],
   "musica_mood": "energetico",
@@ -252,6 +255,11 @@
       "quien": "Alexander",
       "que": "Lote .1 v2: la micro-situación se toca tres veces con función distinta (cruda, agravada, resuelta) y cada público usa un formato de canción propio. El v1 tenía los 28 con la misma estructura y se leían como el mismo video.",
       "costo_usd": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "motivo": "El CTA dibujaba un boton dentro del cuadro. El boton real esta DEBAJO del video, en el placement de Meta: uno falso compite con el de verdad y manda a tocar un pixel muerto. Ahora el personaje senala hacia el borde inferior, y el montaje anade flechas animadas hacia abajo durante el CTA."
     }
   ]
 }

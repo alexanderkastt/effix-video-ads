@@ -199,9 +199,12 @@
       "texto_tts": "",
       "texto_pantalla": "Compra tu ingreso: clic en el botón",
       "plano": "CTA · Compra tu ingreso dando clic en el botón",
-      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. CALCU facing camera in the pavilion aisle, one button-arm pressing a large glowing rounded button shape floating in front of him, visor straight, confident smile. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. CALCU facing camera in the pavilion aisle, one button-arm pointing down toward the bottom edge of the frame with one hand, inviting the viewer to look below the video of him, visor straight, confident smile. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 CALCU looks at camera, presses the floating button, it pulses, he nods. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. CALCU facing camera in the pavilion aisle, one button-arm pressing a large glowing rounded button shape floating in front of him, visor straight, confident smile. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
     },
     {
       "n": 12,
@@ -264,6 +267,11 @@
         9
       ],
       "costo_usd": 0.72
+    },
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "motivo": "El CTA dibujaba un boton dentro del cuadro. El boton real esta DEBAJO del video, en el placement de Meta: uno falso compite con el de verdad y manda a tocar un pixel muerto. Ahora el personaje senala hacia el borde inferior, y el montaje anade flechas animadas hacia abajo durante el CTA."
     }
   ],
   "aprobado_por": "Alexander",

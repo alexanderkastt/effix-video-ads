@@ -185,9 +185,12 @@
       "texto_tts": "",
       "texto_pantalla": "Compra tu ingreso: clic en el botón",
       "plano": "ENCHUFE facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind.",
-      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. ENCHUFE facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. ENCHUFE facing camera in the pavilion aisle pointing down toward the bottom edge of the frame with one hand, inviting the viewer to look below the video, confident, bokeh stands behind. ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 ENCHUFE looks at camera, presses the floating button, it pulses, nods. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. ENCHUFE facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
     },
     {
       "n": 12,
@@ -222,5 +225,12 @@
   ],
   "costo_estimado_usd": 4.55,
   "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
-  "notas_produccion": "Pixar latin pop, objeto antropomórfico (conector). Dolor «no se hablan» 3 veces."
+  "notas_produccion": "Pixar latin pop, objeto antropomórfico (conector). Dolor «no se hablan» 3 veces.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "motivo": "El CTA dibujaba un boton dentro del cuadro. El boton real esta DEBAJO del video, en el placement de Meta: uno falso compite con el de verdad y manda a tocar un pixel muerto. Ahora el personaje senala hacia el borde inferior, y el montaje anade flechas animadas hacia abajo durante el CTA."
+    }
+  ]
 }

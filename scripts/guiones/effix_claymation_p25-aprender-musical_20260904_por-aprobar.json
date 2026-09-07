@@ -187,9 +187,12 @@
       "texto_tts": "",
       "texto_pantalla": "Compra tu ingreso: clic en el botón",
       "plano": "LUCÍA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind.",
-      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium close-up facing camera. LUCÍA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium close-up facing camera. LUCÍA facing camera in the pavilion aisle pointing down toward the bottom edge of the frame with one hand, inviting the viewer to look below the video, confident, bokeh stands behind. LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 LUCÍA looks at camera, presses the floating button, it pulses, nods. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium close-up facing camera. LUCÍA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
     },
     {
       "n": 12,
@@ -230,6 +233,11 @@
       "fecha": "2026-09-07",
       "pedido_por": "Alexander (regla de diccion)",
       "motivo": "Palabras que los modelos de canto deforman, listadas en audio_extra.PALABRAS_QUE_NO_CANTA. Mismas sustituciones que se aprobaron para los ads de abogados, crochet y contadores."
+    },
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "motivo": "El CTA dibujaba un boton dentro del cuadro. El boton real esta DEBAJO del video, en el placement de Meta: uno falso compite con el de verdad y manda a tocar un pixel muerto. Ahora el personaje senala hacia el borde inferior, y el montaje anade flechas animadas hacia abajo durante el CTA."
     }
   ]
 }

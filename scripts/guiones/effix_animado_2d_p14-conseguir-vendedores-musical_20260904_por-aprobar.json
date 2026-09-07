@@ -185,9 +185,12 @@
       "texto_tts": "",
       "texto_pantalla": "Compra tu ingreso: clic en el botón",
       "plano": "DON JAIME facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behin",
-      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium close-up facing camera. DON JAIME facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium close-up facing camera. DON JAIME facing camera in the pavilion aisle pointing down toward the bottom edge of the frame with one hand, inviting the viewer to look below the video, confident, bokeh stands behind. DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 DON JAIME looks at camera, presses the floating button, it pulses, nods. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium close-up facing camera. DON JAIME facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
     },
     {
       "n": 12,
@@ -222,5 +225,12 @@
   ],
   "costo_estimado_usd": 4.55,
   "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
-  "notas_produccion": "Animado 2D salsa urbana. Bible flat 2D verbatim. B2B proveedor. Dolor «vendedores de a uno» 3 veces."
+  "notas_produccion": "Animado 2D salsa urbana. Bible flat 2D verbatim. B2B proveedor. Dolor «vendedores de a uno» 3 veces.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "motivo": "El CTA dibujaba un boton dentro del cuadro. El boton real esta DEBAJO del video, en el placement de Meta: uno falso compite con el de verdad y manda a tocar un pixel muerto. Ahora el personaje senala hacia el borde inferior, y el montaje anade flechas animadas hacia abajo durante el CTA."
+    }
+  ]
 }

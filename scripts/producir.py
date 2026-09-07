@@ -699,6 +699,39 @@ def _momentos_logo(ad: Ad, tramos: list[tuple[float, float]],
     return momentos
 
 
+def _tramos_cta(ad: Ad, tramos: list[tuple[float, float]]) -> list[tuple[float, float]]:
+    """Cuándo señalar hacia el botón del placement.
+
+    El botón que hay que pulsar no está en el video: está debajo, en el
+    placement de Meta. Durante el CTA se dibujan flechas hacia el borde
+    inferior en vez de un botón dentro del cuadro, que competiría con el de
+    verdad y mandaría a tocar un pixel muerto.
+    """
+    salida = []
+    for linea, (t0, t1) in zip(ad.lineas, tramos):
+        es_cta = str(linea.get("beat", "")).upper() == "CTA" or any(
+            p in str(linea.get("texto", "")).lower()
+            for p in ("clic en el botón", "clic en el boton", "compra tu")
+        )
+        if es_cta:
+            salida.append((round(t0, 2), round(t1, 2)))
+    if not salida:
+        return salida
+    # El CTA suele caer en la penúltima línea y durar un par de segundos. Las
+    # flechas, en cambio, tienen que seguir señalando hasta que el video acabe:
+    # el espectador decide tocar el botón al final, no a mitad de la frase.
+    fin = tramos[-1][1] if tramos else salida[-1][1]
+    salida[-1] = (salida[-1][0], round(fin, 2))
+    # Y se funden los tramos que se tocan, para que no parpadeen entre líneas.
+    unidos = [salida[0]]
+    for a, b in salida[1:]:
+        if a - unidos[-1][1] < 0.5:
+            unidos[-1] = (unidos[-1][0], b)
+        else:
+            unidos.append((a, b))
+    return unidos
+
+
 def fase_montaje(ad: Ad, destino: Path | None = None) -> Path:
     """Corta en los golpes, parte cada tramo en planos y masteriza a −14 LUFS.
 
@@ -789,21 +822,38 @@ def fase_montaje(ad: Ad, destino: Path | None = None) -> Path:
     # escala distinto y un input no se puede consumir dos veces.
     from src.postproduccion import filtros_logo, logo_marca
 
+    from src.postproduccion import filtros_flechas, flechas_cta
+
+    cta = _tramos_cta(ad, tramos)
+    if cta:
+        base_f = len(tareas) + 1
+        etiquetas_f = []
+        for k in range(len(cta)):
+            entradas += ["-loop", "1", "-i", str(flechas_cta())]
+            etiquetas_f.append(f"{base_f + k}:v")
+        filtros.append("[vid]null[vid_sub]")
+        filtros += filtros_flechas(cta, "vid_sub", "vid_fl", w=RENDER_W,
+                                   h=RENDER_H, entradas_flecha=etiquetas_f)
+        base_video = "vid_fl"
+        print("  flechas CTA: " + " · ".join(f"{a:.1f}-{b:.1f}s" for a, b in cta))
+    else:
+        base_video = "vid"
+
     momentos = _momentos_logo(ad, tramos, dur)
     if momentos:
-        indice = len(tareas) + 1
+        indice = len(tareas) + 1 + len(cta)
         etiquetas = []
         for k in range(len(momentos)):
             entradas += ["-loop", "1", "-i", str(logo_marca())]
             etiquetas.append(f"{indice + k}:v")
-        filtros.append("[vid]null[vid_txt]")
+        filtros.append(f"[{base_video}]null[vid_txt]")
         filtros += filtros_logo(momentos, "vid_txt", "vid_final",
                                 w=RENDER_W, h=RENDER_H, entradas_logo=etiquetas)
         mapa_video = "[vid_final]"
         print("  logo: " + " · ".join(
             f"{a:.1f}-{b:.1f}s {s}" for a, b, s in momentos))
     else:
-        mapa_video = "[vid]"
+        mapa_video = f"[{base_video}]"
 
     RENDERS_DIR.mkdir(parents=True, exist_ok=True)
     # El entregable se nombra por su contenido, no por el job_id: quien abre

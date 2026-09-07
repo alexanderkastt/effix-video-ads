@@ -202,6 +202,93 @@ def logo_marca() -> Path:
     return destino
 
 
+FLECHAS_ALTURA = 0.855   # por debajo del subtítulo, apuntando al borde inferior
+FLECHAS_ANCHO = 0.17     # fracción del ancho del video
+FLECHAS_CICLO_S = 1.1    # cada cuánto se repite la cascada
+
+
+def flechas_cta() -> Path:
+    """Tres chevrones apilados apuntando hacia abajo. Se cachea.
+
+    El botón que el espectador tiene que pulsar **no está dentro del video**:
+    está debajo, en el placement de Meta. Dibujar un botón en el cuadro compite
+    con el de verdad y manda al espectador a tocar un pixel que no hace nada.
+    Unas flechas hacia el borde inferior no compiten: señalan.
+
+    Mismo tratamiento que el logo y los subtítulos — blanco con sombra — para
+    que se lean sobre cualquier fondo.
+    """
+    from PIL import Image, ImageDraw, ImageFilter
+
+    destino = ROOT / "assets" / "marca" / "flechas_cta.png"
+    if destino.exists():
+        return destino
+
+    w, grosor, sep = 260, 34, 76
+    alto = sep * 2 + grosor * 2 + 40
+    capa = Image.new("RGBA", (w, alto), (0, 0, 0, 0))
+    dibujo = ImageDraw.Draw(capa)
+    for i in range(3):
+        y = 20 + i * sep
+        # Un chevrón es dos trazos en V, no un triángulo: pesa menos en pantalla
+        # y se lee como "sigue hacia abajo" en vez de como un botón de play.
+        dibujo.line([(30, y), (w // 2, y + grosor + 12)],
+                    fill=(255, 255, 255, 255), width=grosor, joint="curve")
+        dibujo.line([(w - 30, y), (w // 2, y + grosor + 12)],
+                    fill=(255, 255, 255, 255), width=grosor, joint="curve")
+
+    m = 26
+    lienzo = Image.new("RGBA", (w + m * 2, alto + m * 2), (0, 0, 0, 0))
+    sombra = Image.new("RGBA", lienzo.size, (0, 0, 0, 0))
+    sombra.paste(Image.new("RGBA", capa.size, (0, 0, 0, 200)),
+                 (m, m + 8), capa.getchannel("A"))
+    lienzo.alpha_composite(sombra.filter(ImageFilter.GaussianBlur(12)))
+    lienzo.alpha_composite(capa, (m, m))
+
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    lienzo.save(destino)
+    return destino
+
+
+def filtros_flechas(
+    tramos: list[tuple[float, float]],
+    entrada: str,
+    salida: str,
+    *,
+    w: int = 1080,
+    h: int = 1920,
+    entradas_flecha: list[str] | None = None,
+) -> list[str]:
+    """Flechas animadas hacia abajo durante el CTA.
+
+    Bajan y vuelven en bucle: el movimiento descendente es lo que lleva la
+    mirada al botón del placement. Quietas serían un adorno más.
+    """
+    filtros: list[str] = []
+    actual = entrada
+    ancho = int(w * FLECHAS_ANCHO)
+    for i, (t0, t1) in enumerate(tramos):
+        fuente = (entradas_flecha or [])[i] if entradas_flecha else f"F{i}"
+        entra = min(0.3, max((t1 - t0) * 0.2, 0.1))
+        filtros.append(
+            f"[{fuente}]scale={ancho}:-1,format=rgba,"
+            f"fade=t=in:st={t0:.2f}:d={entra:.2f}:alpha=1,"
+            f"fade=t=out:st={max(t1 - entra, t0):.2f}:d={entra:.2f}:alpha=1"
+            f"[fl{i}]"
+        )
+        # Rebote: baja `desplazamiento` px y vuelve, en ciclos.
+        desplazamiento = int(h * 0.014)
+        y = (f"{int(h * FLECHAS_ALTURA)}"
+             f"+{desplazamiento}*abs(sin(PI*(t-{t0:.2f})/{FLECHAS_CICLO_S}))")
+        siguiente = f"cf{i}" if i < len(tramos) - 1 else salida
+        filtros.append(
+            f"[{actual}][fl{i}]overlay=(W-w)/2:'{y}':"
+            f"enable='between(t,{t0:.2f},{t1:.2f})'[{siguiente}]"
+        )
+        actual = siguiente
+    return filtros
+
+
 def filtros_logo(
     momentos: list[tuple[float, float, str]],
     entrada: str,
