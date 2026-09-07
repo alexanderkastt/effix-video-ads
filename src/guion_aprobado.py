@@ -310,11 +310,139 @@ def _regla_7_diccion(g: dict[str, Any], r: Resultado) -> None:
                 f"{sintoma}. Cámbiala antes de pagar la canción.")
 
 
+# La micro-situación es el ad. Alexander, 2026-09-07: "siempre tenemos que tener
+# mínimo 3 veces las microsituaciones en cada video". No es decoración narrativa:
+# es lo que hace que el espectador se reconozca, y por eso se toca tres veces con
+# función distinta — cruda, agravada y resuelta — y las tres EN IMAGEN.
+MINIMO_APARICIONES = 3
+
+
+def _regla_8_microsituacion(g: dict[str, Any], r: Resultado) -> None:
+    """Las tres apariciones de la micro-situación, declaradas y ancladas."""
+    ap = g.get("microsituacion_apariciones")
+    if not ap:
+        r.errores.append(
+            f"8· falta `microsituacion_apariciones`: la micro-situación tiene que "
+            f"verse {MINIMO_APARICIONES} veces (cruda, agravada, resuelta) y el "
+            f"guion debe decir en qué línea cae cada una.")
+        return
+
+    en_imagen = int(ap.get("en_imagen") or 0)
+    if en_imagen < MINIMO_APARICIONES:
+        r.errores.append(
+            f"8· la micro-situación se ve {en_imagen}× y el mínimo es "
+            f"{MINIMO_APARICIONES}.")
+
+    # Cada aparición dice su línea ("Línea 4 — ..."): esa línea tiene que existir.
+    ns = {l.get("n") for l in g.get("lineas") or []}
+    for clave in ("cruda", "agravada", "resuelta"):
+        texto = str(ap.get(clave) or "")
+        if not texto:
+            r.errores.append(f"8· falta la aparición {clave!r} de la micro-situación.")
+            continue
+        m = re.search(r"[Ll][ií]nea\s+(\d+)", texto)
+        if not m:
+            r.avisos.append(
+                f"8· la aparición {clave!r} no dice en qué línea cae; sin eso el QA "
+                f"no puede comprobar que se vea.")
+        elif int(m.group(1)) not in ns:
+            r.errores.append(
+                f"8· la aparición {clave!r} apunta a la línea {m.group(1)}, que no "
+                f"existe en el guion.")
+
+
+# Beats donde vive el cierre del ad: la feria, las fechas y el CTA. Alexander,
+# 2026-09-07: "al final donde se habla de feria, fechas y cta que no sea igual en
+# todos". Ocho de ocho guiones cantaban el mismo pareado —"Feria Effix, del quince
+# al diecinueve / Plaza Mayor, Medellín, la cosa se mueve"— y cerraban con el mismo
+# "Compra tu ingreso, dale clic". El mensaje comercial es obligatorio; su redacción,
+# no.
+BEATS_DE_CIERRE = {"FECHAS", "CORO_FERIA", "CORO_LLEGADA", "PRUEBA",
+                   "PUENTE_CIFRAS", "CTA"}
+
+
+def _versos_de(letra: str) -> set[str]:
+    """Los versos cantables de una letra, normalizados para comparar."""
+    fuera = set()
+    for linea in str(letra).splitlines():
+        v = linea.strip()
+        if not v or v.startswith("["):
+            continue
+        fuera.add(re.sub(r"[^a-z0-9 ]", "", v.lower()).strip())
+    return fuera
+
+
+def _regla_9_cierre_repetido(g: dict[str, Any], r: Resultado) -> None:
+    """El bloque de feria/fechas/CTA no puede ser el mismo que el de otro ad.
+
+    Se compara contra las letras de los demás guiones del repo. Repetir el verso
+    de marca en los 28 hace que los 28 suenen al mismo video, que es justo lo que
+    el lote v2 vino a arreglar.
+    """
+    if g.get("modo") != "musical_sync":
+        return
+    from pathlib import Path
+
+    # Un ad ya entregado no se re-produce con reglas nuevas (CLAUDE.md §12): si
+    # se vuelve a montar, la regla avisa pero no bloquea.
+    entregado = bool(g.get("render") or g.get("costo_real_usd"))
+    anotar = r.avisos.append if entregado else r.errores.append
+
+    letra = str((g.get("musica") or {}).get("suno_custom_lyrics") or "")
+    if not letra:
+        return
+    mios = _versos_de(letra)
+    if not mios:
+        return
+
+    # Los versos que este guion canta en sus líneas de cierre.
+    de_cierre = set()
+    for l in g.get("lineas") or []:
+        if l.get("beat") in BEATS_DE_CIERRE:
+            for trozo in str(l.get("texto") or "").split(" / "):
+                de_cierre.add(re.sub(r"[^a-z0-9 ]", "", trozo.lower()).strip())
+    de_cierre &= mios
+
+    yo = str(g.get("job_id") or "")
+    ajenos: dict[str, set[str]] = {}
+    for ruta in sorted(Path("scripts/guiones").glob("*.json")):
+        try:
+            otro = json.loads(ruta.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if str(otro.get("job_id") or "") == yo:
+            continue
+        otra_letra = (otro.get("musica") or {}).get("suno_custom_lyrics")
+        if otra_letra:
+            ajenos[ruta.stem] = _versos_de(str(otra_letra))
+
+    for verso in sorted(de_cierre):
+        quien = [n for n, vs in ajenos.items() if verso in vs]
+        if quien:
+            anotar(
+                f"9· el cierre canta «{verso}», que ya está en {len(quien)} guion(es). "
+                f"La feria, las fechas y el CTA van en todos los ads; su redacción "
+                f"tiene que cambiar en cada uno.")
+
+    # Fuera del cierre, repetir es sólo un aviso: un estribillo de dolor propio
+    # puede repetirse a propósito dentro de la misma serie.
+    for verso in sorted(mios - de_cierre):
+        quien = [n for n, vs in ajenos.items() if verso in vs]
+        if len(quien) >= 2:
+            r.avisos.append(
+                f"9· «{verso}» aparece igual en {len(quien)} guiones más.")
+
+
 def validar(g: dict[str, Any]) -> Resultado:
-    """Las 6 reglas de docs/FORMATO-GUION.md, con evidencia línea a línea."""
+    """Las 6 reglas de docs/FORMATO-GUION.md, con evidencia línea a línea.
+
+    Más tres que no vienen del formato sino de plata perdida: la 7 (dicción), la
+    8 (tres micro-situaciones) y la 9 (el cierre no se repite entre ads).
+    """
     r = Resultado()
     for regla in (_regla_1, _regla_2, _regla_3, _regla_4, _regla_5, _regla_6,
-                  _regla_7_diccion):
+                  _regla_7_diccion, _regla_8_microsituacion,
+                  _regla_9_cierre_repetido):
         try:
             regla(g, r)
         except Exception as exc:  # una regla rota no puede tapar a las demás

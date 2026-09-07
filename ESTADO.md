@@ -1116,3 +1116,38 @@ animadas hacia abajo durante los 6s del CTA.
 3. El v1 (`effix_crochet_p03-diez-a-cien-musical_20260904_*`) volvió a
    `por-aprobar`: se había quedado marcado `aprobado` por error y nunca se produjo.
 
+---
+
+## 2026-09-07 · Dos reglas nuevas: tres micro-situaciones y cierre irrepetible
+
+Alexander, al ver el lote: «todos los guiones o lyrics están quedando con el mismo
+patrón». Medido sobre los ocho v2, tenía razón y era literal:
+
+- **8 de 8** cantaban los mismos dos versos: «Feria Effix, del quince al
+  diecinueve / Plaza Mayor, Medellín, la cosa se mueve» — y el pareado está
+  además en 35 guiones del repo contando el lote v1.
+- **8 de 8** cerraban con «Compra tu ingreso, dale clic…», cambiando sólo el
+  verbo final.
+
+Lo que sí cambió el v2 fue la arquitectura de secciones (cuña de radio, conteo,
+carta, dos voces, pregón, relato en tercera persona), y se nota: los dos que
+suenan distintos —P10 y P06— son los que además abren fuera del «yo me quejo».
+
+**Reglas 8 y 9 en `guion_aprobado.validar()`**, con su documentación en
+`CLAUDE.md` y `docs/FORMATO-GUION.md` en el mismo commit:
+
+- **8 · Tres micro-situaciones.** `microsituacion_apariciones` con cruda,
+  agravada y resuelta, `en_imagen >= 3`, y cada una anclada a una línea que
+  exista. Error si falta.
+- **9 · El cierre no se repite.** Los versos en beats de cierre (`FECHAS`,
+  `CORO_FERIA`, `CORO_LLEGADA`, `PRUEBA`, `PUENTE_CIFRAS`, `CTA`) se comparan con
+  los de todos los demás guiones. Si ya están cantados en otro, error. Fuera del
+  cierre, sólo aviso.
+
+Un ad ya entregado (con `render` o `costo_real_usd`) queda exento: avisa pero no
+bloquea, porque las reglas nuevas no se aplican hacia atrás (CLAUDE.md §12).
+
+**Efecto inmediato:** P01, P02, P03 y P04 siguen validando. **P06, P09, P10 y P12
+quedan bloqueados** con 3 errores cada uno hasta que se reescriba su bloque de
+cierre en Cowork. Es el efecto buscado.
+

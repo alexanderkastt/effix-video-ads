@@ -98,6 +98,16 @@ consuma y los `_producir_*.py` desechables dejen de hacer falta.
 7. Costo estimado con parámetros reales (duración por línea redondeada a tramos
    de 5/10 s salvo keyframe final, `n_imagenes` = líneas + keyframes). Si pasa
    6 USD, imprime el veredicto 🛑 y **para**.
+8. **La micro-situación se ve tres veces**: `microsituacion_apariciones` con
+   `cruda`, `agravada` y `resuelta`, `en_imagen >= 3`, y cada una diciendo en qué
+   línea cae — la línea tiene que existir. Sin las tres, el ad no se produce.
+9. **El cierre no se repite entre ads.** Los versos que caen en beats de cierre
+   (`FECHAS`, `CORO_FERIA`, `CORO_LLEGADA`, `PRUEBA`, `PUENTE_CIFRAS`, `CTA`) se
+   comparan con los de todos los demás guiones del repo: si alguno ya está
+   cantado en otro, es error. La feria, las fechas y el CTA van en los 28 ads;
+   su **redacción** tiene que cambiar en cada uno. Fuera del cierre, repetir sólo
+   avisa. Un ad ya entregado (con `render` o `costo_real_usd`) no se bloquea:
+   avisa, porque las reglas nuevas no se aplican hacia atrás.
 
 ## Flujo en Claude Code
 

@@ -166,6 +166,15 @@ el 2026-09-06 y quedaron los dos en verde.
   `validar_coherencia_de_pase()` lo verifica.
 - Sin descuentos ni códigos en los guiones actuales; sin mencionar el taller de IA
   (decisión de comunicación). El CTA cierra en compra: "Compra tu boleta/pasaporte…".
+- **La micro-situación se ve tres veces en cada video**, con función distinta:
+  cruda, agravada y resuelta, y las tres EN IMAGEN. Va declarada en
+  `microsituacion_apariciones` con la línea de cada una; la regla 8 del productor
+  se niega a producir sin ellas.
+- **El cierre —feria, fechas y CTA— no puede sonar igual en dos ads.** El mensaje
+  comercial es obligatorio en los 28; su redacción, no. Ocho de ocho guiones
+  cantaban el mismo pareado ("del quince al diecinueve / la cosa se mueve") y el
+  mismo "Compra tu ingreso, dale clic": la regla 9 lo bloquea comparando contra
+  todos los guiones del repo.
 - Texto en pantalla: máximo 7 palabras. El video tiene que funcionar sin sonido.
 - Español **neutro colombiano o paisa**, nunca voseo rioplatense. Kreoon MCP
   (`generate_script`) devuelve "sentís/convertite": revisar y adaptar siempre.
