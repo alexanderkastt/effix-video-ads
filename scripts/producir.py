@@ -43,6 +43,7 @@ import fal_client
 from src import cost_estimator, guion_aprobado, mezcla, ritmo, transcripcion
 from src.descargas import recuperar_pendientes
 from src.audio_extra import (INTRO_MAXIMA_S, MODELO_CANCION, MODELO_CANCION_11, MODELO_CANCION_MM3,
+                             cabe_la_letra,
                              componer_cancion, componer_cancion_elevenlabs,
                              componer_cancion_minimax3)
 from src.paths import AUDIO_DIR, CLIPS_DIR, LOGS_DIR, RENDERS_DIR, env, env_int
@@ -218,6 +219,55 @@ def fase_costo(ad: Ad) -> dict[str, Any]:
 
 # ───────────────────────────── canción ──────────────────────────────
 
+def _tope_de_cancion(musica: dict) -> int:
+    """Los milisegundos que se le piden al modelo para que NO corte la letra.
+
+    Regla de Alexander (2026-09-07): "no limites las canciones para que no se
+    corten nunca". El `duracion_ms` del guion se escribió a mano y no sabe
+    cuánta letra hay ni a qué tempo se canta; cuando se queda corto, el modelo
+    deja de cantar en seco y lo que se pierde es el CTA.
+
+    Como `duration` es un tope y no una orden —si la canción termina antes, se
+    cierra sola— pedir de más no alarga el ad ni encarece nada apreciable
+    (0.002 USD el segundo). Así que se pide lo que la letra necesita, con el
+    margen que el modelo gasta en intro, ad-libs y cierre, y nunca menos de lo
+    que pedía el guion.
+    """
+    v = cabe_la_letra(musica.get("suno_custom_lyrics", ""),
+                      musica.get("bpm_recomendado"), musica.get("duracion_ms"))
+    pedido = int(musica.get("duracion_ms") or 58000)
+    tope = max(pedido, v["tope_ms"])
+    if tope > pedido:
+        print(f"  tope de canción {pedido / 1000:.0f}s -> {tope / 1000:.0f}s: "
+              f"margen para que el modelo no tenga que cortar "
+              f"({v['palabras']} palabras a {v['bpm']} BPM piden "
+              f"~{v['necesita_s']:.0f}s, más intro, ad-libs y cierre). Pedir de "
+              f"más no alarga el ad: si la canción termina antes, se cierra sola.")
+    return tope
+
+
+def _avisar_si_no_cabe(musica: dict) -> None:
+    """Dice si la letra no va a caber, cuando todavía es gratis arreglarlo.
+
+    `duration` es un tope: el modelo compone hasta ahí y, si la letra no entra,
+    deja de cantar a mitad de frase — no acelera para que quepa. El P02 lo pagó
+    dos veces (0.256 USD) muriendo en la misma palabra, sin cuña final ni CTA.
+    """
+    v = cabe_la_letra(musica.get("suno_custom_lyrics", ""),
+                      musica.get("bpm_recomendado"), musica.get("duracion_ms"))
+    detalle = (f"{v['palabras']} palabras a {v['bpm']} BPM piden ~{v['necesita_s']}s "
+               f"y el tope es {v['tope_s']}s ({int(v['ocupacion'] * 100)}%)")
+    if v["cabe"]:
+        print(f"  letra: {detalle} ✅")
+        return
+    print(f"⚠️  LA LETRA NO CABE: {detalle}.")
+    print("   El modelo cantará hasta agotar el tope y se quedará sin final, "
+          "que es donde va el CTA. Antes de pagar, una de tres:")
+    print(f"   · subir bpm_recomendado a ~{v['bpm_sugerido']} (no toca el contenido)")
+    print("   · recortar la letra (decisión creativa, no del productor)")
+    print("   · subir duracion_ms y aceptar un ad más largo que el rango 30-60s")
+
+
 def fase_cancion(ad: Ad, *, forzar: bool = False) -> Path:
     """Compone la canción, la transcribe y la recorta al tramo cantado.
 
@@ -237,8 +287,9 @@ def fase_cancion(ad: Ad, *, forzar: bool = False) -> Path:
             # No se pisa el intento anterior: si el nuevo canta peor, se vuelve.
             previos = len(list(ad.audio_dir.glob("cancion_intento_*.mp3")))
             cruda.rename(ad.audio_dir / f"cancion_intento_{previos + 1:02d}.mp3")
-        inicio = time.monotonic()
         musica = ad.g["musica"]
+        _avisar_si_no_cabe(musica)
+        inicio = time.monotonic()
         # Los guiones de la parrilla vienen con MiniMax 2.6, que es el modelo
         # con el que empezó el proyecto: deforma la marca y no acepta
         # `duration`, así que el ad sale de la duración que le dé la gana (el
@@ -255,7 +306,7 @@ def fase_cancion(ad: Ad, *, forzar: bool = False) -> Path:
             # que la cancion termine su ultima frase y su cierre en vez de
             # cortarse en seco en el segundo pedido. El video se estira
             # despues para cubrir lo que dure.
-            seg = int((musica.get("duracion_ms") or 58000) / 1000)
+            seg = int(_tope_de_cancion(musica) / 1000)
             cruda = componer_cancion_minimax3(
                 musica, job_id=ad.job, destino=cruda, duracion_s=seg)
             ad.apuntar_gasto("cancion (music3)", seg,
@@ -265,7 +316,7 @@ def fase_cancion(ad: Ad, *, forzar: bool = False) -> Path:
             # que es el único camino que permite encargar un ad dentro del rango
             # de 30-60s en vez de aceptar lo que salga. Cuesta seis veces más
             # que MiniMax: se usa cuando la dicción no es negociable.
-            ms = int(musica.get("duracion_ms") or 58000)
+            ms = _tope_de_cancion(musica)
             cruda = componer_cancion_elevenlabs(
                 musica, job_id=ad.job, destino=cruda, duracion_ms=ms)
             ad.apuntar_gasto("cancion (11labs)", ms / 60000,
@@ -300,6 +351,26 @@ def fase_cancion(ad: Ad, *, forzar: bool = False) -> Path:
     print(f"\nLo que se oye cantar:\n  {t.get('text', '')}")
     print("\n👂 Escúchala antes de seguir. Revisa que cante 'Feria Effix' "
           "completo y que no se coma ninguna cifra.")
+    # La transcripción entera es difícil de comparar a ojo con la letra, y ahí
+    # se esconde el fallo caro: que la canción no llegara al final. Línea a
+    # línea no hay forma de no verlo.
+    cobertura = transcripcion.cobertura_de_lineas(
+        [l["texto"] for l in ad.lineas], t)
+    flojas = [(l["n"], l["beat"], c, l["texto"])
+              for l, c in zip(ad.lineas, cobertura) if c < 0.6]
+    if flojas:
+        print("\n⚠️  Líneas que la canción NO cantó (o casi):")
+        for n, beat, c, texto in flojas:
+            print(f"   L{n:02d} {beat:12} {int(c * 100):3d}%  {texto[:52]}")
+    cta = next((c for l, c in zip(ad.lineas, cobertura)
+                if l.get("beat") == "CTA"), None)
+    if cta is not None and cta < 0.6:
+        print(f"\n🛑 El CTA se cantó al {int(cta * 100)}%. Un ad sin CTA "
+              f"cantado no se entrega: regenera con --forzar, y mira el aviso "
+              f"de si la letra cabe antes de volver a pagar.")
+    else:
+        print("\n✅ La canción llegó al CTA.")
+
     return util
 
 

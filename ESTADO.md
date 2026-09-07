@@ -998,3 +998,63 @@ ads de la parrilla se revisan por público, no por estilo. Actualizados
 `CLAUDE.md` y `docs/FORMATO-GUION.md` en el mismo commit. Los dos tests de salud
 en verde después del cambio.
 
+---
+
+## 2026-09-07 · Tanda v2: P02 skeleton y P04 claymation
+
+| Ad | Duración | LUFS | Costo real | Render |
+|---|---|---|---|---|
+| P02 «La tienda que vende poquito» | 79.58s | −14.8 | 5.6228 | `P02_effix_skeleton_duenos-de-tiendas-online_...mp4` |
+| P04 «Mil mensajes en WhatsApp» | 63.29s | −15.3 | 5.1528 | `P04_effix_claymation_vendedores-de-redes-sociales_...mp4` |
+
+Los dos traían calcadas las cuatro correcciones ya aprobadas en el P01
+(`at a fair stand`, botón falso en el `prompt_video`, gesto de señalar corto,
+veto de logo). En el P04 la corrección del botón no se había aplicado ni a la
+imagen. Todas salieron a la primera: la escena 9 del P02 y la 9 del P04 son
+booths corporativos, no plaza de mercado.
+
+### Por qué se cortaban las canciones, y las dos guardas nuevas
+
+`musica.duracion_ms` **es un tope, no una duración pedida**: MiniMax compone
+hasta ahí y, si la letra no cabe, deja de cantar a mitad de frase. Como el CTA
+va al final, es lo primero que se pierde — y sólo se descubría después de pagar.
+Cinco canciones desperdiciadas en esta tanda antes de entenderlo.
+
+- `audio_extra.cabe_la_letra()` avisa **antes de pagar**, con la densidad medida
+  (una palabra por pulso, `bpm/60`: 1.79–1.93 pal/s a 108 BPM, 1.18 a 96), y
+  sugiere el BPM que haría caber la letra sin tocar el contenido.
+- `transcripcion.cobertura_de_lineas()` compara la letra con lo cantado línea a
+  línea **después de whisper**; si el beat `CTA` baja del 60% imprime 🛑 antes de
+  gastar en imágenes. Cazó sola el P04 (CTA al 0%) y el P06.
+- `_tope_de_cancion()` pide siempre con holgura (`OCUPACION_AL_PEDIR = 0.65`).
+  Regla de Alexander: «no limites las canciones para que no se corten nunca».
+  Pedir de más no alarga el ad porque `duration` es un tope: si la canción
+  termina antes, se cierra sola.
+
+El precio de esa regla es la duración: el P02 pasó de 64.08s (cortado en seco,
+`cola_s` negativa) a 79.58s con la canción entera y 7.3s de cola.
+
+### Aprendizajes que costaron dinero o tiempo
+
+1. **Una corrección aplicada sólo al `prompt_imagen` no está aplicada.** El
+   movimiento lo dicta el `prompt_video` y ahí seguía el botón falso.
+2. **No paralelizar montajes.** El render del P04 murió con `Cannot allocate
+   memory`: 16 clips 1080×1920 en un solo `filter_complex` no caben si hay otra
+   fase corriendo. En serie funcionó a la primera.
+3. **Los clips pagados se pueden reasignar.** Al rehacer la canción del P02 el
+   plan pasó de 16 a 20 huecos; reasignar los clips existentes por línea cubrió
+   los 20 por 0 USD, en vez de 3.03 en clips nuevos. `_clip()` los nombra por
+   índice de tarea, así que sin reasignar habrían quedado desalineados.
+
+### Abierto
+
+1. **P04: la aparición agravada (L4) no se ve** — su tramo dura 0.76s. Y en ese
+   punto aparece un cartel de plastilina que dice «TOY SHOP»: texto legible,
+   prohibido.
+2. **Loudness a −15.3 (P04) y −14.8 (P02)** contra el objetivo de −14. El P01
+   salió a −14.3. Mirar el limitador de `mezcla.py` en los musicales.
+3. **P06 cyberpunk congelado** con dos canciones pagadas (0.36) y ninguna
+   servible: a 92 BPM repitió el coro y se saltó el CTA; a 112 metió 21.5s de
+   intro y deshizo el final.
+4. La marca sigue sonando «FX» en todas las canciones.
+

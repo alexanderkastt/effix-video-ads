@@ -1,6 +1,6 @@
 {
   "formato": "guion-aprobado/1",
-  "estado": "por-aprobar",
+  "estado": "aprobado",
   "job_id": "p06-marca-digital-musical-cyberpunk-v2",
   "titulo": "Mi marca no existe en internet",
   "marca": "effix",
@@ -60,7 +60,7 @@
       "short 1 second intro, vocals start immediately",
       "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
     ],
-    "bpm_recomendado": 92,
+    "bpm_recomendado": 112,
     "volumen_relativo": 1.0,
     "modelo": "minimax/music-3",
     "bpm_exacto": true,
@@ -173,10 +173,14 @@
       "texto": "Más de trescientas cincuenta empresas de verdad",
       "texto_tts": "",
       "texto_pantalla": "+350 empresas",
-      "plano": "Picado sobre el pabellón: cientos de stands encendidos.",
-      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. high-angle wide: high angle over an enormous fair pavilion glowing in cyan and magenta, hundreds of stands and thousands of visitors, DON RAMON small in the central aisle. DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "plano": "Picado sobre el pabellón: hileras de stands corporativos encendidos en neón.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. high-angle wide: high angle over an enormous modern convention hall glowing in cyan and magenta: long carpeted aisles between rows of sleek corporate exhibition booths with backlit display walls and large glowing screens, overhead truss lighting rigs, a crowd of thousands of business visitors wearing lanyards; this is a technology, marketing and ecommerce trade show, not a street market: no market stalls, no produce, no food, no fabric awnings, no tents, no wooden crates; DON RAMON small in the central aisle. DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 the camera descends toward him as the crowd streams past on both sides. Camera: crane down. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. high-angle wide: high angle over an enormous fair pavilion glowing in cyan and magenta, hundreds of stands and thousands of visitors, DON RAMON small in the central aisle. DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+        "plano": "Picado sobre el pabellón: cientos de stands encendidos."
+      }
     },
     {
       "n": 10,
@@ -185,10 +189,14 @@
       "texto": "Las que suben marcas como la mía a internet",
       "texto_tts": "",
       "texto_pantalla": "Los que suben marcas",
-      "plano": "Plano medio en un stand: un equipo joven le muestra su marca ya montada en una pantalla.",
-      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. medium two-shot at a fair stand: at a bright fair stand a young team turns a large screen toward DON RAMON showing his own product as glowing abstract store cards, his briefcase open on the counter beside them. DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "plano": "Plano medio en un stand corporativo del pabellón: un equipo joven le muestra su marca ya montada en una pantalla.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. medium two-shot at an exhibition booth: at a sleek modern trade-show booth with a backlit display wall and a clean counter, on the carpeted aisle of a technology and ecommerce convention (not a street market stall: no produce, no food, no fabric awning, no wooden crates), a young team turns a large screen toward DON RAMON showing his own product as glowing abstract store cards, his briefcase open on the counter beside them. DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 they turn the screen toward him and he leans in, taking off his glasses to look closer. Camera: handheld arc. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. medium two-shot at a fair stand: at a bright fair stand a young team turns a large screen toward DON RAMON showing his own product as glowing abstract store cards, his briefcase open on the counter beside them. DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+        "plano": "Plano medio en un stand: un equipo joven le muestra su marca ya montada en una pantalla."
+      }
     },
     {
       "n": 11,
@@ -209,12 +217,14 @@
       "texto": "Compra tu ingreso, dale clic, marca mía",
       "texto_tts": "",
       "texto_pantalla": "Compra tu ingreso: clic en el botón",
-      "plano": "DON RAMÓN de frente en el pasillo del pabellón, presionando un botón grande que flota.",
-      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. medium shot facing camera: DON RAMON facing camera in the neon pavilion aisle pointing down toward the bottom edge of the frame with one hand, inviting the viewer to look below the video of him, blurred stands behind. DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
-      "prompt_video": "@Image1 he presses the floating button and it lights up, straightening his tie. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "plano": "DON RAMÓN de frente en el pasillo del pabellón, señalando hacia el borde inferior del cuadro: el botón real va debajo del video.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. medium shot facing camera: DON RAMON facing camera in the neon pavilion aisle one arm fully extended straight downward, unmistakably pointing at the bottom edge of the frame, the whole arm visible against his body, head tilted down following his own gesture, inviting the viewer to look below the video of him, blurred exhibition booths behind. DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he holds the downward point toward the bottom edge of the frame and nods to camera, straightening his tie. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
       "lipsync": false,
       "prompts_previos": {
-        "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. medium shot facing camera: DON RAMON facing camera in the neon pavilion aisle pressing a large glowing rounded button shape floating in front of him, blurred stands behind. DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+        "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. medium shot facing camera: DON RAMON facing camera in the neon pavilion aisle pressing a large glowing rounded button shape floating in front of him, blurred stands behind. DON RAMON: a man in his fifties in a classic grey suit and tie, neat grey hair, carrying a leather briefcase, out of place among neon lights. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+        "prompt_video": "@Image1 he presses the floating button and it lights up, straightening his tie. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+        "plano": "DON RAMÓN de frente en el pasillo del pabellón, presionando un botón grande que flota."
       }
     }
   ],
@@ -260,6 +270,20 @@
       "fecha": "2026-09-07",
       "pedido_por": "Alexander",
       "motivo": "El CTA dibujaba un boton dentro del cuadro. El boton real esta DEBAJO del video, en el placement de Meta: uno falso compite con el de verdad y manda a tocar un pixel muerto. Ahora el personaje senala hacia el borde inferior, y el montaje anade flechas animadas hacia abajo durante el CTA."
+    },
+    {
+      "fecha": "2026-09-07",
+      "quien": "Claude Code",
+      "pedido_por": "Alexander",
+      "que": "Las correcciones ya aprobadas en el P01, P02 y P04: L9 pedía 'hundreds of stands' y L10 'at a fair stand' (leen a plaza de mercado, vetado tras costar 0.36 USD en contadores) y el CTA de L12 seguía con el botón falso en prompt_video. Se conserva el neón cyan/magenta del bible.",
+      "costo_usd": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "quien": "Claude Code",
+      "pedido_por": "Alexander",
+      "que": "BPM 92 -> 112, letra y style_tags intactos. A 92 la canción salió de 88s, repitió el coro dos veces y se saltó las líneas 6, 7 y el CTA: con la letra tan espaciada el modelo llena el hueco repitiendo en vez de avanzar. Es la misma corrección que arregló el P02 (96 -> 108).",
+      "costo_usd": 0.176
     }
   ]
 }

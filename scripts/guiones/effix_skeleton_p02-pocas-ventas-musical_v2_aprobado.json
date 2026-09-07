@@ -1,6 +1,6 @@
 {
   "formato": "guion-aprobado/1",
-  "estado": "por-aprobar",
+  "estado": "aprobado",
   "job_id": "p02-pocas-ventas-musical-skeleton-v2",
   "titulo": "La tienda que vende poquito",
   "marca": "effix",
@@ -60,7 +60,7 @@
       "short 1 second intro, vocals start immediately",
       "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
     ],
-    "bpm_recomendado": 96,
+    "bpm_recomendado": 108,
     "volumen_relativo": 1.0,
     "modelo": "minimax/music-3",
     "bpm_exacto": true,
@@ -90,9 +90,12 @@
       "texto_tts": "",
       "texto_pantalla": "",
       "plano": "Plano medio del esqueleto sentado frente al portátil, refrescando la pantalla.",
-      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM home office and trade-fair environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium shot, slightly off-centre: the skeleton sitting at a cluttered home-office desk, one bony finger tapping the trackpad again and again, boxes of unsold stock stacked behind him. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM home office and trade-fair environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium shot, slightly off-centre: the skeleton, a plain unbranded laptop with a completely blank smooth lid and no logo of any kind, sitting at a cluttered home-office desk, one bony finger tapping the trackpad again and again, boxes of unsold stock stacked behind him. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 he taps the trackpad repeatedly and leans closer to the screen, eyes wide. Camera: steady arc to the left. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM home office and trade-fair environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium shot, slightly off-centre: the skeleton sitting at a cluttered home-office desk, one bony finger tapping the trackpad again and again, boxes of unsold stock stacked behind him. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
     },
     {
       "n": 3,
@@ -173,10 +176,14 @@
       "texto": "De las tiendas que sí venden, y verlas por dentro",
       "texto_tts": "",
       "texto_pantalla": "Ver la tienda por dentro",
-      "plano": "Plano medio en un stand: otro comerciante le muestra su panel real.",
-      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM home office and trade-fair environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium two-shot at a fair stand: at a busy fair stand another exhibitor turns a laptop toward the skeleton showing a dashboard with many tall abstract bars, both leaning over the counter. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "plano": "Plano medio en un stand corporativo del pabellón: otro comerciante le muestra su panel real.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM home office and trade-fair environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium two-shot at an exhibition booth: at a sleek modern trade-show booth with a backlit display wall and a clean counter, on the carpeted aisle of a technology and ecommerce convention (not a street market stall: no produce, no food, no fabric awning, no wooden crates), another exhibitor turns a plain unbranded laptop with a completely blank lid toward the skeleton showing a dashboard with many tall abstract bars, both leaning over the counter. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 the exhibitor turns the laptop toward him and points at the bars while he leans in. Camera: slight handheld arc. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM home office and trade-fair environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium two-shot at a fair stand: at a busy fair stand another exhibitor turns a laptop toward the skeleton showing a dashboard with many tall abstract bars, both leaning over the counter. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+        "plano": "Plano medio en un stand: otro comerciante le muestra su panel real."
+      }
     },
     {
       "n": 10,
@@ -197,12 +204,14 @@
       "texto": "Compra tu ingreso, dale clic, y a vender",
       "texto_tts": "",
       "texto_pantalla": "Compra tu ingreso: clic en el botón",
-      "plano": "Esqueleto de frente en el pasillo del pabellón, presionando un botón grande que flota.",
-      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM home office and trade-fair environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium shot facing camera: the skeleton facing camera in the pavilion aisle pointing down toward the bottom edge of the frame with one hand, inviting the viewer to look below the video of him, blurred stands and crowd behind. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
-      "prompt_video": "@Image1 he presses the floating button and it lights up, standing tall and steady. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "plano": "Esqueleto de frente en el pasillo del pabellón, señalando hacia el borde inferior del cuadro: el botón real va debajo del video.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM home office and trade-fair environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium shot facing camera: the skeleton facing camera in the pavilion aisle one arm fully extended straight downward, unmistakably pointing at the bottom edge of the frame, the whole arm visible against the body, head tilted down following its own gesture, inviting the viewer to look below the video of him, blurred exhibition booths and crowd behind. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he holds the downward point toward the bottom edge of the frame and nods to camera, standing tall and steady. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
       "lipsync": false,
       "prompts_previos": {
-        "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM home office and trade-fair environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium shot facing camera: the skeleton facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front of him, blurred stands and crowd behind. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+        "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM home office and trade-fair environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium shot facing camera: the skeleton facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front of him, blurred stands and crowd behind. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+        "prompt_video": "@Image1 he presses the floating button and it lights up, standing tall and steady. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+        "plano": "Esqueleto de frente en el pasillo del pabellón, presionando un botón grande que flota."
       }
     }
   ],
@@ -222,13 +231,13 @@
     "duracion_30_60": true
   },
   "datos_sin_verificar": [],
-  "costo_estimado_usd": null,
+  "costo_estimado_usd": 3.7501,
   "costo_desglose": "Lo calcula el productor con cost_estimator y parámetros reales (Seedance 1.5 Pro 1080p, clips de 4 s, nano-banana-2).",
   "nombre_entrega": "P02_effix_skeleton_duenos-de-tiendas-online_la-tienda-que-vende-poquito_20260907.mp4",
   "nota_entrega": "Nombre del mp4 final, ya numerado por publico de la parrilla: P<NN>_effix_<estilo>_<publico>_<micro-situacion>_<AAAAMMDD>.mp4. El numero va delante para que los 28 queden en orden en la carpeta. Este campo manda sobre guion_aprobado.nombre_de_entrega(): si la funcion no antepone el numero, hay que ajustarla en el mismo commit (CLAUDE.md: una regla sin default en el codigo no existe).",
   "notas_produccion": "Formato F7 jingle-loop: «tres ventas» es una cuña cantada que entra tres veces y la tercera se rompe. En el prompt de música se pide hook coreado tipo cuña, no coro melódico largo. El panel con tres ventas es la micro-situación: mismo encuadre en las líneas 1, 3 y 10. Character Bible verbatim en todos los prompts, encuadres distintos por plano. Héroe primero. Cantado, sin voz en off.",
-  "aprobado_por": null,
-  "aprobado_el": null,
+  "aprobado_por": "Alexander",
+  "aprobado_el": "2026-09-07",
   "modelos": {
     "video": "fal-ai/bytedance/seedance/v1.5/pro/image-to-video",
     "resolucion": "1080p",
@@ -248,6 +257,30 @@
       "fecha": "2026-09-07",
       "pedido_por": "Alexander",
       "motivo": "El CTA dibujaba un boton dentro del cuadro. El boton real esta DEBAJO del video, en el placement de Meta: uno falso compite con el de verdad y manda a tocar un pixel muerto. Ahora el personaje senala hacia el borde inferior, y el montaje anade flechas animadas hacia abajo durante el CTA."
+    },
+    {
+      "fecha": "2026-09-07",
+      "quien": "Claude Code",
+      "pedido_por": "Alexander",
+      "que": "Las mismas cuatro correcciones aprobadas en el P01 v2, que este guion traía calcadas: L9 salía de 'at a fair stand' (vetado, costó 0.36 USD en contadores); L11 tenía todavía el botón flotante en prompt_video pese a la corrección que lo quitó del prompt_imagen; el gesto de señalar se reforzó con la redacción que sí funcionó en el P01 (la corta falló y costó 0.08); y veto explícito de logo en el portátil de L2, porque nano-banana puso una marca real en el P01.",
+      "costo_usd": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "quien": "Claude Code",
+      "que": "BPM 96 -> 108 manteniendo el reggaetón, la letra y los style_tags intactos. A 96 la letra no cabía en los 64s del tope: dos intentos murieron en 'de las tiendas', sin la cuña rota ni el CTA. Alexander pidió conservar el estilo urbano del intento 01 y que la canción llegue completa; el tempo es lo único que se toca.",
+      "costo_usd": 0.256
+    },
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "quien": "Claude Code",
+      "que": "Canción rehecha con el tope automático (64s -> 81s): la anterior se cortaba en seco (cola_s -0.195, la última palabra caía fuera del archivo). La nueva dura 79.6s, canta hasta 72.3 y cierra con 7.3s de cola. Los 16 clips ya pagados se reasignaron por línea a los 20 huecos del plan nuevo, así que el remontaje costó 0; L2, L10 y L11 repiten material reencuadrado.",
+      "costo_usd": 0.162
     }
-  ]
+  ],
+  "costo_real_usd": 5.6228,
+  "duracion_real_s": 79.58,
+  "render": "assets/renders/P02_effix_skeleton_duenos-de-tiendas-online_la-tienda-que-vende-poquito_20260907.mp4"
 }
