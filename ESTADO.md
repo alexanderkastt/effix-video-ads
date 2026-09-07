@@ -1151,3 +1151,26 @@ bloquea, porque las reglas nuevas no se aplican hacia atrás (CLAUDE.md §12).
 quedan bloqueados** con 3 errores cada uno hasta que se reescriba su bloque de
 cierre en Cowork. Es el efecto buscado.
 
+### Cierre elegido para el P05 (2026-09-07)
+
+Alexander eligió la opción C, el remate de la micro-situación. Va al guion v2
+cuando salga de Cowork:
+
+```
+No estaba en la pantalla: el ganador estaba allá
+Feria Effix, Plaza Mayor, en el centro de Medellín
+Del quince al diecinueve, trescientas cincuenta marcas
+Tu boleta está abajo: un clic y vas a comprar
+```
+
+Por qué pasa la regla 9: ninguno de los cuatro versos existe en los demás
+guiones, y rompe los dos moldes quemados — el pareado «del quince al diecinueve
+/ la cosa se mueve» (63 apariciones en el repo) y «compra tu ingreso dando clic
+en el botón» (42). Dice «tu boleta», no «compra tu ingreso».
+
+Dos restricciones que condicionaron la redacción: **«dropshipping» no se puede
+cantar** (sale «Kecoxie», está en `PALABRAS_QUE_NO_CANTA`), así que al público
+se le nombra por proveedor, catálogo y marcas; y el primer verso cierra la
+micro-situación en vez de abrir bloque nuevo, con lo que la tercera aparición
+y el cierre son lo mismo.
+
