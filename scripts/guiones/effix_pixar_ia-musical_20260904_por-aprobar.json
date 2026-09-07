@@ -42,7 +42,7 @@
   "musica": {
     "modo": "sincronizado",
     "suno_title": "Feria Effix — Effi copia pedidos a mano",
-    "suno_custom_lyrics": "[Verso 1]\nAbres el celular y el tercer post es de inteligencia artificial\nLo cierras y vuelves a copiar pedidos a mano\nSi vendes por internet y la IA te está dejando atrás\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nNo es que no entiendas, es que no sabes por dónde empezar\nDices que primero ordenas el negocio\nY en ese año salieron tres herramientas que ya usa medio mercado\n\n[Pre-coro]\nEl problema no es la herramienta\nEs que nadie se ha sentado contigo a montarla\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nY el próximo post ya no te duele\n\n[Verso 3]\nLas agencias que ya venden con inteligencia artificial te muestran cómo\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nY el próximo post ya no te duele",
+    "suno_custom_lyrics": "[Verso 1]\nAbres el celular y el tercer post es de inteligencia artificial\nLo cierras y vuelves a copiar pedidos a mano\nSi vendes por internet y la IA te está dejando atrás\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nNo es que no entiendas, es que no sabes por dónde empezar\nDices que primero ordenas el negocio\nY en ese año salieron tres herramientas que ya usa medio mercado\n\n[Pre-coro]\nEl problema no es la herramienta\nEs que nadie se ha sentado contigo a montarla\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nY el próximo post ya no te duele\n\n[Verso 3]\nLas agencias que ya venden con inteligencia artificial te muestran cómo\nMás de doscientas ponencias para aprender de los que ya están vendiendo\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nY el próximo post ya no te duele",
     "suno_style_tags": [
       "upbeat orchestral pop",
       "playful pizzicato strings",
@@ -55,7 +55,8 @@
     "bpm_recomendado": 104,
     "volumen_relativo": 1.0,
     "modelo": "fal-ai/minimax-music/v2.6",
-    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler."
+    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler.",
+    "letra_previa_diccion": "[Verso 1]\nAbres el celular y el tercer post es de inteligencia artificial\nLo cierras y vuelves a copiar pedidos a mano\nSi vendes por internet y la IA te está dejando atrás\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nNo es que no entiendas, es que no sabes por dónde empezar\nDices que primero ordenas el negocio\nY en ese año salieron tres herramientas que ya usa medio mercado\n\n[Pre-coro]\nEl problema no es la herramienta\nEs que nadie se ha sentado contigo a montarla\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nY el próximo post ya no te duele\n\n[Verso 3]\nLas agencias que ya venden con inteligencia artificial te muestran cómo\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nY el próximo post ya no te duele"
   },
   "lineas": [
     {
@@ -170,13 +171,14 @@
       "n": 10,
       "beat": "PRUEBA",
       "quien": "CANCION",
-      "texto": "Más de doscientas ponencias para aprender de los que ya tienen resultados",
+      "texto": "Más de doscientas ponencias para aprender de los que ya están vendiendo",
       "texto_tts": "",
       "texto_pantalla": "+200 ponencias: aprende de quien ya vende",
       "plano": "200 ponentes, 5 ediciones",
       "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot, side angle. Side view of EFFI in a packed auditorium among anthropomorphic objects, speaker on a lit stage ahead, BIT hovering low. EFFI: an anthropomorphic cardboard shipping box with a small canvas apron, big round expressive eyes, thin cardboard arms, packing-tape smile line, standing upright. BIT: a small floating spherical AI assistant glowing soft cyan, no face, gentle pulse. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 Audience leans in, EFFI writes on a notepad, looks up, BIT pulses. Camera: gentle lateral drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "texto_previo_diccion": "Más de doscientas ponencias para aprender de los que ya tienen resultados"
     },
     {
       "n": 11,
@@ -224,5 +226,12 @@
   ],
   "costo_estimado_usd": 4.55,
   "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 (nano-banana-2/edit) + 12 clips × 5s × 0.056 (kling v2.1 std) = 4.55 USD. Regenerar la canción cuesta 0.15 más por intento (MiniMax canta mal la marca ~1 de cada 3).",
-  "notas_produccion": "Continuidad de EFFI y BIT del ad Pixar del 2026-08-28: usar el character sheet en referencias/personajes/ como imagen héroe. Cantado, sin voz en off. El laptop del stand es el tercer personaje: límite de Seedance (3), OK en Kling."
+  "notas_produccion": "Continuidad de EFFI y BIT del ad Pixar del 2026-08-28: usar el character sheet en referencias/personajes/ como imagen héroe. Cantado, sin voz en off. El laptop del stand es el tercer personaje: límite de Seedance (3), OK en Kling.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander (regla de diccion)",
+      "motivo": "Palabras que los modelos de canto deforman, listadas en audio_extra.PALABRAS_QUE_NO_CANTA. Mismas sustituciones que se aprobaron para los ads de abogados, crochet y contadores."
+    }
+  ]
 }

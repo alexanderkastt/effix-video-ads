@@ -7,6 +7,12 @@ y la prohibición de producir. Ninguno de estos prompts gasta un peso.
 Orden sugerido: hacer primero uno de cada formato (01, 02, 04, 06, 09, 10, 12) para revisar
 los siete moldes antes de soltar los veintiuno restantes.
 
+> **Actualizado el 7 de septiembre de 2026.** Los JSON ya no los escribe Claude Code: los escribe Cowork y quedan
+> en `scripts/guiones/*_v2_por-aprobar.json`. Estos bloques quedan como **brief de cada guion** — formato de canción,
+> micro-situación y las tres apariciones — para revisar o pedir cambios. Los siete moldes (01, 02, 04, 06, 09, 10, 12)
+> ya tienen su JSON escrito; los veintiuno restantes se escriben cuando Alexander apruebe los moldes.
+> Para producir, usa el prompt de tanda del final de este archivo.
+
 ---
 
 ## F6 · DOS VOCES — 01, 07, 19, 23
@@ -482,4 +488,30 @@ diapositiva un año después, con la fecha cambiada (en imagen) · RESUELTA un p
 pantalla en vez de la diapositiva.
 Entregables: sección 26 del doc v2 + scripts/guiones/effix_anime_p26-transformacion-musical_v2_por-aprobar.json.
 No produzcas nada.
+```
+
+---
+
+## Prompt de producción (cuando el guion ya tiene JSON)
+
+```
+Lee CLAUDE.md §3 y §4b, docs/FORMATO-GUION.md y la última entrada de ESTADO.md.
+Produce esta tanda de musicales v2, uno por uno, en este orden:
+  1. scripts/guiones/<archivo 1>_v2_por-aprobar.json
+  2. scripts/guiones/<archivo 2>_v2_por-aprobar.json
+  3. scripts/guiones/<archivo 3>_v2_por-aprobar.json
+
+Por cada uno: (a) renómbralo a _v2_aprobado.json y pon estado: aprobado, sin tocar letra,
+planos ni prompts — la parte creativa viene cerrada desde Cowork; (b) valida las 6 reglas de
+FORMATO-GUION.md y muéstrame el costo con parámetros reales (Seedance 1.5 Pro 1080p, clips de
+4 s, nano-banana-2); espera mi OK; (c) fases separadas, parando después de cada una:
+canción → whisper → me avisas si NO RIMA al oído, si canta mal «Feria Effix» o «quince al
+diecinueve», si no alcanza a cantar el outro (el CTA), o si la intro instrumental pasa de 20 s;
+héroe → la reviso yo; escenas → clips → montaje con cortes en los golpes (librosa), overlays
+Montserrat con texto_pantalla, musica=False, −14 LUFS; (d) QA: 30–60 s, ningún plano < 1,25 s,
+y las tres apariciones de la micro-situación reconocibles en imagen (campo
+microsituacion_apariciones del JSON); (e) el mp4 se nombra con el campo `nombre_entrega` del
+JSON, que ya viene numerado por público (P01_, P02_…): si nombre_de_entrega() no antepone ese
+número, ajústala y actualiza CLAUDE.md en el mismo commit; (f) costo real en logs/ y entrega en
+ESTADO.md. Solo entonces el siguiente. Presupuesto 5 USD promedio, tope 6 por video.
 ```

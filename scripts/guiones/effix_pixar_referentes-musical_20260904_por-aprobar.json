@@ -42,7 +42,7 @@
   "musica": {
     "modo": "sincronizado",
     "suno_title": "Feria Effix — Tripi y la silla del fondo",
-    "suno_custom_lyrics": "[Verso 1]\nVes a alguien en tarima diciendo lo que tú aplicas hace años\nY la sala entera tomando nota\nSi sabes de ecommerce y nadie te conoce todavía\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nGrabas un video contando lo mismo, y lo ven los de siempre\nDices que primero toca tener más resultados\nPero el de la tarima se puso donde lo vieran\n\n[Pre-coro]\nNo te falta conocimiento\nTe falta estar donde están los que ya son\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nNadie se vuelve referente desde la silla\n\n[Verso 3]\nDoscientos ponentes de veinte países y trescientas cincuenta marcas\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nNadie se vuelve referente desde la silla",
+    "suno_custom_lyrics": "[Verso 1]\nVes a alguien en tarima diciendo lo que tú aplicas hace años\nY la sala entera tomando nota\nSi sabes de comercio en internet y nadie te conoce todavía\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nGrabas un video contando lo mismo, y lo ven los de siempre\nDices que primero toca tener más ventas\nPero el de la tarima se puso donde lo vieran\n\n[Pre-coro]\nNo te falta conocimiento\nTe falta estar donde están los que ya son\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nNadie se vuelve referente desde la silla\n\n[Verso 3]\nDoscientos ponentes de veinte países y trescientas cincuenta marcas\nMás de doscientas ponencias para aprender de los que ya están vendiendo\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nNadie se vuelve referente desde la silla",
     "suno_style_tags": [
       "upbeat orchestral pop",
       "playful pizzicato strings",
@@ -55,7 +55,8 @@
     "bpm_recomendado": 104,
     "volumen_relativo": 1.0,
     "modelo": "fal-ai/minimax-music/v2.6",
-    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler."
+    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler.",
+    "letra_previa_diccion": "[Verso 1]\nVes a alguien en tarima diciendo lo que tú aplicas hace años\nY la sala entera tomando nota\nSi sabes de ecommerce y nadie te conoce todavía\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nGrabas un video contando lo mismo, y lo ven los de siempre\nDices que primero toca tener más resultados\nPero el de la tarima se puso donde lo vieran\n\n[Pre-coro]\nNo te falta conocimiento\nTe falta estar donde están los que ya son\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nNadie se vuelve referente desde la silla\n\n[Verso 3]\nDoscientos ponentes de veinte países y trescientas cincuenta marcas\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nNadie se vuelve referente desde la silla"
   },
   "lineas": [
     {
@@ -74,13 +75,14 @@
       "n": 2,
       "beat": "CALLOUT",
       "quien": "CANCION",
-      "texto": "Si sabes de ecommerce y nadie te conoce todavía / Esto es para ti, quédate un minuto",
+      "texto": "Si sabes de comercio en internet y nadie te conoce todavía / Esto es para ti, quédate un minuto",
       "texto_tts": "",
       "texto_pantalla": "¿Sabes y no te conocen?",
       "plano": "Callout a cámara",
       "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up. TRIPI turns his screen toward camera in the dark row, ring-light flickering weakly. TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 TRIPI turns to camera, the ring-light flickers, he holds the look. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "texto_previo_diccion": "Si sabes de ecommerce y nadie te conoce todavía / Esto es para ti, quédate un minuto"
     },
     {
       "n": 3,
@@ -98,13 +100,14 @@
       "n": 4,
       "beat": "EXPL_FALLIDA",
       "quien": "CANCION",
-      "texto": "Dices que primero toca tener más resultados",
+      "texto": "Dices que primero toca tener más ventas",
       "texto_tts": "",
       "texto_pantalla": "«Primero más resultados»",
       "plano": "«Primero más resultados»",
       "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot from behind. TRIPI at a desk stacking abstract glowing trophy-shaped blocks into a tower, ignoring a window with a bright distant stage light outside. TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 He places a block, the tower wobbles, he steadies it and turns his back further to the window. Camera: gentle pull-back. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "texto_previo_diccion": "Dices que primero toca tener más resultados"
     },
     {
       "n": 5,
@@ -170,13 +173,14 @@
       "n": 10,
       "beat": "PRUEBA",
       "quien": "CANCION",
-      "texto": "Más de doscientas ponencias para aprender de los que ya tienen resultados",
+      "texto": "Más de doscientas ponencias para aprender de los que ya están vendiendo",
       "texto_tts": "",
       "texto_pantalla": "+200 ponencias: aprende de quien ya vende",
       "plano": "5 ediciones",
       "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot, side angle. Side view of TRIPI in a packed auditorium, now in a middle row among anthropomorphic objects, speaker on a lit stage ahead, halo steady. TRIPI: an anthropomorphic smartphone standing on a small three-legged tripod, the tripod legs act as legs, big expressive eyes on the screen, a tiny ring-light halo that dims when sad and brightens when confident. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 Audience leans in, TRIPI records a short clip and lowers, nodding. Camera: gentle lateral drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "texto_previo_diccion": "Más de doscientas ponencias para aprender de los que ya tienen resultados"
     },
     {
       "n": 11,
@@ -224,5 +228,12 @@
   ],
   "costo_estimado_usd": 4.55,
   "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 (nano-banana-2/edit) + 12 clips × 5s × 0.056 (kling v2.1 std) = 4.55 USD. Regenerar la canción cuesta 0.15 más por intento (MiniMax canta mal la marca ~1 de cada 3).",
-  "notas_produccion": "REGLA: TRIPI nunca aparece EN tarima ni con micrófono (el pase es de asistente). En la escena 9 graba en pasillo, no en zona de contenido (eso es VIP). Pixar, cantado."
+  "notas_produccion": "REGLA: TRIPI nunca aparece EN tarima ni con micrófono (el pase es de asistente). En la escena 9 graba en pasillo, no en zona de contenido (eso es VIP). Pixar, cantado.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander (regla de diccion)",
+      "motivo": "Palabras que los modelos de canto deforman, listadas en audio_extra.PALABRAS_QUE_NO_CANTA. Mismas sustituciones que se aprobaron para los ads de abogados, crochet y contadores."
+    }
+  ]
 }

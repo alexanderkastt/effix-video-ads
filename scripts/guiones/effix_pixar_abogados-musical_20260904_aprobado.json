@@ -42,7 +42,7 @@
   "musica": {
     "modo": "sincronizado",
     "suno_title": "Feria Effix — Tus próximos clientes están en Feria Effix",
-    "suno_custom_lyrics": "[Verso 1]\nEres abogado, y te escribe una tienda online\nNecesita contratos, y no sabes ni qué cobrarle\nSi eres abogado y todavía no tienes clientes de ecommerce\nEste video es para ti\n\n[Verso 2]\nCada día abren más tiendas por internet\nNecesitan contratos, términos y todo en regla\nY casi ninguna tiene abogado\n\n[Pre-coro]\nEsos clientes existen\nSolo tienes que ir a donde están\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nAhí están tus próximos clientes\n\n[Verso 3]\nAhí están las tiendas que hoy no tienen abogado\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nAhí están tus próximos clientes",
+    "suno_custom_lyrics": "[Verso 1]\nEres abogado, y te escribe una tienda online\nNecesita contratos, y no sabes ni qué cobrarle\nSi eres abogado y todavía no tienes clientes con tienda en internet\nEste video es para ti\n\n[Verso 2]\nCada día abren más tiendas por internet\nNecesitan contratos, términos y todo en regla\nY casi ninguna tiene abogado\n\n[Pre-coro]\nEsos clientes existen\nSolo tienes que ir a donde están\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nAhí están tus próximos clientes\n\n[Verso 3]\nAhí están las tiendas que hoy no tienen abogado\nMás de doscientas ponencias para aprender de los que ya están vendiendo\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nAhí están tus próximos clientes",
     "suno_style_tags": [
       "upbeat orchestral pop",
       "playful pizzicato strings",
@@ -55,7 +55,8 @@
     "bpm_recomendado": 104,
     "volumen_relativo": 1.0,
     "modelo": "fal-ai/minimax-music/v2.6",
-    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler."
+    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler.",
+    "letra_previa_diccion": "[Verso 1]\nEres abogado, y te escribe una tienda online\nNecesita contratos, y no sabes ni qué cobrarle\nSi eres abogado y todavía no tienes clientes de ecommerce\nEste video es para ti\n\n[Verso 2]\nCada día abren más tiendas por internet\nNecesitan contratos, términos y todo en regla\nY casi ninguna tiene abogado\n\n[Pre-coro]\nEsos clientes existen\nSolo tienes que ir a donde están\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nAhí están tus próximos clientes\n\n[Verso 3]\nAhí están las tiendas que hoy no tienen abogado\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nAhí están tus próximos clientes"
   },
   "lineas": [
     {
@@ -74,13 +75,14 @@
       "n": 2,
       "beat": "CALLOUT",
       "quien": "CANCION",
-      "texto": "Si eres abogado y todavía no tienes clientes de ecommerce / Este video es para ti",
+      "texto": "Si eres abogado y todavía no tienes clientes con tienda en internet / Este video es para ti",
       "texto_tts": "",
       "texto_pantalla": "¿Eres abogado?",
       "plano": "A QUIÉN LE HABLA · Abogados sin clientes de ecommerce",
       "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up. CODIGO faces the camera at the desk, reading glasses on, TIENDA waiting beside him; a wall of law volumes behind. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 CODIGO looks straight at camera, pushes his glasses up, small nod; TIENDA looks at camera too. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "texto_previo_diccion": "Si eres abogado y todavía no tienes clientes de ecommerce / Este video es para ti"
     },
     {
       "n": 3,
@@ -179,13 +181,14 @@
       "n": 10,
       "beat": "PRUEBA",
       "quien": "CANCION",
-      "texto": "Más de doscientas ponencias para aprender de los que ya tienen resultados",
+      "texto": "Más de doscientas ponencias para aprender de los que ya están vendiendo",
       "texto_tts": "",
       "texto_pantalla": "+200 ponencias: aprende de quien ya vende",
       "plano": "SOLUCIÓN · Más de 200 ponencias para aprender de los que ya tienen resultados",
       "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot, side angle. Side view of CODIGO seated in a packed auditorium among anthropomorphic office objects, a speaker on a lit stage ahead pointing at a floating abstract chart. CODIGO: an anthropomorphic thick leather-bound law book, deep burgundy cover with gold-embossed abstract lines (no letters), big round expressive eyes on the spine, tiny reading glasses, short stubby arms made of page-edges. TIENDA: an anthropomorphic small shopping cart with big expressive eyes and a floating paper-shaped speech shape above it when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 The speaker gestures at the chart, the audience leans forward, CODIGO takes notes with a page-arm. Camera: gentle lateral drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "texto_previo_diccion": "Más de doscientas ponencias para aprender de los que ya tienen resultados"
     },
     {
       "n": 11,
@@ -264,6 +267,11 @@
       ],
       "costo_usd": 0.28,
       "motivo": "Mismo fallo que el clip 12: \"TIENDA lifts the three papers\" pide una accion que un carrito sin manos no puede hacer, y Kling la resuelve metiendo una persona en el plano. Los papeles ahora flotan solos."
+    },
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander (regla de diccion)",
+      "motivo": "Palabras que los modelos de canto deforman, listadas en audio_extra.PALABRAS_QUE_NO_CANTA. Mismas sustituciones que se aprobaron para los ads de abogados, crochet y contadores."
     }
   ],
   "costo_real_usd": 6.886,

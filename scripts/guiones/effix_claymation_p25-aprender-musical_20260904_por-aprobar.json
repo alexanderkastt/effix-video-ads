@@ -40,7 +40,7 @@
     "modo": "sincronizado",
     "genero": "Merengue urbano",
     "suno_title": "Feria Effix — Quiero aprender ecommerce",
-    "suno_custom_lyrics": "[Verso 1]\nQuiero aprender ecommerce y no hay ningún primer paso\nMil cursos, mil videos, y yo dando vueltas al vaso\nSé la teoría, pero nunca vi una tienda por dentro\nNingún primer paso, y el tiempo corriendo\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las empresas con sus dueños al frente\nY en tres días aprendes lo que no enseña la gente\n\n[Verso 2]\nMe digo que primero termino de estudiar\nPero el que ya trabaja aprendió viendo el lugar\nViendo a las empresas hacerlo, y preguntando\nNingún primer paso, y yo sigo esperando\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las empresas con sus dueños al frente\nY en tres días aprendes lo que no enseña la gente\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ya tengo el primer paso, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_custom_lyrics": "[Verso 1]\nQuiero aprender comercio en internet y no hay ningún primer paso\nMil cursos, mil videos, y yo dando vueltas al vaso\nSé la teoría, pero nunca vi una tienda por dentro\nNingún primer paso, y el tiempo corriendo\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las empresas con sus dueños al frente\nY en tres días aprendes lo que no enseña la gente\n\n[Verso 2]\nMe digo que primero termino de estudiar\nPero el que ya trabaja aprendió viendo el lugar\nViendo a las empresas hacerlo, y preguntando\nNingún primer paso, y yo sigo esperando\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las empresas con sus dueños al frente\nY en tres días aprendes lo que no enseña la gente\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ya tengo el primer paso, se acabó\nCompra tu ingreso dando clic en el botón",
     "suno_style_tags": [
       "merengue urbano",
       "fast tambora and güira",
@@ -54,20 +54,22 @@
     "bpm_recomendado": 130,
     "volumen_relativo": 1.0,
     "modelo": "fal-ai/minimax-music/v2.6",
-    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD).",
+    "letra_previa_diccion": "[Verso 1]\nQuiero aprender ecommerce y no hay ningún primer paso\nMil cursos, mil videos, y yo dando vueltas al vaso\nSé la teoría, pero nunca vi una tienda por dentro\nNingún primer paso, y el tiempo corriendo\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las empresas con sus dueños al frente\nY en tres días aprendes lo que no enseña la gente\n\n[Verso 2]\nMe digo que primero termino de estudiar\nPero el que ya trabaja aprendió viendo el lugar\nViendo a las empresas hacerlo, y preguntando\nNingún primer paso, y yo sigo esperando\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las empresas con sus dueños al frente\nY en tres días aprendes lo que no enseña la gente\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ya tengo el primer paso, se acabó\nCompra tu ingreso dando clic en el botón"
   },
   "lineas": [
     {
       "n": 1,
       "beat": "MOMENTO",
       "quien": "CANCION",
-      "texto": "Quiero aprender ecommerce y no hay ningún primer paso / Mil cursos, mil videos, y yo dando vueltas al vaso",
+      "texto": "Quiero aprender comercio en internet y no hay ningún primer paso / Mil cursos, mil videos, y yo dando vueltas al vaso",
       "texto_tts": "",
       "texto_pantalla": "Ningún primer paso",
       "plano": "LUCIA at a clay library table with a laptop showing a grid of dozens of tiny course-card shapes; her clay notebook full of arrows pointing e",
       "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, wide establishing shot. LUCIA at a clay library table with a laptop showing a grid of dozens of tiny course-card shapes; her clay notebook full of arrows pointing everywhere; she holds her head. LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 Arrows multiply on the notebook, she flips the page, more arrows. Camera: gentle push-in. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "texto_previo_diccion": "Quiero aprender ecommerce y no hay ningún primer paso / Mil cursos, mil videos, y yo dando vueltas al vaso"
     },
     {
       "n": 2,
@@ -222,5 +224,12 @@
   ],
   "costo_estimado_usd": 4.55,
   "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
-  "notas_produccion": "Claymation merengue. Dolor «ningún primer paso» 3 veces."
+  "notas_produccion": "Claymation merengue. Dolor «ningún primer paso» 3 veces.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander (regla de diccion)",
+      "motivo": "Palabras que los modelos de canto deforman, listadas en audio_extra.PALABRAS_QUE_NO_CANTA. Mismas sustituciones que se aprobaron para los ads de abogados, crochet y contadores."
+    }
+  ]
 }

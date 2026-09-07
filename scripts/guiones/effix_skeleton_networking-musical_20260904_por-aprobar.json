@@ -42,7 +42,7 @@
   "musica": {
     "modo": "sincronizado",
     "suno_title": "Feria Effix — Los mismos cinco",
-    "suno_custom_lyrics": "[Verso 1]\nNecesitas un proveedor nuevo, abres el WhatsApp\nY son los mismos cinco de hace tres años\nSi tienes empresa y buscas aliados o clientes nuevos\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nLe escribes al de siempre y te cotiza lo de siempre\nDices que los negocios salen por referidos\nY tu competencia ya cerró con alguien que ni conocías\n\n[Pre-coro]\nNo te faltan referidos\nLlevas años buscando en la misma agenda\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nY la próxima alianza no sale de tu WhatsApp\n\n[Verso 3]\nTrescientas cincuenta empresas de cinco países buscando con quién\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nY la próxima alianza no sale de tu WhatsApp",
+    "suno_custom_lyrics": "[Verso 1]\nNecesitas un proveedor nuevo, abres el WhatsApp\nY son los mismos cinco de hace tres años\nSi tienes empresa y buscas aliados o clientes nuevos\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nLe escribes al de siempre y te cotiza lo de siempre\nDices que los negocios salen por referidos\nY tu competencia ya cerró con alguien que ni conocías\n\n[Pre-coro]\nNo te faltan referidos\nLlevas años buscando en la misma agenda\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nY la próxima alianza no sale de tu WhatsApp\n\n[Verso 3]\nTrescientas cincuenta empresas de cinco países buscando con quién\nMás de doscientas ponencias para aprender de los que ya están vendiendo\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nY la próxima alianza no sale de tu WhatsApp",
     "suno_style_tags": [
       "latin urban pop",
       "reggaeton groove",
@@ -55,7 +55,8 @@
     "bpm_recomendado": 96,
     "volumen_relativo": 1.0,
     "modelo": "fal-ai/minimax-music/v2.6",
-    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler."
+    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler.",
+    "letra_previa_diccion": "[Verso 1]\nNecesitas un proveedor nuevo, abres el WhatsApp\nY son los mismos cinco de hace tres años\nSi tienes empresa y buscas aliados o clientes nuevos\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nLe escribes al de siempre y te cotiza lo de siempre\nDices que los negocios salen por referidos\nY tu competencia ya cerró con alguien que ni conocías\n\n[Pre-coro]\nNo te faltan referidos\nLlevas años buscando en la misma agenda\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nY la próxima alianza no sale de tu WhatsApp\n\n[Verso 3]\nTrescientas cincuenta empresas de cinco países buscando con quién\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nY la próxima alianza no sale de tu WhatsApp"
   },
   "lineas": [
     {
@@ -170,13 +171,14 @@
       "n": 10,
       "beat": "PRUEBA",
       "quien": "CANCION",
-      "texto": "Más de doscientas ponencias para aprender de los que ya tienen resultados",
+      "texto": "Más de doscientas ponencias para aprender de los que ya están vendiendo",
       "texto_tts": "",
       "texto_pantalla": "+200 ponencias: aprende de quien ya vende",
       "plano": "200 ponentes, 5 ediciones",
       "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM company office and trade-fair environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: medium shot, side angle. Side angle of the skeleton in a packed auditorium among blurred attendees, speaker on a lit stage ahead. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 Audience leans in, skeleton writes, looks up. Camera: gentle lateral drift. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "texto_previo_diccion": "Más de doscientas ponencias para aprender de los que ya tienen resultados"
     },
     {
       "n": 11,
@@ -224,5 +226,12 @@
   ],
   "costo_estimado_usd": 4.55,
   "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 (nano-banana-2/edit) + 12 clips × 5s × 0.056 (kling v2.1 std) = 4.55 USD. Regenerar la canción cuesta 0.15 más por intento (MiniMax canta mal la marca ~1 de cada 3).",
-  "notas_produccion": "Skeleton musical del nicho 27 (ángulo 27.2). Complementa a 'La agenda' (micro_doc_ugc narrado). Bible verbatim, héroe → edit. Sin voz en off."
+  "notas_produccion": "Skeleton musical del nicho 27 (ángulo 27.2). Complementa a 'La agenda' (micro_doc_ugc narrado). Bible verbatim, héroe → edit. Sin voz en off.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander (regla de diccion)",
+      "motivo": "Palabras que los modelos de canto deforman, listadas en audio_extra.PALABRAS_QUE_NO_CANTA. Mismas sustituciones que se aprobaron para los ads de abogados, crochet y contadores."
+    }
+  ]
 }

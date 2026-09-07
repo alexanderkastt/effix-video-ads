@@ -1,0 +1,263 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por-aprobar",
+  "job_id": "p01-empezar-musical-pixar-v2",
+  "titulo": "Quiero vender y no sé por dónde",
+  "marca": "effix",
+  "publico": "Emprendedores que están comenzando en e-commerce",
+  "nicho_mapa": 1,
+  "angulo": "1.1",
+  "angulo_nombre": "Cómo empezar a vender por Internet",
+  "temperatura": "calientes",
+  "estilo": "pixar",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "formato_cancion": "F6 · DOS VOCES — el que se excusa contra el que ya arrancó; se interrumpen y la segunda voz nunca regaña, solo cuenta lo que hizo.",
+  "version_lote": "angulo1-v2",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 50,
+  "microsituacion": {
+    "momento": "Quieres vender por internet, abres el portátil, y hay tantas opciones que lo cierras sin hacer nada.",
+    "sintoma": "Ves videos, tomas notas, y al final del día no has abierto ni una tienda.",
+    "reaccion_interna": "Piensas que cuando lo tengas claro empiezas.",
+    "explicacion_fallida": "Te dices que te falta un curso más.",
+    "patron": "Pero los que ya venden empezaron sin saberlo todo, viendo a alguien hacerlo.",
+    "causa_raiz": "No te falta información. Te falta ver el negocio real y hablar con quien lo opera.",
+    "mecanismo": "En Feria Effix están las plataformas, los proveedores y los que abrieron su tienda el año pasado, en un solo lugar."
+  },
+  "microsituacion_apariciones": {
+    "cruda": "Línea 2 — la tapa del portátil se cierra (en imagen).",
+    "agravada": "Línea 6 — la misma tapa otro día, con la libreta el doble de llena (en imagen, mismo encuadre).",
+    "resuelta": "Línea 11 — la misma tapa abierta y el primer pedido (en imagen, mismo encuadre).",
+    "en_imagen": 3
+  },
+  "dolor_frase": "por dónde",
+  "dolor_menciones_en_letra": 3,
+  "bible": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16.",
+  "negative_prompt": "sharp edges, flat colors, 2D look, cheap animation feel, realistic human, photoreal, text, captions, letters, watermark, logo, UI, style drift, extra limbs",
+  "personajes": {
+    "empezar": {
+      "ficha": "NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot.",
+      "voz": null,
+      "quien_es": "NUBE, una nube de ideas antropomórfica: la persona que quiere empezar a vender por internet y no sabe por dónde.",
+      "lipsync": false
+    },
+    "el-que-ya-vende": {
+      "ficha": "A second, smaller and steadier anthropomorphic cloud, brighter and calmer than NUBE, with a tiny glowing storefront shape orbiting it. Same design in every shot.",
+      "voz": null,
+      "quien_es": "La segunda voz: alguien que ya vende y cuenta cómo arrancó. No regaña.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Latin pop alegre",
+    "suno_title": "Feria Effix — Quiero vender y no sé por dónde",
+    "suno_custom_lyrics": "[Voz A]\nQuiero vender y no sé por dónde empezar\nAbro el portátil y lo vuelvo a cerrar\n\n[Voz B]\nYo tampoco sabía y hoy ya vendo\nArranqué mirando a alguien haciéndolo\n\n[Voz A]\nEs que me falta un curso, uno más\nY otro día cierro la tapa igual\n\n[Voz B]\nEl que vende empezó sin saber jamás\n\n[Coro]\nFeria Effix, del quince al diecinueve\nPlaza Mayor, Medellín, la cosa se mueve\nMás de trescientas cincuenta empresas por ver\nEntras sin saber y sales sabiendo qué hacer\n\n[Voz B]\nÁbrela conmigo, te muestro cómo va\n\n[Juntos]\nYa sé por dónde, ya no la cierro más\nCompra tu ingreso, dale clic y ya está",
+    "suno_style_tags": [
+      "latin pop",
+      "upbeat and bright",
+      "two alternating vocals, male and female, call and answer",
+      "handclaps and brass stabs",
+      "catchy sung chorus",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 108,
+    "volumen_relativo": 1.0,
+    "modelo": "minimax/music-3",
+    "bpm_exacto": true,
+    "duracion_ms": 64000,
+    "genero_prompt": "bright happy Latin pop, upbeat commercial radio jingle, festive and optimistic",
+    "ritmo_prompt": "crisp four-on-the-floor Latin pop groove, handclaps, bright brass stabs, guira and shaker, warm bass, acoustic guitar upstrokes",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. «Feria Effix» va con tilde en la letra: sin ella el modelo la canta «FX». Letra corta a propósito — el 2026-09-07 una letra con dos coros completos se quedó sin tiempo y nunca cantó el outro, que es el CTA. Si no rima al oído o canta mal la marca, regenerar (0,15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Quiero vender y no sé por dónde empezar",
+      "texto_tts": "",
+      "texto_pantalla": "No sé por dónde",
+      "plano": "Plano general: NUBE flota sobre un escritorio de noche, el portátil abierto lleno de pestañas que brillan.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. wide establishing shot: NUBE floats over a bedroom desk at night, an open laptop covered in dozens of tiny glowing tab shapes, a notebook full of crossed-out idea scribbles beside it, lightning bolts popping from the cloud. NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 NUBE looks from one glowing tab to another, lightning bolts popping faster, small arms hovering without touching anything. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "DEFECTO",
+      "quien": "CANCION",
+      "texto": "Abro el portátil y lo vuelvo a cerrar",
+      "texto_tts": "",
+      "texto_pantalla": "",
+      "plano": "Primer plano de las manitas cerrando la tapa. CRUDA: es el gesto que vuelve tres veces.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. tight close-up on the laptop lid: NUBE's stubby arms push the laptop lid down until it clicks shut, the glow of the tabs vanishing from the desk, the room going darker. NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the lid comes down and shuts, the desk goes dark, NUBE deflates slightly and drifts back. Camera: locked off, tiny handheld drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Yo tampoco sabía y hoy ya vendo",
+      "texto_tts": "",
+      "texto_pantalla": "¿Quieres vender por internet?",
+      "plano": "Contraplano: una segunda nube, más pequeña y firme, aparece en el marco de la ventana.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. medium two-shot: a second, smaller and steadier anthropomorphic cloud floats in through the window frame beside NUBE, calm and bright, a tiny glowing storefront shape orbiting it. NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the second cloud drifts in and turns to NUBE, the little storefront shape spinning between them. Camera: steady arc around the two clouds. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Arranqué mirando a alguien haciéndolo",
+      "texto_tts": "",
+      "texto_pantalla": "Empezaron sin saberlo todo",
+      "plano": "Contrapicado a través de la ventana: un local encendido en la calle y una moto de domicilios saliendo.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. low-angle wide through the window: through the bedroom window, a neighbouring shopfront glows at night with a small delivery bike pulling away, NUBE tiny against the glass watching it. NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the delivery bike pulls away down the street while NUBE presses closer to the glass. Camera: slight tilt up. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Es que me falta un curso, uno más",
+      "texto_tts": "",
+      "texto_pantalla": "«Me falta un curso más»",
+      "plano": "Plano medio de espaldas: una repisa con cajas de curso apiladas y una más que se suma.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. medium shot from behind: NUBE seen from behind facing a shelf stacked with glowing course-box shapes, one more box floating up to join the pile, the stack already leaning. NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 a new glowing box floats onto the leaning stack, NUBE's bolts pop once and it looks down. Camera: dolly in over the shoulder. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Y otro día cierro la tapa igual",
+      "texto_tts": "",
+      "texto_pantalla": "Otro día igual",
+      "plano": "Mismo primer plano de la tapa, otro día: la libreta al lado tiene el doble de ideas tachadas. AGRAVADA.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. tight close-up on the laptop lid, matching the earlier framing: the same laptop lid closing again, but now the notebook beside it is twice as full of crossed-out scribbles and a cold cup sits at the edge of the desk, morning light instead of night. NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the lid shuts once more, the notebook pages riffle, NUBE sinks lower over the desk. Camera: locked off. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "El que vende empezó sin saber jamás",
+      "texto_tts": "",
+      "texto_pantalla": "Ve el negocio real",
+      "plano": "Primerísimo plano de los ojos de NUBE: en el reflejo aparece un pabellón lleno de gente.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. extreme close-up on NUBE's eyes: extreme close-up of NUBE's big eyes, a bright crowded trade-fair pavilion reflected in them, colour returning to the frame. NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the reflection sharpens and NUBE's eyes widen, bolts turning into small bright sparks. Camera: steady push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "FECHAS",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / Plaza Mayor, Medellín, la cosa se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "Plano general: NUBE entra al centro de convenciones con una multitud.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. wide tracking shot: NUBE floating toward the glass entrance of a large modern convention centre in Medellin at morning, a big crowd streaming in around it, banners as plain solid black panels with white abstract shapes. NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 NUBE moves with the crowd toward the entrance, the doors opening ahead. Camera: tracking alongside. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "PRUEBA",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas por ver / Entras sin saber y sales sabiendo qué hacer",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas",
+      "plano": "Picado amplio sobre el pabellón: cientos de stands y miles de personas.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. high-angle wide: high angle over an enormous trade-fair pavilion, hundreds of colourful stands and thousands of visitors, NUBE small and bright in the main aisle looking up. NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the camera descends toward NUBE as the crowd flows around it in both directions. Camera: crane down. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Ábrela conmigo, te muestro cómo va",
+      "texto_tts": "",
+      "texto_pantalla": "Plataformas y proveedores",
+      "plano": "Plano medio en un stand: la segunda nube abre el portátil de NUBE sobre el mostrador.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. medium shot at a fair stand: at a fair stand, the second cloud opens NUBE's laptop on the counter while a friendly anthropomorphic laptop character shows a single glowing storefront shape, an exhibitor handing NUBE a small product box. NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the lid is lifted open, the storefront shape blooms out of the screen, NUBE leans in. Camera: slight handheld push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Ya sé por dónde, ya no la cierro más",
+      "texto_tts": "",
+      "texto_pantalla": "Ya sabes por dónde",
+      "plano": "Mismo escritorio, de día: la tapa abierta, una sola tienda en pantalla y el primer pedido. RESUELTA.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. tight close-up on the laptop lid, matching the earlier framings: the same bedroom desk in daylight, the laptop lid open and steady, a single glowing storefront shape on screen with one small order dot appearing, the notebook closed and set aside. NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the order dot pings into view and NUBE brightens, its arms staying away from the lid. Camera: locked off, then tiny push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Compra tu ingreso, dale clic y ya está",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "NUBE de frente en el pasillo del pabellón, presionando un botón grande que flota.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. medium shot facing camera: NUBE facing camera in the pavilion aisle, pressing a large glowing rounded button shape floating in front of it, blurred stands and crowd behind. NUBE: an anthropomorphic small fluffy white cloud with big expressive eyes, tiny stubby arms, little lightning-bolt shapes that pop out when confused, floating at chest height. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 NUBE presses the floating button and it lights up, the cloud steady and confident. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [],
+  "costo_estimado_usd": null,
+  "costo_desglose": "Lo calcula el productor con cost_estimator y parámetros reales (Seedance 1.5 Pro 1080p, clips de 4 s, nano-banana-2).",
+  "nombre_entrega": "P01_effix_pixar_emprendedores-que-empiezan_quiero-vender-y-no-se-por-donde_20260907.mp4",
+  "nota_entrega": "Nombre del mp4 final, ya numerado por publico de la parrilla: P<NN>_effix_<estilo>_<publico>_<micro-situacion>_<AAAAMMDD>.mp4. El numero va delante para que los 28 queden en orden en la carpeta. Este campo manda sobre guion_aprobado.nombre_de_entrega(): si la funcion no antepone el numero, hay que ajustarla en el mismo commit (CLAUDE.md: una regla sin default en el codigo no existe).",
+  "notas_produccion": "Formato F6 dos voces: la canción alterna voz A (el que se excusa) y voz B (el que ya vende). En el prompt de música se piden dos vocalistas alternando. NUBE es la voz A; la segunda nube es la voz B y aparece desde la línea 3. La micro-situación es la tapa del portátil: mismo encuadre en las líneas 2, 6 y 11, cambiando solo lo que pasa. Héroe primero (NUBE), luego la segunda nube. Cantado, sin voz en off.",
+  "aprobado_por": null,
+  "aprobado_el": null,
+  "modelos": {
+    "video": "fal-ai/bytedance/seedance/v1.5/pro/image-to-video",
+    "resolucion": "1080p",
+    "imagen": "fal-ai/nano-banana-2",
+    "edit": "fal-ai/nano-banana-2/edit"
+  },
+  "duracion_clip_s": 4,
+  "nota_video": "Seedance 1.5 Pro a 1080p, clips de 4 s encadenados. Frame final en los clips que cierran una línea; sin frame final en los intermedios. Decisión de Alexander el 2026-09-07.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "quien": "Alexander",
+      "que": "Lote .1 v2: la micro-situación se toca tres veces con función distinta (cruda, agravada, resuelta) y cada público usa un formato de canción propio. El v1 tenía los 28 con la misma estructura y se leían como el mismo video.",
+      "costo_usd": 0
+    }
+  ]
+}

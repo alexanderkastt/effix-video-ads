@@ -42,7 +42,7 @@
   "musica": {
     "modo": "sincronizado",
     "suno_title": "Feria Effix — Lana y el pedido de la prima",
-    "suno_custom_lyrics": "[Verso 1]\nTu tienda lleva noventa días abierta\nY el único pedido lo hizo tu prima\nSi vendes por internet y no llega un desconocido\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nPublicas todos los días y el contador no se mueve\nDices que falta pauta, que con plata arranca\nPusiste pauta y el pedido volvió a ser familiar\n\n[Pre-coro]\nNo te falta producto ni presupuesto\nTe falta que alguien que ya vende te vea el negocio\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nY el próximo pedido no es de tu prima\n\n[Verso 3]\nTrescientas cincuenta empresas y doscientos ponentes que viven de vender\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nY el próximo pedido no es de tu prima",
+    "suno_custom_lyrics": "[Verso 1]\nTu tienda lleva noventa días abierta\nY el único pedido lo hizo tu prima\nSi vendes por internet y no llega un desconocido\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nPublicas todos los días y el contador no se mueve\nDices que falta pauta, que con plata arranca\nPusiste pauta y el pedido volvió a ser familiar\n\n[Pre-coro]\nNo te falta producto ni presupuesto\nTe falta que alguien que ya vende te vea el negocio\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nY el próximo pedido no es de tu prima\n\n[Verso 3]\nTrescientas cincuenta empresas y doscientos ponentes que viven de vender\nMás de doscientas ponencias para aprender de los que ya están vendiendo\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nY el próximo pedido no es de tu prima",
     "suno_style_tags": [
       "acoustic indie pop",
       "ukulele and handclaps",
@@ -55,7 +55,8 @@
     "bpm_recomendado": 100,
     "volumen_relativo": 1.0,
     "modelo": "fal-ai/minimax-music/v2.6",
-    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler."
+    "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler.",
+    "letra_previa_diccion": "[Verso 1]\nTu tienda lleva noventa días abierta\nY el único pedido lo hizo tu prima\nSi vendes por internet y no llega un desconocido\nEsto es para ti, quédate un minuto\n\n[Verso 2]\nPublicas todos los días y el contador no se mueve\nDices que falta pauta, que con plata arranca\nPusiste pauta y el pedido volvió a ser familiar\n\n[Pre-coro]\nNo te falta producto ni presupuesto\nTe falta que alguien que ya vende te vea el negocio\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nY el próximo pedido no es de tu prima\n\n[Verso 3]\nTrescientas cincuenta empresas y doscientos ponentes que viven de vender\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nY el próximo pedido no es de tu prima"
   },
   "lineas": [
     {
@@ -170,13 +171,14 @@
       "n": 10,
       "beat": "PRUEBA",
       "quien": "CANCION",
-      "texto": "Más de doscientas ponencias para aprender de los que ya tienen resultados",
+      "texto": "Más de doscientas ponencias para aprender de los que ya están vendiendo",
       "texto_tts": "",
       "texto_pantalla": "+200 ponencias: aprende de quien ya vende",
       "plano": "5 ediciones",
       "prompt_imagen": "medium shot, side angle. Side view of LANA seated in a knitted auditorium among grey figures, knitted speaker under a soft knitted spotlight. LANA: the crocheted amigurumi entrepreneur from the reference character sheet, mustard knitted sweater, terracotta yarn hair, teal knitted bag, simple stitched dot eyes, only her colours are saturated (mustard, terracotta, teal). The world stays in strict pure greyscale with zero colour information — only the main character carries colour. The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
       "prompt_video": "@Image1 The speaker's arm rises, the audience leans forward a stitch, LANA nods. Camera: gentle lateral drift. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "texto_previo_diccion": "Más de doscientas ponencias para aprender de los que ya tienen resultados"
     },
     {
       "n": 11,
@@ -224,5 +226,12 @@
   ],
   "costo_estimado_usd": 4.55,
   "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 (nano-banana-2/edit) + 12 clips × 5s × 0.056 (kling v2.1 std) = 4.55 USD. Regenerar la canción cuesta 0.15 más por intento (MiniMax canta mal la marca ~1 de cada 3).",
-  "notas_produccion": "Continuidad de LANA (character sheet en referencias/personajes/lana-sheet-v2.jpg). Mismo territorio que el skeleton musical de sin_arrancar pero en crochet y con la prima como ancla visual. Sin voz en off."
+  "notas_produccion": "Continuidad de LANA (character sheet en referencias/personajes/lana-sheet-v2.jpg). Mismo territorio que el skeleton musical de sin_arrancar pero en crochet y con la prima como ancla visual. Sin voz en off.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander (regla de diccion)",
+      "motivo": "Palabras que los modelos de canto deforman, listadas en audio_extra.PALABRAS_QUE_NO_CANTA. Mismas sustituciones que se aprobaron para los ads de abogados, crochet y contadores."
+    }
+  ]
 }
