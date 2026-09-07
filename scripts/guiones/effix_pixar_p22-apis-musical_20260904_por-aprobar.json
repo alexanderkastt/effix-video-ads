@@ -1,0 +1,226 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p22-apis-musical-pixar",
+  "titulo": "Las plataformas que no se hablan",
+  "marca": "effix",
+  "publico": "Desarrollo, programación e integraciones",
+  "nicho_mapa": 22,
+  "angulo": "22.1",
+  "angulo_nombre": "APIs",
+  "temperatura": "tibios",
+  "estilo": "pixar",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Una tienda te llama porque su plataforma, su pasarela y su logística no se hablan, y alguien copia pedidos a mano.",
+    "sintoma": "Cada integración es un proyecto nuevo, porque nunca sabes qué herramienta usa el próximo cliente.",
+    "explicacion_fallida": "Te dices que en ecommerce cada tienda es un mundo.",
+    "patron": "Pero las plataformas del ecommerce latino se cuentan con los dedos, y todas tienen equipo técnico.",
+    "causa_raiz": "No te falta código. Te falta conocer de frente a los equipos de las herramientas que integras.",
+    "mecanismo": "En Feria Effix están con stand las plataformas, las pasarelas y las logísticas con sus equipos técnicos, y las tiendas que necesitan que las conectes."
+  },
+  "dolor_frase": "no se hablan",
+  "dolor_menciones_en_letra": 3,
+  "bible": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16.",
+  "negative_prompt": "sharp edges, flat colors, 2D look, cheap animation feel, realistic human, photoreal, text, captions, letters, watermark, logo, UI, style drift, extra limbs",
+  "personajes": {
+    "apis": {
+      "ficha": "ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot.",
+      "voz": null,
+      "quien_es": "ENCHUFE, un conector antropomórfico: el desarrollador que vive uniendo plataformas que no se hablan.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Latin pop alegre",
+    "suno_title": "Feria Effix — Las plataformas que no se hablan",
+    "suno_custom_lyrics": "[Verso 1]\nLa tienda, el pago y el envío no se hablan\nY alguien copia los pedidos a mano, y se traban\nMe llaman a mí, y cada vez empiezo de cero\nPorque no se hablan, y yo soy el mensajero\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las plataformas con su equipo técnico\nY las tiendas que te buscan pa' que las conectes rápido\n\n[Verso 2]\nMe digo que cada tienda es un mundo aparte\nPero las plataformas se cuentan con los dedos, en cualquier parte\nY todas tienen alguien con quien hablar de frente\nNo se hablan, y yo sin conocer a esa gente\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las plataformas con su equipo técnico\nY las tiendas que te buscan pa' que las conectes rápido\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ahora sí se hablan, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "latin pop",
+      "upbeat and bright",
+      "handclaps and brass stabs",
+      "catchy sung chorus",
+      "warm male vocal",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 108,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "La tienda, el pago y el envío no se hablan / Y alguien copia los pedidos a mano, y se traban",
+      "texto_tts": "",
+      "texto_pantalla": "No se hablan",
+      "plano": "ENCHUFE on a developer desk between three glowing boxes (a store shape, a card shape, a truck shape) that do not connect; a hand-shaped spre",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide establishing shot. ENCHUFE on a developer desk between three glowing boxes (a store shape, a card shape, a truck shape) that do not connect; a hand-shaped spreadsheet icon copies rows between them; ENCHUFE's spark is out. ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The spreadsheet icon copies a row, the boxes stay apart, ENCHUFE's prongs droop. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Me llaman a mí, y cada vez empiezo de cero / Porque no se hablan, y yo soy el mensajero",
+      "texto_tts": "",
+      "texto_pantalla": "¿Desarrollas para tiendas online?",
+      "plano": "ENCHUFE turns to face the camera in a developer's desk with three screens and cables everywhere, three glowing boxes (store, payment, logist",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up. ENCHUFE turns to face the camera in a developer's desk with three screens and cables everywhere, three glowing boxes (store, payment, logistics) that do not connect still visible. ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 ENCHUFE turns to camera, holds the gaze, small nod. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que cada tienda es un mundo aparte",
+      "texto_tts": "",
+      "texto_pantalla": "Cada vez desde cero",
+      "plano": "Close-up of ENCHUFE's prongs plugging into a box, a spark, then unplugging to start again with a different-shaped socket.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, close-up on hands and object. Close-up of ENCHUFE's prongs plugging into a box, a spark, then unplugging to start again with a different-shaped socket. ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Plug, spark, unplug, a new socket shape appears, ENCHUFE sighs. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero las plataformas se cuentan con los dedos, en cualquier parte",
+      "texto_tts": "",
+      "texto_pantalla": "«Cada tienda es un mundo»",
+      "plano": "ENCHUFE from behind looking at a wall of dozens of different socket shapes, arms spread.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot from behind. ENCHUFE from behind looking at a wall of dozens of different socket shapes, arms spread. ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 It spreads its prong-arms, the wall of sockets stretches on. Camera: gentle pull-back. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Y todas tienen alguien con quien hablar de frente",
+      "texto_tts": "",
+      "texto_pantalla": "Se cuentan con los dedos",
+      "plano": "Low-angle wide: a big glowing hall where a handful of large platform-shapes stand with friendly technician figures beside them; ENCHUFE smal",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, low-angle wide. Low-angle wide: a big glowing hall where a handful of large platform-shapes stand with friendly technician figures beside them; ENCHUFE small at the door. ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Technicians wave, ENCHUFE's spark flickers on. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "No se hablan, y yo sin conocer a esa gente",
+      "texto_tts": "",
+      "texto_pantalla": "Conoce a los equipos de frente",
+      "plano": "Extreme close-up of ENCHUFE's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, extreme close-up on eyes. Extreme close-up of ENCHUFE's eyes; in the reflection a bright crowded trade-fair pavilion appears. ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "ENCHUFE walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide tracking shot. ENCHUFE walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 ENCHUFE walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están las plataformas con su equipo técnico / Y las tiendas que te buscan pa' que las conectes rápido",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; ENCHUFE small in the aisle look",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; ENCHUFE small in the aisle looking up. ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que cada tienda es un mundo aparte (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Plataformas con equipo técnico",
+      "plano": "At a fair stand, ENCHUFE with a technician figure showing a diagram where the three boxes now link with glowing lines; a store owner watches",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, two-shot at a stand. At a fair stand, ENCHUFE with a technician figure showing a diagram where the three boxes now link with glowing lines; a store owner watches. ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The lines light up one by one, the owner nods, ENCHUFE's spark shines. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of ENCHUFE seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot, side angle. Side view of ENCHUFE seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y ahora sí se hablan, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "ENCHUFE facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. ENCHUFE facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 ENCHUFE looks at camera, presses the floating button, it pulses, nods. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y ahora sí se hablan, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Ahora sí se hablan",
+      "plano": "The developer desk again: the three boxes linked by steady glowing lines, orders flowing through, ENCHUFE resting with its spark on.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide static shot, held. The developer desk again: the three boxes linked by steady glowing lines, orders flowing through, ENCHUFE resting with its spark on. ENCHUFE: an anthropomorphic friendly plug-and-cable character, glossy dark blue body with two prong-arms, big expressive eyes, a little spark on its head when it connects something. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Order dots flow through the lines, ENCHUFE gives a small thumbs-up with a prong. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Pixar latin pop, objeto antropomórfico (conector). Dolor «no se hablan» 3 veces."
+}

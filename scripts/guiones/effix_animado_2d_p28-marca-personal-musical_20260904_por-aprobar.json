@@ -1,0 +1,226 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p28-marca-personal-musical-animado_2d",
+  "titulo": "Nadie sabe lo que sé",
+  "marca": "effix",
+  "publico": "Personas que quieren convertirse en referentes del e-commerce",
+  "nicho_mapa": 28,
+  "angulo": "28.1",
+  "angulo_nombre": "Construir marca personal",
+  "temperatura": "frios",
+  "estilo": "animado_2d",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Alguien te pregunta a qué te dedicas, se lo explicas bien, y te dice que nunca te había visto hablar de eso.",
+    "sintoma": "Tu perfil son fotos de la vida y uno que otro repost.",
+    "explicacion_fallida": "Te dices que la marca personal es para los que venden cursos.",
+    "patron": "Pero las personas que hoy reciben las oportunidades de tu sector son las que sí se mostraron.",
+    "causa_raiz": "No es que la marca personal no sea para ti. Es que nunca has estado rodeado de gente que la construye.",
+    "mecanismo": "En Feria Effix hay doscientos ponentes que viven de que los conozcan, y tres días para grabar contenido con ellos y ver cómo lo hacen."
+  },
+  "dolor_frase": "nadie sabe lo que sé",
+  "dolor_menciones_en_letra": 3,
+  "bible": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. JULIAN: a Colombian man in his thirties, short beard, plain dark tee, a laptop bag across the chest, calm eyes, a phone in hand. Same character in every shot.",
+  "negative_prompt": "3D render, Pixar style, photorealistic, gradients, airbrush, glossy highlights, variable line weight, text, captions, letters, watermark, logo, UI, extra fingers, deformed hands, style drift",
+  "personajes": {
+    "marca-personal": {
+      "ficha": "JULIAN: a Colombian man in his thirties, short beard, plain dark tee, a laptop bag across the chest, calm eyes, a phone in hand. Same character in every shot.",
+      "voz": null,
+      "quien_es": "JULIÁN, profesional del ecommerce que sabe mucho y nadie lo asocia con eso, en animación 2D.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Salsa urbana / champeta",
+    "suno_title": "Feria Effix — Nadie sabe lo que sé",
+    "suno_custom_lyrics": "[Verso 1]\nExplico lo que hago y me dicen «no sabía»\nNadie sabe lo que sé, y lo sé desde hace días\nMi perfil son fotos de la vida y un repost\nNadie sabe lo que sé, y el que sabe menos, cobró\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los que viven de que los conozcan\nY en tres días grabas con ellos, y te reconozcan\n\n[Verso 2]\nMe digo que la marca personal es pa' vender cursos\nPero el que recibe las oportunidades hoy se mostró, seguro\nNunca he estado con gente que la construya\nNadie sabe lo que sé, y la oportunidad es suya\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los que viven de que los conozcan\nY en tres días grabas con ellos, y te reconozcan\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ahora sí saben lo que sé, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "salsa urbana",
+      "piano montuno and horns",
+      "champeta energy",
+      "catchy sung chorus",
+      "duet male and female vocals",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 98,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Explico lo que hago y me dicen «no sabía» / Nadie sabe lo que sé, y lo sé desde hace días",
+      "texto_tts": "",
+      "texto_pantalla": "Nadie sabe lo que sé",
+      "plano": "JULIAN at a co-working desk mid-conversation with a colleague whose speech bubble is a surprised face; JULIAN's phone on the desk shows a pr",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. wide establishing shot. JULIAN at a co-working desk mid-conversation with a colleague whose speech bubble is a surprised face; JULIAN's phone on the desk shows a profile grid of casual photos. JULIAN: a Colombian man in his thirties, short beard, plain dark tee, a laptop bag across the chest, calm eyes, a phone in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The colleague's surprised bubble pops, JULIAN glances at his phone grid and turns it face down. Camera: gentle push-in. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Mi perfil son fotos de la vida y un repost / Nadie sabe lo que sé, y el que sabe menos, cobró",
+      "texto_tts": "",
+      "texto_pantalla": "¿Sabes de ecommerce y nadie lo sabe?",
+      "plano": "JULIÁN turns to face the camera in a co-working desk and, later, a street with the city behind, a social profile grid full of casual photos ",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium close-up. JULIÁN turns to face the camera in a co-working desk and, later, a street with the city behind, a social profile grid full of casual photos and no work still visible. JULIAN: a Colombian man in his thirties, short beard, plain dark tee, a laptop bag across the chest, calm eyes, a phone in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 JULIÁN turns to camera, holds the gaze, small nod. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que la marca personal es pa' vender cursos",
+      "texto_tts": "",
+      "texto_pantalla": "Fotos de la vida y un repost",
+      "plano": "Close-up of the phone grid: beach photos, food photos, one repost card; a thumb scrolls and finds nothing about work.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. close-up on hands and object. Close-up of the phone grid: beach photos, food photos, one repost card; a thumb scrolls and finds nothing about work. JULIAN: a Colombian man in his thirties, short beard, plain dark tee, a laptop bag across the chest, calm eyes, a phone in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Scroll, scroll, thumb stops on the repost. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero el que recibe las oportunidades hoy se mostró, seguro",
+      "texto_tts": "",
+      "texto_pantalla": "«Es para vender cursos»",
+      "plano": "JULIAN from behind waving off a floating course-box shape with a price tag, shaking his head.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium shot from behind. JULIAN from behind waving off a floating course-box shape with a price tag, shaking his head. JULIAN: a Colombian man in his thirties, short beard, plain dark tee, a laptop bag across the chest, calm eyes, a phone in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 He waves it off, it drifts away, he turns back to the laptop. Camera: gentle pull-back. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Nunca he estado con gente que la construya",
+      "texto_tts": "",
+      "texto_pantalla": "Los que se mostraron reciben",
+      "plano": "Low-angle wide: on a giant screen a person JULIAN's age speaks on a small stage and receives a floating opportunity-envelope; JULIAN small b",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. low-angle wide. Low-angle wide: on a giant screen a person JULIAN's age speaks on a small stage and receives a floating opportunity-envelope; JULIAN small below with his bag. JULIAN: a Colombian man in his thirties, short beard, plain dark tee, a laptop bag across the chest, calm eyes, a phone in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The envelope lands in the speaker's hand, JULIAN's grip on the bag tightens. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Nadie sabe lo que sé, y la oportunidad es suya",
+      "texto_tts": "",
+      "texto_pantalla": "Rodéate de quien la construye",
+      "plano": "Extreme close-up of JULIÁN's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. extreme close-up on eyes. Extreme close-up of JULIÁN's eyes; in the reflection a bright crowded trade-fair pavilion appears. JULIAN: a Colombian man in his thirties, short beard, plain dark tee, a laptop bag across the chest, calm eyes, a phone in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "JULIÁN walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. wide tracking shot. JULIÁN walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. JULIAN: a Colombian man in his thirties, short beard, plain dark tee, a laptop bag across the chest, calm eyes, a phone in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 JULIÁN walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están los que viven de que los conozcan / Y en tres días grabas con ellos, y te reconozcan",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; JULIÁN small in the aisle looki",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; JULIÁN small in the aisle looking up. JULIAN: a Colombian man in his thirties, short beard, plain dark tee, a laptop bag across the chest, calm eyes, a phone in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que la marca personal es pa' vender cursos (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Doscientos ponentes con quienes grabar",
+      "plano": "At a fair corridor, JULIAN filming a short video on his phone beside two speakers with lanyards who lean in and laugh; other attendees gathe",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. two-shot at a stand. At a fair corridor, JULIAN filming a short video on his phone beside two speakers with lanyards who lean in and laugh; other attendees gather. JULIAN: a Colombian man in his thirties, short beard, plain dark tee, a laptop bag across the chest, calm eyes, a phone in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speakers lean in, JULIAN grins behind the phone, a third person joins. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of JULIÁN seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium shot, side angle. Side view of JULIÁN seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. JULIAN: a Colombian man in his thirties, short beard, plain dark tee, a laptop bag across the chest, calm eyes, a phone in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y ahora sí saben lo que sé, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "JULIÁN facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium close-up facing camera. JULIÁN facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. JULIAN: a Colombian man in his thirties, short beard, plain dark tee, a laptop bag across the chest, calm eyes, a phone in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 JULIÁN looks at camera, presses the floating button, it pulses, nods. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y ahora sí saben lo que sé, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Ahora sí saben",
+      "plano": "The co-working desk again: the phone grid now with videos of JULIAN talking beside recognisable-lanyard figures, a floating opportunity-enve",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. wide static shot, held. The co-working desk again: the phone grid now with videos of JULIAN talking beside recognisable-lanyard figures, a floating opportunity-envelope arriving; he smiles. JULIAN: a Colombian man in his thirties, short beard, plain dark tee, a laptop bag across the chest, calm eyes, a phone in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The envelope lands on the phone, JULIAN picks it up and nods. Camera: gentle push-in. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Animado 2D salsa urbana. Bible flat 2D verbatim. Dolor «nadie sabe lo que sé» 3 veces. Nunca en tarima: graba en pasillos."
+}

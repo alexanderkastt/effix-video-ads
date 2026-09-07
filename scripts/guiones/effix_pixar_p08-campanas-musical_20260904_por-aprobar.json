@@ -1,0 +1,226 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p08-campanas-musical-pixar",
+  "titulo": "La campaña que dejó de funcionar",
+  "marca": "effix",
+  "publico": "Marketing, publicidad y adquisición digital",
+  "nicho_mapa": 8,
+  "angulo": "8.1",
+  "angulo_nombre": "Campañas que dejaron de funcionar",
+  "temperatura": "calientes",
+  "estilo": "pixar",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "La campaña que te vendía todos los días, un martes dejó de vender. Sin cambiar nada.",
+    "sintoma": "Duplicas, cambias públicos, subes presupuesto, y nada la revive.",
+    "explicacion_fallida": "Te dices que la plataforma cambió el algoritmo.",
+    "patron": "Pero hay cuentas creciendo ahora mismo con creativos nuevos, canales nuevos y método nuevo.",
+    "causa_raiz": "No es el algoritmo. Es que estás pautando igual que hace dos años.",
+    "mecanismo": "En Feria Effix hay más de doscientas ponencias de pauta, creativos e inteligencia artificial, y las agencias que sí sostienen resultados."
+  },
+  "dolor_frase": "dejó de funcionar",
+  "dolor_menciones_en_letra": 3,
+  "bible": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16.",
+  "negative_prompt": "sharp edges, flat colors, 2D look, cheap animation feel, realistic human, photoreal, text, captions, letters, watermark, logo, UI, style drift, extra limbs",
+  "personajes": {
+    "campanas": {
+      "ficha": "PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot.",
+      "voz": null,
+      "quien_es": "PÍXEL, un cuadrito de anuncio antropomórfico: la campaña que un día dejó de vender.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Latin pop alegre",
+    "suno_title": "Feria Effix — La campaña que dejó de funcionar",
+    "suno_custom_lyrics": "[Verso 1]\nMi campaña un martes dejó de funcionar\nSin tocar nada, se dejó de vender, así no más\nDuplico, cambio público, subo, y nada\nDejó de funcionar, y no sé qué le pasa\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los que pautan y hoy sí venden\nCon creativos nuevos que la gente entiende\n\n[Verso 2]\nMe digo que fue el algoritmo, que cambió\nPero hay cuentas creciendo con un método mejor\nEstoy pautando como hace dos años, ya sé\nDejó de funcionar porque yo no cambié\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los que pautan y hoy sí venden\nCon creativos nuevos que la gente entiende\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY vuelve a funcionar, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "latin pop",
+      "upbeat and bright",
+      "handclaps and brass stabs",
+      "catchy sung chorus",
+      "warm male vocal",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 108,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Mi campaña un martes dejó de funcionar / Sin tocar nada, se dejó de vender, así no más",
+      "texto_tts": "",
+      "texto_pantalla": "Dejó de funcionar",
+      "plano": "PIXEL on a media buyer's desk beside a laptop with an abstract chart that climbs and then goes flat; PIXEL's chest light dims, eyes drooping",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide establishing shot. PIXEL on a media buyer's desk beside a laptop with an abstract chart that climbs and then goes flat; PIXEL's chest light dims, eyes drooping. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The chart flattens, PIXEL's chest light dims, it looks at the screen and back at the viewer. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Duplico, cambio público, subo, y nada / Dejó de funcionar, y no sé qué le pasa",
+      "texto_tts": "",
+      "texto_pantalla": "¿Tu campaña dejó de vender?",
+      "plano": "PIXEL turns to face the camera in a media buyer's desk with an ads dashboard, the campaign chart that turned flat still visible.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up. PIXEL turns to face the camera in a media buyer's desk with an ads dashboard, the campaign chart that turned flat still visible. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 PIXEL turns to camera, holds the gaze, small nod. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que fue el algoritmo, que cambió",
+      "texto_tts": "",
+      "texto_pantalla": "Nada la revive",
+      "plano": "Close-up of the laptop: a hand duplicates PIXEL into three copies, changes an audience shape, raises a budget slider; all three copies stay ",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, close-up on hands and object. Close-up of the laptop: a hand duplicates PIXEL into three copies, changes an audience shape, raises a budget slider; all three copies stay dim. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Three copies appear, sliders move, the lights stay dim. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero hay cuentas creciendo con un método mejor",
+      "texto_tts": "",
+      "texto_pantalla": "«Fue el algoritmo»",
+      "plano": "PIXEL from behind, shaking its tiny fist at a giant floating abstract platform logo-shape in the sky.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot from behind. PIXEL from behind, shaking its tiny fist at a giant floating abstract platform logo-shape in the sky. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 It shakes its fist, the logo-shape drifts on unbothered. Camera: gentle pull-back. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Estoy pautando como hace dos años, ya sé",
+      "texto_tts": "",
+      "texto_pantalla": "Cuentas creciendo ahora mismo",
+      "plano": "Low-angle wide: on the next desk, a bright new ad-card character with a glowing chest light rides a rising chart; PIXEL small, dim, watching",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, low-angle wide. Low-angle wide: on the next desk, a bright new ad-card character with a glowing chest light rides a rising chart; PIXEL small, dim, watching. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The new card rises with the chart, PIXEL's light flickers. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Dejó de funcionar porque yo no cambié",
+      "texto_tts": "",
+      "texto_pantalla": "Pautas como hace dos años",
+      "plano": "Extreme close-up of PIXEL's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, extreme close-up on eyes. Extreme close-up of PIXEL's eyes; in the reflection a bright crowded trade-fair pavilion appears. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "PIXEL walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide tracking shot. PIXEL walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 PIXEL walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están los que pautan y hoy sí venden / Con creativos nuevos que la gente entiende",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; PIXEL small in the aisle lookin",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; PIXEL small in the aisle looking up. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que fue el algoritmo, que cambió (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Ponencias de pauta, creativos e IA",
+      "plano": "At a fair stand, PIXEL beside a media buyer showing three new creative cards; a speaker shape in the background gestures; PIXEL's chest ligh",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, two-shot at a stand. At a fair stand, PIXEL beside a media buyer showing three new creative cards; a speaker shape in the background gestures; PIXEL's chest light starts to glow. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The buyer flips the three cards, PIXEL's chest light brightens step by step. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of PIXEL seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot, side angle. Side view of PIXEL seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y vuelve a funcionar, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "PIXEL facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. PIXEL facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 PIXEL looks at camera, presses the floating button, it pulses, nods. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y vuelve a funcionar, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Vuelve a funcionar",
+      "plano": "The desk again: the laptop chart rising, PIXEL glowing bright with three new cards behind it, the buyer leaning back with coffee.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide static shot, held. The desk again: the laptop chart rising, PIXEL glowing bright with three new cards behind it, the buyer leaning back with coffee. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The chart rises, PIXEL bounces once, the buyer toasts with the cup. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Pixar latin pop con objeto antropomórfico (tarjeta de anuncio). Dolor «dejó de funcionar» 3 veces. Sin voz en off."
+}

@@ -32,9 +32,10 @@ TRUE_PEAK_MAX = -1.5
 
 # Cuánto sube el pico al codificar a AAC. Medido con la misma pista: limitada a
 # −1.5 el WAV sale a −1.4997 y el AAC a 192k a −0.38, es decir 1.1 dB de
-# overshoot intersample. Se limita 1.5 por debajo para tener margen y que el
-# archivo entregado cumpla de verdad, no sólo la señal antes del codec.
-MARGEN_CODEC = 1.5
+# overshoot intersample — y con otra cancion mas caliente llego a 2.2. Se
+# limita 3.0 por debajo para cubrir el peor caso medido; el loudness no se
+# resiente porque loudnorm mantiene los LUFS, solo baja el pico.
+MARGEN_CODEC = 3.0
 
 # Curvas de entrada y salida de la música. La entrada es corta porque el ad
 # arranca con el gancho: un fade largo se come el primer segundo, que es el
@@ -118,15 +119,24 @@ def cadena_master(
     *,
     duracion_s: float,
     fade_out_s: float = FADE_OUT_S,
+    fin_voz_s: float | None = None,
 ) -> str:
     """Master de una pista que ya viene mezclada: sólo fades y loudnorm.
 
     El modo `musical_sync` no tiene nada que duckear — la canción ES la pista,
     no hay locución debajo. Pero sí tiene que salir a los mismos −14 LUFS que
-    el resto de los ads: sin esto el musical suena más bajo que el narrado en
-    el mismo feed, que es exactamente el problema que `mezclar()` vino a
-    resolver para el otro modo.
+    el resto de los ads.
+
+    `fin_voz_s` es la regla de Alexander: **el fade no puede empezar mientras
+    todavía se canta**. Estaba clavado a tres segundos del final sin mirar la
+    letra, y en dos ads se comió el último verso entero — el CTA, justamente.
+    Con la última palabra medida, el desvanecido arranca ahí y usa la cola
+    instrumental que quede; si no queda cola, se reduce a un cierre mínimo, que
+    es preferible a apagar una idea a medias.
     """
+    if fin_voz_s is not None:
+        arranque = min(max(fin_voz_s, 0.0), duracion_s)
+        fade_out_s = max(min(fade_out_s, duracion_s - arranque), 0.15)
     salida_fade = max(duracion_s - fade_out_s, 0.0)
     return (
         f"[{entrada}]afade=t=in:st=0:d={FADE_IN_S},"

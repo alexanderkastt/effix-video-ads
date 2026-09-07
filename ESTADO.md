@@ -749,3 +749,93 @@ brief se pegaba a mano en suno.com.
 que estaban bien cantadas ("proxy play antes" por "el proximo cliente") y bien
 frases que estaban mal. Sirve para alinear tiempos, no para decidir si algo suena
 bien: eso lo decide el oido de Alexander.
+
+---
+
+## 🗺️ MAPA COMPLETO DE 28 PÚBLICOS + 28 GUIONES PARA EQUIPO AV — 2026-09-04
+
+Alexander entregó el mapa completo: **28 públicos** (16 calientes, 10 tibios, 2 fríos)
+con **282 ángulos**. Está en `config/nichos/mapa-28-publicos.json` y es la fuente de
+verdad de nichos. Los 14 de `src/nichos_effix.py` son un subconjunto (varios mapean a
+públicos del mapa: tienda_ropa→18, abogados/contadores→24, networking→27, referentes→28).
+
+**Entregable:** el ángulo .2 de cada público como guion narrado para producción humana:
+- `outputs/GUIONES-EQUIPO-AV-28-publicos.md` (repo) y `.docx` (para el equipo).
+- `config/nichos/guiones-av-28.json` (estructurado, por si se quiere producir con IA
+  o alimentar el motor).
+
+**Formato:** 12 beats fijos — PROBLEMA (1-5: momento, callout, síntoma, explicación
+fallida, patrón) → GIRO (6: causa raíz) → SOLUCIÓN (7-10: fechas 15-19 oct, +350
+empresas / +60.000 asistentes, mecanismo del nicho, +200 ponencias) → CTA (11: botón)
+→ CIERRE (12). Locución corrida + guion técnico con overlay ≤ 7 palabras y plano por
+beat. 153-193 palabras, 43-54 s a 3,69 pal/s. Validado sin palabras prohibidas, sin
+descuento/taller, sin cifras en dígitos, callout de oficio directo.
+
+**Decisiones:** los públicos B2B (11-16, 22, 23) no son asistentes que buscan
+aprender sino empresas que buscan clientes: su "solución" es exponerse/venderle a los
+60.000 asistentes, y el guion lo dice así. 18.2, 24.2, 27.2 y 28.2 reutilizan las
+micro-situaciones ya construidas (tienda_ropa, contadores, networking, referentes).
+
+**Pendiente:** los otros 254 ángulos (.1, .3-.10) se escriben con el mismo molde
+cuando Alexander apruebe este primer lote. Los 14 musicales de IA siguen su curso
+aparte (ver arriba).
+
+
+---
+
+## 🎬 28 GUIONES PIXAR DEL ÁNGULO .2 — SIETE ESTRUCTURAS — 2026-09-07
+
+Sesión en Cowork, sin gastar. Alexander pidió los guiones del **ángulo .2** de los 28
+públicos para que el equipo audiovisual los produzca **en Pixar con IA**, con
+**estructuras distintas para que no se sienta el mismo patrón** (crítica al lote .2
+anterior, que tenía los 28 con los mismos doce beats).
+
+**Entregable:** `outputs/GUIONES-PIXAR-28-angulo2.md` y `.docx` (para el equipo).
+
+**Decisiones de Alexander en esta sesión:**
+- **Locución narrada**, no musical: el carril cantado ya lo ocupa el ángulo .1, y el
+  narrado explica el mecanismo con más claridad y sin reintentos de canción.
+- **Los personajes los define el equipo.** El documento da el *rol* del objeto en la
+  historia y lo que tiene que poder hacer en cámara; el diseño, el nombre y la
+  personalidad son del equipo. No se nombró ningún personaje.
+- Detalle de producción: guion + dirección por escena, sin prompts listos para pegar.
+
+**Las siete estructuras** (cuatro guiones cada una, agrupadas así en el documento):
+
+| Estructura | Guiones | Dónde cae la campaña |
+|---|---|---|
+| E1 Monólogo del objeto | 01, 08, 15, 24 | El objeto anuncia su propia fecha de salida |
+| E2 Dos objetos conversan | 02, 09, 16, 22 | El que ya cambió cuenta dónde lo aprendió |
+| E3 La escalada | 03, 10, 19, 25 | La feria rompe la serie que escalaba |
+| E4 Mundo espejo | 04, 11, 18, 26 | El mundo B es el de quien ya fue |
+| E5 Preguntas al espectador | 05, 12, 20, 27 | La última pregunta la contesta la feria |
+| E6 Reloj | 07, 13, 21, 23 | La última marca de tiempo es el 15 de octubre |
+| E7 El viaje | 06, 14, 17, 28 | El destino ES la feria |
+
+**Métrica:** 132–167 palabras por guion, 36–45 s de locución a 3,69 pal/s (con aire y
+cierre, 40–50 s por video). Validado con script: 28/28 sin palabras prohibidas, sin
+dígitos en locución, sin descuento/taller/URL, todos con fechas, lugar y CTA
+`«compra tu ingreso dando clic en el botón»`. Cabeceras e índice con las palabras y
+segundos reales, no estimados.
+
+**Reglas Pixar que quedaron escritas en el documento** (todas salen de plata perdida en
+`abogados-musical-pixar` y `agencias-contenido-musical-skeleton`): nunca pedirle a un
+objeto una acción que necesita manos humanas; hoja de personaje en un solo cuadro
+(`single full-frame image`, repetido en el system prompt); el recinto es
+`modern convention hall`, nunca `hundreds of colourful stands`; prohibido `slow`; nada
+de texto dentro de la imagen.
+
+**Marca:** el mundo del problema puede tener color; **el recinto va en blanco, negro y
+gris**, y ese corte de color a B&N es el argumento visual de los 28. Fuente
+`BRANDING-EFFIX.md`, no `brand.json`.
+
+**⚠️ Pendiente antes de pautar:** confirmar con Effix «más de sesenta mil asistentes».
+Está en la locución de varios guiones (10, 11, 12, 23), así que si no se confirma hay
+que **regrabar voz**, no solo cambiar overlays. Es más barato preguntar ahora.
+
+**Pendientes de este lote:**
+1. Los personajes, cuando el equipo los defina, valen un documento aparte: si un objeto
+   se repite entre nichos, la hoja de personaje se reutiliza.
+2. Pasar los 28 al formato JSON de `docs/FORMATO-GUION.md` si se quieren producir con
+   `scripts/producir.py` en vez de a mano. El contenido ya está; es trabajo de estructura.
+3. Los ángulos .4 a .10 (224 guiones) salen con el mismo molde cuando se apruebe este lote.

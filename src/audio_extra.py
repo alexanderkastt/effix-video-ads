@@ -25,6 +25,7 @@ import fal_client
 import requests
 from elevenlabs.client import ElevenLabs
 
+from .descargas import bajar_url
 from .paths import AUDIO_DIR, env
 
 FORMATO = "mp3_44100_128"
@@ -257,6 +258,98 @@ ENERGIA = (
 )
 BPM_EXTRA = 12
 
+# Alexander (2026-09-07), al oír el ad de crochet: "la música del ad 2 es muy
+# maluca, requiero música más tipo comercial, como reggaeton, pop".
+#
+# La causa estaba en los guiones: sus `suno_style_tags` eligen el género para
+# acompañar el estilo VISUAL —ukulele para el crochet, orquesta con pizzicato
+# para el Pixar— y eso suena a demo de librería, no a ad de feed. El ad del
+# esqueleto, el único que gustó, pedía "latin urban pop, reggaeton groove".
+#
+# La música de un ad no acompaña al estilo visual: acompaña al feed donde
+# compite. Así que el género lo pone el productor y no el guion.
+ESTILO_COMERCIAL = [
+    "commercial radio pop",
+    "latin urban pop",
+    "reggaeton groove",
+    "modern punchy commercial production",
+    "catchy pop hook",
+]
+
+# Géneros que los guiones heredaron del estilo visual y que hay que sacar, o
+# pelean con lo anterior y sale una mezcla sin carácter.
+GENEROS_DESCARTADOS = (
+    "acoustic", "indie", "ukulele", "handclaps", "cozy", "folk", "orchestral",
+    "pizzicato", "brass", "lo-fi", "ambient", "mellow", "soft",
+)
+
+
+def caption_estructurado(brief: dict[str, Any]) -> str:
+    """El prompt de estilo como *Structured Caption*, que es lo que pide Music 3.
+
+    Su documentación lo dice y yo lo estaba ignorando: "for precise control use a
+    Structured Caption with global metadata (genre, BPM, key, emotional
+    progression), vocal details, and a section-by-section arrangement". Mandarle
+    una lista de tags sueltos —"latin urban pop, catchy hook, female vocal"— le
+    deja decidir a él lo que no debería: si canta o recita, y con qué ritmo.
+
+    De ahí venían las dos quejas de Alexander. "Se siente leído y no cantado" se
+    ataca pidiendo melodía de forma explícita y repetida, porque el modelo por
+    defecto se conforma con declamar sobre la pista. Y "ritmos malucos" se
+    ataca nombrando el patrón rítmico concreto —dembow, no "reggaeton"— porque
+    el género a secas es demasiado ancho.
+
+    Lo que esto NO arregla es la letra. Un verso de 23 sílabas seguido de uno de
+    7, sin rima y con el estribillo apareciendo una sola vez, no se puede cantar
+    por mucho que se pida: no hay dónde apoyar la melodía.
+    """
+    voz = "warm Colombian female lead vocal"
+    if any("male" in t.lower() and "female" not in t.lower()
+           for t in brief.get("suno_style_tags", [])):
+        voz = "warm Colombian male lead vocal"
+    # El guion puede fijar género y tempo, y entonces manda él. El default
+    # comercial existe para los guiones cuyos tags heredan del estilo visual
+    # (ukulele para crochet, orquesta para Pixar), no para pisar una decisión
+    # ya tomada: si el brief dice "latin pop a 108", se respeta.
+    bpm = int(brief.get("bpm_recomendado") or 96)
+    if not brief.get("bpm_exacto"):
+        bpm += BPM_EXTRA
+    genero = brief.get("genero_prompt") or (
+        "modern Latin urban pop, commercial reggaeton radio jingle")
+    ritmo = brief.get("ritmo_prompt") or (
+        "dembow reggaeton drum pattern, deep sub bass, bright plucked synth, "
+        "palm-muted guitar stabs, claps on the offbeat")
+
+    return (
+        f"Genre: {genero}. "
+        f"BPM: {bpm}. Key: major, bright and confident.\n"
+        f"Vocals: {voz}, SUNG with a strong memorable melody and clear diction. "
+        f"Every single line must be sung on pitch with a real melodic contour — "
+        f"never spoken, never recited, never flat monotone delivery. The chorus "
+        f"is doubled and harmonised so it sticks after one listen.\n"
+        f"Production: {ritmo}, percussion fills between lines, polished "
+        f"radio-ready commercial mix.\n"
+        f"Arrangement: verses ride the groove with a melodic hook; the pre-chorus "
+        f"builds with a riser; the chorus explodes into the main hook with full "
+        f"instrumentation; the outro repeats the hook and fades.\n"
+        f"Feel: {ENERGIA}. Danceable, catchy, modern LATAM radio advertising.\n"
+        f"{TAG_PRONUNCIACION}."
+    )
+
+
+def estilo_de_ad(tags: list[str]) -> list[str]:
+    """Deja los tags que describen la INTERPRETACIÓN y cambia los de género.
+
+    Lo que se conserva del guion es lo que no es género: el tipo de voz, que
+    entre cantando desde el primer segundo, cómo pronunciar la marca. El género
+    lo pone la marca, no el estilo visual del ad.
+    """
+    conservados = [
+        t for t in tags
+        if not any(g in t.lower() for g in GENEROS_DESCARTADOS)
+    ]
+    return ESTILO_COMERCIAL + conservados
+
 # Palabras que los modelos de canto DEFORMAN. Todas medidas, ninguna supuesta:
 # cada una costó al menos una canción. Se comprueban en la validación del guion
 # —gratis— para no descubrirlas otra vez pagando.
@@ -300,17 +393,9 @@ def componer_cancion_minimax3(
     for patron, cantado in PRONUNCIACION_CANTADA:
         letra = re.sub(patron, cantado, letra, flags=re.IGNORECASE)
 
-    etiquetas = list(brief.get("suno_style_tags", []))
-    if not any("pronounce" in t.lower() for t in etiquetas):
-        etiquetas.append(TAG_PRONUNCIACION)
-    prompt = ", ".join(etiquetas) + f". {ENERGIA}. Colombian Spanish vocals, "
-    prompt += "clear diction, full musical arrangement with instruments, "
-    prompt += "radio-ready ad jingle"
-    bpm = brief.get("bpm_recomendado")
-    if bpm:
-        # El BPM del guion es el punto de partida, no el destino: la primera
-        # tanda salió correcta pero apagada para un feed.
-        prompt += f", around {int(bpm) + BPM_EXTRA} BPM"
+    # El prompt va como Structured Caption, que es lo que el modelo pide para
+    # tener control fino sobre si canta o recita. Ver `caption_estructurado`.
+    prompt = caption_estructurado(brief)
 
     salida = fal_client.subscribe(
         env("FAL_MODEL_CANCION_MM3", MODELO_CANCION_MM3),
@@ -441,8 +526,4 @@ def _bajar(salida: dict[str, Any], destino: Path) -> Path:
     url = audio["url"] if isinstance(audio, dict) else audio
     if not url:
         raise KeyError(f"La respuesta de fal no trae audio: {list(salida)}")
-    destino.parent.mkdir(parents=True, exist_ok=True)
-    respuesta = requests.get(url, timeout=300)
-    respuesta.raise_for_status()
-    destino.write_bytes(respuesta.content)
-    return destino
+    return bajar_url(url, destino)

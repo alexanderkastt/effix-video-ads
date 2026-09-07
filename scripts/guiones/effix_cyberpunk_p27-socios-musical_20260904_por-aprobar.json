@@ -1,0 +1,226 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p27-socios-musical-cyberpunk",
+  "titulo": "Solo no lo puedo coger",
+  "marca": "effix",
+  "publico": "Empresarios que buscan networking y alianzas",
+  "nicho_mapa": 27,
+  "angulo": "27.1",
+  "angulo_nombre": "Encontrar socios",
+  "temperatura": "frios",
+  "estilo": "cyberpunk",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Te llega un negocio grande, lo miras, y sabes que solo no lo puedes coger.",
+    "sintoma": "Piensas en quién podría entrar contigo y no se te ocurre nadie que no sea familia.",
+    "explicacion_fallida": "Te dices que un socio se encuentra con el tiempo.",
+    "patron": "Pero los negocios que ves crecer casi siempre son de dos o tres que se conocieron en algún lado.",
+    "causa_raiz": "No es que no haya socios para ti. Es que los socios se conocen en lugares donde tú no estás.",
+    "mecanismo": "En Feria Effix hay más de trescientas cincuenta empresas de cinco países en el mismo recinto, y muchas llegaron a lo mismo: buscar con quién crecer."
+  },
+  "dolor_frase": "solo no lo puedo coger",
+  "dolor_menciones_en_letra": 3,
+  "bible": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, SANTIAGO: a man in his thirties, dark curly hair, a fitted black jacket with a subtle neon seam, tired determined eyes, holding a glowing contract-shaped tablet. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16.",
+  "negative_prompt": "daylight, clean streets, cartoon, text, captions, letters, watermark, logo, UI, readable signs, style drift, extra limbs",
+  "personajes": {
+    "socios": {
+      "ficha": "SANTIAGO: a man in his thirties, dark curly hair, a fitted black jacket with a subtle neon seam, tired determined eyes, holding a glowing contract-shaped tablet. Same character in every shot.",
+      "voz": null,
+      "quien_es": "SANTIAGO, empresario en una ciudad cyberpunk que necesita un socio.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Reggaetón oscuro / trap latino",
+    "suno_title": "Feria Effix — Solo no lo puedo coger",
+    "suno_custom_lyrics": "[Verso 1]\nMe llegó el negocio grande y solo no lo puedo coger\nPienso en un socio, y no se me ocurre a quién\nFamilia, amigos, y nadie que sepa de esto\nSolo no lo puedo coger, y lo dejo puesto\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los que buscan con quién crecer\nY el socio que no tienes te lo cruzas al volver\n\n[Verso 2]\nMe digo que un socio se encuentra con el tiempo\nPero el negocio que crece son dos que se conocieron, lo siento\nEn algún lugar donde yo nunca he estado\nSolo no lo puedo coger, y el tiempo ha pasado\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los que buscan con quién crecer\nY el socio que no tienes te lo cruzas al volver\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ya no estoy solo, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "dark reggaeton",
+      "trap latino influence",
+      "heavy 808s and synth arps",
+      "catchy sung hook",
+      "male vocal, confident",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 92,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Me llegó el negocio grande y solo no lo puedo coger / Pienso en un socio, y no se me ocurre a quién",
+      "texto_tts": "",
+      "texto_pantalla": "Solo no lo puedes coger",
+      "plano": "SANTIAGO on a rooftop office at night holding a glowing contract-shape too large for one hand, the other hand empty, the neon city below.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, wide establishing shot. SANTIAGO on a rooftop office at night holding a glowing contract-shape too large for one hand, the other hand empty, the neon city below. SANTIAGO: a man in his thirties, dark curly hair, a fitted black jacket with a subtle neon seam, tired determined eyes, holding a glowing contract-shaped tablet. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The contract-shape tilts in his hand, he tries to balance it, it slips a little. Camera: gentle push-in. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Familia, amigos, y nadie que sepa de esto / Solo no lo puedo coger, y lo dejo puesto",
+      "texto_tts": "",
+      "texto_pantalla": "¿Necesitas un socio?",
+      "plano": "SANTIAGO turns to face the camera in a rooftop office at night over a neon city, a glowing contract-shape too big to hold with one hand stil",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, medium close-up. SANTIAGO turns to face the camera in a rooftop office at night over a neon city, a glowing contract-shape too big to hold with one hand still visible. SANTIAGO: a man in his thirties, dark curly hair, a fitted black jacket with a subtle neon seam, tired determined eyes, holding a glowing contract-shaped tablet. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 SANTIAGO turns to camera, holds the gaze, small nod. Camera: locked. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que un socio se encuentra con el tiempo",
+      "texto_tts": "",
+      "texto_pantalla": "Nadie que no sea familia",
+      "plano": "Close-up of his phone: a short contact list with family-shaped avatars only; his thumb scrolls and reaches the end.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, close-up on hands and object. Close-up of his phone: a short contact list with family-shaped avatars only; his thumb scrolls and reaches the end. SANTIAGO: a man in his thirties, dark curly hair, a fitted black jacket with a subtle neon seam, tired determined eyes, holding a glowing contract-shaped tablet. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Scroll, end of list, scroll back, thumb stops. Camera: locked. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero el negocio que crece son dos que se conocieron, lo siento",
+      "texto_tts": "",
+      "texto_pantalla": "«Se encuentra con el tiempo»",
+      "plano": "SANTIAGO from behind leaning on the railing looking at the city, a clock hologram drifting past.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, medium shot from behind. SANTIAGO from behind leaning on the railing looking at the city, a clock hologram drifting past. SANTIAGO: a man in his thirties, dark curly hair, a fitted black jacket with a subtle neon seam, tired determined eyes, holding a glowing contract-shaped tablet. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The clock drifts by, he does not move. Camera: gentle pull-back. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "En algún lugar donde yo nunca he estado",
+      "texto_tts": "",
+      "texto_pantalla": "Dos que se conocieron en algún lado",
+      "plano": "Low-angle wide: on a giant hologram above the city, two figures shaking hands over a glowing company-shape that grows; SANTIAGO small on the",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, low-angle wide. Low-angle wide: on a giant hologram above the city, two figures shaking hands over a glowing company-shape that grows; SANTIAGO small on the rooftop. SANTIAGO: a man in his thirties, dark curly hair, a fitted black jacket with a subtle neon seam, tired determined eyes, holding a glowing contract-shaped tablet. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The company-shape grows as they shake, SANTIAGO looks up. Camera: locked. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Solo no lo puedo coger, y el tiempo ha pasado",
+      "texto_tts": "",
+      "texto_pantalla": "Donde tú no estás",
+      "plano": "Extreme close-up of SANTIAGO's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, extreme close-up on eyes. Extreme close-up of SANTIAGO's eyes; in the reflection a bright crowded trade-fair pavilion appears. SANTIAGO: a man in his thirties, dark curly hair, a fitted black jacket with a subtle neon seam, tired determined eyes, holding a glowing contract-shaped tablet. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "SANTIAGO walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, wide tracking shot. SANTIAGO walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. SANTIAGO: a man in his thirties, dark curly hair, a fitted black jacket with a subtle neon seam, tired determined eyes, holding a glowing contract-shaped tablet. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 SANTIAGO walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están los que buscan con quién crecer / Y el socio que no tienes te lo cruzas al volver",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; SANTIAGO small in the aisle loo",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; SANTIAGO small in the aisle looking up. SANTIAGO: a man in his thirties, dark curly hair, a fitted black jacket with a subtle neon seam, tired determined eyes, holding a glowing contract-shaped tablet. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que un socio se encuentra con el tiempo (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Empresas buscando con quién crecer",
+      "plano": "At a fair stand under neon, SANTIAGO across from a woman entrepreneur holding the other half of a glowing contract-shape; the two halves dri",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, two-shot at a stand. At a fair stand under neon, SANTIAGO across from a woman entrepreneur holding the other half of a glowing contract-shape; the two halves drift toward each other. SANTIAGO: a man in his thirties, dark curly hair, a fitted black jacket with a subtle neon seam, tired determined eyes, holding a glowing contract-shaped tablet. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The halves meet and glow, they shake hands. Camera: locked. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of SANTIAGO seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, medium shot, side angle. Side view of SANTIAGO seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. SANTIAGO: a man in his thirties, dark curly hair, a fitted black jacket with a subtle neon seam, tired determined eyes, holding a glowing contract-shaped tablet. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y ya no estoy solo, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "SANTIAGO facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, medium close-up facing camera. SANTIAGO facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. SANTIAGO: a man in his thirties, dark curly hair, a fitted black jacket with a subtle neon seam, tired determined eyes, holding a glowing contract-shaped tablet. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 SANTIAGO looks at camera, presses the floating button, it pulses, nods. Camera: locked. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y ya no estoy solo, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Ya no estás solo",
+      "plano": "The rooftop again: SANTIAGO and the partner each holding one side of the big contract-shape, steady, the city lights behind.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, wide static shot, held. The rooftop again: SANTIAGO and the partner each holding one side of the big contract-shape, steady, the city lights behind. SANTIAGO: a man in his thirties, dark curly hair, a fitted black jacket with a subtle neon seam, tired determined eyes, holding a glowing contract-shaped tablet. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 They lift it together, it holds steady, both nod. Camera: gentle push-in. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "tenso",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Cyberpunk reggaetón oscuro. Dolor «solo no lo puedo coger» 3 veces."
+}

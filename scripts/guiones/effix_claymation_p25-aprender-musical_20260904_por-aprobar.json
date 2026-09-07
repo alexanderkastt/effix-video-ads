@@ -1,0 +1,226 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p25-aprender-musical-claymation",
+  "titulo": "Quiero aprender ecommerce",
+  "marca": "effix",
+  "publico": "Educación y formación en e-commerce",
+  "nicho_mapa": 25,
+  "angulo": "25.1",
+  "angulo_nombre": "Aprender e-commerce",
+  "temperatura": "tibios",
+  "estilo": "claymation",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Quieres aprender ecommerce, buscas por dónde, y hay mil cursos, mil videos y ningún primer paso.",
+    "sintoma": "Aprendes teoría, y no has visto una tienda real funcionando por dentro.",
+    "explicacion_fallida": "Te dices que primero terminas de estudiar.",
+    "patron": "Pero los que hoy trabajan en ecommerce aprendieron viendo a las empresas hacerlo, no esperando.",
+    "causa_raiz": "No te falta información. Te falta ver el negocio real y hablar con quien lo opera.",
+    "mecanismo": "En Feria Effix están más de trescientas cincuenta empresas del ecommerce con sus dueños, y más de doscientas ponencias de los que ya tienen resultados."
+  },
+  "dolor_frase": "ningún primer paso",
+  "dolor_menciones_en_letra": 3,
+  "bible": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16.",
+  "negative_prompt": "smooth CGI, photoreal, 2D flat, glossy plastic, text, captions, letters, watermark, logo, UI, style drift, extra limbs, melting clay",
+  "personajes": {
+    "aprender": {
+      "ficha": "LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot.",
+      "voz": null,
+      "quien_es": "LUCÍA, estudiante de plastilina que quiere aprender ecommerce y no sabe por dónde.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Merengue urbano",
+    "suno_title": "Feria Effix — Quiero aprender ecommerce",
+    "suno_custom_lyrics": "[Verso 1]\nQuiero aprender ecommerce y no hay ningún primer paso\nMil cursos, mil videos, y yo dando vueltas al vaso\nSé la teoría, pero nunca vi una tienda por dentro\nNingún primer paso, y el tiempo corriendo\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las empresas con sus dueños al frente\nY en tres días aprendes lo que no enseña la gente\n\n[Verso 2]\nMe digo que primero termino de estudiar\nPero el que ya trabaja aprendió viendo el lugar\nViendo a las empresas hacerlo, y preguntando\nNingún primer paso, y yo sigo esperando\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las empresas con sus dueños al frente\nY en tres días aprendes lo que no enseña la gente\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ya tengo el primer paso, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "merengue urbano",
+      "fast tambora and güira",
+      "playful brass",
+      "catchy sung chorus",
+      "male vocal",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 130,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Quiero aprender ecommerce y no hay ningún primer paso / Mil cursos, mil videos, y yo dando vueltas al vaso",
+      "texto_tts": "",
+      "texto_pantalla": "Ningún primer paso",
+      "plano": "LUCIA at a clay library table with a laptop showing a grid of dozens of tiny course-card shapes; her clay notebook full of arrows pointing e",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, wide establishing shot. LUCIA at a clay library table with a laptop showing a grid of dozens of tiny course-card shapes; her clay notebook full of arrows pointing everywhere; she holds her head. LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Arrows multiply on the notebook, she flips the page, more arrows. Camera: gentle push-in. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Sé la teoría, pero nunca vi una tienda por dentro / Ningún primer paso, y el tiempo corriendo",
+      "texto_tts": "",
+      "texto_pantalla": "¿Quieres aprender ecommerce?",
+      "plano": "LUCÍA turns to face the camera in a clay university library table with a laptop and notebooks, a clay notebook with too many arrows and no f",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium close-up. LUCÍA turns to face the camera in a clay university library table with a laptop and notebooks, a clay notebook with too many arrows and no first step still visible. LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 LUCÍA turns to camera, holds the gaze, small nod. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que primero termino de estudiar",
+      "texto_tts": "",
+      "texto_pantalla": "Nunca viste una tienda por dentro",
+      "plano": "Close-up of the clay notebook: neat theory diagrams, and beside it a phone with a blurred real store video she pauses.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, close-up on hands and object. Close-up of the clay notebook: neat theory diagrams, and beside it a phone with a blurred real store video she pauses. LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 She pauses the video, looks at the diagrams, taps the video again. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero el que ya trabaja aprendió viendo el lugar",
+      "texto_tts": "",
+      "texto_pantalla": "«Primero termino de estudiar»",
+      "plano": "LUCIA from behind looking at a clay wall calendar with a graduation-cap shape circled far away.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium shot from behind. LUCIA from behind looking at a clay wall calendar with a graduation-cap shape circled far away. LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 She traces the days to the circled cap with a finger. Camera: gentle pull-back. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Viendo a las empresas hacerlo, y preguntando",
+      "texto_tts": "",
+      "texto_pantalla": "Aprendieron viendo a las empresas",
+      "plano": "Low-angle wide: through the library window, a clay warehouse where a young worker packs parcels beside an owner explaining; LUCIA small at t",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, low-angle wide. Low-angle wide: through the library window, a clay warehouse where a young worker packs parcels beside an owner explaining; LUCIA small at the glass. LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The owner points, the worker packs, LUCIA's backpack slips off her shoulder. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Ningún primer paso, y yo sigo esperando",
+      "texto_tts": "",
+      "texto_pantalla": "Ve el negocio real",
+      "plano": "Extreme close-up of LUCÍA's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, extreme close-up on eyes. Extreme close-up of LUCÍA's eyes; in the reflection a bright crowded trade-fair pavilion appears. LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "LUCÍA walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, wide tracking shot. LUCÍA walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 LUCÍA walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están las empresas con sus dueños al frente / Y en tres días aprendes lo que no enseña la gente",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; LUCÍA small in the aisle lookin",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; LUCÍA small in the aisle looking up. LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que primero termino de estudiar (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Empresas con sus dueños al frente",
+      "plano": "At a clay fair stand, LUCIA with her notebook open asking a clay business owner who points at a product and a tablet; she writes fast.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, two-shot at a stand. At a clay fair stand, LUCIA with her notebook open asking a clay business owner who points at a product and a tablet; she writes fast. LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The owner points, LUCIA writes, nods, writes more. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of LUCÍA seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium shot, side angle. Side view of LUCÍA seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y ya tengo el primer paso, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "LUCÍA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium close-up facing camera. LUCÍA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 LUCÍA looks at camera, presses the floating button, it pulses, nods. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y ya tengo el primer paso, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Ya tienes el primer paso",
+      "plano": "The library table again: the notebook now with one clear arrow and a first box ticked, the laptop showing a single storefront shape, LUCIA s",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, wide static shot, held. The library table again: the notebook now with one clear arrow and a first box ticked, the laptop showing a single storefront shape, LUCIA smiling. LUCIA: a plasticine stop-motion young woman, early twenties, clay backpack, oversized clay sweater, round clay eyes, a clay notebook always in hand. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 She ticks the first box, closes the notebook, stands up. Camera: gentle push-in. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Claymation merengue. Dolor «ningún primer paso» 3 veces."
+}

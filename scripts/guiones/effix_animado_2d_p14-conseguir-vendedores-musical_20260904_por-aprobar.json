@@ -1,0 +1,226 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p14-conseguir-vendedores-musical-animado_2d",
+  "titulo": "Bodega llena, vendedores de a uno",
+  "marca": "effix",
+  "publico": "Proveedores de dropshipping",
+  "nicho_mapa": 14,
+  "angulo": "14.1",
+  "angulo_nombre": "Conseguir vendedores",
+  "temperatura": "calientes",
+  "estilo": "animado_2d",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Tienes bodega llena y catálogo listo, y los mismos veinte vendedores de siempre mueven la mitad.",
+    "sintoma": "Publicas el catálogo en grupos y los vendedores nuevos llegan de a uno.",
+    "explicacion_fallida": "Te dices que los buenos dropshippers ya tienen proveedor.",
+    "patron": "Pero los dropshippers cambian de proveedor cada vez que uno les falla, y buscan al siguiente donde puedan verlo.",
+    "causa_raiz": "No te faltan productos. Te falta estar delante de los vendedores cuando buscan proveedor.",
+    "mecanismo": "En Feria Effix están miles de dropshippers de cinco países buscando proveedor, y tú con stand y muestra física."
+  },
+  "dolor_frase": "vendedores de a uno",
+  "dolor_menciones_en_letra": 3,
+  "bible": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot.",
+  "negative_prompt": "3D render, Pixar style, photorealistic, gradients, airbrush, glossy highlights, variable line weight, text, captions, letters, watermark, logo, UI, extra fingers, deformed hands, style drift",
+  "personajes": {
+    "conseguir-vendedores": {
+      "ficha": "DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot.",
+      "voz": null,
+      "quien_es": "DON JAIME, proveedor de dropshipping en animación 2D.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Salsa urbana / champeta",
+    "suno_title": "Feria Effix — Bodega llena, vendedores de a uno",
+    "suno_custom_lyrics": "[Verso 1]\nBodega llena y vendedores de a uno\nPublico el catálogo en veinte grupos, y ninguno\nLos mismos veinte de siempre mueven la mitad\nY los vendedores de a uno, nada más\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los dropshippers de cinco países\nBuscando proveedor, y tú con la muestra, sin disfraces\n\n[Verso 2]\nMe digo que los buenos ya tienen proveedor\nPero cambian cuando uno les falla, y buscan mejor\nBuscan donde puedan verlo, con producto en la mano\nVendedores de a uno, y yo sin acercarlo\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los dropshippers de cinco países\nBuscando proveedor, y tú con la muestra, sin disfraces\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY llegan de a cientos, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "salsa urbana",
+      "piano montuno and horns",
+      "champeta energy",
+      "catchy sung chorus",
+      "duet male and female vocals",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 98,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Bodega llena y vendedores de a uno / Publico el catálogo en veinte grupos, y ninguno",
+      "texto_tts": "",
+      "texto_pantalla": "Vendedores de a uno",
+      "plano": "DON JAIME in a full warehouse holding a phone with a catalogue image posted into a long list of group chats, only one small reply bubble; sh",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. wide establishing shot. DON JAIME in a full warehouse holding a phone with a catalogue image posted into a long list of group chats, only one small reply bubble; shelves packed behind him. DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 He scrolls the group list, one bubble appears, he lowers the phone and looks at the shelves. Camera: gentle push-in. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Los mismos veinte de siempre mueven la mitad / Y los vendedores de a uno, nada más",
+      "texto_tts": "",
+      "texto_pantalla": "¿Proveedor de dropshipping?",
+      "plano": "DON JAIME turns to face the camera in a dropshipping warehouse with shelves and a packing table, the phone catalogue posted in twenty groups",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium close-up. DON JAIME turns to face the camera in a dropshipping warehouse with shelves and a packing table, the phone catalogue posted in twenty groups still visible. DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 DON JAIME turns to camera, holds the gaze, small nod. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que los buenos ya tienen proveedor",
+      "texto_tts": "",
+      "texto_pantalla": "Los mismos veinte de siempre",
+      "plano": "Close-up of the packing table: a short list of twenty names on a clipboard, half the parcels boxed, half the shelf untouched.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. close-up on hands and object. Close-up of the packing table: a short list of twenty names on a clipboard, half the parcels boxed, half the shelf untouched. DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 A hand ticks the same names, the untouched shelf stays untouched. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero cambian cuando uno les falla, y buscan mejor",
+      "texto_tts": "",
+      "texto_pantalla": "«Ya tienen proveedor»",
+      "plano": "DON JAIME from behind, waving a hand dismissively at a poster-shape of a big supplier, turning back to his boxes.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium shot from behind. DON JAIME from behind, waving a hand dismissively at a poster-shape of a big supplier, turning back to his boxes. DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 He waves, turns, stacks a box on the pile. Camera: gentle pull-back. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Buscan donde puedan verlo, con producto en la mano",
+      "texto_tts": "",
+      "texto_pantalla": "Cambian cuando uno falla",
+      "plano": "Low-angle wide: outside a competitor warehouse, a line of young sellers holding product samples and taking photos; DON JAIME small across th",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. low-angle wide. Low-angle wide: outside a competitor warehouse, a line of young sellers holding product samples and taking photos; DON JAIME small across the road. DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The line moves forward, samples change hands, DON JAIME's clipboard lowers. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Vendedores de a uno, y yo sin acercarlo",
+      "texto_tts": "",
+      "texto_pantalla": "Cuando buscan proveedor",
+      "plano": "Extreme close-up of DON JAIME's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. extreme close-up on eyes. Extreme close-up of DON JAIME's eyes; in the reflection a bright crowded trade-fair pavilion appears. DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "DON JAIME walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. wide tracking shot. DON JAIME walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 DON JAIME walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están los dropshippers de cinco países / Buscando proveedor, y tú con la muestra, sin disfraces",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; DON JAIME small in the aisle lo",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; DON JAIME small in the aisle looking up. DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que los buenos ya tienen proveedor (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Dropshippers de cinco países",
+      "plano": "At a fair stand, DON JAIME handing a product sample to the first of a long line of young sellers with lanyards, a second sample already in h",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. two-shot at a stand. At a fair stand, DON JAIME handing a product sample to the first of a long line of young sellers with lanyards, a second sample already in his other hand. DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The sample changes hands, the seller photographs it, the next steps up. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of DON JAIME seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium shot, side angle. Side view of DON JAIME seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y llegan de a cientos, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "DON JAIME facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behin",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium close-up facing camera. DON JAIME facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 DON JAIME looks at camera, presses the floating button, it pulses, nods. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y llegan de a cientos, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Llegan de a cientos",
+      "plano": "The warehouse again: three packers at the table, the clipboard list now several pages long, DON JAIME on the phone smiling at a flood of bub",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. wide static shot, held. The warehouse again: three packers at the table, the clipboard list now several pages long, DON JAIME on the phone smiling at a flood of bubbles. DON JAIME: a Colombian man in his forties, short dark hair, trimmed beard, khaki work shirt with rolled sleeves, a lanyard with a badge, a clipboard. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Bubbles flood the phone, a packer seals a box, DON JAIME flips to the next page. Camera: gentle push-in. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Animado 2D salsa urbana. Bible flat 2D verbatim. B2B proveedor. Dolor «vendedores de a uno» 3 veces."
+}

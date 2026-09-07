@@ -1,0 +1,226 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p24-impuestos-musical-crochet",
+  "titulo": "Vendo y no sé cuánto debo",
+  "marca": "effix",
+  "publico": "Servicios profesionales para e-commerce",
+  "nicho_mapa": 24,
+  "angulo": "24.1",
+  "angulo_nombre": "Impuestos",
+  "temperatura": "tibios",
+  "estilo": "crochet",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Llega la carta de impuestos y no sabes si debes mucho, poco, o nada. Vendes bien, y no tienes idea.",
+    "sintoma": "Cada pago, cada pasarela, cada envío queda en un lugar distinto, y nadie lo junta.",
+    "explicacion_fallida": "Te dices que eso lo miras cuando la tienda sea más grande.",
+    "patron": "Pero las tiendas grandes tienen contador de ecommerce desde que eran pequeñas.",
+    "causa_raiz": "No te falta plata para un contador. Te falta uno que entienda el modelo.",
+    "mecanismo": "En Feria Effix están los contadores y abogados especializados en ecommerce, y más de doscientas ponencias para entender lo que debes y lo que no."
+  },
+  "dolor_frase": "no sé cuánto debo",
+  "dolor_menciones_en_letra": 3,
+  "bible": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour.",
+  "negative_prompt": "realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+  "personajes": {
+    "impuestos": {
+      "ficha": "DIEGO: a crocheted amigurumi figure of a man in his thirties, terracotta knitted hoodie, teal knitted beanie, simple stitched dot eyes, only his colours are saturated (terracotta, teal, mustard).",
+      "voz": null,
+      "quien_es": "DIEGO, amigurumi del dueño de tienda que no sabe cuánto debe de impuestos. Único con color.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Cumbia pop",
+    "suno_title": "Feria Effix — Vendo y no sé cuánto debo",
+    "suno_custom_lyrics": "[Verso 1]\nLlegó la carta y no sé cuánto debo\nVendo bien, pero de impuestos no entiendo\nCada pago en un lado, y nadie lo junta\nNo sé cuánto debo, y me da miedo la pregunta\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los contadores que entienden la tienda\nY te dicen qué debes antes de que te sorprenda\n\n[Verso 2]\nMe digo que eso lo miro cuando sea más grande\nPero la grande tuvo contador desde temprano, y con calma\nNo me falta plata, me falta uno que entienda\nNo sé cuánto debo, y la carta me espera en la mesa\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los contadores que entienden la tienda\nY te dicen qué debes antes de que te sorprenda\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ya sé cuánto debo, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "cumbia pop",
+      "accordion and guacharaca",
+      "warm and cozy",
+      "soft female vocal",
+      "catchy sung chorus",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 100,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Llegó la carta y no sé cuánto debo / Vendo bien, pero de impuestos no entiendo",
+      "texto_tts": "",
+      "texto_pantalla": "No sabes cuánto debes",
+      "plano": "DIEGO at a greyscale knitted desk holding a knitted envelope with a felt exclamation mark, a pile of felt receipts and a knitted laptop with",
+      "prompt_imagen": "wide establishing shot. DIEGO at a greyscale knitted desk holding a knitted envelope with a felt exclamation mark, a pile of felt receipts and a knitted laptop with a tall sales bar; his stitched face uncertain. DIEGO: a crocheted amigurumi figure of a man in his thirties, terracotta knitted hoodie, teal knitted beanie, simple stitched dot eyes, only his colours are saturated (terracotta, teal, mustard). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 He turns the envelope over, looks at the sales bar, and sets the envelope down gently. Camera: gentle push-in. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Cada pago en un lado, y nadie lo junta / No sé cuánto debo, y me da miedo la pregunta",
+      "texto_tts": "",
+      "texto_pantalla": "¿Vendes y no sabes de impuestos?",
+      "plano": "DIEGO turns to face the camera in a small greyscale knitted home office with a knitted laptop and a pile of felt receipts, a knitted envelop",
+      "prompt_imagen": "medium close-up. DIEGO turns to face the camera in a small greyscale knitted home office with a knitted laptop and a pile of felt receipts, a knitted envelope with a felt exclamation mark still visible. DIEGO: a crocheted amigurumi figure of a man in his thirties, terracotta knitted hoodie, teal knitted beanie, simple stitched dot eyes, only his colours are saturated (terracotta, teal, mustard). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 DIEGO turns to camera, holds the gaze, small nod. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que eso lo miro cuando sea más grande",
+      "texto_tts": "",
+      "texto_pantalla": "Nadie lo junta",
+      "plano": "Close-up of felt receipts of different shapes scattered across the knitted desk; DIEGO's mitten tries to stack them and they slide apart.",
+      "prompt_imagen": "close-up on hands and object. Close-up of felt receipts of different shapes scattered across the knitted desk; DIEGO's mitten tries to stack them and they slide apart. DIEGO: a crocheted amigurumi figure of a man in his thirties, terracotta knitted hoodie, teal knitted beanie, simple stitched dot eyes, only his colours are saturated (terracotta, teal, mustard). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The mitten stacks, the pile slides apart. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero la grande tuvo contador desde temprano, y con calma",
+      "texto_tts": "",
+      "texto_pantalla": "«Cuando sea más grande»",
+      "plano": "DIEGO from behind sliding the envelope under the knitted laptop and turning to a knitted parcel to pack.",
+      "prompt_imagen": "medium shot from behind. DIEGO from behind sliding the envelope under the knitted laptop and turning to a knitted parcel to pack. DIEGO: a crocheted amigurumi figure of a man in his thirties, terracotta knitted hoodie, teal knitted beanie, simple stitched dot eyes, only his colours are saturated (terracotta, teal, mustard). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 He hides the envelope, picks up the parcel, tapes it. Camera: gentle pull-back. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "No me falta plata, me falta uno que entienda",
+      "texto_tts": "",
+      "texto_pantalla": "Contador desde temprano",
+      "plano": "Low-angle wide of the knitted street: a big grey knitted shop with a small grey accountant figure at its door holding a tidy folder; DIEGO s",
+      "prompt_imagen": "low-angle wide. Low-angle wide of the knitted street: a big grey knitted shop with a small grey accountant figure at its door holding a tidy folder; DIEGO small across the street. DIEGO: a crocheted amigurumi figure of a man in his thirties, terracotta knitted hoodie, teal knitted beanie, simple stitched dot eyes, only his colours are saturated (terracotta, teal, mustard). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The accountant hands the folder to the shop owner, DIEGO watches. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "No sé cuánto debo, y la carta me espera en la mesa",
+      "texto_tts": "",
+      "texto_pantalla": "Uno que entienda el modelo",
+      "plano": "Extreme close-up of DIEGO's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "extreme close-up on eyes. Extreme close-up of DIEGO's eyes; in the reflection a bright crowded trade-fair pavilion appears. DIEGO: a crocheted amigurumi figure of a man in his thirties, terracotta knitted hoodie, teal knitted beanie, simple stitched dot eyes, only his colours are saturated (terracotta, teal, mustard). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "DIEGO walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. The whole ",
+      "prompt_imagen": "wide tracking shot. DIEGO walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. The whole fair world is greyscale knitted diorama; only the main character carries colour. DIEGO: a crocheted amigurumi figure of a man in his thirties, terracotta knitted hoodie, teal knitted beanie, simple stitched dot eyes, only his colours are saturated (terracotta, teal, mustard). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 DIEGO walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están los contadores que entienden la tienda / Y te dicen qué debes antes de que te sorprenda",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; DIEGO small in the aisle lookin",
+      "prompt_imagen": "high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; DIEGO small in the aisle looking up. The whole fair world is greyscale knitted diorama; only the main character carries colour. DIEGO: a crocheted amigurumi figure of a man in his thirties, terracotta knitted hoodie, teal knitted beanie, simple stitched dot eyes, only his colours are saturated (terracotta, teal, mustard). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que eso lo miro cuando sea más grande (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Contadores especializados en ecommerce",
+      "plano": "At a knitted fair stand, DIEGO across from a grey knitted accountant figure with a felt chart of three clear bars; the envelope on the count",
+      "prompt_imagen": "two-shot at a stand. At a knitted fair stand, DIEGO across from a grey knitted accountant figure with a felt chart of three clear bars; the envelope on the counter, opened. DIEGO: a crocheted amigurumi figure of a man in his thirties, terracotta knitted hoodie, teal knitted beanie, simple stitched dot eyes, only his colours are saturated (terracotta, teal, mustard). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The accountant points at each bar, DIEGO nods, the exclamation mark on the envelope fades to a check. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of DIEGO seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. The",
+      "prompt_imagen": "medium shot, side angle. Side view of DIEGO seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. The whole fair world is greyscale knitted diorama; only the main character carries colour. DIEGO: a crocheted amigurumi figure of a man in his thirties, terracotta knitted hoodie, teal knitted beanie, simple stitched dot eyes, only his colours are saturated (terracotta, teal, mustard). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y ya sé cuánto debo, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "DIEGO facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. T",
+      "prompt_imagen": "medium close-up facing camera. DIEGO facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. The whole fair world is greyscale knitted diorama; only the main character carries colour. DIEGO: a crocheted amigurumi figure of a man in his thirties, terracotta knitted hoodie, teal knitted beanie, simple stitched dot eyes, only his colours are saturated (terracotta, teal, mustard). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 DIEGO looks at camera, presses the floating button, it pulses, nods. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y ya sé cuánto debo, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Ya sabes cuánto debes",
+      "plano": "The knitted office again: receipts in a tidy knitted folder, the laptop with a clean felt summary, DIEGO calm with coffee, the envelope with",
+      "prompt_imagen": "wide static shot, held. The knitted office again: receipts in a tidy knitted folder, the laptop with a clean felt summary, DIEGO calm with coffee, the envelope with a felt check mark. DIEGO: a crocheted amigurumi figure of a man in his thirties, terracotta knitted hoodie, teal knitted beanie, simple stitched dot eyes, only his colours are saturated (terracotta, teal, mustard). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 He sips, taps the folder, smiles with a stitch. Camera: gentle push-in. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "emotivo",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Crochet cumbia. DIEGO única con color. Verbatim de crochet. Dolor «no sé cuánto debo» 3 veces. No se dan cifras ni consejos tributarios."
+}

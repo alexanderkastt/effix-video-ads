@@ -1,0 +1,226 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p23-fraude-pagos-musical-skeleton",
+  "titulo": "El pago que era fraude",
+  "marca": "effix",
+  "publico": "Ciberseguridad y prevención de fraude",
+  "nicho_mapa": 23,
+  "angulo": "23.1",
+  "angulo_nombre": "Fraude en pagos",
+  "temperatura": "tibios",
+  "estilo": "skeleton",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "A una tienda le aprueban un pago, despachan, y a los quince días llega el contracargo: era fraude.",
+    "sintoma": "Vendes protección, y las tiendas solo te buscan después de perder.",
+    "explicacion_fallida": "Te dices que la seguridad se vende después del susto.",
+    "patron": "Pero las tiendas que ya crecieron contratan antes, porque alguien les mostró el riesgo con casos reales.",
+    "causa_raiz": "No te falta producto. Te falta estar delante de miles de tiendas antes del fraude.",
+    "mecanismo": "En Feria Effix hay más de sesenta mil asistentes que cobran por internet, y un stand para mostrarles el riesgo con ejemplos reales."
+  },
+  "dolor_frase": "era fraude",
+  "dolor_menciones_en_letra": 3,
+  "bible": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM security operations centre and trade-fair environment, warm amber and cold blue color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical.",
+  "negative_prompt": "no text, no captions, no words, no letters, no watermark, no UI, style drift, extra limbs, clothing",
+  "personajes": {
+    "fraude-pagos": {
+      "ficha": "The skeleton character of the Character Bible, identical in every shot.",
+      "voz": null,
+      "quien_es": "El esqueleto es la empresa de prevención de fraude que quiere que las tiendas la escuchen antes.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Reggaetón",
+    "suno_title": "Feria Effix — El pago que era fraude",
+    "suno_custom_lyrics": "[Verso 1]\nAprobaron el pago, despacharon, y era fraude\nQuince días después el contracargo, y nadie sabe\nYo vendo la protección que lo detiene antes\nPero era fraude, y me llaman después, no antes\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las tiendas que cobran cada día\nY tú les muestras el riesgo antes de que sea un día\n\n[Verso 2]\nMe digo que la seguridad se vende con el susto\nPero la que creció contrató antes, y con gusto\nPorque alguien de frente le mostró un caso real\nEra fraude otra vez, y yo sin estar ahí pa' evitarlo\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las tiendas que cobran cada día\nY tú les muestras el riesgo antes de que sea un día\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ya no es fraude, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "reggaeton",
+      "dembow groove",
+      "deep 808 bass",
+      "catchy sung hook",
+      "female vocal with attitude",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 96,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Aprobaron el pago, despacharon, y era fraude / Quince días después el contracargo, y nadie sabe",
+      "texto_tts": "",
+      "texto_pantalla": "Era fraude",
+      "plano": "The skeleton in a dim security room watching a big screen: a card-shape transaction turns green, a parcel-shape leaves, then fifteen calenda",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM security operations centre and trade-fair environment, warm amber and cold blue color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: wide establishing shot. The skeleton in a dim security room watching a big screen: a card-shape transaction turns green, a parcel-shape leaves, then fifteen calendar squares flip and the card turns red. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The card flips to red after the calendar squares, the skeleton's skull drops. Camera: gentle push-in. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Yo vendo la protección que lo detiene antes / Pero era fraude, y me llaman después, no antes",
+      "texto_tts": "",
+      "texto_pantalla": "¿Vendes prevención de fraude?",
+      "plano": "the skeleton turns to face the camera in a security operations room with screens of transactions, a transaction card-shape that turns red af",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM security operations centre and trade-fair environment, warm amber and cold blue color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: medium close-up. the skeleton turns to face the camera in a security operations room with screens of transactions, a transaction card-shape that turns red after the parcel already left still visible. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the skeleton turns to camera, holds the gaze, small nod. Camera: locked. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que la seguridad se vende con el susto",
+      "texto_tts": "",
+      "texto_pantalla": "Te buscan después de perder",
+      "plano": "Close-up of a bony hand on a phone: the only incoming call bubbles are timestamped after red card-shapes.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM security operations centre and trade-fair environment, warm amber and cold blue color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: close-up on hands and object. Close-up of a bony hand on a phone: the only incoming call bubbles are timestamped after red card-shapes. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Call bubbles arrive only after red cards, the hand sets the phone down. Camera: locked. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero la que creció contrató antes, y con gusto",
+      "texto_tts": "",
+      "texto_pantalla": "«Se vende con el susto»",
+      "plano": "The skeleton from behind, shrugging at a wall poster-shape of a scared face, tapping it as if to say 'that sells'.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM security operations centre and trade-fair environment, warm amber and cold blue color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: medium shot from behind. The skeleton from behind, shrugging at a wall poster-shape of a scared face, tapping it as if to say 'that sells'. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 It taps the poster, shrugs, turns away. Camera: gentle pull-back. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Porque alguien de frente le mostró un caso real",
+      "texto_tts": "",
+      "texto_pantalla": "Contratan antes, con un caso real",
+      "plano": "Low-angle wide: a tall glowing store building with a shield-shape on the door and green cards flowing in; the skeleton small on the street.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM security operations centre and trade-fair environment, warm amber and cold blue color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: low-angle wide. Low-angle wide: a tall glowing store building with a shield-shape on the door and green cards flowing in; the skeleton small on the street. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Green cards flow into the shielded store, the skeleton looks up. Camera: locked. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Era fraude otra vez, y yo sin estar ahí pa' evitarlo",
+      "texto_tts": "",
+      "texto_pantalla": "Antes del fraude",
+      "plano": "Extreme close-up of the skeleton's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM security operations centre and trade-fair environment, warm amber and cold blue color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: extreme close-up on eyes. Extreme close-up of the skeleton's eyes; in the reflection a bright crowded trade-fair pavilion appears. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "the skeleton walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM security operations centre and trade-fair environment, warm amber and cold blue color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: wide tracking shot. the skeleton walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the skeleton walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están las tiendas que cobran cada día / Y tú les muestras el riesgo antes de que sea un día",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; the skeleton small in the aisle",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM security operations centre and trade-fair environment, warm amber and cold blue color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; the skeleton small in the aisle looking up. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que la seguridad se vende con el susto (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Sesenta mil que cobran por internet",
+      "plano": "Two-shot at a fair stand: the skeleton showing a tablet where a red card-shape is caught by a shield before a parcel leaves; a blurred store",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM security operations centre and trade-fair environment, warm amber and cold blue color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: two-shot at a stand. Two-shot at a fair stand: the skeleton showing a tablet where a red card-shape is caught by a shield before a parcel leaves; a blurred store owner leans in, then two more. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The shield catches the red card, the parcel stays, the owner nods, two more lean in. Camera: locked. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of the skeleton seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking not",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM security operations centre and trade-fair environment, warm amber and cold blue color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: medium shot, side angle. Side view of the skeleton seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y ya no es fraude, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "the skeleton facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands be",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM security operations centre and trade-fair environment, warm amber and cold blue color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: medium close-up facing camera. the skeleton facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the skeleton looks at camera, presses the floating button, it pulses, nods. Camera: locked. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y ya no es fraude, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Ya no es fraude",
+      "plano": "The security room again: the big screen full of green cards and shields, the phone lit with incoming call bubbles before any red card, the s",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM security operations centre and trade-fair environment, warm amber and cold blue color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: wide static shot, held. The security room again: the big screen full of green cards and shields, the phone lit with incoming call bubbles before any red card, the skeleton relaxed. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Calls arrive before red cards, the skeleton answers one calmly. Camera: gentle push-in. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "energetico",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Skeleton reggaetón. B2B seguridad. Dolor «era fraude» 3 veces."
+}

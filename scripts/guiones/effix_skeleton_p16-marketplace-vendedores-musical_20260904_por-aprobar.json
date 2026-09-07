@@ -1,0 +1,226 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p16-marketplace-vendedores-musical-skeleton",
+  "titulo": "El marketplace sin vendedores",
+  "marca": "effix",
+  "publico": "Marketplaces",
+  "nicho_mapa": 16,
+  "angulo": "16.1",
+  "angulo_nombre": "Conseguir vendedores",
+  "temperatura": "calientes",
+  "estilo": "skeleton",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Abres el panel y los vendedores nuevos del mes se cuentan con una mano.",
+    "sintoma": "Inviertes en pauta para atraer vendedores y llegan de a uno, con poco catálogo.",
+    "explicacion_fallida": "Te dices que los vendedores buenos ya están en los grandes.",
+    "patron": "Pero cada día abren marcas y tiendas buscando dónde vender, y eligen al marketplace que conocieron de frente.",
+    "causa_raiz": "No te faltan compradores. Te falta estar donde los vendedores deciden dónde vender.",
+    "mecanismo": "En Feria Effix hay más de trescientas cincuenta empresas y miles de vendedores buscando canal, y tres días para reclutarlos de frente."
+  },
+  "dolor_frase": "con una mano los cuento",
+  "dolor_menciones_en_letra": 3,
+  "bible": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM tech office and trade-fair environment, warm amber and teal color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical.",
+  "negative_prompt": "no text, no captions, no words, no letters, no watermark, no UI, style drift, extra limbs, clothing",
+  "personajes": {
+    "marketplace-vendedores": {
+      "ficha": "The skeleton character of the Character Bible, identical in every shot.",
+      "voz": null,
+      "quien_es": "El esqueleto dirige un marketplace que no consigue vendedores.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Reggaetón",
+    "suno_title": "Feria Effix — El marketplace sin vendedores",
+    "suno_custom_lyrics": "[Verso 1]\nVendedores nuevos este mes: con una mano los cuento\nCompradores tengo, pero vendedores, lo lamento\nPauto para atraerlos y llegan de a uno\nCon una mano los cuento, y no llega ninguno\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los vendedores buscando un canal\nY eligen al que de frente les dijo cómo ganar\n\n[Verso 2]\nMe digo que los buenos ya están con los grandes\nPero cada día abren tiendas que buscan dónde\nY se van con el que les habló de frente un día\nCon una mano los cuento, y la mano vacía\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los vendedores buscando un canal\nY eligen al que de frente les dijo cómo ganar\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ya no me alcanza la mano, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "reggaeton",
+      "dembow groove",
+      "deep 808 bass",
+      "catchy sung hook",
+      "female vocal with attitude",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 96,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Vendedores nuevos este mes: con una mano los cuento / Compradores tengo, pero vendedores, lo lamento",
+      "texto_tts": "",
+      "texto_pantalla": "Con una mano los cuentas",
+      "plano": "The skeleton in a marketplace office in front of a big screen: a buyers bar towering and a sellers bar tiny; one bony hand raised counting o",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM tech office and trade-fair environment, warm amber and teal color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: wide establishing shot. The skeleton in a marketplace office in front of a big screen: a buyers bar towering and a sellers bar tiny; one bony hand raised counting on five fingers. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The skeleton counts on its fingers, stops at three, lowers the hand. Camera: gentle push-in. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Pauto para atraerlos y llegan de a uno / Con una mano los cuento, y no llega ninguno",
+      "texto_tts": "",
+      "texto_pantalla": "¿Tienes un marketplace?",
+      "plano": "the skeleton turns to face the camera in a marketplace office with a big screen of seller counts, the empty seller sign-up counter still vis",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM tech office and trade-fair environment, warm amber and teal color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: medium close-up. the skeleton turns to face the camera in a marketplace office with a big screen of seller counts, the empty seller sign-up counter still visible. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the skeleton turns to camera, holds the gaze, small nod. Camera: locked. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que los buenos ya están con los grandes",
+      "texto_tts": "",
+      "texto_pantalla": "Llegan de a uno",
+      "plano": "Close-up of a laptop: an ad spend slider goes up, a seller sign-up counter ticks once, a tiny catalogue with two items appears.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM tech office and trade-fair environment, warm amber and teal color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: close-up on hands and object. Close-up of a laptop: an ad spend slider goes up, a seller sign-up counter ticks once, a tiny catalogue with two items appears. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The slider rises, the counter ticks once, the tiny catalogue flickers. Camera: locked. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero cada día abren tiendas que buscan dónde",
+      "texto_tts": "",
+      "texto_pantalla": "«Ya están con los grandes»",
+      "plano": "The skeleton from behind, looking at a wall of giant marketplace logo-shapes, shrugging.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM tech office and trade-fair environment, warm amber and teal color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: medium shot from behind. The skeleton from behind, looking at a wall of giant marketplace logo-shapes, shrugging. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 It shrugs, the logo-shapes glow, it turns away. Camera: gentle pull-back. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Y se van con el que les habló de frente un día",
+      "texto_tts": "",
+      "texto_pantalla": "Eligen a quien les habló de frente",
+      "plano": "Low-angle wide: a street of new small shops opening their shutters one after another, each owner holding a phone looking for where to sell; ",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM tech office and trade-fair environment, warm amber and teal color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: low-angle wide. Low-angle wide: a street of new small shops opening their shutters one after another, each owner holding a phone looking for where to sell; the skeleton small at the corner. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Shutters roll up one by one, owners look around, the skeleton steps forward. Camera: locked. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Con una mano los cuento, y la mano vacía",
+      "texto_tts": "",
+      "texto_pantalla": "Donde deciden dónde vender",
+      "plano": "Extreme close-up of the skeleton's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM tech office and trade-fair environment, warm amber and teal color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: extreme close-up on eyes. Extreme close-up of the skeleton's eyes; in the reflection a bright crowded trade-fair pavilion appears. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "the skeleton walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM tech office and trade-fair environment, warm amber and teal color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: wide tracking shot. the skeleton walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the skeleton walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están los vendedores buscando un canal / Y eligen al que de frente les dijo cómo ganar",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; the skeleton small in the aisle",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM tech office and trade-fair environment, warm amber and teal color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; the skeleton small in the aisle looking up. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que los buenos ya están con los grandes (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Miles de vendedores buscando canal",
+      "plano": "Two-shot at a fair stand: the skeleton handing a tablet with a sign-up form-shape to a blurred seller, a second seller signing on another ta",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM tech office and trade-fair environment, warm amber and teal color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: two-shot at a stand. Two-shot at a fair stand: the skeleton handing a tablet with a sign-up form-shape to a blurred seller, a second seller signing on another tablet, a queue behind. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The first seller taps, a counter on the wall screen ticks, the queue moves. Camera: locked. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of the skeleton seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking not",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM tech office and trade-fair environment, warm amber and teal color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: medium shot, side angle. Side view of the skeleton seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y ya no me alcanza la mano, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "the skeleton facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands be",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM tech office and trade-fair environment, warm amber and teal color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: medium close-up facing camera. the skeleton facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the skeleton looks at camera, presses the floating button, it pulses, nods. Camera: locked. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y ya no me alcanza la mano, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Ya no te alcanza la mano",
+      "plano": "The marketplace office again: the sellers bar now as tall as the buyers bar, the sign-up counter spinning, the skeleton leaning back.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM tech office and trade-fair environment, warm amber and teal color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. SHOT: wide static shot, held. The marketplace office again: the sellers bar now as tall as the buyers bar, the sign-up counter spinning, the skeleton leaning back. Keep the exact same skeleton character from the reference image — identical skull shape, eye style and bone proportions. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The counter spins, the skeleton raises both hands, no fingers needed. Camera: gentle push-in. One action, one camera move, natural pace. Keep the identical skeleton character. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "energetico",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Skeleton reggaetón. B2B marketplace. Dolor «con una mano los cuento» 3 veces."
+}

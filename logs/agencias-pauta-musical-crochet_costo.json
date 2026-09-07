@@ -1,0 +1,45 @@
+{
+  "job": "agencias-pauta-musical-crochet",
+  "fecha": "2026-09-07",
+  "tanda": 2,
+  "orden": 2,
+  "estimado_usd": 4.612,
+  "real_usd": 6.448,
+  "desvio_usd": 1.836,
+  "por_concepto": {
+    "cancion": {
+      "llamadas": 4,
+      "usd": 0.464
+    },
+    "whisper": {
+      "llamadas": 4,
+      "usd": 0.384
+    },
+    "hero": {
+      "llamadas": 2,
+      "usd": 0.16
+    },
+    "escena": {
+      "llamadas": 12,
+      "usd": 0.96
+    },
+    "clip": {
+      "llamadas": 16,
+      "usd": 4.48
+    }
+  },
+  "causas_del_desvio": [
+    "Caida de internet en la fase de clips: 5 clips generados y cobrados que no se pudieron descargar (DNS sin resolver, timeouts de v3b.fal.media). Hubo que regenerarlos porque el codigo no guardaba la URL de fal.",
+    "3 canciones: la 1a con \"resultados\"/\"trafficker\" deformados, la 2a degenerada en \"de-de-de\" por guidance 2.2, la 3a descartada por Alexander (\"muy maluca\": el guion pedia ukulele acustico). La 4a, con estilo comercial, es la buena."
+  ],
+  "render": "assets/renders/agencias-pauta-musical-crochet.mp4",
+  "qa": {
+    "duracion_s": 58.04,
+    "lufs": -14.3,
+    "true_peak": -3.2,
+    "planos": 28,
+    "plano_min_s": 1.25,
+    "plano_max_s": 2.39,
+    "veredicto": "las 5 comprobaciones en verde"
+  }
+}

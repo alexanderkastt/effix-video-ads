@@ -1,0 +1,225 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p26-transformacion-musical-anime",
+  "titulo": "La transformación digital que no llega",
+  "marca": "effix",
+  "publico": "Ejecutivos y líderes de transformación empresarial",
+  "nicho_mapa": 26,
+  "angulo": "26.1",
+  "angulo_nombre": "Transformación digital",
+  "temperatura": "tibios",
+  "estilo": "anime",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "La junta aprobó la transformación digital hace un año, y lo único que hay es una presentación.",
+    "sintoma": "Todo el mundo habla de digital en tu empresa y ningún proceso cambió.",
+    "explicacion_fallida": "Te dices que primero hay que ordenar la casa.",
+    "patron": "Pero las empresas que ya se transformaron empezaron por un proceso pequeño que vieron funcionando en otra empresa.",
+    "causa_raiz": "No te falta estrategia. Te falta ver casos reales contados por quien los implementó.",
+    "mecanismo": "En Feria Effix hay más de doscientas ponencias de empresas que ya vendieron, atendieron y operaron en digital, y los proveedores que lo implementan."
+  },
+  "dolor_frase": "solo una presentación",
+  "dolor_menciones_en_letra": 3,
+  "bible": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, RICARDO: an anime-style man in his fifties, grey-streaked hair combed back, dark suit without tie, thoughtful eyes, a leather folder under his arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16.",
+  "negative_prompt": "3D render, photoreal, western cartoon, text, captions, letters, watermark, logo, UI, style drift, extra fingers, off-model face",
+  "personajes": {
+    "transformacion": {
+      "ficha": "RICARDO: an anime-style man in his fifties, grey-streaked hair combed back, dark suit without tie, thoughtful eyes, a leather folder under his arm. Same character design in every shot.",
+      "voz": null,
+      "quien_es": "RICARDO, personaje anime: gerente al que le pidieron transformación digital y no sabe por dónde.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Latin pop electrónico",
+    "suno_title": "Feria Effix — La transformación digital que no llega",
+    "suno_custom_lyrics": "[Verso 1]\nUn año después, solo una presentación\nLa junta aprobó, y no cambió ni una operación\nTodos hablan de digital en la reunión\nY lo único que hay es solo una presentación\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las empresas que ya lo hicieron\nY te cuentan de frente por dónde lo movieron\n\n[Verso 2]\nMe digo que primero hay que ordenar la casa\nPero el que ya cambió empezó con algo que pasa\nUn proceso pequeño que vio en otra empresa\nSolo una presentación, y la junta que espera\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las empresas que ya lo hicieron\nY te cuentan de frente por dónde lo movieron\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ya no es una presentación, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "latin pop electronic",
+      "bright synths and reggaeton drums",
+      "anthemic sung chorus",
+      "female vocal",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 104,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Un año después, solo una presentación / La junta aprobó, y no cambió ni una operación",
+      "texto_tts": "",
+      "texto_pantalla": "Solo una presentación",
+      "plano": "RICARDO in a boardroom in front of a big screen with a slide-shape showing a rocket icon on a launch pad; a calendar on the wall with twelve",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, wide establishing shot. RICARDO in a boardroom in front of a big screen with a slide-shape showing a rocket icon on a launch pad; a calendar on the wall with twelve months crossed; executives nodding. RICARDO: an anime-style man in his fifties, grey-streaked hair combed back, dark suit without tie, thoughtful eyes, a leather folder under his arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The rocket stays on the pad, the last month gets crossed, RICARDO closes his folder. Camera: gentle push-in. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Todos hablan de digital en la reunión / Y lo único que hay es solo una presentación",
+      "texto_tts": "",
+      "texto_pantalla": "¿Te pidieron transformación digital?",
+      "plano": "RICARDO turns to face the camera in a corporate boardroom with a big screen, a slide-shape with a rocket icon that never launches still visi",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, medium close-up. RICARDO turns to face the camera in a corporate boardroom with a big screen, a slide-shape with a rocket icon that never launches still visible. RICARDO: an anime-style man in his fifties, grey-streaked hair combed back, dark suit without tie, thoughtful eyes, a leather folder under his arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 RICARDO turns to camera, holds the gaze, small nod. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que primero hay que ordenar la casa",
+      "texto_tts": "",
+      "texto_pantalla": "Ningún proceso cambió",
+      "plano": "Close-up of the boardroom table: several folders with the same rocket icon, coffee cups, no laptop running anything.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, close-up on hands and object. Close-up of the boardroom table: several folders with the same rocket icon, coffee cups, no laptop running anything. RICARDO: an anime-style man in his fifties, grey-streaked hair combed back, dark suit without tie, thoughtful eyes, a leather folder under his arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 A hand opens a folder, same rocket, closes it. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero el que ya cambió empezó con algo que pasa",
+      "texto_tts": "",
+      "texto_pantalla": "«Primero ordenar la casa»",
+      "plano": "RICARDO from behind at a whiteboard drawing a big house shape with many rooms and writing check-boxes in each room.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, medium shot from behind. RICARDO from behind at a whiteboard drawing a big house shape with many rooms and writing check-boxes in each room. RICARDO: an anime-style man in his fifties, grey-streaked hair combed back, dark suit without tie, thoughtful eyes, a leather folder under his arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 He draws room after room, steps back, the rocket poster behind him stays still. Camera: gentle pull-back. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Un proceso pequeño que vio en otra empresa",
+      "texto_tts": "",
+      "texto_pantalla": "Empezaron con un proceso pequeño",
+      "plano": "Low-angle wide: across the street, a rival company's window where a small glowing process-diagram runs on a screen and two employees high-fi",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, low-angle wide. Low-angle wide: across the street, a rival company's window where a small glowing process-diagram runs on a screen and two employees high-five; RICARDO small at his window. RICARDO: an anime-style man in his fifties, grey-streaked hair combed back, dark suit without tie, thoughtful eyes, a leather folder under his arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The diagram runs, the high-five, RICARDO's folder lowers. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Solo una presentación, y la junta que espera",
+      "texto_tts": "",
+      "texto_pantalla": "Casos reales de quien lo hizo",
+      "plano": "Extreme close-up of RICARDO's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, extreme close-up on eyes. Extreme close-up of RICARDO's eyes; in the reflection a bright crowded trade-fair pavilion appears. RICARDO: an anime-style man in his fifties, grey-streaked hair combed back, dark suit without tie, thoughtful eyes, a leather folder under his arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "RICARDO walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, wide tracking shot. RICARDO walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. RICARDO: an anime-style man in his fifties, grey-streaked hair combed back, dark suit without tie, thoughtful eyes, a leather folder under his arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 RICARDO walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están las empresas que ya lo hicieron / Y te cuentan de frente por dónde lo movieron",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; RICARDO small in the aisle look",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; RICARDO small in the aisle looking up. RICARDO: an anime-style man in his fifties, grey-streaked hair combed back, dark suit without tie, thoughtful eyes, a leather folder under his arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que primero hay que ordenar la casa (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Empresas que ya lo hicieron",
+      "plano": "At a fair auditorium, RICARDO in the front row as a speaker on stage points at a simple three-step diagram; RICARDO writes in his folder.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, two-shot at a stand. At a fair auditorium, RICARDO in the front row as a speaker on stage points at a simple three-step diagram; RICARDO writes in his folder. RICARDO: an anime-style man in his fifties, grey-streaked hair combed back, dark suit without tie, thoughtful eyes, a leather folder under his arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker taps step one, RICARDO writes, looks up. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of RICARDO seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, medium shot, side angle. Side view of RICARDO seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. RICARDO: an anime-style man in his fifties, grey-streaked hair combed back, dark suit without tie, thoughtful eyes, a leather folder under his arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y ya no es una presentación, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "RICARDO facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, medium close-up facing camera. RICARDO facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. RICARDO: an anime-style man in his fifties, grey-streaked hair combed back, dark suit without tie, thoughtful eyes, a leather folder under his arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 RICARDO looks at camera, presses the floating button, it pulses, nods. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y ya no es una presentación, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Ya no es una presentación",
+      "plano": "The boardroom again: the big screen shows a small process-diagram running with green check marks, the rocket icon lifting off in the corner,",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, wide static shot, held. The boardroom again: the big screen shows a small process-diagram running with green check marks, the rocket icon lifting off in the corner, executives leaning in. RICARDO: an anime-style man in his fifties, grey-streaked hair combed back, dark suit without tie, thoughtful eyes, a leather folder under his arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Check marks appear, the rocket lifts, RICARDO allows a small smile. Camera: gentle push-in. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "energetico",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Anime latin pop electrónico. Dolor «solo una presentación» 3 veces."
+}

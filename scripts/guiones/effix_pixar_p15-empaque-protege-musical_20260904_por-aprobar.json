@@ -1,0 +1,226 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p15-empaque-protege-musical-pixar",
+  "titulo": "Llegó roto",
+  "marca": "effix",
+  "publico": "Empresas de empaques y packaging",
+  "nicho_mapa": 15,
+  "angulo": "15.1",
+  "angulo_nombre": "Empaque que protege",
+  "temperatura": "calientes",
+  "estilo": "pixar",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Una tienda despacha mil pedidos al mes y el veinte por ciento llega golpeado. Con la caja de otro.",
+    "sintoma": "Tú tienes el empaque que sí protege, y esa tienda no sabe que existes.",
+    "explicacion_fallida": "Te dices que las tiendas compran la caja más barata.",
+    "patron": "Pero las tiendas que crecen pagan más por la caja el día que cuentan cuánto pierden en devoluciones.",
+    "causa_raiz": "No te falta producto. Te falta poner tu caja en las manos de las tiendas que hoy pierden pedidos.",
+    "mecanismo": "En Feria Effix hay más de sesenta mil asistentes del ecommerce y trescientas cincuenta empresas, y un stand donde tu caja se toca."
+  },
+  "dolor_frase": "llegó roto",
+  "dolor_menciones_en_letra": 3,
+  "bible": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, CAJITA: an anthropomorphic sturdy cardboard box character with rounded edges, big kind eyes, short arms, a small crest of reinforced corners like a helmet. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16.",
+  "negative_prompt": "sharp edges, flat colors, 2D look, cheap animation feel, realistic human, photoreal, text, captions, letters, watermark, logo, UI, style drift, extra limbs",
+  "personajes": {
+    "empaque-protege": {
+      "ficha": "CAJITA: an anthropomorphic sturdy cardboard box character with rounded edges, big kind eyes, short arms, a small crest of reinforced corners like a helmet. Same character in every shot.",
+      "voz": null,
+      "quien_es": "CAJITA, una caja de envío antropomórfica: la empresa de empaques que quiere venderle a las tiendas.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Latin pop alegre",
+    "suno_title": "Feria Effix — Llegó roto",
+    "suno_custom_lyrics": "[Verso 1]\nOtro pedido de esa tienda llegó roto\nCon la caja de otro, y el cliente puso la foto\nYo tengo el empaque que protege de verdad\nPero llegó roto, y ella a mí no me va a buscar\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las tiendas que hoy pierden pedidos\nY tu caja en sus manos, eso es lo que no han tenido\n\n[Verso 2]\nMe digo que compran la caja más barata\nPero la que crece paga más cuando ve lo que gasta\nEn devoluciones, en clientes que se van\nLlegó roto otra vez, y yo sin mostrar\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las tiendas que hoy pierden pedidos\nY tu caja en sus manos, eso es lo que no han tenido\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ya no llega roto, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "latin pop",
+      "upbeat and bright",
+      "handclaps and brass stabs",
+      "catchy sung chorus",
+      "warm male vocal",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 108,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Otro pedido de esa tienda llegó roto / Con la caja de otro, y el cliente puso la foto",
+      "texto_tts": "",
+      "texto_pantalla": "Llegó roto",
+      "plano": "CAJITA on a packaging factory floor looking at a phone showing a photo of a crushed generic parcel with a sad face shape; a pile of sturdy s",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide establishing shot. CAJITA on a packaging factory floor looking at a phone showing a photo of a crushed generic parcel with a sad face shape; a pile of sturdy sample boxes behind. CAJITA: an anthropomorphic sturdy cardboard box character with rounded edges, big kind eyes, short arms, a small crest of reinforced corners like a helmet. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 CAJITA looks at the crushed parcel photo, then at the sturdy boxes, and sighs. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Yo tengo el empaque que protege de verdad / Pero llegó roto, y ella a mí no me va a buscar",
+      "texto_tts": "",
+      "texto_pantalla": "¿Fabricas empaques?",
+      "plano": "CAJITA turns to face the camera in a packaging factory floor with sample boxes, a crushed generic parcel with a sad face still visible.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up. CAJITA turns to face the camera in a packaging factory floor with sample boxes, a crushed generic parcel with a sad face still visible. CAJITA: an anthropomorphic sturdy cardboard box character with rounded edges, big kind eyes, short arms, a small crest of reinforced corners like a helmet. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 CAJITA turns to camera, holds the gaze, small nod. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que compran la caja más barata",
+      "texto_tts": "",
+      "texto_pantalla": "No saben que existes",
+      "plano": "Close-up of CAJITA's arms holding a perfect reinforced box while, on a screen behind, a store's chat with a message from CAJITA sits unread.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, close-up on hands and object. Close-up of CAJITA's arms holding a perfect reinforced box while, on a screen behind, a store's chat with a message from CAJITA sits unread. CAJITA: an anthropomorphic sturdy cardboard box character with rounded edges, big kind eyes, short arms, a small crest of reinforced corners like a helmet. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The box is held up, the chat stays grey. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero la que crece paga más cuando ve lo que gasta",
+      "texto_tts": "",
+      "texto_pantalla": "«Compran la más barata»",
+      "plano": "CAJITA from behind, shrugging at a price tag shape hanging on a thin flimsy box on a shelf.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot from behind. CAJITA from behind, shrugging at a price tag shape hanging on a thin flimsy box on a shelf. CAJITA: an anthropomorphic sturdy cardboard box character with rounded edges, big kind eyes, short arms, a small crest of reinforced corners like a helmet. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 It shrugs, the flimsy box wobbles. Camera: gentle pull-back. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "En devoluciones, en clientes que se van",
+      "texto_tts": "",
+      "texto_pantalla": "Pagan más cuando cuentan devoluciones",
+      "plano": "Low-angle wide: a store owner at a desk buried under returned crushed parcels, counting coin shapes that fly away; CAJITA small at the door.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, low-angle wide. Low-angle wide: a store owner at a desk buried under returned crushed parcels, counting coin shapes that fly away; CAJITA small at the door. CAJITA: an anthropomorphic sturdy cardboard box character with rounded edges, big kind eyes, short arms, a small crest of reinforced corners like a helmet. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Coins fly away, the owner holds his head, CAJITA steps forward. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Llegó roto otra vez, y yo sin mostrar",
+      "texto_tts": "",
+      "texto_pantalla": "Tu caja en sus manos",
+      "plano": "Extreme close-up of CAJITA's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, extreme close-up on eyes. Extreme close-up of CAJITA's eyes; in the reflection a bright crowded trade-fair pavilion appears. CAJITA: an anthropomorphic sturdy cardboard box character with rounded edges, big kind eyes, short arms, a small crest of reinforced corners like a helmet. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "CAJITA walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide tracking shot. CAJITA walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. CAJITA: an anthropomorphic sturdy cardboard box character with rounded edges, big kind eyes, short arms, a small crest of reinforced corners like a helmet. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 CAJITA walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están las tiendas que hoy pierden pedidos / Y tu caja en sus manos, eso es lo que no han tenido",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; CAJITA small in the aisle looki",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; CAJITA small in the aisle looking up. CAJITA: an anthropomorphic sturdy cardboard box character with rounded edges, big kind eyes, short arms, a small crest of reinforced corners like a helmet. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que compran la caja más barata (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Donde tu caja se toca",
+      "plano": "At a fair stand, CAJITA letting a store owner press and drop a reinforced box on the counter; it bounces intact; a small crowd leans in.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, two-shot at a stand. At a fair stand, CAJITA letting a store owner press and drop a reinforced box on the counter; it bounces intact; a small crowd leans in. CAJITA: an anthropomorphic sturdy cardboard box character with rounded edges, big kind eyes, short arms, a small crest of reinforced corners like a helmet. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The box drops, bounces intact, the owner's eyes widen. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of CAJITA seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium shot, side angle. Side view of CAJITA seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. CAJITA: an anthropomorphic sturdy cardboard box character with rounded edges, big kind eyes, short arms, a small crest of reinforced corners like a helmet. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y ya no llega roto, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "CAJITA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, medium close-up facing camera. CAJITA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. CAJITA: an anthropomorphic sturdy cardboard box character with rounded edges, big kind eyes, short arms, a small crest of reinforced corners like a helmet. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 CAJITA looks at camera, presses the floating button, it pulses, nods. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y ya no llega roto, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Ya no llega roto",
+      "plano": "The factory floor again: a conveyor of reinforced boxes with a store's abstract logo-shape, a delivery van loading, CAJITA proud at the fron",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, wide static shot, held. The factory floor again: a conveyor of reinforced boxes with a store's abstract logo-shape, a delivery van loading, CAJITA proud at the front. CAJITA: an anthropomorphic sturdy cardboard box character with rounded edges, big kind eyes, short arms, a small crest of reinforced corners like a helmet. Same character in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Boxes roll onto the van, CAJITA salutes. Camera: gentle push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Pixar latin pop, objeto antropomórfico. B2B empaques. Dolor «llegó roto» 3 veces."
+}

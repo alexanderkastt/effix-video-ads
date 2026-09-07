@@ -1,0 +1,226 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p20-chats-musical-cyberpunk",
+  "titulo": "Demasiados chats",
+  "marca": "effix",
+  "publico": "Atención al cliente y Customer Experience",
+  "nicho_mapa": 20,
+  "angulo": "20.1",
+  "angulo_nombre": "Demasiados chats",
+  "temperatura": "tibios",
+  "estilo": "cyberpunk",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Un cliente pregunta a las diez, le respondes a las dos, y ya compró en otro lado.",
+    "sintoma": "Los mensajes se acumulan, respondes por orden de llegada, y los que más valen se enfrían.",
+    "explicacion_fallida": "Te dices que necesitas contratar a otra persona.",
+    "patron": "Pero hay negocios con el triple de mensajes que responden en segundos con el mismo equipo.",
+    "causa_raiz": "No te falta gente. Te falta un sistema que responda lo repetido.",
+    "mecanismo": "En Feria Effix están las plataformas de atención, los chatbots y los que ya atienden miles de chats al día, con demostración en stand."
+  },
+  "dolor_frase": "demasiados chats",
+  "dolor_menciones_en_letra": 3,
+  "bible": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, NICO: a young man with a headset, a black tee with a neon collar light, tired eyes, sitting at a desk with multiple floating holographic chat windows. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16.",
+  "negative_prompt": "daylight, clean streets, cartoon, text, captions, letters, watermark, logo, UI, readable signs, style drift, extra limbs",
+  "personajes": {
+    "chats": {
+      "ficha": "NICO: a young man with a headset, a black tee with a neon collar light, tired eyes, sitting at a desk with multiple floating holographic chat windows. Same character in every shot.",
+      "voz": null,
+      "quien_es": "NICO, encargado de atención al cliente en una ciudad cyberpunk, ahogado en chats.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Reggaetón oscuro / trap latino",
+    "suno_title": "Feria Effix — Demasiados chats",
+    "suno_custom_lyrics": "[Verso 1]\nDemasiados chats y una sola persona\nPreguntó a las diez, respondí a las dos, y ya no funciona\nCompró en otro lado mientras yo contestaba\nDemasiados chats, y ninguno se acababa\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los sistemas que responden primero\nY te dejan a ti lo que cierra el dinero\n\n[Verso 2]\nMe digo que necesito contratar a alguien más\nPero uno con el triple responde en segundos, no más\nCon la misma gente, porque el sistema atiende\nDemasiados chats, y el mío no se entiende\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los sistemas que responden primero\nY te dejan a ti lo que cierra el dinero\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ya no son demasiados, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "dark reggaeton",
+      "trap latino influence",
+      "heavy 808s and synth arps",
+      "catchy sung hook",
+      "male vocal, confident",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 92,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Demasiados chats y una sola persona / Preguntó a las diez, respondí a las dos, y ya no funciona",
+      "texto_tts": "",
+      "texto_pantalla": "Demasiados chats",
+      "plano": "NICO at a neon desk with dozens of floating holographic chat windows stacking up around him, one at the bottom timestamped hours ago with a ",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, wide establishing shot. NICO at a neon desk with dozens of floating holographic chat windows stacking up around him, one at the bottom timestamped hours ago with a small cart-shape rolling away. NICO: a young man with a headset, a black tee with a neon collar light, tired eyes, sitting at a desk with multiple floating holographic chat windows. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Windows stack higher, the old chat fades, the cart rolls off. Camera: gentle push-in. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Compró en otro lado mientras yo contestaba / Demasiados chats, y ninguno se acababa",
+      "texto_tts": "",
+      "texto_pantalla": "¿Atiendes clientes por chat?",
+      "plano": "NICO turns to face the camera in a neon customer-service desk with floating chat holograms, a wall of holographic chat windows stacking up s",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, medium close-up. NICO turns to face the camera in a neon customer-service desk with floating chat holograms, a wall of holographic chat windows stacking up still visible. NICO: a young man with a headset, a black tee with a neon collar light, tired eyes, sitting at a desk with multiple floating holographic chat windows. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 NICO turns to camera, holds the gaze, small nod. Camera: locked. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que necesito contratar a alguien más",
+      "texto_tts": "",
+      "texto_pantalla": "Ya compró en otro lado",
+      "plano": "Close-up of NICO's hands typing while a holographic queue counter climbs; a clock hologram spins.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, close-up on hands and object. Close-up of NICO's hands typing while a holographic queue counter climbs; a clock hologram spins. NICO: a young man with a headset, a black tee with a neon collar light, tired eyes, sitting at a desk with multiple floating holographic chat windows. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Hands type, the counter climbs faster than the typing, the clock spins. Camera: locked. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero uno con el triple responde en segundos, no más",
+      "texto_tts": "",
+      "texto_pantalla": "«Necesito otra persona»",
+      "plano": "NICO from behind, pointing at an empty neon chair beside him, a hologram of a job-post shape floating above it.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, medium shot from behind. NICO from behind, pointing at an empty neon chair beside him, a hologram of a job-post shape floating above it. NICO: a young man with a headset, a black tee with a neon collar light, tired eyes, sitting at a desk with multiple floating holographic chat windows. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 He points at the chair, the job-post hologram flickers. Camera: gentle pull-back. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Con la misma gente, porque el sistema atiende",
+      "texto_tts": "",
+      "texto_pantalla": "El triple, en segundos",
+      "plano": "Low-angle wide: through a glass wall, a rival desk where one person sips coffee while holographic replies fire off by themselves; NICO small",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, low-angle wide. Low-angle wide: through a glass wall, a rival desk where one person sips coffee while holographic replies fire off by themselves; NICO small on his side. NICO: a young man with a headset, a black tee with a neon collar light, tired eyes, sitting at a desk with multiple floating holographic chat windows. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Replies fire off in a neat stream, the rival sips, NICO's headset slips. Camera: locked. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Demasiados chats, y el mío no se entiende",
+      "texto_tts": "",
+      "texto_pantalla": "Un sistema para lo repetido",
+      "plano": "Extreme close-up of NICO's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, extreme close-up on eyes. Extreme close-up of NICO's eyes; in the reflection a bright crowded trade-fair pavilion appears. NICO: a young man with a headset, a black tee with a neon collar light, tired eyes, sitting at a desk with multiple floating holographic chat windows. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "NICO walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, wide tracking shot. NICO walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. NICO: a young man with a headset, a black tee with a neon collar light, tired eyes, sitting at a desk with multiple floating holographic chat windows. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 NICO walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están los sistemas que responden primero / Y te dejan a ti lo que cierra el dinero",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; NICO small in the aisle looking",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; NICO small in the aisle looking up. NICO: a young man with a headset, a black tee with a neon collar light, tired eyes, sitting at a desk with multiple floating holographic chat windows. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que necesito contratar a alguien más (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Chatbots con demostración",
+      "plano": "At a fair stand under neon, NICO watching an exhibitor tap once on a tablet and a stream of holographic replies answer a queue; his mouth op",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, two-shot at a stand. At a fair stand under neon, NICO watching an exhibitor tap once on a tablet and a stream of holographic replies answer a queue; his mouth opens. NICO: a young man with a headset, a black tee with a neon collar light, tired eyes, sitting at a desk with multiple floating holographic chat windows. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 One tap, the stream answers, NICO's eyes widen. Camera: locked. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of NICO seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, medium shot, side angle. Side view of NICO seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. NICO: a young man with a headset, a black tee with a neon collar light, tired eyes, sitting at a desk with multiple floating holographic chat windows. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y ya no son demasiados, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "NICO facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, medium close-up facing camera. NICO facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. NICO: a young man with a headset, a black tee with a neon collar light, tired eyes, sitting at a desk with multiple floating holographic chat windows. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 NICO looks at camera, presses the floating button, it pulses, nods. Camera: locked. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y ya no son demasiados, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Ya no son demasiados",
+      "plano": "The neon desk again: holographic windows answering themselves in order, only two flagged windows in front of NICO, who leans back with coffe",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, wide static shot, held. The neon desk again: holographic windows answering themselves in order, only two flagged windows in front of NICO, who leans back with coffee. NICO: a young man with a headset, a black tee with a neon collar light, tired eyes, sitting at a desk with multiple floating holographic chat windows. Same character in every shot. blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Windows close themselves, NICO answers one flagged chat calmly. Camera: gentle push-in. Natural pace, neon flicker and rain, one primary motion. Same character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "tenso",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Cyberpunk reggaetón oscuro. Dolor «demasiados chats» 3 veces."
+}

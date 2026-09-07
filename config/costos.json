@@ -33,7 +33,8 @@
     "fal-ai/elevenlabs/sound-effects/v2__por_segundo": 0.002,
     "fal-ai/minimax-music/v2.6__por_cancion": 0.15,
     "fal-ai/whisper__por_segundo_de_computo": 0.0008,
-    "minimax/music-3__por_segundo": 0.002
+    "minimax/music-3__por_segundo": 0.002,
+    "fal-ai/bytedance/seedance/v1.5/pro/image-to-video__por_millon_tokens": 1.2
   },
   "presupuesto": {
     "_unidad": "USD por video terminado, todo incluido (video, imágenes, voz, música)",
@@ -47,5 +48,6 @@
       "la música son 0.20 fijos por pista, no por minuto"
     ],
     "fijado_el": "2026-09-01"
-  }
+  },
+  "_nota_seedance": "Seedance cobra por tokens de video: (alto x ancho x fps x segundos) / 1024. Verificado contra la doc de fal el 2026-09-07."
 }

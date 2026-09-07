@@ -58,8 +58,9 @@
     "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler.",
     "letra_previa": "[Verso 1]\nHaces videos para marcas, y te quedan muy bien\nPero el próximo cliente solo llega si alguien te recomienda\nSi tienes agencia de contenido y vives de referidos\nEste video es para ti\n\n[Verso 2]\nUn mes tienes tres clientes, y el otro ninguno\nY no puedes planear nada\nPorque no controlas quién te recomienda\n\n[Pre-coro]\nLas marcas que necesitan videos existen\nSolo tienes que estar donde ellas eligen\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nAhí están las marcas que necesitan tus videos\n\n[Verso 3]\nMás de trescientas cincuenta marcas buscando quién les haga contenido\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nAhí están las marcas que necesitan tus videos",
     "modelo_previo": "fal-ai/minimax-music/v2.6",
-    "duracion_ms": 58000,
-    "nota_modelo": "MiniMax Music 3: la version nueva de la 2.6 con la que empezo el proyecto. Trae campo `duration` (encargar los segundos que caben en el formato) y `guidance_scale` (apretar la diccion), y cuesta 0.002 por segundo. ElevenLabs Music se descarto porque devuelve la voz cantada SIN acompanamiento: sirve para medir diccion, no como pista de un ad musical."
+    "duracion_ms": 68000,
+    "nota_modelo": "MiniMax Music 3: la version nueva de la 2.6 con la que empezo el proyecto. Trae campo `duration` (encargar los segundos que caben en el formato) y `guidance_scale` (apretar la diccion), y cuesta 0.002 por segundo. ElevenLabs Music se descarto porque devuelve la voz cantada SIN acompanamiento: sirve para medir diccion, no como pista de un ad musical.",
+    "nota_duracion": "68s es un TOPE, no la duracion pedida: Music 3 puede parar antes y asi cierra la cancion sola. Pedirle 58 exactos la cortaba en seco. La cancion no se recorta por el final (regla de Alexander): el video se estira con planos reencuadrados, que no cuestan nada."
   },
   "lineas": [
     {

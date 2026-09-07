@@ -1,0 +1,485 @@
+{
+  "_nota": "Mapa completo de públicos y ángulos de Feria Effix 2026, entregado por Alexander el 2026-09-04. Fuente de verdad para nichos: 28 públicos por temperatura. Los nichos con micro-situación construida en código viven en src/nichos_effix.py; los bancos de ángulos en config/nichos/*-angulos.json; los guiones del ángulo .2 de cada público en outputs/GUIONES-EQUIPO-AV-28-publicos.md y config/nichos/guiones-av-28.json.",
+  "total_publicos": 28,
+  "total_angulos": 282,
+  "publicos": [
+    {
+      "numero": 1,
+      "temperatura": "calientes",
+      "nombre": "Emprendedores que están comenzando en e-commerce",
+      "angulos": {
+        "1.1": "Cómo empezar a vender por Internet",
+        "1.2": "Elegir qué producto vender",
+        "1.3": "Primera tienda online",
+        "1.4": "Primera venta",
+        "1.5": "No saber qué plataforma utilizar",
+        "1.6": "No saber cuánto invertir",
+        "1.7": "Primeras campañas de publicidad",
+        "1.8": "Primeros pedidos y logística",
+        "1.9": "Miedo a perder dinero",
+        "1.10": "No saber por dónde empezar"
+      }
+    },
+    {
+      "numero": 2,
+      "temperatura": "calientes",
+      "nombre": "Dueños de tiendas online",
+      "angulos": {
+        "2.1": "Pocas ventas",
+        "2.2": "Carritos abandonados",
+        "2.3": "Checkout que no convierte",
+        "2.4": "Clientes que preguntan y no compran",
+        "2.5": "Inventario desactualizado",
+        "2.6": "Pedidos manuales",
+        "2.7": "Atención al cliente",
+        "2.8": "Costos operativos",
+        "2.9": "Rentabilidad real",
+        "2.10": "Necesidad de vender más"
+      }
+    },
+    {
+      "numero": 3,
+      "temperatura": "calientes",
+      "nombre": "Empresarios de e-commerce en crecimiento",
+      "angulos": {
+        "3.1": "Pasar de 10 a 100 pedidos diarios",
+        "3.2": "Escalar publicidad",
+        "3.3": "Contratar equipo",
+        "3.4": "Automatizar procesos",
+        "3.5": "Controlar inventario",
+        "3.6": "Mejorar márgenes",
+        "3.7": "Crecer sin perder rentabilidad",
+        "3.8": "Delegar la operación",
+        "3.9": "Tomar decisiones con datos",
+        "3.10": "Expandirse a nuevos mercados"
+      }
+    },
+    {
+      "numero": 4,
+      "temperatura": "calientes",
+      "nombre": "Vendedores de redes sociales",
+      "angulos": {
+        "4.1": "Demasiados mensajes en WhatsApp",
+        "4.2": "Responder manualmente",
+        "4.3": "Viralizarse y no poder atender la demanda",
+        "4.4": "Perder clientes por no responder rápido",
+        "4.5": "Convertir seguidores en compradores",
+        "4.6": "Vender por DM",
+        "4.7": "Catálogos por WhatsApp",
+        "4.8": "Automatización de conversaciones",
+        "4.9": "Cobros por redes sociales",
+        "4.10": "Escalar ventas desde redes"
+      }
+    },
+    {
+      "numero": 5,
+      "temperatura": "calientes",
+      "nombre": "Dropshippers",
+      "angulos": {
+        "5.1": "Encontrar productos ganadores",
+        "5.2": "Encontrar proveedores confiables",
+        "5.3": "Problemas de inventario",
+        "5.4": "Tiempos de entrega",
+        "5.5": "Devoluciones",
+        "5.6": "Márgenes",
+        "5.7": "Escalar pedidos",
+        "5.8": "Automatizar operaciones",
+        "5.9": "Vender en otros países",
+        "5.10": "Elegir nuevos productos"
+      }
+    },
+    {
+      "numero": 6,
+      "temperatura": "calientes",
+      "nombre": "Marcas, fabricantes e importadores",
+      "angulos": {
+        "6.1": "Llevar una marca al mundo digital",
+        "6.2": "Vender directamente al consumidor",
+        "6.3": "Exceso de inventario",
+        "6.4": "Lanzamiento de productos",
+        "6.5": "Distribución online",
+        "6.6": "Importación y abastecimiento",
+        "6.7": "Encontrar nuevos canales de venta",
+        "6.8": "Marketplace vs tienda propia",
+        "6.9": "Internacionalización",
+        "6.10": "Escalar una marca"
+      }
+    },
+    {
+      "numero": 7,
+      "temperatura": "calientes",
+      "nombre": "Mayoristas y distribuidores",
+      "angulos": {
+        "7.1": "Digitalizar ventas mayoristas",
+        "7.2": "Conseguir nuevos clientes",
+        "7.3": "Crear canal B2B online",
+        "7.4": "Manejo de inventario",
+        "7.5": "Pedidos de clientes",
+        "7.6": "Automatización comercial",
+        "7.7": "Llegar a nuevos comerciantes",
+        "7.8": "Vender directamente",
+        "7.9": "Distribución nacional",
+        "7.10": "Expansión internacional"
+      }
+    },
+    {
+      "numero": 8,
+      "temperatura": "calientes",
+      "nombre": "Marketing, publicidad y adquisición digital",
+      "angulos": {
+        "8.1": "Campañas que dejaron de funcionar",
+        "8.2": "CPM cada vez más caro",
+        "8.3": "ROAS que cae",
+        "8.4": "Tráfico que no convierte",
+        "8.5": "Escalar campañas",
+        "8.6": "Encontrar nuevos canales",
+        "8.7": "Automatizar marketing",
+        "8.8": "IA aplicada al marketing",
+        "8.9": "Creación masiva de anuncios",
+        "8.10": "Conseguir mejores resultados para clientes"
+      }
+    },
+    {
+      "numero": 9,
+      "temperatura": "calientes",
+      "nombre": "Creadores de contenido e influencers que venden",
+      "angulos": {
+        "9.1": "Convertir audiencia en ventas",
+        "9.2": "Monetizar seguidores",
+        "9.3": "Crear una marca propia",
+        "9.4": "Lanzar productos",
+        "9.5": "Afiliados",
+        "9.6": "UGC",
+        "9.7": "Vender por TikTok",
+        "9.8": "Vender por Instagram",
+        "9.9": "Crear comunidad",
+        "9.10": "Escalar sin depender únicamente de las redes"
+      }
+    },
+    {
+      "numero": 10,
+      "temperatura": "calientes",
+      "nombre": "Consultores y profesionales independientes de e-commerce",
+      "angulos": {
+        "10.1": "Conseguir clientes",
+        "10.2": "Demostrar experiencia",
+        "10.3": "Crear autoridad",
+        "10.4": "Encontrar nuevas herramientas",
+        "10.5": "Conseguir alianzas",
+        "10.6": "Networking",
+        "10.7": "Actualizar conocimientos",
+        "10.8": "Conseguir referidos",
+        "10.9": "Crear nuevos servicios",
+        "10.10": "Posicionamiento profesional"
+      }
+    },
+    {
+      "numero": 11,
+      "temperatura": "calientes",
+      "nombre": "Tecnología y soluciones para e-commerce",
+      "angulos": {
+        "11.1": "CRM",
+        "11.2": "Inteligencia artificial",
+        "11.3": "Automatización",
+        "11.4": "Analítica",
+        "11.5": "Big Data",
+        "11.6": "Plataformas de e-commerce",
+        "11.7": "SaaS",
+        "11.8": "Gestión empresarial",
+        "11.9": "Personalización",
+        "11.10": "Productividad",
+        "11.11": "Integración de herramientas",
+        "11.12": "Datos para tomar decisiones"
+      }
+    },
+    {
+      "numero": 12,
+      "temperatura": "calientes",
+      "nombre": "Medios de pago y Fintech",
+      "angulos": {
+        "12.1": "Checkout",
+        "12.2": "Carritos abandonados por problemas de pago",
+        "12.3": "Conversión",
+        "12.4": "Nuevos medios de pago",
+        "12.5": "Pagos internacionales",
+        "12.6": "Fraude",
+        "12.7": "Contracargos",
+        "12.8": "Flujo de caja",
+        "12.9": "Financiación al consumidor",
+        "12.10": "Experiencia de pago"
+      }
+    },
+    {
+      "numero": 13,
+      "temperatura": "calientes",
+      "nombre": "Logística, fulfillment y última milla",
+      "angulos": {
+        "13.1": "Pedidos atrasados",
+        "13.2": "Entregas tardías",
+        "13.3": "Rastreo de pedidos",
+        "13.4": "Devoluciones",
+        "13.5": "Costos de envío",
+        "13.6": "Fulfillment",
+        "13.7": "Picking y packing",
+        "13.8": "Inventario",
+        "13.9": "Escalar despachos",
+        "13.10": "Experiencia después de la compra"
+      }
+    },
+    {
+      "numero": 14,
+      "temperatura": "calientes",
+      "nombre": "Proveedores de dropshipping",
+      "angulos": {
+        "14.1": "Conseguir vendedores",
+        "14.2": "Encontrar nuevos clientes",
+        "14.3": "Captar dropshippers",
+        "14.4": "Expandirse por Latinoamérica",
+        "14.5": "Catálogo de productos",
+        "14.6": "Inventario",
+        "14.7": "Logística",
+        "14.8": "Integraciones",
+        "14.9": "Automatización",
+        "14.10": "Crear alianzas"
+      }
+    },
+    {
+      "numero": 15,
+      "temperatura": "calientes",
+      "nombre": "Empresas de empaques y packaging",
+      "angulos": {
+        "15.1": "Empaque que protege",
+        "15.2": "Empaque que vende",
+        "15.3": "Experiencia de unboxing",
+        "15.4": "Reducción de costos",
+        "15.5": "Personalización",
+        "15.6": "Branding",
+        "15.7": "Empaques sostenibles",
+        "15.8": "Escalar producción",
+        "15.9": "Envíos",
+        "15.10": "Diferenciación de marca"
+      }
+    },
+    {
+      "numero": 16,
+      "temperatura": "calientes",
+      "nombre": "Marketplaces",
+      "angulos": {
+        "16.1": "Conseguir vendedores",
+        "16.2": "Aumentar ventas",
+        "16.3": "Competencia",
+        "16.4": "Experiencia del vendedor",
+        "16.5": "Logística",
+        "16.6": "Pagos",
+        "16.7": "Nuevos mercados",
+        "16.8": "Tecnología",
+        "16.9": "Adquisición de clientes",
+        "16.10": "Internacionalización"
+      }
+    },
+    {
+      "numero": 17,
+      "temperatura": "tibios",
+      "nombre": "Internacionalización y expansión de negocios",
+      "angulos": {
+        "17.1": "Vender en otro país",
+        "17.2": "Primer mercado internacional",
+        "17.3": "Pagos internacionales",
+        "17.4": "Logística internacional",
+        "17.5": "Regulaciones",
+        "17.6": "Adaptar productos",
+        "17.7": "Encontrar proveedores",
+        "17.8": "Encontrar distribuidores",
+        "17.9": "Marketplace internacional",
+        "17.10": "Expansión LATAM"
+      }
+    },
+    {
+      "numero": 18,
+      "temperatura": "tibios",
+      "nombre": "Comerciantes y negocios físicos que quieren vender online",
+      "angulos": {
+        "18.1": "Tengo tienda física pero no vendo online",
+        "18.2": "Crear primera tienda online",
+        "18.3": "Digitalizar inventario",
+        "18.4": "Vender por WhatsApp",
+        "18.5": "Vender por redes",
+        "18.6": "Llevar clientes físicos al canal digital",
+        "18.7": "Omnicanalidad",
+        "18.8": "Entregas a domicilio",
+        "18.9": "Pagos digitales",
+        "18.10": "Competir con negocios digitales"
+      }
+    },
+    {
+      "numero": 19,
+      "temperatura": "tibios",
+      "nombre": "Retail",
+      "angulos": {
+        "19.1": "Omnicanalidad",
+        "19.2": "E-commerce",
+        "19.3": "Experiencia del cliente",
+        "19.4": "Inventario",
+        "19.5": "Logística",
+        "19.6": "Marketplace",
+        "19.7": "Personalización",
+        "19.8": "Datos",
+        "19.9": "Automatización",
+        "19.10": "Transformación digital"
+      }
+    },
+    {
+      "numero": 20,
+      "temperatura": "tibios",
+      "nombre": "Atención al cliente y Customer Experience",
+      "angulos": {
+        "20.1": "Demasiados chats",
+        "20.2": "Responder rápido",
+        "20.3": "Clientes insatisfechos",
+        "20.4": "Automatización",
+        "20.5": "Chatbots",
+        "20.6": "WhatsApp",
+        "20.7": "Omnicanalidad",
+        "20.8": "Recuperación de clientes",
+        "20.9": "Fidelización",
+        "20.10": "Experiencia postventa"
+      }
+    },
+    {
+      "numero": 21,
+      "temperatura": "tibios",
+      "nombre": "Contenido para e-commerce",
+      "angulos": {
+        "21.1": "Fotos que no venden",
+        "21.2": "Videos para anuncios",
+        "21.3": "UGC",
+        "21.4": "Reels",
+        "21.5": "TikTok",
+        "21.6": "Catálogos",
+        "21.7": "Creatividades publicitarias",
+        "21.8": "Producción de contenido a escala",
+        "21.9": "IA para creación de contenido",
+        "21.10": "Diferenciación visual"
+      }
+    },
+    {
+      "numero": 22,
+      "temperatura": "tibios",
+      "nombre": "Desarrollo, programación e integraciones",
+      "angulos": {
+        "22.1": "APIs",
+        "22.2": "Integraciones",
+        "22.3": "Conectar diferentes plataformas",
+        "22.4": "Automatizaciones",
+        "22.5": "Desarrollo de tiendas",
+        "22.6": "Plugins",
+        "22.7": "Aplicaciones",
+        "22.8": "Errores de integración",
+        "22.9": "Escalabilidad tecnológica",
+        "22.10": "Reducir procesos manuales"
+      }
+    },
+    {
+      "numero": 23,
+      "temperatura": "tibios",
+      "nombre": "Ciberseguridad y prevención de fraude",
+      "angulos": {
+        "23.1": "Fraude en pagos",
+        "23.2": "Robo de cuentas",
+        "23.3": "Protección de datos",
+        "23.4": "Contracargos",
+        "23.5": "Identidad digital",
+        "23.6": "Ataques a tiendas",
+        "23.7": "Seguridad de plataformas",
+        "23.8": "Prevención de pérdidas",
+        "23.9": "Confianza del consumidor",
+        "23.10": "Seguridad empresarial"
+      }
+    },
+    {
+      "numero": 24,
+      "temperatura": "tibios",
+      "nombre": "Servicios profesionales para e-commerce",
+      "angulos": {
+        "24.1": "Impuestos",
+        "24.2": "Contabilidad",
+        "24.3": "Rentabilidad real",
+        "24.4": "Flujo de caja",
+        "24.5": "Protección de datos",
+        "24.6": "Términos y condiciones",
+        "24.7": "Propiedad intelectual",
+        "24.8": "Regulación",
+        "24.9": "Comercio internacional",
+        "24.10": "Orden financiero y legal"
+      }
+    },
+    {
+      "numero": 25,
+      "temperatura": "tibios",
+      "nombre": "Educación y formación en e-commerce",
+      "angulos": {
+        "25.1": "Aprender e-commerce",
+        "25.2": "Emprender",
+        "25.3": "Nuevas tecnologías",
+        "25.4": "IA",
+        "25.5": "Marketing digital",
+        "25.6": "Primer negocio",
+        "25.7": "Actualización profesional",
+        "25.8": "Formación práctica",
+        "25.9": "Conexión universidad-empresa",
+        "25.10": "Nuevas oportunidades laborales"
+      }
+    },
+    {
+      "numero": 26,
+      "temperatura": "tibios",
+      "nombre": "Ejecutivos y líderes de transformación empresarial",
+      "angulos": {
+        "26.1": "Transformación digital",
+        "26.2": "IA en la empresa",
+        "26.3": "Automatización",
+        "26.4": "Digitalización de procesos",
+        "26.5": "E-commerce corporativo",
+        "26.6": "Datos para tomar decisiones",
+        "26.7": "Nuevos canales de venta",
+        "26.8": "Omnicanalidad",
+        "26.9": "Innovación",
+        "26.10": "Competencia digital"
+      }
+    },
+    {
+      "numero": 27,
+      "temperatura": "frios",
+      "nombre": "Empresarios que buscan networking y alianzas",
+      "angulos": {
+        "27.1": "Encontrar socios",
+        "27.2": "Encontrar proveedores",
+        "27.3": "Conseguir clientes",
+        "27.4": "Buscar distribuidores",
+        "27.5": "Alianzas estratégicas",
+        "27.6": "Networking empresarial",
+        "27.7": "Conocer nuevas empresas",
+        "27.8": "Entrar a nuevos mercados",
+        "27.9": "Encontrar oportunidades",
+        "27.10": "Conectar con líderes del sector"
+      }
+    },
+    {
+      "numero": 28,
+      "temperatura": "frios",
+      "nombre": "Personas que quieren convertirse en referentes del e-commerce",
+      "angulos": {
+        "28.1": "Construir marca personal",
+        "28.2": "Ser reconocido en el sector",
+        "28.3": "Crear contenido",
+        "28.4": "Compartir conocimiento",
+        "28.5": "Networking",
+        "28.6": "Conseguir oportunidades",
+        "28.7": "Hablar en eventos",
+        "28.8": "Crear autoridad",
+        "28.9": "Conectar con marcas",
+        "28.10": "Convertirse en referente"
+      }
+    }
+  ]
+}

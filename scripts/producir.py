@@ -41,6 +41,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import fal_client
 
 from src import cost_estimator, guion_aprobado, mezcla, ritmo, transcripcion
+from src.descargas import recuperar_pendientes
 from src.audio_extra import (MODELO_CANCION_11, MODELO_CANCION_MM3,
                              componer_cancion, componer_cancion_elevenlabs,
                              componer_cancion_minimax3)
@@ -58,7 +59,22 @@ MODELO_EDIT = "fal-ai/nano-banana-2/edit"
 _ACEPTA_KEYFRAME_FINAL = {
     "fal-ai/kling-video/o1/standard/image-to-video": "end_image_url",
     "fal-ai/kling-video/o1/pro/image-to-video": "end_image_url",
+    "fal-ai/bytedance/seedance/v1.5/pro/image-to-video": "end_image_url",
 }
+
+# Seedance 1.5 Pro: el modelo de video del proyecto desde el 2026-09-07. Acepta
+# frame final (continuidad entre planos), duraciones de 4 a 12s (nada de
+# redondear al tramo de 5 o 10 de Kling) y 1080p nativo en 9:16. Cobra por
+# tokens de video y no por segundo, así que su costo se calcula aparte.
+SEEDANCE = "fal-ai/bytedance/seedance/v1.5/pro/image-to-video"
+RESOLUCIONES_TOKENS = {"480p": (480, 854), "720p": (720, 1280), "1080p": (1080, 1920)}
+
+
+def _cuesta_seedance(ad: "Ad", segundos: int) -> float:
+    """tokens = (alto x ancho x fps x duracion) / 1024, y se paga por millon."""
+    w, h = RESOLUCIONES_TOKENS.get(ad.resolucion, RESOLUCIONES_TOKENS["1080p"])
+    tokens = (h * w * RENDER_FPS * segundos) / 1024
+    return tokens / 1_000_000 * _tarifa(f"{SEEDANCE}__por_millon_tokens")
 
 # El texto se dibuja en post, nunca se le pide al modelo: si se le pide, inventa
 # letras que parecen palabras y no lo son.
@@ -117,6 +133,7 @@ class Ad:
         self.modelo_img = modelos.get("imagen", MODELO_IMG)
         self.modelo_edit = modelos.get("edit", MODELO_EDIT)
         self.dur_clip = guion_aprobado.duracion_clip_s(self.g)
+        self.resolucion = (self.g.get("modelos") or {}).get("resolucion", "1080p")
 
     @property
     def lineas(self) -> list[dict[str, Any]]:
@@ -222,6 +239,10 @@ def fase_cancion(ad: Ad, *, forzar: bool = False) -> Path:
         inicio = time.monotonic()
         musica = ad.g["musica"]
         if musica.get("modelo") == MODELO_CANCION_MM3:
+            # `duration` es un tope, no una orden: se pide con margen para
+            # que la cancion termine su ultima frase y su cierre en vez de
+            # cortarse en seco en el segundo pedido. El video se estira
+            # despues para cubrir lo que dure.
             seg = int((musica.get("duracion_ms") or 58000) / 1000)
             cruda = componer_cancion_minimax3(
                 musica, job_id=ad.job, destino=cruda, duracion_s=seg)
@@ -264,26 +285,31 @@ def fase_cancion(ad: Ad, *, forzar: bool = False) -> Path:
 
 
 def _recortar(ad: Ad, cruda: Path, inicio_s: float, fin_voz_s: float) -> Path:
-    """Recorta la canción al tramo útil: la voz, más la cola que la cierra.
+    """Quita la intro instrumental y deja que la canción TERMINE ENTERA.
 
-    Cortar en la última palabra suena a cable arrancado: el oído espera que el
-    acorde resuelva y en su lugar hay silencio. Así que el recorte se lleva
-    `COLA_INSTRUMENTAL_S` segundos más —los que la canción ya trae grabados
-    después del último verso— y el fade de salida cae justo encima de ellos: la
-    voz termina y la música se apaga sola, en vez de que las dos cosas pasen en
-    el mismo frame.
+    Regla de Alexander (2026-09-07): "la canción no la puedes cortar; si toca,
+    complementa los videos". Antes se recortaba en la última palabra más unos
+    segundos de cola, y el final se oía arrancado. Ahora el único recorte es por
+    delante —la intro instrumental larga, que en un feed es scroll perdido— y la
+    canción llega hasta su último frame.
 
-    Si la canción no tiene esa cola, se usa la que haya. Nunca se inventa
-    silencio: un fade sobre nada suena igual de brusco.
+    El video se estira para cubrirla: la última línea se queda en pantalla lo
+    que dure la cola, repartida en planos reencuadrados de su propio clip. Eso
+    no cuesta nada, y es la razón por la que el audio puede mandar.
     """
     destino = ad.ruta_cancion(util=True)
     total = _duracion(cruda)
-    fin_s = round(min(total, fin_voz_s + COLA_INSTRUMENTAL_S), 3)
+    # La canción va ENTERA, de su primer frame al último. Alexander: "no me
+    # moches las canciones, me queda mal". Antes se recortaba la intro
+    # instrumental por delante y eso arrancaba el ad a mitad de compás; el
+    # video se estira para cubrirla, que no cuesta nada.
+    inicio_s = 0.0
+    fin_s = total
     dur = round(fin_s - inicio_s, 3)
     cola = round(fin_s - fin_voz_s, 3)
-    # El fade cubre la cola entera, con un piso para que se note que es un
-    # cierre y no un corte.
-    fade = round(min(max(cola, 0.5), FADE_FINAL_S), 2)
+    # Fade mínimo, sólo para que no haya un clic en el corte del archivo. Si la
+    # canción ya trae su propio cierre, esto es casi imperceptible.
+    fade = round(min(max(cola, 0.25), FADE_FINAL_S), 2)
     subprocess.run(
         [env("FFMPEG_BIN", "ffmpeg"), "-y", "-hide_banner", "-loglevel", "error",
          "-ss", str(inicio_s), "-to", str(fin_s), "-i", str(cruda),
@@ -412,6 +438,10 @@ def _escena(ad: Ad, linea: dict, sufijo: str, clave: str, url: str) -> Path:
 
 
 def fase_escenas(ad: Ad) -> None:
+    # Si la corrida anterior murió con la red caída, esto baja lo que
+    # ya se pagó antes de plantearse generar nada nuevo.
+    for r in recuperar_pendientes(ad.clips_dir):
+        print(f"  recuperado sin regenerar: {r.name}")
     if not (ad.clips_dir / "hero.png").exists():
         raise SystemExit("Primero la fase `hero`: las escenas se editan desde ella.")
     url = _url_hero(ad)
@@ -434,53 +464,114 @@ def fase_escenas(ad: Ad) -> None:
 
 # ───────────────────────────── clips ────────────────────────────────
 
-def _clip(ad: Ad, linea: dict) -> Path:
-    n = linea["n"]
-    destino = ad.clips_dir / f"clip_{n:02d}.mp4"
-    if destino.exists():
-        return destino
-
-    base = ad.clips_dir / f"clip_{n:02d}_base.png"
+def _url_escena(ad: Ad, n_linea: int) -> str:
+    """Sube (una vez) la escena de una línea y devuelve su URL en fal."""
+    ficha = ad.clips_dir / f"clip_{n_linea:02d}_base_url.txt"
+    if ficha.exists():
+        return ficha.read_text(encoding="utf-8").strip()
+    base = ad.clips_dir / f"clip_{n_linea:02d}_base.png"
     if not base.exists():
         raise FileNotFoundError(f"Falta la escena {base.name}")
     with open(base, "rb") as fh:
-        payload = {"image_url": fal_client.upload(fh.read(), "image/png")}
+        url = fal_client.upload(fh.read(), "image/png")
+    ficha.write_text(url, encoding="utf-8")
+    return url
 
-    # El frame final sólo existe en los endpoints que lo venden. Kling 2.1
-    # standard no lo acepta, y mandárselo revienta la llamada: si el guion trae
-    # keyframe pero el modelo no lo soporta, se avisa y se genera sin él.
-    fin = ad.clips_dir / f"clip_{n:02d}_fin.png"
-    if fin.exists():
-        if _ACEPTA_KEYFRAME_FINAL.get(ad.modelo_video):
-            with open(fin, "rb") as fh:
-                payload[_ACEPTA_KEYFRAME_FINAL[ad.modelo_video]] = fal_client.upload(
-                    fh.read(), "image/png")
-        else:
-            print(f"  aviso clip {n:02d}: {ad.modelo_video} no acepta frame final; "
-                  f"se genera sólo desde la imagen inicial.")
 
-    payload |= {"prompt": linea["prompt_video"], "duration": str(ad.dur_clip)}
-    if ad.g.get("negative_prompt"):
-        payload["negative_prompt"] = ad.g["negative_prompt"]
+def _clip(ad: Ad, tarea: dict) -> Path:
+    """Genera un clip del plan. `tarea` trae su línea, su duración y su destino.
+
+    Con Seedance el clip ya no es "una línea": es un hueco de la rejilla que
+    cubre la canción. Varios clips pueden salir de la misma escena y, cuando el
+    siguiente pertenece a otra línea, éste se encadena con `end_image_url` para
+    que la transición entre ideas sea continua.
+    """
+    i = tarea["i"]
+    destino = ad.clips_dir / f"clip_{i:02d}.mp4"
+    if destino.exists():
+        return destino
+
+    linea = next(l for l in ad.lineas if l["n"] == tarea["linea"])
+    payload: dict[str, Any] = {"image_url": _url_escena(ad, tarea["linea"])}
+
+    # Seedance acepta enteros de 4 a 12; el último hueco de la rejilla puede ser
+    # más corto y el montaje lo recorta.
+    segundos = max(4, min(12, int(round(tarea["t1"] - tarea["t0"]))))
+    payload |= {"prompt": linea["prompt_video"], "duration": str(segundos)}
+
+    campo_final = _ACEPTA_KEYFRAME_FINAL.get(ad.modelo_video)
+    if tarea.get("end_linea") and campo_final:
+        payload[campo_final] = _url_escena(ad, tarea["end_linea"])
+    elif (ad.clips_dir / f"clip_{tarea['linea']:02d}_fin.png").exists() and campo_final:
+        with open(ad.clips_dir / f"clip_{tarea['linea']:02d}_fin.png", "rb") as fh:
+            payload[campo_final] = fal_client.upload(fh.read(), "image/png")
+
+    if ad.modelo_video == SEEDANCE:
+        payload |= {
+            "resolution": ad.resolucion,
+            "aspect_ratio": ad.g.get("aspect_ratio", "9:16"),
+            # La pista es la canción: el audio que genere el modelo se
+            # descartaría, y pedirlo sólo añade cosas que no controlamos.
+            "generate_audio": False,
+        }
+        costo = _cuesta_seedance(ad, segundos)
+    else:
+        if ad.g.get("negative_prompt"):
+            payload["negative_prompt"] = ad.g["negative_prompt"]
+        costo = segundos * _tarifa(ad.modelo_video, "fal_ai")
+
     inicio = time.monotonic()
     salida = fal_client.subscribe(ad.modelo_video, payload)
     url = salida["video"]["url"] if isinstance(salida.get("video"), dict) else salida["video"]
-    ad.apuntar_gasto(f"clip_{n:02d}", ad.dur_clip,
-                     ad.dur_clip * _tarifa(ad.modelo_video, "fal_ai"))
+    ad.apuntar_gasto(f"clip_{i:02d}", segundos, costo)
     _descargar(url, destino)
-    print(f"  clip {n:02d}: {ad.dur_clip}s ({time.monotonic() - inicio:.0f}s de espera)")
+    cadena = f" → línea {tarea['end_linea']}" if tarea.get("end_linea") else ""
+    print(f"  clip {i:02d}: {segundos}s de la línea {tarea['linea']:02d}{cadena} "
+          f"({time.monotonic() - inicio:.0f}s de espera)")
     return destino
 
 
+def _plan_de_clips(ad: Ad) -> list[dict[str, Any]]:
+    """La rejilla de clips, calculada desde la canción y cacheada en disco.
+
+    Se guarda porque la fase `clips` y la de `montaje` tienen que ver
+    exactamente el mismo reparto: si se recalculara en cada una, un reintento
+    con la canción regenerada dejaría clips que no encajan con el montaje.
+    """
+    from src import plan_musical
+
+    ficha = ad.clips_dir / "plan_clips.json"
+    if ficha.exists():
+        return json.loads(ficha.read_text(encoding="utf-8"))
+    _, tramos, dur = _tramos_musicales(ad)
+    plan = plan_musical.repartir_clips(ad.lineas, tramos, dur, dur_clip=ad.dur_clip)
+    ad.clips_dir.mkdir(parents=True, exist_ok=True)
+    ficha.write_text(json.dumps(plan, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"  {plan_musical.resumen(plan)}")
+    return plan
+
+
 def fase_clips(ad: Ad) -> None:
-    pendientes = [l for l in ad.lineas
-                  if not (ad.clips_dir / f"clip_{l['n']:02d}.mp4").exists()]
+    # Si la corrida anterior murió con la red caída, esto baja lo que
+    # ya se pagó antes de plantearse generar nada nuevo.
+    for r in recuperar_pendientes(ad.clips_dir):
+        print(f"  recuperado sin regenerar: {r.name}")
+
+    if ad.musical and ad.modelo_video == SEEDANCE:
+        tareas = _plan_de_clips(ad)
+    else:
+        # Modo antiguo: un clip por línea, sin encadenar.
+        tareas = [{"i": l["n"], "linea": l["n"], "t0": 0.0,
+                   "t1": float(ad.dur_clip), "end_linea": None} for l in ad.lineas]
+
+    pendientes = [t for t in tareas
+                  if not (ad.clips_dir / f"clip_{t['i']:02d}.mp4").exists()]
     if not pendientes:
         print("  todos los clips ya están.")
         return
     fallos = []
     with ThreadPoolExecutor(max_workers=env_int("MAX_CONCURRENT_CLIPS", 3)) as pool:
-        fut = {pool.submit(_clip, ad, l): l["n"] for l in pendientes}
+        fut = {pool.submit(_clip, ad, t): t["i"] for t in pendientes}
         for f in as_completed(fut):
             try:
                 f.result()
@@ -513,7 +604,30 @@ def _tramos_musicales(ad: Ad) -> tuple[Path, list[tuple[float, float]], float]:
     # Los bordes de las líneas, llevados al golpe más cercano de la canción.
     cortes = [t0 for t0, _ in tramos] + [dur]
     cortes = ritmo.imantar(cortes, transcripcion.golpes(util))
+    cortes = _sin_tramos_imposibles(cortes)
     return util, [(cortes[i], cortes[i + 1]) for i in range(len(tramos))], dur
+
+
+def _sin_tramos_imposibles(cortes: list[float]) -> list[float]:
+    """Ningún tramo puede quedar por debajo del piso de un plano.
+
+    Whisper ancla cada línea donde la oye, y en el ad de contadores oyó la
+    última tan pegada al final que le tocaron 0.26 segundos: un plano de seis
+    frames, que se ve como un parpadeo, no como un corte. El sitio donde eso se
+    arregla es el reparto, no el piso.
+
+    Una sola pasada hacia atrás, empujando cada corte lo que haga falta sin
+    mirar si eso deja corto al vecino: el déficit se propaga hacia el principio
+    y se resuelve al llegar allí, donde siempre hay holgura porque los primeros
+    versos duran más. Limitar el robo al vecino inmediato —el primer intento—
+    no converge en cuanto hay dos líneas seguidas justas.
+    """
+    salida = list(cortes)
+    for i in range(len(salida) - 1, 0, -1):
+        falta = ritmo.PLANO_PISO_S - (salida[i] - salida[i - 1])
+        if falta > 0.001:
+            salida[i - 1] = round(max(salida[i - 1] - falta, 0.0), 3)
+    return salida
 
 
 def _overlays(ad: Ad, tramos: list[tuple[float, float]]) -> list:
@@ -543,6 +657,29 @@ def _overlays(ad: Ad, tramos: list[tuple[float, float]]) -> list:
     return salida
 
 
+def _momentos_logo(ad: Ad, tramos: list[tuple[float, float]],
+                   dur: float) -> list[tuple[float, float, str]]:
+    """Cuándo aparece el logo, deducido del propio guion.
+
+    Tres apariciones, cada una por un motivo distinto:
+
+    1. **Arranque**, en esquina. La auditoría de ganchos exige que la marca
+       esté en los primeros cinco segundos; esto lo cumple sin gastar copy.
+    2. **Cuando la canción nombra la marca**, grande y centrado. Es el momento
+       en que se canta "Feria Effix", y los tiempos ya los tenemos de whisper:
+       el logo entra exactamente con la palabra. Puesto ahí es memorable;
+       puesto en cualquier otro sitio es decoración.
+    3. **Cierre**, grande, junto al CTA.
+    """
+    momentos: list[tuple[float, float, str]] = [(0.4, 4.4, "esquina")]
+    for linea, (t0, t1) in zip(ad.lineas, tramos):
+        if "feria effix" in str(linea.get("texto", "")).lower():
+            momentos.append((round(t0, 2), round(min(t0 + 3.2, t1), 2), "centro"))
+            break
+    momentos.append((round(max(dur - 4.0, 0.0), 2), round(dur, 2), "centro"))
+    return momentos
+
+
 def fase_montaje(ad: Ad, destino: Path | None = None) -> Path:
     """Corta en los golpes, parte cada tramo en planos y masteriza a −14 LUFS.
 
@@ -557,44 +694,55 @@ def fase_montaje(ad: Ad, destino: Path | None = None) -> Path:
             "portar la fase de voz.")
 
     cancion, tramos, dur = _tramos_musicales(ad)
-    clips = {l["n"]: ad.clips_dir / f"clip_{l['n']:02d}.mp4" for l in ad.lineas}
-    faltan = [n for n, p in clips.items() if not p.exists()]
+
+    # Dos repartos conviven. El nuevo (Seedance) es una rejilla de clips cortos
+    # sobre la canción; el viejo (Kling) ataba un clip a cada línea. Se detecta
+    # por el plan en disco para que los ads ya producidos se sigan montando.
+    ficha_plan = ad.clips_dir / "plan_clips.json"
+    if ficha_plan.exists():
+        tareas = json.loads(ficha_plan.read_text(encoding="utf-8"))
+    else:
+        tareas = [{"i": l["n"], "linea": l["n"], "t0": a, "t1": b, "end_linea": None}
+                  for l, (a, b) in zip(ad.lineas, tramos)]
+
+    clips = {t["i"]: ad.clips_dir / f"clip_{t['i']:02d}.mp4" for t in tareas}
+    faltan = sorted(i for i, p in clips.items() if not p.exists())
     if faltan:
         raise FileNotFoundError(f"Faltan los clips {faltan} en {ad.clips_dir}")
 
     entradas, filtros, etiquetas = [], [], []
     cursor, detalle = 0, []
-    for i, (linea, (t0, t1)) in enumerate(zip(ad.lineas, tramos)):
-        n = linea["n"]
+    for i, tarea in enumerate(tareas):
+        n_linea = tarea["linea"]
+        linea = next(l for l in ad.lineas if l["n"] == n_linea)
+        t0, t1 = tarea["t0"], tarea["t1"]
         # `ventana_util_s: [desde, hasta]` acota qué parte del clip se puede
         # usar. Existe porque un clip puede salir bien los dos primeros
         # segundos y estropearse después —el modelo le da vida a un objeto que
         # debía quedarse quieto—, y tirar el clip entero cuesta otro clip.
-        # Recortarlo a su parte buena no cuesta nada.
-        desde_s, fuente = 0.0, _duracion(clips[n])
+        desde_s, fuente = 0.0, _duracion(clips[tarea["i"]])
         ventana = linea.get("ventana_util_s")
         if ventana:
             desde_s = float(ventana[0])
             fuente = min(float(ventana[1]), fuente) - desde_s
-            print(f"  línea {n:02d}: ventana útil {desde_s:.2f}–"
-                  f"{desde_s + fuente:.2f}s del clip")
+            print(f"  clip {tarea['i']:02d}: ventana útil {desde_s:.2f}–"
+                  f"{desde_s + fuente:.2f}s")
         planos = ritmo.planos_en_fuente(t1 - t0, fuente, desde=cursor)
         if desde_s:
             planos = [ritmo.Plano(round(p.inicio_s + desde_s, 3),
                                   round(p.fin_s + desde_s, 3), p.encuadre)
                       for p in planos]
         cursor += len(planos)
-        entradas += ["-i", str(clips[n])]
+        entradas += ["-i", str(clips[tarea["i"]])]
         for j, plano in enumerate(planos):
             filtros.append(ritmo.filtro_video(
                 plano, f"{i}:v", f"v{i}_{j}", w=RENDER_W, h=RENDER_H,
                 fps=RENDER_FPS, clonar_cola_s=0.0))
             etiquetas.append(f"[v{i}_{j}]")
-        detalle.append({"linea": n, "inicio_s": round(t0, 3), "fin_s": round(t1, 3),
+        detalle.append({"clip": tarea["i"], "linea": n_linea,
+                        "inicio_s": round(t0, 3), "fin_s": round(t1, 3),
+                        "encadenado": tarea.get("end_linea"),
                         "planos": [p.duracion_s for p in planos]})
-        print(f"  línea {n:02d} {t0:>6.2f}–{t1:<6.2f} "
-              f"{len(planos)} plano(s) de {'/'.join(f'{p.duracion_s:.2f}' for p in planos)}s"
-              f"  {linea['texto'][:42]}")
 
     todos = [d for x in detalle for d in x["planos"]]
     print(f"  ritmo: {len(todos)} planos · {min(todos):.2f}–{max(todos):.2f}s "
@@ -609,15 +757,41 @@ def fase_montaje(ad: Ad, destino: Path | None = None) -> Path:
         filtros.append(cadena + "[vid]")
 
     entradas += ["-i", str(cancion)]
+    # El fade final necesita saber hasta dónde se canta: sin eso apaga el
+    # último verso, que suele ser el CTA.
+    fin_voz = json.loads(
+        (ad.audio_dir / "tramo.json").read_text(encoding="utf-8")
+    ).get("fin_voz_s")
     filtros.append(mezcla.cadena_master(
-        f"{len(ad.lineas)}:a", "aud", duracion_s=dur))
+        f"{len(tareas)}:a", "aud", duracion_s=dur, fin_voz_s=fin_voz))
+
+    # El logo va al final de la cadena de video: por encima de los subtítulos,
+    # nunca debajo. Cada aparición necesita su propia copia del PNG porque se
+    # escala distinto y un input no se puede consumir dos veces.
+    from src.postproduccion import filtros_logo, logo_marca
+
+    momentos = _momentos_logo(ad, tramos, dur)
+    if momentos:
+        indice = len(tareas) + 1
+        etiquetas = []
+        for k in range(len(momentos)):
+            entradas += ["-loop", "1", "-i", str(logo_marca())]
+            etiquetas.append(f"{indice + k}:v")
+        filtros.append("[vid]null[vid_txt]")
+        filtros += filtros_logo(momentos, "vid_txt", "vid_final",
+                                w=RENDER_W, h=RENDER_H, entradas_logo=etiquetas)
+        mapa_video = "[vid_final]"
+        print("  logo: " + " · ".join(
+            f"{a:.1f}-{b:.1f}s {s}" for a, b, s in momentos))
+    else:
+        mapa_video = "[vid]"
 
     RENDERS_DIR.mkdir(parents=True, exist_ok=True)
     salida = destino or (RENDERS_DIR / f"{ad.job}.mp4")
     subprocess.run(
         [env("FFMPEG_BIN", "ffmpeg"), "-y", "-hide_banner", "-loglevel", "error",
          *entradas, "-filter_complex", ";".join(filtros),
-         "-map", "[vid]", "-map", "[aud]", "-t", f"{dur:.3f}",
+         "-map", mapa_video, "-map", "[aud]", "-t", f"{dur:.3f}",
          "-c:v", "libx264", "-preset", "medium", "-crf", "20",
          "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k",
          "-movflags", "+faststart", str(salida)],
@@ -682,7 +856,8 @@ def main() -> int:
     args = ap.parse_args()
 
     ad = Ad(args.guion)
-    print(f"{ad.g['titulo']} · {ad.g['estilo']} · {ad.g['nicho']} · "
+    print(f"{ad.g['titulo']} · {ad.g['estilo']} · "
+          f"{ad.g.get('nicho') or ad.g.get('publico') or 'sin nicho'} · "
           f"modo {ad.g.get('modo')} · {len(ad.lineas)} líneas · job {ad.job}\n")
 
     # Nada que cueste dinero corre sobre un guion que no pasa las 6 reglas.

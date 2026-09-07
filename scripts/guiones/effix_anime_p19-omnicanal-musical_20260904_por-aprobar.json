@@ -1,0 +1,225 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p19-omnicanal-musical-anime",
+  "titulo": "Dos tiendas que no se hablan",
+  "marca": "effix",
+  "publico": "Retail",
+  "nicho_mapa": 19,
+  "angulo": "19.1",
+  "angulo_nombre": "Omnicanalidad",
+  "temperatura": "tibios",
+  "estilo": "anime",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Un cliente compra en tu página, va a cambiarlo en la tienda, y le dicen que «eso es de internet».",
+    "sintoma": "Tienes dos negocios que se llaman igual y no se hablan.",
+    "explicacion_fallida": "Te dices que integrar eso es un proyecto de años.",
+    "patron": "Pero hay retailers de tu tamaño que ya lo integraron con proveedores del mercado.",
+    "causa_raiz": "No te falta presupuesto. Te falta conocer a los que ya conectaron tienda física y online.",
+    "mecanismo": "En Feria Effix están las plataformas de omnicanalidad, la logística y más de doscientas ponencias de retailers que ya lo resolvieron."
+  },
+  "dolor_frase": "eso es de internet",
+  "dolor_menciones_en_letra": 3,
+  "bible": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, VALERIA: an anime-style woman in her forties, sleek dark bob, tailored grey blazer, a lanyard with a badge, calm sharp eyes, a tablet in hand. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16.",
+  "negative_prompt": "3D render, photoreal, western cartoon, text, captions, letters, watermark, logo, UI, style drift, extra fingers, off-model face",
+  "personajes": {
+    "omnicanal": {
+      "ficha": "VALERIA: an anime-style woman in her forties, sleek dark bob, tailored grey blazer, a lanyard with a badge, calm sharp eyes, a tablet in hand. Same character design in every shot.",
+      "voz": null,
+      "quien_es": "VALERIA, personaje anime: gerente de un retail cuya tienda física y tienda online no se hablan.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Latin pop electrónico",
+    "suno_title": "Feria Effix — Dos tiendas que no se hablan",
+    "suno_custom_lyrics": "[Verso 1]\nCompró en la página y en la tienda le dicen «eso es de internet»\nDos tiendas con mi nombre, y ninguna se entiende\nEl cliente se va, y no vuelve a ninguna\n«Eso es de internet» me cuesta una fortuna\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los que unieron la tienda y la red\nY te cuentan a quién llamaron, y a quién no, también\n\n[Verso 2]\nMe digo que integrar es un proyecto de años\nPero uno como yo ya lo hizo sin tantos daños\nCon proveedores que existen, no desde cero\n«Eso es de internet» lo escucho, y me desespero\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los que unieron la tienda y la red\nY te cuentan a quién llamaron, y a quién no, también\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ya nadie me lo dice, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "latin pop electronic",
+      "bright synths and reggaeton drums",
+      "anthemic sung chorus",
+      "female vocal",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 104,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Compró en la página y en la tienda le dicen «eso es de internet» / Dos tiendas con mi nombre, y ninguna se entiende",
+      "texto_tts": "",
+      "texto_pantalla": "«Eso es de internet»",
+      "plano": "VALERIA in a retail head office between two screens: a physical store icon and an online store icon facing away from each other; on one scre",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, wide establishing shot. VALERIA in a retail head office between two screens: a physical store icon and an online store icon facing away from each other; on one screen a customer-shape walks out. VALERIA: an anime-style woman in her forties, sleek dark bob, tailored grey blazer, a lanyard with a badge, calm sharp eyes, a tablet in hand. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The customer-shape walks off screen, the two icons stay back to back, VALERIA closes her eyes for a beat. Camera: gentle push-in. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "El cliente se va, y no vuelve a ninguna / «Eso es de internet» me cuesta una fortuna",
+      "texto_tts": "",
+      "texto_pantalla": "¿Diriges un retail?",
+      "plano": "VALERIA turns to face the camera in a retail head office with two screens: physical store and online store, two identical logo-shapes facing",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, medium close-up. VALERIA turns to face the camera in a retail head office with two screens: physical store and online store, two identical logo-shapes facing away from each other still visible. VALERIA: an anime-style woman in her forties, sleek dark bob, tailored grey blazer, a lanyard with a badge, calm sharp eyes, a tablet in hand. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 VALERIA turns to camera, holds the gaze, small nod. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que integrar es un proyecto de años",
+      "texto_tts": "",
+      "texto_pantalla": "Dos negocios que no se hablan",
+      "plano": "Close-up of VALERIA's tablet with two separate dashboards side by side, a thin wall drawn between them.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, close-up on hands and object. Close-up of VALERIA's tablet with two separate dashboards side by side, a thin wall drawn between them. VALERIA: an anime-style woman in her forties, sleek dark bob, tailored grey blazer, a lanyard with a badge, calm sharp eyes, a tablet in hand. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 She swipes, the wall stays, she taps it twice. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero uno como yo ya lo hizo sin tantos daños",
+      "texto_tts": "",
+      "texto_pantalla": "«Es un proyecto de años»",
+      "plano": "VALERIA from behind looking at a wall calendar with years marked, a giant clock shape above it.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, medium shot from behind. VALERIA from behind looking at a wall calendar with years marked, a giant clock shape above it. VALERIA: an anime-style woman in her forties, sleek dark bob, tailored grey blazer, a lanyard with a badge, calm sharp eyes, a tablet in hand. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The clock hand sweeps, she folds her arms. Camera: gentle pull-back. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Con proveedores que existen, no desde cero",
+      "texto_tts": "",
+      "texto_pantalla": "Ya lo hicieron con proveedores",
+      "plano": "Low-angle wide: a rival store-front where a customer returns an online parcel at the counter with a smile; VALERIA small on the sidewalk.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, low-angle wide. Low-angle wide: a rival store-front where a customer returns an online parcel at the counter with a smile; VALERIA small on the sidewalk. VALERIA: an anime-style woman in her forties, sleek dark bob, tailored grey blazer, a lanyard with a badge, calm sharp eyes, a tablet in hand. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The return is accepted, the customer smiles, VALERIA's tablet lowers. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "«Eso es de internet» lo escucho, y me desespero",
+      "texto_tts": "",
+      "texto_pantalla": "A quién contrataron",
+      "plano": "Extreme close-up of VALERIA's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, extreme close-up on eyes. Extreme close-up of VALERIA's eyes; in the reflection a bright crowded trade-fair pavilion appears. VALERIA: an anime-style woman in her forties, sleek dark bob, tailored grey blazer, a lanyard with a badge, calm sharp eyes, a tablet in hand. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "VALERIA walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, wide tracking shot. VALERIA walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. VALERIA: an anime-style woman in her forties, sleek dark bob, tailored grey blazer, a lanyard with a badge, calm sharp eyes, a tablet in hand. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 VALERIA walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están los que unieron la tienda y la red / Y te cuentan a quién llamaron, y a quién no, también",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; VALERIA small in the aisle look",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; VALERIA small in the aisle looking up. VALERIA: an anime-style woman in her forties, sleek dark bob, tailored grey blazer, a lanyard with a badge, calm sharp eyes, a tablet in hand. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que integrar es un proyecto de años (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Plataformas de omnicanalidad",
+      "plano": "At a fair stand, VALERIA between two exhibitors: one holds a tablet where the two store icons now face each other joined by a line; the othe",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, two-shot at a stand. At a fair stand, VALERIA between two exhibitors: one holds a tablet where the two store icons now face each other joined by a line; the other a parcel with both icons. VALERIA: an anime-style woman in her forties, sleek dark bob, tailored grey blazer, a lanyard with a badge, calm sharp eyes, a tablet in hand. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The line connects the icons, they turn to face each other, VALERIA nods. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of VALERIA seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, medium shot, side angle. Side view of VALERIA seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. VALERIA: an anime-style woman in her forties, sleek dark bob, tailored grey blazer, a lanyard with a badge, calm sharp eyes, a tablet in hand. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y ya nadie me lo dice, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "VALERIA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, medium close-up facing camera. VALERIA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. VALERIA: an anime-style woman in her forties, sleek dark bob, tailored grey blazer, a lanyard with a badge, calm sharp eyes, a tablet in hand. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 VALERIA looks at camera, presses the floating button, it pulses, nods. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y ya nadie me lo dice, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Ya nadie dice «eso es de internet»",
+      "plano": "The head office again: one screen with the two icons joined, a customer-shape returning a parcel with a check mark; VALERIA smiling at the t",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, wide static shot, held. The head office again: one screen with the two icons joined, a customer-shape returning a parcel with a check mark; VALERIA smiling at the tablet. VALERIA: an anime-style woman in her forties, sleek dark bob, tailored grey blazer, a lanyard with a badge, calm sharp eyes, a tablet in hand. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The check mark pops, VALERIA taps once and leans back. Camera: gentle push-in. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "energetico",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Anime latin pop electrónico. Retail. Dolor «eso es de internet» 3 veces."
+}

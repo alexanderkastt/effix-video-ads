@@ -1,0 +1,226 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p18-tienda-fisica-musical-claymation",
+  "titulo": "Tengo local y no vendo online",
+  "marca": "effix",
+  "publico": "Comerciantes y negocios físicos que quieren vender online",
+  "nicho_mapa": 18,
+  "angulo": "18.1",
+  "angulo_nombre": "Tengo tienda física pero no vendo online",
+  "temperatura": "tibios",
+  "estilo": "claymation",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Llovió todo el sábado, no entró nadie, y tu mes depende del clima y del andén.",
+    "sintoma": "Mandas la foto por WhatsApp a las mismas clientas de siempre.",
+    "explicacion_fallida": "Te dices que lo tuyo se vende es viéndolo.",
+    "patron": "Pero el local de al lado ya despacha para otra ciudad. Mismo producto, mismo precio.",
+    "causa_raiz": "No es que tu producto no sirva para internet. Es que nadie te ha mostrado cómo.",
+    "mecanismo": "En Feria Effix están las plataformas para montar la tienda, las pasarelas, la logística y los que ya lo hicieron desde un local como el tuyo."
+  },
+  "dolor_frase": "no entró nadie",
+  "dolor_menciones_en_letra": 3,
+  "bible": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16.",
+  "negative_prompt": "smooth CGI, photoreal, 2D flat, glossy plastic, text, captions, letters, watermark, logo, UI, style drift, extra limbs, melting clay",
+  "personajes": {
+    "tienda-fisica": {
+      "ficha": "ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot.",
+      "voz": null,
+      "quien_es": "ROSA, dueña de almacén de ropa en plastilina (continuidad del personaje de 'La acera').",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Merengue urbano",
+    "suno_title": "Feria Effix — Tengo local y no vendo online",
+    "suno_custom_lyrics": "[Verso 1]\nLlovió el sábado y no entró nadie\nMi mes depende del clima y de la calle\nMando la foto a las de siempre, y contesta una\nNo entró nadie, y la vitrina no vende ninguna\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los que te montan la tienda en la red\nY los que despachan desde un local como el de usted\n\n[Verso 2]\nMe digo que mi ropa se vende es viéndola\nPero la del lado ya despacha a otra ciudad, y es la misma tela\nNadie me ha mostrado cómo, y por eso no arranco\nNo entró nadie, y el andén sigue en blanco\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los que te montan la tienda en la red\nY los que despachan desde un local como el de usted\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ya no depende del andén, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "merengue urbano",
+      "fast tambora and güira",
+      "playful brass",
+      "catchy sung chorus",
+      "male vocal",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 130,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Llovió el sábado y no entró nadie / Mi mes depende del clima y de la calle",
+      "texto_tts": "",
+      "texto_pantalla": "Llovió. No entró nadie",
+      "plano": "ROSA inside a clay clothing shop looking out through a window with clay raindrops at an empty clay sidewalk, clay dresses on racks behind he",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, wide establishing shot. ROSA inside a clay clothing shop looking out through a window with clay raindrops at an empty clay sidewalk, clay dresses on racks behind her. ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Raindrops slide, ROSA leans to the glass, steps back. Camera: gentle push-in. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Mando la foto a las de siempre, y contesta una / No entró nadie, y la vitrina no vende ninguna",
+      "texto_tts": "",
+      "texto_pantalla": "¿Tienes local y no vendes online?",
+      "plano": "ROSA turns to face the camera in a small clay clothing shop with a window onto a rainy sidewalk, the clay shop window with rain and an empty",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium close-up. ROSA turns to face the camera in a small clay clothing shop with a window onto a rainy sidewalk, the clay shop window with rain and an empty sidewalk still visible. ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 ROSA turns to camera, holds the gaze, small nod. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que mi ropa se vende es viéndola",
+      "texto_tts": "",
+      "texto_pantalla": "Las mismas clientas",
+      "plano": "Close-up of ROSA's clay phone: a photo of a dress sent to a chat with five avatar circles, one glows in reply.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, close-up on hands and object. Close-up of ROSA's clay phone: a photo of a dress sent to a chat with five avatar circles, one glows in reply. ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 One avatar glows, the rest stay grey, the hand lowers. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero la del lado ya despacha a otra ciudad, y es la misma tela",
+      "texto_tts": "",
+      "texto_pantalla": "«Se vende es viéndola»",
+      "plano": "ROSA from behind holding a dress up against a clay customer, turning it, gesturing 'you have to see it on'.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium shot from behind. ROSA from behind holding a dress up against a clay customer, turning it, gesturing 'you have to see it on'. ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 She turns the dress, the customer nods, ROSA nods firmly. Camera: gentle pull-back. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Nadie me ha mostrado cómo, y por eso no arranco",
+      "texto_tts": "",
+      "texto_pantalla": "La del lado ya despacha",
+      "plano": "Low-angle wide of the clay street: the shop next door loads clay parcels into a clay van; ROSA small in her doorway.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, low-angle wide. Low-angle wide of the clay street: the shop next door loads clay parcels into a clay van; ROSA small in her doorway. ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Parcels load, the van rolls off, ROSA's shoulders drop. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "No entró nadie, y el andén sigue en blanco",
+      "texto_tts": "",
+      "texto_pantalla": "Nadie te ha mostrado cómo",
+      "plano": "Extreme close-up of ROSA's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, extreme close-up on eyes. Extreme close-up of ROSA's eyes; in the reflection a bright crowded trade-fair pavilion appears. ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "ROSA walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, wide tracking shot. ROSA walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 ROSA walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están los que te montan la tienda en la red / Y los que despachan desde un local como el de usted",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; ROSA small in the aisle looking",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; ROSA small in the aisle looking up. ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que mi ropa se vende es viéndola (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Plataformas, pasarelas, logística",
+      "plano": "At a clay fair stand, ROSA between two clay figures: one holding a tablet with a storefront shape, the other a parcel; she touches the table",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, two-shot at a stand. At a clay fair stand, ROSA between two clay figures: one holding a tablet with a storefront shape, the other a parcel; she touches the tablet. ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Each figure lifts its object, ROSA touches the tablet and nods. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of ROSA seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium shot, side angle. Side view of ROSA seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y ya no depende del andén, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "ROSA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium close-up facing camera. ROSA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 ROSA looks at camera, presses the floating button, it pulses, nods. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y ya no depende del andén, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Ya no depende del andén",
+      "plano": "The clay shop, sunny: ROSA taping a parcel at the counter with a small label, a clay courier at the door, the window clear.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, wide static shot, held. The clay shop, sunny: ROSA taping a parcel at the counter with a small label, a clay courier at the door, the window clear. ROSA: a plasticine stop-motion woman in her fifties, floral clay blouse, dark clay skirt, reading glasses on a chain, grey-brown clay hair pulled back, kind tired eyes. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 She hands the parcel to the courier, who turns to go; she smiles. Camera: gentle push-in. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Claymation merengue. Continuidad de ROSA (personaje 2D de 'La acera') en plastilina. Dolor «no entró nadie» 3 veces."
+}

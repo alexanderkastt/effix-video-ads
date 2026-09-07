@@ -156,6 +156,105 @@ def _escapar(ruta: Path) -> str:
     return str(ruta).replace("\\", "/").replace(":", r"\:")
 
 
+# ─────────────────────────── logo de marca ──────────────────────────
+
+# El logo original es plateado con degradado (luminancia media 189/255). Sobre
+# el gris del diorama de crochet o sobre la feria iluminada se pierde. El
+# branding pide "outline blanco grueso, estilo sticker", que además es lo que
+# lo hace legible sobre cualquier fondo — el mismo tratamiento que los
+# subtítulos.
+LOGO_ORIGINAL = ROOT / "referencias" / "marca" / "logo_effix.png"
+LOGO_SOMBRA_PX = 14
+LOGO_DESENFOQUE = 10
+
+
+def logo_marca() -> Path:
+    """El logo en blanco puro con sombra, listo para superponer. Se cachea."""
+    from PIL import Image, ImageFilter
+
+    destino = ROOT / "assets" / "marca" / "logo_effix_blanco.png"
+    if destino.exists():
+        return destino
+    if not LOGO_ORIGINAL.exists():
+        raise FileNotFoundError(f"Falta el logo de marca en {LOGO_ORIGINAL}")
+
+    original = Image.open(LOGO_ORIGINAL).convert("RGBA").crop(
+        Image.open(LOGO_ORIGINAL).convert("RGBA").getbbox())
+    alfa = original.getchannel("A")
+
+    # Lienzo con margen para que la sombra no se recorte.
+    m = LOGO_SOMBRA_PX * 3
+    lienzo = Image.new("RGBA", (original.width + m * 2, original.height + m * 2),
+                       (0, 0, 0, 0))
+
+    sombra = Image.new("RGBA", lienzo.size, (0, 0, 0, 0))
+    sombra.paste(Image.new("RGBA", original.size, (0, 0, 0, 190)),
+                 (m, m + LOGO_SOMBRA_PX // 2), alfa)
+    lienzo.alpha_composite(sombra.filter(
+        ImageFilter.GaussianBlur(LOGO_DESENFOQUE)))
+
+    # El trazo, en blanco puro.
+    lienzo.paste(Image.new("RGBA", original.size, (255, 255, 255, 255)),
+                 (m, m), alfa)
+
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    lienzo.save(destino)
+    return destino
+
+
+def filtros_logo(
+    momentos: list[tuple[float, float, str]],
+    entrada: str,
+    salida: str,
+    *,
+    w: int = 1080,
+    h: int = 1920,
+    entradas_logo: list[str] | None = None,
+) -> list[str]:
+    """Superpone el logo en los tramos pedidos, con entrada y salida animadas.
+
+    `momentos` son tramos `(desde, hasta, sitio)`. Dos sitios, que responden a
+    dos necesidades distintas:
+
+    - `esquina`: pequeño, arriba a la derecha. Es la mosca de televisión —
+      firma el ad sin taparlo. Sirve para cumplir la regla de que la marca
+      aparezca en los primeros cinco segundos.
+    - `centro`: grande y centrado. Se reserva para el momento en que la canción
+      NOMBRA la marca y para el cierre; puesto ahí, el logo entra justo cuando
+      se canta "Feria Effix", que es lo que lo hace memorable en vez de
+      decorativo.
+
+    El logo se dibuja DESPUÉS de los subtítulos para que nunca quede debajo.
+    """
+    ANCHOS = {"esquina": 0.22, "centro": 0.62}
+    filtros: list[str] = []
+    actual = entrada
+    for i, (t0, t1, sitio) in enumerate(momentos):
+        ancho = int(w * ANCHOS.get(sitio, ANCHOS["esquina"]))
+        etiqueta = f"lg{i}"
+        # Cada uso necesita su propia copia escalada: el mismo input no se
+        # puede consumir dos veces en un filter_complex.
+        entra = min(0.35, max((t1 - t0) * 0.25, 0.12))
+        fuente = (entradas_logo or [])[i] if entradas_logo else f"L{i}"
+        filtros.append(
+            f"[{fuente}]scale={ancho}:-1,format=rgba,"
+            f"fade=t=in:st={t0:.2f}:d={entra:.2f}:alpha=1,"
+            f"fade=t=out:st={max(t1 - entra, t0):.2f}:d={entra:.2f}:alpha=1"
+            f"[{etiqueta}]"
+        )
+        if sitio == "centro":
+            x, y = "(W-w)/2", f"(H-h)/2-{int(h * 0.06)}"
+        else:
+            x, y = f"W-w-{int(w * 0.045)}", f"{int(h * 0.045)}"
+        siguiente = f"cl{i}" if i < len(momentos) - 1 else salida
+        filtros.append(
+            f"[{actual}][{etiqueta}]overlay={x}:{y}:"
+            f"enable='between(t,{t0:.2f},{t1:.2f})'[{siguiente}]"
+        )
+        actual = siguiente
+    return filtros
+
+
 def filtros(overlays: list[Overlay], carpeta: Path, alto: int = 1280) -> list[str]:
     """Un drawtext por RENGLÓN, con contorno sticker y entrada animada.
 

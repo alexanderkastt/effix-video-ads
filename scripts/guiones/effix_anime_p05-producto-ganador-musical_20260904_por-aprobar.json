@@ -1,0 +1,225 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p05-producto-ganador-musical-anime",
+  "titulo": "El producto ganador",
+  "marca": "effix",
+  "publico": "Dropshippers",
+  "nicho_mapa": 5,
+  "angulo": "5.1",
+  "angulo_nombre": "Encontrar productos ganadores",
+  "temperatura": "calientes",
+  "estilo": "anime",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Llevas dos meses buscando el producto ganador, y ya probaste ocho que no ganaron.",
+    "sintoma": "Cada semana un video promete el producto del momento, y cuando lo pautas ya está quemado.",
+    "explicacion_fallida": "Te dices que te falta la herramienta correcta para encontrarlo.",
+    "patron": "Pero los que sí venden no lo encontraron en una herramienta: lo vieron en la mano de un proveedor antes que todos.",
+    "causa_raiz": "No te falta herramienta. Te falta ver el producto antes de que sea tendencia.",
+    "mecanismo": "En Feria Effix están los proveedores con los productos que van a vender en los próximos meses, en la mano, antes de que salgan en los videos."
+  },
+  "dolor_frase": "ninguno gana",
+  "dolor_menciones_en_letra": 3,
+  "bible": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, KAI: an anime-style young man, spiky dark hair, black bomber jacket over a white tee, sharp expressive eyes, headphones around the neck. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16.",
+  "negative_prompt": "3D render, photoreal, western cartoon, text, captions, letters, watermark, logo, UI, style drift, extra fingers, off-model face",
+  "personajes": {
+    "producto-ganador": {
+      "ficha": "KAI: an anime-style young man, spiky dark hair, black bomber jacket over a white tee, sharp expressive eyes, headphones around the neck. Same character design in every shot.",
+      "voz": null,
+      "quien_es": "KAI, personaje anime: el dropshipper que busca el producto ganador.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Latin pop electrónico",
+    "suno_title": "Feria Effix — El producto ganador",
+    "suno_custom_lyrics": "[Verso 1]\nOcho productos y ninguno gana\nLo veo en un video y lo pauto mañana\nY cuando llega, ya lo quemó la semana\nOcho productos, y ninguno gana\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí está el producto antes de la tendencia\nEn la mano del proveedor, no en la pantalla, con paciencia\n\n[Verso 2]\nMe digo que me falta la herramienta correcta\nPero el que gana lo vio primero, en una mesa\nSe lo mostró un proveedor antes que a todos\nY yo con ocho productos, y ninguno gana\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí está el producto antes de la tendencia\nEn la mano del proveedor, no en la pantalla, con paciencia\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY el noveno sí gana, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "latin pop electronic",
+      "bright synths and reggaeton drums",
+      "anthemic sung chorus",
+      "female vocal",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 104,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Ocho productos y ninguno gana / Lo veo en un video y lo pauto mañana",
+      "texto_tts": "",
+      "texto_pantalla": "Ocho productos, ninguno gana",
+      "plano": "KAI at a desk with two monitors, behind him a wall of pinned product screenshots with eight crossed with red tape, energy drink cans, night.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, wide establishing shot. KAI at a desk with two monitors, behind him a wall of pinned product screenshots with eight crossed with red tape, energy drink cans, night. KAI: an anime-style young man, spiky dark hair, black bomber jacket over a white tee, sharp expressive eyes, headphones around the neck. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 KAI pins a ninth screenshot, stares, then gently reaches for the red tape. Camera: gentle push-in. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Y cuando llega, ya lo quemó la semana / Ocho productos, y ninguno gana",
+      "texto_tts": "",
+      "texto_pantalla": "¿Buscas el producto ganador?",
+      "plano": "KAI turns to face the camera in a small apartment desk with two monitors, a wall covered in product screenshots pinned like a detective boar",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, medium close-up. KAI turns to face the camera in a small apartment desk with two monitors, a wall covered in product screenshots pinned like a detective board still visible. KAI: an anime-style young man, spiky dark hair, black bomber jacket over a white tee, sharp expressive eyes, headphones around the neck. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 KAI turns to camera, holds the gaze, small nod. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que me falta la herramienta correcta",
+      "texto_tts": "",
+      "texto_pantalla": "Cuando lo pautas, ya está quemado",
+      "plano": "Close-up of a phone playing an abstract 'winning product' video; KAI's hand taps to a laptop ad panel where a small flame icon fades to grey",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, close-up on hands and object. Close-up of a phone playing an abstract 'winning product' video; KAI's hand taps to a laptop ad panel where a small flame icon fades to grey. KAI: an anime-style young man, spiky dark hair, black bomber jacket over a white tee, sharp expressive eyes, headphones around the neck. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The video loops, the flame icon on the laptop fades to grey, the hand stops. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero el que gana lo vio primero, en una mesa",
+      "texto_tts": "",
+      "texto_pantalla": "«Me falta la herramienta»",
+      "plano": "KAI from behind scrolling a glowing tool dashboard with dozens of tiny product cards, pointing at one after another.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, medium shot from behind. KAI from behind scrolling a glowing tool dashboard with dozens of tiny product cards, pointing at one after another. KAI: an anime-style young man, spiky dark hair, black bomber jacket over a white tee, sharp expressive eyes, headphones around the neck. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 He points, hesitates, points at another, sighs. Camera: gentle pull-back. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Se lo mostró un proveedor antes que a todos",
+      "texto_tts": "",
+      "texto_pantalla": "Lo vieron antes que todos",
+      "plano": "Low-angle wide: in a bright wholesale hall a supplier hands a small product to a smiling seller across a table; KAI watches from the doorway",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, low-angle wide. Low-angle wide: in a bright wholesale hall a supplier hands a small product to a smiling seller across a table; KAI watches from the doorway, phone in hand. KAI: an anime-style young man, spiky dark hair, black bomber jacket over a white tee, sharp expressive eyes, headphones around the neck. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The product changes hands, the seller nods, KAI lowers the phone. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Y yo con ocho productos, y ninguno gana",
+      "texto_tts": "",
+      "texto_pantalla": "Ve el producto antes de la tendencia",
+      "plano": "Extreme close-up of KAI's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, extreme close-up on eyes. Extreme close-up of KAI's eyes; in the reflection a bright crowded trade-fair pavilion appears. KAI: an anime-style young man, spiky dark hair, black bomber jacket over a white tee, sharp expressive eyes, headphones around the neck. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "KAI walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, wide tracking shot. KAI walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. KAI: an anime-style young man, spiky dark hair, black bomber jacket over a white tee, sharp expressive eyes, headphones around the neck. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 KAI walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí está el producto antes de la tendencia / En la mano del proveedor, no en la pantalla, con paciencia",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; KAI small in the aisle looking ",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; KAI small in the aisle looking up. KAI: an anime-style young man, spiky dark hair, black bomber jacket over a white tee, sharp expressive eyes, headphones around the neck. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que me falta la herramienta correcta (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Proveedores con el producto en la mano",
+      "plano": "At a fair stand, KAI holding a product sample in both hands, turning it, a supplier explaining across the counter, a second sample waiting.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, two-shot at a stand. At a fair stand, KAI holding a product sample in both hands, turning it, a supplier explaining across the counter, a second sample waiting. KAI: an anime-style young man, spiky dark hair, black bomber jacket over a white tee, sharp expressive eyes, headphones around the neck. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 He turns the sample, looks up at the supplier, nods twice. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of KAI seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, medium shot, side angle. Side view of KAI seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. KAI: an anime-style young man, spiky dark hair, black bomber jacket over a white tee, sharp expressive eyes, headphones around the neck. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y el noveno sí gana, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "KAI facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, medium close-up facing camera. KAI facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. KAI: an anime-style young man, spiky dark hair, black bomber jacket over a white tee, sharp expressive eyes, headphones around the neck. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 KAI looks at camera, presses the floating button, it pulses, nods. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y el noveno sí gana, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "El noveno sí gana",
+      "plano": "Apartment desk, daytime: the wall now has one screenshot circled in green, the laptop shows a rising bar, KAI leaning back with a satisfied ",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, wide static shot, held. Apartment desk, daytime: the wall now has one screenshot circled in green, the laptop shows a rising bar, KAI leaning back with a satisfied half-smile. KAI: an anime-style young man, spiky dark hair, black bomber jacket over a white tee, sharp expressive eyes, headphones around the neck. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The bar rises, KAI taps the circled screenshot with a knuckle and grins. Camera: gentle push-in. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "energetico",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Anime latin pop electrónico. Cel shading, timing anime (hold y snap). Dolor «ocho productos y ninguno gana» 3 veces. Sin voz en off."
+}

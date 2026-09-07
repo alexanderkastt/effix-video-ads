@@ -1,0 +1,226 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p17-otro-pais-musical-crochet",
+  "titulo": "Vender en otro país",
+  "marca": "effix",
+  "publico": "Internacionalización y expansión de negocios",
+  "nicho_mapa": 17,
+  "angulo": "17.1",
+  "angulo_nombre": "Vender en otro país",
+  "temperatura": "tibios",
+  "estilo": "crochet",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Te preguntan si vendes en Ecuador o Guatemala, y dices que todavía no, sin saber por dónde empezar.",
+    "sintoma": "Buscas cómo exportar y salen requisitos, no personas.",
+    "explicacion_fallida": "Te dices que para entrar a otro país hay que ser grande.",
+    "patron": "Pero las empresas de tu tamaño que ya venden afuera lo hicieron con un aliado local.",
+    "causa_raiz": "No te falta tamaño. Te falta conocer a alguien del otro lado que ya venda allá.",
+    "mecanismo": "En Feria Effix hay empresas de cinco países y ponentes de más de veinte, en el mismo recinto. El aliado del otro país está a un pasillo."
+  },
+  "dolor_frase": "todavía no vendo allá",
+  "dolor_menciones_en_letra": 3,
+  "bible": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour.",
+  "negative_prompt": "realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+  "personajes": {
+    "otro-pais": {
+      "ficha": "PABLO: a crocheted amigurumi figure of a man in his forties, teal knitted shirt, mustard knitted vest, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (teal, mustard, terracotta).",
+      "voz": null,
+      "quien_es": "PABLO, amigurumi del empresario que quiere vender en otro país. Único con color.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Cumbia pop",
+    "suno_title": "Feria Effix — Vender en otro país",
+    "suno_custom_lyrics": "[Verso 1]\nMe preguntan por Ecuador, y todavía no vendo allá\nBusco cómo exportar y salen requisitos, nada más\nUn mapa con un solo país pintado de color\nTodavía no vendo allá, y me da temor\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las empresas de cinco países\nY el aliado del otro lado a un pasillo, sin disfraces\n\n[Verso 2]\nMe digo que para afuera hay que ser grande\nPero uno como yo ya vende allá, y no es gigante\nLo hizo con alguien local, no con un manual\nTodavía no vendo allá, y eso va a cambiar\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las empresas de cinco países\nY el aliado del otro lado a un pasillo, sin disfraces\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ya vendo allá, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "cumbia pop",
+      "accordion and guacharaca",
+      "warm and cozy",
+      "soft female vocal",
+      "catchy sung chorus",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 100,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Me preguntan por Ecuador, y todavía no vendo allá / Busco cómo exportar y salen requisitos, nada más",
+      "texto_tts": "",
+      "texto_pantalla": "Todavía no vendes allá",
+      "plano": "PABLO in a greyscale knitted office looking at a knitted map of Latin America on the wall where only one country is coloured; his mitten-han",
+      "prompt_imagen": "wide establishing shot. PABLO in a greyscale knitted office looking at a knitted map of Latin America on the wall where only one country is coloured; his mitten-hand hovers over the neighbouring countries. PABLO: a crocheted amigurumi figure of a man in his forties, teal knitted shirt, mustard knitted vest, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (teal, mustard, terracotta). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 His hand hovers over the next country, pulls back, he sighs a stitch. Camera: gentle push-in. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Un mapa con un solo país pintado de color / Todavía no vendo allá, y me da temor",
+      "texto_tts": "",
+      "texto_pantalla": "¿Quieres vender en otro país?",
+      "plano": "PABLO turns to face the camera in a small greyscale knitted office with a knitted map of Latin America on the wall, the knitted map with one",
+      "prompt_imagen": "medium close-up. PABLO turns to face the camera in a small greyscale knitted office with a knitted map of Latin America on the wall, the knitted map with one single coloured country still visible. PABLO: a crocheted amigurumi figure of a man in his forties, teal knitted shirt, mustard knitted vest, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (teal, mustard, terracotta). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 PABLO turns to camera, holds the gaze, small nod. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que para afuera hay que ser grande",
+      "texto_tts": "",
+      "texto_pantalla": "Requisitos, no personas",
+      "plano": "Close-up of a knitted laptop showing a long grey list of felt document shapes; PABLO's mitten scrolls and scrolls.",
+      "prompt_imagen": "close-up on hands and object. Close-up of a knitted laptop showing a long grey list of felt document shapes; PABLO's mitten scrolls and scrolls. PABLO: a crocheted amigurumi figure of a man in his forties, teal knitted shirt, mustard knitted vest, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (teal, mustard, terracotta). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The list scrolls without end, the mitten stops. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero uno como yo ya vende allá, y no es gigante",
+      "texto_tts": "",
+      "texto_pantalla": "«Hay que ser grande»",
+      "plano": "PABLO from behind, small, looking up at a tall grey knitted skyscraper with a felt globe on top.",
+      "prompt_imagen": "medium shot from behind. PABLO from behind, small, looking up at a tall grey knitted skyscraper with a felt globe on top. PABLO: a crocheted amigurumi figure of a man in his forties, teal knitted shirt, mustard knitted vest, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (teal, mustard, terracotta). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 He looks up, the globe turns gently, his shoulders drop. Camera: gentle pull-back. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Lo hizo con alguien local, no con un manual",
+      "texto_tts": "",
+      "texto_pantalla": "Con un aliado local",
+      "plano": "Low-angle wide of the knitted street: a grey knitted business owner shakes hands with a figure holding a small felt flag of another country;",
+      "prompt_imagen": "low-angle wide. Low-angle wide of the knitted street: a grey knitted business owner shakes hands with a figure holding a small felt flag of another country; PABLO small across the street. PABLO: a crocheted amigurumi figure of a man in his forties, teal knitted shirt, mustard knitted vest, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (teal, mustard, terracotta). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The handshake, the flag lifts, PABLO takes half a step forward. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Todavía no vendo allá, y eso va a cambiar",
+      "texto_tts": "",
+      "texto_pantalla": "Alguien del otro lado",
+      "plano": "Extreme close-up of PABLO's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "extreme close-up on eyes. Extreme close-up of PABLO's eyes; in the reflection a bright crowded trade-fair pavilion appears. PABLO: a crocheted amigurumi figure of a man in his forties, teal knitted shirt, mustard knitted vest, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (teal, mustard, terracotta). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "PABLO walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. The whole ",
+      "prompt_imagen": "wide tracking shot. PABLO walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. The whole fair world is greyscale knitted diorama; only the main character carries colour. PABLO: a crocheted amigurumi figure of a man in his forties, teal knitted shirt, mustard knitted vest, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (teal, mustard, terracotta). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 PABLO walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están las empresas de cinco países / Y el aliado del otro lado a un pasillo, sin disfraces",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; PABLO small in the aisle lookin",
+      "prompt_imagen": "high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; PABLO small in the aisle looking up. The whole fair world is greyscale knitted diorama; only the main character carries colour. PABLO: a crocheted amigurumi figure of a man in his forties, teal knitted shirt, mustard knitted vest, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (teal, mustard, terracotta). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que para afuera hay que ser grande (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Empresas de cinco países",
+      "plano": "At a knitted fair stand, PABLO exchanging knitted cards with two grey figures holding felt flags of different countries; a felt map on the c",
+      "prompt_imagen": "two-shot at a stand. At a knitted fair stand, PABLO exchanging knitted cards with two grey figures holding felt flags of different countries; a felt map on the counter. PABLO: a crocheted amigurumi figure of a man in his forties, teal knitted shirt, mustard knitted vest, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (teal, mustard, terracotta). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 Cards exchanged, a second country on the counter map gets a coloured stitch. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of PABLO seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. The",
+      "prompt_imagen": "medium shot, side angle. Side view of PABLO seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. The whole fair world is greyscale knitted diorama; only the main character carries colour. PABLO: a crocheted amigurumi figure of a man in his forties, teal knitted shirt, mustard knitted vest, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (teal, mustard, terracotta). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y ya vendo allá, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "PABLO facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. T",
+      "prompt_imagen": "medium close-up facing camera. PABLO facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. The whole fair world is greyscale knitted diorama; only the main character carries colour. PABLO: a crocheted amigurumi figure of a man in his forties, teal knitted shirt, mustard knitted vest, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (teal, mustard, terracotta). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 PABLO looks at camera, presses the floating button, it pulses, nods. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y ya vendo allá, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Ya vendes allá",
+      "plano": "The knitted office again: the wall map now with two coloured countries, a knitted parcel with a felt flag on the desk, PABLO smiling with a ",
+      "prompt_imagen": "wide static shot, held. The knitted office again: the wall map now with two coloured countries, a knitted parcel with a felt flag on the desk, PABLO smiling with a stitch. PABLO: a crocheted amigurumi figure of a man in his forties, teal knitted shirt, mustard knitted vest, simple stitched dot eyes, short dark yarn hair, only his colours are saturated (teal, mustard, terracotta). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 A third country gets a coloured stitch, PABLO pats the parcel. Camera: gentle push-in. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "emotivo",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Crochet cumbia. Mundo B&N, PABLO única con color; el mapa gana color país por país. Verbatim de crochet. Dolor «todavía no vendo allá» 3 veces."
+}

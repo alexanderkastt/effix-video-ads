@@ -19,6 +19,7 @@ from typing import Any
 import fal_client
 import requests
 
+from .descargas import bajar_url
 from .paths import CLIPS_DIR, env, env_int
 from .personaje import MODELO_ESCENA, Personaje, prompt_de_escena
 
@@ -36,33 +37,8 @@ class Clip:
 
 
 def _descargar(url: str, destino: Path, *, intentos: int = 4) -> Path:
-    """Baja a disco lo que fal dejó en una URL temporal, reintentando.
-
-    Sin reintentos, un corte de red al bajar tira trabajo YA PAGADO: la héroe de
-    crochet se generó, fal cobró sus 0.08, y un `Read timed out` desde
-    v3b.fal.media dejó el archivo sin escribir y el gasto sin registrar. La
-    generación es lo caro; la descarga es lo frágil, y no tiene sentido que lo
-    frágil decida si se conserva lo caro.
-
-    Espera creciente entre intentos (2, 4, 8s) por si el corte es momentáneo.
-    """
-    destino.parent.mkdir(parents=True, exist_ok=True)
-    ultimo: Exception | None = None
-    for intento in range(intentos):
-        try:
-            respuesta = requests.get(url, timeout=300)
-            respuesta.raise_for_status()
-            destino.write_bytes(respuesta.content)
-            return destino
-        except (requests.RequestException, OSError) as exc:
-            ultimo = exc
-            if intento < intentos - 1:
-                time.sleep(2 ** (intento + 1))
-    raise RuntimeError(
-        f"No se pudo bajar {url} tras {intentos} intentos. El modelo ya cobró: "
-        f"si esto se repite, la URL sigue viva un rato y se puede reintentar la "
-        f"fase sin regenerar. Último error: {type(ultimo).__name__}: {ultimo}"
-    ) from ultimo
+    """Baja lo que fal dejó en una URL temporal. Ver `src/descargas.py`."""
+    return bajar_url(url, destino, intentos=intentos)
 
 
 def _url_de(salida: dict[str, Any], *claves: str) -> str:

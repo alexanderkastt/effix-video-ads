@@ -1,0 +1,226 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p10-consultor-clientes-musical-crochet",
+  "titulo": "Sé mucho y nadie me contrata",
+  "marca": "effix",
+  "publico": "Consultores y profesionales independientes de e-commerce",
+  "nicho_mapa": 10,
+  "angulo": "10.1",
+  "angulo_nombre": "Conseguir clientes",
+  "temperatura": "calientes",
+  "estilo": "crochet",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Terminas la llamada y el cliente dice que lo va a pensar. Otra vez.",
+    "sintoma": "Sabes resolver el problema, y no tienes cómo demostrarlo antes de que te contraten.",
+    "explicacion_fallida": "Te dices que la experiencia se demuestra trabajando.",
+    "patron": "Pero los consultores que sí cierran la demuestran antes: en escenarios, en casos, en la gente que los recomienda.",
+    "causa_raiz": "No te falta experiencia. Te falta un lugar donde el sector te vea demostrarla.",
+    "mecanismo": "En Feria Effix hay más de sesenta mil asistentes y trescientas cincuenta empresas que necesitan consultores, y tres días para conversar de frente."
+  },
+  "dolor_frase": "lo voy a pensar",
+  "dolor_menciones_en_letra": 3,
+  "bible": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour.",
+  "negative_prompt": "realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+  "personajes": {
+    "consultor-clientes": {
+      "ficha": "ANA: a crocheted amigurumi figure of a woman in her thirties, terracotta knitted blazer, mustard knitted scarf, simple stitched dot eyes, dark yarn hair in a low bun, only her colours are saturated (terracotta, mustard, teal).",
+      "voz": null,
+      "quien_es": "ANA, amigurumi de la consultora de ecommerce sin clientes nuevos. Única con color.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Cumbia pop",
+    "suno_title": "Feria Effix — Sé mucho y nadie me contrata",
+    "suno_custom_lyrics": "[Verso 1]\nTermina la llamada y me dice «lo voy a pensar»\nSé resolverlo, pero no lo puedo mostrar\nOtra semana, otra llamada, y nada más\nY otra vez el «lo voy a pensar»\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las empresas que necesitan a alguien así\nY en tres días te ven de frente, y te dicen que sí\n\n[Verso 2]\nMe digo que la experiencia se demuestra en el trabajo\nPero el que cierra la demuestra antes, y yo abajo\nLe falta un lugar donde el sector me vea\n«Lo voy a pensar» es lo único que me queda\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las empresas que necesitan a alguien así\nY en tres días te ven de frente, y te dicen que sí\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ya nadie lo piensa, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "cumbia pop",
+      "accordion and guacharaca",
+      "warm and cozy",
+      "soft female vocal",
+      "catchy sung chorus",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 100,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Termina la llamada y me dice «lo voy a pensar» / Sé resolverlo, pero no lo puedo mostrar",
+      "texto_tts": "",
+      "texto_pantalla": "«Lo voy a pensar»",
+      "plano": "ANA at a greyscale knitted desk closing a knitted laptop after a video call, a knitted calendar on the wall with empty squares, her mitten-h",
+      "prompt_imagen": "wide establishing shot. ANA at a greyscale knitted desk closing a knitted laptop after a video call, a knitted calendar on the wall with empty squares, her mitten-hand resting on the closed lid. ANA: a crocheted amigurumi figure of a woman in her thirties, terracotta knitted blazer, mustard knitted scarf, simple stitched dot eyes, dark yarn hair in a low bun, only her colours are saturated (terracotta, mustard, teal). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 She closes the lid, looks at the empty calendar, and lets her hand slide off the laptop. Camera: gentle push-in. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Otra semana, otra llamada, y nada más / Y otra vez el «lo voy a pensar»",
+      "texto_tts": "",
+      "texto_pantalla": "¿Consultora sin clientes nuevos?",
+      "plano": "ANA turns to face the camera in a small greyscale knitted home office with a video-call laptop, a knitted calendar with empty squares still ",
+      "prompt_imagen": "medium close-up. ANA turns to face the camera in a small greyscale knitted home office with a video-call laptop, a knitted calendar with empty squares still visible. ANA: a crocheted amigurumi figure of a woman in her thirties, terracotta knitted blazer, mustard knitted scarf, simple stitched dot eyes, dark yarn hair in a low bun, only her colours are saturated (terracotta, mustard, teal). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 ANA turns to camera, holds the gaze, small nod. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que la experiencia se demuestra en el trabajo",
+      "texto_tts": "",
+      "texto_pantalla": "No tienes cómo mostrarlo",
+      "plano": "Close-up of ANA's mitten-hands holding a knitted folder of felt case studies; beside it the knitted phone shows a grey chat with no reply.",
+      "prompt_imagen": "close-up on hands and object. Close-up of ANA's mitten-hands holding a knitted folder of felt case studies; beside it the knitted phone shows a grey chat with no reply. ANA: a crocheted amigurumi figure of a woman in her thirties, terracotta knitted blazer, mustard knitted scarf, simple stitched dot eyes, dark yarn hair in a low bun, only her colours are saturated (terracotta, mustard, teal). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 She opens the folder, glances at the silent phone, closes the folder. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero el que cierra la demuestra antes, y yo abajo",
+      "texto_tts": "",
+      "texto_pantalla": "«Se demuestra trabajando»",
+      "plano": "ANA from behind at the desk working hard, head down, while through the grey knitted window a small grey stage with a grey speaker is lit far",
+      "prompt_imagen": "medium shot from behind. ANA from behind at the desk working hard, head down, while through the grey knitted window a small grey stage with a grey speaker is lit far away. ANA: a crocheted amigurumi figure of a woman in her thirties, terracotta knitted blazer, mustard knitted scarf, simple stitched dot eyes, dark yarn hair in a low bun, only her colours are saturated (terracotta, mustard, teal). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 She keeps working, the far stage light pulses, she does not look up. Camera: gentle pull-back. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Le falta un lugar donde el sector me vea",
+      "texto_tts": "",
+      "texto_pantalla": "Ellos la demuestran antes",
+      "plano": "Low-angle wide of the knitted street: a grey knitted consultant figure shaking hands with three grey clients outside a building; ANA small a",
+      "prompt_imagen": "low-angle wide. Low-angle wide of the knitted street: a grey knitted consultant figure shaking hands with three grey clients outside a building; ANA small across the street. ANA: a crocheted amigurumi figure of a woman in her thirties, terracotta knitted blazer, mustard knitted scarf, simple stitched dot eyes, dark yarn hair in a low bun, only her colours are saturated (terracotta, mustard, teal). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The handshakes happen one after another, ANA's shoulders drop a stitch. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "«Lo voy a pensar» es lo único que me queda",
+      "texto_tts": "",
+      "texto_pantalla": "Donde el sector te vea",
+      "plano": "Extreme close-up of ANA's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "extreme close-up on eyes. Extreme close-up of ANA's eyes; in the reflection a bright crowded trade-fair pavilion appears. ANA: a crocheted amigurumi figure of a woman in her thirties, terracotta knitted blazer, mustard knitted scarf, simple stitched dot eyes, dark yarn hair in a low bun, only her colours are saturated (terracotta, mustard, teal). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "ANA walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. The whole fa",
+      "prompt_imagen": "wide tracking shot. ANA walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. The whole fair world is greyscale knitted diorama; only the main character carries colour. ANA: a crocheted amigurumi figure of a woman in her thirties, terracotta knitted blazer, mustard knitted scarf, simple stitched dot eyes, dark yarn hair in a low bun, only her colours are saturated (terracotta, mustard, teal). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 ANA walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están las empresas que necesitan a alguien así / Y en tres días te ven de frente, y te dicen que sí",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; ANA small in the aisle looking ",
+      "prompt_imagen": "high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; ANA small in the aisle looking up. The whole fair world is greyscale knitted diorama; only the main character carries colour. ANA: a crocheted amigurumi figure of a woman in her thirties, terracotta knitted blazer, mustard knitted scarf, simple stitched dot eyes, dark yarn hair in a low bun, only her colours are saturated (terracotta, mustard, teal). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que la experiencia se demuestra en el trabajo (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Empresas que necesitan consultores",
+      "plano": "At a knitted fair stand, ANA explaining with a felt chart to two grey knitted figures leaning in; a third one waits behind them.",
+      "prompt_imagen": "two-shot at a stand. At a knitted fair stand, ANA explaining with a felt chart to two grey knitted figures leaning in; a third one waits behind them. ANA: a crocheted amigurumi figure of a woman in her thirties, terracotta knitted blazer, mustard knitted scarf, simple stitched dot eyes, dark yarn hair in a low bun, only her colours are saturated (terracotta, mustard, teal). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 She lifts the chart, the two lean closer, the third steps forward. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of ANA seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. The w",
+      "prompt_imagen": "medium shot, side angle. Side view of ANA seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. The whole fair world is greyscale knitted diorama; only the main character carries colour. ANA: a crocheted amigurumi figure of a woman in her thirties, terracotta knitted blazer, mustard knitted scarf, simple stitched dot eyes, dark yarn hair in a low bun, only her colours are saturated (terracotta, mustard, teal). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y ya nadie lo piensa, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "ANA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. The",
+      "prompt_imagen": "medium close-up facing camera. ANA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. The whole fair world is greyscale knitted diorama; only the main character carries colour. ANA: a crocheted amigurumi figure of a woman in her thirties, terracotta knitted blazer, mustard knitted scarf, simple stitched dot eyes, dark yarn hair in a low bun, only her colours are saturated (terracotta, mustard, teal). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 ANA looks at camera, presses the floating button, it pulses, nods. Camera: locked. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y ya nadie lo piensa, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Ya nadie lo piensa",
+      "plano": "The knitted home office again: the calendar now full of coloured felt squares, the laptop open with a call, ANA smiling with a stitch.",
+      "prompt_imagen": "wide static shot, held. The knitted home office again: the calendar now full of coloured felt squares, the laptop open with a call, ANA smiling with a stitch. ANA: a crocheted amigurumi figure of a woman in her thirties, terracotta knitted blazer, mustard knitted scarf, simple stitched dot eyes, dark yarn hair in a low bun, only her colours are saturated (terracotta, mustard, teal). The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. Lighting: soft natural light from a small diorama window to the left. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere. Negative: realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+      "prompt_video": "@Image1 A new coloured square appears on the calendar, she nods to the laptop. Camera: gentle push-in. Stop-motion cadence with subtle judder. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "emotivo",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Crochet cumbia. Mundo B&N, ANA única con color. Verbatim de crochet. Dolor «lo voy a pensar» 3 veces. Sin voz en off."
+}

@@ -1,0 +1,225 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p12-checkout-musical-anime",
+  "titulo": "Se van en el último paso",
+  "marca": "effix",
+  "publico": "Medios de pago y Fintech",
+  "nicho_mapa": 12,
+  "angulo": "12.1",
+  "angulo_nombre": "Checkout",
+  "temperatura": "calientes",
+  "estilo": "anime",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Una tienda pierde uno de cada tres clientes en el pago. Con otra pasarela. Y tú tienes justo el checkout que lo evita.",
+    "sintoma": "Las tiendas pierden ventas en el último paso todos los días y no saben que existes.",
+    "explicacion_fallida": "Te dices que las tiendas te van a encontrar cuando busquen pasarela.",
+    "patron": "Pero las tiendas no buscan pasarela: se quedan con la primera hasta que alguien les muestra otra de frente.",
+    "causa_raiz": "No te faltan funciones. Te falta estar delante de miles de tiendas con su caso en la mano.",
+    "mecanismo": "En Feria Effix hay más de sesenta mil asistentes que cobran por internet, y tres días para mostrar tu checkout en vivo."
+  },
+  "dolor_frase": "se van en el último paso",
+  "dolor_menciones_en_letra": 3,
+  "bible": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16.",
+  "negative_prompt": "3D render, photoreal, western cartoon, text, captions, letters, watermark, logo, UI, style drift, extra fingers, off-model face",
+  "personajes": {
+    "checkout": {
+      "ficha": "MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot.",
+      "voz": null,
+      "quien_es": "MIA, personaje anime: fundadora de una pasarela de pagos que quiere más tiendas.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Latin pop electrónico",
+    "suno_title": "Feria Effix — Se van en el último paso",
+    "suno_custom_lyrics": "[Verso 1]\nLlegan al pago y se van en el último paso\nUno de cada tres, y la tienda ni hace caso\nYo tengo el checkout que lo evita, lo sé\nPero se van en el último paso, y ella no lo ve\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las tiendas que hoy pierden el pago\nY tú les muestras en vivo cómo cerrarlo, y no en vano\n\n[Verso 2]\nMe digo que me buscan cuando busquen pasarela\nPero nadie busca, se quedan con la que llega\nHasta que alguien de frente les muestra otra\nSe van en el último paso, y yo sin mostrarla\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las tiendas que hoy pierden el pago\nY tú les muestras en vivo cómo cerrarlo, y no en vano\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY ya no se van, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "latin pop electronic",
+      "bright synths and reggaeton drums",
+      "anthemic sung chorus",
+      "female vocal",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 104,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Llegan al pago y se van en el último paso / Uno de cada tres, y la tienda ni hace caso",
+      "texto_tts": "",
+      "texto_pantalla": "Se van en el último paso",
+      "plano": "MIA in a fintech office in front of a huge glowing funnel on the wall; at the last step the light blinks out and small cart shapes fall away",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, wide establishing shot. MIA in a fintech office in front of a huge glowing funnel on the wall; at the last step the light blinks out and small cart shapes fall away; she watches with her tablet under her arm. MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Cart shapes reach the last step, the light blinks out, they fall; MIA's jaw sets. Camera: gentle push-in. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Yo tengo el checkout que lo evita, lo sé / Pero se van en el último paso, y ella no lo ve",
+      "texto_tts": "",
+      "texto_pantalla": "¿Tienes una pasarela de pagos?",
+      "plano": "MIA turns to face the camera in a fintech office with a big glowing funnel on the wall, the last step of the funnel where the light goes out",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, medium close-up. MIA turns to face the camera in a fintech office with a big glowing funnel on the wall, the last step of the funnel where the light goes out still visible. MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 MIA turns to camera, holds the gaze, small nod. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que me buscan cuando busquen pasarela",
+      "texto_tts": "",
+      "texto_pantalla": "No saben que existes",
+      "plano": "Close-up of MIA's tablet showing a clean glowing checkout with a big check mark; beside it a phone with a store's chat showing no reply.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, close-up on hands and object. Close-up of MIA's tablet showing a clean glowing checkout with a big check mark; beside it a phone with a store's chat showing no reply. MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The check mark pulses, the chat stays grey, she lowers the tablet. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero nadie busca, se quedan con la que llega",
+      "texto_tts": "",
+      "texto_pantalla": "«Me van a encontrar»",
+      "plano": "MIA from behind, leaning back in a chair with arms crossed, watching a search-bar shape float above the desk with nothing typed in it.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, medium shot from behind. MIA from behind, leaning back in a chair with arms crossed, watching a search-bar shape float above the desk with nothing typed in it. MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The search bar blinks empty, she uncrosses her arms. Camera: gentle pull-back. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Hasta que alguien de frente les muestra otra",
+      "texto_tts": "",
+      "texto_pantalla": "Se quedan con la primera",
+      "plano": "Low-angle wide: a store owner at a counter shrugs at an old clunky payment terminal shape while customers walk away; MIA small in the doorwa",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, low-angle wide. Low-angle wide: a store owner at a counter shrugs at an old clunky payment terminal shape while customers walk away; MIA small in the doorway. MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 A customer walks away, the owner shrugs, MIA steps forward. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Se van en el último paso, y yo sin mostrarla",
+      "texto_tts": "",
+      "texto_pantalla": "Con su caso en la mano",
+      "plano": "Extreme close-up of MIA's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, extreme close-up on eyes. Extreme close-up of MIA's eyes; in the reflection a bright crowded trade-fair pavilion appears. MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "MIA walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, wide tracking shot. MIA walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 MIA walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están las tiendas que hoy pierden el pago / Y tú les muestras en vivo cómo cerrarlo, y no en vano",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; MIA small in the aisle looking ",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; MIA small in the aisle looking up. MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que me buscan cuando busquen pasarela (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Tu checkout en vivo",
+      "plano": "At a fair stand, MIA holding her tablet toward a store owner, a live checkout completing with a bright check mark; a small crowd gathers.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, two-shot at a stand. At a fair stand, MIA holding her tablet toward a store owner, a live checkout completing with a bright check mark; a small crowd gathers. MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The check mark lights up, the owner's eyes widen, two more people lean in. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of MIA seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, medium shot, side angle. Side view of MIA seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y ya no se van, se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "MIA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, medium close-up facing camera. MIA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 MIA looks at camera, presses the floating button, it pulses, nods. Camera: locked. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y ya no se van, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Ya no se van",
+      "plano": "The fintech office again: the wall funnel now glowing to the very last step, cart shapes flowing through, MIA smiling at the tablet.",
+      "prompt_imagen": "2D anime style, clean line art, cel shading, expressive large eyes, dynamic composition, wide static shot, held. The fintech office again: the wall funnel now glowing to the very last step, cart shapes flowing through, MIA smiling at the tablet. MIA: an anime-style young woman, straight dark hair with a blunt fringe, white shirt with rolled sleeves, sharp confident eyes, a slim tablet under her arm. Same character design in every shot. vibrant but limited palette, TV-anime production quality, soft painted backgrounds, subtle speed lines on motion. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Carts flow through the last step, MIA taps the tablet once and nods. Camera: gentle push-in. Limited animation with anime timing (hold, then snap), one primary motion. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "energetico",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Anime latin pop electrónico. B2B: la solución es mostrar el checkout a las tiendas. Dolor «se van en el último paso» 3 veces."
+}

@@ -58,8 +58,9 @@
     "nota": "La canción manda: transcribir con whisper, recortar al tramo cantado, cortar en los golpes (librosa). Voz en off: NINGUNA. musica=False en el assembler.",
     "letra_previa": "[Verso 1]\nEres contador, y te llega un cliente que vende por internet\nTe muestra sus ventas, y ese modelo no lo conoces\nSi eres contador y todavía no tienes clientes de ecommerce\nEste video es para ti\n\n[Verso 2]\nCada día abren más tiendas por internet\nFacturan, pagan pasarelas, envían a otros países\nY necesitan quién les cuadre los números\n\n[Pre-coro]\nEsos clientes existen\nSolo tienes que ir a donde están\n\n[Coro]\nFeria Effix, del quince al diecinueve de octubre\nPlaza Mayor, Medellín\nMás de trescientas cincuenta empresas\nMás de sesenta mil asistentes\nAhí están tus próximos clientes\n\n[Verso 3]\nAhí están las tiendas que hoy no tienen contador\nMás de doscientas ponencias para aprender de los que ya tienen resultados\n\n[Outro]\nCompra tu ingreso dando clic en el botón\nAhí están tus próximos clientes",
     "modelo_previo": "fal-ai/minimax-music/v2.6",
-    "duracion_ms": 58000,
-    "nota_modelo": "Music 3 desde el primer intento, con todo lo aprendido en los ads #1 y #2."
+    "duracion_ms": 68000,
+    "nota_modelo": "Music 3 desde el primer intento, con todo lo aprendido en los ads #1 y #2.",
+    "nota_duracion": "68s es un TOPE, no la duracion pedida: Music 3 puede parar antes y asi cierra la cancion sola. Pedirle 58 exactos la cortaba en seco. La cancion no se recorta por el final (regla de Alexander): el video se estira con planos reencuadrados, que no cuestan nada."
   },
   "lineas": [
     {
@@ -155,9 +156,12 @@
       "texto_tts": "",
       "texto_pantalla": "+350 empresas · +60.000 asistentes",
       "plano": "SOLUCIÓN · Más de 350 empresas y más de 60.000 asistentes",
-      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, high-angle wide over the crowd. High-angle wide over an enormous pavilion: hundreds of colourful stands and a crowd of thousands, many TIENDA-like carts among them; CALCU small in the aisle, visor tipped back. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, high-angle wide over the crowd. High-angle wide over an enormous modern convention hall: long carpeted aisles between rows of sleek corporate exhibition booths with backlit display walls and large glowing screens, overhead truss lighting rigs, a crowd of thousands of business visitors wearing lanyards, many TIENDA-like carts among them; this is a technology, marketing and ecommerce trade show, not a street market: no market stalls, no produce, no food, no fabric awnings, no tents, no wooden crates; CALCU small in the aisle, visor tipped back. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 Aerial drift forward, the crowd moves, CALCU spins in place. Camera: gentle aerial drift forward. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, high-angle wide over the crowd. High-angle wide over an enormous pavilion: hundreds of colourful stands and a crowd of thousands, many TIENDA-like carts among them; CALCU small in the aisle, visor tipped back. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
     },
     {
       "n": 9,
@@ -167,9 +171,12 @@
       "texto_tts": "",
       "texto_pantalla": "Ahí están tus próximos clientes",
       "plano": "SOLUCIÓN · Las tiendas sin contador están ahí y hacen fila",
-      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, two-shot at a stand. At a stand, a line of TIENDA-like carts waits in front of CALCU; the first cart's receipts float to him, he taps a button-arm and they turn into a glowing green check mark; the cart's eyes go happy. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, two-shot at a stand. At a sleek modern trade-show booth with a backlit display wall and a clean counter, on the carpeted aisle of a technology and ecommerce convention (not a street market stall: no produce, no food, no fabric awning, no wooden crates), a line of TIENDA-like carts waits in front of CALCU; the first cart's receipts float to him, he taps a button-arm and they turn into a glowing green check mark; the cart's eyes go happy. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
       "prompt_video": "@Image1 Receipts float over, CALCU taps, they flip into a check mark, the cart rolls off happy and the next one comes forward. Camera: locked. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
-      "lipsync": false
+      "lipsync": false,
+      "prompts_previos": {
+        "prompt_imagen": "Pixar 3D CGI style, subsurface scattering, volumetric warm lighting, expressive eyes, two-shot at a stand. At a stand, a line of TIENDA-like carts waits in front of CALCU; the first cart's receipts float to him, he taps a button-arm and they turn into a glowing green check mark; the cart's eyes go happy. CALCU: an anthropomorphic vintage desk calculator, cream and mint-green body, a paper roll on top that curls like hair, big expressive eyes on the display, a tiny green accountant visor, short rubber-button arms. TIENDA: an anthropomorphic small shopping cart with big expressive eyes carrying a floating stack of blank receipt shapes when it needs help. Same characters in every shot. high detail textures, cinematic color grade, Disney Pixar quality render, smooth animation, shallow depth of field. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere."
+      }
     },
     {
       "n": 10,
@@ -247,6 +254,16 @@
         "\"Si eres contador y todavía no tienes clientes de ecommerce\" -> \"Si eres contador y todavía no tienes clientes con tienda en internet\""
       ],
       "costo_usd": 0.116
+    },
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander (regla de la tanda 1)",
+      "motivo": "La feria tiene que verse como evento de ecommerce, marketing e IA, nunca como plaza de mercado. Alexander lo corrigio en el ad de abogados y la regla aplica a los 14 guiones: \"hundreds of colourful stands\" y \"at a stand\" se leen como puesto de mercado.",
+      "lineas": [
+        8,
+        9
+      ],
+      "costo_usd": 0.72
     }
   ],
   "aprobado_por": "Alexander",

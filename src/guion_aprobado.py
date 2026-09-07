@@ -116,9 +116,18 @@ def _regla_2(g: dict[str, Any], r: Resultado) -> None:
     from .narracion_hablada import CTA_POR_PASE
     from .nichos_effix import NICHOS
 
-    if g.get("nicho") not in NICHOS:
+    # Dos series conviven en el formato: los guiones por nicho con nombre
+    # ("abogados", "contadores") y los de la parrilla numerada, que traen
+    # `nicho_mapa` (un indice) y `publico` en texto libre. Los segundos son
+    # validos: describen a quien le hablan sin pasar por src/nichos_effix.py.
+    if g.get("nicho") is not None:
+        if g["nicho"] not in NICHOS:
+            r.errores.append(
+                f"2· nicho {g['nicho']!r} no existe en src/nichos_effix.py.")
+    elif not (g.get("nicho_mapa") is not None and str(g.get("publico") or "").strip()):
         r.errores.append(
-            f"2· nicho {g.get('nicho')!r} no existe en src/nichos_effix.py.")
+            "2· el guion no dice a quien le habla: falta `nicho` (de "
+            "src/nichos_effix.py) o el par `nicho_mapa` + `publico`.")
     if g.get("pase") not in CTA_POR_PASE:
         r.errores.append(
             f"2· pase {g.get('pase')!r} no existe en CTA_POR_PASE. "

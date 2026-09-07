@@ -1,0 +1,226 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por_aprobar",
+  "job_id": "p07-mayorista-digital-musical-animado_2d",
+  "titulo": "Pedidos por teléfono",
+  "marca": "effix",
+  "publico": "Mayoristas y distribuidores",
+  "nicho_mapa": 7,
+  "angulo": "7.1",
+  "angulo_nombre": "Digitalizar ventas mayoristas",
+  "temperatura": "calientes",
+  "estilo": "animado_2d",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Un cliente llama, dictas el pedido en un cuaderno, alguien lo pasa a Excel, y otro lo digita. Tres veces el mismo pedido.",
+    "sintoma": "Cuando la del teléfono se enferma, ese día no se vende.",
+    "explicacion_fallida": "Te dices que tus clientes no van a pedir por una página.",
+    "patron": "Pero tus clientes ya compran todo lo demás por internet.",
+    "causa_raiz": "No es que no quieran. Es que no les has dado un canal para pedir a cualquier hora.",
+    "mecanismo": "En Feria Effix están las plataformas de venta mayorista online y los distribuidores que ya reciben la mitad de sus pedidos sin tocar el teléfono."
+  },
+  "dolor_frase": "el pedido por teléfono",
+  "dolor_menciones_en_letra": 3,
+  "bible": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. DONA GLORIA: a Colombian woman in her fifties, short grey-streaked hair, reading glasses, floral blouse under a work vest, a landline phone tucked between ear and shoulder, a pen in hand. Same character in every shot.",
+  "negative_prompt": "3D render, Pixar style, photorealistic, gradients, airbrush, glossy highlights, variable line weight, text, captions, letters, watermark, logo, UI, extra fingers, deformed hands, style drift",
+  "personajes": {
+    "mayorista-digital": {
+      "ficha": "DONA GLORIA: a Colombian woman in her fifties, short grey-streaked hair, reading glasses, floral blouse under a work vest, a landline phone tucked between ear and shoulder, a pen in hand. Same character in every shot.",
+      "voz": null,
+      "quien_es": "DOÑA GLORIA, mayorista que toma pedidos por teléfono y cuaderno, en animación 2D.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Salsa urbana / champeta",
+    "suno_title": "Feria Effix — Pedidos por teléfono",
+    "suno_custom_lyrics": "[Verso 1]\nSuena el teléfono y anoto el pedido en el cuaderno\nLo pasan al Excel, lo digitan, y es eterno\nEl mismo pedido tres veces, todo el día\nEl pedido por teléfono me quita la alegría\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los mayoristas que ya venden sin llamar\nY las plataformas donde el cliente pide sin esperar\n\n[Verso 2]\nMe digo que mi gente no va a pedir por internet\nPero por internet compra todo, hasta el café\nSolo a mí me llama, porque no le di otro lugar\nEl pedido por teléfono ya no va a durar\n\n[Coro]\nFeria Effix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están los mayoristas que ya venden sin llamar\nY las plataformas donde el cliente pide sin esperar\n\n[Puente]\nMás de trescientas cincuenta empresas, sesenta mil personas\nDoscientas ponencias pa' aprender de las que ya funcionan\n\n[Outro]\nY el pedido por teléfono se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "salsa urbana",
+      "piano montuno and horns",
+      "champeta energy",
+      "catchy sung chorus",
+      "duet male and female vocals",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 98,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. Si MiniMax no rima o canta mal 'Feria Effix', regenerar (0.15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Suena el teléfono y anoto el pedido en el cuaderno / Lo pasan al Excel, lo digitan, y es eterno",
+      "texto_tts": "",
+      "texto_pantalla": "El pedido, tres veces",
+      "plano": "DONA GLORIA in a warehouse office with the landline between ear and shoulder, writing in a paper notebook, behind her a second worker typing",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. wide establishing shot. DONA GLORIA in a warehouse office with the landline between ear and shoulder, writing in a paper notebook, behind her a second worker typing the same into a computer and a third digitizing again. DONA GLORIA: a Colombian woman in her fifties, short grey-streaked hair, reading glasses, floral blouse under a work vest, a landline phone tucked between ear and shoulder, a pen in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 She writes, the phone rings again, the second worker types, the third sighs. Camera: gentle push-in. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "El mismo pedido tres veces, todo el día / El pedido por teléfono me quita la alegría",
+      "texto_tts": "",
+      "texto_pantalla": "¿Mayorista que vende por teléfono?",
+      "plano": "DOÑA GLORIA turns to face the camera in a wholesale warehouse office with a landline and a paper notebook, the paper order notebook still vi",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium close-up. DOÑA GLORIA turns to face the camera in a wholesale warehouse office with a landline and a paper notebook, the paper order notebook still visible. DONA GLORIA: a Colombian woman in her fifties, short grey-streaked hair, reading glasses, floral blouse under a work vest, a landline phone tucked between ear and shoulder, a pen in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 DOÑA GLORIA turns to camera, holds the gaze, small nod. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Me digo que mi gente no va a pedir por internet",
+      "texto_tts": "",
+      "texto_pantalla": "Sin la del teléfono no hay venta",
+      "plano": "Close-up of the empty desk with the landline off the hook and the notebook closed; a wall clock; the warehouse shelves full behind.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. close-up on hands and object. Close-up of the empty desk with the landline off the hook and the notebook closed; a wall clock; the warehouse shelves full behind. DONA GLORIA: a Colombian woman in her fifties, short grey-streaked hair, reading glasses, floral blouse under a work vest, a landline phone tucked between ear and shoulder, a pen in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The phone rings and rings, nobody picks up, the clock hand moves. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Pero por internet compra todo, hasta el café",
+      "texto_tts": "",
+      "texto_pantalla": "«No van a pedir por página»",
+      "plano": "DONA GLORIA from behind, waving a hand at a laptop a young worker offers, turning back to the landline.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium shot from behind. DONA GLORIA from behind, waving a hand at a laptop a young worker offers, turning back to the landline. DONA GLORIA: a Colombian woman in her fifties, short grey-streaked hair, reading glasses, floral blouse under a work vest, a landline phone tucked between ear and shoulder, a pen in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 She waves the laptop away, picks up the phone, the young worker shrugs. Camera: gentle pull-back. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Solo a mí me llama, porque no le di otro lugar",
+      "texto_tts": "",
+      "texto_pantalla": "Ya compran todo por internet",
+      "plano": "Low-angle wide: outside the warehouse, a retail client on a scooter taps a phone and a parcel-shape from a competitor warehouse flies out; D",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. low-angle wide. Low-angle wide: outside the warehouse, a retail client on a scooter taps a phone and a parcel-shape from a competitor warehouse flies out; DONA GLORIA small at her door. DONA GLORIA: a Colombian woman in her fifties, short grey-streaked hair, reading glasses, floral blouse under a work vest, a landline phone tucked between ear and shoulder, a pen in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The client taps, the parcel flies from the other warehouse, she watches it go. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "El pedido por teléfono ya no va a durar",
+      "texto_tts": "",
+      "texto_pantalla": "Un canal a cualquier hora",
+      "plano": "Extreme close-up of DOÑA GLORIA's eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. extreme close-up on eyes. Extreme close-up of DOÑA GLORIA's eyes; in the reflection a bright crowded trade-fair pavilion appears. DONA GLORIA: a Colombian woman in her fifties, short grey-streaked hair, reading glasses, floral blouse under a work vest, a landline phone tucked between ear and shoulder, a pen in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Effix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "DOÑA GLORIA walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. wide tracking shot. DOÑA GLORIA walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. DONA GLORIA: a Colombian woman in her fifties, short grey-streaked hair, reading glasses, floral blouse under a work vest, a landline phone tucked between ear and shoulder, a pen in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 DOÑA GLORIA walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Ahí están los mayoristas que ya venden sin llamar / Y las plataformas donde el cliente pide sin esperar",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +60.000 asistentes",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; DOÑA GLORIA small in the aisle ",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; DOÑA GLORIA small in the aisle looking up. DONA GLORIA: a Colombian woman in her fifties, short grey-streaked hair, reading glasses, floral blouse under a work vest, a landline phone tucked between ear and shoulder, a pen in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, the character turns in place. Camera: gentle aerial drift forward. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Me digo que mi gente no va a pedir por internet (repite el dolor en imagen)",
+      "texto_tts": "",
+      "texto_pantalla": "Mayoristas que venden sin llamar",
+      "plano": "At a fair stand, DONA GLORIA looking at a tablet where order shapes arrive by themselves into a list, a distributor beside her pointing at i",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. two-shot at a stand. At a fair stand, DONA GLORIA looking at a tablet where order shapes arrive by themselves into a list, a distributor beside her pointing at it. DONA GLORIA: a Colombian woman in her fifties, short grey-streaked hair, reading glasses, floral blouse under a work vest, a landline phone tucked between ear and shoulder, a pen in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Order shapes drop into the list one after another, the distributor points, she leans in. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Más de trescientas cincuenta empresas, sesenta mil personas / Doscientas ponencias pa' aprender de las que ya funcionan",
+      "texto_tts": "",
+      "texto_pantalla": "+200 ponencias educativas",
+      "plano": "Side view of DOÑA GLORIA seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking note",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium shot, side angle. Side view of DOÑA GLORIA seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. DONA GLORIA: a Colombian woman in her fifties, short grey-streaked hair, reading glasses, floral blouse under a work vest, a landline phone tucked between ear and shoulder, a pen in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, the character writes and looks up. Camera: gentle lateral drift. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Y el pedido por teléfono se acabó / Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "DOÑA GLORIA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands beh",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium close-up facing camera. DOÑA GLORIA facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. DONA GLORIA: a Colombian woman in her fifties, short grey-streaked hair, reading glasses, floral blouse under a work vest, a landline phone tucked between ear and shoulder, a pen in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 DOÑA GLORIA looks at camera, presses the floating button, it pulses, nods. Camera: locked. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Y el pedido por teléfono se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "El pedido entra solo",
+      "plano": "The warehouse office, early morning, lights off except a tablet on the desk where order shapes arrive by themselves; the landline unplugged;",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. wide static shot, held. The warehouse office, early morning, lights off except a tablet on the desk where order shapes arrive by themselves; the landline unplugged; DONA GLORIA arriving with coffee. DONA GLORIA: a Colombian woman in her fifties, short grey-streaked hair, reading glasses, floral blouse under a work vest, a landline phone tucked between ear and shoulder, a pen in hand. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Orders arrive on the tablet, she sets the coffee down and smiles at the silent phone. Camera: gentle push-in. Flat 2D cartoon animation, constant line weight, no morphing, no style drift, one primary motion. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "'sesenta mil personas/asistentes' — cifra de Alexander (2026-09-04), sin fuente pública. Confirmar con Effix antes de pautar."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "canción 0.15 + héroe 0.08 + 12 escenas × 0.08 + 12 clips × 5s × 0.056 (Kling v2.1 std) = 4.55 USD",
+  "notas_produccion": "Animado 2D salsa urbana. Bible flat 2D verbatim del ad 'La acera'. Dolor «el pedido por teléfono» 3 veces. Sin voz en off."
+}

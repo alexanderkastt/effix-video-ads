@@ -1,0 +1,46 @@
+{
+  "job": "contadores-musical-pixar",
+  "fecha": "2026-09-07",
+  "tanda": 2,
+  "orden": 3,
+  "estimado_usd": 4.612,
+  "real_usd": 5.1,
+  "desvio_usd": 0.488,
+  "por_concepto": {
+    "cancion": {
+      "llamadas": 3,
+      "usd": 0.348
+    },
+    "whisper": {
+      "llamadas": 2,
+      "usd": 0.192
+    },
+    "hero": {
+      "llamadas": 1,
+      "usd": 0.08
+    },
+    "escena": {
+      "llamadas": 14,
+      "usd": 1.12
+    },
+    "clip": {
+      "llamadas": 12,
+      "usd": 3.36
+    }
+  },
+  "causas_del_desvio": [
+    "3 canciones perdidas por la caida de red antes de descargarlas.",
+    "Escenas 8 y 9 rehechas: volvian a verse como plaza de mercado, la regla que Alexander fijo en la tanda 1 y que este guion no llevaba.",
+    "1 cancion regenerada con estilo comercial."
+  ],
+  "render": "assets/renders/contadores-musical-pixar.mp4",
+  "qa": {
+    "duracion_s": 58.04,
+    "lufs": -14.7,
+    "true_peak": -3.6,
+    "planos": 29,
+    "plano_min_s": 1.53,
+    "plano_max_s": 2.39,
+    "veredicto": "las 5 comprobaciones en verde"
+  }
+}
