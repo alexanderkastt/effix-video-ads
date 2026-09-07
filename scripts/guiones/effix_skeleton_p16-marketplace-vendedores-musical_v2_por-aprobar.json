@@ -1,0 +1,265 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por-aprobar",
+  "job_id": "p16-marketplace-vendedores-musical-skeleton-v2",
+  "titulo": "El marketplace sin vendedores",
+  "marca": "effix",
+  "publico": "Marketplaces",
+  "nicho_mapa": 16,
+  "angulo": "16.1",
+  "angulo_nombre": "Conseguir vendedores",
+  "temperatura": "calientes",
+  "estilo": "skeleton",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "formato_cancion": "F2 · CONTEO — cuenta con los dedos los vendedores nuevos del mes; la cuenta baja, y al final se rompe hacia arriba.",
+  "version_lote": "angulo1-v2",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 52,
+  "microsituacion": {
+    "momento": "Abres el panel y los vendedores nuevos del mes se cuentan con una mano.",
+    "sintoma": "Pagas anuncios para atraer vendedores y llegan de a uno, con poco producto.",
+    "reaccion_interna": "Piensas que tu página no es suficientemente atractiva.",
+    "explicacion_fallida": "Te dices que los buenos vendedores ya están en las páginas grandes.",
+    "patron": "Pero todos los días abren tiendas nuevas, y entran donde alguien les explicó de frente.",
+    "causa_raiz": "No te faltan compradores. Te falta estar donde los vendedores deciden dónde vender.",
+    "mecanismo": "En Feria Effix van miles de vendedores buscando dónde vender, y tienes tres días para explicarles de frente."
+  },
+  "microsituacion_apariciones": {
+    "cruda": "Línea 1 — la mano contando cinco dedos (en imagen).",
+    "agravada": "Línea 5 — la misma mano que solo llega a tres (en imagen).",
+    "resuelta": "Línea 12 — la misma mano que se rinde porque no alcanza a contar (en imagen).",
+    "en_imagen": 3
+  },
+  "dolor_frase": "con una mano los cuento",
+  "dolor_menciones_en_letra": 3,
+  "bible": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical.",
+  "negative_prompt": "no text, no captions, no words, no letters, no watermark, no UI, style drift, extra limbs, clothing",
+  "personajes": {
+    "marketplace-vendedores": {
+      "ficha": "The skeleton character of the Character Bible, identical in every shot.",
+      "voz": null,
+      "quien_es": "El esqueleto dirige un marketplace que no consigue vendedores.",
+      "lipsync": false
+    },
+    "un-vendedor": {
+      "ficha": "A young seller in his twenties, hoodie, phone in hand. Same character in every shot.",
+      "voz": null,
+      "quien_es": "Un vendedor que entró a una página porque se la explicaron en la feria. Da el dato.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Reggaetón",
+    "suno_title": "Feria Effix — El marketplace sin vendedores",
+    "suno_custom_lyrics": "[Conteo]\nUno, dos, tres, cuatro, cinco\nEsos son los vendedores nuevos del mes\n\n[Él]\nYo tengo la página donde otros venden\nPago anuncios para que lleguen, y llegan de a uno\n\n[Conteo]\nUno, dos, tres... y ahí se acabó la cuenta\n\n[Él]\nYo creía que los buenos ya están en las páginas grandes\nPero todos los días abren tiendas nuevas\nY se meten donde alguien les explicó de frente\n\n[Un vendedor]\nYo entré a la página que me explicaron en la feria\nEs en octubre: Feria Effix, del quince al diecinueve, en Plaza Mayor\nVan miles de vendedores buscando dónde vender\n\n[Él]\nCompré mi entrada. Voy a explicarles de frente\n\n[Conteo]\nUno, diez, cincuenta... ya no alcanzo a contar\nCompra tu entrada y llénate de vendedores",
+    "suno_style_tags": [
+      "reggaeton",
+      "dembow groove",
+      "deep 808 bass",
+      "vocal with attitude",
+      "radio-ready mix",
+      "every word clearly enunciated, simple everyday Spanish a ten year old understands",
+      "no repeated brand chorus, the verses carry the story",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words",
+      "a counting chant that changes each time it returns"
+    ],
+    "bpm_recomendado": 96,
+    "volumen_relativo": 1.0,
+    "modelo": "minimax/music-3",
+    "bpm_exacto": true,
+    "duracion_ms": 64000,
+    "genero_prompt": "commercial reggaeton, dark and catchy, street energy",
+    "ritmo_prompt": "dembow groove, deep 808 bass, sharp claps, sparse synth stabs",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. «Feria Effix» va con tilde en la letra: sin ella el modelo la canta «FX». Letra corta a propósito — el 2026-09-07 una letra con dos coros completos se quedó sin tiempo y nunca cantó el outro, que es el CTA. Si no rima al oído o canta mal la marca, regenerar (0,15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Uno, dos, tres, cuatro, cinco",
+      "texto_tts": "",
+      "texto_pantalla": "Cinco vendedores este mes",
+      "plano": "Primer plano de la mano del esqueleto contando con los dedos. CRUDA: vuelve tres veces.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. tight close-up on a bony hand counting fingers: a skeleton hand held up against a dim office wall, counting five fingers one by one, a laptop glow on the bones. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the fingers lift one by one until five are up, and stop. Camera: locked off. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Esos son los vendedores nuevos del mes",
+      "texto_tts": "",
+      "texto_pantalla": "",
+      "plano": "Plano medio del esqueleto frente a su panel: cinco fichas de vendedores y espacio vacío.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium shot: the skeleton in front of a wall board with only five seller cards pinned on it and a large empty space beside them. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he pins a fifth card up and steps back from the mostly empty board. Camera: steady push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Yo tengo la página donde otros venden",
+      "texto_tts": "",
+      "texto_pantalla": "Tiene la página. Faltan tiendas.",
+      "plano": "Plano general: la página con muchos espacios vacíos donde deberían estar los productos.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. wide shot of a large screen: a large screen showing a marketplace grid with most cells empty as plain outlines and only a few filled with abstract product shapes. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the empty cells stay empty while one new filled cell appears far from the others. Camera: lateral dolly. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Pago anuncios para que lleguen, y llegan de a uno",
+      "texto_tts": "",
+      "texto_pantalla": "Paga anuncios. Llega uno.",
+      "plano": "Plano detalle: dinero saliendo por un lado y una sola ficha entrando por el otro.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. macro detail split between two sides: close detail of abstract money blocks leaving a tray on one side and a single seller card arriving on the other. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 several money blocks leave the tray and only one card arrives. Camera: handheld drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "DEFECTO",
+      "quien": "CANCION",
+      "texto": "Uno, dos, tres... y ahí se acabó la cuenta",
+      "texto_tts": "",
+      "texto_pantalla": "",
+      "plano": "Misma mano contando: esta vez solo llega a tres. AGRAVADA.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. tight close-up on the counting hand, matching the first framing: the same counting-hand framing the following month, only three fingers up and the hand hesitating, colder light. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 three fingers lift and the hand stops, the fourth never rising. Camera: locked off, tiny drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Yo creía que los buenos ya están en las páginas grandes",
+      "texto_tts": "",
+      "texto_pantalla": "«Ya están en las grandes»",
+      "plano": "Plano medio corto del esqueleto encogiéndose de hombros frente al panel.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium close-up: the skeleton shrugging in front of the half-empty seller board, jaw slack. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he shrugs at the board and lets his arms drop. Camera: static. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Pero todos los días abren tiendas nuevas / Y se meten donde alguien les explicó de frente",
+      "texto_tts": "",
+      "texto_pantalla": "Abren tiendas todos los días",
+      "plano": "Plano lateral: varias tiendas nuevas abriendo, cada una eligiendo dónde vender.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. side profile of a row of small shops: a row of small new shops opening their doors one after another along a street, each owner holding a box of products deciding where to sell. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 one after another the shop doors open and the owners step out with their boxes. Camera: lateral dolly. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Yo entré a la página que me explicaron en la feria",
+      "texto_tts": "",
+      "texto_pantalla": "Entró donde le explicaron",
+      "plano": "Contraplano: un vendedor le cuenta al esqueleto cómo eligió.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium two-shot: a young seller talking to the skeleton at a counter, showing him his own filled seller card on a phone. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he turns the phone toward the skeleton and points at the card. Camera: steady arc. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "FECHAS",
+      "quien": "CANCION",
+      "texto": "Es en octubre: Feria Effix, del quince al diecinueve, en Plaza Mayor",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "Plano general: el esqueleto entrando al centro de convenciones entre la multitud.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. wide tracking shot: the skeleton walking into a large modern convention centre in Medellin, morning light, a big crowd streaming in, banners as plain solid black panels with white abstract shapes. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he walks in with the crowd and looks down the main aisle. Camera: tracking alongside. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PRUEBA",
+      "quien": "CANCION",
+      "texto": "Van miles de vendedores buscando dónde vender",
+      "texto_tts": "",
+      "texto_pantalla": "Miles buscando dónde vender",
+      "plano": "Picado sobre el pabellón: pasillos llenos de vendedores con sus productos.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. high-angle wide: high angle over a huge fair pavilion, hundreds of stands and thousands of visitors carrying product boxes and samples. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the crowd flows down the aisles carrying boxes and samples. Camera: crane down. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Compré mi entrada. Voy a explicarles de frente",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "Esqueleto de frente presionando un botón grande que flota.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium shot facing camera: the skeleton facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front of him. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he presses the floating button and it lights up, standing tall. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Uno, diez, cincuenta... ya no alcanzo a contar / Compra tu entrada y llénate de vendedores",
+      "texto_tts": "",
+      "texto_pantalla": "Ya no alcanza a contar",
+      "plano": "Misma mano contando: se rinde porque entran demasiadas fichas. RESUELTA.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. tight close-up on the counting hand, matching the earlier framings: the same counting-hand framing, now with seller cards flying past the hand faster than it can count, warm light. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 cards keep flying past and the hand gives up counting and opens wide. Camera: locked off, tiny push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "energetico",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [],
+  "costo_estimado_usd": null,
+  "costo_desglose": "Lo calcula el productor con cost_estimator y parámetros reales (Seedance 1.5 Pro 1080p, clips de 4 s, nano-banana-2).",
+  "nombre_entrega": "P16_effix_skeleton_marketplaces_el-marketplace-sin-vendedores_20260907.mp4",
+  "nota_entrega": "Nombre del mp4 final, ya numerado por publico de la parrilla: P<NN>_effix_<estilo>_<publico>_<micro-situacion>_<AAAAMMDD>.mp4. El numero va delante para que los 28 queden en orden en la carpeta. Este campo manda sobre guion_aprobado.nombre_de_entrega(): si la funcion no antepone el numero, hay que ajustarla en el mismo commit (CLAUDE.md: una regla sin default en el codigo no existe).",
+  "notas_produccion": "Letra explícita: no se dice marketplace ni onboarding, se dice «la página donde otros venden» y «vendedores nuevos del mes». El dato de la feria lo da un vendedor. La micro-situación es la mano contando: mismo encuadre en las líneas 1, 5 y 12. Character Bible verbatim, encuadres distintos por plano. Héroe primero. Cantado, sin voz en off.",
+  "aprobado_por": null,
+  "aprobado_el": null,
+  "modelos": {
+    "video": "fal-ai/bytedance/seedance/v1.5/pro/image-to-video",
+    "resolucion": "1080p",
+    "imagen": "fal-ai/nano-banana-2",
+    "edit": "fal-ai/nano-banana-2/edit"
+  },
+  "duracion_clip_s": 4,
+  "nota_video": "Seedance 1.5 Pro a 1080p, clips de 4 s encadenados. Frame final en los clips que cierran una línea; sin frame final en los intermedios. Decisión de Alexander el 2026-09-07.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "quien": "Alexander",
+      "que": "Lote .1 v2: la micro-situación se toca tres veces con función distinta (cruda, agravada, resuelta) y cada público usa un formato de canción propio. El v1 tenía los 28 con la misma estructura y se leían como el mismo video.",
+      "costo_usd": 0
+    }
+  ]
+}

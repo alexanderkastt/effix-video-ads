@@ -1,0 +1,265 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por-aprobar",
+  "job_id": "p21-fotos-musical-animado2d-v2",
+  "titulo": "Fotos que no venden",
+  "marca": "effix",
+  "publico": "Contenido para e-commerce",
+  "nicho_mapa": 21,
+  "angulo": "21.1",
+  "angulo_nombre": "Fotos que no venden",
+  "temperatura": "tibios",
+  "estilo": "animado_2d",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "formato_cancion": "F7 · JINGLE-LOOP — «nadie pregunta el precio» vuelve como cuña corta después de cada publicación; la última vez cambia a «ya preguntan».",
+  "version_lote": "angulo1-v2",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 52,
+  "microsituacion": {
+    "momento": "Subes la foto del producto, la ven trescientas personas, y nadie pregunta el precio.",
+    "sintoma": "La foto es bonita, el producto es bueno, y nadie compra.",
+    "reaccion_interna": "Piensas que tus fotos se ven pobres al lado de las demás.",
+    "explicacion_fallida": "Te dices que te falta una cámara mejor.",
+    "patron": "Pero las fotos que más venden se hacen con celular: cambia quién sale y qué se muestra.",
+    "causa_raiz": "No te falta cámara. Te falta saber qué tiene que mostrar la foto para que alguien compre.",
+    "mecanismo": "En Feria Effix están las agencias de contenido, los creadores y más de doscientas conferencias sobre el contenido que sí vende."
+  },
+  "microsituacion_apariciones": {
+    "cruda": "Línea 1 — la foto publicada con el chat vacío debajo (en imagen).",
+    "agravada": "Línea 4 — el mismo encuadre con una foto más bonita y el chat igual de vacío (en imagen).",
+    "resuelta": "Línea 12 — el mismo encuadre con la lista de mensajes llenándose (en imagen).",
+    "en_imagen": 3
+  },
+  "dolor_frase": "nadie pregunta el precio",
+  "dolor_menciones_en_letra": 3,
+  "bible": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition.",
+  "negative_prompt": "3D render, Pixar style, photorealistic, gradients, airbrush, glossy highlights, variable line weight, text, captions, letters, watermark, logo, UI, extra fingers, deformed hands, style drift",
+  "personajes": {
+    "fotos": {
+      "ficha": "CAMI: a young Colombian woman, curly hair tied up, oversized denim jacket, holding a phone with a product in the other hand, expressive face. Same character in every shot.",
+      "voz": null,
+      "quien_es": "CAMI, dueña de tienda que hace sus propias fotos.",
+      "lipsync": false
+    },
+    "otra-tienda": {
+      "ficha": "A second young seller, straight hair, plain tee, phone in hand, filming herself using a product. Same character in every shot.",
+      "voz": null,
+      "quien_es": "Otra vendedora que ya aprendió qué mostrar. Da el dato de la feria.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Salsa urbana / champeta",
+    "suno_title": "Feria Effix — Fotos que no venden",
+    "suno_custom_lyrics": "[Cuña]\nNadie pregunta el precio\n\n[Cami]\nSubo la foto del producto\nLa ven trescientas personas y nadie escribe\n\n[Cuña]\nNadie pregunta el precio\n\n[Cami]\nLa foto es bonita y el producto es bueno\nYo creía que me faltaba una cámara mejor\nPero las fotos que más venden se hacen con celular\nCambia quién sale y qué se muestra\n\n[Otra tienda]\nA mí me enseñaron qué mostrar, en la feria\nBúsquelos en la Feria Effix, del quince al diecinueve de octubre, en Plaza Mayor\nVan agencias, creadores y más de doscientas conferencias\n\n[Cami]\nCompré mi entrada. Voy a aprender qué mostrar\n\n[Cuña rota]\nYa preguntan el precio\nCompra tu entrada y aprende qué mostrar",
+    "suno_style_tags": [
+      "salsa urbana",
+      "piano montuno and horns",
+      "champeta energy",
+      "clear vocal",
+      "radio-ready mix",
+      "every word clearly enunciated, simple everyday Spanish a ten year old understands",
+      "no repeated brand chorus, the verses carry the story",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words",
+      "a short chanted four-word hook repeated between verses"
+    ],
+    "bpm_recomendado": 98,
+    "volumen_relativo": 1.0,
+    "modelo": "minimax/music-3",
+    "bpm_exacto": true,
+    "duracion_ms": 64000,
+    "genero_prompt": "salsa urbana with champeta energy, festive and warm",
+    "ritmo_prompt": "piano montuno, bright horn stabs, congas and timbal breaks, space between phrases",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. «Feria Effix» va con tilde en la letra: sin ella el modelo la canta «FX». Letra corta a propósito — el 2026-09-07 una letra con dos coros completos se quedó sin tiempo y nunca cantó el outro, que es el CTA. Si no rima al oído o canta mal la marca, regenerar (0,15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Nadie pregunta el precio",
+      "texto_tts": "",
+      "texto_pantalla": "«Nadie pregunta el precio»",
+      "plano": "Primer plano del celular: la foto publicada y el chat vacío debajo. CRUDA: vuelve tres veces.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. tight close-up on a phone screen: a phone screen showing a posted product photo as a plain abstract card with an empty message list below it, CAMI's thumb resting at the edge. CAMI: a young Colombian woman, curly hair tied up, oversized denim jacket, holding a phone with a product in the other hand, expressive face. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the empty message list stays empty while her thumb pulls down to refresh. Camera: locked off. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Subo la foto del producto",
+      "texto_tts": "",
+      "texto_pantalla": "",
+      "plano": "Plano medio de CAMI fotografiando el producto sobre la mesa de su casa.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium shot: CAMI photographing a product on a plain table at home with her phone, a small lamp beside it, boxes of stock behind her. CAMI: a young Colombian woman, curly hair tied up, oversized denim jacket, holding a phone with a product in the other hand, expressive face. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 she takes the photo, checks it and sets the product straight to take another. Camera: steady push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "La ven trescientas personas y nadie escribe",
+      "texto_tts": "",
+      "texto_pantalla": "La ven y no escriben",
+      "plano": "Plano detalle: el contador de vistas sube mientras la bandeja de mensajes sigue vacía.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. macro detail split between two counters: close detail of two abstract counters side by side, one climbing steadily and the other frozen at zero. CAMI: a young Colombian woman, curly hair tied up, oversized denim jacket, holding a phone with a product in the other hand, expressive face. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 one counter climbs while the other does not move at all. Camera: handheld drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "DEFECTO",
+      "quien": "CANCION",
+      "texto": "Nadie pregunta el precio",
+      "texto_tts": "",
+      "texto_pantalla": "",
+      "plano": "Mismo primer plano del celular: otra foto, más bonita, mismo chat vacío. AGRAVADA.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. tight close-up on the phone screen, matching the first framing: the same phone framing with a nicer, better-lit product card posted, and the message list below still completely empty. CAMI: a young Colombian woman, curly hair tied up, oversized denim jacket, holding a phone with a product in the other hand, expressive face. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 she refreshes twice and nothing appears in the empty list. Camera: locked off, tiny drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "La foto es bonita y el producto es bueno / Yo creía que me faltaba una cámara mejor",
+      "texto_tts": "",
+      "texto_pantalla": "«Me falta una cámara»",
+      "plano": "Plano medio corto de CAMI mirando una cámara cara en una vitrina.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium close-up through a shop window: CAMI looking at an expensive camera behind a shop window, her own phone still in her hand, her reflection over the glass. CAMI: a young Colombian woman, curly hair tied up, oversized denim jacket, holding a phone with a product in the other hand, expressive face. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 she looks at the camera in the window and then down at her phone. Camera: static, paper grain. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Pero las fotos que más venden se hacen con celular",
+      "texto_tts": "",
+      "texto_pantalla": "Las que venden son de celular",
+      "plano": "Plano lateral: otra vendedora grabando con el celular en la mano, mostrando el producto en uso.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. side profile of a second seller: another young seller filming herself with a phone while actually using the product, simple room, no studio equipment. CAMI: a young Colombian woman, curly hair tied up, oversized denim jacket, holding a phone with a product in the other hand, expressive face. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 she uses the product in front of the phone and keeps talking to it. Camera: lateral dolly. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Cambia quién sale y qué se muestra",
+      "texto_tts": "",
+      "texto_pantalla": "Cambia qué se muestra",
+      "plano": "Plano detalle: la misma foto de producto contra una foto del producto en uso.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. close-up on two photos side by side: two photo cards side by side on a table, one a plain product on white and the other the same product being used by a person's hands. CAMI: a young Colombian woman, curly hair tied up, oversized denim jacket, holding a phone with a product in the other hand, expressive face. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 a hand moves the plain card aside and pushes the in-use card forward. Camera: static. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "A mí me enseñaron qué mostrar, en la feria",
+      "texto_tts": "",
+      "texto_pantalla": "Le enseñaron qué mostrar",
+      "plano": "Contraplano: la otra vendedora le explica a CAMI con el celular en la mano.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium two-shot: the second seller showing CAMI her own phone with a full message list under a photo of the product in use. CAMI: a young Colombian woman, curly hair tied up, oversized denim jacket, holding a phone with a product in the other hand, expressive face. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 she turns the phone toward CAMI and scrolls the full message list. Camera: steady arc. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "FECHAS",
+      "quien": "CANCION",
+      "texto": "Búsquelos en la Feria Effix, del quince al diecinueve de octubre, en Plaza Mayor",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "Plano general: CAMI entrando al pabellón entre la multitud.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. wide tracking shot: CAMI walking into a huge fair pavilion with a dense crowd streaming in, banners as plain solid black panels with white abstract shapes. CAMI: a young Colombian woman, curly hair tied up, oversized denim jacket, holding a phone with a product in the other hand, expressive face. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 she walks in with the crowd, phone in hand, looking up at the hall. Camera: tracking alongside. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "PRUEBA",
+      "quien": "CANCION",
+      "texto": "Van agencias, creadores y más de doscientas conferencias",
+      "texto_tts": "",
+      "texto_pantalla": "+200 conferencias",
+      "plano": "Plano lateral en una charla: muestran una foto antes y una después.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. side view from the audience: a packed talk where a speaker on stage holds up two photo cards, a plain one and one of the product in use, the audience taking notes. CAMI: a young Colombian woman, curly hair tied up, oversized denim jacket, holding a phone with a product in the other hand, expressive face. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the speaker swaps one photo card for the other and the audience writes. Camera: steady push-in over shoulders. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Compré mi entrada. Voy a aprender qué mostrar",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "Plano medio de CAMI de frente presionando un botón grande que flota.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. medium shot facing camera: CAMI facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front of her. CAMI: a young Colombian woman, curly hair tied up, oversized denim jacket, holding a phone with a product in the other hand, expressive face. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 she presses the floating button with her thumb and it lights up. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Ya preguntan el precio / Compra tu entrada y aprende qué mostrar",
+      "texto_tts": "",
+      "texto_pantalla": "Ya preguntan el precio",
+      "plano": "Mismo primer plano del celular: la lista de mensajes llenándose. RESUELTA.",
+      "prompt_imagen": "FLAT 2D CARTOON STYLE: bold uniform black outline of constant weight (same thickness on every line, never tapering), flat color fill, two-tone shading only (base color plus one darker shade), no gradients, no airbrush, no 3D render, no glossy highlights, subtle paper grain texture over the whole frame. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey. Vertical 9:16 composition. tight close-up on the phone screen, matching the earlier framings: the same phone framing, the photo now showing the product in use and the message list below filling with incoming blocks one after another. CAMI: a young Colombian woman, curly hair tied up, oversized denim jacket, holding a phone with a product in the other hand, expressive face. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 message blocks keep landing in the list faster than she can read them. Camera: locked off, tiny push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [],
+  "costo_estimado_usd": null,
+  "costo_desglose": "Lo calcula el productor con cost_estimator y parámetros reales (Seedance 1.5 Pro 1080p, clips de 4 s, nano-banana-2).",
+  "nombre_entrega": "P21_effix_animado-2d_contenido-para-ecommerce_fotos-que-no-venden_20260907.mp4",
+  "nota_entrega": "Nombre del mp4 final, ya numerado por publico de la parrilla: P<NN>_effix_<estilo>_<publico>_<micro-situacion>_<AAAAMMDD>.mp4. El numero va delante para que los 28 queden en orden en la carpeta. Este campo manda sobre guion_aprobado.nombre_de_entrega(): si la funcion no antepone el numero, hay que ajustarla en el mismo commit (CLAUDE.md: una regla sin default en el codigo no existe).",
+  "notas_produccion": "Letra explícita: no se dice contenido ni conversión, se dice «nadie pregunta el precio» y «qué se muestra». El dato de la feria lo da otra vendedora. La micro-situación es la foto publicada con el chat vacío: mismo encuadre en las líneas 1, 4 y 12. Bible flat 2D verbatim del ad «La acera». Héroe primero CAMI. Cantado, sin voz en off.",
+  "aprobado_por": null,
+  "aprobado_el": null,
+  "modelos": {
+    "video": "fal-ai/bytedance/seedance/v1.5/pro/image-to-video",
+    "resolucion": "1080p",
+    "imagen": "fal-ai/nano-banana-2",
+    "edit": "fal-ai/nano-banana-2/edit"
+  },
+  "duracion_clip_s": 4,
+  "nota_video": "Seedance 1.5 Pro a 1080p, clips de 4 s encadenados. Frame final en los clips que cierran una línea; sin frame final en los intermedios. Decisión de Alexander el 2026-09-07.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "quien": "Alexander",
+      "que": "Lote .1 v2: la micro-situación se toca tres veces con función distinta (cruda, agravada, resuelta) y cada público usa un formato de canción propio. El v1 tenía los 28 con la misma estructura y se leían como el mismo video.",
+      "costo_usd": 0
+    }
+  ]
+}

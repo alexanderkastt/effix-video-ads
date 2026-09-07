@@ -43,7 +43,7 @@ import fal_client
 from src import cost_estimator, guion_aprobado, mezcla, ritmo, transcripcion
 from src.descargas import recuperar_pendientes
 from src.audio_extra import (INTRO_MAXIMA_S, MODELO_CANCION, MODELO_CANCION_11, MODELO_CANCION_MM3,
-                             cabe_la_letra,
+                             cabe_la_letra, etiquetas_raras,
                              componer_cancion, componer_cancion_elevenlabs,
                              componer_cancion_minimax3)
 from src.paths import AUDIO_DIR, CLIPS_DIR, LOGS_DIR, RENDERS_DIR, env, env_int
@@ -253,6 +253,12 @@ def _avisar_si_no_cabe(musica: dict) -> None:
     deja de cantar a mitad de frase — no acelera para que quepa. El P02 lo pagó
     dos veces (0.256 USD) muriendo en la misma palabra, sin cuña final ni CTA.
     """
+    raras = etiquetas_raras(musica.get("suno_custom_lyrics", ""))
+    if raras:
+        print(f"⚠️  etiquetas de sección que el modelo puede cantar en voz "
+              f"alta: {', '.join('[' + e + ']' for e in raras)}. Reconoce [Verso], "
+              f"[Coro], [Puente], [Outro]; lo que no reconoce a veces lo canta como "
+              f"letra (le pasó al P05 con [Latiguillo]).")
     v = cabe_la_letra(musica.get("suno_custom_lyrics", ""),
                       musica.get("bpm_recomendado"), musica.get("duracion_ms"))
     detalle = (f"{v['palabras']} palabras a {v['bpm']} BPM piden ~{v['necesita_s']}s "

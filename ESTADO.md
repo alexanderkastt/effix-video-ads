@@ -1174,3 +1174,66 @@ se le nombra por proveedor, catálogo y marcas; y el primer verso cierra la
 micro-situación en vez de abrir bloque nuevo, con lo que la tercera aparición
 y el cierre son lo mismo.
 
+---
+
+## 2026-09-07 · Ad P05 v2 anime «El producto ganador» — y el ad más caro hasta ahora
+
+**Entregado:** `assets/renders/P05_effix_anime_dropshippers_el-producto-ganador_20260907.mp4`
+76.38s · 37 planos de 2.00s · −14.9 LUFS · **8.0046 USD** (estimado 4.0634).
+
+**El v2 lo escribí yo**, a petición de Alexander, desde el v1: se conservan
+micro-situación, ángulo, KAI y bible; cambia la letra (de 158 a 90 palabras),
+el formato de canción (F8 latiguillo de cola), las tres apariciones en el mismo
+encuadre y el cierre (opción C, elegida el mismo día).
+
+### Por qué costó el doble: seis canciones
+
+De seis intentos, **sólo dos cantaron el CTA**. Una de cada tres. Lo que se
+aprendió, por orden de descubrimiento:
+
+1. **Las etiquetas de sección inventadas se cantan.** El primer intento cantó
+   literalmente «Latiguillo» y «Latiguillo Roto». MiniMax reconoce [Verso],
+   [Coro], [Puente], [Outro]; lo que no reconoce lo trata como letra. Ya hay
+   guarda: `audio_extra.etiquetas_raras()`, avisando antes de pagar. **Casi
+   todos los v2 usan etiquetas inventadas** ([Cuña], [Conteo], [Carta],
+   [Pregón]) y hasta ahora habían tenido suerte.
+2. **«herramienta» no se puede cantar.** Salió «hermanienta», «rejanienta», «la
+   hermano» en cuatro canciones seguidas. Anotada en `PALABRAS_QUE_NO_CANTA`
+   junto a «resultados». La línea pasó a «me falta ver el dato».
+3. **Bajar el BPM no arregla la dicción.** 112 → 104 dio una canción peor, que
+   se saltó medio texto. El problema era la palabra, no el tempo.
+4. **Cambiar el verbo del CTA tampoco.** «comprar» salía «cumplir», se probó
+   «nos vemos» y el sexto intento se saltó el cierre entero. Se recuperó la
+   quinta pista de `cancion_intento_05.mp3` por el precio de una transcripción
+   (0.096) en vez de otra canción.
+
+**Los intentos guardados valen dinero:** `cancion_intento_NN.mp3` permitió
+volver a la mejor pista sin pagarla otra vez. Al recuperarla hubo que devolver
+la letra del guion a lo que esa pista canta.
+
+### Escenas regeneradas
+
+- **Escena 5** (aparición agravada): salió con «DELETED» y «FAILED» estampados
+  en las capturas y partida en dos viñetas. Con el encuadre fijado y el veto de
+  letras reforzado, correcta.
+- **Escena 12** (CTA): «la mano parece de goma», dijo Alexander, y era cierto.
+  Tres intentos: el segundo dio la mano bien en plano general, el tercero —al
+  forzar el encuadre cerrado— sacó una mano gigante flotando desconectada del
+  cuerpo. Se conservó el segundo. **Forzar el encuadre para agrandar una mano
+  es cómo se consigue una mano peor.**
+
+### Reasignación de clips, otra vez gratis
+
+Al recuperar la quinta canción el reparto volvió a 19 huecos: 16 se cubrieron
+con clips ya pagados y sólo hubo que generar 3 (0.70) — los dos de la línea 12,
+porque su escena había cambiado, y uno de la 7.
+
+### Abierto
+
+1. **La línea 7 no se canta** en la pista final: el ad pierde la excusa del
+   personaje, aunque el arco se entiende.
+2. **El CTA canta «vas a cumplir»** en vez de «comprar». El overlay «Tu boleta
+   está abajo» y las flechas al botón sostienen el mensaje.
+3. **76.38s**, cuarto ad seguido fuera del rango 30–60.
+4. La marca sigue sonando «FX».
+

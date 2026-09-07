@@ -296,6 +296,34 @@ OCUPACION_MAXIMA = 0.90
 OCUPACION_AL_PEDIR = 0.65
 
 
+# Etiquetas de sección que el modelo reconoce y NO canta. Cualquier otra la
+# interpreta como letra: el P05 estrenó [Latiguillo] y la canción cantó
+# literalmente "Latiguillo" y "Latiguillo Roto" (0.128 USD, 2026-09-07).
+ETIQUETAS_QUE_ENTIENDE = {
+    "intro", "verso", "verse", "pre-coro", "precoro", "pre-chorus", "coro",
+    "chorus", "puente", "bridge", "outro", "cierre", "final", "estribillo",
+    "hook", "drop", "instrumental", "solo",
+}
+
+
+def etiquetas_raras(letra: str) -> list[str]:
+    """Etiquetas de sección que el modelo va a cantar en voz alta.
+
+    Se comprueba antes de pagar: la etiqueta desconocida no rompe nada, sólo
+    aparece cantada en mitad del ad.
+    """
+    import re as _re
+
+    fuera = []
+    for etiqueta in _re.findall(r"^\s*\[([^\]]+)\]", letra, _re.MULTILINE):
+        base = etiqueta.strip().lower()
+        # "[Voz A]", "[Coro dos]", "[Cuña rota]": vale con que la primera
+        # palabra sea conocida.
+        if base.split()[0] not in ETIQUETAS_QUE_ENTIENDE:
+            fuera.append(etiqueta.strip())
+    return sorted(set(fuera))
+
+
 def cabe_la_letra(letra: str, bpm: int | None, duracion_ms: int | None) -> dict:
     """¿Cabe esta letra en el tope de duración, a este tempo?
 
@@ -443,6 +471,8 @@ PALABRAS_QUE_NO_CANTA: dict[str, str] = {
     "trafficker": 'sale "tráfico, me encas" — palabra inglesa en letra española',
     "ecommerce": 'sale "Kecoxie", "Conte Day"',
     "dropshipping": "palabra inglesa larga, mismo riesgo que trafficker",
+    "herramienta": 'sale "hermanienta", "rejanienta", "la hermano" — 4 fallos en 4 canciones del P05',
+    "herramientas": 'mismo problema que "herramienta" en singular',
 }
 
 # Music 3 lee las etiquetas de estructura en minúscula y EXIGE que cada una vaya
