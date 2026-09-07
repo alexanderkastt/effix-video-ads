@@ -32,10 +32,11 @@ TRUE_PEAK_MAX = -1.5
 
 # Cuánto sube el pico al codificar a AAC. Medido con la misma pista: limitada a
 # −1.5 el WAV sale a −1.4997 y el AAC a 192k a −0.38, es decir 1.1 dB de
-# overshoot intersample — y con otra cancion mas caliente llego a 2.2. Se
-# limita 3.0 por debajo para cubrir el peor caso medido; el loudness no se
-# resiente porque loudnorm mantiene los LUFS, solo baja el pico.
-MARGEN_CODEC = 3.0
+# overshoot intersample. Con la canción del p02 —que MiniMax entregó ya
+# clippeada, con picos de +1.79 dBFS— hizo falta llegar a 4.5: medido, con
+# 3.0 el render salía a −0.69 y con 6.0 el loudness ya bajaba a −14.5. El
+# loudness aguanta porque loudnorm fija los LUFS antes; esto sólo baja picos.
+MARGEN_CODEC = 4.5
 
 # Curvas de entrada y salida de la música. La entrada es corta porque el ad
 # arranca con el gancho: un fade largo se come el primer segundo, que es el
@@ -67,7 +68,10 @@ def _limitador() -> str:
     `MARGEN_CODEC` más abajo para que el archivo ENTREGADO cumpla.
     """
     lineal = 10 ** ((TRUE_PEAK_MAX - MARGEN_CODEC) / 20)
-    return f"alimiter=limit={lineal:.4f}:level=disabled"
+    # `attack` por defecto son 5 ms y con eso los transitorios de una batería
+    # se cuelan enteros: el p02 salía a +0.58 dBTP con el limitador puesto.
+    # Medio milisegundo los caza sin que se oiga bombeo.
+    return f"alimiter=limit={lineal:.4f}:attack=0.5:release=20:level=disabled"
 
 
 def _ffmpeg(args: list[str]) -> None:

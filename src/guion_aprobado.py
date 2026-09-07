@@ -258,10 +258,12 @@ def duracion_estimada_s(g: dict[str, Any]) -> float:
 def duracion_clip_s(g: dict[str, Any]) -> int:
     """Segundos que se le pagan a Kling por clip.
 
-    Kling sólo vende tramos de 5 o 10s cuando no hay frame final, así que un
-    guion musical sin keyframes se produce en clips de 5.
+    Cuatro segundos es el valor de casa desde que el video se genera con
+    Seedance, que acepta de 4 a 12: más clips cortos dan más material real y
+    mejor ritmo, y a 1080p cada uno cuesta 0.2333 en vez de los 0.292 que
+    costaba a 5s. El p02 se produjo sin declararlo y pagó 1.06 USD de más.
     """
-    return int(g.get("duracion_clip_s") or 5)
+    return int(g.get("duracion_clip_s") or 4)
 
 
 def _regla_6(g: dict[str, Any], r: Resultado) -> None:
@@ -318,6 +320,54 @@ def validar(g: dict[str, Any]) -> Resultado:
         except Exception as exc:  # una regla rota no puede tapar a las demás
             r.errores.append(f"{regla.__name__}: {type(exc).__name__}: {exc}")
     return r
+
+
+def _slug(texto: str, tope: int) -> str:
+    """Trozo de texto apto para nombre de archivo: sin tildes, sin signos."""
+    import unicodedata
+
+    plano = "".join(
+        c for c in unicodedata.normalize("NFD", str(texto).lower())
+        if unicodedata.category(c) != "Mn"
+    )
+    limpio = re.sub(r"[^a-z0-9]+", "-", plano).strip("-")
+    if len(limpio) <= tope:
+        return limpio
+    # Se corta por palabra, no a mitad: "duenos-de-tiendas" antes que
+    # "duenos-de-tien".
+    corte = limpio[:tope].rsplit("-", 1)[0]
+    return corte or limpio[:tope]
+
+
+def nombre_de_entrega(g: dict[str, Any]) -> str:
+    """Cómo se llama el mp4 que se entrega.
+
+    El `job_id` sirve para las carpetas de trabajo, pero como nombre de
+    entregable no dice nada: "p02-pocas-ventas-musical-skeleton" no explica a
+    quién le habla el ad ni de qué va. Quien abre la carpeta de renders tiene
+    que saberlo sin abrir el video ni el guion.
+
+    Formato: marca · estilo · a quién le habla · la micro-situación · fecha.
+    El título del guion ES el nombre de su micro-situación —"La tienda que
+    vende poquito"— así que hace de resumen sin necesidad de meter el párrafo
+    entero. Y cuando el guion no trae `nicho` con nombre (la serie de parrilla
+    numerada), se usa `publico`, que es donde vive esa información.
+    """
+    from datetime import date
+
+    marca = _slug(g.get("marca") or "effix", 12)
+    estilo = _slug(g.get("estilo") or "sin-estilo", 16)
+    # El job_id es el ultimo recurso, pero es mejor que "sin-nicho": al menos
+    # identifica el ad. Un guion viejo puede no traer ni nicho ni titulo.
+    quien = _slug(g.get("nicho") or g.get("publico") or g.get("job_id")
+                  or "sin-nicho", 40)
+    micro = _slug(
+        g.get("titulo")
+        or (g.get("microsituacion") or {}).get("momento")
+        or g.get("dolor_frase") or "", 45)
+    fecha = date.today().strftime("%Y%m%d")
+    partes = [p for p in (marca, estilo, quien, micro, fecha) if p]
+    return "_".join(partes) + ".mp4"
 
 
 def estimar_costo(g: dict[str, Any], *, modelo_video: str, modelo_imagen: str,

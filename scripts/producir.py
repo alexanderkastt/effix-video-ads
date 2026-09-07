@@ -42,7 +42,7 @@ import fal_client
 
 from src import cost_estimator, guion_aprobado, mezcla, ritmo, transcripcion
 from src.descargas import recuperar_pendientes
-from src.audio_extra import (MODELO_CANCION_11, MODELO_CANCION_MM3,
+from src.audio_extra import (MODELO_CANCION, MODELO_CANCION_11, MODELO_CANCION_MM3,
                              componer_cancion, componer_cancion_elevenlabs,
                              componer_cancion_minimax3)
 from src.paths import AUDIO_DIR, CLIPS_DIR, LOGS_DIR, RENDERS_DIR, env, env_int
@@ -239,6 +239,17 @@ def fase_cancion(ad: Ad, *, forzar: bool = False) -> Path:
             cruda.rename(ad.audio_dir / f"cancion_intento_{previos + 1:02d}.mp3")
         inicio = time.monotonic()
         musica = ad.g["musica"]
+        # Los guiones de la parrilla vienen con MiniMax 2.6, que es el modelo
+        # con el que empezó el proyecto: deforma la marca y no acepta
+        # `duration`, así que el ad sale de la duración que le dé la gana (el
+        # p02 salió de 92s con 21 de cola muerta). No es una elección del
+        # guion, es una herencia — se sustituye y se avisa.
+        if musica.get("modelo") == MODELO_CANCION:
+            print(f"  aviso: el guion pide {MODELO_CANCION}, que está superado. "
+                  f"Se usa {MODELO_CANCION_MM3}, que canta la marca y acepta "
+                  f"duración objetivo.")
+            musica = dict(musica, modelo=MODELO_CANCION_MM3)
+            musica.setdefault("duracion_ms", 68000)
         if musica.get("modelo") == MODELO_CANCION_MM3:
             # `duration` es un tope, no una orden: se pide con margen para
             # que la cancion termine su ultima frase y su cierre en vez de
@@ -788,7 +799,10 @@ def fase_montaje(ad: Ad, destino: Path | None = None) -> Path:
         mapa_video = "[vid]"
 
     RENDERS_DIR.mkdir(parents=True, exist_ok=True)
-    salida = destino or (RENDERS_DIR / f"{ad.job}.mp4")
+    # El entregable se nombra por su contenido, no por el job_id: quien abre
+    # la carpeta de renders tiene que saber a quien le habla el ad y de que
+    # va sin abrirlo. Las carpetas de trabajo siguen usando el job_id.
+    salida = destino or (RENDERS_DIR / guion_aprobado.nombre_de_entrega(ad.g))
     subprocess.run(
         [env("FFMPEG_BIN", "ffmpeg"), "-y", "-hide_banner", "-loglevel", "error",
          *entradas, "-filter_complex", ";".join(filtros),
@@ -809,7 +823,7 @@ def fase_montaje(ad: Ad, destino: Path | None = None) -> Path:
 
 def fase_qa(ad: Ad, render: Path | None = None) -> bool:
     """Lo que hay que mirar antes de decir que está entregado."""
-    render = render or (RENDERS_DIR / f"{ad.job}.mp4")
+    render = render or (RENDERS_DIR / guion_aprobado.nombre_de_entrega(ad.g))
     if not render.exists():
         raise SystemExit(f"No hay render en {render}")
 

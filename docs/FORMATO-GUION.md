@@ -121,6 +121,23 @@ planos) → anota costo real en `logs/` y `ESTADO.md`.
   medir con ffprobe, repartir clips desde el audio). Hasta entonces
   `scripts/_producir_animado2d_la_acera.py` no se borra: es la referencia.
 
+### Cómo se nombra el entregable
+
+El `job_id` sirve para las carpetas de trabajo (`assets/clips/<job>`), pero como
+nombre de entregable no dice nada: `p02-pocas-ventas-musical-skeleton.mp4` no
+explica a quién le habla el ad. El mp4 final se nombra por su contenido:
+
+```
+effix_<estilo>_<nicho o público>_<micro-situación>_<AAAAMMDD>.mp4
+```
+
+Ejemplo: `effix_skeleton_duenos-de-tiendas-online_la-tienda-que-vende-poquito_20260907.mp4`
+
+El título del guion **es** el nombre de su micro-situación, así que hace de
+resumen sin meter el párrafo entero. Cuando el guion no trae `nicho` con nombre
+—la serie de parrilla numerada— se usa `publico`. Lo genera
+`guion_aprobado.nombre_de_entrega()`.
+
 ### Campos que el productor añadió al esquema
 
 | Campo | Dónde | Para qué |

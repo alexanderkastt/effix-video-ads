@@ -1,0 +1,239 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "aprobado",
+  "job_id": "p04-whatsapp-musical-claymation",
+  "titulo": "Mil mensajes en WhatsApp",
+  "marca": "effix",
+  "publico": "Vendedores de redes sociales",
+  "nicho_mapa": 4,
+  "angulo": "4.1",
+  "angulo_nombre": "Demasiados mensajes en WhatsApp",
+  "temperatura": "calientes",
+  "estilo": "claymation",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 55,
+  "microsituacion": {
+    "momento": "Son las once de la noche y tienes trescientos mensajes sin responder, todos preguntando lo mismo.",
+    "sintoma": "Respondes uno por uno, y cuando llegas, ya compraron en otro lado.",
+    "explicacion_fallida": "Te dices que la atención personal es lo tuyo.",
+    "patron": "Pero los que venden diez veces más también atienden personal. Solo que no a mano.",
+    "causa_raiz": "No te falta atención. Te falta automatizar lo repetido.",
+    "mecanismo": "En Feria Effix están las herramientas que responden por ti y los vendedores que ya las usan, con demostración en stand."
+  },
+  "dolor_frase": "mil mensajes",
+  "dolor_menciones_en_letra": 3,
+  "bible": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, MARCE: a plasticine stop-motion woman in her late twenties, teal clay hoodie, dark clay hair in a bun, big round clay eyes, holding an oversized clay phone. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16.",
+  "negative_prompt": "smooth CGI, photoreal, 2D flat, glossy plastic, text, captions, letters, watermark, logo, UI, style drift, extra limbs, melting clay",
+  "personajes": {
+    "whatsapp": {
+      "ficha": "MARCE: a plasticine stop-motion woman in her late twenties, teal clay hoodie, dark clay hair in a bun, big round clay eyes, holding an oversized clay phone. Same character in every shot.",
+      "voz": null,
+      "quien_es": "MARCE, personaje de plastilina: la vendedora por WhatsApp ahogada en mensajes.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Merengue urbano",
+    "suno_title": "Feria Effix — Mil mensajes en WhatsApp",
+    "suno_custom_lyrics": "[Verso 1]\nSon las once y tengo mil mensajes en WhatsApp\nPrecio, envío, talla, y otra vez el mismo chat\nRespondo uno y ya llegaron veinte más\nY ninguno de todos me deja descansar\n\n[Coro]\nFeria Éfix, del quince al diecinueve\nEn Plaza Mayor, Medellín, todo se mueve\nAhí están las herramientas que responden por ti\nY los que venden en grande te dicen cómo así\n\n[Verso 2]\nMe digo que lo mío es atender personal\nPero el que vende diez veces más responde igual\nSolo que no a mano, lo hace un sistema\nY yo con mil mensajes, y el mismo problema\n\n[Puente]\nFeria Éfix, del quince al diecinueve\nTrescientas cincuenta empresas, doscientas ponencias\n\n[Outro]\nY ya no son mil mensajes, se acabó\nCompra tu ingreso dando clic en el botón",
+    "suno_style_tags": [
+      "merengue urbano",
+      "fast tambora and guira",
+      "playful brass",
+      "catchy sung chorus",
+      "male vocal",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly as two separate words, never as initials"
+    ],
+    "bpm_recomendado": 130,
+    "volumen_relativo": 1.0,
+    "modelo": "fal-ai/minimax-music/v2.6",
+    "nota": "La cancion manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes. Sin voz en off. musica=False en el assembler. Letra recortada el 2026-09-07: el primer intento con dos coros completos se quedo sin tiempo y nunca canto el outro (el CTA). 'Feria Effix' se escribe con tilde en la letra porque sin ella la canto 'FX'.",
+    "duracion_ms": 62000
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Son las once y tengo mil mensajes en WhatsApp",
+      "texto_tts": "",
+      "texto_pantalla": "Mil mensajes sin responder",
+      "plano": "MARCE on a clay couch at night, the oversized clay phone showing a mountain of tiny clay message bubbles piling over the",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, wide establishing shot. MARCE on a clay couch at night, the oversized clay phone showing a mountain of tiny clay message bubbles piling over the top, her eyes wide, thumbs moving. MARCE: a plasticine stop-motion woman in her late twenties, teal clay hoodie, dark clay hair in a bun, big round clay eyes, holding an oversized clay phone. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Bubbles keep piling, MARCE thumbs tap faster, one bubble falls off the pile onto the couch. Camera: gentle push-in. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "CALLOUT",
+      "quien": "CANCION",
+      "texto": "Precio, envío, talla, y otra vez el mismo chat",
+      "texto_tts": "",
+      "texto_pantalla": "¿Vendes por WhatsApp?",
+      "plano": "MARCE turns to face the camera in a small clay living room with a couch and a phone, the clay phone with a mountain of m",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium close-up. MARCE turns to face the camera in a small clay living room with a couch and a phone, the clay phone with a mountain of message bubbles still visible. MARCE: a plasticine stop-motion woman in her late twenties, teal clay hoodie, dark clay hair in a bun, big round clay eyes, holding an oversized clay phone. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 MARCE turns to camera, holds the gaze, small nod. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Respondo uno y ya llegaron veinte más",
+      "texto_tts": "",
+      "texto_pantalla": "Respondes una, entran veinte",
+      "plano": "Close-up of the clay phone: MARCE thumb answers one bubble and twenty new bubbles pop in; a small clay shopping-cart sha",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, close-up on hands and object. Close-up of the clay phone: MARCE thumb answers one bubble and twenty new bubbles pop in; a small clay shopping-cart shape rolls away at the edge. MARCE: a plasticine stop-motion woman in her late twenties, teal clay hoodie, dark clay hair in a bun, big round clay eyes, holding an oversized clay phone. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 One bubble answered, twenty pop in, the cart rolls off frame. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "SINTOMA_2",
+      "quien": "CANCION",
+      "texto": "Y ninguno de todos me deja descansar",
+      "texto_tts": "",
+      "texto_pantalla": "Ninguno te deja descansar",
+      "plano": "Three in the morning: MARCE slumped sideways on the clay couch, a round clay wall clock behind her, message bubbles stil",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium shot, low light, slight high angle. Three in the morning: MARCE slumped sideways on the clay couch, a round clay wall clock behind her, message bubbles still dropping onto her lap, her eyelids half closed, the phone glowing on her chest. MARCE: a plasticine stop-motion woman in her late twenties, teal clay hoodie, dark clay hair in a bun, big round clay eyes, holding an oversized clay phone. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Bubbles keep dropping onto her lap, her eyelids sag, the clock hand ticks one notch. Camera: locked, with a barely perceptible push-in. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "CORO_LLEGADA",
+      "quien": "CANCION",
+      "texto": "Feria Éfix, del quince al diecinueve / En Plaza Mayor, Medellín, todo se mueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "MARCE walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd stre",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, wide tracking shot. MARCE walking toward the glass entrance of a large modern convention centre in Medellin, morning light, a big crowd streaming in. MARCE: a plasticine stop-motion woman in her late twenties, teal clay hoodie, dark clay hair in a bun, big round clay eyes, holding an oversized clay phone. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 MARCE walks in with the crowd, the glass doors slide open ahead. Camera: tracking from behind. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CORO_MECANISMO",
+      "quien": "CANCION",
+      "texto": "Ahí están las herramientas que responden por ti",
+      "texto_tts": "",
+      "texto_pantalla": "Herramientas que responden por ti",
+      "plano": "At a clay fair stand, MARCE watching a clay exhibitor tap once on a tablet and a line of bubbles answer themselves; her ",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, two-shot at a stand. At a clay fair stand, MARCE watching a clay exhibitor tap once on a tablet and a line of bubbles answer themselves; her mouth opens. MARCE: a plasticine stop-motion woman in her late twenties, teal clay hoodie, dark clay hair in a bun, big round clay eyes, holding an oversized clay phone. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The exhibitor taps once, bubbles answer in sequence, MARCE clay jaw drops. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CORO_FERIA",
+      "quien": "CANCION",
+      "texto": "Y los que venden en grande te dicen cómo así",
+      "texto_tts": "",
+      "texto_pantalla": "Los que ya venden, ahí están",
+      "plano": "High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; MARCE small",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, high-angle wide over the crowd. High-angle wide over an enormous trade-fair pavilion: hundreds of colourful stands and a crowd of thousands; MARCE small in the aisle looking up. MARCE: a plasticine stop-motion woman in her late twenties, teal clay hoodie, dark clay hair in a bun, big round clay eyes, holding an oversized clay phone. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Camera drifts forward over the pavilion, the crowd moves, MARCE turns in place. Camera: gentle aerial drift forward. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Me digo que lo mío es atender personal",
+      "texto_tts": "",
+      "texto_pantalla": "«Lo mío es atender personal»",
+      "plano": "MARCE from behind, hugging the phone to her chest proudly, a clay speech shape with a heart above her.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium shot from behind. MARCE from behind, hugging the phone to her chest proudly, a clay speech shape with a heart above her. MARCE: a plasticine stop-motion woman in her late twenties, teal clay hoodie, dark clay hair in a bun, big round clay eyes, holding an oversized clay phone. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 She hugs the phone, the heart shape wobbles, her shoulders droop slightly. Camera: gentle pull-back. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Pero el que vende diez veces más responde igual / Solo que no a mano, lo hace un sistema",
+      "texto_tts": "",
+      "texto_pantalla": "Ellos tampoco responden a mano",
+      "plano": "A clay neighbour on a balcony sipping coffee while her phone answers by itself with tiny bubbles flying out in order; MA",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, low-angle wide. A clay neighbour on a balcony sipping coffee while her phone answers by itself with tiny bubbles flying out in order; MARCE small below, still tapping. MARCE: a plasticine stop-motion woman in her late twenties, teal clay hoodie, dark clay hair in a bun, big round clay eyes, holding an oversized clay phone. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Bubbles fly out of the neighbour phone in a neat line, MARCE looks up mid-tap. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Y yo con mil mensajes, y el mismo problema",
+      "texto_tts": "",
+      "texto_pantalla": "Automatiza lo repetido",
+      "plano": "Extreme close-up of MARCE eyes; in the reflection a bright crowded trade-fair pavilion appears.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, extreme close-up on eyes. Extreme close-up of MARCE eyes; in the reflection a bright crowded trade-fair pavilion appears. MARCE: a plasticine stop-motion woman in her late twenties, teal clay hoodie, dark clay hair in a bun, big round clay eyes, holding an oversized clay phone. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The reflection brightens, pupils widen, a decisive blink. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "PUENTE_CIFRAS",
+      "quien": "CANCION",
+      "texto": "Feria Éfix, del quince al diecinueve / Trescientas cincuenta empresas, doscientas ponencias",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas · +200 ponencias",
+      "plano": "Side view of MARCE seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audien",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium shot, side angle. Side view of MARCE seated in a packed auditorium, a speaker on a lit stage pointing at a floating abstract chart, audience taking notes. MARCE: a plasticine stop-motion woman in her late twenties, teal clay hoodie, dark clay hair in a bun, big round clay eyes, holding an oversized clay phone. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 The speaker gestures, the audience leans forward, MARCE writes and looks up. Camera: gentle lateral drift. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "RESOLUCION",
+      "quien": "CANCION",
+      "texto": "Y ya no son mil mensajes, se acabó",
+      "texto_tts": "",
+      "texto_pantalla": "Ya no son mil mensajes",
+      "plano": "Clay living room, daytime: MARCE on the couch with coffee, the phone on the table answering by itself with orderly bubbl",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, wide static shot, held. Clay living room, daytime: MARCE on the couch with coffee, the phone on the table answering by itself with orderly bubbles, a small clay parcel pile beside her. MARCE: a plasticine stop-motion woman in her late twenties, teal clay hoodie, dark clay hair in a bun, big round clay eyes, holding an oversized clay phone. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 Bubbles answer themselves, a parcel pops onto the pile, MARCE sips calmly. Camera: gentle push-in. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 13,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Compra tu ingreso dando clic en el botón",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "MARCE facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bo",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, medium close-up facing camera. MARCE facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front, confident, bokeh stands behind. MARCE: a plasticine stop-motion woman in her late twenties, teal clay hoodie, dark clay hair in a bun, big round clay eyes, holding an oversized clay phone. Same character in every shot. warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 MARCE looks at camera, presses the floating button, it pulses, nods. Camera: locked. Stop-motion judder at 12fps, one primary motion. Same clay character throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [
+    "La cifra de 'sesenta mil asistentes' salio de la letra el 2026-09-07: no tiene fuente publica y el puente no la necesitaba. Quedan solo cifras oficiales."
+  ],
+  "costo_estimado_usd": 4.55,
+  "costo_desglose": "recalcular con producir.py costo (Seedance 1.5 Pro, 13 escenas + heroe)",
+  "notas_produccion": "Claymation merengue urbano 130 BPM. Estilo Aardman, 12fps, dedos visibles en la plastilina. Dolor 'mil mensajes' 3 veces. Sin voz en off. Lineas reordenadas al orden real de la cancion (el original ponia el verso 2 antes del coro y la alineacion caia desplazada)."
+}
