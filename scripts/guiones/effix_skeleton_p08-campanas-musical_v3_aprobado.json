@@ -1,0 +1,266 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "aprobado",
+  "job_id": "p08-campanas-musical-skeleton-v3",
+  "titulo": "La campana que dejo de funcionar",
+  "marca": "effix",
+  "publico": "Marketing, publicidad y adquisición digital",
+  "nicho_mapa": 8,
+  "angulo": "8.1",
+  "angulo_nombre": "Campañas que dejaron de funcionar",
+  "temperatura": "calientes",
+  "estilo": "skeleton",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "formato_cancion": "F1 - RELATO EN PRIMERA PERSONA - el dueno de la campana cuenta su propia historia de punta a punta: lo que montaba, lo que se le cayo, lo que aprendio y como trabaja hoy.",
+  "version_lote": "v3",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 50,
+  "microsituacion": {
+    "momento": "Montaste una campana que arranco vendiendo muy bien. Un dia, sin tocar nada, dejo de vender.",
+    "sintoma": "Todos los dias le metias mas presupuesto y le cambiabas los anuncios, y no revivia.",
+    "reaccion_interna": "No supiste que hacer, y seguiste probando cosas sueltas.",
+    "explicacion_fallida": "Te dijiste que la plataforma te tenia marcado.",
+    "patron": "Cada vez que una campana se cae, vuelves a empezar de cero.",
+    "causa_raiz": "No tenias un sistema: tenias suerte, y la suerte no se repite.",
+    "mecanismo": "En Feria Effix hay mas de doscientas conferencias sobre anuncios y las agencias que sostienen lo que venden: sales con el sistema, no con un truco."
+  },
+  "microsituacion_apariciones": {
+    "cruda": "Linea 2 - la lucecita del pecho de PIXEL apagandose (en imagen).",
+    "agravada": "Linea 4 - la misma lucecita apagada, rodeada de billetes (en imagen, mismo encuadre).",
+    "resuelta": "Linea 10 - la misma lucecita encendida y fuerte, con ventas cayendo (en imagen, mismo encuadre).",
+    "en_imagen": 3
+  },
+  "dolor_frase": "dejó de funcionar",
+  "dolor_menciones_en_letra": 3,
+  "bible": "CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern office and convention environment, warm amber and teal color grade, soft volumetric light, shallow depth of field. FORMAT: 9:16 vertical.",
+  "negative_prompt": "flesh, skin, blood, gore, muscle fibre, horror, scary, toy-smooth bones, chibi proportions, text, captions, letters, watermark, logo, UI, readable signs, style drift, extra limbs",
+  "personajes": {
+    "campanas": {
+      "ficha": "CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot.",
+      "voz": null,
+      "quien_es": "HUESO, el que monta las campanas: esqueleto fornido, cuenta la historia.",
+      "lipsync": false
+    },
+    "la-campana": {
+      "ficha": "PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot.",
+      "voz": null,
+      "quien_es": "PIXEL, su campana: la lucecita del pecho se apaga cuando deja de vender.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Latin pop alegre",
+    "suno_title": "Feria Effix - La campana que dejo de funcionar",
+    "suno_custom_lyrics": "[Verso]\nMonté una campaña y arrancó vendiendo\nUn día dejó de vender y no supe qué hacer\n\n[Verso]\nTodos los días le metía más presupuesto\nCambiaba los anuncios y no pasaba nada\n\n[Verso]\nYo decía que la plataforma me tenía marcado\nLa verdad es que no tenía sistema, tenía suerte\n\n[Verso]\nFui a la Feria Effix y aprendí cómo se arma\n\n[Coro]\nFeria Effix, Medellín, en Plaza Mayor\nDel quince al diecinueve, apunta la fecha\nDoscientas conferencias y las agencias que sí venden\n\n[Verso]\nHoy escalo sin miedo, con un sistema probado\n\n[Cierre]\nSi una se cae, ya sé qué hacer. Tu entrada está abajo",
+    "suno_style_tags": [
+      "latin pop",
+      "upbeat and bright",
+      "handclaps and brass stabs",
+      "warm vocal",
+      "male vocal, confident, telling his own story",
+      "radio-ready mix",
+      "every word clearly enunciated, simple everyday Spanish a ten year old understands",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 108,
+    "volumen_relativo": 1.0,
+    "modelo": "minimax/music-3",
+    "bpm_exacto": true,
+    "duracion_ms": 64000,
+    "genero_prompt": "bright happy Latin pop, upbeat commercial radio jingle, festive and optimistic",
+    "ritmo_prompt": "crisp four-on-the-floor Latin pop groove, handclaps, bright brass stabs, guira and shaker, warm bass",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. «Feria Effix» va con tilde en la letra: sin ella el modelo la canta «FX». Letra corta a propósito — el 2026-09-07 una letra con dos coros completos se quedó sin tiempo y nunca cantó el outro, que es el CTA. Si no rima al oído o canta mal la marca, regenerar (0,15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Monté una campaña y arrancó vendiendo",
+      "texto_tts": "",
+      "texto_pantalla": "Arrancó vendiendo bien",
+      "plano": "Plano medio: HUESO en su escritorio con PIXEL recién encendido, ventas cayendo como monedas.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern office and convention environment, warm amber and teal color grade, soft volumetric light, shallow depth of field. FORMAT: 9:16 vertical. medium shot: the muscular skeleton at his desk, PIXEL floating beside him with its chest light glowing bright, coins of sales raining around them, warm office light. CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he leans back with a satisfied grin as coins keep falling. Camera: gentle push in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "DEFECTO",
+      "quien": "CANCION",
+      "texto": "Un día dejó de vender y no supe qué hacer",
+      "texto_tts": "",
+      "texto_pantalla": "Un día se apagó",
+      "plano": "Primer plano de la lucecita del pecho de PIXEL apagándose. CRUDA: este encuadre vuelve tres veces.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern office and convention environment, warm amber and teal color grade, soft volumetric light, shallow depth of field. FORMAT: 9:16 vertical. tight close-up on PIXEL's chest light fading out to nothing, its big eyes going worried, the skeleton's heavy hands blurred behind. CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the light flickers twice and dies, its eyes widening. Camera: locked off. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Todos los días le metía más presupuesto",
+      "texto_tts": "",
+      "texto_pantalla": "Más presupuesto cada día",
+      "plano": "Plano general: HUESO echándole billetes a PIXEL, que sigue apagado.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern office and convention environment, warm amber and teal color grade, soft volumetric light, shallow depth of field. FORMAT: 9:16 vertical. wide shot: the muscular skeleton pouring stacks of banknotes into PIXEL, who stays dark, piles of money growing around them. CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he shoves another stack of notes in and waits, hands open. Camera: static wide. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Cambiaba los anuncios y no pasaba nada",
+      "texto_tts": "",
+      "texto_pantalla": "Y no pasaba nada",
+      "plano": "Mismo primer plano de la lucecita: apagada, ahora rodeada de billetes. AGRAVADA.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern office and convention environment, warm amber and teal color grade, soft volumetric light, shallow depth of field. FORMAT: 9:16 vertical. same tight close-up on PIXEL's chest light: still dark, now surrounded by banknotes piled against it. CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 a last banknote slides down against the dark light. Camera: locked off. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Yo decía que la plataforma me tenía marcado",
+      "texto_tts": "",
+      "texto_pantalla": "«Me tienen marcado»",
+      "plano": "Plano medio corto: HUESO de noche frente a un tablero plano, el cráneo iluminado por la pantalla.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern office and convention environment, warm amber and teal color grade, soft volumetric light, shallow depth of field. FORMAT: 9:16 vertical. medium close-up: the muscular skeleton at night facing a flat dashboard board, his skull lit by the screen glow, broad shoulders slumped. CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he rubs his face and stares at the flat board. Camera: slight handheld drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "La verdad es que no tenía sistema, tenía suerte",
+      "texto_tts": "",
+      "texto_pantalla": "No era sistema: era suerte",
+      "plano": "Plano cenital: HUESO en el piso, rodeado de anuncios sueltos sin ningún orden.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern office and convention environment, warm amber and teal color grade, soft volumetric light, shallow depth of field. FORMAT: 9:16 vertical. high angle: the muscular skeleton sitting on the floor surrounded by scattered ad cards lying in no order at all. CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he picks up one loose card, looks at it and drops it again. Camera: high angle, gentle arc. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Fui a la Feria Effix y aprendí cómo se arma",
+      "texto_tts": "",
+      "texto_pantalla": "Aprendí cómo se arma",
+      "plano": "Plano general: HUESO entrando al centro de convenciones con PIXEL apagado bajo el brazo.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern office and convention environment, warm amber and teal color grade, soft volumetric light, shallow depth of field. FORMAT: 9:16 vertical. wide shot: the muscular skeleton stepping into a bright modern convention centre carrying the dark PIXEL under one thick arm, crowds around him. CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he steps in and looks up, holding PIXEL tighter. Camera: push in behind him. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "FECHAS",
+      "quien": "CANCION",
+      "texto": "Feria Effix, Medellín, en Plaza Mayor / Del quince al diecinueve, apunta la fecha",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "Picado sobre el pabellón: cientos de stands encendidos y gente moviéndose entre ellos.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern office and convention environment, warm amber and teal color grade, soft volumetric light, shallow depth of field. FORMAT: 9:16 vertical. high angle over the exhibition hall: hundreds of lit booths in neat rows, crowds flowing between them. CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the crowd flows between the rows of booths. Camera: high angle craning across. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "PRUEBA",
+      "quien": "CANCION",
+      "texto": "Doscientas conferencias y las agencias que sí venden",
+      "texto_tts": "",
+      "texto_pantalla": "+200 conferencias",
+      "plano": "Plano lateral del auditorio lleno, HUESO en primera fila tomando nota.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern office and convention environment, warm amber and teal color grade, soft volumetric light, shallow depth of field. FORMAT: 9:16 vertical. side shot of a packed auditorium, the muscular skeleton in the front row taking notes, stage lights on the speaker. CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he writes fast, then underlines something twice and nods. Camera: side dolly. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Hoy escalo sin miedo, con un sistema probado",
+      "texto_tts": "",
+      "texto_pantalla": "Hoy escalo con sistema",
+      "plano": "Mismo primer plano de la lucecita: encendida y fuerte, con ventas cayendo otra vez. RESUELTA.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern office and convention environment, warm amber and teal color grade, soft volumetric light, shallow depth of field. FORMAT: 9:16 vertical. same tight close-up on PIXEL's chest light: burning bright and steady now, coins of sales falling past it. CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the light pulses strong and steady as coins fall past. Camera: locked off, gentle push. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Si una se cae, ya sé qué hacer. Tu entrada está abajo",
+      "texto_tts": "",
+      "texto_pantalla": "Tu entrada está abajo",
+      "plano": "HUESO de frente con su entrada en la mano, señalando hacia el borde inferior del cuadro.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern office and convention environment, warm amber and teal color grade, soft volumetric light, shallow depth of field. FORMAT: 9:16 vertical. medium shot of the muscular skeleton facing camera in the exhibition aisle, holding his event pass in one hand and pointing down toward the bottom edge of the frame, PIXEL glowing beside him. CHARACTER: A full anatomical skeleton with natural adult human proportions, built like a gym regular — broad ivory-cream shoulder blades, a thick barrel ribcage and heavy arm and leg bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary, NOT gory, no flesh and no blood), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, lovable face. No clothing. Same character in every shot. PIXEL: an anthropomorphic small square ad-card character with rounded corners, a soft blue body, big expressive eyes, tiny arms, a little heart-shaped light on its chest that dims when it stops working. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he lifts the pass, then points firmly down past the bottom of the frame twice. Camera: static, chest height. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Tu entrada está abajo (cantado)",
+    "overlay": "Tu entrada está abajo",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [],
+  "costo_estimado_usd": null,
+  "costo_desglose": "Lo calcula el productor con cost_estimator y parámetros reales (Seedance 1.5 Pro 1080p, clips de 4 s, nano-banana-2).",
+  "nombre_entrega": "P08_effix_skeleton_marketing-y-adquisicion_la-campana-que-dejo-de-funcionar_20260907.mp4",
+  "nota_entrega": "Nombre del mp4 final, ya numerado por publico de la parrilla: P<NN>_effix_<estilo>_<publico>_<micro-situacion>_<AAAAMMDD>.mp4. El numero va delante para que los 28 queden en orden en la carpeta. Este campo manda sobre guion_aprobado.nombre_de_entrega(): si la funcion no antepone el numero, hay que ajustarla en el mismo commit (CLAUDE.md: una regla sin default en el codigo no existe).",
+  "notas_produccion": "Letra explícita, sin jerga de pauta: no se dice ROAS, CPA, creativos ni algoritmo — se dice «el mismo anuncio hace dos años». El dato de la feria lo da otro anuncio que ya lo arreglaron, dentro de la conversación. La micro-situación es la lucecita del pecho: mismo encuadre en las líneas 2, 4 y 11. Héroe primero PÍXEL. Cantado, sin voz en off.",
+  "aprobado_por": "Alexander",
+  "aprobado_el": "2026-09-07",
+  "modelos": {
+    "video": "fal-ai/bytedance/seedance/v1.5/pro/image-to-video",
+    "resolucion": "1080p",
+    "imagen": "fal-ai/nano-banana-2",
+    "edit": "fal-ai/nano-banana-2/edit"
+  },
+  "duracion_clip_s": 4,
+  "nota_video": "Seedance 1.5 Pro a 1080p, clips de 4 s encadenados. Frame final en los clips que cierran una línea; sin frame final en los intermedios. Decisión de Alexander el 2026-09-07.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "quien": "Alexander",
+      "que": "Lote .1 v2: la micro-situación se toca tres veces con función distinta (cruda, agravada, resuelta) y cada público usa un formato de canción propio. El v1 tenía los 28 con la misma estructura y se leían como el mismo video.",
+      "costo_usd": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "quien": "Claude Code",
+      "que": "v3: cambia el formato de carta cantada a tres voces (el anuncio, su dueno y otro anuncio) por el relato en primera persona del dueno, que es como Alexander lo conto: monte una campana que arranco vendiendo, un dia dejo de funcionar, le metia presupuesto y cambiaba anuncios sin resultado, fui a la Feria Effix, aprendi los sistemas, y hoy escalo sin miedo porque si una se cae ya se que hacer. PIXEL deja de hablar y se queda como la campana: su lucecita sostiene las tres apariciones. Las etiquetas [Pixel]/[El dueno]/[Otro anuncio] pasan a [Verso]/[Coro]/[Cierre]: MiniMax canta en voz alta las que no reconoce.",
+      "costo_usd": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "quien": "Claude Code",
+      "que": "Estilo pixar -> skeleton musculon. El template de skeleton no traia un Character Bible con musculos, asi que se escribio uno nuevo sobre la estructura verbatim del bare_bones_cinematic: mismas proporciones adultas, mismos ojos de dibujo, mismo 'Same character in every shot' y los mismos NOT, mas hombros anchos, caja toracica gruesa y huesos de brazo y pierna pesados. Alexander eligio el esqueleto fornido de gimnasio y no la version anatomica con fibra muscular a la vista, que roza el gore y Meta puede marcar: por eso 'flesh, skin, blood, gore, muscle fibre' estan en el negativo. DIEGO desaparece; el que cuenta la historia es HUESO.",
+      "costo_usd": 0
+    }
+  ]
+}

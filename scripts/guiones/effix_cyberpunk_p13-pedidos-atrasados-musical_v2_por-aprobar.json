@@ -1,0 +1,265 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por-aprobar",
+  "job_id": "p13-pedidos-atrasados-musical-cyberpunk-v2",
+  "titulo": "Los pedidos que llegan tarde",
+  "marca": "effix",
+  "publico": "Logística, fulfillment y última milla",
+  "nicho_mapa": 13,
+  "angulo": "13.1",
+  "angulo_nombre": "Pedidos atrasados",
+  "temperatura": "calientes",
+  "estilo": "cyberpunk",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "formato_cancion": "F1 · PREGÓN Y RESPUESTA — la pregunta «¿dónde está mi pedido?» vuelve tres veces y RUTA contesta; la tercera respuesta es «ya llegó».",
+  "version_lote": "angulo1-v2",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 52,
+  "microsituacion": {
+    "momento": "Una tienda pierde un cliente porque el pedido llegó tarde. Con otro transportador, no contigo.",
+    "sintoma": "Tú entregas a tiempo, tienes las motos y la bodega, y trabajas a media máquina.",
+    "reaccion_interna": "Piensas que ya te llegarán más tiendas.",
+    "explicacion_fallida": "Te dices que en logística los clientes llegan por recomendación.",
+    "patron": "Pero las tiendas cambian de transportador cuando hablan de frente con otro.",
+    "causa_raiz": "No te falta operación. Te falta estar donde las tiendas eligen con quién despachar.",
+    "mecanismo": "En Feria Effix van más de trescientas cincuenta empresas que despachan todos los días, y hablas con ellas de frente."
+  },
+  "microsituacion_apariciones": {
+    "cruda": "Línea 1 — la puerta del cliente vacía, sin paquete (en imagen).",
+    "agravada": "Línea 3 — la misma puerta con dos avisos de entrega fallida (en imagen).",
+    "resuelta": "Línea 12 — la misma puerta con el paquete entregado a tiempo (en imagen).",
+    "en_imagen": 3
+  },
+  "dolor_frase": "llegó tarde",
+  "dolor_menciones_en_letra": 3,
+  "bible": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16.",
+  "negative_prompt": "daylight, clean streets, cartoon, text, captions, letters, watermark, logo, UI, readable signs, style drift, extra limbs",
+  "personajes": {
+    "pedidos-atrasados": {
+      "ficha": "RUTA: a young woman courier in a reflective jacket with neon trim, helmet under one arm, a delivery scanner on her wrist, riding a compact electric bike. Same character in every shot.",
+      "voz": null,
+      "quien_es": "RUTA, mensajera de última milla: el operador logístico que quiere más tiendas.",
+      "lipsync": false
+    },
+    "dueno-tienda": {
+      "ficha": "A shop owner in his forties under a neon awning, apron, holding a delivery tag. Same character in every shot.",
+      "voz": null,
+      "quien_es": "El comerciante que ya cambió de transportadora. Da el dato de la feria.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Reggaetón oscuro / trap latino",
+    "suno_title": "Feria Effix — Los pedidos que llegan tarde",
+    "suno_custom_lyrics": "[Una tienda]\n¿Dónde está mi pedido?\n\n[Ruta]\nYo lo habría entregado ayer\n\n[Una tienda]\n¿Dónde está mi pedido?\n\n[Ruta]\nLo llevó otro y llegó tres días tarde\nY esa tienda perdió a su cliente\n\n[Ruta]\nYo tengo las motos, la bodega y la gente\nY estoy trabajando a media máquina\nYo creía que los clientes llegaban solos, por recomendación\n\n[Un dueño de tienda]\nYo cambié de transportadora cuando hablé con una en la feria\nAnótelo: Feria Effix, del quince al diecinueve de octubre, en Plaza Mayor\nVan más de trescientas cincuenta empresas que despachan todos los días\n\n[Ruta]\nCompré mi entrada. Voy a buscarlas de frente\n\n[Una tienda]\n¿Dónde está mi pedido?\n\n[Ruta]\nYa llegó. Compra tu entrada y llena tus rutas",
+    "suno_style_tags": [
+      "dark reggaeton",
+      "trap latino influence",
+      "heavy 808s and synth arps",
+      "confident vocal",
+      "radio-ready mix",
+      "every word clearly enunciated, simple everyday Spanish a ten year old understands",
+      "no repeated brand chorus, the verses carry the story",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words",
+      "a demanding question repeated by a second voice and answered by the lead"
+    ],
+    "bpm_recomendado": 92,
+    "volumen_relativo": 1.0,
+    "modelo": "minimax/music-3",
+    "bpm_exacto": true,
+    "duracion_ms": 64000,
+    "genero_prompt": "dark reggaeton with trap latino influence, cinematic",
+    "ritmo_prompt": "heavy 808s, steady hi-hat rolls, minor synth arps, space around the vocal",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. «Feria Effix» va con tilde en la letra: sin ella el modelo la canta «FX». Letra corta a propósito — el 2026-09-07 una letra con dos coros completos se quedó sin tiempo y nunca cantó el outro, que es el CTA. Si no rima al oído o canta mal la marca, regenerar (0,15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "¿Dónde está mi pedido?",
+      "texto_tts": "",
+      "texto_pantalla": "«¿Dónde está mi pedido?»",
+      "plano": "Primer plano de la puerta de un cliente, vacía, sin paquete. CRUDA: este encuadre vuelve tres veces.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. tight close-up on a doorstep: a wet neon-lit doorstep at night with nothing on it, rain falling, a faint cyan glow from a window above, a delivery tag stuck to the frame. RUTA: a young woman courier in a reflective jacket with neon trim, helmet under one arm, a delivery scanner on her wrist, riding a compact electric bike. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 rain falls on the empty doorstep and the tag flutters. Camera: locked off. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "REACCION",
+      "quien": "CANCION",
+      "texto": "Yo lo habría entregado ayer",
+      "texto_tts": "",
+      "texto_pantalla": "",
+      "plano": "Plano medio de RUTA en su moto, parada bajo la lluvia de neón, sin rutas que hacer.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. medium shot on the bike: RUTA sitting on her compact electric bike under magenta and cyan neon rain, helmet under one arm, her delivery bag empty. RUTA: a young woman courier in a reflective jacket with neon trim, helmet under one arm, a delivery scanner on her wrist, riding a compact electric bike. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 she checks the empty delivery bag and lets the flap fall shut. Camera: steady push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "¿Dónde está mi pedido?",
+      "texto_tts": "",
+      "texto_pantalla": "",
+      "plano": "Mismo primer plano de la puerta: ahora con dos avisos de entrega fallida pegados. AGRAVADA.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. tight close-up on the doorstep, matching the first framing: the same doorstep framing, now with two failed-delivery tags stuck to the frame and a puddle spreading over the step, colder light. RUTA: a young woman courier in a reflective jacket with neon trim, helmet under one arm, a delivery scanner on her wrist, riding a compact electric bike. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 a second tag peels loose and sticks again while the puddle spreads. Camera: locked off, tiny drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "DEFECTO",
+      "quien": "CANCION",
+      "texto": "Lo llevó otro y llegó tres días tarde / Y esa tienda perdió a su cliente",
+      "texto_tts": "",
+      "texto_pantalla": "Llegó tres días tarde",
+      "plano": "Plano lateral: otra camioneta descarga tarde y desordenado al otro lado de la calle.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. side profile across the street: a battered van across the neon street unloading parcels late and out of order, a shop owner in the doorway with arms crossed watching. RUTA: a young woman courier in a reflective jacket with neon trim, helmet under one arm, a delivery scanner on her wrist, riding a compact electric bike. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 parcels come out of the van in a mess while the shop owner shakes her head. Camera: lateral dolly. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Yo tengo las motos, la bodega y la gente",
+      "texto_tts": "",
+      "texto_pantalla": "Tiene motos y bodega",
+      "plano": "Plano general de la bodega de RUTA: ordenada, con motos en fila y poca carga.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. wide interior shot: RUTA's clean neon-lit warehouse with a row of parked electric bikes, empty sorting shelves and two idle couriers. RUTA: a young woman courier in a reflective jacket with neon trim, helmet under one arm, a delivery scanner on her wrist, riding a compact electric bike. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the parked bikes sit still while one courier walks past the empty shelves. Camera: crane down. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Y estoy trabajando a media máquina",
+      "texto_tts": "",
+      "texto_pantalla": "Trabajando a media máquina",
+      "plano": "Plano detalle del escáner de su muñeca: pocas entregas del día.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. macro detail of the wrist scanner: close detail of RUTA's wrist scanner showing a short list of abstract delivery rows, most of the screen empty. RUTA: a young woman courier in a reflective jacket with neon trim, helmet under one arm, a delivery scanner on her wrist, riding a compact electric bike. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 she taps the scanner and the short list refreshes unchanged. Camera: handheld drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Yo creía que los clientes llegaban solos, por recomendación",
+      "texto_tts": "",
+      "texto_pantalla": "«Llegan por recomendación»",
+      "plano": "Plano medio corto de RUTA esperando junto al teléfono de la bodega, que no suena.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. medium close-up: RUTA leaning against the warehouse wall beside a silent phone, neon reflections moving across her jacket. RUTA: a young woman courier in a reflective jacket with neon trim, helmet under one arm, a delivery scanner on her wrist, riding a compact electric bike. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 she glances at the silent phone and looks away. Camera: static, volumetric fog. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Yo cambié de transportadora cuando hablé con una en la feria",
+      "texto_tts": "",
+      "texto_pantalla": "Cambió al hablar de frente",
+      "plano": "Contraplano: un comerciante le cuenta a RUTA cómo eligió a su nueva transportadora.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. medium two-shot: a shop owner under a neon awning talking to RUTA, holding up a delivery tag from another company, both lit magenta and cyan. RUTA: a young woman courier in a reflective jacket with neon trim, helmet under one arm, a delivery scanner on her wrist, riding a compact electric bike. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he holds the tag up between them and taps it twice. Camera: steady arc. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "FECHAS",
+      "quien": "CANCION",
+      "texto": "Anótelo: Feria Effix, del quince al diecinueve de octubre, en Plaza Mayor",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "Plano general: RUTA llega en su moto a la entrada del centro de convenciones.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. wide tracking shot: RUTA riding up to the glass entrance of a huge modern convention centre glowing in the neon night, a dense crowd streaming in, banners as plain solid black panels with white abstract shapes. RUTA: a young woman courier in a reflective jacket with neon trim, helmet under one arm, a delivery scanner on her wrist, riding a compact electric bike. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 she rolls up to the entrance, puts a foot down and looks up at the hall. Camera: tracking alongside. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Van más de trescientas cincuenta empresas que despachan todos los días",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas que despachan",
+      "plano": "Plano medio en su stand: dos comerciantes le entregan sus rutas.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. medium three-shot at a fair stand: RUTA behind a fair stand with her bike beside her, two shop owners leaning in over the counter while her wrist scanner fills with new abstract delivery rows. RUTA: a young woman courier in a reflective jacket with neon trim, helmet under one arm, a delivery scanner on her wrist, riding a compact electric bike. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the scanner fills with new rows while both shop owners keep talking to her. Camera: handheld push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Compré mi entrada. Voy a buscarlas de frente",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "Plano medio de RUTA de frente presionando un botón grande que flota.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. medium shot facing camera: RUTA facing camera in the neon pavilion aisle pressing a large glowing rounded button shape floating in front of her, helmet under her arm. RUTA: a young woman courier in a reflective jacket with neon trim, helmet under one arm, a delivery scanner on her wrist, riding a compact electric bike. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 she presses the floating button and it lights up, chin up. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Ya llegó. Compra tu entrada y llena tus rutas",
+      "texto_tts": "",
+      "texto_pantalla": "Ya llegó",
+      "plano": "Mismo primer plano de la puerta: el paquete entregado a tiempo y seco. RESUELTA.",
+      "prompt_imagen": "Cyberpunk neon city at night, rain-slick streets, holographic signage as abstract glowing shapes only, blade runner aesthetic, volumetric fog, neon reflections, ultra detailed, cinematic color grading, magenta and cyan accents. Vertical 9:16. tight close-up on the doorstep, matching the earlier framings: the same doorstep framing, now with a clean parcel sitting on it under a dry porch light, the failed-delivery tags gone, the rain easing. RUTA: a young woman courier in a reflective jacket with neon trim, helmet under one arm, a delivery scanner on her wrist, riding a compact electric bike. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 a hand from inside opens the door and picks up the parcel. Camera: locked off, tiny push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "tenso",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [],
+  "costo_estimado_usd": null,
+  "costo_desglose": "Lo calcula el productor con cost_estimator y parámetros reales (Seedance 1.5 Pro 1080p, clips de 4 s, nano-banana-2).",
+  "nombre_entrega": "P13_effix_cyberpunk_logistica-y-ultima-milla_los-pedidos-que-llegan-tarde_20260907.mp4",
+  "nota_entrega": "Nombre del mp4 final, ya numerado por publico de la parrilla: P<NN>_effix_<estilo>_<publico>_<micro-situacion>_<AAAAMMDD>.mp4. El numero va delante para que los 28 queden en orden en la carpeta. Este campo manda sobre guion_aprobado.nombre_de_entrega(): si la funcion no antepone el numero, hay que ajustarla en el mismo commit (CLAUDE.md: una regla sin default en el codigo no existe).",
+  "notas_produccion": "Letra explícita: no se dice fulfillment ni última milla, se dice «las motos, la bodega y la gente» y «llegó tres días tarde». El dato de la feria lo da un comerciante contando por qué cambió de transportadora. La micro-situación es la puerta del cliente: mismo encuadre en las líneas 1, 3 y 12. Letreros y hologramas solo como formas abstractas. Héroe primero RUTA. Cantado, sin voz en off.",
+  "aprobado_por": null,
+  "aprobado_el": null,
+  "modelos": {
+    "video": "fal-ai/bytedance/seedance/v1.5/pro/image-to-video",
+    "resolucion": "1080p",
+    "imagen": "fal-ai/nano-banana-2",
+    "edit": "fal-ai/nano-banana-2/edit"
+  },
+  "duracion_clip_s": 4,
+  "nota_video": "Seedance 1.5 Pro a 1080p, clips de 4 s encadenados. Frame final en los clips que cierran una línea; sin frame final en los intermedios. Decisión de Alexander el 2026-09-07.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "quien": "Alexander",
+      "que": "Lote .1 v2: la micro-situación se toca tres veces con función distinta (cruda, agravada, resuelta) y cada público usa un formato de canción propio. El v1 tenía los 28 con la misma estructura y se leían como el mismo video.",
+      "costo_usd": 0
+    }
+  ]
+}

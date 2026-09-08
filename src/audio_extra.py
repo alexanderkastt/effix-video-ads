@@ -267,6 +267,97 @@ ARRANQUE_CANTADO = (
 # Por encima de esto la intro se comio tiempo cantable y conviene regenerar.
 INTRO_MAXIMA_S = 2.0
 
+# Cuánta letra cabe en un segundo de canción. `duration` es un TOPE: MiniMax
+# compone hasta ahí y, si la letra no cabía, deja de cantar a mitad de frase —
+# no acelera para que quepa. Por eso el P02 murió dos veces en "de las tiendas"
+# sin llegar al CTA: 94 palabras a 96 BPM no entran en 64s.
+#
+# Medido, no calculado (2026-09-07): a 108 BPM caben 1.79-1.93 palabras por
+# segundo (P01 y P02); a 96 BPM sólo 1.18. Una palabra por pulso —bpm/60— es la
+# regla que sale de esos números y la que se usa aquí. Remedir cuando cambie el
+# modelo o aparezca un género nuevo: son dos divisiones sobre la transcripción.
+PALABRAS_POR_PULSO = 1.0
+
+# Techo de cordura: por encima de esto ya no es un ad de feed. Si una letra
+# pide más, el problema es la letra, no el tope.
+TOPE_MAXIMO_MS = 90000
+
+# El modelo no dedica el 100% del tope a la letra: gasta intro, ad-libs y
+# cierre. Si la letra ya ocupa más de esto, se queda sin final.
+OCUPACION_MAXIMA = 0.90
+
+# Y para PEDIR el tope se va mucho más holgado que ese 0.90. Regla de Alexander
+# (2026-09-07): "no limites las canciones para que no se corten nunca". El P04
+# lo demostró: 102 palabras que pedían 47s no cupieron en un tope de 62s porque
+# el modelo gastó 3.3s de intro, ad-libs y una repetición, y murió sin cantar el
+# CTA. Como `duration` es un tope y no una orden —si la canción termina antes se
+# cierra sola, el P01 pidió 64s y duró 51.8— pedir de más no alarga el ad; sólo
+# le quita al modelo la excusa para cortar.
+OCUPACION_AL_PEDIR = 0.65
+
+
+# Etiquetas de sección que el modelo reconoce y NO canta. Cualquier otra la
+# interpreta como letra: el P05 estrenó [Latiguillo] y la canción cantó
+# literalmente "Latiguillo" y "Latiguillo Roto" (0.128 USD, 2026-09-07).
+ETIQUETAS_QUE_ENTIENDE = {
+    "intro", "verso", "verse", "pre-coro", "precoro", "pre-chorus", "coro",
+    "chorus", "puente", "bridge", "outro", "cierre", "final", "estribillo",
+    "hook", "drop", "instrumental", "solo",
+}
+
+
+def etiquetas_raras(letra: str) -> list[str]:
+    """Etiquetas de sección que el modelo va a cantar en voz alta.
+
+    Se comprueba antes de pagar: la etiqueta desconocida no rompe nada, sólo
+    aparece cantada en mitad del ad.
+    """
+    import re as _re
+
+    fuera = []
+    for etiqueta in _re.findall(r"^\s*\[([^\]]+)\]", letra, _re.MULTILINE):
+        base = etiqueta.strip().lower()
+        # "[Voz A]", "[Coro dos]", "[Cuña rota]": vale con que la primera
+        # palabra sea conocida.
+        if base.split()[0] not in ETIQUETAS_QUE_ENTIENDE:
+            fuera.append(etiqueta.strip())
+    return sorted(set(fuera))
+
+
+def cabe_la_letra(letra: str, bpm: int | None, duracion_ms: int | None) -> dict:
+    """¿Cabe esta letra en el tope de duración, a este tempo?
+
+    Se responde ANTES de pagar. Devuelve el veredicto y los números con los que
+    se tomó, para que el aviso diga qué hacer: subir el BPM (no toca el
+    contenido), recortar la letra, o subir el tope y aceptar un ad más largo.
+    """
+    # Las etiquetas de sección ([Coro], [Voz A]) no se cantan: se descartan por
+    # línea completa, porque "[Voz A]" son dos tokens y sólo el primero lleva
+    # el corchete.
+    cantables = [l for l in letra.splitlines()
+                 if l.strip() and not l.strip().startswith("[")]
+    palabras = len(" ".join(cantables).split())
+    tope_s = (duracion_ms or 58000) / 1000
+    densidad = max((bpm or 100) / 60 * PALABRAS_POR_PULSO, 0.5)
+    necesita_s = palabras / densidad
+    ocupacion = necesita_s / tope_s if tope_s else 99.0
+    return {
+        "palabras": palabras,
+        "bpm": bpm,
+        "tope_s": round(tope_s, 1),
+        "necesita_s": round(necesita_s, 1),
+        "ocupacion": round(ocupacion, 2),
+        "cabe": ocupacion <= OCUPACION_MAXIMA,
+        # El tope que hay que pedir para que esta letra NO se corte nunca.
+        # `duration` es un tope, no una orden: si la canción termina antes, el
+        # modelo la cierra sola (el P01 pidió 64s y duró 51.8). Así que pedir de
+        # más no alarga el ad, sólo evita que muera a mitad de frase.
+        "tope_ms": min(int(necesita_s / OCUPACION_AL_PEDIR * 1000), TOPE_MAXIMO_MS),
+        # Lo que habría que poner para que quepa con holgura, sin tocar la letra.
+        "bpm_sugerido": int(round(palabras / (tope_s * OCUPACION_MAXIMA) * 60
+                                  / PALABRAS_POR_PULSO)),
+    }
+
 ENERGIA = (
     "high energy, driving rhythm, strong danceable groove, punchy drums, "
     "uptempo and lively throughout, never mellow or laid back"
@@ -380,6 +471,10 @@ PALABRAS_QUE_NO_CANTA: dict[str, str] = {
     "trafficker": 'sale "tráfico, me encas" — palabra inglesa en letra española',
     "ecommerce": 'sale "Kecoxie", "Conte Day"',
     "dropshipping": "palabra inglesa larga, mismo riesgo que trafficker",
+    "shopify": ('canta "yo puedo" en su lugar — se la salta entera (P10). '
+                'Va en el texto en pantalla, que además se lee sin sonido'),
+    "herramienta": 'sale "hermanienta", "rejanienta", "la hermano" — 4 fallos en 4 canciones del P05',
+    "herramientas": 'mismo problema que "herramienta" en singular',
 }
 
 # Music 3 lee las etiquetas de estructura en minúscula y EXIGE que cada una vaya

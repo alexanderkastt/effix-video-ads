@@ -173,6 +173,41 @@ def alinear(
     return tramos
 
 
+def cobertura_de_lineas(
+    textos: list[str],
+    transcripcion: dict[str, Any],
+) -> list[float]:
+    """Qué fracción de cada línea del guion aparece de verdad en la canción.
+
+    `alinear()` da por hecho que todo se cantó y reparte el hueco de lo que no
+    encuentra; sirve para el montaje, pero esconde justo el fallo que más caro
+    sale: que el modelo se quedara sin tope y no llegara al CTA. Esto compara
+    palabra a palabra y devuelve la cobertura de cada línea, de 0.0 a 1.0.
+
+    Se descubrió con el P02 (2026-09-07): dos canciones pagadas murieron en "de
+    las tiendas", sin la cuña final ni el CTA, y la única forma de verlo era
+    leer la transcripción entera a mano.
+    """
+    oidas = [m[0] for m in _marcas(transcripcion)]
+    if not oidas:
+        return [0.0 for _ in textos]
+
+    del_guion: list[str] = []
+    linea_de: list[int] = []
+    for i, texto in enumerate(textos):
+        for palabra in _palabras(texto):
+            del_guion.append(palabra)
+            linea_de.append(i)
+
+    aciertos = [0] * len(textos)
+    for bloque in SequenceMatcher(None, del_guion, oidas, autojunk=False)            .get_matching_blocks():
+        for k in range(bloque.size):
+            aciertos[linea_de[bloque.a + k]] += 1
+
+    totales = [max(len(_palabras(t)), 1) for t in textos]
+    return [round(min(a / tot, 1.0), 2) for a, tot in zip(aciertos, totales)]
+
+
 def golpes(cancion: Path) -> list[float]:
     """Los tiempos de beat de la canción, para que los cortes caigan en ellos."""
     import librosa  # import diferido: librosa tarda ~2s en cargar

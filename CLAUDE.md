@@ -105,14 +105,19 @@ reescribe el contenido**, se produce.
 Cuando Alexander diga `produce scripts/guiones/<archivo>_aprobado.json`:
 
 1. Validar el JSON con las 6 reglas de `docs/FORMATO-GUION.md` (estado, registros,
-   palabras prohibidas, prompts sin `slow`, overlays ≤ 7 palabras, duración 30–60).
+   palabras prohibidas, prompts sin `slow`, overlays ≤ 7 palabras, duración 30–60
+   salvo `duracion_excepcion` declarada con motivo y quién la aprobó).
    Si falla algo, decir qué y **parar**: no se arregla el guion aquí sin avisar.
 2. Estimar costo con parámetros reales (tramos de 5/10s por línea, keyframes,
    `n_imagenes`) y mostrar el veredicto ✅/⚠️/🛑 de `cost_estimator.formatear()`.
 3. **Esperar el OK explícito de Alexander.** Sin OK no se llama a ninguna API.
 4. Voz por línea (`beat_NN.mp3`) → medir con ffprobe → repartir clips desde el audio.
 5. Imágenes (`@Image1`, `@Image2` si hay `prompt_keyframe_final`) → clips → `ritmo.py`
-   → `mezcla.py` → `assets/renders/<job_id>.mp4`.
+   → `mezcla.py` → render en `assets/renders/`. **El mp4 se nombra por su contenido,
+   no por el `job_id`**: manda el campo `nombre_entrega` del guion si existe, y si no
+   lo genera `guion_aprobado.nombre_de_entrega()`, que antepone `P<NN>_` cuando el
+   guion trae `nicho_mapa` (la serie de parrilla se revisa por público, no por estilo).
+   Detalle en `docs/FORMATO-GUION.md`.
 6. QA: duración, −14 LUFS, número de planos, ningún plano < 1.25s. Anotar costo real
    en `logs/` y la entrega en `ESTADO.md`.
 
@@ -162,6 +167,15 @@ el 2026-09-06 y quedaron los dos en verde.
   `validar_coherencia_de_pase()` lo verifica.
 - Sin descuentos ni códigos en los guiones actuales; sin mencionar el taller de IA
   (decisión de comunicación). El CTA cierra en compra: "Compra tu boleta/pasaporte…".
+- **La micro-situación se ve tres veces en cada video**, con función distinta:
+  cruda, agravada y resuelta, y las tres EN IMAGEN. Va declarada en
+  `microsituacion_apariciones` con la línea de cada una; la regla 8 del productor
+  se niega a producir sin ellas.
+- **El cierre —feria, fechas y CTA— no puede sonar igual en dos ads.** El mensaje
+  comercial es obligatorio en los 28; su redacción, no. Ocho de ocho guiones
+  cantaban el mismo pareado ("del quince al diecinueve / la cosa se mueve") y el
+  mismo "Compra tu ingreso, dale clic": la regla 9 lo bloquea comparando contra
+  todos los guiones del repo.
 - Texto en pantalla: máximo 7 palabras. El video tiene que funcionar sin sonido.
 - Español **neutro colombiano o paisa**, nunca voseo rioplatense. Kreoon MCP
   (`generate_script`) devuelve "sentís/convertite": revisar y adaptar siempre.

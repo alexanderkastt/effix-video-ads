@@ -94,10 +94,23 @@ consuma y los `_producir_*.py` desechables dejen de hacer falta.
    con `no discernible speech`. Ningún `prompt_imagen` pide texto legible.
 5. `texto_pantalla` ≤ 7 palabras.
 6. Duración estimada = palabras / `PALABRAS_POR_SEGUNDO` + `RESPIRO_S` × líneas,
-   entre 30 y 60 s. La real se mide con ffprobe después de la voz.
+   entre 30 y 60 s. La real se mide con ffprobe después de la voz. En
+   `musical_sync` la canción manda y a veces sale más larga: para salirse del
+   rango hay que declararlo con `duracion_excepcion: {motivo, aprobado_por}`, y
+   entonces avisa en vez de bloquear. Sin esos dos campos sigue siendo error.
 7. Costo estimado con parámetros reales (duración por línea redondeada a tramos
    de 5/10 s salvo keyframe final, `n_imagenes` = líneas + keyframes). Si pasa
    6 USD, imprime el veredicto 🛑 y **para**.
+8. **La micro-situación se ve tres veces**: `microsituacion_apariciones` con
+   `cruda`, `agravada` y `resuelta`, `en_imagen >= 3`, y cada una diciendo en qué
+   línea cae — la línea tiene que existir. Sin las tres, el ad no se produce.
+9. **El cierre no se repite entre ads.** Los versos que caen en beats de cierre
+   (`FECHAS`, `CORO_FERIA`, `CORO_LLEGADA`, `PRUEBA`, `PUENTE_CIFRAS`, `CTA`) se
+   comparan con los de todos los demás guiones del repo: si alguno ya está
+   cantado en otro, es error. La feria, las fechas y el CTA van en los 28 ads;
+   su **redacción** tiene que cambiar en cada uno. Fuera del cierre, repetir sólo
+   avisa. Un ad ya entregado (con `render` o `costo_real_usd`) no se bloquea:
+   avisa, porque las reglas nuevas no se aplican hacia atrás.
 
 ## Flujo en Claude Code
 
@@ -137,6 +150,18 @@ El título del guion **es** el nombre de su micro-situación, así que hace de
 resumen sin meter el párrafo entero. Cuando el guion no trae `nicho` con nombre
 —la serie de parrilla numerada— se usa `publico`. Lo genera
 `guion_aprobado.nombre_de_entrega()`.
+
+**La serie numerada va con su número delante** (2026-09-07). Los 28 ads de la
+parrilla se revisan por público, no por estilo, y sin el número la carpeta de
+renders queda ordenada por estilo:
+
+```
+P01_effix_pixar_emprendedores-que-empiezan_quiero-vender-y-no-se-por-donde_20260907.mp4
+```
+
+`nombre_de_entrega()` lo hace en dos pasos: si el guion trae `nombre_entrega`,
+ése es el nombre y no se discute —lo escribe quien redactó el guion y sabe a qué
+público le habla—; si no lo trae pero sí trae `nicho_mapa`, antepone `P<NN>_`.
 
 ### Campos que el productor añadió al esquema
 

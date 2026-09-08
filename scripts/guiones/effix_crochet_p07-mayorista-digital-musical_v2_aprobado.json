@@ -1,0 +1,294 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "aprobado",
+  "job_id": "p07-mayorista-digital-musical-animado2d-v2",
+  "titulo": "Pedidos por teléfono sin digitalizar",
+  "marca": "effix",
+  "publico": "Mayoristas y distribuidores",
+  "nicho_mapa": 7,
+  "angulo": "7.1",
+  "angulo_nombre": "Digitalizar el pedido telefónico y automatizar el despacho",
+  "temperatura": "calientes",
+  "estilo": "crochet",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "formato_cancion": "F6 · DOS VOCES — la segunda voz es su propio cliente, no un colega: el que le compra le explica el problema y le cuenta de la feria con la entrada en la mano.",
+  "version_lote": "angulo1-v2",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 57,
+  "microsituacion": {
+    "momento": "El pedido llega por teléfono, se anota en el cuaderno y se pasa a un Excel.",
+    "sintoma": "El archivo se borra, el cuaderno se pierde, y después no aparece ni el pedido ni el dato del cliente.",
+    "reaccion_interna": "Crees que fue descuido tuyo y que la próxima anotas mejor.",
+    "explicacion_fallida": "Te dices que así se ha manejado siempre y por algo será.",
+    "patron": "Pasa cada mes, y ya no es sólo el pedido: es despachar lo que no era y que te lo devuelvan.",
+    "causa_raiz": "El pedido nunca se digitalizó. Vive en papel y en un archivo suelto, y por eso el despacho depende de que alguien se acuerde.",
+    "mecanismo": "En Feria Effix están las empresas que digitalizan el pedido telefónico y automatizan el despacho: el cliente pide solo con precio y cantidad, y la orden sale despachada."
+  },
+  "microsituacion_apariciones": {
+    "cruda": "Línea 1 — el cuaderno abierto, la cuadrícula del Excel en pantalla y el teléfono al hombro (en imagen).",
+    "agravada": "Línea 8 — mismo encuadre: el cuaderno ya no está, la pantalla en blanco, el teléfono descolgado y las cajas devueltas detrás (en imagen).",
+    "resuelta": "Línea 12 — mismo encuadre: el cuaderno cerrado, los pedidos entrando solos en pantalla y las cajas etiquetadas saliendo (en imagen).",
+    "en_imagen": 3
+  },
+  "dolor_frase": "el pedido por teléfono que no queda en ningún lado",
+  "dolor_menciones_en_letra": 4,
+  "bible": "Stop-motion crochet diorama of a small wholesale warehouse world in Medellin, entirely handmade in yarn. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey wool. Vertical 9:16 composition, miniature set built on a table. DONA GLORIA: a handmade miniature figure of a Colombian woman in her fifties, short grey-streaked hair, tiny round reading glasses, floral blouse under a work vest, a miniature landline handset resting against her shoulder. DON FABIO: her customer, a miniature shopkeeper figure in his forties, moustache, apron over a polo shirt, always holding a tiny phone. Same figures in every shot.",
+  "negative_prompt": "realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+  "personajes": {
+    "mayorista-digital": {
+      "ficha": "DONA GLORIA: a handmade miniature figure of a Colombian woman in her fifties, short grey-streaked hair, tiny round reading glasses, floral blouse under a work vest, a miniature landline handset resting against her shoulder.",
+      "voz": null,
+      "quien_es": "DOÑA GLORIA, mayorista que toma pedidos por teléfono y cuaderno.",
+      "lipsync": false
+    },
+    "don-fabio": {
+      "ficha": "DON FABIO: her customer, a miniature shopkeeper figure in his forties, moustache, apron over a polo shirt, always holding a tiny phone. Same figures in every shot.",
+      "voz": null,
+      "quien_es": "DON FABIO, el tendero que le compra a doña Gloria: la segunda voz. No la regaña, le pide.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Salsa urbana / champeta",
+    "suno_title": "Feria Effix — Pedidos por teléfono",
+    "suno_custom_lyrics": "[Verso]\nPedido por teléfono, cuaderno y Excel\nSe borró el archivo, se perdió el cuaderno\n\n[Verso]\nEntendí diez y eran cien\nDespaché lo que no era y me lo devolvieron\n\n[Verso]\nDoña Gloria, ¿mi pedido? — No lo encuentro, mijo\nTuve que preguntarle qué pidió\n\n[Puente]\nLlamó a las once y nadie contestó\nEse cliente ya le compra a otro\n\n[Coro]\nFeria Éffix, Plaza Mayor, del quince al diecinueve\nTrescientas cincuenta empresas le ponen sistema a eso\nYa compré mi entrada — y yo la mía\n\n[Outro]\nÉl pide solo, con precio y cantidad, y sale despachado\nCompre su entrada y véngase pa' la feria",
+    "suno_style_tags": [
+      "salsa urbana",
+      "piano montuno and horns",
+      "champeta energy",
+      "duet, an older female voice and a male voice answering each other like a real conversation",
+      "no repeated brand chorus, the verses carry the story",
+      "every word clearly enunciated, simple everyday Spanish",
+      "radio-ready mix",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 104,
+    "volumen_relativo": 1.0,
+    "modelo": "minimax/music-3",
+    "bpm_exacto": true,
+    "duracion_ms": 64000,
+    "genero_prompt": "salsa urbana with champeta energy, conversational duet, festive and warm",
+    "ritmo_prompt": "piano montuno, bright horn stabs, congas and timbal breaks, space between phrases so every word is understood",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. «Feria Effix» va con tilde en la letra: sin ella el modelo la canta «FX». Letra corta a propósito — el 2026-09-07 una letra con dos coros completos se quedó sin tiempo y nunca cantó el outro, que es el CTA. Si no rima al oído o canta mal la marca, regenerar (0,15 USD). · 2026-09-07: letra reescrita con Alexander sobre el dolor real (Excel borrado, cuaderno perdido, despacho equivocado, cliente que se va) y la solución en tres pedazos que desmontan esos golpes. 99 palabras a 104 BPM = 89% del tope: cabe con el CTA dentro. Etiquetas todas reconocidas por MiniMax."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Pedido por teléfono, cuaderno y Excel",
+      "texto_tts": "",
+      "texto_pantalla": "Pedido por telefono",
+      "plano": "Encuadre A: cuaderno, pantalla con la cuadricula y el telefono al hombro. CRUDA: este encuadre vuelve en la 8 y en la 12.",
+      "prompt_imagen": "Stop-motion crochet diorama of a small wholesale warehouse world in Medellin, entirely handmade in yarn. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey wool. Vertical 9:16 composition, miniature set built on a table. DONA GLORIA: a handmade miniature figure of a Colombian woman in her fifties, short grey-streaked hair, tiny round reading glasses, floral blouse under a work vest, a miniature landline handset resting against her shoulder. DON FABIO: her customer, a miniature shopkeeper figure in his forties, moustache, apron over a polo shirt, always holding a tiny phone. Same figures in every shot. tight close-up on the crocheted wholesale counter: a small open knitted order notebook with yarn-loop ruled lines, a chunky knitted desktop monitor beside it whose screen is a grid of empty woollen cells, and the coiled yarn cord of a miniature landline phone lying across the page, a knitted pen laid across the page having just drawn a row of simple woollen marks, the handset cord curling off the edge of the counter The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the yarn pen nudges forward one notch along the page as if a new line had just been written. the coiled phone cord sways once and settles; the rest of the diorama holds still. Camera: locked off. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Se borró el archivo, se perdió el cuaderno",
+      "texto_tts": "",
+      "texto_pantalla": "El archivo se borro",
+      "plano": "Mismo puesto, un paso mas cerca: la cuadricula de la pantalla vacia y el hueco donde estaba el cuaderno.",
+      "prompt_imagen": "Stop-motion crochet diorama of a small wholesale warehouse world in Medellin, entirely handmade in yarn. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey wool. Vertical 9:16 composition, miniature set built on a table. DONA GLORIA: a handmade miniature figure of a Colombian woman in her fifties, short grey-streaked hair, tiny round reading glasses, floral blouse under a work vest, a miniature landline handset resting against her shoulder. DON FABIO: her customer, a miniature shopkeeper figure in his forties, moustache, apron over a polo shirt, always holding a tiny phone. Same figures in every shot. medium close-up of the same crocheted counter from a slightly higher angle: the knitted monitor screen is now a completely bare woollen panel with every cell unpicked, and a clean rectangular patch of darker felt marks where the notebook used to sit The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the woollen cells of the screen unravel row by row until the panel is bare. the empty felt patch stays untouched; a loose thread hangs at the edge of the desk. Camera: gentle push in. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Entendí diez y eran cien",
+      "texto_tts": "",
+      "texto_pantalla": "Entendio diez, eran cien",
+      "plano": "Gloria con el telefono al hombro anotando, y detras una torre de cajas mucho mas grande de lo anotado.",
+      "prompt_imagen": "Stop-motion crochet diorama of a small wholesale warehouse world in Medellin, entirely handmade in yarn. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey wool. Vertical 9:16 composition, miniature set built on a table. DONA GLORIA: a handmade miniature figure of a Colombian woman in her fifties, short grey-streaked hair, tiny round reading glasses, floral blouse under a work vest, a miniature landline handset resting against her shoulder. DON FABIO: her customer, a miniature shopkeeper figure in his forties, moustache, apron over a polo shirt, always holding a tiny phone. Same figures in every shot. medium shot of the DONA GLORIA figure standing at the crocheted counter with the miniature handset at her shoulder, one arm resting on the notebook, while behind her a stack of knitted cardboard boxes rises far taller than the tiny mark on the page The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 she lifts her head from the notebook and the towering stack of woollen boxes behind her comes into full view. the yarn boxes settle with a small wobble; her free arm stays down at her side. Camera: locked off. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Despaché lo que no era y me lo devolvieron",
+      "texto_tts": "",
+      "texto_pantalla": "Se lo devolvieron",
+      "plano": "Cajas devueltas apiladas en la puerta, con la cinta rota y vuelta a pegar.",
+      "prompt_imagen": "Stop-motion crochet diorama of a small wholesale warehouse world in Medellin, entirely handmade in yarn. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey wool. Vertical 9:16 composition, miniature set built on a table. DONA GLORIA: a handmade miniature figure of a Colombian woman in her fifties, short grey-streaked hair, tiny round reading glasses, floral blouse under a work vest, a miniature landline handset resting against her shoulder. DON FABIO: her customer, a miniature shopkeeper figure in his forties, moustache, apron over a polo shirt, always holding a tiny phone. Same figures in every shot. low wide shot of returned knitted shipping boxes piled at the warehouse doorway of the diorama, their woollen tape flaps cut open and pressed back down, a miniature crocheted delivery cart pulling away in the doorway light The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft diffused daylight from above-left. realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 one more returned woollen box is set down on top of the pile. the little cart rolls back out of frame and the pile leans slightly. Camera: locked off. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "REACCION",
+      "quien": "CANCION",
+      "texto": "Doña Gloria, ¿mi pedido? — No lo encuentro, mijo",
+      "texto_tts": "",
+      "texto_pantalla": "Y mi pedido?",
+      "plano": "Pantalla partida en dos vinetas: Fabio en su tienda con el celular; Gloria pasando hojas en blanco.",
+      "prompt_imagen": "Stop-motion crochet diorama of a small wholesale warehouse world in Medellin, entirely handmade in yarn. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey wool. Vertical 9:16 composition, miniature set built on a table. DONA GLORIA: a handmade miniature figure of a Colombian woman in her fifties, short grey-streaked hair, tiny round reading glasses, floral blouse under a work vest, a miniature landline handset resting against her shoulder. DON FABIO: her customer, a miniature shopkeeper figure in his forties, moustache, apron over a polo shirt, always holding a tiny phone. Same figures in every shot. split-frame two-panel diorama composition, top panel the DON FABIO figure standing in his tiny knitted corner shop holding his little phone up to his ear, bottom panel the DONA GLORIA figure turning the blank woollen pages of the order notebook with the handset at her shoulder The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 in the top panel he raises the tiny phone; in the bottom panel the blank knitted pages turn one after another. both figures keep one arm still; the two panels hold their own light. Camera: locked off. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "REACCION",
+      "quien": "CANCION",
+      "texto": "Tuve que preguntarle qué pidió",
+      "texto_tts": "",
+      "texto_pantalla": "Le toco preguntarle",
+      "plano": "Primer plano de Gloria, la verguenza en la cara, con el cuaderno abierto en blanco.",
+      "prompt_imagen": "Stop-motion crochet diorama of a small wholesale warehouse world in Medellin, entirely handmade in yarn. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey wool. Vertical 9:16 composition, miniature set built on a table. DONA GLORIA: a handmade miniature figure of a Colombian woman in her fifties, short grey-streaked hair, tiny round reading glasses, floral blouse under a work vest, a miniature landline handset resting against her shoulder. DON FABIO: her customer, a miniature shopkeeper figure in his forties, moustache, apron over a polo shirt, always holding a tiny phone. Same figures in every shot. tight close-up of the DONA GLORIA figure leaning over the open blank knitted notebook, head lowered behind her tiny round glasses, one arm resting flat across the empty woollen page The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 her head lowers a little further toward the blank page. her arm presses flat on the wool; the handset cord hangs motionless. Camera: locked off. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Llamó a las once y nadie contestó",
+      "texto_tts": "",
+      "texto_pantalla": "Once de la noche",
+      "plano": "Local cerrado de noche: el telefono suena solo sobre el mostrador vacio.",
+      "prompt_imagen": "Stop-motion crochet diorama of a small wholesale warehouse world in Medellin, entirely handmade in yarn. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey wool. Vertical 9:16 composition, miniature set built on a table. DONA GLORIA: a handmade miniature figure of a Colombian woman in her fifties, short grey-streaked hair, tiny round reading glasses, floral blouse under a work vest, a miniature landline handset resting against her shoulder. DON FABIO: her customer, a miniature shopkeeper figure in his forties, moustache, apron over a polo shirt, always holding a tiny phone. Same figures in every shot. wide night interior of the closed crocheted storefront, the knitted roller shutter pulled down, the counter empty except for the miniature landline phone sitting alone on it The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: warm soft glow from tiny crocheted streetlamps. realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the little yarn phone rocks on its cradle as if ringing, again and again, with nobody there. the light on the counter pulses faintly with each ring; the shutter stays down. Camera: locked off. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Ese cliente ya le compra a otro",
+      "texto_tts": "",
+      "texto_pantalla": "Ese cliente se fue",
+      "plano": "Encuadre A otra vez: cuaderno perdido, cajas devueltas al fondo y el telefono descolgado. AGRAVADA.",
+      "prompt_imagen": "Stop-motion crochet diorama of a small wholesale warehouse world in Medellin, entirely handmade in yarn. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey wool. Vertical 9:16 composition, miniature set built on a table. DONA GLORIA: a handmade miniature figure of a Colombian woman in her fifties, short grey-streaked hair, tiny round reading glasses, floral blouse under a work vest, a miniature landline handset resting against her shoulder. DON FABIO: her customer, a miniature shopkeeper figure in his forties, moustache, apron over a polo shirt, always holding a tiny phone. Same figures in every shot. medium-high angle on the crocheted wholesale counter from the same position as the opening shot: the terracotta yarn counter fills the lower half of the frame with the chunky knitted monitor standing on it, its screen now a bare woollen panel, a darker felt patch marking where the order notebook used to lie, and the miniature landline handset off its cradle on the counter; the DONA GLORIA figure stands alone behind the counter with both arms down, and a pile of returned knitted boxes is stacked behind her The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the off-cradle handset trembles once on the counter and goes still. she stays motionless behind the counter; the returned woollen boxes hold behind her. Camera: locked off, tiny drift. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Feria Éffix, Plaza Mayor, del quince al diecinueve",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix - 15 al 19 oct",
+      "plano": "Plano general del pabellon de la feria, lleno de gente de negocios entre stands.",
+      "prompt_imagen": "Stop-motion crochet diorama of a small wholesale warehouse world in Medellin, entirely handmade in yarn. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey wool. Vertical 9:16 composition, miniature set built on a table. DONA GLORIA: a handmade miniature figure of a Colombian woman in her fifties, short grey-streaked hair, tiny round reading glasses, floral blouse under a work vest, a miniature landline handset resting against her shoulder. DON FABIO: her customer, a miniature shopkeeper figure in his forties, moustache, apron over a polo shirt, always holding a tiny phone. Same figures in every shot. wide establishing shot of a large crocheted convention hall diorama, rows of knitted exhibition stands under a woollen truss ceiling, many small handmade visitor figures with yarn lanyards walking the aisles The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the little crowd of yarn figures shuffles along the aisle between the stands. two figures cross the foreground; the knitted banners above sway a little. Camera: locked off. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Trescientas cincuenta empresas le ponen sistema a eso",
+      "texto_tts": "",
+      "texto_pantalla": "Mas de 350 empresas",
+      "plano": "Gloria en un stand mirando como un pedido entra solo en una pantalla.",
+      "prompt_imagen": "Stop-motion crochet diorama of a small wholesale warehouse world in Medellin, entirely handmade in yarn. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey wool. Vertical 9:16 composition, miniature set built on a table. DONA GLORIA: a handmade miniature figure of a Colombian woman in her fifties, short grey-streaked hair, tiny round reading glasses, floral blouse under a work vest, a miniature landline handset resting against her shoulder. DON FABIO: her customer, a miniature shopkeeper figure in his forties, moustache, apron over a polo shirt, always holding a tiny phone. Same figures in every shot. medium shot of the DONA GLORIA figure leaning over a knitted exhibition stand counter inside the crocheted convention hall, a miniature vendor figure beside her with one arm raised toward a large plain woollen display panel where small blank felt order cards stack themselves into a neat vertical list; the panel carries only blank felt cards and simple abstract geometric shapes, never letters or writing; rows of other knitted stands and visitor figures soft in the background The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 one blank felt order card after another drops by itself onto the neat stack on the woollen panel. the vendor figure holds one arm raised; she leans a little closer to the panel. Camera: locked off. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Ya compré mi entrada — y yo la mía",
+      "texto_tts": "",
+      "texto_pantalla": "Ya tienen su entrada",
+      "plano": "Gloria y Fabio se encuentran en la feria, cada uno con su entrada en la mano.",
+      "prompt_imagen": "Stop-motion crochet diorama of a small wholesale warehouse world in Medellin, entirely handmade in yarn. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey wool. Vertical 9:16 composition, miniature set built on a table. DONA GLORIA: a handmade miniature figure of a Colombian woman in her fifties, short grey-streaked hair, tiny round reading glasses, floral blouse under a work vest, a miniature landline handset resting against her shoulder. DON FABIO: her customer, a miniature shopkeeper figure in his forties, moustache, apron over a polo shirt, always holding a tiny phone. Same figures in every shot. medium two-shot of the DONA GLORIA and DON FABIO figures meeting face to face in the crocheted convention aisle, each holding up a small blank felt admission ticket in one hand, knitted smiles of recognition The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 both figures raise their little felt tickets at the same moment. they lean toward each other slightly; the aisle behind stays busy and soft. Camera: locked off. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 12,
+      "beat": "RESULTADO",
+      "quien": "CANCION",
+      "texto": "Él pide solo, con precio y cantidad, y sale despachado",
+      "texto_tts": "",
+      "texto_pantalla": "Pide solo. Sale despachado",
+      "plano": "Encuadre A por ultima vez: cuaderno cerrado, pedidos entrando en pantalla y cajas etiquetadas saliendo. RESUELTA.",
+      "prompt_imagen": "Stop-motion crochet diorama of a small wholesale warehouse world in Medellin, entirely handmade in yarn. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey wool. Vertical 9:16 composition, miniature set built on a table. DONA GLORIA: a handmade miniature figure of a Colombian woman in her fifties, short grey-streaked hair, tiny round reading glasses, floral blouse under a work vest, a miniature landline handset resting against her shoulder. DON FABIO: her customer, a miniature shopkeeper figure in his forties, moustache, apron over a polo shirt, always holding a tiny phone. Same figures in every shot. tight close-up on the crocheted wholesale counter: a small open knitted order notebook with yarn-loop ruled lines, a chunky knitted desktop monitor beside it whose screen is a grid of empty woollen cells, and the coiled yarn cord of a miniature landline phone lying across the page, matching the first framing exactly, but now the knitted notebook is closed and pushed to the side, the woollen monitor screen fills row by row with neat little felt order cards on its own, and behind the counter labelled knitted boxes travel out along a small yarn roller conveyor The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 felt order cards drop into the woollen screen rows one after another by themselves. labelled knitted boxes roll out along the little conveyor behind; the closed notebook stays put. Camera: locked off, tiny drift. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 13,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Compre su entrada y véngase pa' la feria",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic abajo",
+      "plano": "Gloria y Fabio de frente, senalando hacia el borde inferior del cuadro. Sin boton dibujado: las flechas van en post.",
+      "prompt_imagen": "Stop-motion crochet diorama of a small wholesale warehouse world in Medellin, entirely handmade in yarn. Warm desaturated palette: terracotta, mustard, dusty teal, warm grey wool. Vertical 9:16 composition, miniature set built on a table. DONA GLORIA: a handmade miniature figure of a Colombian woman in her fifties, short grey-streaked hair, tiny round reading glasses, floral blouse under a work vest, a miniature landline handset resting against her shoulder. DON FABIO: her customer, a miniature shopkeeper figure in his forties, moustache, apron over a polo shirt, always holding a tiny phone. Same figures in every shot. medium shot of the DONA GLORIA and DON FABIO figures side by side facing the viewer in the crocheted convention hall, each with one arm extended downward toward the bottom edge of the frame, open friendly knitted faces, plenty of empty space across the lower third of the composition The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. Lighting: soft natural light from a small diorama window to the left. realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 both figures extend one arm down toward the bottom edge of the frame and hold there. their other arms stay at their sides; the knitted hall behind them stays calm. Camera: locked off. Ensure the entire scene remains fully crocheted and knitted throughout every frame — all characters, objects, and surfaces must retain visible yarn stitch texture with no realistic or smooth surfaces at any point. Non-CGI. Non-cinematic. Animations must start at the first frame. Non-disney. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compre su entrada y véngase pa' la feria (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [],
+  "costo_estimado_usd": null,
+  "costo_desglose": "Lo calcula el productor con cost_estimator y parámetros reales (Seedance 1.5 Pro 1080p, clips de 4 s, nano-banana-2).",
+  "nombre_entrega": "P07_effix_crochet_mayoristas-y-distribuidores_pedidos-por-telefono_20260907.mp4",
+  "nota_entrega": "Nombre del mp4 final, ya numerado por publico de la parrilla: P<NN>_effix_<estilo>_<publico>_<micro-situacion>_<AAAAMMDD>.mp4. El numero va delante para que los 28 queden en orden en la carpeta. Este campo manda sobre guion_aprobado.nombre_de_entrega(): si la funcion no antepone el numero, hay que ajustarla en el mismo commit (CLAUDE.md: una regla sin default en el codigo no existe).",
+  "notas_produccion": "Segunda versión del 07, reescrita el 2026-09-07: Alexander pidió que la letra sea tan explícita que la entienda un niño de diez años. Frases cortas, sujeto-verbo-objeto, palabras de todos los días, cero metáforas y cero jerga (no se dice «digitalizar», «Excel», «canal», «omnicanal»: se dice «una página para pedir solo»). El video explica en orden: qué hace ella, qué problema tiene, qué le pide su cliente, qué se dice a sí misma, por qué es falso, qué le costó, qué es la feria, cuándo y dónde, y qué hacer ahora. Sin estribillo de marca repetido: el dato lo da el cliente dentro de la conversación (línea 9) y el CTA es la decisión de ella más una invitación. La micro-situación es el cuaderno: mismo encuadre en las líneas 1, 8 y 12. Bible flat 2D verbatim del ad «La acera». Héroe primero doña Gloria, después don Fabio. Cantado, sin voz en off.",
+  "aprobado_por": "Alexander",
+  "aprobado_el": "2026-09-07",
+  "modelos": {
+    "video": "fal-ai/bytedance/seedance/v1.5/pro/image-to-video",
+    "resolucion": "1080p",
+    "imagen": "fal-ai/nano-banana-2",
+    "edit": "fal-ai/nano-banana-2/edit"
+  },
+  "duracion_clip_s": 4,
+  "nota_video": "Seedance 1.5 Pro a 1080p, clips de 4 s encadenados. Frame final en los clips que cierran una línea; sin frame final en los intermedios. Decisión de Alexander el 2026-09-07.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "quien": "Alexander",
+      "que": "Lote .1 v2: la micro-situación se toca tres veces con función distinta (cruda, agravada, resuelta) y cada público usa un formato de canción propio. El v1 tenía los 28 con la misma estructura y se leían como el mismo video.",
+      "costo_usd": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "quien": "Alexander",
+      "que": "El ángulo es digitalizar el pedido telefónico y automatizar el despacho. El dolor pasó de describirse a cobrarse: entendí diez y eran cien, despaché lo que no era y me lo devolvieron, tuve que preguntarle qué pidió, llamó a las once y nadie contestó. La letra anterior tenía etiquetas [Gloria]/[Don Fabio] que el modelo canta en voz alta, 123 palabras que no cabían en el tope (se habría quedado sin CTA) y la marca sin tilde.",
+      "costo_usd": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "quien": "Alexander",
+      "que": "Cambio de estilo visual de animado_2d a crochet, con la cancion ya generada y aprobada intacta. Los textos universales (positivo, negativo, cierre I2V) van verbatim desde src/estilos_especiales.py; las escenas enmarcan el MUNDO como diorama y no a los personajes como 'crocheted man', y ningun plano pide poses de dedos: los gestos son de un solo brazo.",
+      "costo_usd": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "quien": "Claude",
+      "que": "Escenas 8 y 10 regeneradas antes de pagar clips. La 8 salio en un encuadre cerrado distinto al de la 1 y la 12, y las tres apariciones de la micro-situacion tienen que compartir encuadre; se reescribio anclandola al plano medio-alto del mostrador terracota con Gloria sola detras. La 10 salio con letras tejidas grandes y legibles en el panel de exhibicion y no leia como stand de feria.",
+      "costo_usd": 0.16
+    }
+  ]
+}

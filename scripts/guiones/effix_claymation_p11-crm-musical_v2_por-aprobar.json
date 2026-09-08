@@ -1,0 +1,253 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "por-aprobar",
+  "job_id": "p11-crm-musical-claymation-v2",
+  "titulo": "Los clientes que se me pierden",
+  "marca": "effix",
+  "publico": "Tecnología y soluciones para e-commerce",
+  "nicho_mapa": 11,
+  "angulo": "11.1",
+  "angulo_nombre": "CRM",
+  "temperatura": "calientes",
+  "estilo": "claymation",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "formato_cancion": "F4 · CARTA CANTADA — TOBI cuenta su propia historia en primera persona, y la tienda que sí compró le responde.",
+  "version_lote": "angulo1-v2",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 50,
+  "microsituacion": {
+    "momento": "Vendes un programa que ordena los clientes, y las tiendas siguen anotándolos en un cuaderno.",
+    "sintoma": "Haces la demostración, te dicen que está muy bueno, y no vuelven a escribir.",
+    "reaccion_interna": "Piensas que tu producto no les alcanza.",
+    "explicacion_fallida": "Te dices que las tiendas pequeñas no son tu mercado.",
+    "patron": "Pero lo compran el mes en que empiezan a perder clientes, y se lo compran a quien tenían al lado.",
+    "causa_raiz": "No te falta producto. Te falta estar al lado de miles de tiendas cuando les pasa.",
+    "mecanismo": "En Feria Effix van miles de tiendas y puedes poner tu puesto y mostrarles el programa funcionando."
+  },
+  "microsituacion_apariciones": {
+    "cruda": "Línea 3 — el chat con el «qué bueno» y nada después (en imagen).",
+    "agravada": "Línea 4 — el mismo chat con dos mensajes suyos sin respuesta (en imagen).",
+    "resuelta": "Línea 11 — el mismo chat llenándose de respuestas (en imagen).",
+    "en_imagen": 3
+  },
+  "dolor_frase": "dicen que está muy bueno",
+  "dolor_menciones_en_letra": 3,
+  "bible": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16.",
+  "negative_prompt": "smooth CGI, photoreal, 2D flat, glossy plastic, text, captions, letters, watermark, logo, UI, style drift, extra limbs, melting clay",
+  "personajes": {
+    "crm": {
+      "ficha": "TOBI: a plasticine stop-motion man in his thirties, navy clay sweater, round clay glasses, curly clay hair, big round clay eyes, carrying a clay tablet. Same character in every shot.",
+      "voz": null,
+      "quien_es": "TOBI, personaje de plastilina: dueño de una empresa de software que no consigue tiendas.",
+      "lipsync": false
+    },
+    "una-tienda": {
+      "ficha": "A plasticine shop owner in her forties, apron over a clay blouse, hair in a clay bun. Same character in every shot.",
+      "voz": null,
+      "quien_es": "La dueña de tienda que sí compró el programa. Da el dato de la feria.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Merengue urbano",
+    "suno_title": "Feria Effix — Los clientes que se me pierden",
+    "suno_custom_lyrics": "[Tobi]\nYo hago un programa que guarda los clientes de una tienda\nPara que no se le pierda ninguno\n\n[Tobi]\nSe lo muestro, me dicen qué bueno, y no vuelven a escribir\nLes escribo otra vez y nada\n\n[Tobi]\nYo pensaba que las tiendas pequeñas no lo necesitan\n\n[Una tienda]\nYo lo compré el mes que perdí veinte clientes\nSe lo compré al que tenía al lado\n\n[Tobi]\nEntonces tengo que estar al lado cuando les pase\n\n[Una tienda]\nPlaza Mayor, del quince al diecinueve de octubre: es la Feria Effix\nVan miles de tiendas. Ponga su puesto y muéstreles\n\n[Tobi]\nCompré mi entrada y mi puesto\n\n[Tobi]\nHoy sí me escribieron de vuelta\nCompra tu entrada y móntate un puesto",
+    "suno_style_tags": [
+      "merengue urbano",
+      "fast tambora and guira",
+      "playful brass",
+      "clear vocal",
+      "radio-ready mix",
+      "every word clearly enunciated, simple everyday Spanish a ten year old understands",
+      "no repeated brand chorus, the verses carry the story",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words",
+      "two voices answering each other, a man telling his story and a woman replying"
+    ],
+    "bpm_recomendado": 130,
+    "volumen_relativo": 1.0,
+    "modelo": "minimax/music-3",
+    "bpm_exacto": true,
+    "duracion_ms": 64000,
+    "genero_prompt": "fast merengue urbano, festive and playful, commercial radio energy",
+    "ritmo_prompt": "fast tambora and guira, playful brass hits, driving bass",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. «Feria Effix» va con tilde en la letra: sin ella el modelo la canta «FX». Letra corta a propósito — el 2026-09-07 una letra con dos coros completos se quedó sin tiempo y nunca cantó el outro, que es el CTA. Si no rima al oído o canta mal la marca, regenerar (0,15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Yo hago un programa que guarda los clientes de una tienda",
+      "texto_tts": "",
+      "texto_pantalla": "Guarda los clientes",
+      "plano": "Plano medio de TOBI mostrando su programa: fichas de clientes que se ordenan solas.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. medium shot: TOBI in a small plasticine office holding his clay tablet, small clay customer cards sliding into neat labelled trays beside him. TOBI: a plasticine stop-motion man in his thirties, navy clay sweater, round clay glasses, curly clay hair, big round clay eyes, carrying a clay tablet. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 clay customer cards slide one by one into the trays while TOBI presents them with one hand. Camera: steady push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Para que no se le pierda ninguno",
+      "texto_tts": "",
+      "texto_pantalla": "",
+      "plano": "Plano detalle: una ficha de cliente se cae de la mesa de una tienda y nadie la recoge.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. close-up on the floor by a shop counter: a clay customer card slipping off a shop counter and landing on the floor among dust and other fallen cards. TOBI: a plasticine stop-motion man in his thirties, navy clay sweater, round clay glasses, curly clay hair, big round clay eyes, carrying a clay tablet. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the card slips off the counter and lands among the others on the floor. Camera: handheld drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "DEFECTO",
+      "quien": "CANCION",
+      "texto": "Se lo muestro, me dicen qué bueno, y no vuelven a escribir",
+      "texto_tts": "",
+      "texto_pantalla": "«Qué bueno» y silencio",
+      "plano": "Primer plano del chat de plastilina: un mensaje que dice bueno y después nada. CRUDA.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. tight close-up on a clay chat screen: a plasticine screen showing a chat with one incoming clay message block and then empty space below it, TOBI's clay finger resting on the edge. TOBI: a plasticine stop-motion man in his thirties, navy clay sweater, round clay glasses, curly clay hair, big round clay eyes, carrying a clay tablet. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the incoming block lands and nothing follows it, his finger tapping once. Camera: locked off. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Les escribo otra vez y nada",
+      "texto_tts": "",
+      "texto_pantalla": "",
+      "plano": "Mismo primer plano del chat: ahora con sus dos mensajes sin respuesta. AGRAVADA.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. tight close-up on the clay chat screen, matching the earlier framing: the same chat framing weeks later, now with two of TOBI's own clay message blocks sent and no answer below them, the light colder. TOBI: a plasticine stop-motion man in his thirties, navy clay sweater, round clay glasses, curly clay hair, big round clay eyes, carrying a clay tablet. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 a second sent block drops into place and the space below stays empty. Camera: locked off, tiny drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Yo pensaba que las tiendas pequeñas no lo necesitan",
+      "texto_tts": "",
+      "texto_pantalla": "«No lo necesitan»",
+      "plano": "Plano medio corto de TOBI encogiéndose de hombros frente a su tablero de ventas vacío.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. medium close-up: TOBI shrugging in front of a clay board with almost no sale markers on it, his tablet under his arm. TOBI: a plasticine stop-motion man in his thirties, navy clay sweater, round clay glasses, curly clay hair, big round clay eyes, carrying a clay tablet. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he shrugs at the near-empty board and adjusts his round clay glasses. Camera: static, 12fps judder. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "PATRON",
+      "quien": "CANCION",
+      "texto": "Yo lo compré el mes que perdí veinte clientes",
+      "texto_tts": "",
+      "texto_pantalla": "Lo compran cuando pierden",
+      "plano": "Contraplano: la dueña de una tienda de plastilina recogiendo fichas caídas del piso.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. medium shot of a second character: a plasticine shop owner crouching to gather fallen clay customer cards from the floor of her shop, a full box of them beside her. TOBI: a plasticine stop-motion man in his thirties, navy clay sweater, round clay glasses, curly clay hair, big round clay eyes, carrying a clay tablet. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 she gathers the fallen cards into the box and looks up. Camera: steady arc. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "Se lo compré al que tenía al lado / Entonces tengo que estar al lado cuando les pase",
+      "texto_tts": "",
+      "texto_pantalla": "Hay que estar al lado",
+      "plano": "Plano medio de los dos: la tienda le señala a alguien que estaba justo ahí.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. medium two-shot: the plasticine shop owner pointing sideways at an empty spot beside her counter where a seller stood, TOBI listening with the box of cards between them. TOBI: a plasticine stop-motion man in his thirties, navy clay sweater, round clay glasses, curly clay hair, big round clay eyes, carrying a clay tablet. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 she points at the empty spot beside her and TOBI turns to look at it. Camera: handheld push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "FECHAS",
+      "quien": "CANCION",
+      "texto": "Plaza Mayor, del quince al diecinueve de octubre: es la Feria Effix",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "Plano general: el pabellón de plastilina lleno de puestos y de gente.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. wide establishing shot of the miniature pavilion: a huge handmade miniature fair pavilion, rows of clay stands and a dense clay crowd, banners as plain solid black panels with white abstract shapes. TOBI: a plasticine stop-motion man in his thirties, navy clay sweater, round clay glasses, curly clay hair, big round clay eyes, carrying a clay tablet. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the clay crowd flows down the aisles while stand lights flicker on. Camera: crane down. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Van miles de tiendas. Ponga su puesto y muéstreles",
+      "texto_tts": "",
+      "texto_pantalla": "Miles de tiendas allí",
+      "plano": "Plano medio en su puesto: TOBI muestra el programa y varias tiendas se acercan.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. medium three-shot at his stand: TOBI behind his own clay stand showing the sliding customer cards to a small group of clay shop owners leaning over the counter. TOBI: a plasticine stop-motion man in his thirties, navy clay sweater, round clay glasses, curly clay hair, big round clay eyes, carrying a clay tablet. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the cards slide into their trays while three clay shop owners lean in to watch. Camera: handheld arc. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Compré mi entrada y mi puesto",
+      "texto_tts": "",
+      "texto_pantalla": "Compra tu ingreso: clic en el botón",
+      "plano": "Plano medio de TOBI de frente presionando un botón grande de plastilina.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. medium shot facing camera: TOBI facing camera in the pavilion aisle pressing a large rounded clay button floating in front of him, blurred clay stands behind. TOBI: a plasticine stop-motion man in his thirties, navy clay sweater, round clay glasses, curly clay hair, big round clay eyes, carrying a clay tablet. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he presses the clay button with both thumbs and it lights up. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Hoy sí me escribieron de vuelta / Compra tu entrada y móntate un puesto",
+      "texto_tts": "",
+      "texto_pantalla": "Hoy sí le escribieron",
+      "plano": "Mismo primer plano del chat: ahora con respuestas entrando una tras otra. RESUELTA.",
+      "prompt_imagen": "Clay stop-motion style, plasticine characters with handcrafted textures and visible fingerprints, miniature handmade sets, warm practical lights, slight imperfection in clay surfaces, Aardman-like aesthetic, rendered at 12fps for authentic stop-motion judder. Vertical 9:16. tight close-up on the clay chat screen, matching the earlier framings: the same chat framing, now filling with incoming clay message blocks one after another, warm light, his finger about to answer. TOBI: a plasticine stop-motion man in his thirties, navy clay sweater, round clay glasses, curly clay hair, big round clay eyes, carrying a clay tablet. Same character in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 incoming blocks keep landing and his clay finger moves to answer the first one. Camera: locked off, tiny push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "alegre",
+  "cta": {
+    "hablado": "Compra tu ingreso dando clic en el botón (cantado)",
+    "overlay": "Compra tu ingreso: clic en el botón",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [],
+  "costo_estimado_usd": null,
+  "costo_desglose": "Lo calcula el productor con cost_estimator y parámetros reales (Seedance 1.5 Pro 1080p, clips de 4 s, nano-banana-2).",
+  "nombre_entrega": "P11_effix_claymation_tecnologia-para-ecommerce_los-clientes-que-se-me-pierden_20260907.mp4",
+  "nota_entrega": "Nombre del mp4 final, ya numerado por publico de la parrilla: P<NN>_effix_<estilo>_<publico>_<micro-situacion>_<AAAAMMDD>.mp4. El numero va delante para que los 28 queden en orden en la carpeta. Este campo manda sobre guion_aprobado.nombre_de_entrega(): si la funcion no antepone el numero, hay que ajustarla en el mismo commit (CLAUDE.md: una regla sin default en el codigo no existe).",
+  "notas_produccion": "Letra explícita: no se dice CRM, se dice «un programa que guarda los clientes para que no se le pierda ninguno». El dato de la feria lo da la tienda que sí compró. La micro-situación es el chat: mismo encuadre en las líneas 3, 4 y 11. Plastilina con huellas, 12 fps, estética Aardman. Héroe primero TOBI. Cantado, sin voz en off. Se quitó del v1 la cifra de asistentes sin verificar.",
+  "aprobado_por": null,
+  "aprobado_el": null,
+  "modelos": {
+    "video": "fal-ai/bytedance/seedance/v1.5/pro/image-to-video",
+    "resolucion": "1080p",
+    "imagen": "fal-ai/nano-banana-2",
+    "edit": "fal-ai/nano-banana-2/edit"
+  },
+  "duracion_clip_s": 4,
+  "nota_video": "Seedance 1.5 Pro a 1080p, clips de 4 s encadenados. Frame final en los clips que cierran una línea; sin frame final en los intermedios. Decisión de Alexander el 2026-09-07.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "quien": "Alexander",
+      "que": "Lote .1 v2: la micro-situación se toca tres veces con función distinta (cruda, agravada, resuelta) y cada público usa un formato de canción propio. El v1 tenía los 28 con la misma estructura y se leían como el mismo video.",
+      "costo_usd": 0
+    }
+  ]
+}
