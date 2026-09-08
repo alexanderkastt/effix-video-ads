@@ -67,11 +67,33 @@ arquitectura: cambia el punto de entrada del estribillo y el número de escenas.
 - Ritmo: corte cada 1.5 a 2.5 s, piso 1.25 s. Encuadres sin repetir. Texto siempre en post,
   Montserrat.
 
-## Regla 4 — unidad de campaña
+## Regla 4 — nada de estribillo de marca repetido (corrección del 7 de septiembre de 2026)
 
-La melodía y la estructura cambian; el remate no. Los 28 cierran con las mismas dos líneas
-de marca (fecha + lugar + CTA de compra), para que la campaña suene a una sola cosa aunque
-cada canción sea distinta.
+La versión anterior de esta regla decía que los 28 cerraran con las mismas dos líneas de marca.
+**Estaba mal y se anula.** Fijar el bloque de la feria y el cierre hizo que, del segundo veinte
+en adelante, todos los videos sonaran iguales — el mismo «Feria Effix, del quince al diecinueve /
+Plaza Mayor, Medellín, la cosa se mueve» y el mismo «compra tu ingreso, dale clic». Del público 07
+en adelante:
+
+- **Prohibido repetir el bloque de coro de marca.** Cada guion inventa su propia forma de decir
+  cuándo, dónde y qué hay. Ninguna de las tres frases de la feria puede coincidir palabra por
+  palabra con las de otro guion del lote.
+- **La información entra dentro de la historia, dicha por alguien.** Un cliente que ya tiene su
+  entrada, un vecino que fue el año pasado, una cuenta regresiva, una dirección que alguien da,
+  una decisión que el personaje toma en voz alta. No un anuncio pegado en la mitad de la canción.
+- **El CTA cambia de forma en cada guion, pero siempre cierra en compra.** Puede ser la decisión
+  del personaje («compré la mía»), una invitación a otro personaje, un reto, una promesa. Lo que
+  no cambia es que quede claro que se compra la entrada, y el overlay del CTA sí se mantiene
+  igual en los 28 porque es la marca en pantalla, no la letra.
+- **El punto donde entra la feria se mueve.** En unos guiones al cuarenta por ciento del video,
+  en otros al sesenta o setenta. Nunca en el mismo segundo que el anterior.
+- Lo único que se repite en los 28 es el **dato verificable**: quince al diecinueve de octubre,
+  Plaza Mayor Medellín, más de trescientas cincuenta empresas, más de doscientas conferencias,
+  más de doscientos ponentes. El nombre «Feria Effix» se canta al menos una vez, con tilde.
+
+El video tiene que entenderse solo y vender: dolor reconocible → esto se resuelve viendo el
+negocio real → eso está en la Feria Effix, estos días, en este lugar → compra la entrada.
+Si al escucharlo sin ver la pantalla no queda claro qué se compra y para qué, el guion está mal.
 
 ## Regla 5 — no se produce nada
 

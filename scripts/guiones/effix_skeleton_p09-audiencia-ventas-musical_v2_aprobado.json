@@ -1,6 +1,6 @@
 {
   "formato": "guion-aprobado/1",
-  "estado": "por-aprobar",
+  "estado": "aprobado",
   "job_id": "p09-audiencia-ventas-musical-skeleton-v2",
   "titulo": "Muchos seguidores, cero ventas",
   "marca": "effix",
@@ -17,7 +17,7 @@
   "formato_cancion": "F1 · PREGÓN Y RESPUESTA — un coro le pregunta «¿y cuántos compraron?» tres veces y él contesta; la tercera respuesta ya es otra.",
   "version_lote": "angulo1-v2",
   "aspect_ratio": "9:16",
-  "duracion_objetivo_s": 50,
+  "duracion_objetivo_s": 58,
   "microsituacion": {
     "momento": "Subes un video, lo ven cien mil personas, y vendes cero.",
     "sintoma": "Te escriben «qué lindo», te siguen, y nadie compra.",
@@ -30,7 +30,7 @@
   "microsituacion_apariciones": {
     "cruda": "Línea 1 — la barra de vistas sube y la de ventas queda plana (en imagen).",
     "agravada": "Línea 4 — el mismo encuadre con la barra de vistas al doble y la de ventas plana (en imagen).",
-    "resuelta": "Línea 12 — el mismo encuadre con las dos barras subiendo juntas (en imagen).",
+    "resuelta": "Línea 13 — el mismo encuadre con las dos barras subiendo juntas (en imagen).",
     "en_imagen": 3
   },
   "dolor_frase": "cero ventas",
@@ -49,7 +49,7 @@
     "modo": "sincronizado",
     "genero": "Reggaetón",
     "suno_title": "Feria Effix — Muchos seguidores, cero ventas",
-    "suno_custom_lyrics": "[Él]\nCien mil personas vieron mi video\n\n[El coro]\n¿Y cuántos compraron?\n\n[Él]\nNinguno\n\n[El coro]\n¿Y cuántos compraron?\n\n[Él]\nMe escriben qué lindo y nadie compra nada\nYo creía que me faltaban más seguidores\n\n[El coro]\nNo te faltan seguidores. Te falta qué venderles\n\n[Él]\n¿Y dónde consigo algo para vender?\n\n[El coro]\nDel quince al diecinueve de octubre, en Plaza Mayor: la Feria Effix\nHay marcas buscando creadores y proveedores con producto listo\n\n[Él]\nYa compré mi entrada. Vuelvo con algo para vender\n\n[El coro]\n¿Y cuántos compraron?\n\n[Él]\nHoy sí vendí. Compra tu entrada y vuelve con producto",
+    "suno_custom_lyrics": "[Verso]\nCien mil personas vieron mi video\n\n[Coro]\n¿Y cuántos compraron?\n\n[Verso]\nNinguno\n\n[Coro]\n¿Y cuántos compraron?\n\n[Verso]\nMe escriben qué lindo y nadie compra nada\nYo creía que me faltaban más seguidores\n\n[Puente]\nNo te faltan seguidores. Te falta qué venderles\n¿Y dónde consigo algo para vender?\n\n[Verso]\nDel quince al diecinueve de octubre, en Plaza Mayor: la Feria Éffix\nHay marcas buscando creadores y proveedores con producto listo\nYa compré mi entrada. Vuelvo con algo para vender\n\n[Coro]\n¿Y cuántos compraron?\n\n[Outro]\nHoy sí vendí. Compra tu entrada y vuelve con producto",
     "suno_style_tags": [
       "reggaeton",
       "dembow groove",
@@ -66,10 +66,11 @@
     "volumen_relativo": 1.0,
     "modelo": "minimax/music-3",
     "bpm_exacto": true,
-    "duracion_ms": 64000,
+    "duracion_ms": 62000,
     "genero_prompt": "commercial reggaeton, dark and catchy, street energy",
     "ritmo_prompt": "dembow groove, deep 808 bass, sharp claps, sparse synth stabs",
-    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. «Feria Effix» va con tilde en la letra: sin ella el modelo la canta «FX». Letra corta a propósito — el 2026-09-07 una letra con dos coros completos se quedó sin tiempo y nunca cantó el outro, que es el CTA. Si no rima al oído o canta mal la marca, regenerar (0,15 USD)."
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. «Feria Effix» va con tilde en la letra: sin ella el modelo la canta «FX». Letra corta a propósito — el 2026-09-07 una letra con dos coros completos se quedó sin tiempo y nunca cantó el outro, que es el CTA. Si no rima al oído o canta mal la marca, regenerar (0,15 USD). · 2026-09-07: tope bajado de 64s a 62s a proposito. La leccion del P07 es que los clips salen de la duracion de la cancion, no del numero de lineas: un tope alto se llena de ad-libs y se paga en clips (21 clips, 6.27 USD). 85 palabras a 96 BPM piden 53s; 62 deja margen para que no se corte sin invitar al modelo a estirarse.",
+    "tope_exacto": true
   },
   "lineas": [
     {
@@ -115,9 +116,9 @@
       "texto": "¿Y cuántos compraron?",
       "texto_tts": "",
       "texto_pantalla": "",
-      "plano": "Mismo primer plano de la pantalla: otro video, la misma barra plana. AGRAVADA.",
-      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. tight close-up on the phone screen, matching the first framing: the same phone framing after another video, the view bar now twice as tall and pressing against the top of the panel while the sales bar beside it stays completely flat, colder light. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
-      "prompt_video": "@Image1 the view bar climbs past the frame while the flat bar never moves. Camera: locked off, tiny drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "plano": "Mismo encuadre de la 1: el celular en el trípode del aro de luz. La barra de vistas al doble, la de ventas plana. AGRAVADA.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. the phone standing in the clamp of a ring light tripod in the brick-wall creator studio, the skeleton leaning in beside it, warm amber key light from the ring, framed exactly as the opening shot: on the screen the tall bar is now twice as tall and presses against the top edge of the panel while the short bar beside it stays completely flat on the baseline; the bars are plain solid white abstract rectangles with no labels, no numbers and no writing of any kind. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI, style drift, extra limbs, clothing",
+      "prompt_video": "@Image1 the tall bar climbs past the top edge while the flat bar never moves. Camera: locked off, tiny drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
       "lipsync": false
     },
     {
@@ -199,21 +200,33 @@
       "texto": "Ya compré mi entrada. Vuelvo con algo para vender",
       "texto_tts": "",
       "texto_pantalla": "Compra tu ingreso: clic en el botón",
-      "plano": "Esqueleto de frente en el pasillo presionando un botón grande que flota.",
-      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium shot facing camera: the skeleton facing camera in the pavilion aisle pressing a large glowing rounded button shape floating in front of him, blurred stands behind. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
-      "prompt_video": "@Image1 he presses the floating button and it lights up, standing tall. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "plano": "Esqueleto de frente en el pasillo del pabellón, con el producto en una mano y la otra señalando hacia el borde inferior. Sin botón dibujado.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium shot facing camera: the skeleton standing in the aisle of a modern convention pavilion, rows of exhibition stands with plain panels on both sides and business visitors with lanyards walking behind him, holding a plain product box in one hand and pointing down toward the bottom edge of the frame with the other, plenty of empty space in the lower third. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI, style drift, extra limbs, clothing",
+      "prompt_video": "@Image1 he lifts the product box slightly and points down toward the bottom edge of the frame, holding the gesture. Camera: static, shallow depth of field. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
       "lipsync": false
     },
     {
       "n": 12,
+      "beat": "PREGON",
+      "quien": "CANCION",
+      "texto": "¿Y cuántos compraron?",
+      "texto_tts": "",
+      "texto_pantalla": "¿Cuántos compraron?",
+      "plano": "Plano medio del esqueleto de vuelta en el MISMO estudio de la 1, ahora con el producto en las manos: la misma pregunta, otra situación.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. medium shot: the skeleton back in the same brick-wall creator studio as the opening shot, the ring light and the phone on its tripod beside him, now holding a plain product box in both hands and glancing at the phone. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI, style drift, extra limbs, clothing",
+      "prompt_video": "@Image1 he turns the product box once in his hands and glances at the phone beside him. Camera: locked off, tiny drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 13,
       "beat": "LOOP",
       "quien": "CANCION",
       "texto": "Hoy sí vendí. Compra tu entrada y vuelve con producto",
       "texto_tts": "",
       "texto_pantalla": "Hoy sí vendió",
-      "plano": "Mismo primer plano de la pantalla: las dos barras suben juntas. RESUELTA.",
-      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. tight close-up on the phone screen, matching the earlier framings: the same phone framing in the tidied studio, both abstract bars climbing together now, order dots landing beside them, the product boxes half empty behind. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
-      "prompt_video": "@Image1 both bars climb together and order dots keep landing while his hand steadies the tripod. Camera: locked off, tiny push-in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "plano": "Mismo encuadre de la 1 y la 4: ahora las dos barras suben juntas a la misma altura. RESUELTA.",
+      "prompt_imagen": "CHARACTER: A full anatomical skeleton with natural adult human proportions, tall and lanky, smooth ivory-cream bones with realistic bone detail (NOT toy-smooth, NOT chibi, NOT scary), and large expressive cartoon eyes with white sclera and dark pupils set in the eye sockets, giving an emotive, surprised, lovable face. No clothing. Same character in every shot. STYLE: cinematic 3D animated render, photoreal modern LATAM environment, warm amber and deep navy color grade, soft volumetric light with drifting steam/atmosphere, shallow depth of field. FORMAT: 9:16 vertical. the phone standing in the clamp of a ring light tripod in the brick-wall creator studio, the skeleton leaning in beside it, warm amber key light from the ring, framed exactly as the opening shot: on the screen exactly two bars, side by side, both climbing together to the same height near the top of the panel, the skeleton looking at the screen with his mouth open in surprise; the bars are plain solid white abstract rectangles with no labels, no numbers and no writing of any kind. The skeleton character of the Character Bible, identical in every shot. no text, no captions, no words, no letters, no watermark, no UI, style drift, extra limbs, clothing",
+      "prompt_video": "@Image1 the two bars rise side by side together to the same height and hold. Camera: locked off, tiny drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
       "lipsync": false
     }
   ],
@@ -238,8 +251,8 @@
   "nombre_entrega": "P09_effix_skeleton_creadores-que-venden_muchos-seguidores-cero-ventas_20260907.mp4",
   "nota_entrega": "Nombre del mp4 final, ya numerado por publico de la parrilla: P<NN>_effix_<estilo>_<publico>_<micro-situacion>_<AAAAMMDD>.mp4. El numero va delante para que los 28 queden en orden en la carpeta. Este campo manda sobre guion_aprobado.nombre_de_entrega(): si la funcion no antepone el numero, hay que ajustarla en el mismo commit (CLAUDE.md: una regla sin default en el codigo no existe).",
   "notas_produccion": "Reescrito el 2026-09-07 con la regla nueva: sin estribillo de marca repetido y con letra explícita — la pregunta del coro es literal («¿y cuántos compraron?») y la respuesta también. El dato de la feria lo da el coro como respuesta a su pregunta «¿dónde consigo algo para vender?». La micro-situación es el contador: mismo encuadre en las líneas 1, 4 y 12. Character Bible verbatim, encuadres distintos por plano. Héroe primero. Cantado, sin voz en off.",
-  "aprobado_por": null,
-  "aprobado_el": null,
+  "aprobado_por": "Alexander",
+  "aprobado_el": "2026-09-07",
   "modelos": {
     "video": "fal-ai/bytedance/seedance/v1.5/pro/image-to-video",
     "resolucion": "1080p",
@@ -254,6 +267,18 @@
       "quien": "Alexander",
       "que": "Lote .1 v2: la micro-situación se toca tres veces con función distinta (cruda, agravada, resuelta) y cada público usa un formato de canción propio. El v1 tenía los 28 con la misma estructura y se leían como el mismo video.",
       "costo_usd": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "quien": "Alexander",
+      "que": "Etiquetas [El]/[El coro] cambiadas por [Verso]/[Coro]/[Puente]/[Outro] (el modelo canta en voz alta las que no reconoce) y el [Coro] ahora es siempre la misma frase. Marca con tilde. Tope de cancion a 62s para no pagar clips de relleno. Anadida la linea 13, el tercer pregon que la letra canta y el guion no tenia. Quitado el boton flotante de la linea 11: el boton de verdad esta debajo del video.",
+      "costo_usd": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "quien": "Claude",
+      "que": "Escenas 4, 11, 12 y 13 regeneradas antes de pagar clips. La 4 y la 13 son la aparicion agravada y la resuelta y salieron en encuadres que no casaban con la 1; la 4 ademas metio una mano humana fotorrealista y las palabras 'views' y 'sales' legibles. La 11 salio con fondo de plaza de mercado con frutas, y la feria es un evento de negocios. La 12 salio en una casa de barro en vez del estudio de ladrillo de la 1.",
+      "costo_usd": 0.32
     }
   ]
 }
