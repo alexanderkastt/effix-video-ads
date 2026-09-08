@@ -1237,3 +1237,154 @@ porque su escena había cambiado, y uno de la 7.
 3. **76.38s**, cuarto ad seguido fuera del rango 30–60.
 4. La marca sigue sonando «FX».
 
+
+---
+
+## 2026-09-07 · P07 mayoristas, en crochet
+
+**Entregado:** `assets/renders/P07_effix_crochet_mayoristas-y-distribuidores_pedidos-por-telefono_20260907.mp4`
+81.18s · 41 planos de 1.98s · −14.8 LUFS · **6.2743 USD** (estimado 4.3766).
+
+Guion: `scripts/guiones/effix_crochet_p07-mayorista-digital-musical_v2_aprobado.json`.
+El `job_id` se dejó en `...animado2d-v2` a propósito: ahí vive la canción ya
+pagada, y cambiarlo la habría tirado.
+
+### La letra se escribió en tres pasadas, con Alexander
+
+1. La del archivo (123 palabras) **no se produjo**: traía etiquetas `[Gloria]` y
+   `[Don Fabio]` que MiniMax canta en voz alta, no cabía en el tope (75s de
+   letra para 64s) y se habría quedado sin CTA. Se detectó gratis.
+2. Alexander cambió el dolor: **"los archivos de Excel se borran, los cuadernos
+   se pierden y después no encuentro los pedidos ni los datos de los clientes"**.
+3. Y luego el ángulo: **digitalizar el pedido telefónico y automatizar el
+   despacho** — el Excel borrado es el síntoma, no la promesa. La letra final
+   cobra el dolor en cuatro golpes concretos (entendí diez y eran cien ·
+   despaché lo que no era y me lo devolvieron · tuve que preguntarle qué pidió ·
+   llamó a las once y nadie contestó) y el outro los desmonta uno por uno:
+   *"Él pide solo, con precio y cantidad, y sale despachado"*.
+
+99 palabras a 104 BPM = 89% del tope. **La canción salió al primer intento y
+cantó el CTA.** Alexander la aprobó de oído pese a que la transcripción
+marcaba "Feria FX", "350 en prensas" y "venga a xepa la feria": whisper sobre
+música exagera, y el oído manda.
+
+### El estilo se cambió después de la canción
+
+Alexander pidió crochet con la canción ya hecha. Sólo se rehízo la capa visual
+—bible, prompts de imagen y de video— con los textos universales **verbatim**
+desde `src/estilos_especiales.py`; la canción no se tocó y no se volvió a pagar.
+
+### El sobrecosto
+
+**6.27 contra 4.38 estimados.** El estimador cuenta un clip por línea (13) y la
+producción reparte por segundos de canción (20 clips). Detalle y la cuenta
+correcta en **Notas de aprendizaje** de `MASTER_CONTEXT.md`.
+
+### Abierto
+
+1. **81.18s**, quinto ad seguido fuera del rango 30–60. Aquí es consecuencia
+   directa de la canción de 84s.
+2. `cost_estimator` sigue estimando por líneas: **hay que arreglarlo antes del P08**.
+3. El QA sigue sin comparar el render contra `cancion_util.mp3` en `musical_sync`.
+4. La marca sigue sonando «FX» pese a escribirla «Éffix». Tres ads seguidos.
+
+---
+
+## 2026-09-07 · Tres ads: P06 pixar, P08 skeleton, P10 crochet
+
+| Entrega | Dur | Planos | LUFS | Costo real |
+|---|---|---|---|---|
+| `P06_effix_pixar_marcas-fabricantes-e-importadores_mi-marca-no-existe-en-internet` | 80.02s | 40 | −14.9 | **10.6578** |
+| `P08_effix_skeleton_marketing-y-adquisicion_la-campana-que-dejo-de-funcionar` | 61.67s | 31 | −14.6 | 5.0508 |
+| `P10_effix_crochet_expertos-en-tiendas-shopify_se-mucho-y-nadie-me-contrata` | 65.21s | 33 | −14.6 | 5.2931 |
+
+### Por qué el P06 costó 10.66, el doble del tope
+
+Se produjo entero en **cyberpunk** (héroe, 12 escenas, 6 clips = 3.40 USD) y
+después Alexander lo pidió en **pixar**. El estilo va pegado a cada imagen: no
+se recicla nada. Se avisó el número antes de gastar y él decidió seguir.
+
+Lo que **sí** se reutilizó gratis fue la canción: copiar `cancion.mp3`,
+`cancion_util.mp3`, `tramo.json` y `transcripcion.json` a la carpeta del job
+nuevo evita repagarla. **Al cambiar de estilo se cambia el `job_id` y se copian
+los cuatro archivos de audio.**
+
+Un error caro y evitable: se corrió `todo` y el productor **reutilizó un
+`cancion.mp3` viejo** —de la letra anterior— sin avisar de que la letra había
+cambiado. Sólo se descubrió al leer la transcripción. `--forzar` es obligatorio
+después de tocar la letra.
+
+### La letra se lee y se aprueba antes de la canción
+
+Alexander detuvo el P06 con cinco canciones ya generadas (0.892) porque la letra
+no le gustaba. **Que el guion esté aprobado no es aprobación de la letra.**
+Ahora se pega la letra en el chat y se espera respuesta antes de la fase
+`cancion`.
+
+Y la letra tiene que ser **explícita**. La del P06 era una carta en segunda
+persona a la propia marca: no decía quién hablaba, ni qué tenía el competidor,
+ni qué hay en la feria, y el CTA se lo cantaba a la marca en vez de al que
+compra. Reescrita en primera persona —«soy fabricante y tengo marca propia»,
+«con fotos, con precios, con el botón de comprar», «agencias, plataformas y
+quien te vende en línea»— se entiende sola.
+
+### `duracion_excepcion`: salirse del rango, pero por escrito
+
+En `musical_sync` manda la canción, y si sale de 79s el ad dura 79s. La regla 6
+bloqueaba. Ahora `duracion_excepcion: {motivo, aprobado_por}` la convierte en
+aviso; sin esos dos campos sigue siendo error. Cambiado en
+`src/guion_aprobado.py`, `docs/FORMATO-GUION.md` y `CLAUDE.md` a la vez.
+
+### El montaje ahora va por capas — antes reventaba
+
+El render del P06 murió **tres veces**, y ninguna era culpa de los clips:
+
+1. **`0xC00000FD` (STACK_OVERFLOW).** 40 planos con sus drawtext y overlays en
+   un solo `filter_complex` desbordan la pila de ffmpeg. El P05, con 37, había
+   pasado raspando.
+2. **`Cannot allocate memory` en el demuxer de png_pipe.** Cada `-loop 1 -i
+   logo.png` encola frames que el overlay no consume hasta que llega su
+   `enable`; cuatro colas de ~1900 frames no caben. Agrupar con `split` tampoco
+   sirve: la rama que espera bloquea a las demás.
+3. La primera vez **el fallo fue silencioso**: ffmpeg escribió el mp4 igual y el
+   ad salió **sin el logo del plano final**. Se detectó mirando fotogramas, no
+   por el código de salida.
+
+`fase_montaje` se partió en: concat de planos → texto y música → **una pasada
+por cada capa de PNG**, con los intermedios a crf 14. Memoria constante y ningún
+error. El P08 y el P10 se montaron a la primera.
+
+### Canciones: tres lecciones nuevas
+
+- **`cabe_la_letra` no es decorativo.** La primera del P10 —106 palabras a 100
+  BPM, 99% de ocupación— se comió «Shopify», saltó entera la línea 9 y dejó la 8
+  en el 27%, sin fechas. A 112 BPM y 104 palabras (87%) cantó las once. 0.18
+  tirados por no mirar el aviso antes de pagar.
+- **«Shopify» no se canta**: salió «yo puedo». Se sacó de la letra y se puso en
+  el overlay de la línea 1, que además se lee sin sonido. Mismo tratamiento que
+  «ecommerce» y «dropshipping».
+- **El modelo rellena el tiempo que le sobra con desvarío.** El P08 cerró el CTA
+  en 59.38s y siguió con «no hay rinocerontes en las mesas de Ibai» hasta 67.68.
+  Se cortó en 59.55 y se le pegó la cola instrumental real del final
+  (67.70–69.80): cierre limpio, gratis, y siete clips menos.
+
+### El P08 salió flaco
+
+Alexander lo pidió «skeleton pero con músculos» y eligió el esqueleto fornido de
+gimnasio. El bible pedía hombros anchos, caja torácica gruesa y huesos pesados,
+y el modelo devolvió un esqueleto corriente. **Pedir volumen sin nombrar músculo
+no funciona**: sin carne el modelo no tiene de dónde sacar el ancho. Rehacerlo
+son 4.54 USD porque el personaje sale en los 15 clips. Pendiente de decisión.
+
+### Abierto
+
+1. La marca sigue sin sonar bien: «EFIX» en el P06 y el P08, y **«feria FX / De
+   Vix»** en el P10, que es la peor versión. Siete ads, ninguna toma correcta.
+   La tilde automática de `audio_extra` no basta.
+2. Tres ads seguidos fuera del rango 30–60 (80.0, 61.7, 65.2). El P06 con
+   excepción declarada; los otros dos no.
+3. **El markdown `GUIONES-MUSICALES-28-angulo1-v2.md` está desfasado**: trae el
+   P06 con etiquetas `[Carta]`, 92 BPM, el pareado quemado y un botón dentro del
+   cuadro, y apunta a un JSON que no existe. Los JSON van por delante; hay que
+   regenerarlo desde ellos.
+4. El P08 con el personaje flaco, a la espera de si se rehace.

@@ -104,6 +104,14 @@ SISTEMA_UN_CUADRO = (
 RENDER_W = env_int("RENDER_W", 1080)
 RENDER_H = env_int("RENDER_H", 1920)
 RENDER_FPS = env_int("RENDER_FPS", 24)
+# Hilos de x264 en el montaje. No toca la calidad —el resultado es idéntico—,
+# solo el pico de memoria: cada hilo reserva sus buffers de lookahead y en
+# 1080x1920 son cientos de MB. Con la máquina cargada, 16 hilos no caben.
+FFMPEG_HILOS = env("FFMPEG_HILOS", "4")
+# Cuántos clips entran en cada llamada a ffmpeg del montaje crudo. Es un tope
+# de memoria, no de calidad: por encima de seis, el filtergraph desborda la
+# pila en Windows (P09, 2026-09-07: 20 clips y 41 planos, tres caídas).
+CLIPS_POR_LOTE = env_int("CLIPS_POR_LOTE", 6)
 
 # El ancho con el que está calibrado el cuerpo de los overlays en
 # postproduccion.cuerpo_para(). Se escala al ancho real del render.
@@ -228,14 +236,30 @@ def _tope_de_cancion(musica: dict) -> int:
     deja de cantar en seco y lo que se pierde es el CTA.
 
     Como `duration` es un tope y no una orden —si la canción termina antes, se
-    cierra sola— pedir de más no alarga el ad ni encarece nada apreciable
-    (0.002 USD el segundo). Así que se pide lo que la letra necesita, con el
-    margen que el modelo gasta en intro, ad-libs y cierre, y nunca menos de lo
-    que pedía el guion.
+    cierra sola— se pide lo que la letra necesita, con el margen que el modelo
+    gasta en intro, ad-libs y cierre, y nunca menos de lo que pedía el guion.
+
+    Pero pedir de más NO es gratis, y eso se aprendió tarde (P07, 2026-09-07):
+    la canción cuesta 0.002 USD el segundo, sí, sólo que cada segundo que el
+    modelo canta hay que cubrirlo con video a 0.058 (0.2333 por clip de 4s). Un
+    tope generoso se llena de ad-libs y repeticiones, y esos se pagan en clips:
+    el P07 pidió 87s, cantó 84 y costó 20 clips en vez de los 13 presupuestados,
+    1.69 USD de más.
+
+    Por eso `musica.tope_exacto: true` deja que el guion mande: se pide su
+    `duracion_ms` tal cual, aunque quede por debajo del margen calculado. Es una
+    decisión de Alexander ad por ad —acepta el riesgo de que el modelo corte a
+    cambio de un ad más corto y más barato—, nunca el default.
     """
     v = cabe_la_letra(musica.get("suno_custom_lyrics", ""),
                       musica.get("bpm_recomendado"), musica.get("duracion_ms"))
     pedido = int(musica.get("duracion_ms") or 58000)
+    if musica.get("tope_exacto"):
+        print(f"  tope de canción {pedido / 1000:.0f}s, fijado por el guion "
+              f"(el margen calculado eran {v['tope_ms'] / 1000:.0f}s). La letra "
+              f"pide ~{v['necesita_s']:.0f}s: si el modelo corta el final, "
+              f"regenerar; si canta de más, se paga en clips.")
+        return pedido
     tope = max(pedido, v["tope_ms"])
     if tope > pedido:
         print(f"  tope de canción {pedido / 1000:.0f}s -> {tope / 1000:.0f}s: "
@@ -840,6 +864,9 @@ def fase_montaje(ad: Ad, destino: Path | None = None) -> Path:
         raise FileNotFoundError(f"Faltan los clips {faltan} en {ad.clips_dir}")
 
     entradas, filtros, etiquetas = [], [], []
+    # Por clip: (ruta, [filtros de sus planos], [etiquetas]). Se guarda aparte
+    # para poder cortar la pasada 1 en lotes sin rehacer el reparto.
+    por_clip: list[tuple[Path, list[str], list[str]]] = []
     cursor, detalle = 0, []
     for i, tarea in enumerate(tareas):
         n_linea = tarea["linea"]
@@ -863,11 +890,17 @@ def fase_montaje(ad: Ad, destino: Path | None = None) -> Path:
                       for p in planos]
         cursor += len(planos)
         entradas += ["-i", str(clips[tarea["i"]])]
+        mis_filtros, mis_etiquetas = [], []
         for j, plano in enumerate(planos):
             filtros.append(ritmo.filtro_video(
                 plano, f"{i}:v", f"v{i}_{j}", w=RENDER_W, h=RENDER_H,
                 fps=RENDER_FPS, clonar_cola_s=0.0))
             etiquetas.append(f"[v{i}_{j}]")
+            # El mismo filtro con el índice local del lote, que se rellena
+            # abajo cuando ya se sabe en qué posición cae este clip.
+            mis_filtros.append(plano)
+            mis_etiquetas.append(j)
+        por_clip.append((clips[tarea["i"]], mis_filtros, mis_etiquetas))
         detalle.append({"clip": tarea["i"], "linea": n_linea,
                         "inicio_s": round(t0, 3), "fin_s": round(t1, 3),
                         "encadenado": tarea.get("end_linea"),
@@ -877,74 +910,133 @@ def fase_montaje(ad: Ad, destino: Path | None = None) -> Path:
     print(f"  ritmo: {len(todos)} planos · {min(todos):.2f}–{max(todos):.2f}s "
           f"· promedio {sum(todos) / len(todos):.2f}s")
 
-    cadena = "".join(etiquetas) + f"concat=n={len(etiquetas)}:v=1:a=0"
-    dibujos = dibujar(_overlays(ad, tramos), ad.clips_dir, alto=RENDER_H)
-    if dibujos:
-        filtros.append(cadena + "[crudo]")
-        filtros.append("[crudo]" + ",".join(dibujos) + "[vid]")
-    else:
-        filtros.append(cadena + "[vid]")
+    # ── Pasada 1: sólo los planos ───────────────────────────────────────
+    # ffmpeg desborda la pila cuando el filtergraph junta los planos, sus
+    # drawtext y los overlays en una sola llamada: el P06 en pixar, con 40
+    # planos, murió con 0xC00000FD (STACK_OVERFLOW) y el P05, con 37, había
+    # pasado por los pelos. Se rinde en dos pasadas: aquí el concat a un
+    # intermedio casi sin pérdida, y abajo el texto, la música y los logos
+    # sobre ese único input. El grafo de cada llamada baja de 56 nodos a la
+    # mitad, y el resultado en pantalla es el mismo.
+    # Y ni siquiera esa pasada 1 aguanta sola cuando el ad crece: el P09, con
+    # 20 clips y 41 planos, murió tres veces seguidas —0xC00000FD y ENOMEM—
+    # porque ffmpeg abre los 20 mp4 a la vez y monta las 41 cadenas de filtro
+    # en un único grafo. Así que la pasada 1 va por lotes de CLIPS_POR_LOTE
+    # clips, cada uno un proceso pequeño, y las partes se pegan después con el
+    # concat *demuxer*, que no decodifica ni filtra nada (`-c copy`) y por eso
+    # cuesta memoria constante. El resultado es idéntico: mismos trims, mismos
+    # encuadres, mismo códec.
+    crudo = ad.clips_dir / "montaje_crudo.mp4"
+    partes = []
+    for lote_i in range(0, len(por_clip), CLIPS_POR_LOTE):
+        lote = por_clip[lote_i:lote_i + CLIPS_POR_LOTE]
+        f_lote, e_lote, ent_lote = [], [], []
+        for k, (ruta, planos_lote, _) in enumerate(lote):
+            ent_lote += ["-i", str(ruta)]
+            for j, plano in enumerate(planos_lote):
+                f_lote.append(ritmo.filtro_video(
+                    plano, f"{k}:v", f"p{k}_{j}", w=RENDER_W, h=RENDER_H,
+                    fps=RENDER_FPS, clonar_cola_s=0.0))
+                e_lote.append(f"[p{k}_{j}]")
+        parte = ad.clips_dir / f"montaje_parte_{lote_i // CLIPS_POR_LOTE:02d}.mp4"
+        f_lote.append("".join(e_lote) + f"concat=n={len(e_lote)}:v=1:a=0[parte]")
+        subprocess.run(
+            [env("FFMPEG_BIN", "ffmpeg"), "-y", "-hide_banner", "-loglevel", "error",
+             *ent_lote, "-filter_complex", ";".join(f_lote),
+             "-map", "[parte]", "-an",
+             "-c:v", "libx264", "-preset", "veryfast", "-crf", "14",
+         "-threads", FFMPEG_HILOS,
+             "-pix_fmt", "yuv420p", str(parte)],
+            check=True)
+        partes.append(parte)
+        print(f"  parte {len(partes)}: {len(e_lote)} planos de {len(lote)} clips")
 
-    entradas += ["-i", str(cancion)]
+    lista = ad.clips_dir / "partes.txt"
+    lista.write_text("".join(f"file '{p.as_posix()}'\n" for p in partes),
+                     encoding="utf-8")
+    subprocess.run(
+        [env("FFMPEG_BIN", "ffmpeg"), "-y", "-hide_banner", "-loglevel", "error",
+         "-f", "concat", "-safe", "0", "-i", str(lista), "-c", "copy", str(crudo)],
+        check=True)
+    for p in partes:
+        p.unlink(missing_ok=True)
+    lista.unlink(missing_ok=True)
+    print(f"  montaje crudo: {len(etiquetas)} planos "
+          f"({crudo.stat().st_size / 1024 / 1024:.1f} MB)")
+
+    # ── Pasada 2: el texto y la música ──────────────────────────────────
+    from src.postproduccion import (filtros_flechas, filtros_logo, flechas_cta,
+                                    logo_marca)
+
+    con_texto = ad.clips_dir / "montaje_texto.mp4"
+    dibujos = dibujar(_overlays(ad, tramos), ad.clips_dir, alto=RENDER_H)
+    cadena_texto = ("[0:v]" + ",".join(dibujos) + "[vid]") if dibujos else "[0:v]null[vid]"
     # El fade final necesita saber hasta dónde se canta: sin eso apaga el
     # último verso, que suele ser el CTA.
     fin_voz = json.loads(
         (ad.audio_dir / "tramo.json").read_text(encoding="utf-8")
     ).get("fin_voz_s")
-    filtros.append(mezcla.cadena_master(
-        f"{len(tareas)}:a", "aud", duracion_s=dur, fin_voz_s=fin_voz))
+    subprocess.run(
+        [env("FFMPEG_BIN", "ffmpeg"), "-y", "-hide_banner", "-loglevel", "error",
+         "-i", str(crudo), "-i", str(cancion),
+         "-filter_complex", ";".join([
+             cadena_texto,
+             mezcla.cadena_master("1:a", "aud", duracion_s=dur, fin_voz_s=fin_voz)]),
+         "-map", "[vid]", "-map", "[aud]", "-t", f"{dur:.3f}",
+         "-c:v", "libx264", "-preset", "veryfast", "-crf", "14",
+         "-threads", FFMPEG_HILOS,
+         "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", str(con_texto)],
+        check=True)
+    print(f"  texto y música: {len(dibujos)} rótulos")
 
-    # El logo va al final de la cadena de video: por encima de los subtítulos,
-    # nunca debajo. Cada aparición necesita su propia copia del PNG porque se
-    # escala distinto y un input no se puede consumir dos veces.
-    from src.postproduccion import filtros_logo, logo_marca
-
-    from src.postproduccion import filtros_flechas, flechas_cta
-
+    # ── Una pasada por capa de PNG ──────────────────────────────────────
+    # Cada aparición del logo o de las flechas va en su propia llamada. Con
+    # varias a la vez, el demuxer de png_pipe encola frames que el overlay no
+    # consume hasta que llega su `enable`, y el proceso muere con "Cannot
+    # allocate memory": el P06 en pixar —80s, cuatro capas— perdió el logo del
+    # cierre por eso, y salió un ad sin marca en el último plano. Agrupar con
+    # `split` tampoco basta, porque la rama que espera bloquea a las demás.
+    # Una capa por pasada usa memoria constante y no falla; el intermedio va a
+    # crf 14 para que la recodificación no se note.
+    capas: list[tuple[str, Path, list[str]]] = []
     cta = _tramos_cta(ad, tramos)
-    if cta:
-        base_f = len(tareas) + 1
-        etiquetas_f = []
-        for k in range(len(cta)):
-            entradas += ["-loop", "1", "-i", str(flechas_cta())]
-            etiquetas_f.append(f"{base_f + k}:v")
-        filtros.append("[vid]null[vid_sub]")
-        filtros += filtros_flechas(cta, "vid_sub", "vid_fl", w=RENDER_W,
-                                   h=RENDER_H, entradas_flecha=etiquetas_f)
-        base_video = "vid_fl"
-        print("  flechas CTA: " + " · ".join(f"{a:.1f}-{b:.1f}s" for a, b in cta))
-    else:
-        base_video = "vid"
-
+    for t0, t1 in cta:
+        capas.append((f"flechas {t0:.1f}-{t1:.1f}s", flechas_cta(),
+                      filtros_flechas([(t0, t1)], "0:v", "vf", w=RENDER_W,
+                                      h=RENDER_H, entradas_flecha=["1:v"])))
     momentos = _momentos_logo(ad, tramos, dur)
-    if momentos:
-        indice = len(tareas) + 1 + len(cta)
-        etiquetas = []
-        for k in range(len(momentos)):
-            entradas += ["-loop", "1", "-i", str(logo_marca())]
-            etiquetas.append(f"{indice + k}:v")
-        filtros.append(f"[{base_video}]null[vid_txt]")
-        filtros += filtros_logo(momentos, "vid_txt", "vid_final",
-                                w=RENDER_W, h=RENDER_H, entradas_logo=etiquetas)
-        mapa_video = "[vid_final]"
-        print("  logo: " + " · ".join(
-            f"{a:.1f}-{b:.1f}s {s}" for a, b, s in momentos))
-    else:
-        mapa_video = f"[{base_video}]"
+    for t0, t1, sitio in momentos:
+        capas.append((f"logo {t0:.1f}-{t1:.1f}s {sitio}", logo_marca(),
+                      filtros_logo([(t0, t1, sitio)], "0:v", "vf", w=RENDER_W,
+                                   h=RENDER_H, entradas_logo=["1:v"])))
 
     RENDERS_DIR.mkdir(parents=True, exist_ok=True)
     # El entregable se nombra por su contenido, no por el job_id: quien abre
     # la carpeta de renders tiene que saber a quien le habla el ad y de que
     # va sin abrirlo. Las carpetas de trabajo siguen usando el job_id.
     salida = destino or (RENDERS_DIR / guion_aprobado.nombre_de_entrega(ad.g))
-    subprocess.run(
-        [env("FFMPEG_BIN", "ffmpeg"), "-y", "-hide_banner", "-loglevel", "error",
-         *entradas, "-filter_complex", ";".join(filtros),
-         "-map", mapa_video, "-map", "[aud]", "-t", f"{dur:.3f}",
-         "-c:v", "libx264", "-preset", "medium", "-crf", "20",
-         "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k",
-         "-movflags", "+faststart", str(salida)],
-        check=True)
+    fuente = con_texto
+    for k, (nombre, png, cadena) in enumerate(capas):
+        ultima = k == len(capas) - 1
+        destino_k = salida if ultima else ad.clips_dir / f"montaje_capa_{k}.mp4"
+        calidad = (["-preset", "medium", "-crf", "20", "-movflags", "+faststart"]
+                   if ultima else ["-preset", "veryfast", "-crf", "14"])
+        subprocess.run(
+            [env("FFMPEG_BIN", "ffmpeg"), "-y", "-hide_banner", "-loglevel", "error",
+             "-i", str(fuente),
+             "-loop", "1", "-framerate", str(RENDER_FPS), "-t", f"{dur:.3f}",
+             "-i", str(png),
+             "-filter_complex", ";".join(cadena),
+             "-map", "[vf]", "-map", "0:a", "-t", f"{dur:.3f}",
+             "-c:v", "libx264", *calidad, "-threads", FFMPEG_HILOS,
+             "-pix_fmt", "yuv420p", "-c:a", "copy",
+             str(destino_k)],
+            check=True)
+        print(f"  capa {k + 1}/{len(capas)}: {nombre}")
+        fuente = destino_k
+
+    if not capas:  # sin flechas ni logo, el master es el de la pasada 2
+        con_texto.replace(salida)
 
     (ad.clips_dir / "plan_montaje.json").write_text(
         json.dumps({"duracion_s": dur, "lineas": detalle, "render": str(salida)},

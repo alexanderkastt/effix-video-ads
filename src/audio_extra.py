@@ -471,6 +471,8 @@ PALABRAS_QUE_NO_CANTA: dict[str, str] = {
     "trafficker": 'sale "tráfico, me encas" — palabra inglesa en letra española',
     "ecommerce": 'sale "Kecoxie", "Conte Day"',
     "dropshipping": "palabra inglesa larga, mismo riesgo que trafficker",
+    "shopify": ('canta "yo puedo" en su lugar — se la salta entera (P10). '
+                'Va en el texto en pantalla, que además se lee sin sonido'),
     "herramienta": 'sale "hermanienta", "rejanienta", "la hermano" — 4 fallos en 4 canciones del P05',
     "herramientas": 'mismo problema que "herramienta" en singular',
 }

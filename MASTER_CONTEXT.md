@@ -410,3 +410,115 @@ palabras sí llegó. Referencia útil: el musical de abogados que funcionó tien
 ~105 palabras para 55s. Regla práctica: **no más de dos palabras por segundo
 de canción**, y el CTA nunca en la última línea — si el modelo se come una,
 que sea el remate y no la venta.
+
+### El estimador presupuesta por líneas; la producción paga por segundos de canción (2026-09-07, P07)
+
+El P07 se estimó en **4.3766 USD** y costó **6.2743**. No fue la canción ni un
+error de producción: `cost_estimator` cuenta **un clip por línea del guion** (13
+líneas × 4s = 52s de video) y `plan_musical` reparte los clips sobre la
+**duración real de la canción** (83.9s útiles → 20 clips + encadenados). Siete
+clips que nadie presupuestó, 1.69 USD.
+
+Mientras la canción dure más que `líneas × duracion_clip_s`, **la estimación
+siempre va a quedar corta**, y el aviso llega cuando el dinero ya se fue. La
+cuenta buena es `duración de la canción ÷ duracion_clip_s`, no el número de
+líneas.
+
+El validador lo venía avisando y no se leyó bien: el aviso 6 —"hay 52.0s de
+video generado para un objetivo de 57s"— **no es un problema de montaje, es la
+señal del sobrecosto**. Cuando aparece, hay que rehacer la cuenta con la
+canción medida antes de lanzar la fase `clips`.
+
+### El QA da verde a un render truncado (2026-09-07, P07)
+
+El primer montaje del P07 murió a mitad con `Cannot allocate memory` de ffmpeg y
+cerró el mp4 en **47.08s** de una canción de **81.18s**: se perdieron 34
+segundos con el CTA cantado, las flechas y el logo final. **El QA lo aprobó**
+("✅ duración 47.08s, rango 30–60s") porque compara contra el rango, no contra
+la pista. En `musical_sync` la duración correcta no es "entre 30 y 60": es
+**exactamente la de `cancion_util.mp3`**.
+
+Comprobación manual mientras el QA no lo haga solo:
+
+```
+ffprobe -v error -show_entries format=duration -of csv=p=0 <render>.mp4
+ffprobe -v error -show_entries format=duration -of csv=p=0 assets/audio/<job>/cancion_util.mp3
+```
+
+El fallo de memoria fue transitorio: **rehacer el montaje bastó** (39.3 MB
+truncado → 66.7 MB completo), y no cuesta nada. Un render que pesa mucho menos
+de lo esperado es la primera señal.
+
+### Revisar las escenas antes de pagar clips (2026-09-07, P07)
+
+Dos de las trece escenas del P07 estaban mal y se vieron **antes** de la fase
+cara: la 8 (aparición agravada) salió en un encuadre cerrado que no casaba con
+la 1 ni la 12 —y las tres apariciones tienen que ser el mismo plano para que se
+lea que es el mismo mostrador empeorando y arreglándose—, y la 10 salió con
+letras tejidas grandes y legibles en el panel del stand. Regenerarlas costó
+**0.16 USD**; descubrirlo después de los clips habría costado 20 veces más.
+
+### El montaje se rinde por capas, no de una (2026-09-07)
+
+Un `filter_complex` con todos los planos, todos los drawtext y todos los
+overlays de PNG mata a ffmpeg de dos formas distintas, y la segunda es peor
+porque **no hace ruido**:
+
+- **`0xC00000FD` / STACK_OVERFLOW** con 40 planos. El P05, con 37, pasó raspando.
+- **`Cannot allocate memory` en el demuxer de png_pipe.** Un `-loop 1 -i
+  logo.png` cuyo overlay lleva `enable='between(t,76,80)'` no consume frames
+  hasta el segundo 76, pero el demuxer los sigue produciendo: ~1900 frames
+  encolados por PNG. Con cuatro capas, no caben. `-t` en el input no basta y
+  agrupar con `split` tampoco — la rama que espera bloquea a las demás.
+- **Y ffmpeg puede escribir el mp4 igual.** El P06 salió con código 0 y sin el
+  logo del plano final. Se vio mirando fotogramas, no el código de salida.
+
+`fase_montaje` va ahora en: concat de planos → texto y música → **una llamada
+por cada capa de PNG**, intermedios a crf 14. Un solo PNG por proceso usa
+memoria constante. Corolario: **después de un render, mirar fotogramas de los
+tramos con logo o flechas**; el código de salida no prueba que estén.
+
+### La canción rellena el tiempo que le sobra (2026-09-07)
+
+Con 104 palabras y un tope de 86s, MiniMax canta la letra y **sigue
+inventando**: el P08 cerró el CTA en 59.38s y continuó con «no hay rinocerontes
+en las mesas de Ibai» hasta 67.68s. No es un fallo: es que el modelo llena el
+tope.
+
+Se arregla gratis en post — cortar donde acaba el CTA y **pegarle la cola
+instrumental real del final de la propia pista** (en el P08, 67.70–69.80), que
+cierra mejor que un fade sobre un corte seco:
+
+```
+atrim=0:59.55 ++ atrim=67.70:69.80 con afade de salida
+```
+
+Y luego borrar `tramo.json`, `transcripcion.json` y `cancion_util.mp3`, y correr
+la fase `cancion` (sin `--forzar`): retranscribe por centavos y no regenera.
+
+### `cabe_la_letra` avisa gratis lo que cuesta 0.18 descubrir (2026-09-07)
+
+La primera canción del P10 —106 palabras a 100 BPM, **99% de ocupación**— se
+comió «Shopify», saltó entera una línea y dejó la de las fechas en el 27%. El
+productor lo había avisado antes de pagar. A 112 BPM y 104 palabras (87%) cantó
+las once líneas. Por encima del ~90% de ocupación, no se paga: se sube el BPM o
+se recorta.
+
+### Cambiar de estilo no recicla imágenes, pero sí la canción (2026-09-07)
+
+El estilo va pegado a cada imagen: pasar el P06 de cyberpunk a pixar tiró 3.40
+USD de héroe, escenas y clips. La canción no: se cambia el `job_id` y se copian
+`cancion.mp3`, `cancion_util.mp3`, `tramo.json` y `transcripcion.json` a la
+carpeta nueva.
+
+Y **después de tocar la letra hay que usar `--forzar`**: la fase `cancion`
+encuentra el mp3 viejo, lo da por bueno y sigue. Pasó en el P06 y sólo se vio al
+leer la transcripción.
+
+### Pedir volumen sin nombrar músculo no da volumen (2026-09-07)
+
+El P08 se pidió «skeleton con músculos». El bible decía «built like a gym
+regular, broad shoulder blades, thick barrel ribcage, heavy arm and leg bones» y
+salió un esqueleto corriente: sin carne, el modelo no tiene de dónde sacar el
+ancho. Si el personaje sale en todos los planos, comprobarlo en la **héroe**
+—0.08— antes de las escenas y los clips.

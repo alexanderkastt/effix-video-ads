@@ -105,7 +105,8 @@ reescribe el contenido**, se produce.
 Cuando Alexander diga `produce scripts/guiones/<archivo>_aprobado.json`:
 
 1. Validar el JSON con las 6 reglas de `docs/FORMATO-GUION.md` (estado, registros,
-   palabras prohibidas, prompts sin `slow`, overlays ≤ 7 palabras, duración 30–60).
+   palabras prohibidas, prompts sin `slow`, overlays ≤ 7 palabras, duración 30–60
+   salvo `duracion_excepcion` declarada con motivo y quién la aprobó).
    Si falla algo, decir qué y **parar**: no se arregla el guion aquí sin avisar.
 2. Estimar costo con parámetros reales (tramos de 5/10s por línea, keyframes,
    `n_imagenes`) y mostrar el veredicto ✅/⚠️/🛑 de `cost_estimator.formatear()`.

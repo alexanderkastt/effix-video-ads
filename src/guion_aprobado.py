@@ -266,20 +266,38 @@ def duracion_clip_s(g: dict[str, Any]) -> int:
     return int(g.get("duracion_clip_s") or 4)
 
 
+def _duracion_exceptuada(g: dict[str, Any]) -> str:
+    """Motivo por el que este ad puede salirse del rango 30–60s, si lo hay.
+
+    En `musical_sync` la que manda es la canción: si el modelo devuelve 79s y la
+    regla es que la canción no se corta, el ad dura 79s y bloquearlo no arregla
+    nada. Pero salirse del rango tiene que ser una decisión escrita de Alexander,
+    no el efecto secundario de que nadie miró: `duracion_excepcion` exige motivo
+    y quién lo aprobó, y el resto del tiempo la regla sigue siendo un error.
+    """
+    exc = g.get("duracion_excepcion") or {}
+    motivo = str(exc.get("motivo") or "").strip()
+    aprobado = str(exc.get("aprobado_por") or "").strip()
+    return f"{motivo} (aprobado por {aprobado})" if motivo and aprobado else ""
+
+
 def _regla_6(g: dict[str, Any], r: Resultado) -> None:
     dur = duracion_estimada_s(g)
     objetivo = float(g.get("duracion_objetivo_s") or 0)
     etiqueta = (
         "video generado" if g.get("modo") == "musical_sync" else "locución estimada"
     )
+    excepcion = _duracion_exceptuada(g)
+    fuera = r.avisos if excepcion else r.errores
+    cola = f" Excepción declarada: {excepcion}." if excepcion else ""
     if not DURACION_MIN_S <= dur <= DURACION_MAX_S:
-        r.errores.append(
+        fuera.append(
             f"6· {dur:.1f}s de {etiqueta} queda fuera de "
-            f"{DURACION_MIN_S:.0f}–{DURACION_MAX_S:.0f}s.")
+            f"{DURACION_MIN_S:.0f}–{DURACION_MAX_S:.0f}s.{cola}")
     if objetivo and not DURACION_MIN_S <= objetivo <= DURACION_MAX_S:
-        r.errores.append(
+        fuera.append(
             f"6· duracion_objetivo_s = {objetivo:.0f} queda fuera de "
-            f"{DURACION_MIN_S:.0f}–{DURACION_MAX_S:.0f}s.")
+            f"{DURACION_MIN_S:.0f}–{DURACION_MAX_S:.0f}s.{cola}")
     if objetivo and dur < objetivo - 0.5:
         r.avisos.append(
             f"6· hay {dur:.1f}s de {etiqueta} para un objetivo de {objetivo:.0f}s: "

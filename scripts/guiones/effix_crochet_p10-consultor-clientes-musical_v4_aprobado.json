@@ -1,0 +1,259 @@
+{
+  "formato": "guion-aprobado/1",
+  "estado": "aprobado",
+  "job_id": "p10-consultor-clientes-musical-crochet-v4",
+  "titulo": "Se mucho y nadie me contrata",
+  "marca": "effix",
+  "publico": "Expertos en tiendas Shopify y marketing para tiendas virtuales",
+  "nicho_mapa": 10,
+  "angulo": "10.1",
+  "angulo_nombre": "Conseguir clientes",
+  "temperatura": "calientes",
+  "estilo": "crochet",
+  "modo": "musical_sync",
+  "pase": "pase_3_dias",
+  "objetivo": "conversion",
+  "nivel_conciencia": "problem",
+  "formato_cancion": "F1 - RELATO EN PRIMERA PERSONA - el experto cuenta su propia historia: lo que sabia, los anos sin que nadie lo contratara, la feria donde lo vieron trabajar y los clientes que le llegan hoy.",
+  "version_lote": "v4",
+  "aspect_ratio": "9:16",
+  "duracion_objetivo_s": 52,
+  "microsituacion": {
+    "momento": "Se montar una tienda y ponerla a vender, y termino la llamada con un «lo voy a pensar».",
+    "sintoma": "Mando propuestas completas, explico todo, y no me vuelven a llamar.",
+    "reaccion_interna": "Pienso que si me dieran una tienda para meterle mano lo demostraria en una semana.",
+    "explicacion_fallida": "Me digo que esto se demuestra trabajando, no hablando.",
+    "patron": "Pero contratan al que vieron trabajar, no al que mando la mejor propuesta.",
+    "causa_raiz": "No me faltaba oficio: me faltaba un lugar donde los duenos de tienda me vieran trabajar.",
+    "mecanismo": "En Feria Effix hay mas de trescientas cincuenta empresas buscando quien les ayude a vender por internet, y ahi lo ven a uno de frente."
+  },
+  "microsituacion_apariciones": {
+    "cruda": "Linea 2 - el telefono tejido sin un solo mensaje (en imagen).",
+    "agravada": "Linea 4 - el mismo telefono con las propuestas enviadas y ninguna respuesta (en imagen).",
+    "resuelta": "Linea 10 - el mismo telefono desbordado de mensajes que entran (en imagen).",
+    "en_imagen": 3
+  },
+  "dolor_frase": "lo voy a pensar",
+  "dolor_menciones_en_letra": 3,
+  "bible": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour.",
+  "negative_prompt": "realistic skin, smooth skin, photorealistic hands, photorealistic faces, realistic textures, smooth surfaces, CGI render, claymation, clay texture, Pixar style, Disney style, 3D animation, plastic texture, flat cartoon, airbrushed, anime, illustrated, 2D, studio lighting, ring light, HDR, symmetrical lighting, harsh shadows, perfectly exposed.",
+  "personajes": {
+    "consultor-clientes": {
+      "ficha": "DANIEL: a crocheted amigurumi figure of a man in his thirties, teal knitted shirt with rolled sleeves, mustard knitted cap, simple stitched dot eyes, short dark yarn hair and a small stitched beard, only his colours are saturated (teal, mustard, terracotta).",
+      "voz": null,
+      "quien_es": "DANIEL, amigurumi del que sabe montar tiendas Shopify y hacerlas vender. Unico con color.",
+      "lipsync": false
+    }
+  },
+  "musica": {
+    "modo": "sincronizado",
+    "genero": "Cumbia pop",
+    "suno_title": "Feria Effix - Se mucho y nadie me contrata",
+    "suno_custom_lyrics": "[Verso]\nYo sé montar una tienda y ponerla a vender\nSabía de sobra, y nadie me contrataba\n\n[Verso]\nMandaba propuestas y explicaba todo\nY me decían: lo voy a pensar. Y no volvían a llamar\n\n[Verso]\nYo decía que esto se demuestra trabajando\nLa verdad es que nadie me había visto trabajar\n\n[Verso]\nHasta que llegué a la Feria Effix\n\n[Coro]\nFeria Effix, Plaza Mayor, del quince al diecinueve\nTrescientas cincuenta empresas en el mismo salón\nBuscando quién les ayude a vender por internet\nY ahí sí me vieron trabajar\n\n[Verso]\nHoy no doy abasto: me llueven los clientes\n\n[Cierre]\nSi usted sabe y nadie lo contrata, su entrada está abajo",
+    "suno_style_tags": [
+      "cumbia pop",
+      "warm and danceable",
+      "accordion and guiro",
+      "male vocal, storytelling, proud but easy going",
+      "radio-ready mix",
+      "every word clearly enunciated, simple everyday Spanish a ten year old understands",
+      "short 1 second intro, vocals start immediately",
+      "sing the brand name 'Feria Effix' clearly and separated, as two distinct words"
+    ],
+    "bpm_recomendado": 112,
+    "volumen_relativo": 1.0,
+    "modelo": "minimax/music-3",
+    "bpm_exacto": true,
+    "duracion_ms": 64000,
+    "genero_prompt": "warm cumbia pop, narrative and close, hummable",
+    "ritmo_prompt": "accordion and guacharaca, walking bass, light congas, room for the lyric to be understood",
+    "nota": "La canción manda: whisper para timestamps, recorte al tramo cantado, cortes en los golpes (librosa). Sin voz en off. musica=False en el assembler. «Feria Effix» va con tilde en la letra: sin ella el modelo la canta «FX». Letra corta a propósito — el 2026-09-07 una letra con dos coros completos se quedó sin tiempo y nunca cantó el outro, que es el CTA. Si no rima al oído o canta mal la marca, regenerar (0,15 USD)."
+  },
+  "lineas": [
+    {
+      "n": 1,
+      "beat": "MOMENTO",
+      "quien": "CANCION",
+      "texto": "Yo sé montar una tienda y ponerla a vender",
+      "texto_tts": "",
+      "texto_pantalla": "Experto en Shopify",
+      "plano": "Plano general del diorama: DANIEL en su escritorio tejido, unico punto de color del cuarto gris, con una tienda tejida en la pantalla.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. wide shot of the diorama: DANIEL at his knitted desk, the only colour in a grey stitched room, a small knitted online-store layout on his laptop screen built from plain abstract shapes. DANIEL: a crocheted amigurumi figure of a man in his thirties, teal knitted shirt with rolled sleeves, mustard knitted cap, simple stitched dot eyes, short dark yarn hair and a small stitched beard, only his colours are saturated (teal, mustard, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he sets a last knitted piece onto the screen layout and nods once, satisfied. Camera: gentle push in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 2,
+      "beat": "DEFECTO",
+      "quien": "CANCION",
+      "texto": "Sabía de sobra, y nadie me contrataba",
+      "texto_tts": "",
+      "texto_pantalla": "Y nadie me contrataba",
+      "plano": "Primer plano del telefono tejido sobre el escritorio: la bandeja vacia, ni un mensaje. CRUDA: este encuadre vuelve tres veces.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. tight close-up on the knitted phone lying on the desk: its stitched screen a blank grey panel with no message shapes at all, DANIEL's teal sleeve at the edge of frame. DANIEL: a crocheted amigurumi figure of a man in his thirties, teal knitted shirt with rolled sleeves, mustard knitted cap, simple stitched dot eyes, short dark yarn hair and a small stitched beard, only his colours are saturated (teal, mustard, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 his knitted finger taps the blank screen twice and nothing appears. Camera: locked off. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 3,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Mandaba propuestas y explicaba todo",
+      "texto_tts": "",
+      "texto_pantalla": "Mandaba propuestas completas",
+      "plano": "Plano medio: DANIEL soltando hojas tejidas que salen volando del escritorio.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. medium shot: DANIEL releasing knitted paper sheets that fly off the desk one after another into the grey room. DANIEL: a crocheted amigurumi figure of a man in his thirties, teal knitted shirt with rolled sleeves, mustard knitted cap, simple stitched dot eyes, short dark yarn hair and a small stitched beard, only his colours are saturated (teal, mustard, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he lets three knitted sheets go and watches them drift away. Camera: slight handheld drift. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 4,
+      "beat": "SINTOMA",
+      "quien": "CANCION",
+      "texto": "Y me decían: lo voy a pensar. Y no volvían a llamar",
+      "texto_tts": "",
+      "texto_pantalla": "«Lo voy a pensar»",
+      "plano": "Mismo primer plano del telefono: las propuestas enviadas, una debajo de otra, y ninguna respuesta. AGRAVADA.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. same tight close-up on the knitted phone: three sent grey message shapes stacked one under the other with empty space below them, no replies, his teal sleeve still at the edge. DANIEL: a crocheted amigurumi figure of a man in his thirties, teal knitted shirt with rolled sleeves, mustard knitted cap, simple stitched dot eyes, short dark yarn hair and a small stitched beard, only his colours are saturated (teal, mustard, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 a third grey message shape settles onto the stack and nothing comes back. Camera: locked off. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 5,
+      "beat": "EXPL_FALLIDA",
+      "quien": "CANCION",
+      "texto": "Yo decía que esto se demuestra trabajando",
+      "texto_tts": "",
+      "texto_pantalla": "«Se demuestra trabajando»",
+      "plano": "Plano medio corto de DANIEL hablando de frente, convencido.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. medium close-up of DANIEL facing camera, chin up, convinced, the grey knitted room soft behind him. DANIEL: a crocheted amigurumi figure of a man in his thirties, teal knitted shirt with rolled sleeves, mustard knitted cap, simple stitched dot eyes, short dark yarn hair and a small stitched beard, only his colours are saturated (teal, mustard, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he taps the desk twice as he makes his point. Camera: static, chest height. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 6,
+      "beat": "CAUSA_RAIZ",
+      "quien": "CANCION",
+      "texto": "La verdad es que nadie me había visto trabajar",
+      "texto_tts": "",
+      "texto_pantalla": "Nadie me había visto trabajar",
+      "plano": "Plano medio hacia una puerta tejida cerrada, con el afuera y su diagrama enrollado en la mano.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. medium shot towards a closed knitted door, DANIEL standing outside it holding a rolled knitted diagram, grey stitched corridor around him. DANIEL: a crocheted amigurumi figure of a man in his thirties, teal knitted shirt with rolled sleeves, mustard knitted cap, simple stitched dot eyes, short dark yarn hair and a small stitched beard, only his colours are saturated (teal, mustard, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he raises the rolled diagram towards the closed door and lowers it. Camera: gentle push in. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 7,
+      "beat": "MECANISMO",
+      "quien": "CANCION",
+      "texto": "Hasta que llegué a la Feria Effix",
+      "texto_tts": "",
+      "texto_pantalla": "Hasta que llegué a la feria",
+      "plano": "Plano general: DANIEL entra al pabellon tejido, solo en color entre la multitud gris.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. wide shot: DANIEL walking into the knitted exhibition hall, the only colour among a grey knitted crowd, tall stitched booths on both sides. DANIEL: a crocheted amigurumi figure of a man in his thirties, teal knitted shirt with rolled sleeves, mustard knitted cap, simple stitched dot eyes, short dark yarn hair and a small stitched beard, only his colours are saturated (teal, mustard, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he steps in and looks up at the knitted ceiling, gripping his diagram. Camera: push in behind him. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 8,
+      "beat": "FECHAS",
+      "quien": "CANCION",
+      "texto": "Feria Effix, Plaza Mayor, del quince al diecinueve / Trescientas cincuenta empresas en el mismo salón",
+      "texto_tts": "",
+      "texto_pantalla": "Feria Effix · 15–19 oct · Medellín",
+      "plano": "Picado sobre el pabellon tejido lleno de stands.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. high angle over the knitted exhibition hall: rows and rows of grey stitched booths with knitted crowds moving between them. DANIEL: a crocheted amigurumi figure of a man in his thirties, teal knitted shirt with rolled sleeves, mustard knitted cap, simple stitched dot eyes, short dark yarn hair and a small stitched beard, only his colours are saturated (teal, mustard, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 the knitted crowd flows between the rows of booths. Camera: high angle craning across. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 9,
+      "beat": "PRUEBA",
+      "quien": "CANCION",
+      "texto": "Buscando quién les ayude a vender por internet / Y ahí sí me vieron trabajar",
+      "texto_tts": "",
+      "texto_pantalla": "+350 empresas buscando ayuda",
+      "plano": "Plano medio en un stand tejido: DANIEL desplegando su diagrama ante dos figuras grises que asienten.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. medium shot at a knitted booth: DANIEL unrolling his knitted diagram in front of two grey stitched business figures who lean in and nod. DANIEL: a crocheted amigurumi figure of a man in his thirties, teal knitted shirt with rolled sleeves, mustard knitted cap, simple stitched dot eyes, short dark yarn hair and a small stitched beard, only his colours are saturated (teal, mustard, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he unrolls the diagram and the two grey figures lean in together. Camera: over-the-shoulder, gentle arc. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 10,
+      "beat": "LOOP",
+      "quien": "CANCION",
+      "texto": "Hoy no doy abasto: me llueven los clientes",
+      "texto_tts": "",
+      "texto_pantalla": "Hoy me llueven los clientes",
+      "plano": "Mismo primer plano del telefono: los mensajes entran sin parar y se desbordan del cuadro. RESUELTA.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. same tight close-up on the knitted phone: bright message shapes pouring in one after another, overflowing past the edge of the stitched screen, his teal sleeve at the edge. DANIEL: a crocheted amigurumi figure of a man in his thirties, teal knitted shirt with rolled sleeves, mustard knitted cap, simple stitched dot eyes, short dark yarn hair and a small stitched beard, only his colours are saturated (teal, mustard, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 message shapes keep dropping in and pile up past the edge of the screen. Camera: locked off, gentle push. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    },
+    {
+      "n": 11,
+      "beat": "CTA",
+      "quien": "CANCION",
+      "texto": "Si usted sabe y nadie lo contrata, su entrada está abajo",
+      "texto_tts": "",
+      "texto_pantalla": "Tu entrada está abajo",
+      "plano": "DANIEL de frente en el pasillo tejido, con su entrada en la mano, senalando hacia el borde inferior del cuadro.",
+      "prompt_imagen": "The entire scene is fully crocheted and knitted — every surface, character, object, and skin is made of visible yarn stitches and fabric loops. No realistic skin, no smooth surfaces, no photorealistic textures anywhere in the frame. Every element, including hands, arms, faces, and backgrounds, must have visible knit and crochet stitch texture throughout. Stop-motion animation diorama scene, handmade knitted and crocheted miniature world. The world stays in strict pure greyscale with zero colour information — only the main character carries colour. medium shot of DANIEL facing camera in the knitted exhibition aisle, holding a small knitted event pass in one hand and pointing down towards the bottom edge of the frame with the other. DANIEL: a crocheted amigurumi figure of a man in his thirties, teal knitted shirt with rolled sleeves, mustard knitted cap, simple stitched dot eyes, short dark yarn hair and a small stitched beard, only his colours are saturated (teal, mustard, terracotta). no text, no captions, no words, no letters, no watermark, no UI; any signs, screens or banners are plain solid black panels with bold white abstract geometric shapes only, absolutely no letters, no words, no writing anywhere.",
+      "prompt_video": "@Image1 he lifts the knitted pass, then points firmly down past the bottom of the frame twice. Camera: static, chest height. Fluid animation with anticipation before each move, natural pace. Same character design throughout. Audio: ambience only, no discernible speech.",
+      "lipsync": false
+    }
+  ],
+  "musica_mood": "emotivo",
+  "cta": {
+    "hablado": "Su entrada está abajo (cantado)",
+    "overlay": "Tu entrada está abajo",
+    "nota": "Sin URL: mismo ad para landing y WhatsApp."
+  },
+  "auditoria": {
+    "marca_en_5s": true,
+    "marca_en_5s_como": "logo Effix desde el clip 01",
+    "complicacion_antes_12s": true,
+    "defecto_admitido": false,
+    "situacion_no_persona": true,
+    "cifras_no_redondeadas": true,
+    "duracion_30_60": true
+  },
+  "datos_sin_verificar": [],
+  "costo_estimado_usd": null,
+  "costo_desglose": "Lo calcula el productor con cost_estimator y parámetros reales (Seedance 1.5 Pro 1080p, clips de 4 s, nano-banana-2).",
+  "nombre_entrega": "P10_effix_crochet_expertos-en-tiendas-shopify_se-mucho-y-nadie-me-contrata_20260907.mp4",
+  "nota_entrega": "Nombre del mp4 final, ya numerado por publico de la parrilla: P<NN>_effix_<estilo>_<publico>_<micro-situacion>_<AAAAMMDD>.mp4. El numero va delante para que los 28 queden en orden en la carpeta. Este campo manda sobre guion_aprobado.nombre_de_entrega(): si la funcion no antepone el numero, hay que ajustarla en el mismo commit (CLAUDE.md: una regla sin default en el codigo no existe).",
+  "notas_produccion": "Reescrito el 2026-09-07 con la regla nueva: sin estribillo de marca repetido y con letra explícita. El dato de la feria lo da un cliente contando a quién contrató, no un anuncio. La micro-situación es la videollamada que se cierra: mismo encuadre en las líneas 2, 4 y 11. Universal positivo/negativo y cierre I2V verbatim del template crochet; mundo B&N estricto, solo ANA con color; poses simples. Héroe primero. Cantado, sin voz en off.",
+  "aprobado_por": "Alexander",
+  "aprobado_el": "2026-09-07",
+  "modelos": {
+    "video": "fal-ai/bytedance/seedance/v1.5/pro/image-to-video",
+    "resolucion": "1080p",
+    "imagen": "fal-ai/nano-banana-2",
+    "edit": "fal-ai/nano-banana-2/edit"
+  },
+  "duracion_clip_s": 4,
+  "nota_video": "Seedance 1.5 Pro a 1080p, clips de 4 s encadenados. Frame final en los clips que cierran una línea; sin frame final en los intermedios. Decisión de Alexander el 2026-09-07.",
+  "correcciones": [
+    {
+      "fecha": "2026-09-07",
+      "quien": "Alexander",
+      "que": "Lote .1 v2: la micro-situación se toca tres veces con función distinta (cruda, agravada, resuelta) y cada público usa un formato de canción propio. El v1 tenía los 28 con la misma estructura y se leían como el mismo video.",
+      "costo_usd": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "quien": "Claude Code",
+      "que": "v4: guion regenerado entero. Sale el relato en tercera («yo conozco a una que...») y entra el testimonio en primera persona que pidio Alexander: se mucho de tiendas Shopify y de marketing para tiendas virtuales, nadie me contrataba, llegue a la Feria Effix, ahi me vieron trabajar y hoy me llueven los clientes. ANA se cambia por DANIEL porque Alexander lo conto en masculino («nadie lo contrataba»). La micro-situacion pasa del portatil con la videollamada al telefono: vacio, con propuestas sin respuesta, y desbordado de mensajes; el «me llueven los clientes» se ve, no se dice. No se canta «ecommerce» (sale «Kecoxie», esta en PALABRAS_QUE_NO_CANTA): se dice «vender por internet». Los textos universales de crochet se copian verbatim.",
+      "costo_usd": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "pedido_por": "Alexander",
+      "quien": "Claude Code",
+      "que": "La primera cancion (0.18) salio inservible y el productor lo habia avisado: 106 palabras a 100 BPM ocupaban el 99% del tope, y sin aire el modelo se comio «Shopify» (canto «yo puedo»), se salto entera la linea 9 y dejo la 8 en el 27%, sin fechas. Se sube a 112 BPM —el tempo con el que el P06 canto las doce lineas— y se recortan tres lineas. «Shopify» sale de la letra: el modelo no sabe decirlo, como «ecommerce» y «dropshipping», y pasa al texto en pantalla de la linea 1, donde se lee y no depende del modelo.",
+      "costo_usd": 0.18
+    }
+  ]
+}

@@ -60,3 +60,8 @@ desktop.ini
 
 # Clon accidental: el repo no se anida dentro de si mismo
 skills-video-ads/
+
+# ── Volcados de consola ──────────────────────────────────
+# Los .jsonl de gasto SÍ se versionan: son el registro de lo que costó cada ad.
+# Los .log son el tee de la corrida, ruido que se regenera.
+logs/*.log

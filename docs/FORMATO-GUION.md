@@ -94,7 +94,10 @@ consuma y los `_producir_*.py` desechables dejen de hacer falta.
    con `no discernible speech`. Ningún `prompt_imagen` pide texto legible.
 5. `texto_pantalla` ≤ 7 palabras.
 6. Duración estimada = palabras / `PALABRAS_POR_SEGUNDO` + `RESPIRO_S` × líneas,
-   entre 30 y 60 s. La real se mide con ffprobe después de la voz.
+   entre 30 y 60 s. La real se mide con ffprobe después de la voz. En
+   `musical_sync` la canción manda y a veces sale más larga: para salirse del
+   rango hay que declararlo con `duracion_excepcion: {motivo, aprobado_por}`, y
+   entonces avisa en vez de bloquear. Sin esos dos campos sigue siendo error.
 7. Costo estimado con parámetros reales (duración por línea redondeada a tramos
    de 5/10 s salvo keyframe final, `n_imagenes` = líneas + keyframes). Si pasa
    6 USD, imprime el veredicto 🛑 y **para**.
